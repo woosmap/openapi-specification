@@ -1,0 +1,16 @@
+name: Build
+on:
+  - push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: bazel build --profile /tmp/bazel-profile-build.gz --jobs 8 //...
+      - run: bazel test --jobs 8 //...
+      - name: Upload Bazel profiles
+        uses: actions/upload-artifact@v2
+        with:
+          name: bazel profiles
+          path: |
+            /tmp/bazel-profile-*.gz
