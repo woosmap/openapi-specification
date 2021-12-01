@@ -1,0 +1,71 @@
+{
+  "name": "http-specification",
+  "private": true,
+  "version": "1.17.2",
+  "homepage": "https://github.com/woosmap/openapi-specification#readme",
+  "bugs": {
+    "url": "https://github.com/woosmap/openapi-specification/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woosmap/openapi-specification.git"
+  },
+  "license": "Apache 2.0",
+  "files": [
+    "dist/*.json"
+  ],
+  "scripts": {
+    "build": "npm run build:parameters && bazel build ... && rm -rf dist/* && tar xf bazel-bin/dist.tar -C dist",
+    "build:responses": "bazel run generator/responses:_responses_bin -- --output `pwd`/specification/responses",
+    "build:parameters": "bazel build :parameters.yml && cp bazel-bin/parameters.yml specification/parameters/_index.yml",
+    "publish:postman": "bazel run generator/postman:_postman_bin",
+    "test": "bazel test ...",
+    "watch": "ibazel build ...",
+    "watch:test": "ibazel test ..."
+  },
+  "devDependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.0.9",
+    "@bazel/buildifier": "^4.0.1",
+    "@bazel/buildozer": "^4.0.1",
+    "@bazel/ibazel": "^0.15.10",
+    "@bazel/typescript": "3.7.0",
+    "@google/semantic-release-replace-plugin": "^1.0.2",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/npm": "^7.1.3",
+    "@types/axios": "^0.14.0",
+    "@types/glob": "^7.1.4",
+    "@types/json-schema": "^7.0.8",
+    "@types/node": "^16.4.10",
+    "@types/postman-collection": "^3.5.7",
+    "@types/unist": "^2.0.6",
+    "@types/yargs": "^17.0.2",
+    "axios": "^0.21.1",
+    "dir-compare": "^3.3.0",
+    "glob": "^7.1.7",
+    "js-yaml": "^4.1.0",
+    "jsonpath-plus": "^6.0.1",
+    "mdast-builder": "^1.1.1",
+    "mdast-util-from-markdown": "^0.8.5",
+    "mdast-util-gfm": "^0.1.2",
+    "micromark-extension-gfm": "^0.3.3",
+    "openapi-examples-validator": "^4.5.0",
+    "openapi-to-postmanv2": "^2.12.0",
+    "openapi-types": "^9.3.1",
+    "postman-code-generators": "^1.1.5",
+    "postman-collection": "^4.1.0",
+    "prettier": "^2.5.0",
+    "query-string": "^7.0.1",
+    "remark-gfm": "^1.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "remark-stringify": "^9.0.0",
+    "slugify": "^1.6.0",
+    "swagger-cli": "^4.0.4",
+    "tar": "^6.1.11",
+    "tar-stream": "^2.2.0",
+    "tmp": "^0.2.1",
+    "typescript": "^4.3.5",
+    "unified": "^9.2.1",
+    "yargs": "^17.0.1"
+  }
+}
