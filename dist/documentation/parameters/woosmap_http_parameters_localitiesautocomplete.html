@@ -1,0 +1,144 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START woosmap_http_parameters_localitiesautocomplete] -->
+<h2 id="required-parameters">Required parameters</h2>
+<ul>
+  <li>
+    <h3 id="input">input</h3>
+    <p>
+      The text string on which to search, for example: "london" or "123 Cross
+      Road". The Woosmap Localities API will return predictions matches based on
+      this string and order the results based on their perceived relevance.
+    </p>
+  </li>
+</ul>
+<h2 id="optional-parameters">Optional parameters</h2>
+<ul>
+  <li>
+    <h3 id="components">components</h3>
+    <p>
+      A grouping of places to which you would like to restrict your results.
+      Currently, you can use <code>components</code> to filter over countries.
+      Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible
+      country code. For example: <code>components=country:fr</code> would
+      restrict your results to places within France and
+      <code>components=country:fr-fr</code> returns locations only in
+      Metropolitan France. Multiple countries must be passed as multiple
+      country:XX filters, with the pipe character (<code>|</code>) as a
+      separator. For example:
+      <code
+        >components=country:gb|country:fr|country:be|country:sp|country:it</code
+      >
+      would restrict your results to city names or postal codes within the
+      United Kingdom, France, Belgium, Spain and Italy.
+    </p>
+  </li>
+  <li>
+    <h3 id="data">data</h3>
+    <p>
+      Two values for this parameter: <code>standard</code> or
+      <code>advanced</code>. By default, if the parameter is not defined, value
+      is set as <code>standard</code>. The <code>advanced</code> value opens
+      suggestions to worldwide postal codes in addition to postal codes for
+      Western Europe.
+      <em
+        ><strong
+          >A dedicated option subject to specific billing on your license is
+          needed to use this parameter. Please contact us if you are interested
+          in using this parameter and you do not have subscribed the proper
+          option yet.</strong
+        ></em
+      >
+    </p>
+  </li>
+  <li>
+    <h3 id="extended">extended</h3>
+    <p>
+      If set, this parameter allows a refined search over locality names that
+      bears the same postal code. By triggering this parameter, integrators will
+      benefit from a search spectrum on the <code>locality</code> type that
+      <em><strong>includes postal codes</strong></em
+      >. To avoid confusion, it is recommended not to activate this parameter
+      along with the <code>postal_code</code> type which could lead to duplicate
+      locations. Also, the default description returned by the API changes to
+      <code>name (postal code), admin_1, admin_0</code>. It is only available
+      for France and Italy.
+    </p>
+  </li>
+  <li>
+    <h3 id="language">language</h3>
+    <p>
+      The language code, using ISO 3166-1 Alpha-2 country codes, indicating in
+      which language the results should be returned, if possible. Searches are
+      also biased to the selected language; results in the selected language may
+      be given a higher ranking. If language is not supplied, the Localities
+      service will use the default language of each country. No language
+      necessary for <code>postal_code</code> request.
+    </p>
+  </li>
+  <li>
+    <h3 id="types">types</h3>
+    <p>The types of suggestion to return.</p>
+    <ul>
+      <li>
+        <code>locality</code>: includes locality names (from city to village)
+        and suburbs * <code>postal_code</code>: publicly-used postal codes
+        around the world * <code>address</code>: addresses (only available for
+        UK and France) * <code>admin_level</code>: most commonly used
+        administrative areas * <code>country</code>: countries as whole point of
+        interest * <code>airport</code>: includes all medium sized to
+        international sized airports * <code>train_station</code>: includes all
+        train stations * <code>metro_station</code>: includes all metro stations
+        * <code>shopping</code>: includes shopping malls (or "shopping centers")
+        - <em>may include private retail brands</em> * <code>museum</code>:
+        includes museums * <code>tourist_attraction</code>: includes tourist
+        attractions like the Eiffel tower * <code>amusement_park</code>:
+        includes amusement parks like Disneyland Paris *
+        <code>art_gallery</code>: includes art galleries * <code>zoo</code>:
+        includes zoos
+      </li>
+    </ul>
+    <blockquote>
+      <p>
+        The information returned on an <code>address</code> suggestion contain
+        only a "single-line" description. A request to the
+        <a href="/products/localities/details/">Details endpoint</a> of the API
+        must be performed to retrieve the location (geographic coordinates) and
+        the address components (street address, zipcode, city..).
+      </p>
+    </blockquote>
+    <p>
+      Not specifying any type will only query <code>locality</code> and
+      <code>postal_code</code>. Multiple types can be passed using the pipe
+      character (<code>|</code>) as a separator. For example:
+      <code>types=locality|airport|admin_level</code>.
+    </p>
+  </li>
+</ul>
+<p style="text-align: right; font-size: smaller">
+  Generated from the
+  <a
+    data-label="openapi-github"
+    href="https://github.com/woosmap/openapi-specification"
+    title="Woosmap OpenAPI Specification"
+    class="external"
+    >OpenAPI specification</a
+  >.
+  <a
+    data-label="openapi-github-woosmap-http-parameters-localitiesautocomplete"
+    data-action="edit"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/tree/main/specification/parameters"
+    title="Edit on GitHub"
+    ><span class="material-icons">edit</span> Edit</a
+  >
+  <a
+    data-label="openapi-github-woosmap-http-parameters-localitiesautocomplete"
+    data-action="bug"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /localities/autocomplete"
+    title="File bug for parameters on GitHub"
+    ><span class="material-icons">bug_report</span> Report bug</a
+  >
+</p>
+
+<!--- [END woosmap_http_parameters_localitiesautocomplete] -->

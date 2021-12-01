@@ -1,0 +1,23 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START woosmap_http_schema_assetresponse] -->
+<h3 class="schema-object" id="AssetResponse">AssetResponse</h3>
+
+Attributes describing an Asset.
+
+| Field                                                                                                              | Required | Type                                                        | Description                                                                                                                                      |
+| :----------------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <h4 id="AssetResponse-address" class="add-link schema-object-property-key"><code>address</code></h4>               | optional | [AssetAddress](#AssetAddress "AssetAddress")                | See [AssetAddress](#AssetAddress "AssetAddress") for more information.                                                                           |
+| <h4 id="AssetResponse-contact" class="add-link schema-object-property-key"><code>contact</code></h4>               | optional | [AssetContact](#AssetContact "AssetContact")                | See [AssetContact](#AssetContact "AssetContact") for more information.                                                                           |
+| <h4 id="AssetResponse-name" class="add-link schema-object-property-key"><code>name</code></h4>                     | optional | string                                                      | <div class="nonref-property-description"><p>The asset's name.</p></div>                                                                          |
+| <h4 id="AssetResponse-opening_hours" class="add-link schema-object-property-key"><code>opening_hours</code></h4>   | optional | [AssetOpeningHours](#AssetOpeningHours "AssetOpeningHours") | See [AssetOpeningHours](#AssetOpeningHours "AssetOpeningHours") for more information.                                                            |
+| <h4 id="AssetResponse-store_id" class="add-link schema-object-property-key"><code>store_id</code></h4>             | optional | [AssetId](#AssetId "AssetId")                               | See [AssetId](#AssetId "AssetId") for more information.                                                                                          |
+| <h4 id="AssetResponse-tags" class="add-link schema-object-property-key"><code>tags</code></h4>                     | optional | Array&lt;string&gt;                                         | <div class="nonref-property-description"><p>Contains an array of tags describing the Asset. For example a list of available amenities.</p></div> |
+| <h4 id="AssetResponse-types" class="add-link schema-object-property-key"><code>types</code></h4>                   | optional | Array&lt;string&gt;                                         | <div class="nonref-property-description"><p>Contains an array of types describing the Asset.</p></div>                                           |
+| <h4 id="AssetResponse-userProperties" class="add-link schema-object-property-key"><code>userProperties</code></h4> | optional | object                                                      | <div class="nonref-property-description"><p>Contains all additional information relative to an Asset</p></div>                                   |
+
+<p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
+<a data-label="openapi-github-woosmap-http-schema-assetresponse" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/AssetResponse.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a data-label="openapi-github-woosmap-http-schema-assetresponse" data-action="bug" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - AssetResponse" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+</p>
+
+<!--- [END woosmap_http_schema_assetresponse] -->
