@@ -1,0 +1,23 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Data Management API
+description: >
+  Used to batch create Assets to a specific project identified with the `private_key` parameter.
+security:
+  - PrivateApiKeyAuth: []
+requestBody:
+  description: The request body must be formatted as JSON.
+  required: true
+  content:
+    "application/json":
+      schema:
+         $ref: "../../schemas/AssetsCollectionRequest.yml"
+      examples:
+        default:
+          value:
+            $ref: "../../requests/woosmap_http_assets_collection_request.yml"
+responses:
+  "200":
+    description: 200 OK
+

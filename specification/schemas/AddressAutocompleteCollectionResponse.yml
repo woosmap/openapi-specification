@@ -1,0 +1,10 @@
+title: AddressAutocompleteCollectionResponse
+type: object
+description: Address Collection Response containing Localities
+required:
+ - predictions
+properties:
+  predictions:
+    $ref: "./AddressAutocompleteResponse.yml"
+example:
+  $ref: "../responses/woosmap_http_address_autocomplete_collection_response.yml"

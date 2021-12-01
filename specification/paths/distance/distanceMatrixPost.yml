@@ -1,0 +1,40 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Distance API
+description: >
+  Get distances and durations for a matrix of origins and destinations, based on the recommended route between start and end points for a specified travel mode.
+  If the URL size is too short for your origins and destinations, you should request the server using this POST method and passing arguments as json.
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+requestBody:
+  description: The request body must be formatted as JSON.
+  required: true
+  content:
+    "application/json":
+      schema:
+         $ref: "../../schemas/DistanceMatrixRequest.yml"
+      examples:
+        default:
+          value:
+            $ref: "../../requests/woosmap_http_distance_matrix_request.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/DistanceMatrixResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_distance_matrix_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"

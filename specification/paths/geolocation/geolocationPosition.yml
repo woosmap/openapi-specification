@@ -1,0 +1,40 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Geolocation API
+description: >
+  The `/position` returns JSON location of your users thanks to IP address of their devices.
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/ip_address.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/GeolocationStoresResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_geolocation_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    description: 403 FORBIDDEN
+    content:
+      application/json:
+        examples:
+          Forbidden:
+            value:
+              $ref: "../../responses/woosmap_http_geolocation_error_403_forbidden_response.yml"
+
+

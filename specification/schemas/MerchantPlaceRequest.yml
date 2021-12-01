@@ -1,0 +1,13 @@
+title: MerchantPlaceRequest
+type: object
+description: Attributes describing a Merchant Place request
+required: [merchants]
+properties:
+  merchants:
+    description: The list of dirty transactions to clean
+    type: array
+    items:
+      $ref: "./MerchantPlaceDirty.yml"
+
+example:
+  $ref: "../requests/woosmap_http_merchant_brand_request.yml"

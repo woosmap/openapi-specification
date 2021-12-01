@@ -1,0 +1,10 @@
+title: AssetOpeningHoursSpecial
+description: An object describing the special opening hours of an Asset.
+type: object
+properties:
+  YYYY-MM-DD:
+    description: >
+      The format for defining opening and closing hours for a particular day is the same as the usual. Instead of using numeric week day for keys you must use a date YYYY-MM-DD like "2015-03-08" (see ISO-8601).
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"

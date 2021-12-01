@@ -1,0 +1,23 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Data Management API
+description:
+  Used to update assets in batch.
+  `storeId` must exists when using `PUT` method, if one asset does not exists, the batch will be refused.
+security:
+  - PrivateApiKeyAuth: []
+requestBody:
+  description: The request body must be formatted as JSON.
+  content:
+    "application/json":
+      schema:
+         $ref: "../../schemas/AssetsCollectionRequest.yml"
+      examples:
+        default:
+          value:
+            $ref: "../../requests/woosmap_http_assets_collection_request.yml"
+responses:
+  "200":
+    description: 200 OK
+

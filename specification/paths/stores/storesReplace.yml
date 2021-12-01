@@ -1,0 +1,23 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Data Management API
+description: To replace all your Assets. This endpoint will delete all previous assets and import assets in request body.
+  During the operation previous assets could always be displayed on map.
+  If the import failed previous assets are not deleted.
+security:
+  - PrivateApiKeyAuth: []
+requestBody:
+  description: The request body must be formatted as JSON.
+  content:
+    "application/json":
+      schema:
+         $ref: "../../schemas/AssetsCollectionRequest.yml"
+      examples:
+        default:
+          value:
+            $ref: "../../requests/woosmap_http_assets_collection_request.yml"
+responses:
+  "200":
+    description: 200 OK
+

@@ -1,0 +1,13 @@
+title: GeolocationStoresResponse
+description: A successful geolocation request will return a JSON-formatted response defining a location and radius.
+allOf:
+  - $ref: "./GeolocationResponse.yml"
+  - type: object
+    properties:
+      stores:
+        description: The Assets collection
+        type: array
+        items:
+          $ref: "./AssetFeatureResponse.yml"
+example:
+  $ref: "../responses/woosmap_http_geolocation_stores_response.yml"

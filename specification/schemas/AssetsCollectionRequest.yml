@@ -1,0 +1,11 @@
+title: AssetsCollectionRequest
+description: A Collection of Woosmap Assets as expected for Data Management Data API.
+type: object
+required:
+  - stores
+properties:
+  stores:
+    description: The Assets collection
+    type: array
+    items:
+      $ref: "./AssetRequest.yml"

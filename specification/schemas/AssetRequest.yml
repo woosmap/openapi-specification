@@ -1,0 +1,46 @@
+title: AssetRequest
+type: object
+description: Attributes describing an Asset.
+required:
+  - location
+  - name
+  - storeId
+properties:
+  location:
+    $ref: "./LatLngLiteral.yml"
+  name:
+    description: The asset's name.
+    type: string
+    example: "My Cool Store"
+  storeId:
+    $ref: "./AssetId.yml"
+  address:
+    $ref: "./AssetAddress.yml"
+  contact:
+    $ref: "./AssetContact.yml"
+  types:
+    description: Contains an array of types describing the Asset.
+    type: array
+    items:
+      type: string
+    example: [ "drive", "click_and_collect" ]
+  tags:
+    description: Contains an array of tags describing the Asset. For example a list of available amenities.
+    type: array
+    items:
+      type: string
+    example: [ "wifi", "covered_parking" ]
+  userProperties:
+    description: Contains all additional information relative to an Asset
+    type: object
+  localizedNames:
+    description: Alternate names for your assets. These localized names are useful for multi-language integrations.
+      Combined with our Autocomplete API endpoint you can let your users find your store in their native language.
+    type: object
+    example:
+      "ar": "مركز فيليتزي التجاري"
+      "fr": "Centre Commercial Velizy"
+      "it": "Centro Commerciale Velizy"
+      "gb": "Velizy Shopping Center"
+  openingHours:
+    $ref: "./AssetOpeningHours.yml"

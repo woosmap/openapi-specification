@@ -1,0 +1,38 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Data Management API
+description: >
+  Used to retrieve an asset from his `storeId`
+security:
+  - PublicApiKeyAuth: []
+parameters:
+  - in: path
+    name: storeId
+    schema:
+      type: string
+    required: true
+    example: "STORE_ID_123456"
+    description: ID of the asset to get
+
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/AssetFeatureResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_asset_feature_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "404":
+    description: 404 NOT FOUND - `storeId` do not exist in the project identified with the key parameter.

@@ -1,0 +1,16 @@
+title: AssetOpeningHoursPeriod
+type: object
+description: The hours for an opening period. To define a slice of time where the asset is open you must define a `start` and `end` keys. `start` and `end` must belong to the same day (crossing midnight may result in open_now being always false.)
+example: { "start": "08:30", "end": "19:30" }
+required:
+  - start
+  - end
+properties:
+  start:
+    description: Contains a time of day in 24-hour hh:mm format for the begin of opening period. Values are in the range 00:00–23:59
+    type: string
+    example: "08:30"
+  end:
+    description: Contains a time of day in 24-hour hh:mm format for the end of opening period. Values are in the range 00:00–23:59
+    type: string
+    example: "19:30"

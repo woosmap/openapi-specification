@@ -1,0 +1,32 @@
+title: AssetResponse
+type: object
+description: Attributes describing an Asset.
+properties:
+  name:
+    description: The asset's name.
+    type: string
+    example: "My Cool Store"
+  store_id:
+    $ref: "./AssetId.yml"
+  address:
+    $ref: "./AssetAddress.yml"
+  contact:
+    $ref: "./AssetContact.yml"
+  types:
+    description: Contains an array of types describing the Asset.
+    type: array
+    items:
+      type: string
+    example: [ "drive", "click_and_collect" ]
+  tags:
+    description: Contains an array of tags describing the Asset. For example a list of available amenities.
+    type: array
+    items:
+      type: string
+    example: [ "wifi", "covered_parking" ]
+  userProperties:
+    description: Contains all additional information relative to an Asset
+    type: object
+    example: [ "wifi", "covered_parking" ]
+  opening_hours:
+    $ref: "./AssetOpeningHours.yml"

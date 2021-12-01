@@ -1,0 +1,35 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Localities API
+description: >
+  Provides details of an autocomplete suggestion (using the suggestion’s `public_id`).
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/localities/public_id.yml"
+  - $ref: "../../parameters/localities/fields.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LocalitiesDetailsResponse.yml"
+        examples:
+          Address:
+            value:
+              $ref: "../../responses/woosmap_http_localities_details_address_response.yml"
+          Postal Code:
+            value:
+              $ref: "../../responses/woosmap_http_localities_details_postal_code_response.yml"
+
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"

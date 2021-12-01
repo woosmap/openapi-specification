@@ -1,0 +1,38 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Data Management API
+description: >
+  Used to retrieve a zone from his `zone_id`
+security:
+  - PublicApiKeyAuth: []
+parameters:
+  - in: path
+    name: zone_id
+    schema:
+      type: string
+    required: true
+    example: "ZoneA"
+    description: ID of the zone to get
+
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Zone.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_zone_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "404":
+    description: 404 NOT FOUND - `zone_id` do not exist in the project identified with the key parameter.

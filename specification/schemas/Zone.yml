@@ -1,0 +1,30 @@
+title: Zone
+type: object
+description: Attributes describing a Zone.
+required:
+  - store_id
+  - zone_id
+  - polygon
+properties:
+  zone_id:
+    description: A textual identifier that uniquely identifies a Zone.
+    type: string
+    example: "ZoneA"
+  description:
+    type: string
+    description: Textual description of your Zone
+    example: "Delivery Zone for Store A"
+  store_id:
+    $ref: "./AssetId.yml"
+  polygon:
+    type: string
+    description: Zone geometry polygon as **Well Known Text**. WKT defines how to represent geometry of one object (cf. https://en.wikipedia.org/wiki/Well-known_text). Your zones could be complex and multipart polygons.
+    example: "POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))"
+  types:
+    description: Contains an array of types describing the Asset.
+    type: array
+    items:
+      type: string
+    example: [ "delivery", "san_francisco_west" ]
+example:
+  $ref: "../responses/woosmap_http_zone_response.yml"

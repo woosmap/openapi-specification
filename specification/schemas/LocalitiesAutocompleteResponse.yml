@@ -1,0 +1,59 @@
+title: LocalitiesAutocompleteResponse
+type: object
+description: Attributes describing a locality. Not all attributes will be available for all locality types.
+properties:
+  name:
+    description: contains the human-readable name for the returned result. For `postal_code` results, this is directly the postal code value. For `locality` results, name in the specified language is returns. If no language is specified, default name (country local language) is returned.
+    type: string
+    example: "London, UK"
+  description:
+    description: Concatenation of `name`, `admin_1`, `admin_0` to be used as suggestion in drop down list if needed. The description can vary depending on the type requested.
+    type: string
+    example: "20121, Milano, Italy"
+  location:
+    $ref: "./LatLngLiteral.yml"
+  public_id:
+    description: Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.
+    type: string
+    example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
+  type:
+    $ref: "./LocalitiesTypes.yml"
+  admin_0:
+    description: Contains the country name.
+    type: string
+    example: Italy
+  admin_1:
+    description: Contains the administrative level including the suggestion.
+    type: string
+    example: Milano
+  admin_2:
+    description: For small locality type points of interests (suburbs, neighborhoods, villages), contains the municipality it belongs to.
+    type: string
+    example: "Borgo Santa Caterina"
+  viewpoint:
+    $ref: "./LocalitiesViewpoint.yml"
+  postal_codes:
+    description: >
+      Contains an array of known postal codes for a locality (only available on *suggestions* with country:`fr` for France or `it` for Italy and type: `locality`).
+    type: array
+    items:
+      type: string
+    example: [ "34000", "34070", "34080", "34090" ]
+  postal_town:
+    description: >
+      Contains the larger city (or the post office city) for a `postal_code` (only available on  suggestions with type: `postal_code`).
+    type: string
+    example: London
+  matched_substrings:
+    $ref: "./LocalitiesAutocompleteMatchedFields.yml"
+  has_addresses:
+    description: >
+      On the specific territory of United Kingdom, Localities autocomplete request can return the additional
+      attribute `has_addresses` for a postal code, which indicates if a postal code bears addresses. When `has_addresses`
+      is `true`, it is possible to display a list of the available addresses by requesting `details` with the
+      Localities `public_id`. To get the details of an address you will need to request again `/details` endpoint passing in
+      the dedicated address `public_id`.
+    type: boolean
+    example: true
+example:
+  $ref: "../responses/woosmap_http_localities_autocomplete_response.yml"

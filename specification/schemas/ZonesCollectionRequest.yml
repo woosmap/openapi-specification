@@ -1,0 +1,13 @@
+title: ZonesCollectionRequest
+type: object
+description: A Collection of Woosmap Zones as expected for Data Management Data API.
+required:
+  - zones
+properties:
+  zones:
+    description: The Zones collection
+    type: array
+    items:
+      $ref: "./Zone.yml"
+example:
+  $ref: "../requests/woosmap_http_zones_collection_request.yml"

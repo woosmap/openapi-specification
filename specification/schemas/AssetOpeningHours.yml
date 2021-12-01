@@ -1,0 +1,13 @@
+title: AssetOpeningHours
+type: object
+nullable: true
+description: An object describing the opening hours of an Asset.
+properties:
+  timezone:
+    description: Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>
+    type: string
+    example: "Europe/London"
+  usual:
+    $ref: "./AssetOpeningHoursUsual.yml"
+  special:
+    $ref: "./AssetOpeningHoursSpecial.yml"

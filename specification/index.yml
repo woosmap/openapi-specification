@@ -1,0 +1,89 @@
+openapi: "3.0.3"
+info:
+  title: Woosmap
+  description: API Specification for Woosmap
+  version: 1.0.0
+servers:
+  - url: "https://api.woosmap.com"
+paths:
+  $ref: "./paths/_index.yml"
+components:
+  parameters:
+    $ref: "./parameters/_index.yml"
+  schemas:
+    $ref: "./schemas/_index.yml"
+  securitySchemes:
+    PublicApiKeyAuth:
+      description: A Public key generated specifically to authenticate API requests on the front side. See how to [register a Public API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-public-api-key).
+      type: apiKey
+      in: query
+      name: key
+    PrivateApiKeyAuth:
+      description: A Private key generated specifically to authenticate API requests on server side. Required for Data management API. See how to [register a Private API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-private-api-key).
+      type: apiKey
+      in: query
+      name: private_key
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+tags:
+  - name: Store Search API
+    description: >
+      Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/).
+      Request is done over HTTPS using GET.
+      You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+      If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).
+    externalDocs:
+      url: https://developers.woosmap.com/products/search-api/get-started/
+  - name: Data Management API
+    description: >
+      The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets.
+      The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other
+      information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`)
+      coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/),
+      [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with
+      [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/data-api/get-started/
+  - name: Geolocation API
+    description: >
+      Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address.
+      Request is done over HTTPS using GET. Response is formatted as JSON.
+      You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/geolocation-api/location/
+  - name: Localities API
+    description: >
+      Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports.
+      Request is done over HTTPS using GET. Response is formatted as JSON.
+      You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/localities/get-started/
+  - name: Address API
+    description: >
+      Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request.
+      Request is done over HTTPS using GET. Response is formatted as JSON.
+      You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/address-api/get-started/
+  - name: Distance API
+    description: >
+      Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale.
+      Request is done over HTTPS using GET or POST. Response is formatted as JSON.
+      You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/distance-api/get-started/
+  - name: Merchant API
+    description: >
+      Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider.
+      It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID.
+      Request is done over HTTPS using GET or POST. Response is formatted as JSON.
+      You must specify a key in your request, included as the value of a `private_key` parameter for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/merchant-api/get-started/

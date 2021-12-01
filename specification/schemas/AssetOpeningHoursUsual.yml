@@ -1,0 +1,46 @@
+title: AssetOpeningHoursUsual
+description: An object describing the usual opening hours of an Asset.
+type: object
+properties:
+  default:
+    description: Contains the default opening hours to apply to all week days
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+    example:
+      - {"start": "08:30", "end": "19:30"}
+  1:
+    description: The opening Hours for Monday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  2:
+    description: The opening Hours for Tuesday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  3:
+    description: The opening Hours for Wednesday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  4:
+    description: The opening Hours for Thursday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  5:
+    description: The opening Hours for Friday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  6:
+    description: The opening Hours for Saturday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  7:
+    description: The opening Hours for Sunday
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"

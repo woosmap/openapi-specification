@@ -1,0 +1,31 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Store Search API
+description: >
+  Autocomplete on `localizedNames` with highlighted results on asset name.
+  Use the field `localized` in your query parameter to search for localized names.
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/query.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/AssetFeatureCollectionResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_asset_feature_collection_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"

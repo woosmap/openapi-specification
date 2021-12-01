@@ -1,0 +1,68 @@
+title: DistanceMatrixRequest
+type: object
+description: Attributes describing a distance Matrix request
+required: [origins, destinations]
+properties:
+  origins:
+    example: 48.709,2.403
+    type: string
+    description: >
+      The starting point for calculating travel distance.
+      You can supply one or more locations separated by the pipe character, in the form of latitude/longitude coordinates.
+      They are used unchanged to calculate distance.
+      Ensure that no space exists between the latitude and longitude values.
+      In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
+  destinations:
+    example: 48.709,2.403|48.768,2.338
+    type: string
+    description: >
+      One or more locations to use as the finishing point for calculating travel distance.
+      The options for the destinations parameter are the same as for the origins parameter, described above.
+      In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
+  mode:
+    example: driving
+    type: string
+    enum:
+      - driving
+      - cycling
+      - walking
+    description: >
+      Specifies the mode of transport to use when calculating distance
+  language:
+    example: en
+    type: string
+    description: >
+      The language code, indicating in which language the results should be returned, if possible. If language is not supplied, the Distance API service will use the navigator language or “en”.
+  units:
+    example: metric
+    type: string
+    enum:
+      - imperial
+      - metric
+    description: >
+      Specifies the unit system to use when expressing distance as text. Two different units supported:
+
+      * `metric` (default) returns distances in kilometers and meters
+      * `imperial` returns distances in miles and feet
+  elements:
+    example: duration_distance
+    type: string
+    enum:
+      - distance
+      - duration
+      - duration_distance
+    description: >
+      Specifies element values that will be part of the API response (distance and/or duration). if not specified default is `distance`
+  method:
+    example: distance
+    type: string
+    enum:
+      - time
+      - distance
+    description: >
+      Specifies the method to compute the route between the start point and the end point:
+
+      - `time`: fastest route (default)
+      - `distance`: shortest route
+example:
+  $ref: "../requests/woosmap_http_distance_matrix_request.yml"

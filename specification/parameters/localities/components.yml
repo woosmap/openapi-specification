@@ -1,0 +1,12 @@
+name: components
+description: >
+  A grouping of places to which you would like to restrict your results.
+  Currently, you can use `components` to filter over countries.
+  Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code.
+  For example: `components=country:fr` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France.
+  Multiple countries must be passed as multiple country:XX filters, with the pipe character (`|`) as a separator.
+  For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
+schema:
+  type: string
+example: country:fr|country:es
+in: query

@@ -1,0 +1,36 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Distance API
+description: >
+  Get distances and durations for a matrix of origins and destinations, based on the recommended route between start and end points for a specified travel mode.
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/distance/origins.yml"
+  - $ref: "../../parameters/distance/destinations.yml"
+  - $ref: "../../parameters/distance/mode.yml"
+  - $ref: "../../parameters/distance/language.yml"
+  - $ref: "../../parameters/distance/units.yml"
+  - $ref: "../../parameters/distance/elements.yml"
+  - $ref: "../../parameters/distance/method.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/DistanceMatrixResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_distance_matrix_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"

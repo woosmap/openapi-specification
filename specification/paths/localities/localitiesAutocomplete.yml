@@ -1,0 +1,36 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Localities API
+description: >
+  Autocomplete on worldwide suggestions for a for text-based geographic searches.
+  It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.
+security:
+  - PublicApiKeyAuth: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/localities/input.yml"
+  - $ref: "../../parameters/localities/types.yml"
+  - $ref: "../../parameters/localities/components.yml"
+  - $ref: "../../parameters/localities/language.yml"
+  - $ref: "../../parameters/localities/data.yml"
+  - $ref: "../../parameters/localities/extended.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LocalitiesAutocompleteCollectionResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_localities_autocomplete_collection_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"

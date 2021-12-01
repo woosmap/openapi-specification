@@ -1,0 +1,13 @@
+name: method
+example: distance
+in: query
+schema:
+  type: string
+  enum:
+    - time
+    - distance
+description: >
+  Specifies the method to compute the route between the start point and the end point:
+
+  - `time`: fastest route (default)
+  - `distance`: shortest route

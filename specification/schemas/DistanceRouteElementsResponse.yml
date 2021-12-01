@@ -1,0 +1,25 @@
+title: DistanceRouteElementsResponse
+type: object
+description: Attributes describing routes from an origin to a destination returned in distance route response.
+properties:
+  routes:
+    type: object
+    description: the route element
+    properties:
+      overview_polyline:
+        type: object
+        description: The polyline of the route (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)).
+        properties:
+          point:
+            type: string
+            example: "gce_I|mbHR_@Rg@Pg@Nm@Ns@Hk@Fk@PyBTaCXmCZcCd@qCLw@ViA\\}ADQ@K@O?S?[AUGUC[AW@WB[DUJ[Va@RMn@c@TKXGPANAN@t@NZD~AV`AL`ANTBfBV`@F|ATjFr@vEr@D@`@DF?`@BD?V@lEXx@Dv@D^B`@Db@BP@n@BJ@j@Bb@D\\BzAHFaDB}ABqA@}A@kA?k@?a@Ae@Ac@Ek@Ge@Km@Oo@Qm@Ok@Uk@Sg@Ui@[i@]g@]g@WYSUe@a@s@e@m@e@WYO[`@kCtAoKl@uFH}@Ls@r@yE`AyFBO"
+      bounds:
+        $ref: "./Bounds.yml"
+      summary:
+        type: string
+        description: A short name for the route.
+      legs:
+        $ref: "./DistanceLeg.yml"
+
+example:
+  $ref: "../responses/woosmap_http_distance_route_element_response.yml"

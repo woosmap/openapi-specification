@@ -1,0 +1,39 @@
+title: GeolocationResponse
+type: object
+description: A successful geolocation request will return a JSON-formatted response defining a location and radius.
+required: [location, accuracy]
+properties:
+  viewport:
+    $ref: "./Bounds.yml"
+  accuracy:
+    description: The accuracy of the estimated location, in meters. This represents the radius of a circle around the given `location` where the IP address is likely to be. If your Geolocation response shows a low value in the `accuracy` field (<=50), the IP has strong chance to be correctly located.
+    type: number
+  latitude:
+    description: Approximate latitude of the geographical area associated with the IP address
+    type: number
+  longitude:
+    description: Approximate longitude of the geographical area associated with the IP address
+    type: number
+  country_code:
+    description: ISO 3166-1 Alpha-2 compatible country code
+    type: string
+  country_name:
+    description: Country name
+    type: string
+  continent:
+    description: Continent name
+    type: string
+  region_state:
+    description: Region name when available
+    type: string
+  city:
+    description: City name when available
+    type: string
+  postal_code:
+    description: A postal code close to the user's location, when available
+    type: string
+  timezone:
+    description: The time zone associated with location, as specified by the IANA Time Zone Database
+    type: string
+example:
+  $ref: "../responses/woosmap_http_geolocation_response.yml"

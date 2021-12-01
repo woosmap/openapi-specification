@@ -1,0 +1,19 @@
+title: AssetFeatureCollectionResponse
+type: object
+description: Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
+required:
+ - type
+ - features
+ - pagination
+properties:
+  type:
+    description: the Geojson Type (only 'FeatureCollection')
+    type: string
+    enum:
+      - FeatureCollection
+  features:
+    $ref: "./AssetResponse.yml"
+  pagination:
+    $ref: "./Pagination.yml"
+example:
+  $ref: "../responses/woosmap_http_asset_feature_response.yml"

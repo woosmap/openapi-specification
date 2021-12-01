@@ -1,0 +1,19 @@
+title: AssetFeatureResponse
+type: object
+description: Asset Response as a GeoJSon Feature with Asset properties
+required:
+ - type
+ - properties
+ - geometry
+properties:
+  type:
+    description: the Geojson Type (only 'Feature')
+    type: string
+    enum:
+      - Feature
+  properties:
+    $ref: "./AssetResponse.yml"
+  geometry:
+    $ref: "./GeoJsonPoint.yml"
+example:
+  $ref: "../responses/woosmap_http_asset_feature_response.yml"

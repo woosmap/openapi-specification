@@ -1,0 +1,105 @@
+/geolocation/position:
+  get:
+    summary: Geolocation from an IP address
+    operationId: getGeolocationPosition
+    $ref: "./geolocation/geolocationPosition.yml"
+/geolocation/stores:
+  get:
+    summary: Assets nearby a Geolocation
+    operationId: getStoresFromGeolocationPosition
+    $ref: "./geolocation/geolocationStores.yml"
+/stores:
+  post:
+    summary: Create your Assets
+    operationId: createStores
+    $ref: "./stores/storesCreate.yml"
+  put:
+    summary: Update the Assets
+    operationId: updateStores
+    $ref: "./stores/storesUpdate.yml"
+  delete:
+    summary: Delete the Assets
+    operationId: deleteStores
+    $ref: "./stores/storesDelete.yml"
+/stores/{storeId}:
+  get:
+    summary: Get Asset from ID
+    operationId: getStore
+    $ref: "./stores/storeGet.yml"
+/stores/replace:
+  post:
+    summary: Replace all assets
+    operationId: replaceStores
+    $ref: "./stores/storesReplace.yml"
+/stores/search:
+  get:
+    summary: Search for assets
+    operationId: storeSearch
+    $ref: "./search/storesSearch.yml"
+/stores/autocomplete:
+  get:
+    summary: Autocomplete for assets
+    operationId: storeAutocomplete
+    $ref: "./search/storesAutocomplete.yml"
+/localities/autocomplete:
+  get:
+    summary: Autocomplete for Localities
+    operationId: localitiesAutocomplete
+    $ref: "./localities/localitiesAutocomplete.yml"
+/localities/details:
+  get:
+    summary: Details of a Locality
+    operationId: localitiesDetails
+    $ref: "./localities/localitiesDetails.yml"
+/address/autocomplete/json:
+  get:
+    summary: Autocomplete for Addresses
+    operationId: addressAutocomplete
+    $ref: "./address/addressAutocomplete.yml"
+/address/details/json:
+  get:
+    summary: Details of an Address
+    operationId: addressDetails
+    $ref: "./address/addressDetails.yml"
+/zones:
+  post:
+    summary: Create your Zones
+    operationId: createZones
+    $ref: "./zones/zonesCreate.yml"
+  put:
+    summary: Update the Zones.
+    operationId: updateZones
+    $ref: "./zones/zonesUpdate.yml"
+  delete:
+    summary: Delete the Zones
+    operationId: deleteZones
+    $ref: "./zones/zonesDelete.yml"
+/zones/{zone_id}:
+  get:
+    summary: Get Zone from ID
+    operationId: getZone
+    $ref: "./zones/zoneGet.yml"
+/distance/distancematrix/json:
+  get:
+    summary: Distance Matrix
+    operationId: getDistanceMatrix
+    $ref: "./distance/distanceMatrix.yml"
+  post:
+    summary: Get Distance Matrix using POST
+    operationId: postDistanceMatrix
+    $ref: "./distance/distanceMatrixPost.yml"
+/distance/route/json:
+  get:
+    summary: Get Route
+    operationId: getRoute
+    $ref: "./distance/distanceRoute.yml"
+/merchant/brands:
+  post:
+    summary: Get Merchant Clean Names
+    operationId: getMerchantBrand
+    $ref: "./merchant/merchantBrand.yml"
+/merchant/place:
+  post:
+    summary: Get Merchant Place
+    operationId: getMerchantPlace
+    $ref: "./merchant/merchantPlace.yml"
