@@ -1,0 +1,32 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "_lib",
+    srcs = glob(["*.ts"]),
+    deps = [
+        "@npm//@types/axios",
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//axios",
+        "@npm//prettier",
+        "@npm//tar-stream",
+        "@npm//yargs",
+    ],
+)
+
+nodejs_binary(
+    name = "_responses_bin",
+    data = [
+        ":_lib",
+        "//generator/requests:snippets.tar",
+    ],
+    entry_point = ":response.ts",
+    templated_args = [
+        "--archive",
+        "$(rootpath //generator/requests:snippets.tar)",
+        "--nobazel_node_patches",
+    ],
+)
