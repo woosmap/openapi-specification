@@ -43,5 +43,26 @@ export const REQUESTS: SnippetRequest[] = [
             }),
             header: [{key: "Referer", value: "http://localhost"}],
         }),
+    },
+    {
+        regionTag: "woosmap_http_address_autocomplete_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/address/autocomplete/json",
+                query: [
+                    {
+                        key: "input",
+                        value: "Lond",
+                    },
+                    {
+                        key: "component",
+                        value: "country:UK",
+                    },
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
     }
 ];

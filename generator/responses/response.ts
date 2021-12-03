@@ -2,15 +2,11 @@ import {options} from "yargs";
 import tar from "tar-stream";
 import {
     createReadStream,
-    writeFileSync,
-    createWriteStream,
-    unlinkSync,
-    readFileSync,
+    writeFileSync
 } from "fs";
 import {exec} from "child_process";
 import path from "path";
 import prettier from "prettier";
-import axios, {AxiosResponse} from "axios";
 
 const header = ``;
 
@@ -62,7 +58,8 @@ const extractRequests = async (
 
 const executeJSONRequest = async (
     request: string,
-    captureError: boolean = false
+    captureError: boolean = false,
+    captureInvalid: boolean = false
 ): Promise<string> => {
     return new Promise((resolve, reject) => {
         exec(request, function (error, stdout, stderr) {
@@ -79,28 +76,17 @@ const executeJSONRequest = async (
                 reject(stdout);
                 return;
             }
-            // might be a 200 but have an error body
-            if (response.error && !captureError) {
+            // todo: get status code executing the request (--write-out %{http_code}) and push
+            if (response.error && !captureError && !captureInvalid) {
                 reject(stdout);
                 return;
             }
-
             resolve(response);
         });
     });
 };
 
-const xmlInsertRegionTags = (destination: string, regionTag: string) => {
-    const contents = readFileSync(destination, "utf8");
-
-    const lines = contents.split("\n").filter(value => value !== "");
-    lines.splice(1, 0, `<!-- [START ${regionTag}] -->`);
-    lines.push(`<!-- [END ${regionTag}] -->`);
-    lines.push('');
-    writeFileSync(destination, lines.join("\n"));
-};
-
-const response = async (output, regionTag, request, xml = false) => {
+const response = async (output, regionTag, request) => {
     regionTag += "_response";
     console.log(`Generating response for: ${regionTag}`);
 
@@ -110,66 +96,8 @@ const response = async (output, regionTag, request, xml = false) => {
     request = request.replace("YOUR_PUBLIC_API_KEY", process.env.WOOSMAP_PUBLIC_API_KEY!);
     request = request.replace("YOUR_PRIVATE_API_KEY", process.env.WOOSMAP_PRIVATE_API_KEY!);
 
-    if (regionTag.indexOf("binary") !== -1 || xml) {
-        // extract the url from the curl snippet (YUCK)
-        const match = request.match(/'https(.*)'/g)!;
-        const url = match[0].replace(/'/g, "");
-
-        let response: AxiosResponse;
-        try {
-            // use axios to get the binary data
-            response = await axios.get(url, {responseType: "stream"});
-        } catch (e) {
-            if (e.response.status !== 200 && (captureError || captureInvalid)) {
-                response = e.response;
-            } else {
-                throw e;
-            }
-        }
-
-        // get the extension from the content-type header
-        // ignoring content-disposition since it isn't always available
-        const ext = {
-            "image/png": "png",
-            "image/jpeg": "jpg",
-            "application/xml": "xml",
-        }[response.headers["content-type"].split(";")[0]];
-
-        if (!ext) {
-            throw new Error(
-                `Unsupported content-type: ${response.headers["content-type"]}`
-            );
-        }
-
-        const destination = path.join(output, `${regionTag}.${ext}`);
-
-        // pipe the result stream into a file on disk
-        try {
-            unlinkSync(destination);
-        } catch (e) {
-        }
-
-        const writeStream = createWriteStream(destination);
-        response.data.pipe(writeStream);
-
-        // await until download finishes
-        await new Promise((resolve, reject) => {
-            writeStream.on("finish", () => {
-                if (ext === "xml") {
-                    xmlInsertRegionTags(destination, regionTag);
-                }
-                resolve(null);
-            });
-
-            response.data.on("error", () => {
-                reject();
-            });
-        });
-        return;
-    }
-
     // Default JSON response
-    const response = await executeJSONRequest(request, captureError);
+    const response = await executeJSONRequest(request, captureError, captureInvalid);
 
     const destination = path.join(output, `${regionTag}.yml`);
 
@@ -191,16 +119,7 @@ const main = async (argv: any) => {
         await extractRequests(argv.archive)
     )) {
         if (argv.skip && argv.skip.indexOf(regionTag) != -1) continue;
-        await response(argv.output, regionTag, request, false);
-
-        if (request.match(/\/json\?/g)) {
-            await response(
-                argv.output,
-                regionTag,
-                request.replace(/\/json\?/g, "/xml?"),
-                true
-            );
-        }
+        await response(argv.output, regionTag, request);
     }
 };
 
