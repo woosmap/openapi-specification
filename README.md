@@ -2,7 +2,7 @@
 
 ## Description
 
-An OpenAPI specification for Woosmap APIs.
+An OpenAPI specification for Woosmap Platform.
 
 | API                | Status       |
 | ------------------ | ------------ |
@@ -13,7 +13,6 @@ An OpenAPI specification for Woosmap APIs.
 | [Address](https://developers.woosmap.com/products/address-api/get-started/)             | Complete  |
 | [Distance](https://developers.woosmap.com/products/distance-api/get-started/)           | Complete  |
 | [Merchant](https://developers.woosmap.com/products/merchant-api/get-started/)           | Complete  |
-
 
 
 
@@ -40,12 +39,13 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
     > **Note**: If a documentation item is not generated, be sure it is included
     in the appropriate index.yml file.
 
-1. `npm run build:responses` (optional)
+2. `npm run build:responses` (optional)
 
     > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.
 
     > **Note**: This step only needs to run when the generation code or sample requests have been updated.
 
-    > **Note**: The geolocation request that only provides an IP is not deterministic and skipped in the binary executed.
-
-1. `npm run test`
+3. `npm run test`
+   
+   Validate the OpenAPI Schema
+   

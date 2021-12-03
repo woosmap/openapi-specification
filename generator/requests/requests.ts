@@ -118,5 +118,46 @@ export const REQUESTS: SnippetRequest[] = [
             }),
             header: [{key: "Referer", value: "http://localhost"}],
         }),
-    }
+    },
+    {
+        regionTag: "woosmap_http_distance_route",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/distance/route/json",
+                query: [
+                    {
+                        key: "origins",
+                        value: "48.709,2.403",
+                    },
+                    {
+                        key: "destinations",
+                        value: "48.709,2.303|48.768,2.338",
+                    },
+                    {
+                        key: "mode",
+                        value: "driving",
+                    },
+                    {
+                        key: "language",
+                        value: "en",
+                    },
+                    {
+                        key: "alternatives",
+                        value: "true",
+                    },
+                    {
+                        key: "waypoints",
+                        value: "48.850077,3.311124|48.850077,3.411124",
+                    },
+                    {
+                        key: "method",
+                        value: "distance",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
 ];
