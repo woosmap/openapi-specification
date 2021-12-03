@@ -18,6 +18,7 @@ paths:
         The `/position` returns JSON location of your users thanks to IP address of their devices.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/ip_address'
@@ -34,17 +35,16 @@ paths:
                     country_code: FR
                     country_name: France
                     continent: Europe
-                    latitude: 48.8323
-                    longitude: 2.4075
-                    accuracy: 200
+                    latitude: 48.8582
+                    longitude: 2.3387
+                    accuracy: 500
                     viewport:
                       northeast:
-                        lat: 50.628930568239035
-                        lng: 5.136987883597163
+                        lat: 53.3497764205976
+                        lng: 9.167877689543051
                       southwest:
-                        lat: 47.03566943176095
-                        lng: -0.3219878835971626
-                    postal_code: '75003'
+                        lat: 44.36662357940239
+                        lng: -4.4904776895430505
                     timezone: Europe/Paris
         '401':
           description: 401 UNAUTHORIZED
@@ -74,6 +74,7 @@ paths:
         Retrieve the stores nearby an ip location. Stores are returned only if a relevant ip location is found - for an accuracy of 20km or less.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/ip_address'
@@ -432,6 +433,8 @@ paths:
         Used to retrieve an asset from his `storeId`
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
       parameters:
         - in: path
           name: storeId
@@ -610,6 +613,7 @@ paths:
         Used to retrieve assets from query
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/query'
@@ -803,6 +807,7 @@ paths:
         Autocomplete on `localizedNames` with highlighted results on asset name. Use the field `localized` in your query parameter to search for localized names.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/query'
@@ -996,6 +1001,7 @@ paths:
         Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/localities_input'
@@ -1126,6 +1132,7 @@ paths:
         Provides details of an autocomplete suggestion (using the suggestion’s `public_id`).
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/localities_public_id'
@@ -1239,6 +1246,7 @@ paths:
         Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/address_input'
@@ -1305,6 +1313,7 @@ paths:
         Provides details of an address autocomplete suggestion (using the suggestion’s `public_id`).
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/address_public_id'
@@ -1483,6 +1492,8 @@ paths:
         Used to retrieve a zone from his `zone_id`
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
       parameters:
         - in: path
           name: zone_id
@@ -1529,6 +1540,7 @@ paths:
         Get distances and durations for a matrix of origins and destinations, based on the recommended route between start and end points for a specified travel mode.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/distance_origins'
@@ -1599,6 +1611,7 @@ paths:
         Get distances and durations for a matrix of origins and destinations, based on the recommended route between start and end points for a specified travel mode. If the URL size is too short for your origins and destinations, you should request the server using this POST method and passing arguments as json.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       requestBody:
         description: The request body must be formatted as JSON.
@@ -1677,6 +1690,7 @@ paths:
         Get distance, duration and path (as a polyline) for a pair of origin and destination, based on the recommended route between those two points for a specified travel mode.
       security:
         - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/distance_origins'
@@ -2614,17 +2628,16 @@ components:
         country_code: FR
         country_name: France
         continent: Europe
-        latitude: 48.8323
-        longitude: 2.4075
-        accuracy: 200
+        latitude: 48.8582
+        longitude: 2.3387
+        accuracy: 500
         viewport:
           northeast:
-            lat: 50.628930568239035
-            lng: 5.136987883597163
+            lat: 53.3497764205976
+            lng: 9.167877689543051
           southwest:
-            lat: 47.03566943176095
-            lng: -0.3219878835971626
-        postal_code: '75003'
+            lat: 44.36662357940239
+            lng: -4.4904776895430505
         timezone: Europe/Paris
     GeolocationStoresResponse:
       title: GeolocationStoresResponse
@@ -4257,18 +4270,24 @@ components:
           - dirty_name: Pepa SL Gracia
             country: ES
   securitySchemes:
-    PublicApiKeyAuth:
-      description: 'A Public key generated specifically to authenticate API requests on the front side. See how to [register a Public API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-public-api-key).'
-      type: apiKey
-      in: query
-      name: key
     PrivateApiKeyAuth:
       description: 'A Private key generated specifically to authenticate API requests on server side. Required for Data management API. See how to [register a Private API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-private-api-key).'
       type: apiKey
       in: query
       name: private_key
+    PublicApiKeyAuth:
+      description: 'A Public key generated specifically to authenticate API requests on the front side. See how to [register a Public API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-public-api-key).'
+      type: apiKey
+      in: query
+      name: key
+    RefererHeader:
+      description: 'The Referer HTTP request header is mandatory when using PublicApiKeyAuth. In browser environment, the Referer is set by the browser itself and cannot be overridden.'
+      type: apiKey
+      in: header
+      name: Referer
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 tags:
   - name: Store Search API

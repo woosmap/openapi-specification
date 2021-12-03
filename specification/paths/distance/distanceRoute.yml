@@ -6,6 +6,7 @@ description: >
   Get distance, duration and path (as a polyline) for a pair of origin and destination, based on the recommended route between those two points for a specified travel mode.
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/distance/origins.yml"

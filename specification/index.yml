@@ -13,18 +13,25 @@ components:
   schemas:
     $ref: "./schemas/_index.yml"
   securitySchemes:
-    PublicApiKeyAuth:
-      description: A Public key generated specifically to authenticate API requests on the front side. See how to [register a Public API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-public-api-key).
-      type: apiKey
-      in: query
-      name: key
     PrivateApiKeyAuth:
       description: A Private key generated specifically to authenticate API requests on server side. Required for Data management API. See how to [register a Private API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-private-api-key).
       type: apiKey
       in: query
       name: private_key
+    PublicApiKeyAuth:
+      description: A Public key generated specifically to authenticate API requests on the front side. See how to [register a Public API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-public-api-key).
+      type: apiKey
+      in: query
+      name: key
+    RefererHeader:
+      description: The Referer HTTP request header is mandatory when using PublicApiKeyAuth. In browser environment, the Referer is set by the browser itself and cannot be overridden.
+      type: apiKey
+      in: header
+      name: Referer
+
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 tags:
   - name: Store Search API

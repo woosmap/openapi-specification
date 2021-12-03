@@ -7,6 +7,7 @@ description: >
   Use the field `localized` in your query parameter to search for localized names.
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/query.yml"

@@ -6,6 +6,7 @@ description: >
   Retrieve the stores nearby an ip location. Stores are returned only if a relevant ip location is found - for an accuracy of 20km or less.
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/ip_address.yml"

@@ -6,6 +6,7 @@ description: >
   The `/position` returns JSON location of your users thanks to IP address of their devices.
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/ip_address.yml"

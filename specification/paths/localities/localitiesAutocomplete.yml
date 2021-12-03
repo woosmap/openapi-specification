@@ -7,6 +7,7 @@ description: >
   It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/localities/input.yml"

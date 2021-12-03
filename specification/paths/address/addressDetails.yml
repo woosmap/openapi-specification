@@ -6,6 +6,7 @@ description: >
   Provides details of an address autocomplete suggestion (using the suggestion’s `public_id`).
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/address/public_id.yml"

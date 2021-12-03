@@ -6,6 +6,8 @@ description: >
   Used to retrieve an asset from his `storeId`
 security:
   - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
 parameters:
   - in: path
     name: storeId
