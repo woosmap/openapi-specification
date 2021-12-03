@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/stores?key=YOUR_API_KEY"
+  url := "https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY"
   method := "POST"
 
   payload := strings.NewReader(`{

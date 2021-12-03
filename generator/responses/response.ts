@@ -1,207 +1,207 @@
-
-
-import { options } from "yargs";
+import {options} from "yargs";
 import tar from "tar-stream";
 import {
-  createReadStream,
-  writeFileSync,
-  createWriteStream,
-  unlinkSync,
-  readFileSync,
+    createReadStream,
+    writeFileSync,
+    createWriteStream,
+    unlinkSync,
+    readFileSync,
 } from "fs";
-import { exec } from "child_process";
+import {exec} from "child_process";
 import path from "path";
 import prettier from "prettier";
-import axios, { AxiosResponse } from "axios";
+import axios, {AxiosResponse} from "axios";
 
-const header = `# Part of Woosmap Open API Specification`;
+const header = ``;
 
 const argv = options({
-  archive: {
-    type: "string",
-    demandOption: true,
-  },
-  output: {
-    type: "string",
-    demandOption: true,
-  },
-  skip: { type: "string" },
+    archive: {
+        type: "string",
+        demandOption: true,
+    },
+    output: {
+        type: "string",
+        demandOption: true,
+    },
+    skip: {type: "string"},
 }).argv;
 
 const extractRequests = async (
-  archive: string
+    archive: string
 ): Promise<{ [key: string]: string }> => {
-  return new Promise((resolve) => {
-    const extract = tar.extract();
-    const requests: { [key: string]: string } = {};
+    return new Promise((resolve) => {
+        const extract = tar.extract();
+        const requests: { [key: string]: string } = {};
 
-    extract.on("entry", function (header, stream, callback) {
-      stream.on("data", function (chunk) {
-        const match = header.name.match(/snippets\/.*\/(.*)\.sh/);
+        extract.on("entry", function (header, stream, callback) {
+            stream.on("data", function (chunk) {
+                const match = header.name.match(/snippets\/.*\/(.*)\.sh/);
 
-        if (match) {
-          const name = match[1];
+                if (match) {
+                    const name = match[1];
 
-          requests[name] = requests[name] || "";
-          requests[name] += chunk;
-        }
-      });
+                    requests[name] = requests[name] || "";
+                    requests[name] += chunk;
+                }
+            });
 
-      stream.on("end", function () {
-        callback();
-      });
+            stream.on("end", function () {
+                callback();
+            });
 
-      stream.resume();
+            stream.resume();
+        });
+
+        extract.on("finish", function () {
+            resolve(requests);
+        });
+
+        createReadStream(archive).pipe(extract);
     });
-
-    extract.on("finish", function () {
-      resolve(requests);
-    });
-
-    createReadStream(archive).pipe(extract);
-  });
 };
 
 const executeJSONRequest = async (
-  request: string,
-  captureError: boolean = false
+    request: string,
+    captureError: boolean = false
 ): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    exec(request, function (error, stdout, stderr) {
-      // request failed with non 200 error
-      if (error) {
-        reject(stderr);
-      }
+    return new Promise((resolve, reject) => {
+        exec(request, function (error, stdout, stderr) {
+            // request failed with non 200 error
+            if (error) {
+                reject(stderr);
+            }
 
-      let response: any;
+            let response: any;
 
-      try {
-        response = JSON.parse(stdout) as any;
-      } catch (e) {
-        reject(stdout);
-        return;
-      }
-      // might be a 200 but have an error body
-      if (response.error && !captureError) {
-        reject(stdout);
-        return;
-      }
+            try {
+                response = JSON.parse(stdout) as any;
+            } catch (e) {
+                reject(stdout);
+                return;
+            }
+            // might be a 200 but have an error body
+            if (response.error && !captureError) {
+                reject(stdout);
+                return;
+            }
 
-      resolve(response);
+            resolve(response);
+        });
     });
-  });
 };
 
 const xmlInsertRegionTags = (destination: string, regionTag: string) => {
-  const contents = readFileSync(destination, "utf8");
+    const contents = readFileSync(destination, "utf8");
 
-  const lines = contents.split("\n").filter(value => value !== "");
-  lines.splice(1, 0, `<!-- [START ${regionTag}] -->`);
-  lines.push(`<!-- [END ${regionTag}] -->`);
-  lines.push('');
-  writeFileSync(destination, lines.join("\n"));
+    const lines = contents.split("\n").filter(value => value !== "");
+    lines.splice(1, 0, `<!-- [START ${regionTag}] -->`);
+    lines.push(`<!-- [END ${regionTag}] -->`);
+    lines.push('');
+    writeFileSync(destination, lines.join("\n"));
 };
 
 const response = async (output, regionTag, request, xml = false) => {
-  regionTag += "_response";
-  console.log(`Generating response for: ${regionTag}`);
+    regionTag += "_response";
+    console.log(`Generating response for: ${regionTag}`);
 
-  const captureError = /error/i.test(regionTag);
-  const captureInvalid = /invalid/i.test(regionTag);
+    const captureError = /error/i.test(regionTag);
+    const captureInvalid = /invalid/i.test(regionTag);
 
-  request = request.replace("YOUR_API_KEY", process.env.WOOSMAP_API_KEY!);
+    request = request.replace("YOUR_PUBLIC_API_KEY", process.env.WOOSMAP_PUBLIC_API_KEY!);
+    request = request.replace("YOUR_PRIVATE_API_KEY", process.env.WOOSMAP_PRIVATE_API_KEY!);
 
-  if (regionTag.indexOf("binary") !== -1 || xml) {
-    // extract the url from the curl snippet (YUCK)
-    const match = request.match(/'https(.*)'/g)!;
-    const url = match[0].replace(/'/g, "");
+    if (regionTag.indexOf("binary") !== -1 || xml) {
+        // extract the url from the curl snippet (YUCK)
+        const match = request.match(/'https(.*)'/g)!;
+        const url = match[0].replace(/'/g, "");
 
-    let response: AxiosResponse;
-    try {
-      // use axios to get the binary data
-      response = await axios.get(url, { responseType: "stream" });
-    } catch (e) {
-      if (e.response.status !== 200 && (captureError || captureInvalid)) {
-        response = e.response;
-      } else {
-        throw e;
-      }
-    }
-
-    // get the extension from the content-type header
-    // ignoring content-disposition since it isn't always available
-    const ext = {
-      "image/png": "png",
-      "image/jpeg": "jpg",
-      "application/xml": "xml",
-    }[response.headers["content-type"].split(";")[0]];
-
-    if (!ext) {
-      throw new Error(
-        `Unsupported content-type: ${response.headers["content-type"]}`
-      );
-    }
-
-    const destination = path.join(output, `${regionTag}.${ext}`);
-
-    // pipe the result stream into a file on disk
-    try {
-      unlinkSync(destination);
-    } catch (e) {}
-    
-    const writeStream = createWriteStream(destination);
-    response.data.pipe(writeStream);
-
-    // await until download finishes
-    await new Promise((resolve, reject) => {
-      writeStream.on("finish", () => {
-        if (ext === "xml") {
-          xmlInsertRegionTags(destination, regionTag);
+        let response: AxiosResponse;
+        try {
+            // use axios to get the binary data
+            response = await axios.get(url, {responseType: "stream"});
+        } catch (e) {
+            if (e.response.status !== 200 && (captureError || captureInvalid)) {
+                response = e.response;
+            } else {
+                throw e;
+            }
         }
-        resolve(null);
-      });
 
-      response.data.on("error", () => {
-        reject();
-      });
-    });
-    return;
-  }
+        // get the extension from the content-type header
+        // ignoring content-disposition since it isn't always available
+        const ext = {
+            "image/png": "png",
+            "image/jpeg": "jpg",
+            "application/xml": "xml",
+        }[response.headers["content-type"].split(";")[0]];
 
-  // Default JSON response
-  const response = await executeJSONRequest(request, captureError);
+        if (!ext) {
+            throw new Error(
+                `Unsupported content-type: ${response.headers["content-type"]}`
+            );
+        }
 
-  const destination = path.join(output, `${regionTag}.yml`);
+        const destination = path.join(output, `${regionTag}.${ext}`);
 
-  writeFileSync(
-    destination,
-    prettier.format(
-      `${header}
+        // pipe the result stream into a file on disk
+        try {
+            unlinkSync(destination);
+        } catch (e) {
+        }
+
+        const writeStream = createWriteStream(destination);
+        response.data.pipe(writeStream);
+
+        // await until download finishes
+        await new Promise((resolve, reject) => {
+            writeStream.on("finish", () => {
+                if (ext === "xml") {
+                    xmlInsertRegionTags(destination, regionTag);
+                }
+                resolve(null);
+            });
+
+            response.data.on("error", () => {
+                reject();
+            });
+        });
+        return;
+    }
+
+    // Default JSON response
+    const response = await executeJSONRequest(request, captureError);
+
+    const destination = path.join(output, `${regionTag}.yml`);
+
+    writeFileSync(
+        destination,
+        prettier.format(
+            `${header}
         # [START ${regionTag}]
         ${JSON.stringify(response, null, 2)}
         # [END ${regionTag}]
       `,
-      { parser: "yaml" }
-    )
-  );
+            {parser: "yaml"}
+        )
+    );
 };
 
 const main = async (argv: any) => {
-  for (let [regionTag, request] of Object.entries(
-    await extractRequests(argv.archive)
-  )) {
-    if (argv.skip.indexOf(regionTag) != -1) continue;
-    await response(argv.output, regionTag, request, false);
+    for (let [regionTag, request] of Object.entries(
+        await extractRequests(argv.archive)
+    )) {
+        if (argv.skip && argv.skip.indexOf(regionTag) != -1) continue;
+        await response(argv.output, regionTag, request, false);
 
-    if (request.match(/\/json\?/g)) {
-      await response(
-        argv.output,
-        regionTag,
-        request.replace(/\/json\?/g, "/xml?"),
-        true
-      );
+        if (request.match(/\/json\?/g)) {
+            await response(
+                argv.output,
+                regionTag,
+                request.replace(/\/json\?/g, "/xml?"),
+                true
+            );
+        }
     }
-  }
 };
 
 main(argv);

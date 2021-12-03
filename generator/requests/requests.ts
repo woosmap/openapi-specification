@@ -37,10 +37,11 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "ip_address",
-                        value: "75.134.29.90",
+                        value: "163.172.70.225",
                     },
                 ],
             }),
+            header: [{key: "Referer", value: "http://localhost"}],
         }),
     }
 ];

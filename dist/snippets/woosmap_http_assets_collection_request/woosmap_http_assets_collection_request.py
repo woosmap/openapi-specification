@@ -2,7 +2,7 @@
 import requests
 import json
 
-url = "https://api.woosmap.com/stores?key=YOUR_API_KEY"
+url = "https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY"
 
 payload = json.dumps({
     "stores": [

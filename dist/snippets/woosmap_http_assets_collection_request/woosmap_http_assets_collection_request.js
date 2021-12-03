@@ -61,7 +61,7 @@ var data = JSON.stringify({
 
 var config = {
   method: 'post',
-  url: 'https://api.woosmap.com/stores?key=YOUR_API_KEY',
+  url: 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY',
   headers: { 
     'content-type': 'application/json'
   },

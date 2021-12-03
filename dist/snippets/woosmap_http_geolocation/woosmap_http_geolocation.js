@@ -3,8 +3,10 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://api.woosmap.com/geolocation/position?ip_address=75.134.29.90&key=YOUR_API_KEY',
-  headers: { }
+  url: 'https://api.woosmap.com/geolocation/position?ip_address=163.172.70.225&key=YOUR_PUBLIC_API_KEY',
+  headers: { 
+    'Referer': 'http://localhost'
+  }
 };
 
 axios(config)

@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/geolocation/position?ip_address=75.134.29.90&key=YOUR_API_KEY"
+  url := "https://api.woosmap.com/geolocation/position?ip_address=163.172.70.225&key=YOUR_PUBLIC_API_KEY"
   method := "GET"
 
   client := &http.Client {
@@ -20,6 +20,8 @@ func main() {
     fmt.Println(err)
     return
   }
+  req.Header.Add("Referer", "http://localhost")
+
   res, err := client.Do(req)
   if err != nil {
     fmt.Println(err)
