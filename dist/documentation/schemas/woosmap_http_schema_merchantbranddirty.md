@@ -12,7 +12,7 @@ Attributes describing each Merchant Brand in dirty transaction
 | <h4 id="MerchantBrandDirty-description" class="add-link schema-object-property-key"><code>description</code></h4> | optional     | string | <div class="nonref-property-description"><p>The description is provided to you by the payment provider and is the transaction description attached to any payment.</p></div>                                                                             |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
-<a data-label="openapi-github-woosmap-http-schema-merchantbranddirty" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/MerchantBrandDirty.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a data-label="openapi-github-woosmap-http-schema-merchantbranddirty" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/MerchantBrandDirty.yml" title="Edit on GitHub">✎ Edit</a>
 <a data-label="openapi-github-woosmap-http-schema-merchantbranddirty" data-action="bug" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - MerchantBrandDirty" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
 </p>
 

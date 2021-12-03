@@ -76,7 +76,7 @@ const executeJSONRequest = async (
                 reject(stdout);
                 return;
             }
-            // todo: get status code executing the request (--write-out %{http_code}) and push
+            // todo: get status code when executing the request (e.g. --write-out %{http_code})
             if (response.error && !captureError && !captureInvalid) {
                 reject(stdout);
                 return;

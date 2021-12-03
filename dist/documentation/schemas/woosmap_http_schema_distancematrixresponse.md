@@ -19,49 +19,23 @@ Attributes describing an distance Matrix response.
         {
           "status": "OK",
           "duration": {
-            "value": 20495,
-            "text": "5 hours 42 mins"
+            "value": 866,
+            "text": "14 mins"
           },
           "distance": {
-            "value": 544752,
-            "text": "545 km"
+            "value": 10613,
+            "text": "10.6 km"
           }
         },
         {
           "status": "OK",
           "duration": {
-            "value": 1668,
-            "text": "28 mins"
+            "value": 935,
+            "text": "16 mins"
           },
           "distance": {
-            "value": 24089,
-            "text": "24.1 km"
-          }
-        }
-      ]
-    },
-    {
-      "elements": [
-        {
-          "status": "OK",
-          "duration": {
-            "value": 16864,
-            "text": "4 hours 41 mins"
-          },
-          "distance": {
-            "value": 448056,
-            "text": "448 km"
-          }
-        },
-        {
-          "status": "OK",
-          "duration": {
-            "value": 27568,
-            "text": "7 hours 39 mins"
-          },
-          "distance": {
-            "value": 742188,
-            "text": "742 km"
+            "value": 10287,
+            "text": "10.3 km"
           }
         }
       ]
@@ -70,7 +44,7 @@ Attributes describing an distance Matrix response.
 }</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
-<a data-label="openapi-github-woosmap-http-schema-distancematrixresponse" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/DistanceMatrixResponse.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a data-label="openapi-github-woosmap-http-schema-distancematrixresponse" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/DistanceMatrixResponse.yml" title="Edit on GitHub">✎ Edit</a>
 <a data-label="openapi-github-woosmap-http-schema-distancematrixresponse" data-action="bug" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DistanceMatrixResponse" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
 </p>
 

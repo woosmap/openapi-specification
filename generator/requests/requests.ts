@@ -64,5 +64,59 @@ export const REQUESTS: SnippetRequest[] = [
             }),
             header: [{key: "Referer", value: "http://localhost"}],
         }),
+    },
+    {
+        regionTag: "woosmap_http_address_details",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/address/details/json",
+                query: [
+                    {
+                        key: "public_id",
+                        value: "aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_distance_matrix",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/distance/distancematrix/json",
+                query: [
+                    {
+                        key: "origins",
+                        value: "48.709,2.403",
+                    },
+                    {
+                        key: "destinations",
+                        value: "48.709,2.303|48.768,2.338",
+                    },
+                    {
+                        key: "mode",
+                        value: "driving",
+                    },
+                    {
+                        key: "language",
+                        value: "en",
+                    },
+                    {
+                        key: "elements",
+                        value: "duration_distance",
+                    },
+                    {
+                        key: "method",
+                        value: "distance",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
     }
 ];
