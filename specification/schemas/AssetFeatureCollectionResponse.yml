@@ -12,7 +12,10 @@ properties:
     enum:
       - FeatureCollection
   features:
-    $ref: "./AssetResponse.yml"
+    description: the Assets Features
+    type: array
+    items:
+      $ref: "./AssetFeatureResponse.yml"
   pagination:
     $ref: "./Pagination.yml"
 example:

@@ -12,6 +12,10 @@ properties:
     $ref: "./AssetAddress.yml"
   contact:
     $ref: "./AssetContact.yml"
+  open:
+    $ref: "./AssetOpenResponse.yml"
+  weekly_opening:
+    $ref: "./AssetWeeklyOpeningResponse.yml"
   types:
     description: Contains an array of types describing the Asset.
     type: array
@@ -24,9 +28,12 @@ properties:
     items:
       type: string
     example: [ "wifi", "covered_parking" ]
-  userProperties:
+  user_properties:
     description: Contains all additional information relative to an Asset
     type: object
     example: [ "wifi", "covered_parking" ]
   opening_hours:
     $ref: "./AssetOpeningHours.yml"
+  distance:
+    description: The distance in meters from the geolocated position or searched position if exist
+    type: number
