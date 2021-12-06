@@ -240,4 +240,22 @@ export const REQUESTS: SnippetRequest[] = [
             header: [{key: "Referer", value: "http://localhost"}],
         }),
     },
+    {
+        regionTag: "woosmap_http_merchants_brand",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/merchants/brand",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_merchants_brand_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_merchants_place",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/merchants/place",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_merchants_place_request.yml"
+            ),
+        }),
+    },
 ];

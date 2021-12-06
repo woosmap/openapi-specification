@@ -1,0 +1,13 @@
+title: MerchantsPlaceResponse
+type: object
+description: Attributes describing a Merchant Place Response
+required: [merchants]
+properties:
+  merchants:
+    description: The list of cleaned transactions
+    type: array
+    items:
+      $ref: "./MerchantsPlaceClean.yml"
+
+example:
+  $ref: "../responses/woosmap_http_merchants_place_response.yml"

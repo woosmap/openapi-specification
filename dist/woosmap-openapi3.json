@@ -2766,17 +2766,17 @@
         }
       }
     },
-    "/merchant/brands": {
+    "/merchants/brand": {
       "post": {
-        "summary": "Get Merchant Clean Names",
-        "operationId": "getMerchantBrand",
+        "summary": "Get Merchants Clean Names",
+        "operationId": "getMerchantsBrand",
         "servers": [
           {
             "url": "https://api.woosmap.com"
           }
         ],
         "tags": [
-          "Merchant API"
+          "Merchants API"
         ],
         "description": "Retrieve clean names and logos in response to a dirty transactions POST.\n",
         "security": [
@@ -2790,7 +2790,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/MerchantBrandRequest"
+                "$ref": "#/components/schemas/MerchantsBrandRequest"
               },
               "examples": {
                 "default": {
@@ -2836,7 +2836,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MerchantBrandResponse"
+                  "$ref": "#/components/schemas/MerchantsBrandResponse"
                 },
                 "examples": {
                   "default": {
@@ -2848,8 +2848,7 @@
                           "status": "OK",
                           "logo": "956bcb3591a8976ff94871a59b09eecc",
                           "logo_url": "https://api.woosmap.com/merchants/logos/956bcb3591a8976ff94871a59b09eecc.png",
-                          "country": "GB",
-                          "merchant_id": "234482729011"
+                          "country": "GB"
                         },
                         {
                           "dirty_name": "Zara Fashion Retail, S.A.",
@@ -2857,16 +2856,15 @@
                           "status": "OK",
                           "logo": "72fc39033e0d9e923a0236cb874c9309",
                           "logo_url": "https://api.woosmap.com/merchants/logos/72fc39033e0d9e923a0236cb874c9309.png",
-                          "country": "IT",
-                          "merchant_id": "*44532UY2T33219"
+                          "country": "IT"
                         },
                         {
-                          "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-                          "clean_name": "Apollo Pharmacy",
                           "status": "OK",
+                          "clean_name": "Apollo Pharmacy",
                           "logo": "c776d3336e0d8c2b9e893e9e92b2caf7",
                           "logo_url": "https://api.woosmap.com/merchants/logos/c776d3336e0d8c2b9e893e9e92b2caf7.png",
-                          "country": "IN"
+                          "country": "IN",
+                          "dirty_name": "APOLLO PHARMACY BANGALORE IN"
                         },
                         {
                           "dirty_name": "PIZZA HUT - SHOP 157",
@@ -2882,8 +2880,7 @@
                           "status": "OK",
                           "logo": "08ee8a3cecbcd3b7d9103bcf0e04db7e",
                           "logo_url": "https://api.woosmap.com/merchants/logos/08ee8a3cecbcd3b7d9103bcf0e04db7e.png",
-                          "country": "FR",
-                          "merchant_id": "9651781125"
+                          "country": "FR"
                         },
                         {
                           "dirty_name": "ITUNES.COM/BILL",
@@ -2891,17 +2888,15 @@
                           "status": "OK",
                           "logo": "5eb75a5239b76287f44021f8e6e1bd41",
                           "logo_url": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png",
-                          "country": "IE",
-                          "merchant_id": "2070070200925"
+                          "country": "IE"
                         },
                         {
-                          "dirty_name": "Pepa SL Gracia",
+                          "status": "NOT_FOUND",
                           "clean_name": "",
-                          "status": "OK",
                           "logo": "",
                           "logo_url": "",
                           "country": "ES",
-                          "merchant_id": "34J21189"
+                          "dirty_name": "Pepa SL Gracia"
                         }
                       ]
                     }
@@ -2927,17 +2922,17 @@
         }
       }
     },
-    "/merchant/place": {
+    "/merchants/place": {
       "post": {
-        "summary": "Get Merchant Place",
-        "operationId": "getMerchantPlace",
+        "summary": "Get Merchants Place",
+        "operationId": "getMerchantsPlace",
         "servers": [
           {
             "url": "https://api.woosmap.com"
           }
         ],
         "tags": [
-          "Merchant API"
+          "Merchants API"
         ],
         "description": "Retrieve clean names, logos and Google Place ID of given dirty merchants name.\n",
         "security": [
@@ -2951,7 +2946,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/MerchantPlaceRequest"
+                "$ref": "#/components/schemas/MerchantsPlaceRequest"
               },
               "examples": {
                 "default": {
@@ -2959,30 +2954,28 @@
                     "merchants": [
                       {
                         "dirty_name": "MCDO UK 2231 EP",
-                        "country": "GB"
+                        "country": "GB",
+                        "merchant_id": "234482729011"
                       },
                       {
                         "dirty_name": "Zara Fashion Retail, S.A.",
-                        "country": "IT"
-                      },
-                      {
-                        "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-                        "country": "IN"
-                      },
-                      {
-                        "dirty_name": "PIZZA HUT - SHOP 157"
+                        "country": "IT",
+                        "merchant_id": "*44532UY2T33219"
                       },
                       {
                         "dirty_name": "CARREFOUR CITY 3112846",
-                        "country": "FR"
+                        "country": "FR",
+                        "merchant_id": "9651781125"
                       },
                       {
                         "dirty_name": "ITUNES.COM/BILL",
-                        "country": "IE"
+                        "country": "IE",
+                        "merchant_id": "2070070200925"
                       },
                       {
                         "dirty_name": "Pepa SL Gracia",
-                        "country": "ES"
+                        "country": "ES",
+                        "merchant_id": "34J21189"
                       }
                     ]
                   }
@@ -2997,7 +2990,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MerchantPlaceResponse"
+                  "$ref": "#/components/schemas/MerchantsPlaceResponse"
                 },
                 "examples": {
                   "default": {
@@ -3010,7 +3003,8 @@
                           "logo": "956bcb3591a8976ff94871a59b09eecc",
                           "logo_url": "https://api.woosmap.com/merchants/logos/956bcb3591a8976ff94871a59b09eecc.png",
                           "country": "GB",
-                          "merchant_id": "234482729011"
+                          "merchant_id": "234482729011",
+                          "place_id": "ChIJGS7Sga0cdkgR46nd-S661TM"
                         },
                         {
                           "dirty_name": "Zara Fashion Retail, S.A.",
@@ -3019,23 +3013,8 @@
                           "logo": "72fc39033e0d9e923a0236cb874c9309",
                           "logo_url": "https://api.woosmap.com/merchants/logos/72fc39033e0d9e923a0236cb874c9309.png",
                           "country": "IT",
-                          "merchant_id": "*44532UY2T33219"
-                        },
-                        {
-                          "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-                          "clean_name": "Apollo Pharmacy",
-                          "status": "OK",
-                          "logo": "c776d3336e0d8c2b9e893e9e92b2caf7",
-                          "logo_url": "https://api.woosmap.com/merchants/logos/c776d3336e0d8c2b9e893e9e92b2caf7.png",
-                          "country": "IN"
-                        },
-                        {
-                          "dirty_name": "PIZZA HUT - SHOP 157",
-                          "clean_name": "Pizza Hut",
-                          "status": "OK",
-                          "logo": "d5463410f32a5f497459ac79552d3ce3",
-                          "logo_url": "https://api.woosmap.com/merchants/logos/d5463410f32a5f497459ac79552d3ce3.png",
-                          "country": ""
+                          "merchant_id": "*44532UY2T33219",
+                          "place_id": "ChIJF2vQecLGhkcR83Zbpwpej3I"
                         },
                         {
                           "dirty_name": "CARREFOUR CITY 3112846",
@@ -3044,7 +3023,8 @@
                           "logo": "08ee8a3cecbcd3b7d9103bcf0e04db7e",
                           "logo_url": "https://api.woosmap.com/merchants/logos/08ee8a3cecbcd3b7d9103bcf0e04db7e.png",
                           "country": "FR",
-                          "merchant_id": "9651781125"
+                          "merchant_id": "9651781125",
+                          "place_id": "ChIJJ7ZEZDUnVQ0Ru5gudUqdvKM"
                         },
                         {
                           "dirty_name": "ITUNES.COM/BILL",
@@ -3053,16 +3033,18 @@
                           "logo": "5eb75a5239b76287f44021f8e6e1bd41",
                           "logo_url": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png",
                           "country": "IE",
-                          "merchant_id": "2070070200925"
+                          "merchant_id": "2070070200925",
+                          "place_id": ""
                         },
                         {
-                          "dirty_name": "Pepa SL Gracia",
-                          "clean_name": "",
                           "status": "OK",
+                          "clean_name": "",
                           "logo": "",
                           "logo_url": "",
                           "country": "ES",
-                          "merchant_id": "34J21189"
+                          "dirty_name": "Pepa SL Gracia",
+                          "merchant_id": "34J21189",
+                          "place_id": "ChIJZ9fQvb2ipBIRyaZy8wUqRGQ"
                         }
                       ]
                     }
@@ -6137,8 +6119,8 @@
           "method": "distance"
         }
       },
-      "MerchantBrandClean": {
-        "title": "MerchantBrandClean",
+      "MerchantsBrandClean": {
+        "title": "MerchantsBrandClean",
         "type": "object",
         "description": "Attributes describing each Merchant Brand cleaned",
         "required": [
@@ -6182,16 +6164,11 @@
           "custom_id": {
             "description": "Provided in request and returned if specified.",
             "type": "string"
-          },
-          "merchant_id": {
-            "type": "string",
-            "description": "Textual identifier for Merchant",
-            "example": "1070060999900835"
           }
         }
       },
-      "MerchantBrandResponse": {
-        "title": "MerchantBrandResponse",
+      "MerchantsBrandResponse": {
+        "title": "MerchantsBrandResponse",
         "type": "object",
         "description": "Attributes describing a Merchant Brand response",
         "required": [
@@ -6202,7 +6179,7 @@
             "description": "The list of cleaned transactions",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MerchantBrandClean"
+              "$ref": "#/components/schemas/MerchantsBrandClean"
             }
           }
         },
@@ -6214,8 +6191,7 @@
               "status": "OK",
               "logo": "956bcb3591a8976ff94871a59b09eecc",
               "logo_url": "https://api.woosmap.com/merchants/logos/956bcb3591a8976ff94871a59b09eecc.png",
-              "country": "GB",
-              "merchant_id": "234482729011"
+              "country": "GB"
             },
             {
               "dirty_name": "Zara Fashion Retail, S.A.",
@@ -6223,16 +6199,15 @@
               "status": "OK",
               "logo": "72fc39033e0d9e923a0236cb874c9309",
               "logo_url": "https://api.woosmap.com/merchants/logos/72fc39033e0d9e923a0236cb874c9309.png",
-              "country": "IT",
-              "merchant_id": "*44532UY2T33219"
+              "country": "IT"
             },
             {
-              "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-              "clean_name": "Apollo Pharmacy",
               "status": "OK",
+              "clean_name": "Apollo Pharmacy",
               "logo": "c776d3336e0d8c2b9e893e9e92b2caf7",
               "logo_url": "https://api.woosmap.com/merchants/logos/c776d3336e0d8c2b9e893e9e92b2caf7.png",
-              "country": "IN"
+              "country": "IN",
+              "dirty_name": "APOLLO PHARMACY BANGALORE IN"
             },
             {
               "dirty_name": "PIZZA HUT - SHOP 157",
@@ -6248,8 +6223,7 @@
               "status": "OK",
               "logo": "08ee8a3cecbcd3b7d9103bcf0e04db7e",
               "logo_url": "https://api.woosmap.com/merchants/logos/08ee8a3cecbcd3b7d9103bcf0e04db7e.png",
-              "country": "FR",
-              "merchant_id": "9651781125"
+              "country": "FR"
             },
             {
               "dirty_name": "ITUNES.COM/BILL",
@@ -6257,23 +6231,21 @@
               "status": "OK",
               "logo": "5eb75a5239b76287f44021f8e6e1bd41",
               "logo_url": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png",
-              "country": "IE",
-              "merchant_id": "2070070200925"
+              "country": "IE"
             },
             {
-              "dirty_name": "Pepa SL Gracia",
+              "status": "NOT_FOUND",
               "clean_name": "",
-              "status": "OK",
               "logo": "",
               "logo_url": "",
               "country": "ES",
-              "merchant_id": "34J21189"
+              "dirty_name": "Pepa SL Gracia"
             }
           ]
         }
       },
-      "MerchantBrandDirty": {
-        "title": "MerchantBrandDirty",
+      "MerchantsBrandDirty": {
+        "title": "MerchantsBrandDirty",
         "type": "object",
         "description": "Attributes describing each Merchant Brand in dirty transaction",
         "required": [
@@ -6302,8 +6274,8 @@
           }
         }
       },
-      "MerchantBrandRequest": {
-        "title": "MerchantBrandRequest",
+      "MerchantsBrandRequest": {
+        "title": "MerchantsBrandRequest",
         "type": "object",
         "description": "Attributes describing a Merchant Brand request",
         "required": [
@@ -6314,7 +6286,7 @@
             "description": "The list of dirty transactions to clean",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MerchantBrandDirty"
+              "$ref": "#/components/schemas/MerchantsBrandDirty"
             }
           }
         },
@@ -6350,32 +6322,62 @@
           ]
         }
       },
-      "MerchantPlaceClean": {
-        "title": "MerchantPlaceClean",
+      "MerchantsPlaceClean": {
+        "title": "MerchantsPlaceClean",
         "description": "Attributes describing each Merchant Brand cleaned",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MerchantBrandClean"
+        "type": "object",
+        "properties": {
+          "merchant_id": {
+            "type": "string",
+            "description": "Textual identifier for Merchant",
+            "example": "1070060999900835"
           },
-          {
-            "type": "object",
-            "properties": {
-              "merchant_id": {
-                "type": "string",
-                "description": "Textual identifier for Merchant",
-                "example": "1070060999900835"
-              },
-              "place_id": {
-                "type": "string",
-                "description": "The [Google Maps Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id)",
-                "example": "ChIJgUbEo8cfqokR5lP9_Wh_DaM"
-              }
-            }
+          "place_id": {
+            "type": "string",
+            "description": "The [Google Maps Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id)",
+            "example": "ChIJgUbEo8cfqokR5lP9_Wh_DaM"
+          },
+          "dirty_name": {
+            "description": "The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.",
+            "type": "string",
+            "example": "APPLE.COM/BILL"
+          },
+          "clean_name": {
+            "description": "a clean name for the above merchant.",
+            "type": "string",
+            "example": "Apple"
+          },
+          "country": {
+            "description": "The merchant’s country.",
+            "type": "string",
+            "example": "IE"
+          },
+          "logo": {
+            "description": "This is a hash generated for the logo based on the image.",
+            "type": "string",
+            "example": "5eb75a5239b76287f44021f8e6e1bd41"
+          },
+          "logo_url": {
+            "type": "string",
+            "description": "The logo image with content-type `image/png`.",
+            "example": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png"
+          },
+          "status": {
+            "description": "Status Code for Logo. * OK when there is a clean name or a clean name and a logo. * NOT_FOUND when there is no clean name or clean name and logo for the specified dirty merchant.\n",
+            "example": "OK",
+            "enum": [
+              "OK",
+              "NOT_FOUND"
+            ]
+          },
+          "custom_id": {
+            "description": "Provided in request and returned if specified.",
+            "type": "string"
           }
-        ]
+        }
       },
-      "MerchantPlaceResponse": {
-        "title": "MerchantPlaceResponse",
+      "MerchantsPlaceResponse": {
+        "title": "MerchantsPlaceResponse",
         "type": "object",
         "description": "Attributes describing a Merchant Place Response",
         "required": [
@@ -6386,7 +6388,7 @@
             "description": "The list of cleaned transactions",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MerchantPlaceClean"
+              "$ref": "#/components/schemas/MerchantsPlaceClean"
             }
           }
         },
@@ -6399,7 +6401,8 @@
               "logo": "956bcb3591a8976ff94871a59b09eecc",
               "logo_url": "https://api.woosmap.com/merchants/logos/956bcb3591a8976ff94871a59b09eecc.png",
               "country": "GB",
-              "merchant_id": "234482729011"
+              "merchant_id": "234482729011",
+              "place_id": "ChIJGS7Sga0cdkgR46nd-S661TM"
             },
             {
               "dirty_name": "Zara Fashion Retail, S.A.",
@@ -6408,23 +6411,8 @@
               "logo": "72fc39033e0d9e923a0236cb874c9309",
               "logo_url": "https://api.woosmap.com/merchants/logos/72fc39033e0d9e923a0236cb874c9309.png",
               "country": "IT",
-              "merchant_id": "*44532UY2T33219"
-            },
-            {
-              "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-              "clean_name": "Apollo Pharmacy",
-              "status": "OK",
-              "logo": "c776d3336e0d8c2b9e893e9e92b2caf7",
-              "logo_url": "https://api.woosmap.com/merchants/logos/c776d3336e0d8c2b9e893e9e92b2caf7.png",
-              "country": "IN"
-            },
-            {
-              "dirty_name": "PIZZA HUT - SHOP 157",
-              "clean_name": "Pizza Hut",
-              "status": "OK",
-              "logo": "d5463410f32a5f497459ac79552d3ce3",
-              "logo_url": "https://api.woosmap.com/merchants/logos/d5463410f32a5f497459ac79552d3ce3.png",
-              "country": ""
+              "merchant_id": "*44532UY2T33219",
+              "place_id": "ChIJF2vQecLGhkcR83Zbpwpej3I"
             },
             {
               "dirty_name": "CARREFOUR CITY 3112846",
@@ -6433,7 +6421,8 @@
               "logo": "08ee8a3cecbcd3b7d9103bcf0e04db7e",
               "logo_url": "https://api.woosmap.com/merchants/logos/08ee8a3cecbcd3b7d9103bcf0e04db7e.png",
               "country": "FR",
-              "merchant_id": "9651781125"
+              "merchant_id": "9651781125",
+              "place_id": "ChIJJ7ZEZDUnVQ0Ru5gudUqdvKM"
             },
             {
               "dirty_name": "ITUNES.COM/BILL",
@@ -6442,60 +6431,81 @@
               "logo": "5eb75a5239b76287f44021f8e6e1bd41",
               "logo_url": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png",
               "country": "IE",
-              "merchant_id": "2070070200925"
+              "merchant_id": "2070070200925",
+              "place_id": ""
             },
             {
-              "dirty_name": "Pepa SL Gracia",
-              "clean_name": "",
               "status": "OK",
+              "clean_name": "",
               "logo": "",
               "logo_url": "",
               "country": "ES",
-              "merchant_id": "34J21189"
+              "dirty_name": "Pepa SL Gracia",
+              "merchant_id": "34J21189",
+              "place_id": "ChIJZ9fQvb2ipBIRyaZy8wUqRGQ"
             }
           ]
         }
       },
-      "MerchantPlaceDirty": {
-        "title": "MerchantPlaceDirty",
+      "MerchantsPlaceDirty": {
+        "title": "MerchantsPlaceDirty",
         "description": "Attributes describing each Merchant Brand to get the Place.",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MerchantBrandDirty"
+        "required": [
+          "dirty_name",
+          "merchant_id",
+          "country"
+        ],
+        "type": "object",
+        "properties": {
+          "merchant_id": {
+            "type": "string",
+            "description": "Textual identifier for Merchant",
+            "example": "1070060999900835"
           },
-          {
-            "type": "object",
-            "properties": {
-              "description": {
-                "type": "string",
-                "description": "The description is provided to you by the payment provider and is the transaction description attached to any payment."
-              },
-              "street": {
-                "type": "string",
-                "description": "The merchant’s street, typically found in the raw transaction."
-              },
-              "zipcode": {
-                "type": "string",
-                "description": "The merchant’s zipcode."
-              },
-              "city": {
-                "type": "string",
-                "description": "The merchant’s city."
-              },
-              "state": {
-                "type": "string",
-                "description": "The merchant’s state."
-              },
-              "position": {
-                "type": "string",
-                "description": "The geographic coordinates where the transaction occurred. Sending in a position will significantly increase the possibility of finding a Place ID.\n"
-              }
-            }
+          "dirty_name": {
+            "description": "The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.",
+            "type": "string",
+            "example": "APPLE.COM/BILL"
+          },
+          "description": {
+            "description": "The description is provided to you by the payment provider and is the transaction description attached to any payment.",
+            "type": "string",
+            "example": "APPLE.COM/BILL ITUNES.COM IE WEB 2232445* BR11"
+          },
+          "country": {
+            "description": "The country field is not mandatory but strongly suggested in order to refine and be able to differentiate logos from one country to another. The API accepts ISO-3166-1-alpha2 country codes only.",
+            "type": "string",
+            "example": "IE"
+          },
+          "custom_id": {
+            "description": "This optional field allows integrators to send a value of their choosing and receive it in the body of the response.",
+            "type": "string",
+            "example": "mobile app transaction"
+          },
+          "street": {
+            "type": "string",
+            "description": "The merchant’s street, typically found in the raw transaction."
+          },
+          "zipcode": {
+            "type": "string",
+            "description": "The merchant’s zipcode."
+          },
+          "city": {
+            "type": "string",
+            "description": "The merchant’s city."
+          },
+          "state": {
+            "type": "string",
+            "description": "The merchant’s state."
+          },
+          "position": {
+            "type": "string",
+            "description": "The geographic coordinates where the transaction occurred. Sending in a position will significantly increase the possibility of finding a Place ID.\n"
           }
-        ]
+        }
       },
-      "MerchantPlaceRequest": {
-        "title": "MerchantPlaceRequest",
+      "MerchantsPlaceRequest": {
+        "title": "MerchantsPlaceRequest",
         "type": "object",
         "description": "Attributes describing a Merchant Place request",
         "required": [
@@ -6506,7 +6516,7 @@
             "description": "The list of dirty transactions to clean",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MerchantPlaceDirty"
+              "$ref": "#/components/schemas/MerchantsPlaceDirty"
             }
           }
         },
@@ -6514,30 +6524,28 @@
           "merchants": [
             {
               "dirty_name": "MCDO UK 2231 EP",
-              "country": "GB"
+              "country": "GB",
+              "merchant_id": "234482729011"
             },
             {
               "dirty_name": "Zara Fashion Retail, S.A.",
-              "country": "IT"
-            },
-            {
-              "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-              "country": "IN"
-            },
-            {
-              "dirty_name": "PIZZA HUT - SHOP 157"
+              "country": "IT",
+              "merchant_id": "*44532UY2T33219"
             },
             {
               "dirty_name": "CARREFOUR CITY 3112846",
-              "country": "FR"
+              "country": "FR",
+              "merchant_id": "9651781125"
             },
             {
               "dirty_name": "ITUNES.COM/BILL",
-              "country": "IE"
+              "country": "IE",
+              "merchant_id": "2070070200925"
             },
             {
               "dirty_name": "Pepa SL Gracia",
-              "country": "ES"
+              "country": "ES",
+              "merchant_id": "34J21189"
             }
           ]
         }

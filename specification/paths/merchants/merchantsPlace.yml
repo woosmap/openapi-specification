@@ -1,0 +1,38 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Merchants API
+description: >
+  Retrieve clean names, logos and Google Place ID of given dirty merchants name.
+security:
+  - PrivateApiKeyAuth: []
+requestBody:
+  description: The request body must be formatted as JSON.
+  required: true
+  content:
+    "application/json":
+      schema:
+        $ref: "../../schemas/MerchantsPlaceRequest.yml"
+      examples:
+        default:
+          value:
+            $ref: "../../requests/woosmap_http_merchants_place_request.yml"
+responses:
+  "200":
+    description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/MerchantsPlaceResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_merchants_place_response.yml"
+  "401":
+    description: 401 UNAUTHORIZED
+    content:
+      application/json:
+        examples:
+          Unauthorized:
+            value:
+              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
