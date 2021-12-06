@@ -60,7 +60,7 @@ A successful geolocation request will return a JSON-formatted response defining 
               "Building Centre",
               "26 Store Street"
             ],
-            "country_code": "UK",
+            "country_code": null,
             "city": "London",
             "zipcode": "WC1E 7BT"
           },
@@ -77,17 +77,13 @@ A successful geolocation request will return a JSON-formatted response defining 
           ],
           "distance": 0,
           "open": {
-            "open_now": true,
-            "open_hours": [
-              {
-                "end": "22:00",
-                "start": "08:30"
-              }
-            ],
-            "week_day": 5,
-            "current_slice": {
+            "open_now": false,
+            "open_hours": [],
+            "week_day": 1,
+            "next_opening": {
               "end": "22:00",
-              "start": "08:30"
+              "start": "08:30",
+              "day": "2021-12-07"
             }
           },
           "weekly_opening": {
@@ -167,8 +163,7 @@ A successful geolocation request will return a JSON-formatted response defining 
                   "end": "23:00",
                   "start": "08:00"
                 }
-              ],
-              "2015-02-08": []
+              ]
             },
             "timezone": "Europe/London"
           }
@@ -178,142 +173,6 @@ A successful geolocation request will return a JSON-formatted response defining 
           "coordinates": [
             -77.1067,
             38.719
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "store_id": "STORE_ID_12345",
-          "name": "My Cool Store",
-          "contact": {
-            "email": "contact@woosmap.com",
-            "phone": "+44 20 7693 4000",
-            "website": "https://www.woosmap.com"
-          },
-          "address": {
-            "lines": [
-              "Building Centre",
-              "26 Store Street"
-            ],
-            "country_code": "UK",
-            "city": "London",
-            "zipcode": "WC1E 7BT"
-          },
-          "user_properties": {
-            "some_user_properties": "associated user value"
-          },
-          "tags": [
-            "wifi",
-            "covered_parking"
-          ],
-          "types": [
-            "drive",
-            "click_and_collect"
-          ],
-          "distance": 5914248.83279762,
-          "open": {
-            "open_now": true,
-            "open_hours": [
-              {
-                "end": "22:00",
-                "start": "08:30"
-              }
-            ],
-            "week_day": 5,
-            "current_slice": {
-              "end": "22:00",
-              "start": "08:30"
-            }
-          },
-          "weekly_opening": {
-            "1": {
-              "hours": [],
-              "isSpecial": false
-            },
-            "2": {
-              "hours": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ],
-              "isSpecial": false
-            },
-            "3": {
-              "hours": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ],
-              "isSpecial": false
-            },
-            "4": {
-              "hours": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ],
-              "isSpecial": false
-            },
-            "5": {
-              "hours": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ],
-              "isSpecial": false
-            },
-            "6": {
-              "hours": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ],
-              "isSpecial": false
-            },
-            "7": {
-              "hours": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ],
-              "isSpecial": false
-            },
-            "timezone": "Europe/London"
-          },
-          "opening_hours": {
-            "usual": {
-              "1": [],
-              "default": [
-                {
-                  "end": "22:00",
-                  "start": "08:30"
-                }
-              ]
-            },
-            "special": {
-              "2015-02-07": [
-                {
-                  "end": "23:00",
-                  "start": "08:00"
-                }
-              ],
-              "2015-02-08": []
-            },
-            "timezone": "Europe/London"
-          }
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -0.13,
-            51.99
           ]
         }
       }

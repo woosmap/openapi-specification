@@ -123,7 +123,7 @@ paths:
                               lines:
                                 - Building Centre
                                 - 26 Store Street
-                              country_code: UK
+                              country_code: null
                               city: London
                               zipcode: WC1E 7BT
                             user_properties:
@@ -136,14 +136,13 @@ paths:
                               - click_and_collect
                             distance: 0
                             open:
-                              open_now: true
-                              open_hours:
-                                - end: '22:00'
-                                  start: '08:30'
-                              week_day: 5
-                              current_slice:
+                              open_now: false
+                              open_hours: []
+                              week_day: 1
+                              next_opening:
                                 end: '22:00'
                                 start: '08:30'
+                                day: '2021-12-07'
                             weekly_opening:
                               '1':
                                 hours: []
@@ -189,98 +188,12 @@ paths:
                                 '2015-02-07':
                                   - end: '23:00'
                                     start: '08:00'
-                                '2015-02-08': []
                               timezone: Europe/London
                           geometry:
                             type: Point
                             coordinates:
                               - -77.1067
                               - 38.719
-                        - type: Feature
-                          properties:
-                            store_id: STORE_ID_12345
-                            name: My Cool Store
-                            contact:
-                              email: contact@woosmap.com
-                              phone: +44 20 7693 4000
-                              website: 'https://www.woosmap.com'
-                            address:
-                              lines:
-                                - Building Centre
-                                - 26 Store Street
-                              country_code: UK
-                              city: London
-                              zipcode: WC1E 7BT
-                            user_properties:
-                              some_user_properties: associated user value
-                            tags:
-                              - wifi
-                              - covered_parking
-                            types:
-                              - drive
-                              - click_and_collect
-                            distance: 5914248.83279762
-                            open:
-                              open_now: true
-                              open_hours:
-                                - end: '22:00'
-                                  start: '08:30'
-                              week_day: 5
-                              current_slice:
-                                end: '22:00'
-                                start: '08:30'
-                            weekly_opening:
-                              '1':
-                                hours: []
-                                isSpecial: false
-                              '2':
-                                hours:
-                                  - end: '22:00'
-                                    start: '08:30'
-                                isSpecial: false
-                              '3':
-                                hours:
-                                  - end: '22:00'
-                                    start: '08:30'
-                                isSpecial: false
-                              '4':
-                                hours:
-                                  - end: '22:00'
-                                    start: '08:30'
-                                isSpecial: false
-                              '5':
-                                hours:
-                                  - end: '22:00'
-                                    start: '08:30'
-                                isSpecial: false
-                              '6':
-                                hours:
-                                  - end: '22:00'
-                                    start: '08:30'
-                                isSpecial: false
-                              '7':
-                                hours:
-                                  - end: '22:00'
-                                    start: '08:30'
-                                isSpecial: false
-                              timezone: Europe/London
-                            opening_hours:
-                              usual:
-                                '1': []
-                                default:
-                                  - end: '22:00'
-                                    start: '08:30'
-                              special:
-                                '2015-02-07':
-                                  - end: '23:00'
-                                    start: '08:00'
-                                '2015-02-08': []
-                              timezone: Europe/London
-                          geometry:
-                            type: Point
-                            coordinates:
-                              - -0.13
-                              - 51.99
                       pagination:
                         page: 1
                         pageCount: 1
@@ -2146,7 +2059,7 @@ components:
       description: |
         The ip_address you want to geolocate. For **server call with private_key** only. Without this parameter, the API will geolocate the IP Address attached to the raw TCP request.
       in: query
-      example: 185.86.151.11
+      example: 75.134.29.90
       schema:
         type: string
     localities_components:
@@ -2341,7 +2254,7 @@ components:
         store_id:
           $ref: '#/components/schemas/AssetId'
         address:
-          $ref: '#/components/schemas/AssetAddress'
+          $ref: '#/components/schemas/AssetAddressResponse'
         contact:
           $ref: '#/components/schemas/AssetContact'
         open:
@@ -2760,7 +2673,7 @@ components:
                   lines:
                     - Building Centre
                     - 26 Store Street
-                  country_code: UK
+                  country_code: null
                   city: London
                   zipcode: WC1E 7BT
                 user_properties:
@@ -2773,14 +2686,13 @@ components:
                   - click_and_collect
                 distance: 0
                 open:
-                  open_now: true
-                  open_hours:
-                    - end: '22:00'
-                      start: '08:30'
-                  week_day: 5
-                  current_slice:
+                  open_now: false
+                  open_hours: []
+                  week_day: 1
+                  next_opening:
                     end: '22:00'
                     start: '08:30'
+                    day: '2021-12-07'
                 weekly_opening:
                   '1':
                     hours: []
@@ -2826,98 +2738,12 @@ components:
                     '2015-02-07':
                       - end: '23:00'
                         start: '08:00'
-                    '2015-02-08': []
                   timezone: Europe/London
               geometry:
                 type: Point
                 coordinates:
                   - -77.1067
                   - 38.719
-            - type: Feature
-              properties:
-                store_id: STORE_ID_12345
-                name: My Cool Store
-                contact:
-                  email: contact@woosmap.com
-                  phone: +44 20 7693 4000
-                  website: 'https://www.woosmap.com'
-                address:
-                  lines:
-                    - Building Centre
-                    - 26 Store Street
-                  country_code: UK
-                  city: London
-                  zipcode: WC1E 7BT
-                user_properties:
-                  some_user_properties: associated user value
-                tags:
-                  - wifi
-                  - covered_parking
-                types:
-                  - drive
-                  - click_and_collect
-                distance: 5914248.83279762
-                open:
-                  open_now: true
-                  open_hours:
-                    - end: '22:00'
-                      start: '08:30'
-                  week_day: 5
-                  current_slice:
-                    end: '22:00'
-                    start: '08:30'
-                weekly_opening:
-                  '1':
-                    hours: []
-                    isSpecial: false
-                  '2':
-                    hours:
-                      - end: '22:00'
-                        start: '08:30'
-                    isSpecial: false
-                  '3':
-                    hours:
-                      - end: '22:00'
-                        start: '08:30'
-                    isSpecial: false
-                  '4':
-                    hours:
-                      - end: '22:00'
-                        start: '08:30'
-                    isSpecial: false
-                  '5':
-                    hours:
-                      - end: '22:00'
-                        start: '08:30'
-                    isSpecial: false
-                  '6':
-                    hours:
-                      - end: '22:00'
-                        start: '08:30'
-                    isSpecial: false
-                  '7':
-                    hours:
-                      - end: '22:00'
-                        start: '08:30'
-                    isSpecial: false
-                  timezone: Europe/London
-                opening_hours:
-                  usual:
-                    '1': []
-                    default:
-                      - end: '22:00'
-                        start: '08:30'
-                  special:
-                    '2015-02-07':
-                      - end: '23:00'
-                        start: '08:00'
-                    '2015-02-08': []
-                  timezone: Europe/London
-              geometry:
-                type: Point
-                coordinates:
-                  - -0.13
-                  - 51.99
           pagination:
             page: 1
             pageCount: 1
@@ -2939,7 +2765,7 @@ components:
         storeId:
           $ref: '#/components/schemas/AssetId'
         address:
-          $ref: '#/components/schemas/AssetAddress'
+          $ref: '#/components/schemas/AssetAddressRequest'
         contact:
           $ref: '#/components/schemas/AssetContact'
         types:
@@ -2989,8 +2815,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/AssetRequest'
-    AssetAddress:
-      title: AssetAddress
+    AssetAddressRequest:
+      title: AssetAddressRequest
       type: object
       description: An object containing the separate components applicable to this address.
       properties:
@@ -3006,6 +2832,28 @@ components:
           description: 'An ISO_3166-1 Country Code where the Asset is located (see <https://en.wikipedia.org/wiki/ISO_3166-1> for full list)'
           type: string
           example: UK
+          nullable: true
+        city:
+          description: A City where belongs an Asset
+          type: string
+          example: London
+        zipcode:
+          description: An Zipcode / Postal code of an Asset Address
+          type: string
+          example: WC1E 7BT
+    AssetAddressResponse:
+      title: AssetAddressResponse
+      type: object
+      description: An object containing the separate components applicable to this address.
+      properties:
+        lines:
+          description: An Array for lines of an Asset Address
+          type: array
+          items:
+            type: string
+          example:
+            - Building Centre
+            - 26 Store Street
         country_code:
           description: 'An ISO_3166-1 Country Code where the Asset is located (see <https://en.wikipedia.org/wiki/ISO_3166-1> for full list)'
           type: string
