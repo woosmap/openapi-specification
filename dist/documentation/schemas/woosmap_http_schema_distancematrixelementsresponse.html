@@ -27,9 +27,24 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
       <td>
-        <div class="nonref-property-description"><p>the route element</p></div>
+        Array&#x3C;<a
+          href="#DistanceMatrixElementResponse"
+          title="DistanceMatrixElementResponse"
+          >DistanceMatrixElementResponse</a
+        >>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>the route element</p>
+          <p>
+            See
+            <a href="#DistanceMatrixElementResponse"
+              >DistanceMatrixElementResponse</a
+            >
+            for more information.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>
@@ -39,15 +54,30 @@
 </h4>
 <pre class="notranslate lang-json prettyprint">
 {
-  "status": "OK",
-  "duration": {
-    "value": 20495,
-    "text": "5 hours 42 mins"
-  },
-  "distance": {
-    "value": 544752,
-    "text": "545 km"
-  }
+  "elements": [
+    {
+      "status": "OK",
+      "duration": {
+        "value": 866,
+        "text": "14 mins"
+      },
+      "distance": {
+        "value": 10613,
+        "text": "10.6 km"
+      }
+    },
+    {
+      "status": "OK",
+      "duration": {
+        "value": 935,
+        "text": "16 mins"
+      },
+      "distance": {
+        "value": 10287,
+        "text": "10.3 km"
+      }
+    }
+  ]
 }</pre
 >
 <p style="text-align: right; font-size: smaller">

@@ -46,6 +46,26 @@
     </tr>
     <tr>
       <td align="left">
+        <h4
+          id="AssetResponse-distance"
+          class="add-link schema-object-property-key"
+        >
+          <code>distance</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            The distance in meters from the geolocated position or searched
+            position if exist
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
         <h4 id="AssetResponse-name" class="add-link schema-object-property-key">
           <code>name</code>
         </h4>
@@ -54,6 +74,26 @@
       <td>string</td>
       <td>
         <div class="nonref-property-description"><p>The asset's name.</p></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4 id="AssetResponse-open" class="add-link schema-object-property-key">
+          <code>open</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#AssetOpenResponse" title="AssetOpenResponse"
+          >AssetOpenResponse</a
+        >
+      </td>
+      <td>
+        See
+        <a href="#AssetOpenResponse" title="AssetOpenResponse"
+          >AssetOpenResponse</a
+        >
+        for more information.
       </td>
     </tr>
     <tr>
@@ -131,10 +171,10 @@
     <tr>
       <td align="left">
         <h4
-          id="AssetResponse-userProperties"
+          id="AssetResponse-user_properties"
           class="add-link schema-object-property-key"
         >
-          <code>userProperties</code>
+          <code>user_properties</code>
         </h4>
       </td>
       <td>optional</td>
@@ -143,6 +183,29 @@
         <div class="nonref-property-description">
           <p>Contains all additional information relative to an Asset</p>
         </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetResponse-weekly_opening"
+          class="add-link schema-object-property-key"
+        >
+          <code>weekly_opening</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#AssetWeeklyOpeningResponse" title="AssetWeeklyOpeningResponse"
+          >AssetWeeklyOpeningResponse</a
+        >
+      </td>
+      <td>
+        See
+        <a href="#AssetWeeklyOpeningResponse" title="AssetWeeklyOpeningResponse"
+          >AssetWeeklyOpeningResponse</a
+        >
+        for more information.
       </td>
     </tr>
   </tbody>

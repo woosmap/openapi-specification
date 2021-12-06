@@ -1,4 +1,4 @@
-// [START woosmap_http_geolocation]
+// [START woosmap_http_geolocation_position]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/geolocation/position?ip_address=163.172.70.225&key=YOUR_PUBLIC_API_KEY"
+  url := "https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254"
   method := "GET"
 
   client := &http.Client {
@@ -36,4 +36,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END woosmap_http_geolocation]
+// [END woosmap_http_geolocation_position]

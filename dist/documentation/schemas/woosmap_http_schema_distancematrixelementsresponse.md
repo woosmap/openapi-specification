@@ -4,22 +4,37 @@
 
 Attributes describing elements of origin and destination returned in distance Matrix response.
 
-| Field                                                                                                                   | Required | Type   | Description                                                             |
-| :---------------------------------------------------------------------------------------------------------------------- | -------- | ------ | ----------------------------------------------------------------------- |
-| <h4 id="DistanceMatrixElementsResponse-elements" class="add-link schema-object-property-key"><code>elements</code></h4> | optional | object | <div class="nonref-property-description"><p>the route element</p></div> |
+| Field                                                                                                                   | Required | Type                                                                                                         | Description                                                                                                                                                                 |
+| :---------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="DistanceMatrixElementsResponse-elements" class="add-link schema-object-property-key"><code>elements</code></h4> | optional | Array&lt;[DistanceMatrixElementResponse](#DistanceMatrixElementResponse "DistanceMatrixElementResponse")&gt; | <div class="ref-property-description"><p>the route element</p><p>See <a href="#DistanceMatrixElementResponse">DistanceMatrixElementResponse</a> for more information.</div> |
 
 <h4 class="schema-object-example" id="DistanceMatrixElementsResponse-example">Example</h4>
 
 <pre class="notranslate lang-json prettyprint">{
-  "status": "OK",
-  "duration": {
-    "value": 20495,
-    "text": "5 hours 42 mins"
-  },
-  "distance": {
-    "value": 544752,
-    "text": "545 km"
-  }
+  "elements": [
+    {
+      "status": "OK",
+      "duration": {
+        "value": 866,
+        "text": "14 mins"
+      },
+      "distance": {
+        "value": 10613,
+        "text": "10.6 km"
+      }
+    },
+    {
+      "status": "OK",
+      "duration": {
+        "value": 935,
+        "text": "16 mins"
+      },
+      "distance": {
+        "value": 10287,
+        "text": "10.3 km"
+      }
+    }
+  ]
 }</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

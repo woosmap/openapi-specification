@@ -25,8 +25,8 @@ func main() {
         "covered_parking"
       ],
       "location": {
-        "lat": 42.6251184,
-        "lng": 2.4270975
+        "lat": 38.719,
+        "lng": -77.1067
       },
       "storeId": "STORE_ID_123456",
       "name": "My Cool Store",
@@ -64,8 +64,7 @@ func main() {
               "start": "08:00",
               "end": "23:00"
             }
-          ],
-          "2015-02-08": []
+          ]
         }
       }
     }

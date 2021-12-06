@@ -1,9 +1,9 @@
-// [START woosmap_http_geolocation]
+// [START woosmap_http_geolocation_stores]
 var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://api.woosmap.com/geolocation/position?ip_address=163.172.70.225&key=YOUR_PUBLIC_API_KEY',
+  url: 'https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254',
   headers: { 
     'Referer': 'http://localhost'
   }
@@ -17,4 +17,4 @@ axios(config)
   console.log(error);
 });
 
-// [END woosmap_http_geolocation]
+// [END woosmap_http_geolocation_stores]

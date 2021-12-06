@@ -28,23 +28,6 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
-        regionTag: "woosmap_http_geolocation",
-        request: new Request({
-            url: new Url({
-                protocol: "https",
-                host: "api.woosmap.com",
-                path: "/geolocation/position",
-                query: [
-                    {
-                        key: "ip_address",
-                        value: "163.172.70.225",
-                    },
-                ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
-        }),
-    },
-    {
         regionTag: "woosmap_http_address_autocomplete_collection",
         request: new Request({
             url: new Url({
@@ -155,6 +138,48 @@ export const REQUESTS: SnippetRequest[] = [
                         key: "method",
                         value: "distance",
                     }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_geolocation_position",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/geolocation/position",
+                query: [
+                    {
+                        key: "private_key",
+                        value: "YOUR_PRIVATE_API_KEY",
+                    },
+                    {
+                        key: "ip_address",
+                        value: "173.79.254.254",
+                    },
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+   {
+        regionTag: "woosmap_http_geolocation_stores",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/geolocation/stores",
+                query: [
+                     {
+                        key: "private_key",
+                        value: "YOUR_PRIVATE_API_KEY",
+                    },
+                    {
+                        key: "ip_address",
+                        value: "173.79.254.254",
+                    },
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],

@@ -1,10 +1,10 @@
-// [START woosmap_http_geolocation]
+// [START woosmap_http_geolocation_stores]
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://api.woosmap.com/geolocation/position?ip_address=163.172.70.225&key=YOUR_PUBLIC_API_KEY")
+  .url("https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254")
   .method("GET", null)
   .addHeader("Referer", "http://localhost")
   .build();
 Response response = client.newCall(request).execute();
-// [END woosmap_http_geolocation]
+// [END woosmap_http_geolocation_stores]

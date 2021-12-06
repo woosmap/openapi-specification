@@ -7,12 +7,12 @@ A successful geolocation request will return a JSON-formatted response defining 
 | Field                                                                                                                | Required     | Type                       | Description                                                                                                                                                                                                                                                                                                                                                                   |
 | :------------------------------------------------------------------------------------------------------------------- | ------------ | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <h4 id="GeolocationResponse-accuracy" class="add-link schema-object-property-key"><code>accuracy</code></h4>         | **required** | number                     | <div class="nonref-property-description"><p>The accuracy of the estimated location, in meters. This represents the radius of a circle around the given <code>location</code> where the IP address is likely to be. If your Geolocation response shows a low value in the <code>accuracy</code> field (&#x3C;=50), the IP has strong chance to be correctly located.</p></div> |
+| <h4 id="GeolocationResponse-latitude" class="add-link schema-object-property-key"><code>latitude</code></h4>         | **required** | number                     | <div class="nonref-property-description"><p>Approximate latitude of the geographical area associated with the IP address</p></div>                                                                                                                                                                                                                                            |
+| <h4 id="GeolocationResponse-longitude" class="add-link schema-object-property-key"><code>longitude</code></h4>       | **required** | number                     | <div class="nonref-property-description"><p>Approximate longitude of the geographical area associated with the IP address</p></div>                                                                                                                                                                                                                                           |
 | <h4 id="GeolocationResponse-city" class="add-link schema-object-property-key"><code>city</code></h4>                 | optional     | string                     | <div class="nonref-property-description"><p>City name when available</p></div>                                                                                                                                                                                                                                                                                                |
 | <h4 id="GeolocationResponse-continent" class="add-link schema-object-property-key"><code>continent</code></h4>       | optional     | string                     | <div class="nonref-property-description"><p>Continent name</p></div>                                                                                                                                                                                                                                                                                                          |
 | <h4 id="GeolocationResponse-country_code" class="add-link schema-object-property-key"><code>country_code</code></h4> | optional     | string                     | <div class="nonref-property-description"><p>ISO 3166-1 Alpha-2 compatible country code</p></div>                                                                                                                                                                                                                                                                              |
 | <h4 id="GeolocationResponse-country_name" class="add-link schema-object-property-key"><code>country_name</code></h4> | optional     | string                     | <div class="nonref-property-description"><p>Country name</p></div>                                                                                                                                                                                                                                                                                                            |
-| <h4 id="GeolocationResponse-latitude" class="add-link schema-object-property-key"><code>latitude</code></h4>         | optional     | number                     | <div class="nonref-property-description"><p>Approximate latitude of the geographical area associated with the IP address</p></div>                                                                                                                                                                                                                                            |
-| <h4 id="GeolocationResponse-longitude" class="add-link schema-object-property-key"><code>longitude</code></h4>       | optional     | number                     | <div class="nonref-property-description"><p>Approximate longitude of the geographical area associated with the IP address</p></div>                                                                                                                                                                                                                                           |
 | <h4 id="GeolocationResponse-postal_code" class="add-link schema-object-property-key"><code>postal_code</code></h4>   | optional     | string                     | <div class="nonref-property-description"><p>A postal code close to the user's location, when available</p></div>                                                                                                                                                                                                                                                              |
 | <h4 id="GeolocationResponse-region_state" class="add-link schema-object-property-key"><code>region_state</code></h4> | optional     | string                     | <div class="nonref-property-description"><p>Region name when available</p></div>                                                                                                                                                                                                                                                                                              |
 | <h4 id="GeolocationResponse-timezone" class="add-link schema-object-property-key"><code>timezone</code></h4>         | optional     | string                     | <div class="nonref-property-description"><p>The time zone associated with location, as specified by the IANA Time Zone Database</p></div>                                                                                                                                                                                                                                     |
@@ -21,23 +21,26 @@ A successful geolocation request will return a JSON-formatted response defining 
 <h4 class="schema-object-example" id="GeolocationResponse-example">Example</h4>
 
 <pre class="notranslate lang-json prettyprint">{
-  "country_code": "FR",
-  "country_name": "France",
-  "continent": "Europe",
-  "latitude": 48.8582,
-  "longitude": 2.3387,
-  "accuracy": 500,
+  "country_code": "US",
+  "country_name": "United States",
+  "continent": "North America",
+  "latitude": 38.719,
+  "longitude": -77.1067,
+  "accuracy": 5,
   "viewport": {
     "northeast": {
-      "lat": 53.3497764205976,
-      "lng": 9.167877689543051
+      "lat": 38.763915764205976,
+      "lng": -77.0491321464058
     },
     "southwest": {
-      "lat": 44.36662357940239,
-      "lng": -4.4904776895430505
+      "lat": 38.674084235794034,
+      "lng": -77.16426785359421
     }
   },
-  "timezone": "Europe/Paris"
+  "city": "Alexandria",
+  "region_state": "Virginia",
+  "postal_code": "22309",
+  "timezone": "America/New_York"
 }</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

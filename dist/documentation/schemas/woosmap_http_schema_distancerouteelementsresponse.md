@@ -4,22 +4,126 @@
 
 Attributes describing routes from an origin to a destination returned in distance route response.
 
-| Field                                                                                                              | Required | Type   | Description                                                             |
-| :----------------------------------------------------------------------------------------------------------------- | -------- | ------ | ----------------------------------------------------------------------- |
-| <h4 id="DistanceRouteElementsResponse-routes" class="add-link schema-object-property-key"><code>routes</code></h4> | optional | object | <div class="nonref-property-description"><p>the route element</p></div> |
+| Field                                                                                                                                    | Required | Type                                                   | Description                                                                                                                                                                                                      |
+| :--------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="DistanceRouteElementsResponse-bounds" class="add-link schema-object-property-key"><code>bounds</code></h4>                       | optional | [Bounds](#Bounds "Bounds")                             | See [Bounds](#Bounds "Bounds") for more information.                                                                                                                                                             |
+| <h4 id="DistanceRouteElementsResponse-legs" class="add-link schema-object-property-key"><code>legs</code></h4>                           | optional | Array&lt;[DistanceLeg](#DistanceLeg "DistanceLeg")&gt; | <div class="ref-property-description"><p>Legs part of the route response</p><p>See <a href="#DistanceLeg">DistanceLeg</a> for more information.</div>                                                            |
+| <h4 id="DistanceRouteElementsResponse-overview_polyline" class="add-link schema-object-property-key"><code>overview_polyline</code></h4> | optional | object                                                 | <div class="nonref-property-description"><p>The polyline of the route (encoded with the <a href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm">poyline algorithm</a>).</p></div> |
+| <h4 id="DistanceRouteElementsResponse-summary" class="add-link schema-object-property-key"><code>summary</code></h4>                     | optional | string                                                 | <div class="nonref-property-description"><p>A short name for the route.</p></div>                                                                                                                                |
 
 <h4 class="schema-object-example" id="DistanceRouteElementsResponse-example">Example</h4>
 
 <pre class="notranslate lang-json prettyprint">{
-  "status": "OK",
-  "duration": {
-    "value": 20495,
-    "text": "5 hours 42 mins"
-  },
-  "distance": {
-    "value": 544752,
-    "text": "545 km"
-  }
+  "routes": [
+    {
+      "overview_polyline": {
+        "points": "w_diHa_fSb@@dAXpD~@~DfAlAn@x@j@v@l@xB|@bBh@Ac@PoBb@oHRuETcEXwDXaDhAaJR}AFkABqCBcBDg@BUT{@`@o@t@i@fA{@fAmA`B{C`@eAr@uBfAaCz@sB`@eAHK|@GdAoABSC]qAsJE]gB\\]qDy@iFIi@Gk@@sAFsDJk@JGDAPITSHY^cCkAk@cBs@gBm@_@K]YW]Me@cAeFgBoIc@uBy@kCk@oB[_BSaBM}ACkAKsGGgJ?k@D{@Ry@~AsCVi@Pw@PmA\\mELaBPyAX{ATy@VkAFm@BaACgAW}CMgBEeBGs@Oy@w@{Cm@cDKe@Wo@oA{B]aAQe@[yAQeAIs@I_AMw@U{@_CuI}AsGi@iCS_B[gECi@AeBB_BFgAv@kHNaBBaA?aAMaECcCPgO@wCEaCUeMQwM@]NcAf@mBHi@Hm@@s@Au@OwEs@oUq@uTMeBSgAiA}EsDaOQu@Ce@~Dgs@vDmp@}Dy@aCy@aB}@eEoC"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 48.85017,
+          "lng": 3.41085
+        },
+        "southwest": {
+          "lat": 48.84051,
+          "lng": 3.31062
+        }
+      },
+      "summary": "",
+      "legs": [
+        {
+          "distance": {
+            "text": "8.8 km",
+            "value": 8848.7
+          },
+          "duration": {
+            "text": "16 mins",
+            "value": 971.2
+          },
+          "start_location": {
+            "lat": 48.850036,
+            "lng": 3.312646
+          },
+          "end_location": {
+            "lat": 48.850165,
+            "lng": 3.41085
+          }
+        }
+      ]
+    },
+    {
+      "overview_polyline": {
+        "points": "w_diHa_fSb@@dAXpD~@~DfAlAn@x@j@v@l@xB|@bBh@Ac@PoBb@oHRuETcEXwDXaDhAaJR}AFkABqCBcBDg@BUT{@`@o@t@i@fA{@fAmA`B{C`@eAr@uBfAaCz@sB`@eAHK|@GdAoABSC]qAsJE]dDm@fJeBFATED]xDsHpB{DhC_Ff@aAz@wB`BeLFuAXaHNmAtAkHLu@tDqRNq@bAoFXoBf@mHH_A~Bm]HiABw@@u@Cg@Y}ECw@ByADq@PkA\\sAv@kCNe@P_APmADeA?cAE_AKcAw@{DMaAIu@CiADeAHiAN{@nB_LXyAtCmLpAe^l@kNBcCQ}CiBaU[{DqAj@{At@c@Gk@{@gByFqFcQaP_\\_HaTsFcQuEsNuByBq@aAqAuC{CgGaMsXaLaYg@uAKe@oDk@}Dy@aCy@aB}@eEoC"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 48.85017,
+          "lng": 3.41085
+        },
+        "southwest": {
+          "lat": 48.82936,
+          "lng": 3.31062
+        }
+      },
+      "summary": "",
+      "legs": [
+        {
+          "distance": {
+            "text": "9.7 km",
+            "value": 9669.2
+          },
+          "duration": {
+            "text": "17 mins",
+            "value": 1023.1
+          },
+          "start_location": {
+            "lat": 48.850036,
+            "lng": 3.312646
+          },
+          "end_location": {
+            "lat": 48.850165,
+            "lng": 3.41085
+          }
+        }
+      ]
+    },
+    {
+      "overview_polyline": {
+        "points": "w_diHa_fSY?m@Ey@c@eBeBsD{E}@[k@_@o@w@Wk@]_B_@y@o@a@e@L[A[Iq@Y]Qg@Mo@Cu@FS@OAy@k@a@IwC@o@I?i@E}AKiAKc@Is@K[Qm@w@}GAIa@uDe@uEQaBuDo]]kDOcCGkDQgRGwGMgPKkEM{NGuFMiA_@qAk@w@w@a@w@Ea@D]L_@NBc@Tc@r@aBzAmCd@{@l@cAb@y@^m@l@w@z@uAV_@ZSXK^IRKRYHs@Hi@L[LOEUu@_D}@gDaB{Ca@mBDc@n@OdFzFz@`@\\s@BgAgFmT]_PxDaJvAwFRyCZ{EB@f@P@?n@NVLNHfCC~ACZBVN^h@VVXLd@?|DO`AAvIHF?T?RCPMTQ|AiBnAwAxA}AXM\\Gt@Ed@St@i@~DyCCi@AeBB_BFgAv@kHNaBBaA?aAMaECcCPgO@wCEaCUeMQwM@]NcAf@mBHi@Hm@@s@Au@OwEs@oUq@uTMeBSgAiA}EsDaOQu@Ce@~Dgs@vDmp@}Dy@aCy@aB}@eEoC"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 48.86089,
+          "lng": 3.41085
+        },
+        "southwest": {
+          "lat": 48.84682,
+          "lng": 3.31265
+        }
+      },
+      "summary": "",
+      "legs": [
+        {
+          "distance": {
+            "text": "9.8 km",
+            "value": 9810.3
+          },
+          "duration": {
+            "text": "19 mins",
+            "value": 1158.3
+          },
+          "start_location": {
+            "lat": 48.850036,
+            "lng": 3.312646
+          },
+          "end_location": {
+            "lat": 48.850165,
+            "lng": 3.41085
+          }
+        }
+      ]
+    }
+  ]
 }</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

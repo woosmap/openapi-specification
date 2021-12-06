@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "b5cc1f36-2ae4-4f32-bab3-cdd86e4054c4",
+            "id": "cc6bfcb3-5c0c-45d1-a62f-fb80bff74369",
             "name": "Store Search API",
             "description": {
                 "content": "Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/). Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/). If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).\n",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "9ddb6c9a-c1e2-4e74-a113-a7cc23b1f0e8",
+                    "id": "2401d9c2-e110-47f5-96f5-62673dbbf319",
                     "name": "Search for assets",
                     "request": {
                         "name": "Search for assets",
@@ -59,7 +59,7 @@
                     },
                     "response": [
                         {
-                            "id": "c5bd3cb9-e1fc-4899-85d1-9f46411b9c34",
+                            "id": "0528ea70-bd8c-48be-9afe-15ceb67289d3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -101,7 +101,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "893b5d42-93bc-44bc-850c-02e75d1f25e1",
+                            "id": "6aae391a-b276-4d77-836f-2b93a5bd632f",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -146,7 +146,7 @@
                     "event": []
                 },
                 {
-                    "id": "f053ed26-2fbf-4fa6-94fc-14a60bf98241",
+                    "id": "f7c9b02a-b7ff-49df-b3f5-7767d2409b6c",
                     "name": "Autocomplete for assets",
                     "request": {
                         "name": "Autocomplete for assets",
@@ -196,7 +196,7 @@
                     },
                     "response": [
                         {
-                            "id": "40d29613-bde8-4e37-a5cc-7e21a6b51cdc",
+                            "id": "ffe91a35-ae0d-4898-943b-944538eb4b17",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -238,7 +238,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5e50f8e4-f41b-4e09-aedf-75ca9e5b4168",
+                            "id": "05a04139-735d-4f04-aee6-28588d602ec4",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -286,7 +286,7 @@
             "event": []
         },
         {
-            "id": "f3d9b684-bb0e-4d88-a67d-cda2db55d01f",
+            "id": "ef7d2683-984e-4155-95ab-a7e70f0618d8",
             "name": "Data Management API",
             "description": {
                 "content": "The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets. The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`) coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/), [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).\n",
@@ -294,7 +294,7 @@
             },
             "item": [
                 {
-                    "id": "6be417f6-0c13-4b3a-91ec-4fa0627f715c",
+                    "id": "7525c798-6ac1-4e15-b58d-4207ddb2cedb",
                     "name": "Create your Assets",
                     "request": {
                         "name": "Create your Assets",
@@ -341,7 +341,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"countryCode\": \"<string>\",\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2015-02-08\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"countryCode\": \"<string>\",\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2015-02-08\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -351,7 +351,7 @@
                     },
                     "response": [
                         {
-                            "id": "46631cdd-40aa-4c64-819c-72b2cb16f45b",
+                            "id": "1b9d61e6-3293-4fef-9d58-07211f4458a9",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -375,7 +375,7 @@
                                 "method": "POST",
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 42.6251184,\n                \"lng\": 2.4270975\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ],\n                    \"2015-02-08\": []\n                }\n            }\n        }\n    ]\n}",
+                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -399,7 +399,7 @@
                     "event": []
                 },
                 {
-                    "id": "25cbb4db-ca26-4a3c-b8e1-7ddf156a8f6b",
+                    "id": "d511a2cd-434c-4692-b1c2-c2ca97accb3c",
                     "name": "Update the Assets",
                     "request": {
                         "name": "Update the Assets",
@@ -446,7 +446,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"countryCode\": \"<string>\",\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2015-02-08\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"countryCode\": \"<string>\",\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2015-02-08\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -456,7 +456,7 @@
                     },
                     "response": [
                         {
-                            "id": "8d8ae572-85e6-4bf4-b249-d2bd465b9502",
+                            "id": "c60b0863-ca33-4fb7-843d-299eafbe3eb8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -480,7 +480,7 @@
                                 "method": "PUT",
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 42.6251184,\n                \"lng\": 2.4270975\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ],\n                    \"2015-02-08\": []\n                }\n            }\n        }\n    ]\n}",
+                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -504,7 +504,7 @@
                     "event": []
                 },
                 {
-                    "id": "5f540726-58c3-4cea-bc97-0ae8ee86ea4c",
+                    "id": "e96436c3-b400-4cce-8c96-ce8d4d5648ff",
                     "name": "Delete the Assets",
                     "request": {
                         "name": "Delete the Assets",
@@ -553,7 +553,7 @@
                     },
                     "response": [
                         {
-                            "id": "61f5a8e2-de1b-4300-a7d1-04d17d5aeb05",
+                            "id": "65bad80b-895e-4882-b0cd-b1bbabbd8d10",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -597,7 +597,7 @@
                     "event": []
                 },
                 {
-                    "id": "0c9604cc-07c6-4b5c-a83d-9136e28bf95e",
+                    "id": "a995635b-3ebc-4777-a772-fe543b77a065",
                     "name": "Get Asset from ID",
                     "request": {
                         "name": "Get Asset from ID",
@@ -648,7 +648,7 @@
                     },
                     "response": [
                         {
-                            "id": "6e2c3d5f-6eb4-4ae6-8a2c-ea86192e77c2",
+                            "id": "782e32f6-d951-4a06-b12c-e31ccf94cb70",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -694,7 +694,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "07ccd174-bc3b-4052-8f92-72c1eb01a930",
+                            "id": "944907b0-064b-4038-a3a3-29a0fc154c70",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -740,7 +740,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "eab42678-80a2-4148-97bf-76d03d84a5e3",
+                            "id": "8818568a-8ec6-4061-b423-4e79527d5371",
                             "name": "404 NOT FOUND - `storeId` do not exist in the project identified with the key parameter.",
                             "originalRequest": {
                                 "url": {
@@ -789,7 +789,7 @@
                     "event": []
                 },
                 {
-                    "id": "b66c8e89-0bc2-492b-954b-519c95115406",
+                    "id": "92d00532-eae6-4449-bb28-5bef46dd44ca",
                     "name": "Replace all assets",
                     "request": {
                         "name": "Replace all assets",
@@ -837,7 +837,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"countryCode\": \"<string>\",\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2015-02-08\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"countryCode\": \"<string>\",\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2015-02-08\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -847,7 +847,7 @@
                     },
                     "response": [
                         {
-                            "id": "dccbbb0e-3b10-4c5a-83d9-1508968eb47c",
+                            "id": "ba6eb4f5-9df5-43d5-a068-7fa17d4e981a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -872,7 +872,7 @@
                                 "method": "POST",
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 42.6251184,\n                \"lng\": 2.4270975\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ],\n                    \"2015-02-08\": []\n                }\n            }\n        }\n    ]\n}",
+                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -896,7 +896,7 @@
                     "event": []
                 },
                 {
-                    "id": "826bea78-597e-463c-b666-04e86f36b5a8",
+                    "id": "a69c8382-89ea-4eaa-8edd-786605fa9c53",
                     "name": "Create your Zones",
                     "request": {
                         "name": "Create your Zones",
@@ -953,7 +953,7 @@
                     },
                     "response": [
                         {
-                            "id": "f58ee090-4eff-4da7-850a-3e3a1d5dc0fe",
+                            "id": "24914654-9b8b-4cf9-987b-2fe37da54c6c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1001,7 +1001,7 @@
                     "event": []
                 },
                 {
-                    "id": "fa6b6156-6e3b-4510-8a08-8d4182fea2c3",
+                    "id": "9929adc6-3168-4495-8638-b2f4fc18a5ad",
                     "name": "Update the Zones.",
                     "request": {
                         "name": "Update the Zones.",
@@ -1048,7 +1048,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"stores\": [\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"location\": {\n                \"lat\": \"<number>\",\n                \"lng\": \"<number>\"\n            },\n            \"name\": \"<string>\",\n            \"storeId\": \"<string>\",\n            \"address\": {\n                \"lines\": [\n                    \"<string>\",\n                    \"<string>\"\n                ],\n                \"country_code\": \"<string>\",\n                \"city\": \"<string>\",\n                \"zipcode\": \"<string>\"\n            },\n            \"contact\": {\n                \"website\": \"<string>\",\n                \"phone\": \"<string>\",\n                \"email\": \"<string>\"\n            },\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"tags\": [\n                \"<string>\",\n                \"<string>\"\n            ],\n            \"userProperties\": \"<object>\",\n            \"localizedNames\": \"<object>\",\n            \"openingHours\": {\n                \"timezone\": \"<string>\",\n                \"usual\": {\n                    \"1\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"2\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"3\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"4\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"5\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"6\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"7\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ],\n                    \"default\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"YYYY-MM-DD\": [\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        },\n                        {\n                            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                            "raw": "{\n    \"zones\": [\n        {\n            \"store_id\": \"<string>\",\n            \"zone_id\": \"<string>\",\n            \"polygon\": \"<string>\",\n            \"description\": \"<string>\",\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ]\n        },\n        {\n            \"store_id\": \"<string>\",\n            \"zone_id\": \"<string>\",\n            \"polygon\": \"<string>\",\n            \"description\": \"<string>\",\n            \"types\": [\n                \"<string>\",\n                \"<string>\"\n            ]\n        }\n    ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -1058,7 +1058,7 @@
                     },
                     "response": [
                         {
-                            "id": "aab2e788-1ecd-4d83-be88-d8c23ea68f47",
+                            "id": "54ca58b6-63a5-4923-ac11-13dc19d8d65a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1106,7 +1106,7 @@
                     "event": []
                 },
                 {
-                    "id": "5e477dfa-d49c-4075-b3be-ba06165e0add",
+                    "id": "b3c01a3a-5e83-408f-9aa2-9601b6c34fee",
                     "name": "Delete the Zones",
                     "request": {
                         "name": "Delete the Zones",
@@ -1155,7 +1155,7 @@
                     },
                     "response": [
                         {
-                            "id": "f0264d4d-4a4f-429c-94fd-df66c801fa24",
+                            "id": "2bdc086f-6edf-4bf3-ba52-c67553dd2ac9",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1199,7 +1199,7 @@
                     "event": []
                 },
                 {
-                    "id": "d0e6bc99-1fec-48d7-b258-bd2cc8ce0b99",
+                    "id": "168c0c8e-35e3-4717-ae34-6eff5cd1fbb5",
                     "name": "Get Zone from ID",
                     "request": {
                         "name": "Get Zone from ID",
@@ -1250,7 +1250,7 @@
                     },
                     "response": [
                         {
-                            "id": "9058390c-0d20-43a7-87b7-03bd7bf5859f",
+                            "id": "ec6a7e1b-e14c-439a-9ea8-fe5bd0c2dc65",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1296,7 +1296,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "51459ffb-8b3c-4b41-bbd2-8d3611da7387",
+                            "id": "187f9a62-2674-423c-9b88-5818e99fc026",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1342,7 +1342,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "da56b3f0-bf5d-43d7-85a2-1901d830e035",
+                            "id": "1fe1451b-4868-4c0d-bd50-70e5f34a3a89",
                             "name": "404 NOT FOUND - `zone_id` do not exist in the project identified with the key parameter.",
                             "originalRequest": {
                                 "url": {
@@ -1394,7 +1394,7 @@
             "event": []
         },
         {
-            "id": "16e334b9-ddff-4273-a1c6-c354e5bed751",
+            "id": "421368f2-ceff-4fc8-96e1-9e2d6142b8f8",
             "name": "Geolocation API",
             "description": {
                 "content": "Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1402,7 +1402,7 @@
             },
             "item": [
                 {
-                    "id": "7a565e95-43ae-4b42-8d74-f9af759a9360",
+                    "id": "0dcc7caf-6f38-4d38-9dbb-ab6f5ce9b2aa",
                     "name": "Geolocation from an IP address",
                     "request": {
                         "name": "Geolocation from an IP address",
@@ -1452,7 +1452,7 @@
                     },
                     "response": [
                         {
-                            "id": "34a93c37-2e35-4e26-9ae9-4368e2129e0e",
+                            "id": "7852f965-a48b-438e-ac36-ee600bc71259",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1469,7 +1469,7 @@
                                     "query": [
                                         {
                                             "key": "ip_address",
-                                            "value": "75.134.29.90"
+                                            "value": "185.86.151.11"
                                         },
                                         {
                                             "key": "key",
@@ -1489,12 +1489,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"country_code\": \"FR\",\n \"country_name\": \"France\",\n \"continent\": \"Europe\",\n \"latitude\": 48.8582,\n \"longitude\": 2.3387,\n \"accuracy\": 500,\n \"viewport\": {\n  \"northeast\": {\n   \"lat\": 53.3497764205976,\n   \"lng\": 9.167877689543051\n  },\n  \"southwest\": {\n   \"lat\": 44.36662357940239,\n   \"lng\": -4.4904776895430505\n  }\n },\n \"timezone\": \"Europe/Paris\"\n}",
+                            "body": "{\n \"country_code\": \"US\",\n \"country_name\": \"United States\",\n \"continent\": \"North America\",\n \"latitude\": 38.719,\n \"longitude\": -77.1067,\n \"accuracy\": 5,\n \"viewport\": {\n  \"northeast\": {\n   \"lat\": 38.763915764205976,\n   \"lng\": -77.0491321464058\n  },\n  \"southwest\": {\n   \"lat\": 38.674084235794034,\n   \"lng\": -77.16426785359421\n  }\n },\n \"city\": \"Alexandria\",\n \"region_state\": \"Virginia\",\n \"postal_code\": \"22309\",\n \"timezone\": \"America/New_York\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "aa4556bc-70fe-4346-a3a5-9e88f478353f",
+                            "id": "a2e48787-a99a-409d-a5ac-f7066ae48ea4",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1511,7 +1511,7 @@
                                     "query": [
                                         {
                                             "key": "ip_address",
-                                            "value": "75.134.29.90"
+                                            "value": "185.86.151.11"
                                         },
                                         {
                                             "key": "key",
@@ -1536,7 +1536,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c5e6ba18-7a3f-4076-8f44-0331523f1a64",
+                            "id": "5ff0cc63-a9ee-4ae2-8e19-28dc99e9b6b2",
                             "name": "403 FORBIDDEN",
                             "originalRequest": {
                                 "url": {
@@ -1553,7 +1553,7 @@
                                     "query": [
                                         {
                                             "key": "ip_address",
-                                            "value": "75.134.29.90"
+                                            "value": "185.86.151.11"
                                         },
                                         {
                                             "key": "key",
@@ -1581,7 +1581,7 @@
                     "event": []
                 },
                 {
-                    "id": "67f73d10-4894-47d7-8791-77d693372f91",
+                    "id": "ce72621e-845f-419a-816c-1460e8ce6fdf",
                     "name": "Assets nearby a Geolocation",
                     "request": {
                         "name": "Assets nearby a Geolocation",
@@ -1631,7 +1631,7 @@
                     },
                     "response": [
                         {
-                            "id": "fcffb21c-c7ae-4acf-b4e3-d3aed332f24b",
+                            "id": "41d4c981-06a4-4a9c-9668-2a65d5850145",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1648,7 +1648,7 @@
                                     "query": [
                                         {
                                             "key": "ip_address",
-                                            "value": "75.134.29.90"
+                                            "value": "185.86.151.11"
                                         },
                                         {
                                             "key": "key",
@@ -1668,12 +1668,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"country_code\": \"FR\",\n \"country_name\": \"France\",\n \"continent\": \"Europe\",\n \"latitude\": 48.8323,\n \"longitude\": 2.4075,\n \"accuracy\": 200,\n \"viewport\": {\n  \"northeast\": {\n   \"lat\": 50.628930568239035,\n   \"lng\": 5.136987883597163\n  },\n  \"southwest\": {\n   \"lat\": 47.03566943176095,\n   \"lng\": -0.3219878835971626\n  }\n },\n \"postal_code\": \"75003\",\n \"timezone\": \"Europe/Paris\",\n \"stores\": {\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"boroughmarket\",\n     \"name\": \"Borough Market\",\n     \"contact\": {\n      \"phone\": \"020 7407 1002\",\n      \"website\": \"http://boroughmarket.org.uk\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"8 Southwark St\"\n      ],\n      \"country_code\": null,\n      \"city\": \"London\",\n      \"zipcode\": \"SE1 1TL\"\n     },\n     \"user_properties\": {\n      \"photo\": \"https://preview.webgeoservices.com/jsfiddle/boroughmarket.jpeg\",\n      \"placeId\": \"ChIJD2bPdVcDdkgRiDyO6mrCsu4\"\n     },\n     \"tags\": [],\n     \"types\": [\n      \"covered\"\n     ],\n     \"open\": {\n      \"open_now\": true,\n      \"open_hours\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"10:00\"\n       }\n      ],\n      \"week_day\": 1,\n      \"current_slice\": {\n       \"end\": \"17:00\",\n       \"start\": \"10:00\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [\n        {\n         \"end\": \"17:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"17:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"17:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"17:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"18:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"17:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"Europe/London\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"5\": [\n        {\n         \"end\": \"18:00\",\n         \"start\": \"10:00\"\n        }\n       ],\n       \"7\": [],\n       \"default\": [\n        {\n         \"end\": \"17:00\",\n         \"start\": \"10:00\"\n        }\n       ]\n      },\n      \"timezone\": \"Europe/London\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      -0.090679,\n      51.505046\n     ]\n    }\n   },\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"courssaleya\",\n     \"name\": \"Cours Saleya\",\n     \"contact\": {\n      \"phone\": \"04 92 14 46 14\",\n      \"website\": \"http://leblogduvieuxnice.nicematin.com/.services/blog/6a0120a864ed46970b0162fd89fc17970d/search?filter.q=marché\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"Place Charles Félix\"\n      ],\n      \"country_code\": null,\n      \"city\": \"Nice\",\n      \"zipcode\": \"06300\"\n     },\n     \"user_properties\": {\n      \"photo\": \"https://preview.webgeoservices.com/jsfiddle/courssaleya.jpeg\",\n      \"placeId\": \"ChIJw3OrJKPazRIR6WPu_P9ByG4\"\n     },\n     \"tags\": [],\n     \"types\": [\n      \"covered\"\n     ],\n     \"open\": {\n      \"open_now\": false,\n      \"open_hours\": [],\n      \"week_day\": 1,\n      \"next_opening\": {\n       \"end\": \"17:30\",\n       \"start\": \"06:00\",\n       \"day\": \"2021-11-16\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"17:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"17:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"17:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"17:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"17:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [\n        {\n         \"end\": \"13:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"Europe/Paris\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"1\": [],\n       \"7\": [\n        {\n         \"end\": \"13:30\",\n         \"start\": \"06:00\"\n        }\n       ],\n       \"default\": [\n        {\n         \"end\": \"17:30\",\n         \"start\": \"06:00\"\n        }\n       ]\n      },\n      \"timezone\": \"Europe/Paris\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      7.275492,\n      43.69553\n     ]\n    }\n   }\n  ],\n  \"pagination\": {\n   \"page\": 1,\n   \"pageCount\": 1\n  }\n }\n}",
+                            "body": "{\n \"country_code\": \"US\",\n \"country_name\": \"United States\",\n \"continent\": \"North America\",\n \"latitude\": 38.719,\n \"longitude\": -77.1067,\n \"accuracy\": 5,\n \"viewport\": {\n  \"northeast\": {\n   \"lat\": 38.763915764205976,\n   \"lng\": -77.0491321464058\n  },\n  \"southwest\": {\n   \"lat\": 38.674084235794034,\n   \"lng\": -77.16426785359421\n  }\n },\n \"city\": \"Alexandria\",\n \"region_state\": \"Virginia\",\n \"postal_code\": \"22309\",\n \"timezone\": \"America/New_York\",\n \"stores\": {\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"STORE_ID_123456\",\n     \"name\": \"My Cool Store\",\n     \"contact\": {\n      \"email\": \"contact@woosmap.com\",\n      \"phone\": \"+44 20 7693 4000\",\n      \"website\": \"https://www.woosmap.com\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"Building Centre\",\n       \"26 Store Street\"\n      ],\n      \"country_code\": \"UK\",\n      \"city\": \"London\",\n      \"zipcode\": \"WC1E 7BT\"\n     },\n     \"user_properties\": {\n      \"some_user_properties\": \"associated user value\"\n     },\n     \"tags\": [\n      \"wifi\",\n      \"covered_parking\"\n     ],\n     \"types\": [\n      \"drive\",\n      \"click_and_collect\"\n     ],\n     \"distance\": 0,\n     \"open\": {\n      \"open_now\": true,\n      \"open_hours\": [\n       {\n        \"end\": \"22:00\",\n        \"start\": \"08:30\"\n       }\n      ],\n      \"week_day\": 5,\n      \"current_slice\": {\n       \"end\": \"22:00\",\n       \"start\": \"08:30\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"Europe/London\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"1\": [],\n       \"default\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ]\n      },\n      \"special\": {\n       \"2015-02-07\": [\n        {\n         \"end\": \"23:00\",\n         \"start\": \"08:00\"\n        }\n       ],\n       \"2015-02-08\": []\n      },\n      \"timezone\": \"Europe/London\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      -77.1067,\n      38.719\n     ]\n    }\n   },\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"STORE_ID_12345\",\n     \"name\": \"My Cool Store\",\n     \"contact\": {\n      \"email\": \"contact@woosmap.com\",\n      \"phone\": \"+44 20 7693 4000\",\n      \"website\": \"https://www.woosmap.com\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"Building Centre\",\n       \"26 Store Street\"\n      ],\n      \"country_code\": \"UK\",\n      \"city\": \"London\",\n      \"zipcode\": \"WC1E 7BT\"\n     },\n     \"user_properties\": {\n      \"some_user_properties\": \"associated user value\"\n     },\n     \"tags\": [\n      \"wifi\",\n      \"covered_parking\"\n     ],\n     \"types\": [\n      \"drive\",\n      \"click_and_collect\"\n     ],\n     \"distance\": 5914248.83279762,\n     \"open\": {\n      \"open_now\": true,\n      \"open_hours\": [\n       {\n        \"end\": \"22:00\",\n        \"start\": \"08:30\"\n       }\n      ],\n      \"week_day\": 5,\n      \"current_slice\": {\n       \"end\": \"22:00\",\n       \"start\": \"08:30\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"Europe/London\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"1\": [],\n       \"default\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ]\n      },\n      \"special\": {\n       \"2015-02-07\": [\n        {\n         \"end\": \"23:00\",\n         \"start\": \"08:00\"\n        }\n       ],\n       \"2015-02-08\": []\n      },\n      \"timezone\": \"Europe/London\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      -0.13,\n      51.99\n     ]\n    }\n   }\n  ],\n  \"pagination\": {\n   \"page\": 1,\n   \"pageCount\": 1\n  }\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1b4ad220-84cf-4482-bf42-baa8854589ec",
+                            "id": "0f62e9ec-7311-45d5-a504-51cf928127a9",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1690,7 +1690,7 @@
                                     "query": [
                                         {
                                             "key": "ip_address",
-                                            "value": "75.134.29.90"
+                                            "value": "185.86.151.11"
                                         },
                                         {
                                             "key": "key",
@@ -1715,7 +1715,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2f5a7e58-fe33-4fe1-a9d0-2e24887586bf",
+                            "id": "5d4a0b26-2b6a-4813-9113-6dd45940ef7d",
                             "name": "403 FORBIDDEN",
                             "originalRequest": {
                                 "url": {
@@ -1732,7 +1732,7 @@
                                     "query": [
                                         {
                                             "key": "ip_address",
-                                            "value": "75.134.29.90"
+                                            "value": "185.86.151.11"
                                         },
                                         {
                                             "key": "key",
@@ -1763,7 +1763,7 @@
             "event": []
         },
         {
-            "id": "0d94f19f-2aa3-42fe-ac30-a6815544e3c9",
+            "id": "1d399d22-c8c8-4b6c-a9c4-7532d15d820b",
             "name": "Localities API",
             "description": {
                 "content": "Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1771,7 +1771,7 @@
             },
             "item": [
                 {
-                    "id": "c44de6d2-09c3-4581-a27b-480f86671b32",
+                    "id": "d0fc9e3b-8ba9-42b7-8f0f-143b48a118d2",
                     "name": "Autocomplete for Localities",
                     "request": {
                         "name": "Autocomplete for Localities",
@@ -1851,7 +1851,7 @@
                     },
                     "response": [
                         {
-                            "id": "ddfa85fb-743e-448f-aeb1-90d872f10d2b",
+                            "id": "ed036638-4ac3-47d4-a82f-634d7235a64e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1913,7 +1913,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a32b2c26-ea63-43b9-bba1-5601a53a9a8c",
+                            "id": "0376fff8-7051-432b-93ac-00e8b7cb9903",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1978,7 +1978,7 @@
                     "event": []
                 },
                 {
-                    "id": "e5a88cea-69e8-4cd7-97b3-4e78b44beb44",
+                    "id": "66bd176f-4b79-4abc-8028-9fdff44bac56",
                     "name": "Details of a Locality",
                     "request": {
                         "name": "Details of a Locality",
@@ -2034,7 +2034,7 @@
                     },
                     "response": [
                         {
-                            "id": "0554c4f9-d856-45ab-ada6-d1504b6bc631",
+                            "id": "7165849d-eeea-41a9-977d-423a400b268b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2080,7 +2080,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "85ae1198-9e81-4d62-a4db-8d3b5af1b012",
+                            "id": "15b0b494-31e4-436a-8e60-f26a180461ed",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2132,7 +2132,7 @@
             "event": []
         },
         {
-            "id": "3a14dcdc-d5b7-44e6-9170-b52d67142bfa",
+            "id": "0c2c84a0-ddac-4b0e-9310-01eed380b7c6",
             "name": "Address API",
             "description": {
                 "content": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2140,7 +2140,7 @@
             },
             "item": [
                 {
-                    "id": "d7ec4271-ebc3-4e47-be7f-2ed42bb139fc",
+                    "id": "b54ca460-3310-4e9e-8146-9015c8a833e5",
                     "name": "Autocomplete for Addresses",
                     "request": {
                         "name": "Autocomplete for Addresses",
@@ -2209,7 +2209,7 @@
                     },
                     "response": [
                         {
-                            "id": "d73efc55-81f3-46a0-97d0-fcef1c8bd240",
+                            "id": "894d7d2b-780a-446a-a55b-e42fcd0b4b61",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2264,7 +2264,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1e0f857b-4737-4bf9-9112-c405afca4801",
+                            "id": "71a111df-71e5-4046-9a50-4145afabbaeb",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2322,7 +2322,7 @@
                     "event": []
                 },
                 {
-                    "id": "a9926b5a-a2e2-4945-ac54-22a0eaf176d7",
+                    "id": "a064bc2f-2060-4bd1-a9e1-bbfcaad5738c",
                     "name": "Details of an Address",
                     "request": {
                         "name": "Details of an Address",
@@ -2379,7 +2379,7 @@
                     },
                     "response": [
                         {
-                            "id": "59f78bae-83dc-4d2c-bb8b-7e75b5740782",
+                            "id": "c69244f6-e6cd-4fa9-8948-999397755326",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2426,7 +2426,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "793b5de5-0233-46f3-ad7a-96b0aa3a13e2",
+                            "id": "90438442-bba2-47c0-8fa6-2a014f19a1e1",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2479,7 +2479,7 @@
             "event": []
         },
         {
-            "id": "48b2b07a-e03a-494e-8d12-c2bbdf1965e2",
+            "id": "e7701a85-0f9c-4a7d-ac3f-3037369fb29c",
             "name": "Distance API",
             "description": {
                 "content": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2487,7 +2487,7 @@
             },
             "item": [
                 {
-                    "id": "cb91b28d-e0d8-4bf6-9164-a23d20ca1f75",
+                    "id": "d7f7f958-fe36-4936-9a6f-c7ae699bf7a5",
                     "name": "Distance Matrix",
                     "request": {
                         "name": "Distance Matrix",
@@ -2574,7 +2574,7 @@
                     },
                     "response": [
                         {
-                            "id": "fb0a269f-9ea8-42d1-be84-0bb4b390be43",
+                            "id": "4aef7631-671e-4524-8cc3-f70552e4ad11",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2641,7 +2641,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2ce5e6c3-9293-4467-8357-378edd6b24bd",
+                            "id": "566c381e-08f3-4040-bdf7-3c979833ef4d",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2711,7 +2711,7 @@
                     "event": []
                 },
                 {
-                    "id": "7e75749d-0dfb-4a07-af53-9d9aadabc034",
+                    "id": "d8a1d99b-4ab8-42bd-b213-11f4cbbd4dd7",
                     "name": "Get Distance Matrix using POST",
                     "request": {
                         "name": "Get Distance Matrix using POST",
@@ -2770,7 +2770,7 @@
                     },
                     "response": [
                         {
-                            "id": "231b8cb8-ac6d-457f-852f-9f74b375e79a",
+                            "id": "8a79a1ce-3ed9-4aa8-bd3d-ca5579d32d3f",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2817,7 +2817,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3cc726cd-bada-4610-9fc2-fef3ce2ed3be",
+                            "id": "93ca1de4-110e-43e7-9bb9-cd951b310d58",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2867,7 +2867,7 @@
                     "event": []
                 },
                 {
-                    "id": "da277ea8-7bbe-4886-a4a6-166add3a73bd",
+                    "id": "9d78bf5f-a366-47df-b4da-30239b11c0db",
                     "name": "Get Route",
                     "request": {
                         "name": "Get Route",
@@ -2960,7 +2960,7 @@
                     },
                     "response": [
                         {
-                            "id": "bad1a041-e158-48b9-b07b-7a60a558b377",
+                            "id": "761d7856-546e-4404-88fb-bb874c5d01cc",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3031,7 +3031,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0e6fc470-1a9e-441c-9499-531d38dc005c",
+                            "id": "de55631b-6ea7-4b01-b079-d660fe1f5445",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3108,7 +3108,7 @@
             "event": []
         },
         {
-            "id": "e0a8797d-cd58-4be5-88a3-9d465bc64968",
+            "id": "d391f6e7-6b39-404b-abaa-f5ca6b4193c6",
             "name": "Merchant API",
             "description": {
                 "content": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3116,7 +3116,7 @@
             },
             "item": [
                 {
-                    "id": "21e761b4-e1c0-4e6b-934d-77509bc082ff",
+                    "id": "10cfe9de-3aad-4032-9e04-cf0d12792198",
                     "name": "Get Merchant Clean Names",
                     "request": {
                         "name": "Get Merchant Clean Names",
@@ -3174,7 +3174,7 @@
                     },
                     "response": [
                         {
-                            "id": "175049b1-ac47-4ca1-83af-62499d7d490d",
+                            "id": "f1509634-1df0-45c2-8ab8-e32e942d2652",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3220,7 +3220,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8df1beb5-89a9-4e3a-9889-7ab57e7f4ea4",
+                            "id": "e25febf3-efe5-478f-a6ed-7fe5b3071569",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3269,7 +3269,7 @@
                     "event": []
                 },
                 {
-                    "id": "3ad1c731-806e-4895-bcfe-f1b39a16634d",
+                    "id": "b7cd1bfd-4d67-45d4-a7b6-663bf2a37e97",
                     "name": "Get Merchant Place",
                     "request": {
                         "name": "Get Merchant Place",
@@ -3327,7 +3327,7 @@
                     },
                     "response": [
                         {
-                            "id": "5ae17994-be7a-448c-87a6-ca2ecd9c593d",
+                            "id": "ad2a74ed-5797-4536-bb22-17fe7893a67c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3373,7 +3373,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c0f38ef3-47f9-4cbb-9b4e-d5fabfca3b16",
+                            "id": "fa6341c3-5f5b-410d-879b-6a3e064d759a",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3451,7 +3451,7 @@
         ]
     },
     "info": {
-        "_postman_id": "21addb02-cb0a-4ae9-8f0e-c24b2a8f63e5",
+        "_postman_id": "b0682bd9-e369-4daf-b346-cde5cefde7b7",
         "name": "Woosmap",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
