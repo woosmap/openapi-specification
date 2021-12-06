@@ -1,0 +1,12 @@
+title: AssetWeeklyOpeningHoursPeriod
+type: object
+description: The opening Hours for Monday
+properties:
+  hours:
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  isSpecial:
+    type: boolean
+    description: Define if the hours comes from a special opening hours day.
+    example: false

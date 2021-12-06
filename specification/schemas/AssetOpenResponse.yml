@@ -1,0 +1,41 @@
+title: AssetOpenResponse
+type: object
+description: The Current opening status for an Asset
+properties:
+  current_slice:
+    $ref: "./AssetOpeningHoursPeriod.yml"
+  open_hours:
+    description: the opening hours for the day
+    type: array
+    items:
+      $ref: "./AssetOpeningHoursPeriod.yml"
+  open_now:
+    description: Boolean value indicating the status of the opening hours
+    type: boolean
+  next_opening:
+    description: the next opening hours period
+    type: object
+    properties:
+      end:
+        description: the hours of next opening
+        type: string
+        example: "17:30"
+      start:
+        description: the hours of next closing
+        type: string
+        example: "06:00"
+      day:
+        type: string
+        description: the day of next opening
+        example: "2021-11-16"
+  week_day:
+    description: the day of the week starting from 1 to 7
+    type: number
+    enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7

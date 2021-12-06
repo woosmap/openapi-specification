@@ -1,0 +1,22 @@
+title: AssetWeeklyOpeningResponse
+type: object
+description: The current Weekly Opening taking into account the special hours
+properties:
+  1:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  2:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  3:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  4:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  5:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  6:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  7:
+    $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
+  timezone:
+    description: Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>
+    type: string
+    example: "Europe/London"
