@@ -16,7 +16,11 @@ properties:
     type: string
     example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
   geometry:
-      $ref: "./LatLngLiteral.yml"
+    description: The location of the PostalCode, in latitude and longitude.
+    type: object
+    properties:
+      location:
+        $ref: "./LatLngLiteral.yml"
   address_components:
     description: An array containing the separate components applicable to this address.
     type: array

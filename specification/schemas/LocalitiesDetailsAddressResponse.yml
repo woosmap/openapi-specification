@@ -16,14 +16,14 @@ properties:
     type: string
     example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
   geometry:
-    description: The location of the result, in latitude and logitude. Accuracy is also provided.
-    allOf:
-      - $ref: "./LatLngLiteral.yml"
-      - type: object
-        properties:
-          accuracy:
-            type: string
-            enum: [ ROOFTOP, POSTAL_CODE, DISTRICT]
+    description: The location of the result, in latitude and longitude. Accuracy is also provided.
+    type: object
+    properties:
+      location:
+        $ref: "./LatLngLiteral.yml"
+      accuracy:
+        type: string
+        enum: [ ROOFTOP, POSTAL_CODE, DISTRICT]
   address_components:
     description: An array containing the separate components applicable to this address.
     type: array

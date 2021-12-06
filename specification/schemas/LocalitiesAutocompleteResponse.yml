@@ -46,6 +46,9 @@ properties:
     example: London
   matched_substrings:
     $ref: "./LocalitiesAutocompleteMatchedFields.yml"
+  locality:
+    type: string
+    description: The parent locality when retrieving a POI. often empty.
   has_addresses:
     description: >
       On the specific territory of United Kingdom, Localities autocomplete request can return the additional

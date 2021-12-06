@@ -5,6 +5,8 @@ required:
  - localities
 properties:
   localities:
-    $ref: "./LocalitiesAutocompleteResponse.yml"
+    type: array
+    items:
+      $ref: "./LocalitiesAutocompleteResponse.yml"
 example:
   $ref: "../responses/woosmap_http_localities_autocomplete_collection_response.yml"
