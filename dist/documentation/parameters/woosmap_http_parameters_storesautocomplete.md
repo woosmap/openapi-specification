@@ -16,6 +16,10 @@
 
     Longitude bias for the results. Should be pass with `lat`.
 
+-   <h3 id="page">page</h3>
+
+    Page number when accessing paginated assets feature collection
+
 -   <h3 id="query">query</h3>
 
     Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:="My cool store"`
@@ -59,6 +63,10 @@
 -   <h3 id="radius">radius</h3>
 
     Unit in meters. Used to combine with lat/lng or encoded polyline. To bias the results within a given circular area. 3000 means to search for Assets that are at the most far from 3kms to search area (latlng or polyline).
+
+-   <h3 id="stores_by_page">stores_by_page</h3>
+
+    If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is 100, max is 300).
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

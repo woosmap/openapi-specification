@@ -885,16 +885,22 @@
             "$ref": "#/components/parameters/search_query"
           },
           {
-            "$ref": "#/components/parameters/search_searchlat"
+            "$ref": "#/components/parameters/search_lat"
           },
           {
-            "$ref": "#/components/parameters/search_searchlng"
+            "$ref": "#/components/parameters/search_lng"
           },
           {
-            "$ref": "#/components/parameters/search_searchradius"
+            "$ref": "#/components/parameters/search_radius"
           },
           {
-            "$ref": "#/components/parameters/search_searchencodedpolyline"
+            "$ref": "#/components/parameters/search_encoded_polyline"
+          },
+          {
+            "$ref": "#/components/parameters/search_stores_by_page"
+          },
+          {
+            "$ref": "#/components/parameters/search_page"
           }
         ],
         "responses": {
@@ -2996,16 +3002,22 @@
             "$ref": "#/components/parameters/search_query"
           },
           {
-            "$ref": "#/components/parameters/search_searchlat"
+            "$ref": "#/components/parameters/search_lat"
           },
           {
-            "$ref": "#/components/parameters/search_searchlng"
+            "$ref": "#/components/parameters/search_lng"
           },
           {
-            "$ref": "#/components/parameters/search_searchradius"
+            "$ref": "#/components/parameters/search_radius"
           },
           {
-            "$ref": "#/components/parameters/search_searchencodedpolyline"
+            "$ref": "#/components/parameters/search_encoded_polyline"
+          },
+          {
+            "$ref": "#/components/parameters/search_stores_by_page"
+          },
+          {
+            "$ref": "#/components/parameters/search_page"
           }
         ],
         "responses": {
@@ -3014,2049 +3026,83 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AssetFeatureCollectionResponse"
+                  "$ref": "#/components/schemas/AssetAutocompleteResponse"
                 },
                 "examples": {
                   "default": {
                     "value": {
-                      "type": "FeatureCollection",
-                      "features": [
+                      "predictions": [
                         {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2354",
-                            "name": "Berkeley Street/Berkeley Square",
-                            "contact": {
-                              "phone": "02076295779",
-                              "website": "https://www.starbucks.com/store-locator/store/2354/berkeley-street-berkeley-square-27-berkeley-st-berkeley-square-london-eng-w-1-x-5-"
-                            },
-                            "address": {
-                              "lines": [
-                                "27 Berkeley St",
-                                "London, ENG W1X 5AD"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1X 5AD"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "UE"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 135.28682936,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "06:30"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "06:30"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "17:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "17:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "17:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "17:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
+                          "store_id": "2670",
+                          "name": "Sun Street",
+                          "types": [
+                            "Coffee shop"
+                          ],
+                          "matched_substrings": [
+                            {
+                              "offset": 4,
+                              "length": 6
                             }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.14408,
-                              51.5088
-                            ]
-                          }
+                          ],
+                          "highlighted": "Sun <b>Street</b>"
                         },
                         {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2671",
-                            "name": "Berkeley Street",
-                            "contact": {
-                              "phone": "02076294911",
-                              "website": "https://www.starbucks.com/store-locator/store/2671/berkeley-street-52-berkeley-st-london-eng-w-1-j-8-et-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "52 Berkeley St.",
-                                "London, ENG W1J 8ET"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1J 8ET"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "WC",
-                              "BC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 334.31148224,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "06:30"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "06:30"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "06:30"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
+                          "store_id": "16069",
+                          "name": "7th Street",
+                          "types": [
+                            "Coffee shop"
+                          ],
+                          "matched_substrings": [
+                            {
+                              "offset": 4,
+                              "length": 6
                             }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.1424,
-                              51.50735
-                            ]
-                          }
+                          ],
+                          "highlighted": "7th <b>Street</b>"
                         },
                         {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2888",
-                            "name": "Vigo Street",
-                            "contact": {
-                              "phone": "02077347632",
-                              "website": "https://www.starbucks.com/store-locator/store/2888/vigo-street-6-a-vigo-street-london-eng-w-1-s-3-hf-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "6A Vigo Street",
-                                "London",
-                                "London, ENG W1S 3HF"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1S 3HF"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 431.58415682,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
+                          "store_id": "1013873",
+                          "name": "The Street",
+                          "types": [
+                            "Coffee shop"
+                          ],
+                          "matched_substrings": [
+                            {
+                              "offset": 4,
+                              "length": 6
                             }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.13912,
-                              51.5103
-                            ]
-                          }
+                          ],
+                          "highlighted": "The <b>Street</b>"
                         },
                         {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "3047",
-                            "name": "West One Centre",
-                            "contact": {
-                              "phone": "020 76295404",
-                              "website": "https://www.starbucks.com/store-locator/store/3047/west-one-centre-381-oxford-street-west-one-centre-london-eng-w-1-c"
-                            },
-                            "address": {
-                              "lines": [
-                                "381 Oxford Street",
-                                "Unit G13",
-                                "London, ENG W1C 2JS"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1C 2JS"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "XO"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 541.85737556,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "08:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "08:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "10:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "10:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
+                          "store_id": "1008896",
+                          "name": "12th Street",
+                          "types": [
+                            "Coffee shop"
+                          ],
+                          "matched_substrings": [
+                            {
+                              "offset": 5,
+                              "length": 6
                             }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.149374,
-                              51.513905
-                            ]
-                          }
+                          ],
+                          "highlighted": "12th <b>Street</b>"
                         },
                         {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2606",
-                            "name": "Princes Street W1",
-                            "contact": {
-                              "phone": "02074958370",
-                              "website": "https://www.starbucks.com/store-locator/store/2606/princes-street-w-1-22-23-princes-st-london-eng-w-1-b-2-ly-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "22-23 Princes St",
-                                "London, ENG W1B 2LY"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1B 2LY"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA",
-                              "WC",
-                              "BC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 544.58185978,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
+                          "store_id": "1023565",
+                          "name": "Doha Street",
+                          "types": [
+                            "Coffee shop"
+                          ],
+                          "matched_substrings": [
+                            {
+                              "offset": 5,
+                              "length": 6
                             }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.142534,
-                              51.514346
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "91351",
-                            "name": "Harewood Place",
-                            "contact": {
-                              "phone": "02074953936",
-                              "website": "https://www.starbucks.com/store-locator/store/91351/harewood-place-13-b-hanover-square-london-eng-w-1-s-1-hn-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "13b Hanover Square",
-                                "London, ENG W1S 1HN"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1S 1HN"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "RW",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA",
-                              "BC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 554.73026581,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:30"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:30"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.14402,
-                              51.514684
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2353",
-                            "name": "Carnaby Street",
-                            "contact": {
-                              "phone": "02074340778",
-                              "website": "https://www.starbucks.com/store-locator/store/2353/carnaby-street-34-great-marlborough-st-london-eng-w-1-f-7-jd-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "34 Great Marlborough St",
-                                "(Carnaby Street)",
-                                "London, ENG W1F 7JD"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1F 7JD"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 632.17523247,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:30"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:30"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.13925,
-                              51.51402
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2626",
-                            "name": "James Street",
-                            "contact": {
-                              "phone": "02074956680",
-                              "website": "https://www.starbucks.com/store-locator/store/2626/james-street-14-james-street-london-eng-w-1-u-1-ef-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "14 James Street",
-                                "London, ENG W1U 1EF"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1U 1EF"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 649.62722685,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "08:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "08:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.15029,
-                              51.51469
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2379",
-                            "name": "Cavendish Square",
-                            "contact": {
-                              "phone": "02076290191",
-                              "website": "https://www.starbucks.com/store-locator/store/2379/cavendish-square-33-cavendish-square-london-eng-w-1-g-0-pw-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "33 Cavendish Square",
-                                "Unit 1",
-                                "London, ENG W1G 0PW"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1G 0PW"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA",
-                              "BC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 714.77455167,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "09:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "09:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.14389,
-                              51.516126
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2779",
-                            "name": "Langham Place W1",
-                            "contact": {
-                              "phone": "02075806199",
-                              "website": "https://www.starbucks.com/store-locator/store/2779/langham-place-w-1-1-2-langham-place-london-eng-w-1-b-3-de-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "1 - 2  Langham Place",
-                                "London, ENG W1B 3DE"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1B 3DE"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA",
-                              "BC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 877.89870518,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.142683,
-                              51.517483
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2714",
-                            "name": "Wardour Street/Brewer Street",
-                            "contact": {
-                              "phone": "02072874834",
-                              "website": "https://www.starbucks.com/store-locator/store/2714/wardour-street-brewer-street-60-66-wardour-street-london-eng-w-1-f-0-ta-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "60 - 66 Wardour Street",
-                                "Ground Floor",
-                                "London, ENG W1F 0TA"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1F 0TA"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA",
-                              "WC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 893.47601826,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:30"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:30"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:30"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.133316,
-                              51.512726
-                            ]
-                          }
-                        },
-                        {
-                          "type": "Feature",
-                          "properties": {
-                            "store_id": "2364",
-                            "name": "Wardour Street/Hollen Street",
-                            "contact": {
-                              "phone": "02072871956",
-                              "website": "https://www.starbucks.com/store-locator/store/2364/wardour-street-hollen-street-170-wardour-street-london-eng-w-1-v-4-la-gb"
-                            },
-                            "address": {
-                              "lines": [
-                                "170 Wardour Street",
-                                "London, ENG W1V 4LA"
-                              ],
-                              "country_code": "GB",
-                              "city": "London",
-                              "zipcode": "W1V 4LA"
-                            },
-                            "user_properties": null,
-                            "tags": [
-                              "WA",
-                              "WF",
-                              "CD",
-                              "DR",
-                              "XO",
-                              "NB",
-                              "LU",
-                              "BA",
-                              "BC"
-                            ],
-                            "types": [
-                              "Coffee shop"
-                            ],
-                            "distance": 925.6334785,
-                            "open": {
-                              "open_now": true,
-                              "open_hours": [
-                                {
-                                  "end": "18:00",
-                                  "start": "07:00"
-                                }
-                              ],
-                              "week_day": 1,
-                              "current_slice": {
-                                "end": "18:00",
-                                "start": "07:00"
-                              }
-                            },
-                            "weekly_opening": {
-                              "1": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "2": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "3": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "4": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "5": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "6": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "7": {
-                                "hours": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "isSpecial": false
-                              },
-                              "timezone": "Europe/London"
-                            },
-                            "opening_hours": {
-                              "usual": {
-                                "1": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "2": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "3": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "4": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "5": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "07:00"
-                                  }
-                                ],
-                                "6": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ],
-                                "7": [
-                                  {
-                                    "end": "18:00",
-                                    "start": "08:00"
-                                  }
-                                ]
-                              },
-                              "timezone": "Europe/London"
-                            }
-                          },
-                          "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                              -0.1353,
-                              51.51528
-                            ]
-                          }
+                          ],
+                          "highlighted": "Doha <b>Street</b>"
                         }
-                      ],
-                      "pagination": {
-                        "page": 1,
-                        "pageCount": 1
-                      }
+                      ]
                     }
                   }
                 }
@@ -6945,6 +4991,42 @@
         "in": "query",
         "example": "postal_code"
       },
+      "search_encoded_polyline": {
+        "name": "encoded_polyline",
+        "description": "Find assets nearby an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) and inside a defined radius.\n",
+        "schema": {
+          "type": "string"
+        },
+        "example": "_p~iF~ps|U_ulLnnqC_mqNvxq`@",
+        "in": "query"
+      },
+      "search_lat": {
+        "name": "lat",
+        "description": "Latitude bias for the results. Should be pass with `lng`.\n",
+        "schema": {
+          "type": "number"
+        },
+        "example": 5.2,
+        "in": "query"
+      },
+      "search_lng": {
+        "name": "lng",
+        "description": "Longitude bias for the results. Should be pass with `lat`.\n",
+        "schema": {
+          "type": "number"
+        },
+        "example": 3.5,
+        "in": "query"
+      },
+      "search_page": {
+        "name": "page",
+        "description": "Page number when accessing paginated assets feature collection\n",
+        "schema": {
+          "type": "integer"
+        },
+        "example": 2,
+        "in": "query"
+      },
       "search_query": {
         "name": "query",
         "in": "query",
@@ -6954,34 +5036,7 @@
         },
         "description": "Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:=\"My cool store\"`\n### Vocabulary\n- **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.\n- **Operator**: test that is performed on the data to provide a match, e.g. `=`. Each field has a default operator. If none operator follow the `:`, the default one is used.\n- **Value**: the content of the attribute that is tested, e.g. the name of the store `\"My cool store\"`.\nCombine clauses with the conjunctions `AND` or `OR`, and negate the query with `NOT`.\n### Fields\n- `type`: An element is contained within `type` collection. e.g. `type:\"myType\"`\n- `tag`: An element is contained within `tag` collection. e.g. `tag:\"myTag\"`\n- `city`: text matching: the value match the `city` field. e.g. `city:=\"Paris\"`\n- `country`: text matching: the value match the `countryCode` field. e.g. `country:=\"FR\"`\n- `name`: text matching: the value match the `name` field. e.g. `name:=\"myName\"`\n- `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:=\"myIdStore\"`\n- `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:=\"myValue\"`\n- `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:=\"centro\"`\n\n> **userProperties** field has no restriction regarding the data you can put in it (Arrays, Object, Boolean, String, Numeric...) but you can only query for **text matching or numerical comparison**.\n### Operators\n- `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.\n- `=` : The content of a string or a number is equal to the other.\n- `>` : A number is greater than another.\n- `<` : A number is smaller than another.\n- `>=` : A number is greater than or equal to another.\n- `<=` : A number is smaller than or equal to another.\n- `AND` : Return assets that match both clauses.\n- `OR` : Return assets that match either clauses.\n- `NOT` : Negates a search clause.\nFor compound clauses, you can use parentheses to group clauses together. For example: ```(type:\"type1\" OR type:\"type2\") AND tag:\"hockey\"```\nYou can use `NOT` operator to negates a search clause. For example: ```not type:\"type1\"```\n"
       },
-      "search_searchencodedpolyline": {
-        "name": "encoded_polyline",
-        "description": "Find assets nearby an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) and inside a defined radius.\n",
-        "schema": {
-          "type": "string"
-        },
-        "example": "_p~iF~ps|U_ulLnnqC_mqNvxq`@",
-        "in": "query"
-      },
-      "search_searchlat": {
-        "name": "lat",
-        "description": "Latitude bias for the results. Should be pass with `lng`.\n",
-        "schema": {
-          "type": "number"
-        },
-        "example": 5.2,
-        "in": "query"
-      },
-      "search_searchlng": {
-        "name": "lng",
-        "description": "Longitude bias for the results. Should be pass with `lat`.\n",
-        "schema": {
-          "type": "number"
-        },
-        "example": 3.5,
-        "in": "query"
-      },
-      "search_searchradius": {
+      "search_radius": {
         "name": "radius",
         "description": "Unit in meters. Used to combine with lat/lng or encoded polyline. To bias the results within a given circular area. 3000 means to search for Assets that are at the most far from 3kms to search area (latlng or polyline).\n",
         "schema": {
@@ -6990,7 +5045,7 @@
         "example": 3000,
         "in": "query"
       },
-      "search_searchstoresbypage": {
+      "search_stores_by_page": {
         "name": "stores_by_page",
         "description": "If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is 100, max is 300).\n",
         "schema": {
@@ -7444,6 +5499,125 @@
               51.505046
             ]
           }
+        }
+      },
+      "AssetAutocompleteResponse": {
+        "title": "AssetAutocompleteResponse",
+        "type": "object",
+        "description": "Asset Autocomplete Response with highlighted results on asset name.",
+        "properties": {
+          "predictions": {
+            "description": "A list of predictions based on similarity in all the `localizedNames` passed in query (or similarity to `store_name` if no `localizedNames` exist)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "The `name` property of each prediction will be filled with the localized name of your asset in the `language` you provided in your query if it exists, or else the default name property.\n",
+                  "type": "string",
+                  "example": "Centro Commerciale Deria"
+                },
+                "highlighted": {
+                  "type": "string",
+                  "description": "an HTML formatted string with, if it exists, the matched substring(s) in bold font.",
+                  "example": "Centro <b>Commercial</b>e Deria"
+                },
+                "store_id": {
+                  "$ref": "#/components/schemas/AssetId"
+                },
+                "types": {
+                  "description": "Contains an array of types describing the Asset.",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "drive",
+                    "click_and_collect"
+                  ]
+                },
+                "matched_substrings": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MatchedSubstring"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "example": {
+          "predictions": [
+            {
+              "store_id": "2670",
+              "name": "Sun Street",
+              "types": [
+                "Coffee shop"
+              ],
+              "matched_substrings": [
+                {
+                  "offset": 4,
+                  "length": 6
+                }
+              ],
+              "highlighted": "Sun <b>Street</b>"
+            },
+            {
+              "store_id": "16069",
+              "name": "7th Street",
+              "types": [
+                "Coffee shop"
+              ],
+              "matched_substrings": [
+                {
+                  "offset": 4,
+                  "length": 6
+                }
+              ],
+              "highlighted": "7th <b>Street</b>"
+            },
+            {
+              "store_id": "1013873",
+              "name": "The Street",
+              "types": [
+                "Coffee shop"
+              ],
+              "matched_substrings": [
+                {
+                  "offset": 4,
+                  "length": 6
+                }
+              ],
+              "highlighted": "The <b>Street</b>"
+            },
+            {
+              "store_id": "1008896",
+              "name": "12th Street",
+              "types": [
+                "Coffee shop"
+              ],
+              "matched_substrings": [
+                {
+                  "offset": 5,
+                  "length": 6
+                }
+              ],
+              "highlighted": "12th <b>Street</b>"
+            },
+            {
+              "store_id": "1023565",
+              "name": "Doha Street",
+              "types": [
+                "Coffee shop"
+              ],
+              "matched_substrings": [
+                {
+                  "offset": 5,
+                  "length": 6
+                }
+              ],
+              "highlighted": "Doha <b>Street</b>"
+            }
+          ]
         }
       },
       "Pagination": {

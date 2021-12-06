@@ -22,6 +22,10 @@
     <p>Longitude bias for the results. Should be pass with <code>lat</code>.</p>
   </li>
   <li>
+    <h3 id="page">page</h3>
+    <p>Page number when accessing paginated assets feature collection</p>
+  </li>
+  <li>
     <h3 id="query">query</h3>
     <p>
       Search query combining one or more search clauses. Each search clause is
@@ -134,6 +138,15 @@
       Unit in meters. Used to combine with lat/lng or encoded polyline. To bias
       the results within a given circular area. 3000 means to search for Assets
       that are at the most far from 3kms to search area (latlng or polyline).
+    </p>
+  </li>
+  <li>
+    <h3 id="stores_by_page">stores_by_page</h3>
+    <p>
+      If your request returns a high number of assets, the result will be
+      paginated. If so, you can request assets by page using
+      <code>page</code> and <code>stores_by_page</code> parameters (Default is
+      100, max is 300).
     </p>
   </li>
 </ul>

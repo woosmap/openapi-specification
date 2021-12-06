@@ -288,4 +288,37 @@ export const REQUESTS: SnippetRequest[] = [
             header: [{key: "Referer", value: "http://localhost"}],
         }),
     },
+    {
+        regionTag: "woosmap_http_asset_autocomplete_feature_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/stores/autocomplete/",
+                query: [
+                    {
+                        key: "key",
+                        value: "woos-48c80350-88aa-333e-835a-07f4b658a9a4",
+                    },
+                    {
+                        key: "lat",
+                        value: "51.50976",
+                    },
+                    {
+                        key: "lng",
+                        value: "-0.145276",
+                    },
+                    {
+                        key: "radius",
+                        value: "50000",
+                    },
+                    {
+                        key: "query",
+                        value: "localized:street",
+                    },
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
 ];
