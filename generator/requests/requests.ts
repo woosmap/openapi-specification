@@ -40,8 +40,8 @@ export const REQUESTS: SnippetRequest[] = [
                         value: "Lond",
                     },
                     {
-                        key: "component",
-                        value: "country:UK",
+                        key: "components",
+                        value: "country:gb",
                     },
                 ],
             }),
@@ -180,6 +180,61 @@ export const REQUESTS: SnippetRequest[] = [
                         key: "ip_address",
                         value: "173.79.254.254",
                     },
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_localities_autocomplete_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/autocomplete/",
+                query: [
+                    {
+                        key: "input",
+                        value: "Lond",
+                    },
+                    {
+                        key: "components",
+                        value: "country:gb",
+                    },
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_localities_details_address",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/details",
+                query: [
+                    {
+                        key: "public_id",
+                        value: "MVZWBfGZQnAQn9JtE9CJZjgeB4Q=",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+     {
+        regionTag: "woosmap_http_localities_details_postal_code",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/details",
+                query: [
+                    {
+                        key: "public_id",
+                        value: "QaCU+fBtigK65ztSrqHqUoUDwZw=",
+                    }
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],

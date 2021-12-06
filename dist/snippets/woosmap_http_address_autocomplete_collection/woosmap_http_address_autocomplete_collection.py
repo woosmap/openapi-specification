@@ -1,7 +1,7 @@
 # [START woosmap_http_address_autocomplete_collection]
 import requests
 
-url = "https://api.woosmap.com/address/autocomplete/json?input=Lond&component=country%3AUK&key=YOUR_PUBLIC_API_KEY"
+url = "https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY"
 
 payload={}
 headers = {

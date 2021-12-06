@@ -27,34 +27,8 @@ Address Collection Response containing Localities
       "type": "locality"
     },
     {
-      "public_id": "aGVyZTpjbTpuYW1lZHBsYWNlOjIxMDg1NjIw",
-      "description": "London, ON, Canada",
-      "matched_substring": {
-        "description": [
-          {
-            "offset": 0,
-            "length": 4
-          }
-        ]
-      },
-      "type": "locality"
-    },
-    {
       "public_id": "aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDE5Nzgz",
       "description": "Londonderry, Northern Ireland, United Kingdom",
-      "matched_substring": {
-        "description": [
-          {
-            "offset": 0,
-            "length": 4
-          }
-        ]
-      },
-      "type": "locality"
-    },
-    {
-      "public_id": "aGVyZTpjbTpuYW1lZHBsYWNlOjIzMDM1ODQx",
-      "description": "Londrina, PR, Brazil",
       "matched_substring": {
         "description": [
           {
