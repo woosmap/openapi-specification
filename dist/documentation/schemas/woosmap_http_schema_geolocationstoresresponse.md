@@ -60,7 +60,7 @@ A successful geolocation request will return a JSON-formatted response defining 
               "Building Centre",
               "26 Store Street"
             ],
-            "country_code": null,
+            "country_code": "UK",
             "city": "London",
             "zipcode": "WC1E 7BT"
           },
