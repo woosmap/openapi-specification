@@ -1,7 +1,7 @@
 title: GeolocationResponse
 type: object
 description: A successful geolocation request will return a JSON-formatted response defining a location and radius.
-required: [location, accuracy]
+required: [accuracy, latitude, longitude]
 properties:
   viewport:
     $ref: "./Bounds.yml"
@@ -17,6 +17,7 @@ properties:
   country_code:
     description: ISO 3166-1 Alpha-2 compatible country code
     type: string
+    nullable: true
   country_name:
     description: Country name
     type: string
@@ -36,4 +37,4 @@ properties:
     description: The time zone associated with location, as specified by the IANA Time Zone Database
     type: string
 example:
-  $ref: "../responses/woosmap_http_geolocation_response.yml"
+  $ref: "../responses/woosmap_http_geolocation_position_response.yml"
