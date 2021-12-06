@@ -9,7 +9,11 @@ security:
     RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
-  - $ref: "../../parameters/query.yml"
+  - $ref: "../../parameters/search/query.yml"
+  - $ref: "../../parameters/search/searchLat.yml"
+  - $ref: "../../parameters/search/searchLng.yml"
+  - $ref: "../../parameters/search/searchRadius.yml"
+  - $ref: "../../parameters/search/searchEncodedPolyline.yml"
 responses:
   "200":
     description: 200 OK

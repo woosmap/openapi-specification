@@ -31,7 +31,8 @@ properties:
   user_properties:
     description: Contains all additional information relative to an Asset
     type: object
-    example: [ "wifi", "covered_parking" ]
+    nullable: true
+    example: { "some_user_properties": "some_value" }
   opening_hours:
     $ref: "./AssetOpeningHours.yml"
   distance:

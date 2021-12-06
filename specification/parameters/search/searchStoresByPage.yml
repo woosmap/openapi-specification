@@ -1,0 +1,9 @@
+name: stores_by_page
+description: >
+  If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is 100, max is 300).
+schema:
+  type: integer
+  minimum: 1
+  maximum: 300
+example: 150
+in: query

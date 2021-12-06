@@ -4,6 +4,18 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
+-   <h3 id="encoded_polyline">encoded_polyline</h3>
+
+    Find assets nearby an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) and inside a defined radius.
+
+-   <h3 id="lat">lat</h3>
+
+    Latitude bias for the results. Should be pass with `lng`.
+
+-   <h3 id="lng">lng</h3>
+
+    Longitude bias for the results. Should be pass with `lat`.
+
 -   <h3 id="query">query</h3>
 
     Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:="My cool store"`
@@ -43,6 +55,10 @@
 
     For compound clauses, you can use parentheses to group clauses together. For example: `(type:"type1" OR type:"type2") AND tag:"hockey"`
     You can use `NOT` operator to negates a search clause. For example: `not type:"type1"`
+
+-   <h3 id="radius">radius</h3>
+
+    Unit in meters. Used to combine with lat/lng or encoded polyline. To bias the results within a given circular area. 3000 means to search for Assets that are at the most far from 3kms to search area (latlng or polyline).
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
