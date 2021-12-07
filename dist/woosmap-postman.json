@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "c4000444-7787-40fa-b4ba-8702df9cf28c",
+            "id": "ff3e8bfd-ae83-4cdd-92f7-6d2cb02be4df",
             "name": "Store Search API",
             "description": {
                 "content": "Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/). Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/). If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).\n",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "1a720bf6-8e0d-4dc6-8347-b5319ba601e1",
+                    "id": "4a792d45-606a-463a-81eb-9f77e47c0691",
                     "name": "Search for assets",
                     "request": {
                         "name": "Search for assets",
@@ -95,7 +95,7 @@
                     },
                     "response": [
                         {
-                            "id": "8a930985-30eb-4fc0-bdb5-5b285323d508",
+                            "id": "ae6e2b46-78de-431c-bab9-6322f695fde5",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -156,12 +156,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"type\": \"FeatureCollection\",\n \"features\": [\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2354\",\n    \"name\": \"Berkeley Street/Berkeley Square\",\n    \"contact\": {\n     \"phone\": \"02076295779\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2354/berkeley-street-berkeley-square-27-berkeley-st-berkeley-square-london-eng-w-1-x-5-\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"27 Berkeley St\",\n      \"London, ENG W1X 5AD\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1X 5AD\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"UE\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 135.28682936,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"06:30\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"06:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.14408,\n     51.5088\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2671\",\n    \"name\": \"Berkeley Street\",\n    \"contact\": {\n     \"phone\": \"02076294911\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2671/berkeley-street-52-berkeley-st-london-eng-w-1-j-8-et-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"52 Berkeley St.\",\n      \"London, ENG W1J 8ET\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1J 8ET\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"WC\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 334.31148224,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"06:30\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"06:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.1424,\n     51.50735\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2888\",\n    \"name\": \"Vigo Street\",\n    \"contact\": {\n     \"phone\": \"02077347632\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2888/vigo-street-6-a-vigo-street-london-eng-w-1-s-3-hf-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"6A Vigo Street\",\n      \"London\",\n      \"London, ENG W1S 3HF\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1S 3HF\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 431.58415682,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.13912,\n     51.5103\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"3047\",\n    \"name\": \"West One Centre\",\n    \"contact\": {\n     \"phone\": \"020 76295404\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/3047/west-one-centre-381-oxford-street-west-one-centre-london-eng-w-1-c\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"381 Oxford Street\",\n      \"Unit G13\",\n      \"London, ENG W1C 2JS\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1C 2JS\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"XO\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 541.85737556,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"08:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"08:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"10:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"10:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.149374,\n     51.513905\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2606\",\n    \"name\": \"Princes Street W1\",\n    \"contact\": {\n     \"phone\": \"02074958370\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2606/princes-street-w-1-22-23-princes-st-london-eng-w-1-b-2-ly-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"22-23 Princes St\",\n      \"London, ENG W1B 2LY\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1B 2LY\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"WC\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 544.58185978,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.142534,\n     51.514346\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"91351\",\n    \"name\": \"Harewood Place\",\n    \"contact\": {\n     \"phone\": \"02074953936\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/91351/harewood-place-13-b-hanover-square-london-eng-w-1-s-1-hn-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"13b Hanover Square\",\n      \"London, ENG W1S 1HN\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1S 1HN\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"RW\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 554.73026581,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:30\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.14402,\n     51.514684\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2353\",\n    \"name\": \"Carnaby Street\",\n    \"contact\": {\n     \"phone\": \"02074340778\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2353/carnaby-street-34-great-marlborough-st-london-eng-w-1-f-7-jd-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"34 Great Marlborough St\",\n      \"(Carnaby Street)\",\n      \"London, ENG W1F 7JD\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1F 7JD\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 632.17523247,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:30\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.13925,\n     51.51402\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2626\",\n    \"name\": \"James Street\",\n    \"contact\": {\n     \"phone\": \"02074956680\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2626/james-street-14-james-street-london-eng-w-1-u-1-ef-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"14 James Street\",\n      \"London, ENG W1U 1EF\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1U 1EF\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 649.62722685,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"08:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"08:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.15029,\n     51.51469\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2379\",\n    \"name\": \"Cavendish Square\",\n    \"contact\": {\n     \"phone\": \"02076290191\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2379/cavendish-square-33-cavendish-square-london-eng-w-1-g-0-pw-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"33 Cavendish Square\",\n      \"Unit 1\",\n      \"London, ENG W1G 0PW\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1G 0PW\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 714.77455167,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"09:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"09:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.14389,\n     51.516126\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2779\",\n    \"name\": \"Langham Place W1\",\n    \"contact\": {\n     \"phone\": \"02075806199\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2779/langham-place-w-1-1-2-langham-place-london-eng-w-1-b-3-de-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"1 - 2  Langham Place\",\n      \"London, ENG W1B 3DE\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1B 3DE\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 877.89870518,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.142683,\n     51.517483\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2714\",\n    \"name\": \"Wardour Street/Brewer Street\",\n    \"contact\": {\n     \"phone\": \"02072874834\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2714/wardour-street-brewer-street-60-66-wardour-street-london-eng-w-1-f-0-ta-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"60 - 66 Wardour Street\",\n      \"Ground Floor\",\n      \"London, ENG W1F 0TA\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1F 0TA\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"WC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 893.47601826,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:30\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.133316,\n     51.512726\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2364\",\n    \"name\": \"Wardour Street/Hollen Street\",\n    \"contact\": {\n     \"phone\": \"02072871956\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2364/wardour-street-hollen-street-170-wardour-street-london-eng-w-1-v-4-la-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"170 Wardour Street\",\n      \"London, ENG W1V 4LA\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1V 4LA\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 925.6334785,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 1,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.1353,\n     51.51528\n    ]\n   }\n  }\n ],\n \"pagination\": {\n  \"page\": 1,\n  \"pageCount\": 1\n }\n}",
+                            "body": "{\n \"type\": \"FeatureCollection\",\n \"features\": [\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2354\",\n    \"name\": \"Berkeley Street/Berkeley Square\",\n    \"contact\": {\n     \"phone\": \"02076295779\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2354/berkeley-street-berkeley-square-27-berkeley-st-berkeley-square-london-eng-w-1-x-5-\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"27 Berkeley St\",\n      \"London, ENG W1X 5AD\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1X 5AD\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"UE\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 135.28682936,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"06:30\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"06:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"17:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.14408,\n     51.5088\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2671\",\n    \"name\": \"Berkeley Street\",\n    \"contact\": {\n     \"phone\": \"02076294911\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2671/berkeley-street-52-berkeley-st-london-eng-w-1-j-8-et-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"52 Berkeley St.\",\n      \"London, ENG W1J 8ET\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1J 8ET\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"WC\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 334.31148224,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"06:30\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"06:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"06:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.1424,\n     51.50735\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2888\",\n    \"name\": \"Vigo Street\",\n    \"contact\": {\n     \"phone\": \"02077347632\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2888/vigo-street-6-a-vigo-street-london-eng-w-1-s-3-hf-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"6A Vigo Street\",\n      \"London\",\n      \"London, ENG W1S 3HF\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1S 3HF\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 431.58415682,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.13912,\n     51.5103\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"3047\",\n    \"name\": \"West One Centre\",\n    \"contact\": {\n     \"phone\": \"020 76295404\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/3047/west-one-centre-381-oxford-street-west-one-centre-london-eng-w-1-c\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"381 Oxford Street\",\n      \"Unit G13\",\n      \"London, ENG W1C 2JS\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1C 2JS\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"XO\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 541.85737556,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"08:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"08:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"10:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"10:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.149374,\n     51.513905\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2606\",\n    \"name\": \"Princes Street W1\",\n    \"contact\": {\n     \"phone\": \"02074958370\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2606/princes-street-w-1-22-23-princes-st-london-eng-w-1-b-2-ly-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"22-23 Princes St\",\n      \"London, ENG W1B 2LY\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1B 2LY\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"WC\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 544.58185978,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.142534,\n     51.514346\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"91351\",\n    \"name\": \"Harewood Place\",\n    \"contact\": {\n     \"phone\": \"02074953936\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/91351/harewood-place-13-b-hanover-square-london-eng-w-1-s-1-hn-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"13b Hanover Square\",\n      \"London, ENG W1S 1HN\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1S 1HN\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"RW\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 554.73026581,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:30\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.14402,\n     51.514684\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2353\",\n    \"name\": \"Carnaby Street\",\n    \"contact\": {\n     \"phone\": \"02074340778\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2353/carnaby-street-34-great-marlborough-st-london-eng-w-1-f-7-jd-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"34 Great Marlborough St\",\n      \"(Carnaby Street)\",\n      \"London, ENG W1F 7JD\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1F 7JD\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 632.17523247,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:30\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.13925,\n     51.51402\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2626\",\n    \"name\": \"James Street\",\n    \"contact\": {\n     \"phone\": \"02074956680\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2626/james-street-14-james-street-london-eng-w-1-u-1-ef-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"14 James Street\",\n      \"London, ENG W1U 1EF\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1U 1EF\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 649.62722685,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"08:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"08:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.15029,\n     51.51469\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2379\",\n    \"name\": \"Cavendish Square\",\n    \"contact\": {\n     \"phone\": \"02076290191\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2379/cavendish-square-33-cavendish-square-london-eng-w-1-g-0-pw-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"33 Cavendish Square\",\n      \"Unit 1\",\n      \"London, ENG W1G 0PW\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1G 0PW\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 714.77455167,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"09:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"09:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.14389,\n     51.516126\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2779\",\n    \"name\": \"Langham Place W1\",\n    \"contact\": {\n     \"phone\": \"02075806199\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2779/langham-place-w-1-1-2-langham-place-london-eng-w-1-b-3-de-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"1 - 2  Langham Place\",\n      \"London, ENG W1B 3DE\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1B 3DE\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 877.89870518,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.142683,\n     51.517483\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2714\",\n    \"name\": \"Wardour Street/Brewer Street\",\n    \"contact\": {\n     \"phone\": \"02072874834\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2714/wardour-street-brewer-street-60-66-wardour-street-london-eng-w-1-f-0-ta-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"60 - 66 Wardour Street\",\n      \"Ground Floor\",\n      \"London, ENG W1F 0TA\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1F 0TA\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"WC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 893.47601826,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:30\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:30\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:30\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.133316,\n     51.512726\n    ]\n   }\n  },\n  {\n   \"type\": \"Feature\",\n   \"properties\": {\n    \"store_id\": \"2364\",\n    \"name\": \"Wardour Street/Hollen Street\",\n    \"contact\": {\n     \"phone\": \"02072871956\",\n     \"website\": \"https://www.starbucks.com/store-locator/store/2364/wardour-street-hollen-street-170-wardour-street-london-eng-w-1-v-4-la-gb\"\n    },\n    \"address\": {\n     \"lines\": [\n      \"170 Wardour Street\",\n      \"London, ENG W1V 4LA\"\n     ],\n     \"country_code\": \"GB\",\n     \"city\": \"London\",\n     \"zipcode\": \"W1V 4LA\"\n    },\n    \"user_properties\": null,\n    \"tags\": [\n     \"WA\",\n     \"WF\",\n     \"CD\",\n     \"DR\",\n     \"XO\",\n     \"NB\",\n     \"LU\",\n     \"BA\",\n     \"BC\"\n    ],\n    \"types\": [\n     \"Coffee shop\"\n    ],\n    \"distance\": 925.6334785,\n    \"open\": {\n     \"open_now\": true,\n     \"open_hours\": [\n      {\n       \"end\": \"18:00\",\n       \"start\": \"07:00\"\n      }\n     ],\n     \"week_day\": 2,\n     \"current_slice\": {\n      \"end\": \"18:00\",\n      \"start\": \"07:00\"\n     }\n    },\n    \"weekly_opening\": {\n     \"1\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"2\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"3\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"4\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"5\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"6\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"7\": {\n      \"hours\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"isSpecial\": false\n     },\n     \"timezone\": \"Europe/London\"\n    },\n    \"opening_hours\": {\n     \"usual\": {\n      \"1\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"2\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"3\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"4\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"5\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"07:00\"\n       }\n      ],\n      \"6\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ],\n      \"7\": [\n       {\n        \"end\": \"18:00\",\n        \"start\": \"08:00\"\n       }\n      ]\n     },\n     \"timezone\": \"Europe/London\"\n    }\n   },\n   \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n     -0.1353,\n     51.51528\n    ]\n   }\n  }\n ],\n \"pagination\": {\n  \"page\": 1,\n  \"pageCount\": 1\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "760cadd4-9570-4c0f-9dce-a69b91e2405e",
+                            "id": "d5758103-824b-4fb3-b44c-d3dcb1adfa00",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -230,7 +230,7 @@
                     "event": []
                 },
                 {
-                    "id": "52701481-7fc4-439d-9ad3-f078c464cc15",
+                    "id": "babfa5aa-09ee-4f9b-bb5a-1843ae080d25",
                     "name": "Autocomplete for assets",
                     "request": {
                         "name": "Autocomplete for assets",
@@ -316,7 +316,7 @@
                     },
                     "response": [
                         {
-                            "id": "fc796239-d83c-4046-82b6-d991e69ac5fe",
+                            "id": "bbaaf603-541e-4501-8f7d-5440afedfa88",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -382,7 +382,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c984713a-7b3b-4541-a468-83d16f031f03",
+                            "id": "845475c1-5030-421b-89b3-2d4992db8684",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -454,7 +454,7 @@
             "event": []
         },
         {
-            "id": "bdc5e9a4-200c-4ed2-921f-317205150774",
+            "id": "99a18a68-6ce3-4471-b6d4-fd32b3e28516",
             "name": "Data Management API",
             "description": {
                 "content": "The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets. The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`) coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/), [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).\n",
@@ -462,7 +462,7 @@
             },
             "item": [
                 {
-                    "id": "3d8adcb5-ff43-45f0-a211-aec897299dc1",
+                    "id": "3d104b7c-6f8b-4a30-8718-13ee2c8a4319",
                     "name": "Create your Assets",
                     "request": {
                         "name": "Create your Assets",
@@ -519,7 +519,7 @@
                     },
                     "response": [
                         {
-                            "id": "589a5123-4f55-412b-a866-78d56574d931",
+                            "id": "fd15738b-ef5d-4c78-9a36-6d3706a543af",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -543,7 +543,7 @@
                                 "method": "POST",
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"types\": [\n                \"drive\"\n            ],\n            \"tags\": [\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.5239,\n                \"lng\": -77.0157\n            },\n            \"storeId\": \"STORE_ID_45678\",\n            \"name\": \"My Cool Store 2\",\n            \"address\": {\n                \"lines\": [\n                    \"1805-1899\",\n                    \"Orchard St\"\n                ],\n                \"countryCode\": \"US\",\n                \"city\": \"Alexandria\",\n                \"zipcode\": \"22309\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"America/New_York\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -556,18 +556,18 @@
                             "header": [
                                 {
                                     "key": "Content-Type",
-                                    "value": "text/plain"
+                                    "value": "application/json"
                                 }
                             ],
-                            "body": "",
+                            "body": "{\n \"status\": \"success\",\n \"value\": \"2 stores\"\n}",
                             "cookie": [],
-                            "_postman_previewlanguage": "text"
+                            "_postman_previewlanguage": "json"
                         }
                     ],
                     "event": []
                 },
                 {
-                    "id": "7dc955f5-a461-4d1e-85e7-99ebabb6e2e1",
+                    "id": "b4fd6342-f367-4fa8-bdea-9fe2057ee6c4",
                     "name": "Update the Assets",
                     "request": {
                         "name": "Update the Assets",
@@ -624,7 +624,7 @@
                     },
                     "response": [
                         {
-                            "id": "77fefcaf-20d3-415d-a952-d64a3c3e570a",
+                            "id": "a2145615-6db5-4385-92c5-82f552305b8f",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -648,7 +648,7 @@
                                 "method": "PUT",
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"698-500\",\n                    \" Lloyds Ln\"\n                ],\n                \"countryCode\": \"US\",\n                \"city\": \"Alexandria\",\n                \"zipcode\": \"VA 22302\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -661,23 +661,23 @@
                             "header": [
                                 {
                                     "key": "Content-Type",
-                                    "value": "text/plain"
+                                    "value": "application/json"
                                 }
                             ],
-                            "body": "",
+                            "body": "{\n \"status\": \"success\",\n \"value\": \"1 stores\"\n}",
                             "cookie": [],
-                            "_postman_previewlanguage": "text"
+                            "_postman_previewlanguage": "json"
                         }
                     ],
                     "event": []
                 },
                 {
-                    "id": "a029b0ad-aa23-454a-aec4-79593f45a312",
+                    "id": "24d98c4b-7852-4f24-b808-1b561e4bf45e",
                     "name": "Delete the Assets",
                     "request": {
                         "name": "Delete the Assets",
                         "description": {
-                            "content": "Used to delete one or more assets. The `storeId` is the id of the asset to delete. To delete several assets, use the comma as a separator.",
+                            "content": "Used to delete one or more assets. The `storeId` specified in `query` parameter is the id of the asset to delete. To delete several assets, use the comma as a separator. To delete all project assets, omit the `query` parameter.\n",
                             "type": "text/plain"
                         },
                         "url": {
@@ -693,9 +693,9 @@
                             "query": [
                                 {
                                     "disabled": true,
-                                    "key": "storeId",
+                                    "key": "query",
                                     "value": "<string>",
-                                    "description": "The asset ID to delete"
+                                    "description": "The query to target assets ID to delete"
                                 }
                             ],
                             "variable": []
@@ -721,7 +721,7 @@
                     },
                     "response": [
                         {
-                            "id": "7bc50376-c161-40f6-9c75-f5b6cc5c73de",
+                            "id": "711c19e7-7de2-4c82-9fb1-30cbe035fd45",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -736,8 +736,8 @@
                                     ],
                                     "query": [
                                         {
-                                            "key": "storeId",
-                                            "value": "STORE_ID_123456"
+                                            "key": "query",
+                                            "value": "idstore:[{storeId1},{storeId2}]"
                                         },
                                         {
                                             "key": "private_key",
@@ -754,18 +754,18 @@
                             "header": [
                                 {
                                     "key": "Content-Type",
-                                    "value": "text/plain"
+                                    "value": "application/json"
                                 }
                             ],
-                            "body": "",
+                            "body": "{\n \"status\": \"success\",\n \"value\": 2\n}",
                             "cookie": [],
-                            "_postman_previewlanguage": "text"
+                            "_postman_previewlanguage": "json"
                         }
                     ],
                     "event": []
                 },
                 {
-                    "id": "28a1f667-cbbd-4ed5-9e36-01caa8f13f8f",
+                    "id": "9a7a795c-66bf-4928-8031-b03352a7dcba",
                     "name": "Get Asset from ID",
                     "request": {
                         "name": "Get Asset from ID",
@@ -816,7 +816,7 @@
                     },
                     "response": [
                         {
-                            "id": "c2d76b10-af61-485f-a2a3-8bd30af2968f",
+                            "id": "eeb78e0d-d677-40d3-b2c9-8af9de330dc8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -857,12 +857,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"type\": \"Feature\",\n \"properties\": {\n  \"store_id\": \"boroughmarket\",\n  \"name\": \"Borough Market\",\n  \"contact\": {\n   \"phone\": \"020 7407 1002\",\n   \"website\": \"http://boroughmarket.org.uk\"\n  },\n  \"address\": {\n   \"lines\": [\n    \"8 Southwark St\"\n   ],\n   \"country_code\": \"UK\",\n   \"city\": \"London\",\n   \"zipcode\": \"SE1 1TL\"\n  },\n  \"user_properties\": {\n   \"photo\": \"https://preview.webgeoservices.com/jsfiddle/boroughmarket.jpeg\",\n   \"placeId\": \"ChIJD2bPdVcDdkgRiDyO6mrCsu4\"\n  },\n  \"tags\": [],\n  \"types\": [\n   \"covered\"\n  ],\n  \"open\": {\n   \"open_now\": true,\n   \"open_hours\": [\n    {\n     \"end\": \"17:00\",\n     \"start\": \"10:00\"\n    }\n   ],\n   \"week_day\": 3,\n   \"current_slice\": {\n    \"end\": \"17:00\",\n    \"start\": \"10:00\"\n   }\n  },\n  \"weekly_opening\": {\n   \"1\": {\n    \"hours\": [\n     {\n      \"end\": \"17:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"2\": {\n    \"hours\": [\n     {\n      \"end\": \"17:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"3\": {\n    \"hours\": [\n     {\n      \"end\": \"17:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"4\": {\n    \"hours\": [\n     {\n      \"end\": \"17:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"5\": {\n    \"hours\": [\n     {\n      \"end\": \"18:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"6\": {\n    \"hours\": [\n     {\n      \"end\": \"17:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"7\": {\n    \"hours\": [],\n    \"isSpecial\": false\n   },\n   \"timezone\": \"Europe/London\"\n  },\n  \"opening_hours\": {\n   \"usual\": {\n    \"5\": [\n     {\n      \"end\": \"18:00\",\n      \"start\": \"10:00\"\n     }\n    ],\n    \"7\": [],\n    \"default\": [\n     {\n      \"end\": \"17:00\",\n      \"start\": \"10:00\"\n     }\n    ]\n   },\n   \"timezone\": \"Europe/London\"\n  }\n },\n \"geometry\": {\n  \"type\": \"Point\",\n  \"coordinates\": [\n   -0.090679,\n   51.505046\n  ]\n }\n}",
+                            "body": "{\n \"type\": \"Feature\",\n \"properties\": {\n  \"store_id\": \"10031\",\n  \"name\": \"Santa Rosa & Yolanda\",\n  \"contact\": {\n   \"phone\": \"707-527-1006\",\n   \"website\": \"https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us\"\n  },\n  \"address\": {\n   \"lines\": [\n    \"2688 Santa Rosa Ave\",\n    \"Santa Rosa, CA 95407\"\n   ],\n   \"country_code\": \"US\",\n   \"city\": \"Santa Rosa\",\n   \"zipcode\": \"954077625\"\n  },\n  \"user_properties\": null,\n  \"tags\": [\n   \"DT\",\n   \"WA\",\n   \"CD\",\n   \"DR\",\n   \"LB\",\n   \"GO\",\n   \"XO\",\n   \"MX\",\n   \"NB\",\n   \"BE\",\n   \"LU\",\n   \"UC\"\n  ],\n  \"types\": [\n   \"Coffee shop\"\n  ],\n  \"open\": {\n   \"open_now\": false,\n   \"open_hours\": [\n    {\n     \"end\": \"20:00\",\n     \"start\": \"05:00\"\n    }\n   ],\n   \"week_day\": 2,\n   \"next_opening\": {\n    \"end\": \"20:00\",\n    \"start\": \"05:00\",\n    \"day\": \"2021-12-07\"\n   }\n  },\n  \"weekly_opening\": {\n   \"1\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"2\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"3\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"4\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"5\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"6\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"7\": {\n    \"hours\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"isSpecial\": false\n   },\n   \"timezone\": \"America/Los_Angeles\"\n  },\n  \"opening_hours\": {\n   \"usual\": {\n    \"1\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"2\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"3\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"4\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"5\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"6\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ],\n    \"7\": [\n     {\n      \"end\": \"20:00\",\n      \"start\": \"05:00\"\n     }\n    ]\n   },\n   \"timezone\": \"America/Los_Angeles\"\n  }\n },\n \"geometry\": {\n  \"type\": \"Point\",\n  \"coordinates\": [\n   -122.712924,\n   38.41244\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "08098399-d199-4dd9-90d2-f7175c32e589",
+                            "id": "42b2ff4f-124f-494b-ad79-a9a4340e9b60",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -908,7 +908,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "db86155d-43e5-4807-a8a9-b332aaf0b5fe",
+                            "id": "2e37d90e-441b-490b-bd2d-1cdaf16de31d",
                             "name": "404 NOT FOUND - `storeId` do not exist in the project identified with the key parameter.",
                             "originalRequest": {
                                 "url": {
@@ -957,7 +957,7 @@
                     "event": []
                 },
                 {
-                    "id": "17c03163-39b0-4b5d-8828-4a08e92e9408",
+                    "id": "b8409580-28a5-4c2c-ac82-3f26bd811f80",
                     "name": "Replace all assets",
                     "request": {
                         "name": "Replace all assets",
@@ -1015,7 +1015,7 @@
                     },
                     "response": [
                         {
-                            "id": "5ba96c6b-77b0-40a9-9063-22c6fdf4dbf2",
+                            "id": "bce86e73-e004-4155-8ab1-f3f5ce017376",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1040,7 +1040,7 @@
                                 "method": "POST",
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+                                    "raw": "{\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"types\": [\n                \"drive\"\n            ],\n            \"tags\": [\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.5239,\n                \"lng\": -77.0157\n            },\n            \"storeId\": \"STORE_ID_45678\",\n            \"name\": \"My Cool Store 2\",\n            \"address\": {\n                \"lines\": [\n                    \"1805-1899\",\n                    \"Orchard St\"\n                ],\n                \"countryCode\": \"US\",\n                \"city\": \"Alexandria\",\n                \"zipcode\": \"22309\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"America/New_York\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1053,18 +1053,18 @@
                             "header": [
                                 {
                                     "key": "Content-Type",
-                                    "value": "text/plain"
+                                    "value": "application/json"
                                 }
                             ],
-                            "body": "",
+                            "body": "{\n \"status\": \"success\",\n \"value\": \"2 stores deleted, 2 stores created\"\n}",
                             "cookie": [],
-                            "_postman_previewlanguage": "text"
+                            "_postman_previewlanguage": "json"
                         }
                     ],
                     "event": []
                 },
                 {
-                    "id": "6998e0e6-dffb-4f57-9ec4-1a03f9386f7c",
+                    "id": "4fc86eb7-c0f1-4c34-954d-56b09a0ce939",
                     "name": "Create your Zones",
                     "request": {
                         "name": "Create your Zones",
@@ -1121,7 +1121,7 @@
                     },
                     "response": [
                         {
-                            "id": "f8d6e469-c504-4303-a0b3-da21047308aa",
+                            "id": "0d8d836a-7a30-488d-8f9e-0dafdab1903b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1169,7 +1169,7 @@
                     "event": []
                 },
                 {
-                    "id": "058085eb-2705-4069-a69b-60ffae216fcc",
+                    "id": "e9c7ec6c-0b52-420e-be58-d8ded19a2aa3",
                     "name": "Update the Zones.",
                     "request": {
                         "name": "Update the Zones.",
@@ -1226,7 +1226,7 @@
                     },
                     "response": [
                         {
-                            "id": "661de0eb-a394-4f67-a161-ebe28411144c",
+                            "id": "2f2773b0-e25f-4345-9045-00ec15ece9f1",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1274,7 +1274,7 @@
                     "event": []
                 },
                 {
-                    "id": "20d2c86b-9cc2-4d20-a0e5-b74d20323e0c",
+                    "id": "2000949a-a8c3-40ee-943c-523f29c89dcc",
                     "name": "Delete the Zones",
                     "request": {
                         "name": "Delete the Zones",
@@ -1323,7 +1323,7 @@
                     },
                     "response": [
                         {
-                            "id": "9c9e952a-0ee4-4d07-ac08-124de147a828",
+                            "id": "860319c4-d20f-49f1-87f6-075d2a8cc1bc",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1367,7 +1367,7 @@
                     "event": []
                 },
                 {
-                    "id": "87bd081c-53a7-4e4e-9682-2c234d711da8",
+                    "id": "5a165f51-a588-4fb0-a491-8b90f4983a32",
                     "name": "Get Zone from ID",
                     "request": {
                         "name": "Get Zone from ID",
@@ -1418,7 +1418,7 @@
                     },
                     "response": [
                         {
-                            "id": "91b2d4e8-ffac-4464-8581-da045b9a9475",
+                            "id": "84be5c87-7dcc-44d7-bec4-3b9c9ebadb18",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1464,7 +1464,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f1091713-b1cc-4713-b7da-159ecee8e1ec",
+                            "id": "9c72e3e9-b6b7-42a0-bdb2-8ab131a7fbb6",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1510,7 +1510,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "57eaa607-bef7-4982-91f0-84c13e03ea29",
+                            "id": "90276bf4-a7ac-49b8-8c33-8d525a93c685",
                             "name": "404 NOT FOUND - `zone_id` do not exist in the project identified with the key parameter.",
                             "originalRequest": {
                                 "url": {
@@ -1562,7 +1562,7 @@
             "event": []
         },
         {
-            "id": "35f49a66-2c7e-41c8-bed8-a151233210d4",
+            "id": "ef7d1349-bde5-43d7-8846-b0ea415ae219",
             "name": "Geolocation API",
             "description": {
                 "content": "Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1570,7 +1570,7 @@
             },
             "item": [
                 {
-                    "id": "a115b08b-fcf4-49bd-a844-9a935d37a094",
+                    "id": "d497c2db-23ef-4ba6-b5d2-1962575840ae",
                     "name": "Geolocation from an IP address",
                     "request": {
                         "name": "Geolocation from an IP address",
@@ -1620,7 +1620,7 @@
                     },
                     "response": [
                         {
-                            "id": "72c2c7a1-2de6-423e-8199-adb3167fcb80",
+                            "id": "0b2acd08-f87a-44eb-b341-090ec755a507",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1662,7 +1662,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2732446f-fb4e-45b7-96d5-584025b86cc4",
+                            "id": "b689a6f6-f844-4796-abe6-20389d10ce67",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1704,7 +1704,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "68dbffa2-4e2a-4854-afbb-65ed538cbd8e",
+                            "id": "2c9fab3c-d026-47d0-8b1f-501f86c3313f",
                             "name": "403 FORBIDDEN",
                             "originalRequest": {
                                 "url": {
@@ -1749,7 +1749,7 @@
                     "event": []
                 },
                 {
-                    "id": "e318909f-e567-4c07-a212-e3518069970c",
+                    "id": "8f899f77-4884-4e4c-b180-f72590d78653",
                     "name": "Assets nearby a Geolocation",
                     "request": {
                         "name": "Assets nearby a Geolocation",
@@ -1799,7 +1799,7 @@
                     },
                     "response": [
                         {
-                            "id": "a97c4a2a-cec4-4771-8133-7e0f803eeef8",
+                            "id": "51c1984a-edb9-4b98-91ba-9b2471fa5619",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1836,12 +1836,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"country_code\": \"US\",\n \"country_name\": \"United States\",\n \"continent\": \"North America\",\n \"latitude\": 38.719,\n \"longitude\": -77.1067,\n \"accuracy\": 5,\n \"viewport\": {\n  \"northeast\": {\n   \"lat\": 38.763915764205976,\n   \"lng\": -77.0491321464058\n  },\n  \"southwest\": {\n   \"lat\": 38.674084235794034,\n   \"lng\": -77.16426785359421\n  }\n },\n \"city\": \"Alexandria\",\n \"region_state\": \"Virginia\",\n \"postal_code\": \"22309\",\n \"timezone\": \"America/New_York\",\n \"stores\": {\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"STORE_ID_123456\",\n     \"name\": \"My Cool Store\",\n     \"contact\": {\n      \"email\": \"contact@woosmap.com\",\n      \"phone\": \"+44 20 7693 4000\",\n      \"website\": \"https://www.woosmap.com\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"Building Centre\",\n       \"26 Store Street\"\n      ],\n      \"country_code\": \"UK\",\n      \"city\": \"London\",\n      \"zipcode\": \"WC1E 7BT\"\n     },\n     \"user_properties\": {\n      \"some_user_properties\": \"associated user value\"\n     },\n     \"tags\": [\n      \"wifi\",\n      \"covered_parking\"\n     ],\n     \"types\": [\n      \"drive\",\n      \"click_and_collect\"\n     ],\n     \"distance\": 0,\n     \"open\": {\n      \"open_now\": false,\n      \"open_hours\": [],\n      \"week_day\": 1,\n      \"next_opening\": {\n       \"end\": \"22:00\",\n       \"start\": \"08:30\",\n       \"day\": \"2021-12-07\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"Europe/London\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"1\": [],\n       \"default\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ]\n      },\n      \"special\": {\n       \"2015-02-07\": [\n        {\n         \"end\": \"23:00\",\n         \"start\": \"08:00\"\n        }\n       ]\n      },\n      \"timezone\": \"Europe/London\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      -77.1067,\n      38.719\n     ]\n    }\n   }\n  ],\n  \"pagination\": {\n   \"page\": 1,\n   \"pageCount\": 1\n  }\n }\n}",
+                            "body": "{\n \"country_code\": \"US\",\n \"country_name\": \"United States\",\n \"continent\": \"North America\",\n \"latitude\": 38.719,\n \"longitude\": -77.1067,\n \"accuracy\": 5,\n \"viewport\": {\n  \"northeast\": {\n   \"lat\": 38.763915764205976,\n   \"lng\": -77.0491321464058\n  },\n  \"southwest\": {\n   \"lat\": 38.674084235794034,\n   \"lng\": -77.16426785359421\n  }\n },\n \"city\": \"Alexandria\",\n \"region_state\": \"Virginia\",\n \"postal_code\": \"22309\",\n \"timezone\": \"America/New_York\",\n \"stores\": {\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"STORE_ID_123456\",\n     \"name\": \"My Cool Store\",\n     \"contact\": {\n      \"email\": \"contact@woosmap.com\",\n      \"phone\": \"+44 20 7693 4000\",\n      \"website\": \"https://www.woosmap.com\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"Building Centre\",\n       \"26 Store Street\"\n      ],\n      \"country_code\": \"UK\",\n      \"city\": \"London\",\n      \"zipcode\": \"WC1E 7BT\"\n     },\n     \"user_properties\": {\n      \"some_user_properties\": \"associated user value\"\n     },\n     \"tags\": [\n      \"wifi\",\n      \"covered_parking\"\n     ],\n     \"types\": [\n      \"drive\",\n      \"click_and_collect\"\n     ],\n     \"distance\": 0,\n     \"open\": {\n      \"open_now\": true,\n      \"open_hours\": [\n       {\n        \"end\": \"22:00\",\n        \"start\": \"08:30\"\n       }\n      ],\n      \"week_day\": 2,\n      \"current_slice\": {\n       \"end\": \"22:00\",\n       \"start\": \"08:30\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"Europe/London\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"1\": [],\n       \"default\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ]\n      },\n      \"special\": {\n       \"2015-02-07\": [\n        {\n         \"end\": \"23:00\",\n         \"start\": \"08:00\"\n        }\n       ]\n      },\n      \"timezone\": \"Europe/London\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      -77.1067,\n      38.719\n     ]\n    }\n   },\n   {\n    \"type\": \"Feature\",\n    \"properties\": {\n     \"store_id\": \"STORE_ID_45678\",\n     \"name\": \"My Cool Store 2\",\n     \"contact\": {\n      \"email\": \"contact@woosmap.com\",\n      \"phone\": \"+44 20 7693 4000\",\n      \"website\": \"https://www.woosmap.com\"\n     },\n     \"address\": {\n      \"lines\": [\n       \"1805-1899\",\n       \"Orchard St\"\n      ],\n      \"country_code\": \"US\",\n      \"city\": \"Alexandria\",\n      \"zipcode\": \"22309\"\n     },\n     \"user_properties\": {\n      \"some_user_properties\": \"associated user value\"\n     },\n     \"tags\": [\n      \"covered_parking\"\n     ],\n     \"types\": [\n      \"drive\"\n     ],\n     \"distance\": 23062.07621905,\n     \"open\": {\n      \"open_now\": false,\n      \"open_hours\": [\n       {\n        \"end\": \"22:00\",\n        \"start\": \"08:30\"\n       }\n      ],\n      \"week_day\": 2,\n      \"next_opening\": {\n       \"end\": \"22:00\",\n       \"start\": \"08:30\",\n       \"day\": \"2021-12-07\"\n      }\n     },\n     \"weekly_opening\": {\n      \"1\": {\n       \"hours\": [],\n       \"isSpecial\": false\n      },\n      \"2\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"3\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"4\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"5\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"6\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"7\": {\n       \"hours\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ],\n       \"isSpecial\": false\n      },\n      \"timezone\": \"America/New_York\"\n     },\n     \"opening_hours\": {\n      \"usual\": {\n       \"1\": [],\n       \"default\": [\n        {\n         \"end\": \"22:00\",\n         \"start\": \"08:30\"\n        }\n       ]\n      },\n      \"timezone\": \"America/New_York\"\n     }\n    },\n    \"geometry\": {\n     \"type\": \"Point\",\n     \"coordinates\": [\n      -77.0157,\n      38.5239\n     ]\n    }\n   }\n  ],\n  \"pagination\": {\n   \"page\": 1,\n   \"pageCount\": 1\n  }\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "62b7f05d-8187-45a5-876f-521bdd912811",
+                            "id": "98b653ba-7b6c-4b6d-a853-46a3f1561e97",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1883,7 +1883,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7946e039-283d-43e3-a982-353df3e742be",
+                            "id": "49fe47dd-741c-46c5-9134-6e552dabdfa4",
                             "name": "403 FORBIDDEN",
                             "originalRequest": {
                                 "url": {
@@ -1931,7 +1931,7 @@
             "event": []
         },
         {
-            "id": "83df3ee1-d16a-4a60-adfc-a83896b6daff",
+            "id": "a329491f-a92f-4466-a628-257550e1b47f",
             "name": "Localities API",
             "description": {
                 "content": "Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1939,7 +1939,7 @@
             },
             "item": [
                 {
-                    "id": "b32defe6-e385-4950-8f04-6e217c2cddd9",
+                    "id": "a89361d8-9426-45d1-a6c5-4b6988a7240c",
                     "name": "Autocomplete for Localities",
                     "request": {
                         "name": "Autocomplete for Localities",
@@ -2019,7 +2019,7 @@
                     },
                     "response": [
                         {
-                            "id": "2846dccb-60f8-4057-b878-28f7ad37ceec",
+                            "id": "17f04c85-fe85-47af-ae3a-4a9cd5af64d8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2081,7 +2081,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f9f35afb-1c9a-4464-abec-cd2f6e0894ba",
+                            "id": "bc8d8a97-3954-42f1-8214-233f740a7d56",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2146,7 +2146,7 @@
                     "event": []
                 },
                 {
-                    "id": "215d83e6-ca55-47d0-8af9-9bb6c55b4555",
+                    "id": "3d07589a-ccb9-46e2-af00-26a7e8a8fe66",
                     "name": "Details of a Locality",
                     "request": {
                         "name": "Details of a Locality",
@@ -2202,7 +2202,7 @@
                     },
                     "response": [
                         {
-                            "id": "86885bec-4022-4a31-a8a5-300bab5b576a",
+                            "id": "bdd7d86b-8b94-499c-a1ca-0cd366fa6088",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2248,7 +2248,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "df9243ab-84bb-48d9-99d2-d3ff5c791806",
+                            "id": "ea21d229-437b-4684-b706-897baf3ad139",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2300,7 +2300,7 @@
             "event": []
         },
         {
-            "id": "e05b0249-154c-43f2-9265-82110303af0b",
+            "id": "4fadd0b6-5f40-423b-af17-5823d03f7f5a",
             "name": "Address API",
             "description": {
                 "content": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2308,7 +2308,7 @@
             },
             "item": [
                 {
-                    "id": "9b0d770c-4883-487b-afa1-ef0af938e071",
+                    "id": "c8ffc521-8a52-4926-bdc4-844a3f074406",
                     "name": "Autocomplete for Addresses",
                     "request": {
                         "name": "Autocomplete for Addresses",
@@ -2377,7 +2377,7 @@
                     },
                     "response": [
                         {
-                            "id": "cacfd34e-34aa-424c-aec3-ff1d7badb696",
+                            "id": "62b655bc-a338-4119-bade-eab68d89a77a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2432,7 +2432,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ce474516-d383-42ef-ac38-91321fe3193a",
+                            "id": "690169d6-dc5a-4e0b-8200-392d54c39085",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2490,7 +2490,7 @@
                     "event": []
                 },
                 {
-                    "id": "ed5b19cd-a435-439f-87bb-bdbd997cedb0",
+                    "id": "b9611a24-e271-40cb-b832-1ac52e98dcb8",
                     "name": "Details of an Address",
                     "request": {
                         "name": "Details of an Address",
@@ -2547,7 +2547,7 @@
                     },
                     "response": [
                         {
-                            "id": "71f07e34-c1d2-4449-9b14-997da9dd9821",
+                            "id": "8a343629-24f0-4baa-a5d3-479e6a4a170f",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2594,7 +2594,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1421679e-d078-4769-a47e-f33ba0f574e8",
+                            "id": "349d9fe1-caec-4d45-b23f-0e76f5eb9c98",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2647,7 +2647,7 @@
             "event": []
         },
         {
-            "id": "5b5b9631-9d86-4fcb-b6d7-d98b767ef379",
+            "id": "e8156dba-e66f-430e-9fc0-c27cd82d01d2",
             "name": "Distance API",
             "description": {
                 "content": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2655,7 +2655,7 @@
             },
             "item": [
                 {
-                    "id": "cc3ff87a-ccf5-4d99-a0b5-d47e0e5ad36d",
+                    "id": "4f31d180-acb4-443a-b663-257d17c77b48",
                     "name": "Distance Matrix",
                     "request": {
                         "name": "Distance Matrix",
@@ -2742,7 +2742,7 @@
                     },
                     "response": [
                         {
-                            "id": "5a70790d-eef0-42af-bb2c-d050c248a8a5",
+                            "id": "ca800f40-c15a-408c-8afe-8d1b9092629a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2809,7 +2809,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "20d60ad7-6b6a-45f6-bfcb-4d9eeb381a81",
+                            "id": "adba230b-6192-4c7e-96f5-f0ae725e4b8c",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2879,7 +2879,7 @@
                     "event": []
                 },
                 {
-                    "id": "38cdd102-aeec-4b84-93e6-9d4d2e0e6b9e",
+                    "id": "0afdc39b-5ef2-419e-b9f1-14e7407b2244",
                     "name": "Get Distance Matrix using POST",
                     "request": {
                         "name": "Get Distance Matrix using POST",
@@ -2938,7 +2938,7 @@
                     },
                     "response": [
                         {
-                            "id": "f013a6bf-7d13-4d19-88ef-45fe59d26d67",
+                            "id": "8ad9beae-2f21-4862-be14-cb1ae7910370",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2985,7 +2985,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "beadacdc-ea9b-4874-9d14-9ad0b394f73f",
+                            "id": "fab4da86-4552-4ba3-b060-1e4e27e10fba",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3035,7 +3035,7 @@
                     "event": []
                 },
                 {
-                    "id": "f3123d18-4372-4794-b0d7-153f5421f3c3",
+                    "id": "a88f8958-7847-4802-af01-9427a897cd39",
                     "name": "Get Route",
                     "request": {
                         "name": "Get Route",
@@ -3128,7 +3128,7 @@
                     },
                     "response": [
                         {
-                            "id": "b8b659a1-aead-4539-ae87-cef6fd37a86d",
+                            "id": "d897a985-e425-4d30-b51a-28907d45d1e8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3199,7 +3199,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9ec089a2-5a34-444d-aa8d-3444a28cd926",
+                            "id": "be683766-8804-4721-a89b-762616d1baaf",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3276,7 +3276,7 @@
             "event": []
         },
         {
-            "id": "5cb78c7d-5f32-41c8-9fc5-81ec0602b864",
+            "id": "3955ae63-b53d-47b5-bf8b-71bff00251eb",
             "name": "Merchant API",
             "description": {
                 "content": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3286,7 +3286,7 @@
             "event": []
         },
         {
-            "id": "d2d5d2a8-64c8-434a-821e-28014436f74b",
+            "id": "dd844c94-ae56-4f68-93eb-8b88dfe38a33",
             "name": "Merchants API",
             "description": {
                 "content": "",
@@ -3294,7 +3294,7 @@
             },
             "item": [
                 {
-                    "id": "cf409979-dc75-4d50-80ea-9a5843fac51e",
+                    "id": "324c5132-dadf-499f-af05-eb51bf80765d",
                     "name": "Get Merchants Clean Names",
                     "request": {
                         "name": "Get Merchants Clean Names",
@@ -3352,7 +3352,7 @@
                     },
                     "response": [
                         {
-                            "id": "314035e8-91a2-4126-b49c-a972d64e2e3f",
+                            "id": "ce302602-b253-497b-97c1-c4369fe25309",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3398,7 +3398,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4003b489-5f9d-4cde-96a1-e96f727f31d6",
+                            "id": "291870ec-c240-4f73-80cd-5e752cf9f38f",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3447,7 +3447,7 @@
                     "event": []
                 },
                 {
-                    "id": "f706fbe0-2901-4c57-99a4-0a81d21747b1",
+                    "id": "dd0abd83-69e3-4187-b820-4a6ec17b35be",
                     "name": "Get Merchants Place",
                     "request": {
                         "name": "Get Merchants Place",
@@ -3505,7 +3505,7 @@
                     },
                     "response": [
                         {
-                            "id": "61b30745-8bf1-4bcd-bd3f-2a70e0363f33",
+                            "id": "cbfecc6c-2bf0-4d36-af60-369c70bddc16",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3551,7 +3551,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "18be2033-8e0c-4f7c-83a0-5729777e948a",
+                            "id": "62b12e00-f679-4371-8649-31eeee894815",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3629,7 +3629,7 @@
         ]
     },
     "info": {
-        "_postman_id": "d8034513-1356-409b-9300-73944ffe2162",
+        "_postman_id": "e7effd13-a713-4287-9f3a-33c74085dce6",
         "name": "Woosmap",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

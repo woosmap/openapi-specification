@@ -20,8 +20,6 @@ func main() {
     fmt.Println(err)
     return
   }
-  req.Header.Add("Referer", "http://localhost")
-
   res, err := client.Do(req)
   if err != nil {
     fmt.Println(err)

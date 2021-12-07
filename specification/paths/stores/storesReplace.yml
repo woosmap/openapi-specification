@@ -9,6 +9,7 @@ security:
   - PrivateApiKeyAuth: []
 requestBody:
   description: The request body must be formatted as JSON.
+  required: true
   content:
     "application/json":
       schema:
@@ -20,4 +21,11 @@ requestBody:
 responses:
   "200":
     description: 200 OK
-
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Success.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_assets_replace_request_response.yml"

@@ -3,18 +3,27 @@ servers:
   - url: https://api.woosmap.com
 tags:
   - Data Management API
-description:
- Used to delete one or more assets. The `storeId` is the id of the asset to delete. To delete several assets, use the comma as a separator.
+description: >
+  Used to delete one or more assets. The `storeId` specified in `query` parameter is the id of the asset to delete. To delete several assets, use the comma as a separator.
+  To delete all project assets, omit the `query` parameter.
 security:
   - PrivateApiKeyAuth: []
 parameters:
-  - name: storeId
-    description: The asset ID to delete
+  - name: query
+    description: The query to target assets ID to delete
     in: query
-    example: "STORE_ID_123456"
+    example: "idstore:[{storeId1},{storeId2}]"
     schema:
       type: string
 responses:
   "200":
     description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Success.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_assets_delete_request_response.yml"
 

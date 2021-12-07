@@ -1,6 +1,19 @@
-// [START woosmap_http_assets_collection_request]
-var axios = require('axios');
-var data = JSON.stringify({
+// [START woosmap_http_assets_update_request]
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY"
+  method := "PUT"
+
+  payload := strings.NewReader(`{
   "stores": [
     {
       "types": [
@@ -19,12 +32,12 @@ var data = JSON.stringify({
       "name": "My Cool Store",
       "address": {
         "lines": [
-          "Building Centre",
-          "26 Store Street"
+          "698-500",
+          " Lloyds Ln"
         ],
-        "countryCode": "UK",
-        "city": "London",
-        "zipcode": "WC1E 7BT"
+        "countryCode": "US",
+        "city": "Alexandria",
+        "zipcode": "VA 22302"
       },
       "contact": {
         "website": "https://www.woosmap.com",
@@ -56,23 +69,30 @@ var data = JSON.stringify({
       }
     }
   ]
-});
+}`)
 
-var config = {
-  method: 'post',
-  url: 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY',
-  headers: { 
-    'content-type': 'application/json'
-  },
-  data : data
-};
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
 
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  req.Header.Add("content-type", "application/json")
 
-// [END woosmap_http_assets_collection_request]
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+// [END woosmap_http_assets_update_request]

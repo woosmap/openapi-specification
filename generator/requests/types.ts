@@ -29,6 +29,28 @@ interface PostJsonOptions extends Options {
     json: object;
 }
 
+export class DeleteRequest extends Request {
+    constructor(options: Options) {
+        options.method = "DELETE";
+        super(options);
+    }
+}
+
+export class PutJsonRequest extends Request {
+    constructor(options: PostJsonOptions) {
+        options.header = [{key: "content-type", value: "application/json"}];
+        options.method = "PUT";
+
+        options.body = {
+            mode: "raw",
+            raw: JSON.stringify(options.json, null, 2),
+        } as RequestBody.definition;
+
+        super(options);
+    }
+}
+
+
 export class PostJsonRequest extends Request {
     constructor(options: PostJsonOptions) {
         options.header = [{key: "content-type", value: "application/json"}];

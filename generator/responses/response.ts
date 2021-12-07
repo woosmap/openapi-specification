@@ -64,6 +64,7 @@ const executeJSONRequest = async (
     return new Promise((resolve, reject) => {
         exec(request, function (error, stdout, stderr) {
             // request failed with non 200 error
+            console.log(request)
             if (error) {
                 reject(stderr);
             }

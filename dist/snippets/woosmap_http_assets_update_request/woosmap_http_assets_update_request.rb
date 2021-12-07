@@ -1,7 +1,16 @@
-# [START woosmap_http_assets_collection_request]
-curl -L -X POST 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY' \
--H 'content-type: application/json' \
---data-raw '{
+# [START woosmap_http_assets_update_request]
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Put.new(url)
+request["content-type"] = "application/json"
+request.body = JSON.dump({
   "stores": [
     {
       "types": [
@@ -20,12 +29,12 @@ curl -L -X POST 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY
       "name": "My Cool Store",
       "address": {
         "lines": [
-          "Building Centre",
-          "26 Store Street"
+          "698-500",
+          " Lloyds Ln"
         ],
-        "countryCode": "UK",
-        "city": "London",
-        "zipcode": "WC1E 7BT"
+        "countryCode": "US",
+        "city": "Alexandria",
+        "zipcode": "VA 22302"
       },
       "contact": {
         "website": "https://www.woosmap.com",
@@ -57,5 +66,9 @@ curl -L -X POST 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY
       }
     }
   ]
-}'
-# [END woosmap_http_assets_collection_request]
+})
+
+response = https.request(request)
+puts response.read_body
+
+# [END woosmap_http_assets_update_request]

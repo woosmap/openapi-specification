@@ -46,11 +46,10 @@
                 "distance": 0,
                 "open":
                   {
-                    "open_now": false,
-                    "open_hours": [],
-                    "week_day": 1,
-                    "next_opening":
-                      { "end": "22:00", "start": "08:30", "day": "2021-12-07" },
+                    "open_now": true,
+                    "open_hours": [{ "end": "22:00", "start": "08:30" }],
+                    "week_day": 2,
+                    "current_slice": { "end": "22:00", "start": "08:30" },
                   },
                 "weekly_opening":
                   {
@@ -100,6 +99,85 @@
                   },
               },
             "geometry": { "type": "Point", "coordinates": [-77.1067, 38.719] },
+          },
+          {
+            "type": "Feature",
+            "properties":
+              {
+                "store_id": "STORE_ID_45678",
+                "name": "My Cool Store 2",
+                "contact":
+                  {
+                    "email": "contact@woosmap.com",
+                    "phone": "+44 20 7693 4000",
+                    "website": "https://www.woosmap.com",
+                  },
+                "address":
+                  {
+                    "lines": ["1805-1899", "Orchard St"],
+                    "country_code": "US",
+                    "city": "Alexandria",
+                    "zipcode": "22309",
+                  },
+                "user_properties":
+                  { "some_user_properties": "associated user value" },
+                "tags": ["covered_parking"],
+                "types": ["drive"],
+                "distance": 23062.07621905,
+                "open":
+                  {
+                    "open_now": false,
+                    "open_hours": [{ "end": "22:00", "start": "08:30" }],
+                    "week_day": 2,
+                    "next_opening":
+                      { "end": "22:00", "start": "08:30", "day": "2021-12-07" },
+                  },
+                "weekly_opening":
+                  {
+                    "1": { "hours": [], "isSpecial": false },
+                    "2":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "3":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "4":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "5":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "6":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "7":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "timezone": "America/New_York",
+                  },
+                "opening_hours":
+                  {
+                    "usual":
+                      {
+                        "1": [],
+                        "default": [{ "end": "22:00", "start": "08:30" }],
+                      },
+                    "timezone": "America/New_York",
+                  },
+              },
+            "geometry": { "type": "Point", "coordinates": [-77.0157, 38.5239] },
           },
         ],
       "pagination": { "page": 1, "pageCount": 1 },

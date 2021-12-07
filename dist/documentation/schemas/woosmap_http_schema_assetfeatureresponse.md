@@ -15,48 +15,60 @@ Asset Response as a GeoJSon Feature with Asset properties
 <pre class="notranslate lang-json prettyprint">{
   "type": "Feature",
   "properties": {
-    "store_id": "boroughmarket",
-    "name": "Borough Market",
+    "store_id": "10031",
+    "name": "Santa Rosa & Yolanda",
     "contact": {
-      "phone": "020 7407 1002",
-      "website": "http://boroughmarket.org.uk"
+      "phone": "707-527-1006",
+      "website": "https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us"
     },
     "address": {
       "lines": [
-        "8 Southwark St"
+        "2688 Santa Rosa Ave",
+        "Santa Rosa, CA 95407"
       ],
-      "country_code": "UK",
-      "city": "London",
-      "zipcode": "SE1 1TL"
+      "country_code": "US",
+      "city": "Santa Rosa",
+      "zipcode": "954077625"
     },
-    "user_properties": {
-      "photo": "https://preview.webgeoservices.com/jsfiddle/boroughmarket.jpeg",
-      "placeId": "ChIJD2bPdVcDdkgRiDyO6mrCsu4"
-    },
-    "tags": [],
+    "user_properties": null,
+    "tags": [
+      "DT",
+      "WA",
+      "CD",
+      "DR",
+      "LB",
+      "GO",
+      "XO",
+      "MX",
+      "NB",
+      "BE",
+      "LU",
+      "UC"
+    ],
     "types": [
-      "covered"
+      "Coffee shop"
     ],
     "open": {
-      "open_now": true,
+      "open_now": false,
       "open_hours": [
         {
-          "end": "17:00",
-          "start": "10:00"
+          "end": "20:00",
+          "start": "05:00"
         }
       ],
-      "week_day": 3,
-      "current_slice": {
-        "end": "17:00",
-        "start": "10:00"
+      "week_day": 2,
+      "next_opening": {
+        "end": "20:00",
+        "start": "05:00",
+        "day": "2021-12-07"
       }
     },
     "weekly_opening": {
       "1": {
         "hours": [
           {
-            "end": "17:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
         "isSpecial": false
@@ -64,8 +76,8 @@ Asset Response as a GeoJSon Feature with Asset properties
       "2": {
         "hours": [
           {
-            "end": "17:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
         "isSpecial": false
@@ -73,8 +85,8 @@ Asset Response as a GeoJSon Feature with Asset properties
       "3": {
         "hours": [
           {
-            "end": "17:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
         "isSpecial": false
@@ -82,8 +94,8 @@ Asset Response as a GeoJSon Feature with Asset properties
       "4": {
         "hours": [
           {
-            "end": "17:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
         "isSpecial": false
@@ -91,8 +103,8 @@ Asset Response as a GeoJSon Feature with Asset properties
       "5": {
         "hours": [
           {
-            "end": "18:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
         "isSpecial": false
@@ -100,42 +112,76 @@ Asset Response as a GeoJSon Feature with Asset properties
       "6": {
         "hours": [
           {
-            "end": "17:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
         "isSpecial": false
       },
       "7": {
-        "hours": [],
+        "hours": [
+          {
+            "end": "20:00",
+            "start": "05:00"
+          }
+        ],
         "isSpecial": false
       },
-      "timezone": "Europe/London"
+      "timezone": "America/Los_Angeles"
     },
     "opening_hours": {
       "usual": {
-        "5": [
+        "1": [
           {
-            "end": "18:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
           }
         ],
-        "7": [],
-        "default": [
+        "2": [
           {
-            "end": "17:00",
-            "start": "10:00"
+            "end": "20:00",
+            "start": "05:00"
+          }
+        ],
+        "3": [
+          {
+            "end": "20:00",
+            "start": "05:00"
+          }
+        ],
+        "4": [
+          {
+            "end": "20:00",
+            "start": "05:00"
+          }
+        ],
+        "5": [
+          {
+            "end": "20:00",
+            "start": "05:00"
+          }
+        ],
+        "6": [
+          {
+            "end": "20:00",
+            "start": "05:00"
+          }
+        ],
+        "7": [
+          {
+            "end": "20:00",
+            "start": "05:00"
           }
         ]
       },
-      "timezone": "Europe/London"
+      "timezone": "America/Los_Angeles"
     }
   },
   "geometry": {
     "type": "Point",
     "coordinates": [
-      -0.090679,
-      51.505046
+      -122.712924,
+      38.41244
     ]
   }
 }</pre>

@@ -199,13 +199,17 @@
                               ],
                               "distance": 0,
                               "open": {
-                                "open_now": false,
-                                "open_hours": [],
-                                "week_day": 1,
-                                "next_opening": {
+                                "open_now": true,
+                                "open_hours": [
+                                  {
+                                    "end": "22:00",
+                                    "start": "08:30"
+                                  }
+                                ],
+                                "week_day": 2,
+                                "current_slice": {
                                   "end": "22:00",
-                                  "start": "08:30",
-                                  "day": "2021-12-07"
+                                  "start": "08:30"
                                 }
                               },
                               "weekly_opening": {
@@ -295,6 +299,132 @@
                               "coordinates": [
                                 -77.1067,
                                 38.719
+                              ]
+                            }
+                          },
+                          {
+                            "type": "Feature",
+                            "properties": {
+                              "store_id": "STORE_ID_45678",
+                              "name": "My Cool Store 2",
+                              "contact": {
+                                "email": "contact@woosmap.com",
+                                "phone": "+44 20 7693 4000",
+                                "website": "https://www.woosmap.com"
+                              },
+                              "address": {
+                                "lines": [
+                                  "1805-1899",
+                                  "Orchard St"
+                                ],
+                                "country_code": "US",
+                                "city": "Alexandria",
+                                "zipcode": "22309"
+                              },
+                              "user_properties": {
+                                "some_user_properties": "associated user value"
+                              },
+                              "tags": [
+                                "covered_parking"
+                              ],
+                              "types": [
+                                "drive"
+                              ],
+                              "distance": 23062.07621905,
+                              "open": {
+                                "open_now": false,
+                                "open_hours": [
+                                  {
+                                    "end": "22:00",
+                                    "start": "08:30"
+                                  }
+                                ],
+                                "week_day": 2,
+                                "next_opening": {
+                                  "end": "22:00",
+                                  "start": "08:30",
+                                  "day": "2021-12-07"
+                                }
+                              },
+                              "weekly_opening": {
+                                "1": {
+                                  "hours": [],
+                                  "isSpecial": false
+                                },
+                                "2": {
+                                  "hours": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ],
+                                  "isSpecial": false
+                                },
+                                "3": {
+                                  "hours": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ],
+                                  "isSpecial": false
+                                },
+                                "4": {
+                                  "hours": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ],
+                                  "isSpecial": false
+                                },
+                                "5": {
+                                  "hours": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ],
+                                  "isSpecial": false
+                                },
+                                "6": {
+                                  "hours": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ],
+                                  "isSpecial": false
+                                },
+                                "7": {
+                                  "hours": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ],
+                                  "isSpecial": false
+                                },
+                                "timezone": "America/New_York"
+                              },
+                              "opening_hours": {
+                                "usual": {
+                                  "1": [],
+                                  "default": [
+                                    {
+                                      "end": "22:00",
+                                      "start": "08:30"
+                                    }
+                                  ]
+                                },
+                                "timezone": "America/New_York"
+                              }
+                            },
+                            "geometry": {
+                              "type": "Point",
+                              "coordinates": [
+                                -77.0157,
+                                38.5239
                               ]
                             }
                           }
@@ -423,6 +553,49 @@
                             ]
                           }
                         }
+                      },
+                      {
+                        "types": [
+                          "drive"
+                        ],
+                        "tags": [
+                          "covered_parking"
+                        ],
+                        "location": {
+                          "lat": 38.5239,
+                          "lng": -77.0157
+                        },
+                        "storeId": "STORE_ID_45678",
+                        "name": "My Cool Store 2",
+                        "address": {
+                          "lines": [
+                            "1805-1899",
+                            "Orchard St"
+                          ],
+                          "countryCode": "US",
+                          "city": "Alexandria",
+                          "zipcode": "22309"
+                        },
+                        "contact": {
+                          "website": "https://www.woosmap.com",
+                          "phone": "+44 20 7693 4000",
+                          "email": "contact@woosmap.com"
+                        },
+                        "userProperties": {
+                          "some_user_properties": "associated user value"
+                        },
+                        "openingHours": {
+                          "timezone": "America/New_York",
+                          "usual": {
+                            "1": [],
+                            "default": [
+                              {
+                                "start": "08:30",
+                                "end": "22:00"
+                              }
+                            ]
+                          }
+                        }
                       }
                     ]
                   }
@@ -433,7 +606,22 @@
         },
         "responses": {
           "200": {
-            "description": "200 OK"
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "status": "success",
+                      "value": "2 stores"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -456,6 +644,7 @@
         ],
         "requestBody": {
           "description": "The request body must be formatted as JSON.",
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -482,12 +671,12 @@
                         "name": "My Cool Store",
                         "address": {
                           "lines": [
-                            "Building Centre",
-                            "26 Store Street"
+                            "698-500",
+                            " Lloyds Ln"
                           ],
-                          "countryCode": "UK",
-                          "city": "London",
-                          "zipcode": "WC1E 7BT"
+                          "countryCode": "US",
+                          "city": "Alexandria",
+                          "zipcode": "VA 22302"
                         },
                         "contact": {
                           "website": "https://www.woosmap.com",
@@ -527,7 +716,22 @@
         },
         "responses": {
           "200": {
-            "description": "200 OK"
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "status": "success",
+                      "value": "1 stores"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -542,7 +746,7 @@
         "tags": [
           "Data Management API"
         ],
-        "description": "Used to delete one or more assets. The `storeId` is the id of the asset to delete. To delete several assets, use the comma as a separator.",
+        "description": "Used to delete one or more assets. The `storeId` specified in `query` parameter is the id of the asset to delete. To delete several assets, use the comma as a separator. To delete all project assets, omit the `query` parameter.\n",
         "security": [
           {
             "PrivateApiKeyAuth": []
@@ -550,10 +754,10 @@
         ],
         "parameters": [
           {
-            "name": "storeId",
-            "description": "The asset ID to delete",
+            "name": "query",
+            "description": "The query to target assets ID to delete",
             "in": "query",
-            "example": "STORE_ID_123456",
+            "example": "idstore:[{storeId1},{storeId2}]",
             "schema": {
               "type": "string"
             }
@@ -561,7 +765,22 @@
         ],
         "responses": {
           "200": {
-            "description": "200 OK"
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "status": "success",
+                      "value": 2
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -613,48 +832,60 @@
                     "value": {
                       "type": "Feature",
                       "properties": {
-                        "store_id": "boroughmarket",
-                        "name": "Borough Market",
+                        "store_id": "10031",
+                        "name": "Santa Rosa & Yolanda",
                         "contact": {
-                          "phone": "020 7407 1002",
-                          "website": "http://boroughmarket.org.uk"
+                          "phone": "707-527-1006",
+                          "website": "https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us"
                         },
                         "address": {
                           "lines": [
-                            "8 Southwark St"
+                            "2688 Santa Rosa Ave",
+                            "Santa Rosa, CA 95407"
                           ],
-                          "country_code": "UK",
-                          "city": "London",
-                          "zipcode": "SE1 1TL"
+                          "country_code": "US",
+                          "city": "Santa Rosa",
+                          "zipcode": "954077625"
                         },
-                        "user_properties": {
-                          "photo": "https://preview.webgeoservices.com/jsfiddle/boroughmarket.jpeg",
-                          "placeId": "ChIJD2bPdVcDdkgRiDyO6mrCsu4"
-                        },
-                        "tags": [],
+                        "user_properties": null,
+                        "tags": [
+                          "DT",
+                          "WA",
+                          "CD",
+                          "DR",
+                          "LB",
+                          "GO",
+                          "XO",
+                          "MX",
+                          "NB",
+                          "BE",
+                          "LU",
+                          "UC"
+                        ],
                         "types": [
-                          "covered"
+                          "Coffee shop"
                         ],
                         "open": {
-                          "open_now": true,
+                          "open_now": false,
                           "open_hours": [
                             {
-                              "end": "17:00",
-                              "start": "10:00"
+                              "end": "20:00",
+                              "start": "05:00"
                             }
                           ],
-                          "week_day": 3,
-                          "current_slice": {
-                            "end": "17:00",
-                            "start": "10:00"
+                          "week_day": 2,
+                          "next_opening": {
+                            "end": "20:00",
+                            "start": "05:00",
+                            "day": "2021-12-07"
                           }
                         },
                         "weekly_opening": {
                           "1": {
                             "hours": [
                               {
-                                "end": "17:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
                             "isSpecial": false
@@ -662,8 +893,8 @@
                           "2": {
                             "hours": [
                               {
-                                "end": "17:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
                             "isSpecial": false
@@ -671,8 +902,8 @@
                           "3": {
                             "hours": [
                               {
-                                "end": "17:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
                             "isSpecial": false
@@ -680,8 +911,8 @@
                           "4": {
                             "hours": [
                               {
-                                "end": "17:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
                             "isSpecial": false
@@ -689,8 +920,8 @@
                           "5": {
                             "hours": [
                               {
-                                "end": "18:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
                             "isSpecial": false
@@ -698,42 +929,76 @@
                           "6": {
                             "hours": [
                               {
-                                "end": "17:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
                             "isSpecial": false
                           },
                           "7": {
-                            "hours": [],
+                            "hours": [
+                              {
+                                "end": "20:00",
+                                "start": "05:00"
+                              }
+                            ],
                             "isSpecial": false
                           },
-                          "timezone": "Europe/London"
+                          "timezone": "America/Los_Angeles"
                         },
                         "opening_hours": {
                           "usual": {
-                            "5": [
+                            "1": [
                               {
-                                "end": "18:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ],
-                            "7": [],
-                            "default": [
+                            "2": [
                               {
-                                "end": "17:00",
-                                "start": "10:00"
+                                "end": "20:00",
+                                "start": "05:00"
+                              }
+                            ],
+                            "3": [
+                              {
+                                "end": "20:00",
+                                "start": "05:00"
+                              }
+                            ],
+                            "4": [
+                              {
+                                "end": "20:00",
+                                "start": "05:00"
+                              }
+                            ],
+                            "5": [
+                              {
+                                "end": "20:00",
+                                "start": "05:00"
+                              }
+                            ],
+                            "6": [
+                              {
+                                "end": "20:00",
+                                "start": "05:00"
+                              }
+                            ],
+                            "7": [
+                              {
+                                "end": "20:00",
+                                "start": "05:00"
                               }
                             ]
                           },
-                          "timezone": "Europe/London"
+                          "timezone": "America/Los_Angeles"
                         }
                       },
                       "geometry": {
                         "type": "Point",
                         "coordinates": [
-                          -0.090679,
-                          51.505046
+                          -122.712924,
+                          38.41244
                         ]
                       }
                     }
@@ -782,6 +1047,7 @@
         ],
         "requestBody": {
           "description": "The request body must be formatted as JSON.",
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -843,6 +1109,49 @@
                             ]
                           }
                         }
+                      },
+                      {
+                        "types": [
+                          "drive"
+                        ],
+                        "tags": [
+                          "covered_parking"
+                        ],
+                        "location": {
+                          "lat": 38.5239,
+                          "lng": -77.0157
+                        },
+                        "storeId": "STORE_ID_45678",
+                        "name": "My Cool Store 2",
+                        "address": {
+                          "lines": [
+                            "1805-1899",
+                            "Orchard St"
+                          ],
+                          "countryCode": "US",
+                          "city": "Alexandria",
+                          "zipcode": "22309"
+                        },
+                        "contact": {
+                          "website": "https://www.woosmap.com",
+                          "phone": "+44 20 7693 4000",
+                          "email": "contact@woosmap.com"
+                        },
+                        "userProperties": {
+                          "some_user_properties": "associated user value"
+                        },
+                        "openingHours": {
+                          "timezone": "America/New_York",
+                          "usual": {
+                            "1": [],
+                            "default": [
+                              {
+                                "start": "08:30",
+                                "end": "22:00"
+                              }
+                            ]
+                          }
+                        }
                       }
                     ]
                   }
@@ -853,7 +1162,22 @@
         },
         "responses": {
           "200": {
-            "description": "200 OK"
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "status": "success",
+                      "value": "2 stores deleted, 2 stores created"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -955,7 +1279,7 @@
                                   "start": "06:30"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "06:30"
@@ -1124,7 +1448,7 @@
                                   "start": "06:30"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "06:30"
@@ -1294,7 +1618,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -1458,7 +1782,7 @@
                                   "start": "08:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "08:00"
@@ -1629,7 +1953,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -1800,7 +2124,7 @@
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:30"
@@ -1970,7 +2294,7 @@
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:30"
@@ -2137,7 +2461,7 @@
                                   "start": "08:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "08:00"
@@ -2308,7 +2632,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -2478,7 +2802,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -2649,7 +2973,7 @@
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:30"
@@ -2819,7 +3143,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 1,
+                              "week_day": 2,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -5220,48 +5544,60 @@
         "example": {
           "type": "Feature",
           "properties": {
-            "store_id": "boroughmarket",
-            "name": "Borough Market",
+            "store_id": "10031",
+            "name": "Santa Rosa & Yolanda",
             "contact": {
-              "phone": "020 7407 1002",
-              "website": "http://boroughmarket.org.uk"
+              "phone": "707-527-1006",
+              "website": "https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us"
             },
             "address": {
               "lines": [
-                "8 Southwark St"
+                "2688 Santa Rosa Ave",
+                "Santa Rosa, CA 95407"
               ],
-              "country_code": "UK",
-              "city": "London",
-              "zipcode": "SE1 1TL"
+              "country_code": "US",
+              "city": "Santa Rosa",
+              "zipcode": "954077625"
             },
-            "user_properties": {
-              "photo": "https://preview.webgeoservices.com/jsfiddle/boroughmarket.jpeg",
-              "placeId": "ChIJD2bPdVcDdkgRiDyO6mrCsu4"
-            },
-            "tags": [],
+            "user_properties": null,
+            "tags": [
+              "DT",
+              "WA",
+              "CD",
+              "DR",
+              "LB",
+              "GO",
+              "XO",
+              "MX",
+              "NB",
+              "BE",
+              "LU",
+              "UC"
+            ],
             "types": [
-              "covered"
+              "Coffee shop"
             ],
             "open": {
-              "open_now": true,
+              "open_now": false,
               "open_hours": [
                 {
-                  "end": "17:00",
-                  "start": "10:00"
+                  "end": "20:00",
+                  "start": "05:00"
                 }
               ],
-              "week_day": 3,
-              "current_slice": {
-                "end": "17:00",
-                "start": "10:00"
+              "week_day": 2,
+              "next_opening": {
+                "end": "20:00",
+                "start": "05:00",
+                "day": "2021-12-07"
               }
             },
             "weekly_opening": {
               "1": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5269,8 +5605,8 @@
               "2": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5278,8 +5614,8 @@
               "3": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5287,8 +5623,8 @@
               "4": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5296,8 +5632,8 @@
               "5": {
                 "hours": [
                   {
-                    "end": "18:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5305,42 +5641,76 @@
               "6": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
               },
               "7": {
-                "hours": [],
+                "hours": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
                 "isSpecial": false
               },
-              "timezone": "Europe/London"
+              "timezone": "America/Los_Angeles"
             },
             "opening_hours": {
               "usual": {
-                "5": [
+                "1": [
                   {
-                    "end": "18:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
-                "7": [],
-                "default": [
+                "2": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "3": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "4": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "5": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "6": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "7": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ]
               },
-              "timezone": "Europe/London"
+              "timezone": "America/Los_Angeles"
             }
           },
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -0.090679,
-              51.505046
+              -122.712924,
+              38.41244
             ]
           }
         }
@@ -5376,48 +5746,60 @@
         "example": {
           "type": "Feature",
           "properties": {
-            "store_id": "boroughmarket",
-            "name": "Borough Market",
+            "store_id": "10031",
+            "name": "Santa Rosa & Yolanda",
             "contact": {
-              "phone": "020 7407 1002",
-              "website": "http://boroughmarket.org.uk"
+              "phone": "707-527-1006",
+              "website": "https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us"
             },
             "address": {
               "lines": [
-                "8 Southwark St"
+                "2688 Santa Rosa Ave",
+                "Santa Rosa, CA 95407"
               ],
-              "country_code": "UK",
-              "city": "London",
-              "zipcode": "SE1 1TL"
+              "country_code": "US",
+              "city": "Santa Rosa",
+              "zipcode": "954077625"
             },
-            "user_properties": {
-              "photo": "https://preview.webgeoservices.com/jsfiddle/boroughmarket.jpeg",
-              "placeId": "ChIJD2bPdVcDdkgRiDyO6mrCsu4"
-            },
-            "tags": [],
+            "user_properties": null,
+            "tags": [
+              "DT",
+              "WA",
+              "CD",
+              "DR",
+              "LB",
+              "GO",
+              "XO",
+              "MX",
+              "NB",
+              "BE",
+              "LU",
+              "UC"
+            ],
             "types": [
-              "covered"
+              "Coffee shop"
             ],
             "open": {
-              "open_now": true,
+              "open_now": false,
               "open_hours": [
                 {
-                  "end": "17:00",
-                  "start": "10:00"
+                  "end": "20:00",
+                  "start": "05:00"
                 }
               ],
-              "week_day": 3,
-              "current_slice": {
-                "end": "17:00",
-                "start": "10:00"
+              "week_day": 2,
+              "next_opening": {
+                "end": "20:00",
+                "start": "05:00",
+                "day": "2021-12-07"
               }
             },
             "weekly_opening": {
               "1": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5425,8 +5807,8 @@
               "2": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5434,8 +5816,8 @@
               "3": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5443,8 +5825,8 @@
               "4": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5452,8 +5834,8 @@
               "5": {
                 "hours": [
                   {
-                    "end": "18:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
@@ -5461,42 +5843,76 @@
               "6": {
                 "hours": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
                 "isSpecial": false
               },
               "7": {
-                "hours": [],
+                "hours": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
                 "isSpecial": false
               },
-              "timezone": "Europe/London"
+              "timezone": "America/Los_Angeles"
             },
             "opening_hours": {
               "usual": {
-                "5": [
+                "1": [
                   {
-                    "end": "18:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ],
-                "7": [],
-                "default": [
+                "2": [
                   {
-                    "end": "17:00",
-                    "start": "10:00"
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "3": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "4": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "5": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "6": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
+                  }
+                ],
+                "7": [
+                  {
+                    "end": "20:00",
+                    "start": "05:00"
                   }
                 ]
               },
-              "timezone": "Europe/London"
+              "timezone": "America/Los_Angeles"
             }
           },
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -0.090679,
-              51.505046
+              -122.712924,
+              38.41244
             ]
           }
         }
@@ -5693,6 +6109,30 @@
           "country"
         ]
       },
+      "Success": {
+        "title": "Success",
+        "type": "object",
+        "description": "Message returned to a success request",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "the status of the request",
+            "example": "success"
+          },
+          "value": {
+            "description": "the value of request",
+            "example": "129 stores",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          }
+        }
+      },
       "GeolocationResponse": {
         "title": "GeolocationResponse",
         "type": "object",
@@ -5880,13 +6320,17 @@
                   ],
                   "distance": 0,
                   "open": {
-                    "open_now": false,
-                    "open_hours": [],
-                    "week_day": 1,
-                    "next_opening": {
+                    "open_now": true,
+                    "open_hours": [
+                      {
+                        "end": "22:00",
+                        "start": "08:30"
+                      }
+                    ],
+                    "week_day": 2,
+                    "current_slice": {
                       "end": "22:00",
-                      "start": "08:30",
-                      "day": "2021-12-07"
+                      "start": "08:30"
                     }
                   },
                   "weekly_opening": {
@@ -5976,6 +6420,132 @@
                   "coordinates": [
                     -77.1067,
                     38.719
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "store_id": "STORE_ID_45678",
+                  "name": "My Cool Store 2",
+                  "contact": {
+                    "email": "contact@woosmap.com",
+                    "phone": "+44 20 7693 4000",
+                    "website": "https://www.woosmap.com"
+                  },
+                  "address": {
+                    "lines": [
+                      "1805-1899",
+                      "Orchard St"
+                    ],
+                    "country_code": "US",
+                    "city": "Alexandria",
+                    "zipcode": "22309"
+                  },
+                  "user_properties": {
+                    "some_user_properties": "associated user value"
+                  },
+                  "tags": [
+                    "covered_parking"
+                  ],
+                  "types": [
+                    "drive"
+                  ],
+                  "distance": 23062.07621905,
+                  "open": {
+                    "open_now": false,
+                    "open_hours": [
+                      {
+                        "end": "22:00",
+                        "start": "08:30"
+                      }
+                    ],
+                    "week_day": 2,
+                    "next_opening": {
+                      "end": "22:00",
+                      "start": "08:30",
+                      "day": "2021-12-07"
+                    }
+                  },
+                  "weekly_opening": {
+                    "1": {
+                      "hours": [],
+                      "isSpecial": false
+                    },
+                    "2": {
+                      "hours": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ],
+                      "isSpecial": false
+                    },
+                    "3": {
+                      "hours": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ],
+                      "isSpecial": false
+                    },
+                    "4": {
+                      "hours": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ],
+                      "isSpecial": false
+                    },
+                    "5": {
+                      "hours": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ],
+                      "isSpecial": false
+                    },
+                    "6": {
+                      "hours": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ],
+                      "isSpecial": false
+                    },
+                    "7": {
+                      "hours": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ],
+                      "isSpecial": false
+                    },
+                    "timezone": "America/New_York"
+                  },
+                  "opening_hours": {
+                    "usual": {
+                      "1": [],
+                      "default": [
+                        {
+                          "end": "22:00",
+                          "start": "08:30"
+                        }
+                      ]
+                    },
+                    "timezone": "America/New_York"
+                  }
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -77.0157,
+                    38.5239
                   ]
                 }
               }

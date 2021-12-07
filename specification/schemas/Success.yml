@@ -1,0 +1,14 @@
+title: Success
+type: object
+description: Message returned to a success request
+properties:
+  status:
+    type: string
+    description: the status of the request
+    example: "success"
+  value:
+    description: the value of request
+    example: "129 stores"
+    oneOf:
+      - type: string
+      - type: integer

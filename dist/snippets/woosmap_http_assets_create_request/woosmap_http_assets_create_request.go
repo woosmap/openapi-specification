@@ -1,4 +1,4 @@
-// [START woosmap_http_assets_collection_request]
+// [START woosmap_http_assets_create_request]
 package main
 
 import (
@@ -67,6 +67,49 @@ func main() {
           ]
         }
       }
+    },
+    {
+      "types": [
+        "drive"
+      ],
+      "tags": [
+        "covered_parking"
+      ],
+      "location": {
+        "lat": 38.5239,
+        "lng": -77.0157
+      },
+      "storeId": "STORE_ID_45678",
+      "name": "My Cool Store 2",
+      "address": {
+        "lines": [
+          "1805-1899",
+          "Orchard St"
+        ],
+        "countryCode": "US",
+        "city": "Alexandria",
+        "zipcode": "22309"
+      },
+      "contact": {
+        "website": "https://www.woosmap.com",
+        "phone": "+44 20 7693 4000",
+        "email": "contact@woosmap.com"
+      },
+      "userProperties": {
+        "some_user_properties": "associated user value"
+      },
+      "openingHours": {
+        "timezone": "America/New_York",
+        "usual": {
+          "1": [],
+          "default": [
+            {
+              "start": "08:30",
+              "end": "22:00"
+            }
+          ]
+        }
+      }
     }
   ]
 }`)
@@ -95,4 +138,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END woosmap_http_assets_collection_request]
+// [END woosmap_http_assets_create_request]

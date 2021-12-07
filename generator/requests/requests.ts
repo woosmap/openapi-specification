@@ -1,4 +1,4 @@
-import {PostJsonRequest, Request, SnippetRequest} from "./types";
+import {DeleteRequest, PostJsonRequest, PutJsonRequest, Request, SnippetRequest} from "./types";
 
 import {Url} from "postman-collection";
 import path from "path";
@@ -19,7 +19,7 @@ function parseRequestBody(filename) {
 
 export const REQUESTS: SnippetRequest[] = [
     {
-        regionTag: "woosmap_http_assets_collection_request",
+        regionTag: "woosmap_http_assets_create_request",
         request: new PostJsonRequest({
             url: "https://api.woosmap.com/stores",
             json: parseRequestBody(
@@ -164,7 +164,7 @@ export const REQUESTS: SnippetRequest[] = [
             header: [{key: "Referer", value: "http://localhost"}],
         }),
     },
-   {
+    {
         regionTag: "woosmap_http_geolocation_stores",
         request: new Request({
             url: new Url({
@@ -172,7 +172,7 @@ export const REQUESTS: SnippetRequest[] = [
                 host: "api.woosmap.com",
                 path: "/geolocation/stores",
                 query: [
-                     {
+                    {
                         key: "private_key",
                         value: "YOUR_PRIVATE_API_KEY",
                     },
@@ -181,8 +181,7 @@ export const REQUESTS: SnippetRequest[] = [
                         value: "173.79.254.254",
                     },
                 ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
+            })
         }),
     },
     {
@@ -223,7 +222,7 @@ export const REQUESTS: SnippetRequest[] = [
             header: [{key: "Referer", value: "http://localhost"}],
         }),
     },
-     {
+    {
         regionTag: "woosmap_http_localities_details_postal_code",
         request: new Request({
             url: new Url({
@@ -266,10 +265,6 @@ export const REQUESTS: SnippetRequest[] = [
                 host: "api.woosmap.com",
                 path: "/stores/search/",
                 query: [
-                    {
-                        key: "key",
-                        value: "woos-48c80350-88aa-333e-835a-07f4b658a9a4",
-                    },
                     {
                         key: "lat",
                         value: "51.50976",
@@ -319,6 +314,45 @@ export const REQUESTS: SnippetRequest[] = [
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_asset_feature",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/stores/10031/"
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_assets_replace_request",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/stores/replace",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_assets_collection_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_assets_update_request",
+        request: new PutJsonRequest({
+            url: "https://api.woosmap.com/stores",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_assets_update_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_assets_delete_request",
+        request: new DeleteRequest({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/stores/"
+            }),
         }),
     },
 ];
