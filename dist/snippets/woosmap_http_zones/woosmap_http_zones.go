@@ -1,4 +1,4 @@
-// [START woosmap_http_asset_autocomplete_feature_collection]
+// [START woosmap_http_zones]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized:street&key=YOUR_PUBLIC_API_KEY"
+  url := "https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY"
   method := "GET"
 
   client := &http.Client {
@@ -36,4 +36,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END woosmap_http_asset_autocomplete_feature_collection]
+// [END woosmap_http_zones]

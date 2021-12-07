@@ -210,7 +210,7 @@ A successful geolocation request will return a JSON-formatted response defining 
           ],
           "distance": 23062.07621905,
           "open": {
-            "open_now": false,
+            "open_now": true,
             "open_hours": [
               {
                 "end": "22:00",
@@ -218,10 +218,9 @@ A successful geolocation request will return a JSON-formatted response defining 
               }
             ],
             "week_day": 2,
-            "next_opening": {
+            "current_slice": {
               "end": "22:00",
-              "start": "08:30",
-              "day": "2021-12-07"
+              "start": "08:30"
             }
           },
           "weekly_opening": {

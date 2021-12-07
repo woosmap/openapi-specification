@@ -17,7 +17,16 @@ requestBody:
         default:
           value:
             $ref: "../../requests/woosmap_http_zones_collection_request.yml"
+
 responses:
   "200":
     description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Success.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_zones_collection_request_response.yml"
 

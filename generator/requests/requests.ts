@@ -292,10 +292,6 @@ export const REQUESTS: SnippetRequest[] = [
                 path: "/stores/autocomplete/",
                 query: [
                     {
-                        key: "key",
-                        value: "woos-48c80350-88aa-333e-835a-07f4b658a9a4",
-                    },
-                    {
                         key: "lat",
                         value: "51.50976",
                     },
@@ -343,6 +339,51 @@ export const REQUESTS: SnippetRequest[] = [
             json: parseRequestBody(
                 "../../specification/requests/woosmap_http_assets_update_request.yml"
             ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_zones_collection_request",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/zones",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_zones_collection_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_zones",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/zones/ZoneA/",
+                 query: [
+                    {
+                        key: "private_key",
+                        value: "YOUR_PRIVATE_API_KEY",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_zones_update_request",
+        request: new PutJsonRequest({
+            url: "https://api.woosmap.com/zones",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_zones_update_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_zones_delete_request",
+        request: new DeleteRequest({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/zones/"
+            }),
         }),
     },
     {

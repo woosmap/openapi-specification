@@ -16,4 +16,12 @@ parameters:
 responses:
   "200":
     description: 200 OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Success.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_zones_delete_request_response.yml"
 
