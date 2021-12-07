@@ -3201,7 +3201,8 @@ components:
           - metric
       description: |
         Specifies the unit system to use when expressing distance as text. Two different units supported:
-        * `metric` (default) returns distances in kilometers and meters * `imperial` returns distances in miles and feet
+          * `metric` (default) returns distances in kilometers and meters
+          * `imperial` returns distances in miles and feet
     distance_waypoints:
       name: waypoints
       in: query
@@ -3288,7 +3289,22 @@ components:
       name: types
       description: |
         The types of suggestion to return.
-        * `locality`: includes locality names (from city to village) and suburbs * `postal_code`: publicly-used postal codes around the world * `address`: addresses (only available for UK and France) * `admin_level`: most commonly used administrative areas * `country`: countries as whole point of interest * `airport`: includes all medium sized to international sized airports * `train_station`: includes all train stations * `metro_station`: includes all metro stations * `shopping`: includes shopping malls (or "shopping centers") - *may include private retail brands* * `museum`: includes museums * `tourist_attraction`: includes tourist attractions like the Eiffel tower * `amusement_park`: includes amusement parks like Disneyland Paris * `art_gallery`: includes art galleries * `zoo`: includes zoos
+
+          * `locality`: includes locality names (from city to village) and suburbs
+          * `postal_code`: publicly-used postal codes around the world
+          * `address`: addresses (only available for UK and France)
+          * `admin_level`: most commonly used administrative areas
+          * `country`: countries as whole point of interest
+          * `airport`: includes all medium sized to international sized airports
+          * `train_station`: includes all train stations
+          * `metro_station`: includes all metro stations
+          * `shopping`: includes shopping malls (or "shopping centers") - *may include private retail brands*
+          * `museum`: includes museums
+          * `tourist_attraction`: includes tourist attractions like the Eiffel tower
+          * `amusement_park`: includes amusement parks like Disneyland Paris
+          * `art_gallery`: includes art galleries
+          * `zoo`: includes zoos
+
         > The information returned on an `address` suggestion contain only a "single-line" description. A request to the [Details endpoint](/products/localities/details/) of the API must be performed to retrieve the location (geographic coordinates) and the address components (street address, zipcode, city..).
         Not specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.
       schema:
@@ -3351,31 +3367,54 @@ components:
       description: |
         Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:="My cool store"`
         ### Vocabulary
-        - **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.
-        - **Operator**: test that is performed on the data to provide a match, e.g. `=`. Each field has a default operator. If none operator follow the `:`, the default one is used.
-        - **Value**: the content of the attribute that is tested, e.g. the name of the store `"My cool store"`.
+
+          - **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.
+
+          - **Operator**: test that is performed on the data to provide a match, e.g. `=`.
+          Each field has a default operator. If none operator follow the `:`, the default one is used.
+
+          - **Value**: the content of the attribute that is tested, e.g. the name of the store `"My cool store"`.
+
         Combine clauses with the conjunctions `AND` or `OR`, and negate the query with `NOT`.
         ### Fields
-        - `type`: An element is contained within `type` collection. e.g. `type:"myType"`
-        - `tag`: An element is contained within `tag` collection. e.g. `tag:"myTag"`
-        - `city`: text matching: the value match the `city` field. e.g. `city:="Paris"`
-        - `country`: text matching: the value match the `countryCode` field. e.g. `country:="FR"`
-        - `name`: text matching: the value match the `name` field. e.g. `name:="myName"`
-        - `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:="myIdStore"`
-        - `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:="myValue"`
-        - `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:="centro"`
+
+          - `type`: An element is contained within `type` collection. e.g. `type:"myType"`
+
+          - `tag`: An element is contained within `tag` collection. e.g. `tag:"myTag"`
+
+          - `city`: text matching: the value match the `city` field. e.g. `city:="Paris"`
+
+          - `country`: text matching: the value match the `countryCode` field. e.g. `country:="FR"`
+
+          - `name`: text matching: the value match the `name` field. e.g. `name:="myName"`
+
+          - `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:="myIdStore"`
+
+          - `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:="myValue"`
+
+          - `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:="centro"`
 
         > **userProperties** field has no restriction regarding the data you can put in it (Arrays, Object, Boolean, String, Numeric...) but you can only query for **text matching or numerical comparison**.
         ### Operators
-        - `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.
-        - `=` : The content of a string or a number is equal to the other.
-        - `>` : A number is greater than another.
-        - `<` : A number is smaller than another.
-        - `>=` : A number is greater than or equal to another.
-        - `<=` : A number is smaller than or equal to another.
-        - `AND` : Return assets that match both clauses.
-        - `OR` : Return assets that match either clauses.
-        - `NOT` : Negates a search clause.
+
+          - `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.
+
+          - `=` : The content of a string or a number is equal to the other.
+
+          - `>` : A number is greater than another.
+
+          - `<` : A number is smaller than another.
+
+          - `>=` : A number is greater than or equal to another.
+
+          - `<=` : A number is smaller than or equal to another.
+
+          - `AND` : Return assets that match both clauses.
+
+          - `OR` : Return assets that match either clauses.
+
+          - `NOT` : Negates a search clause.
+
         For compound clauses, you can use parentheses to group clauses together. For example: ```(type:"type1" OR type:"type2") AND tag:"hockey"```
         You can use `NOT` operator to negates a search clause. For example: ```not type:"type1"```
     search_radius:
@@ -5085,7 +5124,11 @@ components:
       title: AddressStatus
       type: string
       description: |
-        Returns more info on if the request was successful or not, valid responses. * `OK` indicates the response contains a valid result. * `INVALID_REQUEST` indicates that the provided request was invalid (e.g. wrong URL syntax). * `REQUEST_DENIED` indicates that the service denied use of the Address API (e.g. wrong API Key, wrong/no referer, …). * `UNKNOWN_ERROR` indicates an Address API request could not be processed due to a server error. The request may succeed if you try again.
+        Returns more info on if the request was successful or not, valid responses.
+          * `OK` indicates the response contains a valid result.
+          * `INVALID_REQUEST` indicates that the provided request was invalid (e.g. wrong URL syntax).
+          * `REQUEST_DENIED` indicates that the service denied use of the Address API (e.g. wrong API Key, wrong/no referer, …).
+          * `UNKNOWN_ERROR` indicates an Address API request could not be processed due to a server error. The request may succeed if you try again.
       enum:
         - OK
         - INVALID_REQUEST
@@ -5468,7 +5511,13 @@ components:
       type: string
       description: |
         Returns more info on if the request was successful or not.
-        * `OK` indicates the response contains a valid result. * `INVALID_REQUEST` indicates that the provided request was invalid (e.g. wrong URL syntax). * `MAX_ELEMENTS_EXCEEDED` indicates that the product of origins and destinations exceeds the per-query limit (fixed at 200 elts/q). * `MAX_ROUTE_LENGTH_EXCEEDED` indicates that at least one of requested route is too long and the matrix cannot be processed (>1000km). * `REQUEST_DENIED` indicates that the service denied use of the Distance API service (e.g. wrong API Key, wrong/no referer, …). * `UNKNOWN_ERROR` indicates a Distance API request could not be processed due to a server error. The request may succeed if you try again. * `OVER_QUERY_LIMIT` (associated to a 429 status code) indicates that the number of queries per second (QPS) or the number of elements per second (EPS) exceed the [usage limits](https://developers.woosmap.com/products/distance-api/distance-matrix-endpoint/#usage-limits)
+          * `OK` indicates the response contains a valid result.
+          * `INVALID_REQUEST` indicates that the provided request was invalid (e.g. wrong URL syntax).
+          * `MAX_ELEMENTS_EXCEEDED` indicates that the product of origins and destinations exceeds the per-query limit (fixed at 200 elts/q).
+          * `MAX_ROUTE_LENGTH_EXCEEDED` indicates that at least one of requested route is too long and the matrix cannot be processed (>1000km).
+          * `REQUEST_DENIED` indicates that the service denied use of the Distance API service (e.g. wrong API Key, wrong/no referer, …).
+          * `UNKNOWN_ERROR` indicates a Distance API request could not be processed due to a server error. The request may succeed if you try again.
+          * `OVER_QUERY_LIMIT` (associated to a 429 status code) indicates that the number of queries per second (QPS) or the number of elements per second (EPS) exceed the [usage limits](https://developers.woosmap.com/products/distance-api/distance-matrix-endpoint/#usage-limits)
       enum:
         - OK
         - INVALID_REQUEST
@@ -5517,7 +5566,8 @@ components:
             - metric
           description: |
             Specifies the unit system to use when expressing distance as text. Two different units supported:
-            * `metric` (default) returns distances in kilometers and meters * `imperial` returns distances in miles and feet
+              * `metric` (default) returns distances in kilometers and meters
+              * `imperial` returns distances in miles and feet
         elements:
           example: duration_distance
           type: string
@@ -5572,7 +5622,9 @@ components:
           example: 'https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png'
         status:
           description: |
-            Status Code for Logo. * OK when there is a clean name or a clean name and a logo. * NOT_FOUND when there is no clean name or clean name and logo for the specified dirty merchant.
+            Status Code for Logo.
+              * OK when there is a clean name or a clean name and a logo.
+              * NOT_FOUND when there is no clean name or clean name and logo for the specified dirty merchant.
           example: OK
           enum:
             - OK
@@ -5721,7 +5773,9 @@ components:
           example: 'https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png'
         status:
           description: |
-            Status Code for Logo. * OK when there is a clean name or a clean name and a logo. * NOT_FOUND when there is no clean name or clean name and logo for the specified dirty merchant.
+            Status Code for Logo.
+              * OK when there is a clean name or a clean name and a logo.
+              * NOT_FOUND when there is no clean name or clean name and logo for the specified dirty merchant.
           example: OK
           enum:
             - OK

@@ -34,7 +34,8 @@
 
     Specifies the unit system to use when expressing distance as text. Two different units supported:
 
-    -   `metric` (default) returns distances in kilometers and meters \* `imperial` returns distances in miles and feet
+    -   `metric` (default) returns distances in kilometers and meters
+    -   `imperial` returns distances in miles and feet
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

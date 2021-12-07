@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "2c61535a-d633-4f4f-b69f-815e963b8368",
+            "id": "a7ee8ba2-28ad-40d9-a059-8508f0d44a1d",
             "name": "Store Search API",
             "description": {
                 "content": "Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/). Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/). If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).\n",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "d64983b5-10f0-4708-9df1-c5e19d473946",
+                    "id": "a1ed4de1-1dce-45b8-bf16-1c98e622aeec",
                     "name": "Search for assets",
                     "request": {
                         "name": "Search for assets",
@@ -33,7 +33,7 @@
                                     "disabled": true,
                                     "key": "query",
                                     "value": "<string>",
-                                    "description": "Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:=\"My cool store\"`\n### Vocabulary\n- **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.\n- **Operator**: test that is performed on the data to provide a match, e.g. `=`. Each field has a default operator. If none operator follow the `:`, the default one is used.\n- **Value**: the content of the attribute that is tested, e.g. the name of the store `\"My cool store\"`.\nCombine clauses with the conjunctions `AND` or `OR`, and negate the query with `NOT`.\n### Fields\n- `type`: An element is contained within `type` collection. e.g. `type:\"myType\"`\n- `tag`: An element is contained within `tag` collection. e.g. `tag:\"myTag\"`\n- `city`: text matching: the value match the `city` field. e.g. `city:=\"Paris\"`\n- `country`: text matching: the value match the `countryCode` field. e.g. `country:=\"FR\"`\n- `name`: text matching: the value match the `name` field. e.g. `name:=\"myName\"`\n- `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:=\"myIdStore\"`\n- `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:=\"myValue\"`\n- `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:=\"centro\"`\n\n> **userProperties** field has no restriction regarding the data you can put in it (Arrays, Object, Boolean, String, Numeric...) but you can only query for **text matching or numerical comparison**.\n### Operators\n- `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.\n- `=` : The content of a string or a number is equal to the other.\n- `>` : A number is greater than another.\n- `<` : A number is smaller than another.\n- `>=` : A number is greater than or equal to another.\n- `<=` : A number is smaller than or equal to another.\n- `AND` : Return assets that match both clauses.\n- `OR` : Return assets that match either clauses.\n- `NOT` : Negates a search clause.\nFor compound clauses, you can use parentheses to group clauses together. For example: ```(type:\"type1\" OR type:\"type2\") AND tag:\"hockey\"```\nYou can use `NOT` operator to negates a search clause. For example: ```not type:\"type1\"```\n"
+                                    "description": "Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:=\"My cool store\"`\n### Vocabulary\n\n  - **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.\n\n  - **Operator**: test that is performed on the data to provide a match, e.g. `=`.\n  Each field has a default operator. If none operator follow the `:`, the default one is used.\n\n  - **Value**: the content of the attribute that is tested, e.g. the name of the store `\"My cool store\"`.\n\nCombine clauses with the conjunctions `AND` or `OR`, and negate the query with `NOT`.\n### Fields\n\n  - `type`: An element is contained within `type` collection. e.g. `type:\"myType\"`\n\n  - `tag`: An element is contained within `tag` collection. e.g. `tag:\"myTag\"`\n\n  - `city`: text matching: the value match the `city` field. e.g. `city:=\"Paris\"`\n\n  - `country`: text matching: the value match the `countryCode` field. e.g. `country:=\"FR\"`\n\n  - `name`: text matching: the value match the `name` field. e.g. `name:=\"myName\"`\n\n  - `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:=\"myIdStore\"`\n\n  - `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:=\"myValue\"`\n\n  - `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:=\"centro\"`\n\n> **userProperties** field has no restriction regarding the data you can put in it (Arrays, Object, Boolean, String, Numeric...) but you can only query for **text matching or numerical comparison**.\n### Operators\n\n  - `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.\n\n  - `=` : The content of a string or a number is equal to the other.\n\n  - `>` : A number is greater than another.\n\n  - `<` : A number is smaller than another.\n\n  - `>=` : A number is greater than or equal to another.\n\n  - `<=` : A number is smaller than or equal to another.\n\n  - `AND` : Return assets that match both clauses.\n\n  - `OR` : Return assets that match either clauses.\n\n  - `NOT` : Negates a search clause.\n\nFor compound clauses, you can use parentheses to group clauses together. For example: ```(type:\"type1\" OR type:\"type2\") AND tag:\"hockey\"```\nYou can use `NOT` operator to negates a search clause. For example: ```not type:\"type1\"```\n"
                                 },
                                 {
                                     "disabled": true,
@@ -95,7 +95,7 @@
                     },
                     "response": [
                         {
-                            "id": "15fc0185-a697-4564-9686-df7305b21b74",
+                            "id": "d018570c-2e88-42ea-b3c3-6ff9b194d1f3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -161,7 +161,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e3df3347-80d1-4565-b4d4-347329823b49",
+                            "id": "b6d59ca6-435f-4df4-b67a-ef8acc4ec43f",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -230,7 +230,7 @@
                     "event": []
                 },
                 {
-                    "id": "6e28c739-8d4e-4c16-83f5-a61eae9d26d3",
+                    "id": "d18e58f0-5134-4484-8151-3fb2e5ae4cf5",
                     "name": "Autocomplete for assets",
                     "request": {
                         "name": "Autocomplete for assets",
@@ -254,7 +254,7 @@
                                     "disabled": true,
                                     "key": "query",
                                     "value": "<string>",
-                                    "description": "Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:=\"My cool store\"`\n### Vocabulary\n- **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.\n- **Operator**: test that is performed on the data to provide a match, e.g. `=`. Each field has a default operator. If none operator follow the `:`, the default one is used.\n- **Value**: the content of the attribute that is tested, e.g. the name of the store `\"My cool store\"`.\nCombine clauses with the conjunctions `AND` or `OR`, and negate the query with `NOT`.\n### Fields\n- `type`: An element is contained within `type` collection. e.g. `type:\"myType\"`\n- `tag`: An element is contained within `tag` collection. e.g. `tag:\"myTag\"`\n- `city`: text matching: the value match the `city` field. e.g. `city:=\"Paris\"`\n- `country`: text matching: the value match the `countryCode` field. e.g. `country:=\"FR\"`\n- `name`: text matching: the value match the `name` field. e.g. `name:=\"myName\"`\n- `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:=\"myIdStore\"`\n- `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:=\"myValue\"`\n- `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:=\"centro\"`\n\n> **userProperties** field has no restriction regarding the data you can put in it (Arrays, Object, Boolean, String, Numeric...) but you can only query for **text matching or numerical comparison**.\n### Operators\n- `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.\n- `=` : The content of a string or a number is equal to the other.\n- `>` : A number is greater than another.\n- `<` : A number is smaller than another.\n- `>=` : A number is greater than or equal to another.\n- `<=` : A number is smaller than or equal to another.\n- `AND` : Return assets that match both clauses.\n- `OR` : Return assets that match either clauses.\n- `NOT` : Negates a search clause.\nFor compound clauses, you can use parentheses to group clauses together. For example: ```(type:\"type1\" OR type:\"type2\") AND tag:\"hockey\"```\nYou can use `NOT` operator to negates a search clause. For example: ```not type:\"type1\"```\n"
+                                    "description": "Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:=\"My cool store\"`\n### Vocabulary\n\n  - **Field**: attribute of the Store that is searched, e.g. the attribute `name` of the store.\n\n  - **Operator**: test that is performed on the data to provide a match, e.g. `=`.\n  Each field has a default operator. If none operator follow the `:`, the default one is used.\n\n  - **Value**: the content of the attribute that is tested, e.g. the name of the store `\"My cool store\"`.\n\nCombine clauses with the conjunctions `AND` or `OR`, and negate the query with `NOT`.\n### Fields\n\n  - `type`: An element is contained within `type` collection. e.g. `type:\"myType\"`\n\n  - `tag`: An element is contained within `tag` collection. e.g. `tag:\"myTag\"`\n\n  - `city`: text matching: the value match the `city` field. e.g. `city:=\"Paris\"`\n\n  - `country`: text matching: the value match the `countryCode` field. e.g. `country:=\"FR\"`\n\n  - `name`: text matching: the value match the `name` field. e.g. `name:=\"myName\"`\n\n  - `idstore`: text matching: the value match the `idstore` field.  e.g. `idstore:=\"myIdStore\"`\n\n  - `user`: concerns all fields inside `user_properties`. text matching or numerical comparison.  e.g. `user.myAttribute:=\"myValue\"`\n\n  - `localized`: used for [localizedNames](https://developers.woosmap.com/products/data-api/data-structure/#localizednames) to search in native language. text matching in collection: the value match one of the the `localizedNames`. e.g. `localized:=\"centro\"`\n\n> **userProperties** field has no restriction regarding the data you can put in it (Arrays, Object, Boolean, String, Numeric...) but you can only query for **text matching or numerical comparison**.\n### Operators\n\n  - `:` : Default and mandatory operator. For `type` and `tag` fields, define that an element is contained within a collection.\n\n  - `=` : The content of a string or a number is equal to the other.\n\n  - `>` : A number is greater than another.\n\n  - `<` : A number is smaller than another.\n\n  - `>=` : A number is greater than or equal to another.\n\n  - `<=` : A number is smaller than or equal to another.\n\n  - `AND` : Return assets that match both clauses.\n\n  - `OR` : Return assets that match either clauses.\n\n  - `NOT` : Negates a search clause.\n\nFor compound clauses, you can use parentheses to group clauses together. For example: ```(type:\"type1\" OR type:\"type2\") AND tag:\"hockey\"```\nYou can use `NOT` operator to negates a search clause. For example: ```not type:\"type1\"```\n"
                                 },
                                 {
                                     "disabled": true,
@@ -316,7 +316,7 @@
                     },
                     "response": [
                         {
-                            "id": "d15f4c73-9294-40b9-b5d9-340d3eb432f9",
+                            "id": "ae4454cb-24e4-4df0-ae8d-f13ed0bd7bfc",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -382,7 +382,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "474615b7-4224-4268-bc17-89e48fafee33",
+                            "id": "05a6bdd6-8c5a-4acb-b4c1-2a22303714b7",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -454,7 +454,7 @@
             "event": []
         },
         {
-            "id": "a9e18c96-4968-4a42-b7e0-774ff036886f",
+            "id": "07595419-8367-434a-a928-6f7d33fc2999",
             "name": "Data Management API",
             "description": {
                 "content": "The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets. The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`) coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/), [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).\n",
@@ -462,7 +462,7 @@
             },
             "item": [
                 {
-                    "id": "898eccfa-83b8-4e5e-a109-0365add2420c",
+                    "id": "80c8fb1b-91c3-4578-9147-fe73eb454ca7",
                     "name": "Create your Assets",
                     "request": {
                         "name": "Create your Assets",
@@ -519,7 +519,7 @@
                     },
                     "response": [
                         {
-                            "id": "355fd028-d97f-4c7f-a7b1-1cb9e4c76a3a",
+                            "id": "8bdecd7d-6b52-4cb1-8c0a-dba7bc78b37e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -567,7 +567,7 @@
                     "event": []
                 },
                 {
-                    "id": "d17b8231-d3aa-4091-8fcd-7515c8e63fd3",
+                    "id": "ae8c9022-5864-4eac-9f7a-8ae2e473a167",
                     "name": "Update the Assets",
                     "request": {
                         "name": "Update the Assets",
@@ -624,7 +624,7 @@
                     },
                     "response": [
                         {
-                            "id": "00342b75-9afa-496c-9bac-cb8126e3fc4f",
+                            "id": "b40178cb-145d-4fee-9c01-03a6874f4b88",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -672,7 +672,7 @@
                     "event": []
                 },
                 {
-                    "id": "843abadc-d1d6-45dc-aaed-a3c60c172a0e",
+                    "id": "1a6af5e3-52ca-4c26-bdf0-d1372bfe7f6e",
                     "name": "Delete the Assets",
                     "request": {
                         "name": "Delete the Assets",
@@ -721,7 +721,7 @@
                     },
                     "response": [
                         {
-                            "id": "609c4d13-37e0-4cbd-8679-2c8d436ffbbf",
+                            "id": "9ccb12f1-2e27-427c-8ea4-c169882fb7f2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -765,7 +765,7 @@
                     "event": []
                 },
                 {
-                    "id": "df95168f-79cb-4985-b8ed-0dffd7d6975e",
+                    "id": "d8e0a63e-a083-408c-96f0-be9f590f5930",
                     "name": "Get Asset from ID",
                     "request": {
                         "name": "Get Asset from ID",
@@ -816,7 +816,7 @@
                     },
                     "response": [
                         {
-                            "id": "111b41d6-6b9c-418a-8dac-105e4e163879",
+                            "id": "d4be1f81-33a2-4673-be7e-3af3fa4f4f00",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -862,7 +862,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3ddb9c44-ea8d-460c-a541-8d6bd0ad1c1f",
+                            "id": "b729f938-dee6-4f74-89b5-7cc713205f5a",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -908,7 +908,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d562a14d-750f-4955-b65b-5a91be319941",
+                            "id": "ff40325b-d614-434c-a35a-f161b600837d",
                             "name": "404 NOT FOUND - `storeId` do not exist in the project identified with the key parameter.",
                             "originalRequest": {
                                 "url": {
@@ -957,7 +957,7 @@
                     "event": []
                 },
                 {
-                    "id": "e0bba554-cb43-4acc-9977-1d309540a2a5",
+                    "id": "4adccf4a-95ec-48c2-856f-b43fd751ee46",
                     "name": "Replace all assets",
                     "request": {
                         "name": "Replace all assets",
@@ -1015,7 +1015,7 @@
                     },
                     "response": [
                         {
-                            "id": "ec0e93a4-50a1-4f13-93b8-492a98270f2e",
+                            "id": "b9356e1c-ef3b-4aa9-b709-8c5ed5f0da03",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1064,7 +1064,7 @@
                     "event": []
                 },
                 {
-                    "id": "76002626-3dca-42de-b521-31b322faec8f",
+                    "id": "a419f19f-8d9d-49ff-915f-3841ea4c4628",
                     "name": "Create your Zones",
                     "request": {
                         "name": "Create your Zones",
@@ -1121,7 +1121,7 @@
                     },
                     "response": [
                         {
-                            "id": "f5982938-c474-45a5-abac-20cd749205f4",
+                            "id": "6deee79a-d4c2-45d5-a9ac-f125dc63d9ed",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1169,7 +1169,7 @@
                     "event": []
                 },
                 {
-                    "id": "93679411-2cdc-4074-a882-f5fe06d34bbd",
+                    "id": "97509a64-a2f7-4c65-bc17-64eec069a0c9",
                     "name": "Update the Zones.",
                     "request": {
                         "name": "Update the Zones.",
@@ -1226,7 +1226,7 @@
                     },
                     "response": [
                         {
-                            "id": "293b9c4a-7055-41a8-9889-8c5c2767432a",
+                            "id": "5b52e9c9-49ec-44b6-8f4a-0f61ff6cb8e7",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1274,7 +1274,7 @@
                     "event": []
                 },
                 {
-                    "id": "b117fa74-d868-4c24-ab4b-56c83ad0f0ae",
+                    "id": "49d9feb8-5d94-4c14-97f6-882c8f1ae18e",
                     "name": "Delete the Zones",
                     "request": {
                         "name": "Delete the Zones",
@@ -1323,7 +1323,7 @@
                     },
                     "response": [
                         {
-                            "id": "bba79ce1-35a1-40e0-ba9f-e6af71e8fb78",
+                            "id": "174fa6a2-448d-488f-a2f4-5b54f5335a1c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1367,7 +1367,7 @@
                     "event": []
                 },
                 {
-                    "id": "71f77661-de29-46d4-bbee-243deff6e753",
+                    "id": "420411ca-7bf0-4661-b267-637cd435fc4b",
                     "name": "Get Zone from ID",
                     "request": {
                         "name": "Get Zone from ID",
@@ -1418,7 +1418,7 @@
                     },
                     "response": [
                         {
-                            "id": "784253a0-3a34-4e7e-b270-93795f154759",
+                            "id": "aaab0a18-b8b8-4123-bc37-a1ffb246f3fd",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1464,7 +1464,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "47144cfa-1239-4d02-828d-f2487e0426d5",
+                            "id": "0de8e097-259f-4795-9e42-eac7696dd377",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1510,7 +1510,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "222d45b2-4f3a-44f8-97cc-8378a82e0bb1",
+                            "id": "35bdf40b-4a3e-4f34-bb43-63f5de1d0cdb",
                             "name": "404 NOT FOUND - `zone_id` do not exist in the project identified with the key parameter.",
                             "originalRequest": {
                                 "url": {
@@ -1562,7 +1562,7 @@
             "event": []
         },
         {
-            "id": "36754f67-2d3c-4cd2-bcb0-552e1cf76f9f",
+            "id": "248d8eda-a75b-42f2-8dc0-a7a0cc1a920d",
             "name": "Geolocation API",
             "description": {
                 "content": "Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1570,7 +1570,7 @@
             },
             "item": [
                 {
-                    "id": "336e33e3-23e7-4130-af68-7712aa3c5354",
+                    "id": "8fd5bc1b-4660-4ce4-bfc4-b850fd8c55fd",
                     "name": "Geolocation from an IP address",
                     "request": {
                         "name": "Geolocation from an IP address",
@@ -1620,7 +1620,7 @@
                     },
                     "response": [
                         {
-                            "id": "683f41b8-a2f6-4ab3-a426-4991d277a91e",
+                            "id": "5387686a-b980-4ebb-bd61-c75876923ac6",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1662,7 +1662,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "126cbb7e-276c-42b3-bc97-32f03fc5278b",
+                            "id": "c86db2c9-5d10-4d12-92d5-a505766468f2",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1704,7 +1704,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1f77a0b5-66b9-4ad6-b70c-741a96f9f30a",
+                            "id": "4f1b8b4c-b818-4718-973c-9c4dd6973ab1",
                             "name": "403 FORBIDDEN",
                             "originalRequest": {
                                 "url": {
@@ -1749,7 +1749,7 @@
                     "event": []
                 },
                 {
-                    "id": "00351fae-6c8c-4541-9822-52b26ea3de04",
+                    "id": "01739ab4-3544-4af1-977b-4a65a23e81f3",
                     "name": "Assets nearby a Geolocation",
                     "request": {
                         "name": "Assets nearby a Geolocation",
@@ -1799,7 +1799,7 @@
                     },
                     "response": [
                         {
-                            "id": "895c9057-8609-4fae-945a-1c7489c0c527",
+                            "id": "0eb11093-1065-4120-891b-9b3da40384f0",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1841,7 +1841,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1250db75-ac85-4df5-a5c8-fdfc85498f24",
+                            "id": "ddd16e2d-08fe-49ba-b71a-f0fc1c032515",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -1883,7 +1883,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0b805f37-9744-4106-abc9-443b9d5508cc",
+                            "id": "09c91456-9017-43f2-a296-0747ed2d258c",
                             "name": "403 FORBIDDEN",
                             "originalRequest": {
                                 "url": {
@@ -1931,7 +1931,7 @@
             "event": []
         },
         {
-            "id": "47e84ff8-cc00-4c51-98fd-deb65c36c383",
+            "id": "f5e7a0bb-926a-4d6d-9d1d-732e7c1ef115",
             "name": "Localities API",
             "description": {
                 "content": "Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1939,7 +1939,7 @@
             },
             "item": [
                 {
-                    "id": "d249c737-7980-4f73-8121-44c8e86dd205",
+                    "id": "aa2d64a2-a6ee-4200-ad89-c63ee29eb8eb",
                     "name": "Autocomplete for Localities",
                     "request": {
                         "name": "Autocomplete for Localities",
@@ -1969,7 +1969,7 @@
                                     "disabled": true,
                                     "key": "types",
                                     "value": "<string>",
-                                    "description": "The types of suggestion to return.\n* `locality`: includes locality names (from city to village) and suburbs * `postal_code`: publicly-used postal codes around the world * `address`: addresses (only available for UK and France) * `admin_level`: most commonly used administrative areas * `country`: countries as whole point of interest * `airport`: includes all medium sized to international sized airports * `train_station`: includes all train stations * `metro_station`: includes all metro stations * `shopping`: includes shopping malls (or \"shopping centers\") - *may include private retail brands* * `museum`: includes museums * `tourist_attraction`: includes tourist attractions like the Eiffel tower * `amusement_park`: includes amusement parks like Disneyland Paris * `art_gallery`: includes art galleries * `zoo`: includes zoos\n> The information returned on an `address` suggestion contain only a \"single-line\" description. A request to the [Details endpoint](/products/localities/details/) of the API must be performed to retrieve the location (geographic coordinates) and the address components (street address, zipcode, city..).\nNot specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.\n"
+                                    "description": "The types of suggestion to return.\n\n  * `locality`: includes locality names (from city to village) and suburbs\n  * `postal_code`: publicly-used postal codes around the world\n  * `address`: addresses (only available for UK and France)\n  * `admin_level`: most commonly used administrative areas\n  * `country`: countries as whole point of interest\n  * `airport`: includes all medium sized to international sized airports\n  * `train_station`: includes all train stations\n  * `metro_station`: includes all metro stations\n  * `shopping`: includes shopping malls (or \"shopping centers\") - *may include private retail brands*\n  * `museum`: includes museums\n  * `tourist_attraction`: includes tourist attractions like the Eiffel tower\n  * `amusement_park`: includes amusement parks like Disneyland Paris\n  * `art_gallery`: includes art galleries\n  * `zoo`: includes zoos\n\n> The information returned on an `address` suggestion contain only a \"single-line\" description. A request to the [Details endpoint](/products/localities/details/) of the API must be performed to retrieve the location (geographic coordinates) and the address components (street address, zipcode, city..).\nNot specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.\n"
                                 },
                                 {
                                     "disabled": true,
@@ -2019,7 +2019,7 @@
                     },
                     "response": [
                         {
-                            "id": "e5e35c3b-37d9-42aa-bb10-47f017839d63",
+                            "id": "06d77226-23d7-4cd9-8bac-cb60cae5b639",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2081,7 +2081,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "23130adf-0ccc-488e-b07f-a2a4d0d74cec",
+                            "id": "5fc522c7-43e7-4ec1-bc5b-0338216cbeb8",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2146,7 +2146,7 @@
                     "event": []
                 },
                 {
-                    "id": "20784e93-5eb1-4ef9-bf7d-cb26ca636f2a",
+                    "id": "1a0928f4-6887-4f9e-b1ac-cc70b4b0e72a",
                     "name": "Details of a Locality",
                     "request": {
                         "name": "Details of a Locality",
@@ -2202,7 +2202,7 @@
                     },
                     "response": [
                         {
-                            "id": "b4a4af6d-0a61-4810-a767-0a718e04747d",
+                            "id": "8690fc40-54f9-44d0-8b6d-d94ab455fade",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2248,7 +2248,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "71c071a7-142b-4ea7-9e90-4890fb9f247e",
+                            "id": "7b644211-2bab-48d3-8ca6-a3353969b031",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2300,7 +2300,7 @@
             "event": []
         },
         {
-            "id": "93d0ba14-9f0a-44f0-b4ee-555f39c4e212",
+            "id": "e6cca6d6-54ef-40bb-b713-56e19dd87537",
             "name": "Address API",
             "description": {
                 "content": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2308,7 +2308,7 @@
             },
             "item": [
                 {
-                    "id": "ab44beba-5d57-442a-92ac-ff4f672b0b9e",
+                    "id": "c5fa03df-ae91-4c28-afcc-0d2c4280deed",
                     "name": "Autocomplete for Addresses",
                     "request": {
                         "name": "Autocomplete for Addresses",
@@ -2377,7 +2377,7 @@
                     },
                     "response": [
                         {
-                            "id": "caaad4f3-2569-40f2-8f41-b9d9efd4aa3b",
+                            "id": "bc68cac8-03eb-4b7a-aa6e-8aa684f302a5",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2432,7 +2432,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3ae56995-6b2b-4c5d-8386-6ad534afb401",
+                            "id": "6c2a7306-1966-4120-8d58-8ca8068f2147",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2490,7 +2490,7 @@
                     "event": []
                 },
                 {
-                    "id": "49ecea82-b222-4564-9eb9-fb95d87aba7c",
+                    "id": "43729447-1e42-47f7-85e1-1b51d37b77e2",
                     "name": "Details of an Address",
                     "request": {
                         "name": "Details of an Address",
@@ -2547,7 +2547,7 @@
                     },
                     "response": [
                         {
-                            "id": "0d0e3ddf-0ccb-4210-8e6a-c352dc94dec7",
+                            "id": "5c1ef445-db24-497f-bf6b-772e8525ec54",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2594,7 +2594,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1a595451-51a2-445e-bc47-244fc3bcc4bd",
+                            "id": "d9f38106-26ae-49b2-9e2d-6cbe6ae86c4c",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2647,7 +2647,7 @@
             "event": []
         },
         {
-            "id": "50e1b940-09f9-460f-87fb-7c4e34e7764a",
+            "id": "08bbc166-d3be-40b7-9885-679b9d66a7d9",
             "name": "Distance API",
             "description": {
                 "content": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2655,7 +2655,7 @@
             },
             "item": [
                 {
-                    "id": "f8466c1e-033f-47cb-b86e-81e5264709b7",
+                    "id": "e8938184-f416-437f-8f95-034e910d734f",
                     "name": "Distance Matrix",
                     "request": {
                         "name": "Distance Matrix",
@@ -2704,7 +2704,7 @@
                                     "disabled": true,
                                     "key": "units",
                                     "value": "<string>",
-                                    "description": "Specifies the unit system to use when expressing distance as text. Two different units supported:\n* `metric` (default) returns distances in kilometers and meters * `imperial` returns distances in miles and feet\n"
+                                    "description": "Specifies the unit system to use when expressing distance as text. Two different units supported:\n  * `metric` (default) returns distances in kilometers and meters\n  * `imperial` returns distances in miles and feet\n"
                                 },
                                 {
                                     "disabled": true,
@@ -2742,7 +2742,7 @@
                     },
                     "response": [
                         {
-                            "id": "5fa3d6a2-19dd-4f71-805e-fa0d6fefadbd",
+                            "id": "82250da5-b11d-4861-a556-b1112529889e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2809,7 +2809,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f45c3eba-0e76-412a-bc90-a3f128e6c966",
+                            "id": "664737b9-3b67-4fed-89f5-551bd8bdf9d5",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -2879,7 +2879,7 @@
                     "event": []
                 },
                 {
-                    "id": "64030b26-a853-4b40-b98c-cab0497066d5",
+                    "id": "13bee435-ec02-43e6-afad-5fa50c074424",
                     "name": "Get Distance Matrix using POST",
                     "request": {
                         "name": "Get Distance Matrix using POST",
@@ -2938,7 +2938,7 @@
                     },
                     "response": [
                         {
-                            "id": "a12f0e63-b5d4-4010-bd08-d7baa4a8570a",
+                            "id": "70429b24-89ee-49ec-9d2e-cbc513f274ff",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2985,7 +2985,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a3a745b9-8bf2-4bb2-81ae-8cb4441b55db",
+                            "id": "932dc978-4f8e-4e6b-a0e0-24abf337fb93",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3035,7 +3035,7 @@
                     "event": []
                 },
                 {
-                    "id": "468dc63e-9f79-4616-9d12-817839e20054",
+                    "id": "138d89e7-8f65-4bb9-b55f-60d7ddb7ca80",
                     "name": "Get Route",
                     "request": {
                         "name": "Get Route",
@@ -3084,7 +3084,7 @@
                                     "disabled": true,
                                     "key": "units",
                                     "value": "<string>",
-                                    "description": "Specifies the unit system to use when expressing distance as text. Two different units supported:\n* `metric` (default) returns distances in kilometers and meters * `imperial` returns distances in miles and feet\n"
+                                    "description": "Specifies the unit system to use when expressing distance as text. Two different units supported:\n  * `metric` (default) returns distances in kilometers and meters\n  * `imperial` returns distances in miles and feet\n"
                                 },
                                 {
                                     "disabled": true,
@@ -3128,7 +3128,7 @@
                     },
                     "response": [
                         {
-                            "id": "16bd44f1-c8c1-48fc-93af-93a4a36edf3f",
+                            "id": "6eab1758-6c72-40b6-b89f-d79ffacf3c1b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3199,7 +3199,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "93432cb0-794e-4576-8b3c-0f347a6f800e",
+                            "id": "45d06b53-b016-4ac8-810b-4e6f11df6029",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3276,7 +3276,7 @@
             "event": []
         },
         {
-            "id": "0a646996-aa27-45d9-8920-8cafdd4694f8",
+            "id": "99e5f31a-8ce3-4585-876c-b17b13b665d0",
             "name": "Merchant API",
             "description": {
                 "content": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3286,7 +3286,7 @@
             "event": []
         },
         {
-            "id": "1e779f07-3b09-40e8-ab0b-3672899bdc83",
+            "id": "f49893d9-6c42-48f5-93a6-5631215656e2",
             "name": "Merchants API",
             "description": {
                 "content": "",
@@ -3294,7 +3294,7 @@
             },
             "item": [
                 {
-                    "id": "adf4c39c-591b-4665-a4ce-6544b04bba00",
+                    "id": "80ab14d1-6a3f-498e-a70b-e5ac48c6a3f9",
                     "name": "Get Merchants Clean Names",
                     "request": {
                         "name": "Get Merchants Clean Names",
@@ -3352,7 +3352,7 @@
                     },
                     "response": [
                         {
-                            "id": "224ba53b-3008-4d66-93ab-0372ce66903d",
+                            "id": "e3fc667e-cc0a-4ae4-8dec-b46c045fafcd",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3398,7 +3398,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "13a24bac-aed7-45b6-9511-b0feef76ce7a",
+                            "id": "32dd6304-dd70-4b05-89cc-f82511b2202e",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3447,7 +3447,7 @@
                     "event": []
                 },
                 {
-                    "id": "b77826ab-f81d-4fa1-be4e-ebe2903d755f",
+                    "id": "56b76778-053e-408b-95d5-ff7fdd92c9e5",
                     "name": "Get Merchants Place",
                     "request": {
                         "name": "Get Merchants Place",
@@ -3505,7 +3505,7 @@
                     },
                     "response": [
                         {
-                            "id": "20922bae-7be3-410d-ae36-c00c08d97827",
+                            "id": "1738b2d7-33fa-4946-b207-9ac6330de523",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -3551,7 +3551,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a38cbcf2-383e-420e-a1df-d37acf033c96",
+                            "id": "d122192f-487d-44cd-8705-07d06345bda6",
                             "name": "401 UNAUTHORIZED",
                             "originalRequest": {
                                 "url": {
@@ -3629,7 +3629,7 @@
         ]
     },
     "info": {
-        "_postman_id": "76c5f587-9b90-4b23-ad0a-88e11ca0446e",
+        "_postman_id": "47530da3-e56e-4d3a-ac03-ce172d76f736",
         "name": "Woosmap",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

@@ -35,7 +35,8 @@
 
     Specifies the unit system to use when expressing distance as text. Two different units supported:
 
-    -   `metric` (default) returns distances in kilometers and meters \* `imperial` returns distances in miles and feet
+    -   `metric` (default) returns distances in kilometers and meters
+    -   `imperial` returns distances in miles and feet
 
 -   <h3 id="waypoints">waypoints</h3>
 
