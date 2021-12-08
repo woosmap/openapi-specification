@@ -1,7 +1,18 @@
 openapi: "3.0.3"
 info:
-  title: Woosmap
-  description: API Specification for Woosmap
+  title: Woosmap Platform API Reference
+  description: >
+    The Woosmap API is a RESTful API built on HTTP. It has predictable resource URLs. It returns HTTP response codes to indicate errors. It also accepts and returns JSON in the HTTP body. You can use your favorite HTTP/REST library for your programming language to use Woosmap's API, or you can use one of our Javascript SDKs for supported APIs:
+      - [Localities JS](https://developers.woosmap.com/products/localities/localities-jsapi/get-started/) (for Localities API)
+      - [MultiSearch JS](https://developers.woosmap.com/products/multisearch-lib/js/get-started/) (for Localities API, Address API and Store Search API)
+      - [Store Locator JS](https://developers.woosmap.com/products/js-api/get-started/) (for Store Search API)
+
+
+    You can use Postman to test the API (if you use the `PUBLIC_API_KEY` authentication, don't forget to set the `Referer` Header corresponding to one of your restricted domain name).
+
+
+    [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18187960-493db7b1-d9ec-4601-b636-90e7b21e14b1?action=collection%2Ffork&collection-url=entityId%3D18187960-493db7b1-d9ec-4601-b636-90e7b21e14b1%26entityType%3Dcollection%26workspaceId%3D81a23af4-1234-4028-9008-32751b59b183)
+
   version: 1.0.0
 servers:
   - url: "https://api.woosmap.com"
@@ -85,7 +96,7 @@ tags:
       This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
     externalDocs:
       url: https://developers.woosmap.com/products/distance-api/get-started/
-  - name: Merchant API
+  - name: Merchants API
     description: >
       Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider.
       It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID.
