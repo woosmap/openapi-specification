@@ -39,7 +39,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/ip_address"
+            "$ref": "#/components/parameters/geolocation_ip_address"
+          },
+          {
+            "$ref": "#/components/parameters/search_query"
           }
         ],
         "responses": {
@@ -134,7 +137,13 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/ip_address"
+            "$ref": "#/components/parameters/geolocation_ip_address"
+          },
+          {
+            "$ref": "#/components/parameters/geolocation_limit"
+          },
+          {
+            "$ref": "#/components/parameters/search_query"
           }
         ],
         "responses": {
@@ -5254,7 +5263,7 @@
         },
         "description": "A list of points by which the route should pass. route response is divided into legs, one leg corresponding to a route between two waypoints. Waypoints should be separated by `|` character.\n`alternatives` and `waypoints` can not be used at the same time.\n"
       },
-      "ip_address": {
+      "geolocation_ip_address": {
         "name": "ip_address",
         "description": "The ip_address you want to geolocate. For **server call with private_key** only. Without this parameter, the API will geolocate the IP Address attached to the raw TCP request.\n",
         "in": "query",
@@ -5262,6 +5271,17 @@
         "schema": {
           "type": "string"
         }
+      },
+      "geolocation_limit": {
+        "name": "limit",
+        "description": "To limit number of assets retrieved from an IP location.\n",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 300
+        },
+        "example": 10,
+        "in": "query"
       },
       "localities_components": {
         "name": "components",

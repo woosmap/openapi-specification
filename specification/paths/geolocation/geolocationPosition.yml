@@ -9,7 +9,8 @@ security:
     RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
-  - $ref: "../../parameters/ip_address.yml"
+  - $ref: "../../parameters/geolocation/ip_address.yml"
+  - $ref: "../../parameters/search/query.yml"
 responses:
   "200":
     description: 200 OK
