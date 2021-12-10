@@ -15,54 +15,6 @@
     <tr>
       <td align="left">
         <h4
-          id="MerchantsBrandClean-dirty_name"
-          class="add-link schema-object-property-key"
-        >
-          <code>dirty_name</code>
-        </h4>
-      </td>
-      <td><strong>required</strong></td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The dirty name is the unique merchant identifier which is provided
-            on transactions by a payment provider.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="MerchantsBrandClean-status"
-          class="add-link schema-object-property-key"
-        >
-          <code>status</code>
-        </h4>
-      </td>
-      <td><strong>required</strong></td>
-      <td></td>
-      <td>
-        <div class="nonref-property-description">
-          <p>Status Code for Logo.</p>
-          <ul>
-            <li>OK when there is a clean name or a clean name and a logo.</li>
-            <li>
-              NOT_FOUND when there is no clean name or clean name and logo for
-              the specified dirty merchant.
-            </li>
-          </ul>
-          <div class="notranslate">
-            The allowed values include: <code>OK</code>, and
-            <code>NOT_FOUND</code>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
           id="MerchantsBrandClean-clean_name"
           class="add-link schema-object-property-key"
         >
@@ -114,6 +66,26 @@
     <tr>
       <td align="left">
         <h4
+          id="MerchantsBrandClean-dirty_name"
+          class="add-link schema-object-property-key"
+        >
+          <code>dirty_name</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            The dirty name is the unique merchant identifier which is provided
+            on transactions by a payment provider.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
           id="MerchantsBrandClean-logo"
           class="add-link schema-object-property-key"
         >
@@ -142,6 +114,34 @@
       <td>
         <div class="nonref-property-description">
           <p>The logo image with content-type <code>image/png</code>.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="MerchantsBrandClean-status"
+          class="add-link schema-object-property-key"
+        >
+          <code>status</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>Status Code for Logo.</p>
+          <ul>
+            <li>OK when there is a clean name or a clean name and a logo.</li>
+            <li>
+              NOT_FOUND when there is no clean name or clean name and logo for
+              the specified dirty merchant.
+            </li>
+          </ul>
+          <div class="notranslate">
+            The allowed values include: <code>OK</code>, and
+            <code>NOT_FOUND</code>
+          </div>
         </div>
       </td>
     </tr>

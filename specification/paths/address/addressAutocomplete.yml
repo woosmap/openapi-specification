@@ -26,10 +26,8 @@ responses:
             value:
               $ref: "../../responses/woosmap_http_address_autocomplete_collection_response.yml"
   "401":
-    description: 401 UNAUTHORIZED
-    content:
-      application/json:
-        examples:
-          Unauthorized:
-            value:
-              $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"

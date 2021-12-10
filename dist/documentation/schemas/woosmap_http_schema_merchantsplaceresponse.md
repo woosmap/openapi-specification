@@ -4,9 +4,9 @@
 
 Attributes describing a Merchant Place Response
 
-| Field                                                                                                             | Required     | Type                                                                           | Description                                                                                                                                                            |
-| :---------------------------------------------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <h4 id="MerchantsPlaceResponse-merchants" class="add-link schema-object-property-key"><code>merchants</code></h4> | **required** | Array&lt;[MerchantsPlaceClean](#MerchantsPlaceClean "MerchantsPlaceClean")&gt; | <div class="ref-property-description"><p>The list of cleaned transactions</p><p>See <a href="#MerchantsPlaceClean">MerchantsPlaceClean</a> for more information.</div> |
+| Field                                                                                                             | Required | Type                                                                           | Description                                                                                                                                                            |
+| :---------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="MerchantsPlaceResponse-merchants" class="add-link schema-object-property-key"><code>merchants</code></h4> | optional | Array&lt;[MerchantsPlaceClean](#MerchantsPlaceClean "MerchantsPlaceClean")&gt; | <div class="ref-property-description"><p>The list of cleaned transactions</p><p>See <a href="#MerchantsPlaceClean">MerchantsPlaceClean</a> for more information.</div> |
 
 <h4 class="schema-object-example" id="MerchantsPlaceResponse-example">Example</h4>
 

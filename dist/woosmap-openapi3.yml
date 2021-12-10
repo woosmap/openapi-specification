@@ -63,21 +63,11 @@ paths:
                     postal_code: '22309'
                     timezone: America/New_York
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
         '403':
-          description: 403 FORBIDDEN
-          content:
-            application/json:
-              examples:
-                Forbidden:
-                  value:
-                    detail: Geolocation API is not enabled for this project.
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /geolocation/stores:
     get:
       summary: Assets nearby a Geolocation
@@ -155,7 +145,7 @@ paths:
                               open_hours:
                                 - end: '22:00'
                                   start: '08:30'
-                              week_day: 2
+                              week_day: 5
                               current_slice:
                                 end: '22:00'
                                 start: '08:30'
@@ -237,7 +227,7 @@ paths:
                               open_hours:
                                 - end: '22:00'
                                   start: '08:30'
-                              week_day: 2
+                              week_day: 5
                               current_slice:
                                 end: '22:00'
                                 start: '08:30'
@@ -292,21 +282,11 @@ paths:
                         page: 1
                         pageCount: 1
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
         '403':
-          description: 403 FORBIDDEN
-          content:
-            application/json:
-              examples:
-                Forbidden:
-                  value:
-                    detail: Geolocation API is not enabled for this project.
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /stores:
     post:
       summary: Create your Assets
@@ -406,6 +386,12 @@ paths:
                   value:
                     status: success
                     value: 2 stores
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
     put:
       summary: Update the Assets
       operationId: updateStores
@@ -474,6 +460,12 @@ paths:
                   value:
                     status: success
                     value: 1 stores
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
     delete:
       summary: Delete the Assets
       operationId: deleteStores
@@ -504,6 +496,10 @@ paths:
                   value:
                     status: success
                     value: 2
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
   '/stores/{storeId}':
     get:
       summary: Get Asset from ID
@@ -571,7 +567,7 @@ paths:
                         open_hours:
                           - end: '20:00'
                             start: '05:00'
-                        week_day: 2
+                        week_day: 5
                         current_slice:
                           end: '20:00'
                           start: '05:00'
@@ -642,15 +638,11 @@ paths:
                         - -122.712924
                         - 38.41244
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
         '404':
-          description: 404 NOT FOUND - `storeId` do not exist in the project identified with the key parameter.
+          description: 404 NOT FOUND - `storeId` do not exist.
   /stores/replace:
     post:
       summary: Replace all assets
@@ -749,6 +741,12 @@ paths:
                   value:
                     status: success
                     value: '2 stores deleted, 2 stores created'
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
   /stores/search:
     get:
       summary: Search for assets
@@ -813,7 +811,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '06:30'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '06:30'
@@ -915,7 +913,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '06:30'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '06:30'
@@ -1018,7 +1016,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:00'
@@ -1115,7 +1113,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '08:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '08:00'
@@ -1219,7 +1217,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:00'
@@ -1323,7 +1321,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:30'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:30'
@@ -1426,7 +1424,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:30'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:30'
@@ -1526,7 +1524,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '08:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '08:00'
@@ -1630,7 +1628,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:00'
@@ -1733,7 +1731,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:00'
@@ -1837,7 +1835,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:30'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:30'
@@ -1940,7 +1938,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '07:00'
-                            week_day: 2
+                            week_day: 5
                             current_slice:
                               end: '18:00'
                               start: '07:00'
@@ -2014,13 +2012,19 @@ paths:
                       page: 1
                       pageCount: 1
         '401':
-          description: 401 UNAUTHORIZED
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          description: 429 RATE LIMIT EXCEEDED
           content:
             application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
               examples:
-                Unauthorized:
+                Forbidden:
                   value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+                    detail: The rate limit for this endpoint has been exceeded
   /stores/autocomplete:
     get:
       summary: Autocomplete for assets
@@ -2095,13 +2099,11 @@ paths:
                             length: 6
                         highlighted: Doha <b>Street</b>
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /localities/autocomplete:
     get:
       summary: Autocomplete for Localities
@@ -2211,13 +2213,11 @@ paths:
                         locality: ''
                         admin_0: United Kingdom
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /localities/details:
     get:
       summary: Details of a Locality
@@ -2325,13 +2325,11 @@ paths:
                           - public_id: MVZWBfGZQnAQn9JtE9CJZjgeB4Q=
                             description: 'House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA'
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /address/autocomplete/json:
     get:
       summary: Autocomplete for Addresses
@@ -2378,13 +2376,11 @@ paths:
                         type: locality
                     status: OK
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /address/details/json:
     get:
       summary: Details of an Address
@@ -2452,13 +2448,11 @@ paths:
                             lng: -0.56316
                     status: OK
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /zones:
     post:
       summary: Create your Zones
@@ -2512,6 +2506,12 @@ paths:
                   value:
                     status: ok
                     message: Zones successfully added.
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
     put:
       summary: Update the Zones.
       operationId: updateZones
@@ -2562,6 +2562,37 @@ paths:
                   value:
                     status: ok
                     message: Zones successfully added.
+        '400':
+          description: 400 INVALID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
+        '401':
+          description: 401 UNAUTHORIZED
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+        '403':
+          description: 403 FORBIDDEN
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
     delete:
       summary: Delete the Zones
       operationId: deleteZones
@@ -2591,6 +2622,10 @@ paths:
                   value:
                     status: ok
                     message: Zones deleted.
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
   '/zones/{zone_id}':
     get:
       summary: Get Zone from ID
@@ -2631,15 +2666,11 @@ paths:
                     description: Delivery Zone for Store A
                     status: ok
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
         '404':
-          description: 404 NOT FOUND - `zone_id` do not exist in the project identified with the key parameter.
+          description: 404 NOT FOUND - `zone_id` do not exist.
   /distance/distancematrix/json:
     get:
       summary: Distance Matrix
@@ -2690,13 +2721,11 @@ paths:
                               value: 10287
                               text: 10.3 km
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
     post:
       summary: Get Distance Matrix using POST
       operationId: postDistanceMatrix
@@ -2752,14 +2781,14 @@ paths:
                             distance:
                               value: 10287
                               text: 10.3 km
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /distance/route/json:
     get:
       summary: Get Route
@@ -2865,13 +2894,11 @@ paths:
                               lat: 48.850165
                               lng: 3.41085
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /merchants/brand:
     post:
       summary: Get Merchants Clean Names
@@ -2961,14 +2988,14 @@ paths:
                         logo_url: ''
                         country: ES
                         dirty_name: Pepa SL Gracia
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
   /merchants/place:
     post:
       summary: Get Merchants Place
@@ -3058,14 +3085,14 @@ paths:
                         dirty_name: Pepa SL Gracia
                         merchant_id: 34J21189
                         place_id: ChIJZ9fQvb2ipBIRyaZy8wUqRGQ
+        '400':
+          $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          description: 401 UNAUTHORIZED
-          content:
-            application/json:
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
 components:
   parameters:
     address_cc_format:
@@ -3465,9 +3492,6 @@ components:
       title: Bounds
       type: object
       description: A rectangle in geographical coordinates from points at the southwest and northeast corners.
-      required:
-        - northeast
-        - southwest
       properties:
         northeast:
           $ref: '#/components/schemas/LatLngLiteral'
@@ -3502,9 +3526,6 @@ components:
       title: GeoJsonPoint
       type: object
       description: GeoJSon Point Geometry
-      required:
-        - type
-        - coordinates
       properties:
         type:
           type: string
@@ -3563,10 +3584,6 @@ components:
       title: AssetFeatureResponse
       type: object
       description: Asset Response as a GeoJSon Feature with Asset properties
-      required:
-        - type
-        - properties
-        - geometry
       properties:
         type:
           description: the Geojson Type (only 'Feature')
@@ -3613,7 +3630,7 @@ components:
             open_hours:
               - end: '20:00'
                 start: '05:00'
-            week_day: 2
+            week_day: 5
             current_slice:
               end: '20:00'
               start: '05:00'
@@ -3687,10 +3704,6 @@ components:
       title: AssetFeatureCollectionResponse
       type: object
       description: Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
-      required:
-        - type
-        - features
-        - pagination
       properties:
         type:
           description: the Geojson Type (only 'FeatureCollection')
@@ -3740,7 +3753,7 @@ components:
             open_hours:
               - end: '20:00'
                 start: '05:00'
-            week_day: 2
+            week_day: 5
             current_slice:
               end: '20:00'
               start: '05:00'
@@ -3889,9 +3902,6 @@ components:
       title: Pagination
       type: object
       description: Pagination to reach all returned assets. max 300 assets par page.
-      required:
-        - page
-        - pageCount
       properties:
         page:
           type: integer
@@ -3955,14 +3965,50 @@ components:
           oneOf:
             - type: string
             - type: integer
+    Error400:
+      title: Error400
+      type: object
+      description: The request is invalid
+      properties:
+        status:
+          type: string
+          description: the status of the request
+          example: error
+        value:
+          description: the value of request
+          example: 'The request is invalid, the data is not a valid JSON.'
+          type: string
+    Error401:
+      title: Error401
+      type: object
+      description: Authentication credentials are incorrect
+      properties:
+        detail:
+          description: the details of error request
+          example: Incorrect authentication credentials. Please check or use a valid API Key
+          type: string
+    Error403:
+      title: Error403
+      type: object
+      description: API Request is authenticated but API Key don't have permission to access the resources
+      properties:
+        detail:
+          description: The detail of the forbidden errror message
+          example: This Woosmap API is not enabled for this project.
+          type: string
+    Error429:
+      title: Error429
+      type: object
+      description: Over Query Limit. Check the API Documentation for available QPS.
+      properties:
+        detail:
+          description: The detail of the forbidden errror message
+          example: The rate limit for this endpoint has been exceeded
+          type: string
     GeolocationResponse:
       title: GeolocationResponse
       type: object
       description: A successful geolocation request will return a JSON-formatted response defining a location and radius.
-      required:
-        - accuracy
-        - latitude
-        - longitude
       properties:
         viewport:
           $ref: '#/components/schemas/Bounds'
@@ -4105,7 +4151,7 @@ components:
                   open_hours:
                     - end: '22:00'
                       start: '08:30'
-                  week_day: 2
+                  week_day: 5
                   current_slice:
                     end: '22:00'
                     start: '08:30'
@@ -4187,7 +4233,7 @@ components:
                   open_hours:
                     - end: '22:00'
                       start: '08:30'
-                  week_day: 2
+                  week_day: 5
                   current_slice:
                     end: '22:00'
                     start: '08:30'
@@ -4556,8 +4602,6 @@ components:
       title: LocalitiesAutocompleteCollectionResponse
       type: object
       description: Localities Collection Response containing Localities
-      required:
-        - localities
       properties:
         localities:
           type: array
@@ -4898,8 +4942,6 @@ components:
       title: LocalitiesViewpoint
       type: object
       description: Contains the bounds for the locality
-      required:
-        - bounds
       properties:
         bounds:
           $ref: '#/components/schemas/LocalitiesBounds'
@@ -4907,8 +4949,6 @@ components:
       title: LocalitiesDetailsResponse
       type: object
       description: Localities Details Root Node Response
-      required:
-        - result
       properties:
         result:
           description: The Root Node for Localities Details
@@ -4996,8 +5036,6 @@ components:
       title: AddressAutocompleteCollectionResponse
       type: object
       description: Address Collection Response containing Localities
-      required:
-        - predictions
       properties:
         predictions:
           type: array
@@ -5063,8 +5101,6 @@ components:
       title: AddressDetailsResponse
       type: object
       description: Address Details Response
-      required:
-        - result
       properties:
         status:
           $ref: '#/components/schemas/AddressStatus'
@@ -5621,9 +5657,6 @@ components:
       title: MerchantsBrandClean
       type: object
       description: Attributes describing each Merchant Brand cleaned
-      required:
-        - dirty_name
-        - status
       properties:
         dirty_name:
           description: The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.
@@ -5661,8 +5694,6 @@ components:
       title: MerchantsBrandResponse
       type: object
       description: Attributes describing a Merchant Brand response
-      required:
-        - merchants
       properties:
         merchants:
           description: The list of cleaned transactions
@@ -5812,8 +5843,6 @@ components:
       title: MerchantsPlaceResponse
       type: object
       description: Attributes describing a Merchant Place Response
-      required:
-        - merchants
       properties:
         merchants:
           description: The list of cleaned transactions

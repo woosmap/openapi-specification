@@ -1,3 +1,9 @@
-# [START woosmap_http_error_401_unauthorized_response]
-{"detail": "Incorrect authentication credentials. Please check or use a valid API Key"}
-# [END woosmap_http_error_401_unauthorized_response]
+description: 401 UNAUTHORIZED
+content:
+  application/json:
+    schema:
+      $ref: "../schemas/Error401.yml"
+    examples:
+      Unauthorized:
+        value:
+          detail: "Incorrect authentication credentials. Please check or use a valid API Key"

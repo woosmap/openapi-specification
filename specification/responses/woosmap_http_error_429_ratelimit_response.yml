@@ -1,0 +1,9 @@
+description: 429 RATE LIMIT EXCEEDED
+content:
+  application/json:
+    schema:
+      $ref: "../schemas/Error429.yml"
+    examples:
+      Forbidden:
+        value:
+          detail: "The rate limit for this endpoint has been exceeded"

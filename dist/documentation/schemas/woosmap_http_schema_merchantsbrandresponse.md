@@ -4,9 +4,9 @@
 
 Attributes describing a Merchant Brand response
 
-| Field                                                                                                             | Required     | Type                                                                           | Description                                                                                                                                                            |
-| :---------------------------------------------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <h4 id="MerchantsBrandResponse-merchants" class="add-link schema-object-property-key"><code>merchants</code></h4> | **required** | Array&lt;[MerchantsBrandClean](#MerchantsBrandClean "MerchantsBrandClean")&gt; | <div class="ref-property-description"><p>The list of cleaned transactions</p><p>See <a href="#MerchantsBrandClean">MerchantsBrandClean</a> for more information.</div> |
+| Field                                                                                                             | Required | Type                                                                           | Description                                                                                                                                                            |
+| :---------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="MerchantsBrandResponse-merchants" class="add-link schema-object-property-key"><code>merchants</code></h4> | optional | Array&lt;[MerchantsBrandClean](#MerchantsBrandClean "MerchantsBrandClean")&gt; | <div class="ref-property-description"><p>The list of cleaned transactions</p><p>See <a href="#MerchantsBrandClean">MerchantsBrandClean</a> for more information.</div> |
 
 <h4 class="schema-object-example" id="MerchantsBrandResponse-example">Example</h4>
 

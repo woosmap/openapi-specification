@@ -4,10 +4,10 @@
 
 Address Details Response
 
-| Field                                                                                                       | Required     | Type                                            | Description                                                                            |
-| :---------------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------- | -------------------------------------------------------------------------------------- |
-| <h4 id="AddressDetailsResponse-result" class="add-link schema-object-property-key"><code>result</code></h4> | **required** | object                                          | <div class="nonref-property-description"><p>the root node of address details</p></div> |
-| <h4 id="AddressDetailsResponse-status" class="add-link schema-object-property-key"><code>status</code></h4> | optional     | [AddressStatus](#AddressStatus "AddressStatus") | See [AddressStatus](#AddressStatus "AddressStatus") for more information.              |
+| Field                                                                                                       | Required | Type                                            | Description                                                                            |
+| :---------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------- | -------------------------------------------------------------------------------------- |
+| <h4 id="AddressDetailsResponse-result" class="add-link schema-object-property-key"><code>result</code></h4> | optional | object                                          | <div class="nonref-property-description"><p>the root node of address details</p></div> |
+| <h4 id="AddressDetailsResponse-status" class="add-link schema-object-property-key"><code>status</code></h4> | optional | [AddressStatus](#AddressStatus "AddressStatus") | See [AddressStatus](#AddressStatus "AddressStatus") for more information.              |
 
 <h4 class="schema-object-example" id="AddressDetailsResponse-example">Example</h4>
 

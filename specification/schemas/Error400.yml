@@ -1,0 +1,12 @@
+title: Error400
+type: object
+description: The request is invalid
+properties:
+  status:
+    type: string
+    description: the status of the request
+    example: "error"
+  value:
+    description: the value of request
+    example: "The request is invalid, the data is not a valid JSON."
+    type: string

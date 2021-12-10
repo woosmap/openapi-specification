@@ -28,6 +28,11 @@ responses:
           default:
             value:
               $ref: "../../responses/woosmap_http_zones_collection_request_response.yml"
-
+  "400":
+    $ref: "../../responses/woosmap_http_error_400_invalid_response.yml"
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
 
 

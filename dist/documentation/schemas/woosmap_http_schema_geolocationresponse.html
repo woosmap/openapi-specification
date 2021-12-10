@@ -24,7 +24,7 @@
           <code>accuracy</code>
         </h4>
       </td>
-      <td><strong>required</strong></td>
+      <td>optional</td>
       <td>number</td>
       <td>
         <div class="nonref-property-description">
@@ -34,46 +34,6 @@
             the IP address is likely to be. If your Geolocation response shows a
             low value in the <code>accuracy</code> field (&#x3C;=50), the IP has
             strong chance to be correctly located.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="GeolocationResponse-latitude"
-          class="add-link schema-object-property-key"
-        >
-          <code>latitude</code>
-        </h4>
-      </td>
-      <td><strong>required</strong></td>
-      <td>number</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Approximate latitude of the geographical area associated with the IP
-            address
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="GeolocationResponse-longitude"
-          class="add-link schema-object-property-key"
-        >
-          <code>longitude</code>
-        </h4>
-      </td>
-      <td><strong>required</strong></td>
-      <td>number</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Approximate longitude of the geographical area associated with the
-            IP address
           </p>
         </div>
       </td>
@@ -140,6 +100,46 @@
       <td>string</td>
       <td>
         <div class="nonref-property-description"><p>Country name</p></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="GeolocationResponse-latitude"
+          class="add-link schema-object-property-key"
+        >
+          <code>latitude</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Approximate latitude of the geographical area associated with the IP
+            address
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="GeolocationResponse-longitude"
+          class="add-link schema-object-property-key"
+        >
+          <code>longitude</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Approximate longitude of the geographical area associated with the
+            IP address
+          </p>
+        </div>
       </td>
     </tr>
     <tr>

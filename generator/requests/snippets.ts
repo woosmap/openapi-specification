@@ -42,7 +42,7 @@ const SNIPPET_LANG_VARIANTS = [
 const GENERATOR_OPTIONS = {
   nodejs: {},
   go: {},
-  curl: { mulitLine: true, longFormat: false },
+  curl: { multiLine: true, longFormat: false },
   python: { indentCount: 4 },
   java: {},
   ruby: {},
