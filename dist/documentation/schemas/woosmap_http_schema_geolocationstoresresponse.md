@@ -84,7 +84,7 @@ A successful geolocation request will return a JSON-formatted response defining 
                 "start": "08:30"
               }
             ],
-            "week_day": 5,
+            "week_day": 2,
             "current_slice": {
               "end": "22:00",
               "start": "08:30"
@@ -217,7 +217,7 @@ A successful geolocation request will return a JSON-formatted response defining 
                 "start": "08:30"
               }
             ],
-            "week_day": 5,
+            "week_day": 2,
             "current_slice": {
               "end": "22:00",
               "start": "08:30"
