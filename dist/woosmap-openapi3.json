@@ -3287,7 +3287,7 @@
             "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "description": "429 RATE LIMIT EXCEEDED",
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4223,7 +4223,7 @@
             }
           },
           "400": {
-            "description": "400 INVALID",
+            "description": "Invalid. The data is not a valid JSON.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4241,7 +4241,7 @@
             }
           },
           "401": {
-            "description": "401 UNAUTHORIZED",
+            "description": "Unauthorized. Incorrect authentication credentials.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4258,7 +4258,7 @@
             }
           },
           "403": {
-            "description": "403 FORBIDDEN",
+            "description": "Forbidden. This Woosmap API is not enabled for this project.",
             "content": {
               "application/json": {
                 "schema": {
