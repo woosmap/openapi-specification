@@ -5333,7 +5333,10 @@ components:
         status:
           type: string
           description: |
-            * `OK` indicates the response contains a valid result. * `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be matched to the network. * `ZERO_RESULTS` indicates no route could be found between the origin and destination.
+            Status returned for Distance Matrix Element Response.
+              - `OK` indicates the response contains a valid result.
+              - `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be matched to the network.
+              - `ZERO_RESULTS` indicates no route could be found between the origin and destination.
           enum:
             - OK
             - NOT_FOUND
