@@ -103,6 +103,15 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_distance_matrix_request",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/distance/distancematrix/json",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_distance_matrix_request.yml"
+            ),
+        }),
+    },
+    {
         regionTag: "woosmap_http_distance_route",
         request: new Request({
             url: new Url({

@@ -13,6 +13,7 @@ ts_library(
         "@npm//postman-code-generators",
         "@npm//postman-collection",
         "@npm//query-string",
+        "@npm//prettier",
         "@npm//tar-stream",
         "@npm//yargs",
     ],
@@ -35,4 +36,15 @@ genrule(
     tools = [
         ":_snippets_bin",
     ],
+)
+
+
+nodejs_binary(
+    name = "_samples_bin",
+     data = [
+        ":_lib",
+        "//specification:openapi3",
+    ],
+    entry_point = ":x-code-samples.ts",
+    templated_args = ["--bazel_patch_module_resolver"],
 )

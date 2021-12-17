@@ -25,22 +25,22 @@ A successful geolocation request will return a JSON-formatted response defining 
   "country_code": "US",
   "country_name": "United States",
   "continent": "North America",
-  "latitude": 38.719,
-  "longitude": -77.1067,
+  "latitude": 38.7304,
+  "longitude": -77.0634,
   "accuracy": 5,
   "viewport": {
     "northeast": {
-      "lat": 38.763915764205976,
-      "lng": -77.0491321464058
+      "lat": 38.77531576420598,
+      "lng": -77.00582296106178
     },
     "southwest": {
-      "lat": 38.674084235794034,
-      "lng": -77.16426785359421
+      "lat": 38.68548423579403,
+      "lng": -77.12097703893822
     }
   },
   "city": "Alexandria",
   "region_state": "Virginia",
-  "postal_code": "22309",
+  "postal_code": "22308",
   "timezone": "America/New_York",
   "stores": {
     "type": "FeatureCollection",
@@ -75,7 +75,7 @@ A successful geolocation request will return a JSON-formatted response defining 
             "drive",
             "click_and_collect"
           ],
-          "distance": 0,
+          "distance": 3972.39013285,
           "open": {
             "open_now": true,
             "open_hours": [
@@ -84,7 +84,7 @@ A successful geolocation request will return a JSON-formatted response defining 
                 "start": "08:30"
               }
             ],
-            "week_day": 2,
+            "week_day": 5,
             "current_slice": {
               "end": "22:00",
               "start": "08:30"
@@ -208,19 +208,20 @@ A successful geolocation request will return a JSON-formatted response defining 
           "types": [
             "drive"
           ],
-          "distance": 23062.07621905,
+          "distance": 23296.5115883,
           "open": {
-            "open_now": true,
+            "open_now": false,
             "open_hours": [
               {
                 "end": "22:00",
                 "start": "08:30"
               }
             ],
-            "week_day": 2,
-            "current_slice": {
+            "week_day": 5,
+            "next_opening": {
               "end": "22:00",
-              "start": "08:30"
+              "start": "08:30",
+              "day": "2021-12-17"
             }
           },
           "weekly_opening": {

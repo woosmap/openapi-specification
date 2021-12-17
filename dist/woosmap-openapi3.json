@@ -59,22 +59,22 @@
                       "country_code": "US",
                       "country_name": "United States",
                       "continent": "North America",
-                      "latitude": 38.719,
-                      "longitude": -77.1067,
+                      "latitude": 38.7304,
+                      "longitude": -77.0634,
                       "accuracy": 5,
                       "viewport": {
                         "northeast": {
-                          "lat": 38.763915764205976,
-                          "lng": -77.0491321464058
+                          "lat": 38.77531576420598,
+                          "lng": -77.00582296106178
                         },
                         "southwest": {
-                          "lat": 38.674084235794034,
-                          "lng": -77.16426785359421
+                          "lat": 38.68548423579403,
+                          "lng": -77.12097703893822
                         }
                       },
                       "city": "Alexandria",
                       "region_state": "Virginia",
-                      "postal_code": "22309",
+                      "postal_code": "22308",
                       "timezone": "America/New_York"
                     }
                   }
@@ -91,7 +91,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/geolocation/stores": {
@@ -141,22 +158,22 @@
                       "country_code": "US",
                       "country_name": "United States",
                       "continent": "North America",
-                      "latitude": 38.719,
-                      "longitude": -77.1067,
+                      "latitude": 38.7304,
+                      "longitude": -77.0634,
                       "accuracy": 5,
                       "viewport": {
                         "northeast": {
-                          "lat": 38.763915764205976,
-                          "lng": -77.0491321464058
+                          "lat": 38.77531576420598,
+                          "lng": -77.00582296106178
                         },
                         "southwest": {
-                          "lat": 38.674084235794034,
-                          "lng": -77.16426785359421
+                          "lat": 38.68548423579403,
+                          "lng": -77.12097703893822
                         }
                       },
                       "city": "Alexandria",
                       "region_state": "Virginia",
-                      "postal_code": "22309",
+                      "postal_code": "22308",
                       "timezone": "America/New_York",
                       "stores": {
                         "type": "FeatureCollection",
@@ -191,7 +208,7 @@
                                 "drive",
                                 "click_and_collect"
                               ],
-                              "distance": 0,
+                              "distance": 3972.39013285,
                               "open": {
                                 "open_now": true,
                                 "open_hours": [
@@ -200,7 +217,7 @@
                                     "start": "08:30"
                                   }
                                 ],
-                                "week_day": 2,
+                                "week_day": 5,
                                 "current_slice": {
                                   "end": "22:00",
                                   "start": "08:30"
@@ -324,19 +341,20 @@
                               "types": [
                                 "drive"
                               ],
-                              "distance": 23062.07621905,
+                              "distance": 23296.5115883,
                               "open": {
-                                "open_now": true,
+                                "open_now": false,
                                 "open_hours": [
                                   {
                                     "end": "22:00",
                                     "start": "08:30"
                                   }
                                 ],
-                                "week_day": 2,
-                                "current_slice": {
+                                "week_day": 5,
+                                "next_opening": {
                                   "end": "22:00",
-                                  "start": "08:30"
+                                  "start": "08:30",
+                                  "day": "2021-12-17"
                                 }
                               },
                               "weekly_opening": {
@@ -442,7 +460,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254',\n  headers: { }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/stores": {
@@ -606,7 +641,24 @@
           "403": {
             "$ref": "#/paths/~1zones/put/responses/403"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X POST 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"stores\": [\n    {\n      \"types\": [\n        \"drive\",\n        \"click_and_collect\"\n      ],\n      \"tags\": [\n        \"wifi\",\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.719,\n        \"lng\": -77.1067\n      },\n      \"storeId\": \"STORE_ID_123456\",\n      \"name\": \"My Cool Store\",\n      \"address\": {\n        \"lines\": [\n          \"Building Centre\",\n          \"26 Store Street\"\n        ],\n        \"countryCode\": \"UK\",\n        \"city\": \"London\",\n        \"zipcode\": \"WC1E 7BT\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"Europe/London\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"start\": \"08:00\",\n              \"end\": \"23:00\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"types\": [\n        \"drive\"\n      ],\n      \"tags\": [\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.5239,\n        \"lng\": -77.0157\n      },\n      \"storeId\": \"STORE_ID_45678\",\n      \"name\": \"My Cool Store 2\",\n      \"address\": {\n        \"lines\": [\n          \"1805-1899\",\n          \"Orchard St\"\n        ],\n        \"countryCode\": \"US\",\n        \"city\": \"Alexandria\",\n        \"zipcode\": \"22309\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"America/New_York\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"types\": [\n                \"drive\"\n            ],\n            \"tags\": [\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.5239,\n                \"lng\": -77.0157\n            },\n            \"storeId\": \"STORE_ID_45678\",\n            \"name\": \"My Cool Store 2\",\n            \"address\": {\n                \"lines\": [\n                    \"1805-1899\",\n                    \"Orchard St\"\n                ],\n                \"countryCode\": \"US\",\n                \"city\": \"Alexandria\",\n                \"zipcode\": \"22309\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"America/New_York\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"stores\": [\n    {\n      \"types\": [\n        \"drive\",\n        \"click_and_collect\"\n      ],\n      \"tags\": [\n        \"wifi\",\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.719,\n        \"lng\": -77.1067\n      },\n      \"storeId\": \"STORE_ID_123456\",\n      \"name\": \"My Cool Store\",\n      \"address\": {\n        \"lines\": [\n          \"Building Centre\",\n          \"26 Store Street\"\n        ],\n        \"countryCode\": \"UK\",\n        \"city\": \"London\",\n        \"zipcode\": \"WC1E 7BT\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"Europe/London\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"start\": \"08:00\",\n              \"end\": \"23:00\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"types\": [\n        \"drive\"\n      ],\n      \"tags\": [\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.5239,\n        \"lng\": -77.0157\n      },\n      \"storeId\": \"STORE_ID_45678\",\n      \"name\": \"My Cool Store 2\",\n      \"address\": {\n        \"lines\": [\n          \"1805-1899\",\n          \"Orchard St\"\n        ],\n        \"countryCode\": \"US\",\n        \"city\": \"Alexandria\",\n        \"zipcode\": \"22309\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"America/New_York\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       },
       "put": {
         "summary": "Update the Assets",
@@ -725,7 +777,24 @@
           "403": {
             "$ref": "#/paths/~1zones/put/responses/403"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X PUT 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"stores\": [\n    {\n      \"types\": [\n        \"drive\",\n        \"click_and_collect\"\n      ],\n      \"tags\": [\n        \"wifi\",\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.719,\n        \"lng\": -77.1067\n      },\n      \"storeId\": \"STORE_ID_123456\",\n      \"name\": \"My Cool Store\",\n      \"address\": {\n        \"lines\": [\n          \"698-500\",\n          \" Lloyds Ln\"\n        ],\n        \"countryCode\": \"US\",\n        \"city\": \"Alexandria\",\n        \"zipcode\": \"VA 22302\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"Europe/London\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"start\": \"08:00\",\n              \"end\": \"23:00\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"698-500\",\n                    \" Lloyds Ln\"\n                ],\n                \"countryCode\": \"US\",\n                \"city\": \"Alexandria\",\n                \"zipcode\": \"VA 22302\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"PUT\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"stores\": [\n    {\n      \"types\": [\n        \"drive\",\n        \"click_and_collect\"\n      ],\n      \"tags\": [\n        \"wifi\",\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.719,\n        \"lng\": -77.1067\n      },\n      \"storeId\": \"STORE_ID_123456\",\n      \"name\": \"My Cool Store\",\n      \"address\": {\n        \"lines\": [\n          \"698-500\",\n          \" Lloyds Ln\"\n        ],\n        \"countryCode\": \"US\",\n        \"city\": \"Alexandria\",\n        \"zipcode\": \"VA 22302\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"Europe/London\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"start\": \"08:00\",\n              \"end\": \"23:00\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n});\n\nvar config = {\n  method: 'put',\n  url: 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       },
       "delete": {
         "summary": "Delete the Assets",
@@ -780,7 +849,24 @@
           "403": {
             "$ref": "#/paths/~1zones/put/responses/403"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X DELETE 'https://api.woosmap.com/stores/?private_key=YOUR_PRIVATE_API_KEY'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"DELETE\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'delete',\n  url: 'https://api.woosmap.com/stores/?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/stores/{storeId}": {
@@ -864,17 +950,18 @@
                           "Coffee shop"
                         ],
                         "open": {
-                          "open_now": true,
+                          "open_now": false,
                           "open_hours": [
                             {
                               "end": "20:00",
                               "start": "05:00"
                             }
                           ],
-                          "week_day": 2,
-                          "current_slice": {
+                          "week_day": 5,
+                          "next_opening": {
                             "end": "20:00",
-                            "start": "05:00"
+                            "start": "05:00",
+                            "day": "2021-12-17"
                           }
                         },
                         "weekly_opening": {
@@ -1013,7 +1100,24 @@
           "404": {
             "description": "Not Found - `storeId` do not exist."
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/stores/replace": {
@@ -1177,7 +1281,24 @@
           "403": {
             "$ref": "#/paths/~1zones/put/responses/403"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X POST 'https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"stores\": [\n    {\n      \"types\": [\n        \"drive\",\n        \"click_and_collect\"\n      ],\n      \"tags\": [\n        \"wifi\",\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.719,\n        \"lng\": -77.1067\n      },\n      \"storeId\": \"STORE_ID_123456\",\n      \"name\": \"My Cool Store\",\n      \"address\": {\n        \"lines\": [\n          \"Building Centre\",\n          \"26 Store Street\"\n        ],\n        \"countryCode\": \"UK\",\n        \"city\": \"London\",\n        \"zipcode\": \"WC1E 7BT\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"Europe/London\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"start\": \"08:00\",\n              \"end\": \"23:00\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"types\": [\n        \"drive\"\n      ],\n      \"tags\": [\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.5239,\n        \"lng\": -77.0157\n      },\n      \"storeId\": \"STORE_ID_45678\",\n      \"name\": \"My Cool Store 2\",\n      \"address\": {\n        \"lines\": [\n          \"1805-1899\",\n          \"Orchard St\"\n        ],\n        \"countryCode\": \"US\",\n        \"city\": \"Alexandria\",\n        \"zipcode\": \"22309\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"America/New_York\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"stores\": [\n        {\n            \"types\": [\n                \"drive\",\n                \"click_and_collect\"\n            ],\n            \"tags\": [\n                \"wifi\",\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.719,\n                \"lng\": -77.1067\n            },\n            \"storeId\": \"STORE_ID_123456\",\n            \"name\": \"My Cool Store\",\n            \"address\": {\n                \"lines\": [\n                    \"Building Centre\",\n                    \"26 Store Street\"\n                ],\n                \"countryCode\": \"UK\",\n                \"city\": \"London\",\n                \"zipcode\": \"WC1E 7BT\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"Europe/London\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                },\n                \"special\": {\n                    \"2015-02-07\": [\n                        {\n                            \"start\": \"08:00\",\n                            \"end\": \"23:00\"\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"types\": [\n                \"drive\"\n            ],\n            \"tags\": [\n                \"covered_parking\"\n            ],\n            \"location\": {\n                \"lat\": 38.5239,\n                \"lng\": -77.0157\n            },\n            \"storeId\": \"STORE_ID_45678\",\n            \"name\": \"My Cool Store 2\",\n            \"address\": {\n                \"lines\": [\n                    \"1805-1899\",\n                    \"Orchard St\"\n                ],\n                \"countryCode\": \"US\",\n                \"city\": \"Alexandria\",\n                \"zipcode\": \"22309\"\n            },\n            \"contact\": {\n                \"website\": \"https://www.woosmap.com\",\n                \"phone\": \"+44 20 7693 4000\",\n                \"email\": \"contact@woosmap.com\"\n            },\n            \"userProperties\": {\n                \"some_user_properties\": \"associated user value\"\n            },\n            \"openingHours\": {\n                \"timezone\": \"America/New_York\",\n                \"usual\": {\n                    \"1\": [],\n                    \"default\": [\n                        {\n                            \"start\": \"08:30\",\n                            \"end\": \"22:00\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"stores\": [\n    {\n      \"types\": [\n        \"drive\",\n        \"click_and_collect\"\n      ],\n      \"tags\": [\n        \"wifi\",\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.719,\n        \"lng\": -77.1067\n      },\n      \"storeId\": \"STORE_ID_123456\",\n      \"name\": \"My Cool Store\",\n      \"address\": {\n        \"lines\": [\n          \"Building Centre\",\n          \"26 Store Street\"\n        ],\n        \"countryCode\": \"UK\",\n        \"city\": \"London\",\n        \"zipcode\": \"WC1E 7BT\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"Europe/London\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"start\": \"08:00\",\n              \"end\": \"23:00\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"types\": [\n        \"drive\"\n      ],\n      \"tags\": [\n        \"covered_parking\"\n      ],\n      \"location\": {\n        \"lat\": 38.5239,\n        \"lng\": -77.0157\n      },\n      \"storeId\": \"STORE_ID_45678\",\n      \"name\": \"My Cool Store 2\",\n      \"address\": {\n        \"lines\": [\n          \"1805-1899\",\n          \"Orchard St\"\n        ],\n        \"countryCode\": \"US\",\n        \"city\": \"Alexandria\",\n        \"zipcode\": \"22309\"\n      },\n      \"contact\": {\n        \"website\": \"https://www.woosmap.com\",\n        \"phone\": \"+44 20 7693 4000\",\n        \"email\": \"contact@woosmap.com\"\n      },\n      \"userProperties\": {\n        \"some_user_properties\": \"associated user value\"\n      },\n      \"openingHours\": {\n        \"timezone\": \"America/New_York\",\n        \"usual\": {\n          \"1\": [],\n          \"default\": [\n            {\n              \"start\": \"08:30\",\n              \"end\": \"22:00\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/stores/search": {
@@ -1277,7 +1398,7 @@
                                   "start": "06:30"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "06:30"
@@ -1446,7 +1567,7 @@
                                   "start": "06:30"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "06:30"
@@ -1616,7 +1737,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -1780,7 +1901,7 @@
                                   "start": "08:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "08:00"
@@ -1951,7 +2072,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -2122,7 +2243,7 @@
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:30"
@@ -2292,7 +2413,7 @@
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:30"
@@ -2459,7 +2580,7 @@
                                   "start": "08:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "08:00"
@@ -2630,7 +2751,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -2800,7 +2921,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -2971,7 +3092,7 @@
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:30"
@@ -3141,7 +3262,7 @@
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
+                              "week_day": 5,
                               "current_slice": {
                                 "end": "18:00",
                                 "start": "07:00"
@@ -3303,7 +3424,24 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/stores/autocomplete": {
@@ -3449,7 +3587,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/localities/autocomplete": {
@@ -3639,7 +3794,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/localities/details": {
@@ -3829,7 +4001,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/address/autocomplete/json": {
@@ -3923,7 +4112,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/address/details/json": {
@@ -4044,7 +4250,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/address/details/json?public_id=aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/address/details/json?public_id=aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/address/details/json?public_id=aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/zones": {
@@ -4139,7 +4362,18 @@
           "403": {
             "$ref": "#/paths/~1zones/put/responses/403"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "$ref": "#/paths/~1zones/put/x-codeSamples/0"
+          },
+          {
+            "$ref": "#/paths/~1zones/put/x-codeSamples/1"
+          },
+          {
+            "$ref": "#/paths/~1zones/put/x-codeSamples/2"
+          }
+        ]
       },
       "put": {
         "summary": "Update the Zones.",
@@ -4274,7 +4508,24 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X POST 'https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"zones\": [\n    {\n      \"zone_id\": \"ZoneA\",\n      \"description\": \"Delivery Zone for Store A\",\n      \"store_id\": \"STORE_ID_123456\",\n      \"polygon\": \"POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))\",\n      \"types\": [\n        \"delivery\"\n      ]\n    },\n    {\n      \"zone_id\": \"ZoneB\",\n      \"description\": \"Delivery Zone for Store B\",\n      \"store_id\": \"STORE_ID_123456\",\n      \"polygon\": \"POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))\",\n      \"types\": [\n        \"delivery\"\n      ]\n    },\n    {\n      \"zone_id\": \"ZoneC\",\n      \"description\": \"Delivery Zone for Store C\",\n      \"store_id\": \"STORE_ID_45678\",\n      \"polygon\": \"POLYGON ((-122.4758889 37.7524995,-122.4751594 37.7321718,-122.4688079 37.7299995,-122.4648597 37.7261979,-122.4519851 37.7228035,-122.4483802 37.7215815,-122.4458053 37.726741,-122.4365356 37.7310857,-122.4315574 37.7324433,-122.4246909 37.7312214,-122.4219444 37.731493,-122.423071 37.7511239,-122.4333707 37.7512596,-122.4354306 37.7602172,-122.4515485 37.7595934,-122.4528628 37.7582744,-122.4540375 37.7566755,-122.4565266 37.7513144,-122.4601315 37.7521288,-122.4618481 37.7514501,-122.4635648 37.7530788,-122.4758889 37.7524995))\",\n      \"types\": [\n        \"delivery\"\n      ]\n    }\n  ]\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"zones\": [\n        {\n            \"zone_id\": \"ZoneA\",\n            \"description\": \"Delivery Zone for Store A\",\n            \"store_id\": \"STORE_ID_123456\",\n            \"polygon\": \"POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))\",\n            \"types\": [\n                \"delivery\"\n            ]\n        },\n        {\n            \"zone_id\": \"ZoneB\",\n            \"description\": \"Delivery Zone for Store B\",\n            \"store_id\": \"STORE_ID_123456\",\n            \"polygon\": \"POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))\",\n            \"types\": [\n                \"delivery\"\n            ]\n        },\n        {\n            \"zone_id\": \"ZoneC\",\n            \"description\": \"Delivery Zone for Store C\",\n            \"store_id\": \"STORE_ID_45678\",\n            \"polygon\": \"POLYGON ((-122.4758889 37.7524995,-122.4751594 37.7321718,-122.4688079 37.7299995,-122.4648597 37.7261979,-122.4519851 37.7228035,-122.4483802 37.7215815,-122.4458053 37.726741,-122.4365356 37.7310857,-122.4315574 37.7324433,-122.4246909 37.7312214,-122.4219444 37.731493,-122.423071 37.7511239,-122.4333707 37.7512596,-122.4354306 37.7602172,-122.4515485 37.7595934,-122.4528628 37.7582744,-122.4540375 37.7566755,-122.4565266 37.7513144,-122.4601315 37.7521288,-122.4618481 37.7514501,-122.4635648 37.7530788,-122.4758889 37.7524995))\",\n            \"types\": [\n                \"delivery\"\n            ]\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"zones\": [\n    {\n      \"zone_id\": \"ZoneA\",\n      \"description\": \"Delivery Zone for Store A\",\n      \"store_id\": \"STORE_ID_123456\",\n      \"polygon\": \"POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))\",\n      \"types\": [\n        \"delivery\"\n      ]\n    },\n    {\n      \"zone_id\": \"ZoneB\",\n      \"description\": \"Delivery Zone for Store B\",\n      \"store_id\": \"STORE_ID_123456\",\n      \"polygon\": \"POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))\",\n      \"types\": [\n        \"delivery\"\n      ]\n    },\n    {\n      \"zone_id\": \"ZoneC\",\n      \"description\": \"Delivery Zone for Store C\",\n      \"store_id\": \"STORE_ID_45678\",\n      \"polygon\": \"POLYGON ((-122.4758889 37.7524995,-122.4751594 37.7321718,-122.4688079 37.7299995,-122.4648597 37.7261979,-122.4519851 37.7228035,-122.4483802 37.7215815,-122.4458053 37.726741,-122.4365356 37.7310857,-122.4315574 37.7324433,-122.4246909 37.7312214,-122.4219444 37.731493,-122.423071 37.7511239,-122.4333707 37.7512596,-122.4354306 37.7602172,-122.4515485 37.7595934,-122.4528628 37.7582744,-122.4540375 37.7566755,-122.4565266 37.7513144,-122.4601315 37.7521288,-122.4618481 37.7514501,-122.4635648 37.7530788,-122.4758889 37.7524995))\",\n      \"types\": [\n        \"delivery\"\n      ]\n    }\n  ]\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       },
       "delete": {
         "summary": "Delete the Zones",
@@ -4329,7 +4580,24 @@
           "403": {
             "$ref": "#/paths/~1zones/put/responses/403"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X DELETE 'https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"DELETE\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'delete',\n  url: 'https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/zones/{zone_id}": {
@@ -4400,7 +4668,24 @@
           "404": {
             "description": "Not Found - `zone_id` do not exist."
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/distance/distancematrix/json": {
@@ -4503,7 +4788,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/distance/distancematrix/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&elements=duration_distance&method=distance&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/distance/distancematrix/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&elements=duration_distance&method=distance&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/distance/distancematrix/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&elements=duration_distance&method=distance&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       },
       "post": {
         "summary": "Get Distance Matrix using POST",
@@ -4606,7 +4908,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X POST 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\"\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n    \"destinations\": \"48.83534,2.368308\",\n    \"units\": \"imperial\",\n    \"elements\": \"duration_distance\",\n    \"method\": \"distance\"\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\"\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/distance/route/json": {
@@ -4794,7 +5113,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/distance/route/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/distance/route/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/distance/route/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/merchants/brand": {
@@ -4948,7 +5284,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X POST 'https://api.woosmap.com/merchants/brand?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"merchants\": [\n    {\n      \"dirty_name\": \"MCDO UK 2231 EP\",\n      \"country\": \"GB\"\n    },\n    {\n      \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n      \"country\": \"IT\"\n    },\n    {\n      \"dirty_name\": \"APOLLO PHARMACY BANGALORE IN\",\n      \"country\": \"IN\"\n    },\n    {\n      \"dirty_name\": \"PIZZA HUT - SHOP 157\"\n    },\n    {\n      \"dirty_name\": \"CARREFOUR CITY 3112846\",\n      \"country\": \"FR\"\n    },\n    {\n      \"dirty_name\": \"ITUNES.COM/BILL\",\n      \"country\": \"IE\"\n    },\n    {\n      \"dirty_name\": \"Pepa SL Gracia\",\n      \"country\": \"ES\"\n    }\n  ]\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/merchants/brand?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"merchants\": [\n        {\n            \"dirty_name\": \"MCDO UK 2231 EP\",\n            \"country\": \"GB\"\n        },\n        {\n            \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n            \"country\": \"IT\"\n        },\n        {\n            \"dirty_name\": \"APOLLO PHARMACY BANGALORE IN\",\n            \"country\": \"IN\"\n        },\n        {\n            \"dirty_name\": \"PIZZA HUT - SHOP 157\"\n        },\n        {\n            \"dirty_name\": \"CARREFOUR CITY 3112846\",\n            \"country\": \"FR\"\n        },\n        {\n            \"dirty_name\": \"ITUNES.COM/BILL\",\n            \"country\": \"IE\"\n        },\n        {\n            \"dirty_name\": \"Pepa SL Gracia\",\n            \"country\": \"ES\"\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"merchants\": [\n    {\n      \"dirty_name\": \"MCDO UK 2231 EP\",\n      \"country\": \"GB\"\n    },\n    {\n      \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n      \"country\": \"IT\"\n    },\n    {\n      \"dirty_name\": \"APOLLO PHARMACY BANGALORE IN\",\n      \"country\": \"IN\"\n    },\n    {\n      \"dirty_name\": \"PIZZA HUT - SHOP 157\"\n    },\n    {\n      \"dirty_name\": \"CARREFOUR CITY 3112846\",\n      \"country\": \"FR\"\n    },\n    {\n      \"dirty_name\": \"ITUNES.COM/BILL\",\n      \"country\": \"IE\"\n    },\n    {\n      \"dirty_name\": \"Pepa SL Gracia\",\n      \"country\": \"ES\"\n    }\n  ]\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/merchants/brand?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     },
     "/merchants/place": {
@@ -5094,7 +5447,24 @@
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "curl",
+            "source": "curl -L -X POST 'https://api.woosmap.com/merchants/place?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"merchants\": [\n    {\n      \"dirty_name\": \"MCDO UK 2231 EP\",\n      \"country\": \"GB\",\n      \"merchant_id\": \"234482729011\"\n    },\n    {\n      \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n      \"country\": \"IT\",\n      \"merchant_id\": \"*44532UY2T33219\"\n    },\n    {\n      \"dirty_name\": \"CARREFOUR CITY 3112846\",\n      \"country\": \"FR\",\n      \"merchant_id\": \"9651781125\"\n    },\n    {\n      \"dirty_name\": \"ITUNES.COM/BILL\",\n      \"country\": \"IE\",\n      \"merchant_id\": \"2070070200925\"\n    },\n    {\n      \"dirty_name\": \"Pepa SL Gracia\",\n      \"country\": \"ES\",\n      \"merchant_id\": \"34J21189\"\n    }\n  ]\n}'"
+          },
+          {
+            "lang": "python",
+            "label": "python",
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/merchants/place?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"merchants\": [\n        {\n            \"dirty_name\": \"MCDO UK 2231 EP\",\n            \"country\": \"GB\",\n            \"merchant_id\": \"234482729011\"\n        },\n        {\n            \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n            \"country\": \"IT\",\n            \"merchant_id\": \"*44532UY2T33219\"\n        },\n        {\n            \"dirty_name\": \"CARREFOUR CITY 3112846\",\n            \"country\": \"FR\",\n            \"merchant_id\": \"9651781125\"\n        },\n        {\n            \"dirty_name\": \"ITUNES.COM/BILL\",\n            \"country\": \"IE\",\n            \"merchant_id\": \"2070070200925\"\n        },\n        {\n            \"dirty_name\": \"Pepa SL Gracia\",\n            \"country\": \"ES\",\n            \"merchant_id\": \"34J21189\"\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "nodejs",
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"merchants\": [\n    {\n      \"dirty_name\": \"MCDO UK 2231 EP\",\n      \"country\": \"GB\",\n      \"merchant_id\": \"234482729011\"\n    },\n    {\n      \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n      \"country\": \"IT\",\n      \"merchant_id\": \"*44532UY2T33219\"\n    },\n    {\n      \"dirty_name\": \"CARREFOUR CITY 3112846\",\n      \"country\": \"FR\",\n      \"merchant_id\": \"9651781125\"\n    },\n    {\n      \"dirty_name\": \"ITUNES.COM/BILL\",\n      \"country\": \"IE\",\n      \"merchant_id\": \"2070070200925\"\n    },\n    {\n      \"dirty_name\": \"Pepa SL Gracia\",\n      \"country\": \"ES\",\n      \"merchant_id\": \"34J21189\"\n    }\n  ]\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/merchants/place?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
       }
     }
   },
@@ -5647,17 +6017,18 @@
               "Coffee shop"
             ],
             "open": {
-              "open_now": true,
+              "open_now": false,
               "open_hours": [
                 {
                   "end": "20:00",
                   "start": "05:00"
                 }
               ],
-              "week_day": 2,
-              "current_slice": {
+              "week_day": 5,
+              "next_opening": {
                 "end": "20:00",
-                "start": "05:00"
+                "start": "05:00",
+                "day": "2021-12-17"
               }
             },
             "weekly_opening": {
@@ -5843,17 +6214,18 @@
               "Coffee shop"
             ],
             "open": {
-              "open_now": true,
+              "open_now": false,
               "open_hours": [
                 {
                   "end": "20:00",
                   "start": "05:00"
                 }
               ],
-              "week_day": 2,
-              "current_slice": {
+              "week_day": 5,
+              "next_opening": {
                 "end": "20:00",
-                "start": "05:00"
+                "start": "05:00",
+                "day": "2021-12-17"
               }
             },
             "weekly_opening": {
@@ -6298,22 +6670,22 @@
           "country_code": "US",
           "country_name": "United States",
           "continent": "North America",
-          "latitude": 38.719,
-          "longitude": -77.1067,
+          "latitude": 38.7304,
+          "longitude": -77.0634,
           "accuracy": 5,
           "viewport": {
             "northeast": {
-              "lat": 38.763915764205976,
-              "lng": -77.0491321464058
+              "lat": 38.77531576420598,
+              "lng": -77.00582296106178
             },
             "southwest": {
-              "lat": 38.674084235794034,
-              "lng": -77.16426785359421
+              "lat": 38.68548423579403,
+              "lng": -77.12097703893822
             }
           },
           "city": "Alexandria",
           "region_state": "Virginia",
-          "postal_code": "22309",
+          "postal_code": "22308",
           "timezone": "America/New_York"
         }
       },
@@ -6374,22 +6746,22 @@
           "country_code": "US",
           "country_name": "United States",
           "continent": "North America",
-          "latitude": 38.719,
-          "longitude": -77.1067,
+          "latitude": 38.7304,
+          "longitude": -77.0634,
           "accuracy": 5,
           "viewport": {
             "northeast": {
-              "lat": 38.763915764205976,
-              "lng": -77.0491321464058
+              "lat": 38.77531576420598,
+              "lng": -77.00582296106178
             },
             "southwest": {
-              "lat": 38.674084235794034,
-              "lng": -77.16426785359421
+              "lat": 38.68548423579403,
+              "lng": -77.12097703893822
             }
           },
           "city": "Alexandria",
           "region_state": "Virginia",
-          "postal_code": "22309",
+          "postal_code": "22308",
           "timezone": "America/New_York",
           "stores": {
             "type": "FeatureCollection",
@@ -6424,7 +6796,7 @@
                     "drive",
                     "click_and_collect"
                   ],
-                  "distance": 0,
+                  "distance": 3972.39013285,
                   "open": {
                     "open_now": true,
                     "open_hours": [
@@ -6433,7 +6805,7 @@
                         "start": "08:30"
                       }
                     ],
-                    "week_day": 2,
+                    "week_day": 5,
                     "current_slice": {
                       "end": "22:00",
                       "start": "08:30"
@@ -6557,19 +6929,20 @@
                   "types": [
                     "drive"
                   ],
-                  "distance": 23062.07621905,
+                  "distance": 23296.5115883,
                   "open": {
-                    "open_now": true,
+                    "open_now": false,
                     "open_hours": [
                       {
                         "end": "22:00",
                         "start": "08:30"
                       }
                     ],
-                    "week_day": 2,
-                    "current_slice": {
+                    "week_day": 5,
+                    "next_opening": {
                       "end": "22:00",
-                      "start": "08:30"
+                      "start": "08:30",
+                      "day": "2021-12-17"
                     }
                   },
                   "weekly_opening": {
