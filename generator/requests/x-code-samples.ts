@@ -10,10 +10,10 @@ import prettier from "prettier";
 import path from "path";
 
 
-const SNIPPET_LANG_XCODE = [
-    ["python", "requests"],
-    ["nodejs", "axios"],
-    ["curl", "curl"],
+const SNIPPET_LANG_VARIANTS_LABEL = [
+    ["python", "requests", "Python"],
+    ["nodejs", "axios", "JavaScript"],
+    ["curl", "curl", "cURL"],
 ];
 
 const GENERATOR_OPTIONS = {
@@ -109,7 +109,7 @@ const main = async (argv: any) => {
     let sample: xCodeSample = {};
     await Promise.all(
         REQUESTS.map((snippetRequest: SnippetRequest) =>
-            SNIPPET_LANG_XCODE.map(async ([lang, variant]) => {
+            SNIPPET_LANG_VARIANTS_LABEL.map(async ([lang, variant, label]) => {
                 const {request, regionTag} = snippetRequest;
                 const code = await generateSnippet(lang, variant, request as Request, {
                     trimRequestBody: true,
@@ -128,7 +128,7 @@ const main = async (argv: any) => {
 
                 sample = {
                     "lang": lang,
-                    "label": lang,
+                    "label": label,
                     "source": code
                 };
                 await xCodeSamples(argv.output, regionTag, lang, sample);
