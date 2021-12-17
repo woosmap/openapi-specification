@@ -2,7 +2,7 @@
 
 ## Description
 
-An OpenAPI specification for Woosmap Platform.
+An OpenAPI specification for Woosmap Platform adapted from [googlemaps/openapi-specification](https://github.com/googlemaps/openapi-specification).
 
 | API                | Status       |
 | ------------------ | ------------ |
@@ -41,11 +41,18 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
 
 2. `npm run build:responses` (optional)
 
-    > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.
+    > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_PUBLIC_API_KEY` and `WOOSMAP_PRIVATE_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.
 
+    > **Warning**: Data attached to the `WOOSMAP_PRIVATE_API_KEY` will be deleted. Use an empty test project for this.
+    
     > **Note**: This step only needs to run when the generation code or sample requests have been updated.
 
-3. `npm run test`
+3. `npm run build:samples` (optional)
+
+    > **Note**: Generates snippets from requests to be integrated as xCodeSamples in path schemas.
+
+
+4`npm run test`
    
    Validate the OpenAPI Schema
    
