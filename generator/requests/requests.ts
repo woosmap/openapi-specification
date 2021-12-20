@@ -120,12 +120,12 @@ export const REQUESTS: SnippetRequest[] = [
                 path: "/distance/route/json",
                 query: [
                     {
-                        key: "origins",
+                        key: "origin",
                         value: "48.709,2.403",
                     },
                     {
-                        key: "destinations",
-                        value: "48.709,2.303|48.768,2.338",
+                        key: "destination",
+                        value: "48.709,2.303",
                     },
                     {
                         key: "mode",

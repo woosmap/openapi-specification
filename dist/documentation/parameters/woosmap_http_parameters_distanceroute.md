@@ -2,13 +2,13 @@
 <!--- [START woosmap_http_parameters_distanceroute] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="destinations">destinations</h3>
+-   <h3 id="destination">destination</h3>
 
-    One or more locations to use as the finishing point for calculating travel distance. The options for the destinations parameter are the same as for the origins parameter, described above. In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
+    The ending point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
 -   <h3 id="origins">origins</h3>
 
-    The starting point for calculating travel distance. You can supply one or more locations separated by the pipe character (|), in the form of latitude/longitude coordinates. They are used unchanged to calculate distance. Ensure that no space exists between the latitude and longitude values. In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
+    The starting point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
