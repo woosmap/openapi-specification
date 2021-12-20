@@ -1,5 +1,5 @@
 {
   "lang": "nodejs",
-  "label": "JavaScript",
+  "label": "NodeJS",
   "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"merchants\": [\n    {\n      \"dirty_name\": \"MCDO UK 2231 EP\",\n      \"country\": \"GB\"\n    },\n    {\n      \"dirty_name\": \"Zara Fashion Retail, S.A.\",\n      \"country\": \"IT\"\n    },\n    {\n      \"dirty_name\": \"APOLLO PHARMACY BANGALORE IN\",\n      \"country\": \"IN\"\n    },\n    {\n      \"dirty_name\": \"PIZZA HUT - SHOP 157\"\n    },\n    {\n      \"dirty_name\": \"CARREFOUR CITY 3112846\",\n      \"country\": \"FR\"\n    },\n    {\n      \"dirty_name\": \"ITUNES.COM/BILL\",\n      \"country\": \"IE\"\n    },\n    {\n      \"dirty_name\": \"Pepa SL Gracia\",\n      \"country\": \"ES\"\n    }\n  ]\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/merchants/brand?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n",
 }

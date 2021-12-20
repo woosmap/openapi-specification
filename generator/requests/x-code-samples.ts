@@ -12,7 +12,8 @@ import path from "path";
 
 const SNIPPET_LANG_VARIANTS_LABEL = [
     ["python", "requests", "Python"],
-    ["nodejs", "axios", "JavaScript"],
+    ["javascript", "fetch", "JavaScript"],
+    ["nodejs", "axios", "NodeJS"],
     ["curl", "curl", "cURL"],
 ];
 
@@ -61,6 +62,10 @@ const generateSnippet = async (
     }
 
     request = request.clone();
+
+    if (lang === "javascript") {
+        request.removeHeader('Referer', {ignoreCase: false})
+    }
 
     const params = Object.entries(request.url.query.toObject()) as [
         string,

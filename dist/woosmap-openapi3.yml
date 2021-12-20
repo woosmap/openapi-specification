@@ -74,6 +74,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -89,26 +101,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /geolocation/stores:
     get:
       summary: Assets nearby a Geolocation
@@ -333,6 +325,18 @@ paths:
         - lang: curl
           label: cURL
           source: 'curl -L -X GET ''https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254'''
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -346,24 +350,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254',
-              headers: { }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /stores:
     post:
       summary: Create your Assets
@@ -691,7 +677,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
@@ -1021,7 +1007,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
@@ -1150,7 +1136,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
 
@@ -1317,6 +1303,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -1332,26 +1330,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /stores/replace:
     post:
       summary: Replace all assets
@@ -1678,7 +1656,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
@@ -3082,6 +3060,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -3097,26 +3087,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /stores/autocomplete:
     get:
       summary: Autocomplete for assets
@@ -3202,6 +3172,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -3217,26 +3199,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /localities/autocomplete:
     get:
       summary: Autocomplete for Localities
@@ -3357,6 +3319,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -3372,26 +3346,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /localities/details:
     get:
       summary: Details of a Locality
@@ -3510,6 +3464,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -3525,26 +3491,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /address/autocomplete/json:
     get:
       summary: Autocomplete for Addresses
@@ -3602,6 +3548,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -3617,26 +3575,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /address/details/json:
     get:
       summary: Details of an Address
@@ -3715,6 +3653,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/address/details/json?public_id=aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/address/details/json?public_id=aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -3730,26 +3680,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/address/details/json?public_id=aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /zones:
     post:
       summary: Create your Zones
@@ -3978,7 +3908,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
@@ -4080,7 +4010,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
 
@@ -4148,6 +4078,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -4163,26 +4105,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /distance/distancematrix/json:
     get:
       summary: Distance Matrix
@@ -4244,6 +4166,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/distance/distancematrix/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&elements=duration_distance&method=distance&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/distance/distancematrix/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&elements=duration_distance&method=distance&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -4259,26 +4193,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/distance/distancematrix/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&elements=duration_distance&method=distance&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
     post:
       summary: Get Distance Matrix using POST
       operationId: postDistanceMatrix
@@ -4378,7 +4292,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
@@ -4521,6 +4435,18 @@ paths:
           source: |-
             curl -L -X GET 'https://api.woosmap.com/distance/route/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/distance/route/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
         - lang: python
           label: Python
           source: |
@@ -4536,26 +4462,6 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
-        - lang: nodejs
-          label: JavaScript
-          source: |
-            var axios = require('axios');
-
-            var config = {
-              method: 'get',
-              url: 'https://api.woosmap.com/distance/route/json?origins=48.709%2C2.403&destinations=48.709%2C2.303%7C48.768%2C2.338&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY',
-              headers: { 
-                'Referer': 'http://localhost'
-              }
-            };
-
-            axios(config)
-            .then(function (response) {
-              console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
   /merchants/brand:
     post:
       summary: Get Merchants Clean Names
@@ -4737,7 +4643,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
@@ -4965,7 +4871,7 @@ paths:
 
             print(response.text)
         - lang: nodejs
-          label: JavaScript
+          label: NodeJS
           source: |
             var axios = require('axios');
             var data = JSON.stringify({
