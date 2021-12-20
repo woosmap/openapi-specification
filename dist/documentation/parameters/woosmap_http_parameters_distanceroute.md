@@ -6,7 +6,7 @@
 
     The ending point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
--   <h3 id="origins">origins</h3>
+-   <h3 id="origin">origin</h3>
 
     The starting point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
