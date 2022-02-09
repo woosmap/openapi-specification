@@ -111,6 +111,15 @@
       <li><code>art_gallery</code>: includes art galleries</li>
       <li><code>zoo</code>: includes zoos</li>
     </ul>
+    <blockquote>
+      <p>
+        The information returned on an <code>address</code> suggestion contain
+        only a "single-line" description. A request to the
+        <a href="/products/localities/details/">Details endpoint</a> of the API
+        must be performed to retrieve the location (geographic coordinates) and
+        the address components (street address, zipcode, city..).
+      </p>
+    </blockquote>
     <p>
       Not specifying any type will only query <code>locality</code> and
       <code>postal_code</code>. Multiple types can be passed using the pipe
