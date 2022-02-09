@@ -2,53 +2,18 @@ title: LocalitiesAutocompleteResponse
 type: object
 description: Attributes describing a locality. Not all attributes will be available for all locality types.
 properties:
-  name:
-    description: contains the human-readable name for the returned result. For `postal_code` results, this is directly the postal code value. For `locality` results, name in the specified language is returns. If no language is specified, default name (country local language) is returned.
-    type: string
-    example: "London, UK"
-  description:
-    description: Concatenation of `name`, `admin_1`, `admin_0` to be used as suggestion in drop down list if needed. The description can vary depending on the type requested.
-    type: string
-    example: "20121, Milano, Italy"
-  location:
-    $ref: "./LatLngLiteral.yml"
   public_id:
     description: Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.
     type: string
     example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
   type:
     $ref: "./LocalitiesTypes.yml"
-  admin_0:
-    description: Contains the country name.
+  description:
+    description: Concatenation of `name`, `admin_1`, `admin_0` to be used as suggestion in drop down list if needed. The description can vary depending on the type requested.
     type: string
-    example: Italy
-  admin_1:
-    description: Contains the administrative level including the suggestion.
-    type: string
-    example: Milano
-  admin_2:
-    description: For small locality type points of interests (suburbs, neighborhoods, villages), contains the municipality it belongs to.
-    type: string
-    example: "Borgo Santa Caterina"
-  viewpoint:
-    $ref: "./LocalitiesViewpoint.yml"
-  postal_codes:
-    description: >
-      Contains an array of known postal codes for a locality (only available on *suggestions* with country:`fr` for France or `it` for Italy and type: `locality`).
-    type: array
-    items:
-      type: string
-    example: [ "34000", "34070", "34080", "34090" ]
-  postal_town:
-    description: >
-      Contains the larger city (or the post office city) for a `postal_code` (only available on  suggestions with type: `postal_code`).
-    type: string
-    example: London
+    example: "20121, Milano, Italy"
   matched_substrings:
     $ref: "./LocalitiesAutocompleteMatchedFields.yml"
-  locality:
-    type: string
-    description: The parent locality when retrieving a POI. often empty.
   has_addresses:
     description: >
       On the specific territory of United Kingdom, Localities autocomplete request can return the additional
@@ -58,5 +23,53 @@ properties:
       the dedicated address `public_id`.
     type: boolean
     example: true
+  name:
+    description: contains the human-readable name for the returned result. For `postal_code` results, this is directly the postal code value. For `locality` results, name in the specified language is returns. If no language is specified, default name (country local language) is returned.
+    type: string
+    example: "London, UK"
+    deprecated: true
+  location:
+    title: LatLngLiteral
+    type: object
+    description: An object describing a specific location with Latitude and Longitude in decimal degrees.
+    deprecated: true
+  admin_0:
+    description: Contains the country name.
+    type: string
+    example: Italy
+    deprecated: true
+  admin_1:
+    description: Contains the administrative level including the suggestion.
+    type: string
+    example: Milano
+    deprecated: true
+  admin_2:
+    description: For small locality type points of interests (suburbs, neighborhoods, villages), contains the municipality it belongs to.
+    type: string
+    example: "Borgo Santa Caterina"
+    deprecated: true
+  viewpoint:
+    title: LocalitiesViewpoint
+    type: object
+    description: Contains the bounds for the locality
+    deprecated: true
+  postal_codes:
+    description: >
+      Contains an array of known postal codes for a locality (only available on *suggestions* with country:`fr` for France or `it` for Italy and type: `locality`).
+    type: array
+    items:
+      type: string
+    example: [ "34000", "34070", "34080", "34090" ]
+    deprecated: true
+  postal_town:
+    description: >
+      Contains the larger city (or the post office city) for a `postal_code` (only available on  suggestions with type: `postal_code`).
+    type: string
+    example: London
+    deprecated: true
+  locality:
+    type: string
+    description: The parent locality when retrieving a POI. often empty.
+    deprecated: true
 example:
   $ref: "../responses/woosmap_http_localities_autocomplete_response.yml"
