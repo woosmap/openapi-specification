@@ -1,0 +1,11 @@
+title: MerchantsBrandGetResponse
+type: object
+description: Attributes describing a Get Merchant Brand response
+properties:
+  merchants:
+    description: The list of cleaned transactions
+    type: array
+    items:
+      $ref: "./MerchantsBrandGetClean.yml"
+example:
+  $ref: "../responses/woosmap_http_merchants_brand_get_response.yml"
