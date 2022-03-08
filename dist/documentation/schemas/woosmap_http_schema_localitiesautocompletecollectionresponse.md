@@ -15,12 +15,7 @@ Localities Collection Response containing Localities
     {
       "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
       "description": "London, City of London, United Kingdom",
-      "name": "London",
       "type": "locality",
-      "location": {
-        "lat": 51.50732,
-        "lng": -0.12764746
-      },
       "matched_substrings": {
         "name": [
           {
@@ -45,46 +40,44 @@ Localities Collection Response containing Localities
           }
         ]
       },
-      "admin_1": "City of London",
-      "locality": "",
-      "admin_0": "United Kingdom"
+      "name": "London",
+      "location": {
+        "lat": 51.50732,
+        "lng": -0.12764746
+      },
+      "admin_0": "United Kingdom",
+      "admin_1": "City of London"
     },
     {
       "public_id": "m/T2C4YI2LgszkKXrELBC+9dfC8=",
       "description": "Londonderry/Derry, Derry City and Strabane, United Kingdom",
-      "name": "Londonderry/Derry",
       "type": "locality",
+      "matched_substrings": {
+        "name": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ],
+        "description": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ]
+      },
+      "name": "Londonderry/Derry",
       "location": {
         "lat": 54.997868,
         "lng": -7.3213058
       },
-      "matched_substrings": {
-        "name": [
-          {
-            "offset": 0,
-            "length": 4
-          }
-        ],
-        "description": [
-          {
-            "offset": 0,
-            "length": 4
-          }
-        ]
-      },
-      "admin_1": "Derry City and Strabane",
-      "locality": "",
-      "admin_0": "United Kingdom"
+      "admin_0": "United Kingdom",
+      "admin_1": "Derry City and Strabane"
     },
     {
       "public_id": "VOBREUi72/VtnsYgE6aI8HNYcxg=",
       "description": "Londesborough, East Riding of Yorkshire, United Kingdom",
-      "name": "Londesborough",
       "type": "locality",
-      "location": {
-        "lat": 53.898506,
-        "lng": -0.6805281
-      },
       "matched_substrings": {
         "name": [
           {
@@ -99,35 +92,51 @@ Localities Collection Response containing Localities
           }
         ]
       },
-      "admin_1": "East Riding of Yorkshire",
-      "locality": "",
-      "admin_0": "United Kingdom"
+      "name": "Londesborough",
+      "location": {
+        "lat": 53.898506,
+        "lng": -0.6805281
+      },
+      "admin_0": "United Kingdom",
+      "admin_1": "East Riding of Yorkshire"
+    },
+    {
+      "public_id": "52MnrbHVWH21CLWH8VY/YWKhqeM=",
+      "description": "London Apprentice, Cornwall, United Kingdom",
+      "type": "locality",
+      "matched_substrings": {
+        "name": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ],
+        "description": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ]
+      },
+      "name": "London Apprentice",
+      "location": {
+        "lat": 50.31655,
+        "lng": -4.8009524
+      },
+      "admin_0": "United Kingdom",
+      "admin_1": "Cornwall"
     },
     {
       "public_id": "Js0mQmmeI46X3hiqRj/R4pvb8mQ=",
       "description": "Long Stratton, Norfolk, United Kingdom",
-      "name": "Long Stratton",
       "type": "locality",
+      "name": "Long Stratton",
       "location": {
         "lat": 52.487827,
         "lng": 1.233093
       },
-      "admin_1": "Norfolk",
-      "locality": "",
-      "admin_0": "United Kingdom"
-    },
-    {
-      "public_id": "BQOzBfxua+W9eLymBnVKRkqK2Zc=",
-      "description": "Long Sutton, Lincolnshire, United Kingdom",
-      "name": "Long Sutton",
-      "type": "locality",
-      "location": {
-        "lat": 52.786278,
-        "lng": 0.12017952
-      },
-      "admin_1": "Lincolnshire",
-      "locality": "",
-      "admin_0": "United Kingdom"
+      "admin_0": "United Kingdom",
+      "admin_1": "Norfolk"
     }
   ]
 }</pre>
