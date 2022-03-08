@@ -3,57 +3,24 @@ package main
 
 import (
   "fmt"
-  "strings"
   "net/http"
   "io/ioutil"
 )
 
 func main() {
 
-  url := "https://api.woosmap.com/merchants/brand?private_key=YOUR_PRIVATE_API_KEY"
-  method := "POST"
-
-  payload := strings.NewReader(`{
-  "merchants": [
-    {
-      "dirty_name": "MCDO UK 2231 EP",
-      "country": "GB"
-    },
-    {
-      "dirty_name": "Zara Fashion Retail, S.A.",
-      "country": "IT"
-    },
-    {
-      "dirty_name": "APOLLO PHARMACY BANGALORE IN",
-      "country": "IN"
-    },
-    {
-      "dirty_name": "PIZZA HUT - SHOP 157"
-    },
-    {
-      "dirty_name": "CARREFOUR CITY 3112846",
-      "country": "FR"
-    },
-    {
-      "dirty_name": "ITUNES.COM/BILL",
-      "country": "IE"
-    },
-    {
-      "dirty_name": "Pepa SL Gracia",
-      "country": "ES"
-    }
-  ]
-}`)
+  url := "https://api.woosmap.com/merchants/brand?dirty_name=APPLE.COM%252FBILL&key=YOUR_PUBLIC_API_KEY"
+  method := "GET"
 
   client := &http.Client {
   }
-  req, err := http.NewRequest(method, url, payload)
+  req, err := http.NewRequest(method, url, nil)
 
   if err != nil {
     fmt.Println(err)
     return
   }
-  req.Header.Add("content-type", "application/json")
+  req.Header.Add("Referer", "http://localhost")
 
   res, err := client.Do(req)
   if err != nil {

@@ -94,10 +94,14 @@
     operationId: getRoute
     $ref: "./distance/distanceRoute.yml"
 /merchants/brand:
-  post:
-    summary: Get Merchants Clean Names
+  get:
+    summary: Get Merchant Clean Name
     operationId: getMerchantsBrand
     $ref: "./merchants/merchantsBrand.yml"
+  post:
+    summary: Get Merchants Clean Names using POST
+    operationId: getMerchantsBrandPost
+    $ref: "./merchants/merchantsBrandPost.yml"
 /merchants/place:
   post:
     summary: Get Merchants Place
