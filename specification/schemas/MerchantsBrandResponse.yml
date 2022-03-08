@@ -3,7 +3,7 @@ type: object
 description: Attributes describing a Merchant Brand response
 properties:
   merchants:
-    description: The list of cleaned transactions
+    description: The list of cleaned transactions (only one element is returned when using GET method)
     type: array
     items:
       $ref: "./MerchantsBrandClean.yml"

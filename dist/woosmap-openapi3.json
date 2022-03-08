@@ -210,7 +210,7 @@
                               ],
                               "distance": 0,
                               "open": {
-                                "open_now": false,
+                                "open_now": true,
                                 "open_hours": [
                                   {
                                     "end": "22:00",
@@ -218,10 +218,9 @@
                                   }
                                 ],
                                 "week_day": 2,
-                                "next_opening": {
+                                "current_slice": {
                                   "end": "22:00",
-                                  "start": "08:30",
-                                  "day": "2022-03-08"
+                                  "start": "08:30"
                                 }
                               },
                               "weekly_opening": {
@@ -344,7 +343,7 @@
                               ],
                               "distance": 23062.07621905,
                               "open": {
-                                "open_now": false,
+                                "open_now": true,
                                 "open_hours": [
                                   {
                                     "end": "22:00",
@@ -352,10 +351,9 @@
                                   }
                                 ],
                                 "week_day": 2,
-                                "next_opening": {
+                                "current_slice": {
                                   "end": "22:00",
-                                  "start": "08:30",
-                                  "day": "2022-03-08"
+                                  "start": "08:30"
                                 }
                               },
                               "weekly_opening": {
@@ -953,7 +951,7 @@
                           "Coffee shop"
                         ],
                         "open": {
-                          "open_now": false,
+                          "open_now": true,
                           "open_hours": [
                             {
                               "end": "20:00",
@@ -961,10 +959,9 @@
                             }
                           ],
                           "week_day": 2,
-                          "next_opening": {
+                          "current_slice": {
                             "end": "20:00",
-                            "start": "05:00",
-                            "day": "2022-03-08"
+                            "start": "05:00"
                           }
                         },
                         "weekly_opening": {
@@ -5070,6 +5067,86 @@
       }
     },
     "/merchants/brand": {
+      "get": {
+        "summary": "Get Merchant Clean Name",
+        "operationId": "getMerchantsBrand",
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "tags": [
+          "Merchants API"
+        ],
+        "description": "Retrieve clean name and logo in response for a single dirty transaction.\n",
+        "security": [
+          {
+            "PrivateApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/merchants_dirty_name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MerchantsBrandResponse"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "merchants": [
+                        {
+                          "status": "OK",
+                          "clean_name": "Apple",
+                          "logo": "5eb75a5239b76287f44021f8e6e1bd41",
+                          "logo_url": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png",
+                          "country": "",
+                          "dirty_name": "APPLE.COM%2FBILL"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "dirty_name was not provided"
+          },
+          "401": {
+            "$ref": "#/paths/~1zones/put/responses/401"
+          },
+          "403": {
+            "$ref": "#/paths/~1zones/put/responses/403"
+          },
+          "429": {
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
+          }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -L -X GET 'https://api.woosmap.com/merchants/brand?dirty_name=APPLE.COM%252FBILL&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/merchants/brand?dirty_name=APPLE.COM%252FBILL&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "lang": "nodejs",
+            "label": "NodeJS",
+            "source": "var axios = require('axios');\n\nvar config = {\n  method: 'get',\n  url: 'https://api.woosmap.com/merchants/brand?dirty_name=APPLE.COM%252FBILL&key=YOUR_PUBLIC_API_KEY',\n  headers: { \n    'Referer': 'http://localhost'\n  }\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+          }
+        ]
+      },
       "post": {
         "summary": "Get Merchants Clean Names",
         "operationId": "getMerchantsBrand",
@@ -5719,6 +5796,16 @@
         "in": "query",
         "example": "postal_code"
       },
+      "merchants_dirty_name": {
+        "name": "dirty_name",
+        "description": "The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.\n",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "in": "query",
+        "example": "APPLE.COM%2FBILL"
+      },
       "search_encoded_polyline": {
         "name": "encoded_polyline",
         "description": "Find assets nearby an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) and inside a defined radius.\n",
@@ -5978,7 +6065,7 @@
               "Coffee shop"
             ],
             "open": {
-              "open_now": false,
+              "open_now": true,
               "open_hours": [
                 {
                   "end": "20:00",
@@ -5986,10 +6073,9 @@
                 }
               ],
               "week_day": 2,
-              "next_opening": {
+              "current_slice": {
                 "end": "20:00",
-                "start": "05:00",
-                "day": "2022-03-08"
+                "start": "05:00"
               }
             },
             "weekly_opening": {
@@ -8650,7 +8736,7 @@
                   ],
                   "distance": 0,
                   "open": {
-                    "open_now": false,
+                    "open_now": true,
                     "open_hours": [
                       {
                         "end": "22:00",
@@ -8658,10 +8744,9 @@
                       }
                     ],
                     "week_day": 2,
-                    "next_opening": {
+                    "current_slice": {
                       "end": "22:00",
-                      "start": "08:30",
-                      "day": "2022-03-08"
+                      "start": "08:30"
                     }
                   },
                   "weekly_opening": {
@@ -8784,7 +8869,7 @@
                   ],
                   "distance": 23062.07621905,
                   "open": {
-                    "open_now": false,
+                    "open_now": true,
                     "open_hours": [
                       {
                         "end": "22:00",
@@ -8792,10 +8877,9 @@
                       }
                     ],
                     "week_day": 2,
-                    "next_opening": {
+                    "current_slice": {
                       "end": "22:00",
-                      "start": "08:30",
-                      "day": "2022-03-08"
+                      "start": "08:30"
                     }
                   },
                   "weekly_opening": {
@@ -10777,7 +10861,7 @@
         "description": "Attributes describing a Merchant Brand response",
         "properties": {
           "merchants": {
-            "description": "The list of cleaned transactions",
+            "description": "The list of cleaned transactions (only one element is returned when using GET method)",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MerchantsBrandClean"
@@ -10787,60 +10871,12 @@
         "example": {
           "merchants": [
             {
-              "dirty_name": "MCDO UK 2231 EP",
-              "clean_name": "McDonald's",
               "status": "OK",
-              "logo": "956bcb3591a8976ff94871a59b09eecc",
-              "logo_url": "https://api.woosmap.com/merchants/logos/956bcb3591a8976ff94871a59b09eecc.png",
-              "country": "GB"
-            },
-            {
-              "dirty_name": "Zara Fashion Retail, S.A.",
-              "clean_name": "Zara",
-              "status": "OK",
-              "logo": "72fc39033e0d9e923a0236cb874c9309",
-              "logo_url": "https://api.woosmap.com/merchants/logos/72fc39033e0d9e923a0236cb874c9309.png",
-              "country": "IT"
-            },
-            {
-              "status": "OK",
-              "clean_name": "Apollo Pharmacy",
-              "logo": "c776d3336e0d8c2b9e893e9e92b2caf7",
-              "logo_url": "https://api.woosmap.com/merchants/logos/c776d3336e0d8c2b9e893e9e92b2caf7.png",
-              "country": "IN",
-              "dirty_name": "APOLLO PHARMACY BANGALORE IN"
-            },
-            {
-              "dirty_name": "PIZZA HUT - SHOP 157",
-              "clean_name": "Pizza Hut",
-              "status": "OK",
-              "logo": "d5463410f32a5f497459ac79552d3ce3",
-              "logo_url": "https://api.woosmap.com/merchants/logos/d5463410f32a5f497459ac79552d3ce3.png",
-              "country": ""
-            },
-            {
-              "dirty_name": "CARREFOUR CITY 3112846",
-              "clean_name": "Carrefour City",
-              "status": "OK",
-              "logo": "08ee8a3cecbcd3b7d9103bcf0e04db7e",
-              "logo_url": "https://api.woosmap.com/merchants/logos/08ee8a3cecbcd3b7d9103bcf0e04db7e.png",
-              "country": "FR"
-            },
-            {
-              "dirty_name": "ITUNES.COM/BILL",
               "clean_name": "Apple",
-              "status": "OK",
               "logo": "5eb75a5239b76287f44021f8e6e1bd41",
               "logo_url": "https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png",
-              "country": "IE"
-            },
-            {
-              "status": "NOT_FOUND",
-              "clean_name": "",
-              "logo": "",
-              "logo_url": "",
-              "country": "ES",
-              "dirty_name": "Pepa SL Gracia"
+              "country": "",
+              "dirty_name": "APPLE.COM%2FBILL"
             }
           ]
         }
