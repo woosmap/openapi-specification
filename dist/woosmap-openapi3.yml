@@ -4426,6 +4426,8 @@ paths:
       description: |
         Retrieve clean name and logo in response for a single dirty transaction.
       security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/merchants_dirty_name'
