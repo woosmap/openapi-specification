@@ -3888,8 +3888,72 @@
                 "examples": {
                   "Address": {
                     "value": {
-                      "status": "error",
-                      "value": "No match for public_id \"MVZWBfGZQnAQn9JtE9CJZjgeB4Q=\". Please make sure it was escaped to fit in url"
+                      "result": {
+                        "formatted_address": "House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA",
+                        "types": [
+                          "address"
+                        ],
+                        "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+                        "geometry": {
+                          "location": {
+                            "lat": 51.4998415,
+                            "lng": -0.1246375
+                          },
+                          "accuracy": "ROOFTOP"
+                        },
+                        "address_components": [
+                          {
+                            "types": [
+                              "country",
+                              "administrative_area_level_0"
+                            ],
+                            "long_name": "United Kingdom",
+                            "short_name": "GB"
+                          },
+                          {
+                            "types": [
+                              "administrative_area_level_1"
+                            ],
+                            "long_name": "City of London",
+                            "short_name": "City of London"
+                          },
+                          {
+                            "types": [
+                              "locality"
+                            ],
+                            "long_name": "London",
+                            "short_name": "London"
+                          },
+                          {
+                            "types": [
+                              "postal_codes"
+                            ],
+                            "long_name": "SW1A 0AA",
+                            "short_name": "SW1A 0AA"
+                          },
+                          {
+                            "types": [
+                              "route"
+                            ],
+                            "long_name": "Parliament Square",
+                            "short_name": "Parliament Square"
+                          },
+                          {
+                            "types": [
+                              "premise"
+                            ],
+                            "long_name": "House Of Commons Palace Of Westminster",
+                            "short_name": "House Of Commons Palace Of Westminster"
+                          },
+                          {
+                            "types": [
+                              "organisation"
+                            ],
+                            "long_name": "House Of Commons",
+                            "short_name": "House Of Commons"
+                          }
+                        ]
+                      }
                     }
                   },
                   "PostalCode": {
@@ -3975,17 +4039,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/details?public_id=RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
             "label": "JavaScript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/details?public_id=RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/details?public_id=MVZWBfGZQnAQn9JtE9CJZjgeB4Q%3D&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/details?public_id=RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -9970,8 +10034,72 @@
           }
         },
         "example": {
-          "status": "error",
-          "value": "No match for public_id \"MVZWBfGZQnAQn9JtE9CJZjgeB4Q=\". Please make sure it was escaped to fit in url"
+          "result": {
+            "formatted_address": "House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA",
+            "types": [
+              "address"
+            ],
+            "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+            "geometry": {
+              "location": {
+                "lat": 51.4998415,
+                "lng": -0.1246375
+              },
+              "accuracy": "ROOFTOP"
+            },
+            "address_components": [
+              {
+                "types": [
+                  "country",
+                  "administrative_area_level_0"
+                ],
+                "long_name": "United Kingdom",
+                "short_name": "GB"
+              },
+              {
+                "types": [
+                  "administrative_area_level_1"
+                ],
+                "long_name": "City of London",
+                "short_name": "City of London"
+              },
+              {
+                "types": [
+                  "locality"
+                ],
+                "long_name": "London",
+                "short_name": "London"
+              },
+              {
+                "types": [
+                  "postal_codes"
+                ],
+                "long_name": "SW1A 0AA",
+                "short_name": "SW1A 0AA"
+              },
+              {
+                "types": [
+                  "route"
+                ],
+                "long_name": "Parliament Square",
+                "short_name": "Parliament Square"
+              },
+              {
+                "types": [
+                  "premise"
+                ],
+                "long_name": "House Of Commons Palace Of Westminster",
+                "short_name": "House Of Commons Palace Of Westminster"
+              },
+              {
+                "types": [
+                  "organisation"
+                ],
+                "long_name": "House Of Commons",
+                "short_name": "House Of Commons"
+              }
+            ]
+          }
         }
       },
       "AddressAutocompleteCollectionResponse": {
