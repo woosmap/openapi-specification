@@ -4437,6 +4437,44 @@ paths:
 
             print(response.text)
   /merchants/brand:
+    get:
+      summary: Get Merchant Clean Name
+      operationId: getMerchantBrand
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Merchants API
+      description: |
+        Retrieve clean name and logo in response for a single dirty transaction.
+      security:
+        - PrivateApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/merchants_dirty_name'
+      responses:
+        '200':
+          description: Request successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MerchantsBrandGetResponse'
+              examples:
+                default:
+                  value:
+                    merchants:
+                      - dirty_name: APPLE.COM/BILL
+                        clean_name: Apple
+                        status: OK
+                        logo: 5eb75a5239b76287f44021f8e6e1bd41
+                        logo_url: 'https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png'
+                        country: IT
+        '400':
+          description: dirty_name was not provided
+        '401':
+          $ref: '#/paths/~1zones/put/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/put/responses/403'
+        '429':
+          $ref: '#/paths/~1stores~1search/get/responses/429'
     post:
       summary: Get Merchants Clean Names
       operationId: getMerchantsBrand
@@ -5194,6 +5232,15 @@ components:
           - zoo
       in: query
       example: postal_code
+    merchants_dirty_name:
+      name: dirty_name
+      description: |
+        The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.
+      schema:
+        type: string
+      required: true
+      in: query
+      example: APPLE.COM%2FBILL
     search_encoded_polyline:
       name: encoded_polyline
       description: |
@@ -7448,6 +7495,58 @@ components:
         units: imperial
         elements: duration_distance
         method: distance
+    MerchantsBrandGetClean:
+      title: MerchantsBrandGetClean
+      type: object
+      description: Attributes describing the Merchant Brand cleaned
+      properties:
+        dirty_name:
+          description: The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.
+          type: string
+          example: APPLE.COM/BILL
+        clean_name:
+          description: a clean name for the above merchant.
+          type: string
+          example: Apple
+        country:
+          description: The merchant’s country.
+          type: string
+          example: IE
+        logo:
+          description: This is a hash generated for the logo based on the image.
+          type: string
+          example: 5eb75a5239b76287f44021f8e6e1bd41
+        logo_url:
+          type: string
+          description: The logo image with content-type `image/png`.
+          example: 'https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png'
+        status:
+          description: |
+            Status Code for Logo.
+              * OK when there is a clean name or a clean name and a logo.
+              * NOT_FOUND when there is no clean name or clean name and logo for the specified dirty merchant.
+          example: OK
+          enum:
+            - OK
+            - NOT_FOUND
+    MerchantsBrandGetResponse:
+      title: MerchantsBrandGetResponse
+      type: object
+      description: Attributes describing a Get Merchant Brand response
+      properties:
+        merchants:
+          description: The list of cleaned transactions
+          type: array
+          items:
+            $ref: '#/components/schemas/MerchantsBrandGetClean'
+      example:
+        merchants:
+          - dirty_name: APPLE.COM/BILL
+            clean_name: Apple
+            status: OK
+            logo: 5eb75a5239b76287f44021f8e6e1bd41
+            logo_url: 'https://api.woosmap.com/merchants/logos/5eb75a5239b76287f44021f8e6e1bd41.png'
+            country: IT
     MerchantsBrandClean:
       title: MerchantsBrandClean
       type: object
