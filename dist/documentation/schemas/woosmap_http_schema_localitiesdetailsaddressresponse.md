@@ -15,72 +15,8 @@ Attributes describing a locality. Not all attributes will be available for all l
 <h4 class="schema-object-example" id="LocalitiesDetailsAddressResponse-example">Example</h4>
 
 <pre class="notranslate lang-json prettyprint">{
-  "result": {
-    "formatted_address": "House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA",
-    "types": [
-      "address"
-    ],
-    "public_id": "MVZWBfGZQnAQn9JtE9CJZjgeB4Q=",
-    "geometry": {
-      "location": {
-        "lat": 51.49984,
-        "lng": -0.1246375
-      },
-      "accuracy": "ROOFTOP"
-    },
-    "address_components": [
-      {
-        "types": [
-          "country",
-          "administrative_area_level_0"
-        ],
-        "long_name": "United Kingdom",
-        "short_name": "GB"
-      },
-      {
-        "types": [
-          "administrative_area_level_1"
-        ],
-        "long_name": "City of London",
-        "short_name": "City of London"
-      },
-      {
-        "types": [
-          "premise"
-        ],
-        "long_name": "House Of Commons Palace Of Westminster",
-        "short_name": "House Of Commons Palace Of Westminster"
-      },
-      {
-        "types": [
-          "locality"
-        ],
-        "long_name": "London",
-        "short_name": "London"
-      },
-      {
-        "types": [
-          "postal_codes"
-        ],
-        "long_name": "SW1A 0AA",
-        "short_name": "SW1A 0AA"
-      },
-      {
-        "types": [
-          "organisation"
-        ],
-        "long_name": "House Of Commons",
-        "short_name": "House Of Commons"
-      },
-      {
-        "types": [
-          "route"
-        ],
-        "long_name": "Parliament Square",
-        "short_name": "Parliament Square"
-      }
-    ]
-  }
+  "status": "error",
+  "value": "No match for public_id \"MVZWBfGZQnAQn9JtE9CJZjgeB4Q=\". Please make sure it was escaped to fit in url"
 }</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
