@@ -2,7 +2,7 @@
 <!--- [START woosmap_http_schema_addressgeocodecollectionresponse] -->
 <h3 class="schema-object" id="AddressGeocodeCollectionResponse">AddressGeocodeCollectionResponse</h3>
 
-Address Geocode Response. Contains Addresses ( with coordinates (default to one result for reverse geocoding)
+Address Geocode Collection Response. Contains one or more Addresses with coordinates (default to one result for reverse geocoding)
 
 | Field                                                                                                                   | Required | Type                                                                                    | Description                                                                                          |
 | :---------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |

@@ -4318,7 +4318,7 @@
         ]
       }
     },
-    "/address/geocode": {
+    "/address/geocode/json": {
       "get": {
         "summary": "Geocode an Address or Reverse Geocode a latlng",
         "operationId": "addressGeocode",
@@ -6004,7 +6004,7 @@
     "parameters": {
       "address_address": {
         "name": "address",
-        "description": "The full address for which details are requested. If full address isn't known, this endpoint might return low precision details and usage of autocomplete and details is recommended\n",
+        "description": "The address of which to find the coordinates for. A partial address is less likely to return the proper coordinates than the complete address.\n",
         "schema": {
           "type": "string"
         },
@@ -10844,7 +10844,7 @@
       "AddressGeocodeCollectionResponse": {
         "title": "AddressGeocodeCollectionResponse",
         "type": "object",
-        "description": "Address Geocode Response. Contains Addresses ( with coordinates (default to one result for reverse geocoding)",
+        "description": "Address Geocode Collection Response. Contains one or more Addresses with coordinates (default to one result for reverse geocoding)",
         "properties": {
           "results": {
             "type": "array",
