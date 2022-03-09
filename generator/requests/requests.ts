@@ -66,6 +66,23 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_address_geocode",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/address/geocode/json",
+                query: [
+                    {
+                        key: "latlng",
+                        value: "0.689247,-74.044502",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_distance_matrix",
         request: new Request({
             url: new Url({
