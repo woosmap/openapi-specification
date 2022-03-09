@@ -4330,7 +4330,7 @@
         "tags": [
           "Address API"
         ],
-        "description": "Provides details for an address or a geographic position. Parameter `address` **or** `latlng` is required. Maximum of 25 queries per second (QPS)\n",
+        "description": "Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required. Maximum of 25 queries per second (QPS)\n",
         "security": [
           {
             "PublicApiKeyAuth": [],
@@ -6008,7 +6008,7 @@
         "schema": {
           "type": "string"
         },
-        "required": true,
+        "required": false,
         "in": "query",
         "example": "224%20Rue%20de%20Rivoli%2C%20Paris"
       },
@@ -6071,7 +6071,7 @@
         "schema": {
           "type": "string"
         },
-        "required": true,
+        "required": false,
         "example": "5.2,-2.3",
         "in": "query"
       },

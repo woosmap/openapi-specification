@@ -1,16 +1,12 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START woosmap_http_parameters_addressgeocode] -->
-<h2 id="required-parameters">Required parameters</h2>
+
+
+<h2 id="optional-parameters">Optional parameters</h2>
 
 -   <h3 id="address">address</h3>
 
     The address of which to find the coordinates for. A partial address is less likely to return the proper coordinates than the complete address.
-
--   <h3 id="latlng">latlng</h3>
-
-    Geographic coordinates. Should be pass in `lat`,`lng` format.
-
-<h2 id="optional-parameters">Optional parameters</h2>
 
 -   <h3 id="cc_format">cc_format</h3>
 
@@ -23,6 +19,10 @@
 -   <h3 id="language">language</h3>
 
     The language code, using ISO 639-1 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, the Localities service will use the default language of each country.
+
+-   <h3 id="latlng">latlng</h3>
+
+    Geographic coordinates. Should be pass in `lat`,`lng` format.
 
 -   <h3 id="limit">limit</h3>
 
