@@ -1,0 +1,5 @@
+{
+  "lang": "python",
+  "label": "Python",
+  "source": "import requests\n\nurl = \"https://api.woosmap.com/address/geocode/json?latlng=0.689247%2C-74.044502&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n",
+}
