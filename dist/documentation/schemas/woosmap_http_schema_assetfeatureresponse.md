@@ -51,7 +51,7 @@ Asset Response as a GeoJSon Feature with Asset properties
       "Coffee shop"
     ],
     "open": {
-      "open_now": true,
+      "open_now": false,
       "open_hours": [
         {
           "end": "20:00",
@@ -59,9 +59,10 @@ Asset Response as a GeoJSon Feature with Asset properties
         }
       ],
       "week_day": 2,
-      "current_slice": {
+      "next_opening": {
         "end": "20:00",
-        "start": "05:00"
+        "start": "05:00",
+        "day": "2022-03-09"
       }
     },
     "weekly_opening": {
