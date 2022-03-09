@@ -66,7 +66,7 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
-        regionTag: "woosmap_http_address_geocode",
+        regionTag: "woosmap_http_address_geocode_collection",
         request: new Request({
             url: new Url({
                 protocol: "https",
@@ -74,8 +74,16 @@ export const REQUESTS: SnippetRequest[] = [
                 path: "/address/geocode/json",
                 query: [
                     {
-                        key: "latlng",
-                        value: "0.689247,-74.044502",
+                        key: "address",
+                        value: "Place de la Resistance",
+                    },
+                    {
+                        key: "components",
+                        value: "country:FR"
+                    },
+                    {
+                        key: "limit",
+                        value: "5"
                     }
                 ],
             }),

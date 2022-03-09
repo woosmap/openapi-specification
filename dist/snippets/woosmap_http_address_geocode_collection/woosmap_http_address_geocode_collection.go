@@ -1,4 +1,4 @@
-// [START woosmap_http_address_geocode]
+// [START woosmap_http_address_geocode_collection]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/address/geocode/json?latlng=0.689247,-74.044502&key=YOUR_PUBLIC_API_KEY"
+  url := "https://api.woosmap.com/address/geocode/json?address=Place%20de%20la%20Resistance&components=country:FR&limit=5&key=YOUR_PUBLIC_API_KEY"
   method := "GET"
 
   client := &http.Client {
@@ -36,4 +36,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END woosmap_http_address_geocode]
+// [END woosmap_http_address_geocode_collection]

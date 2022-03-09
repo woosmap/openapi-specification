@@ -28,6 +28,10 @@
 
     Maximum number of results to be returned (value from 1 to 100, default values for geocode request \[20] and for reverse geocode request \[1])
 
+-   <h3 id="location">location</h3>
+
+    Bias for the results. Should be pass in `lat`,`lng` format.
+
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a data-label="openapi-github-woosmap-http-parameters-addressgeocode" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/tree/main/specification/parameters" title="Edit on GitHub">✎ Edit</a>
