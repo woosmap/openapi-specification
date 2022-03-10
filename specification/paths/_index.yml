@@ -61,6 +61,11 @@
     summary: Details of an Address
     operationId: addressDetails
     $ref: "./address/addressDetails.yml"
+/address/geocode/json:
+  get:
+    summary: Geocode an Address or Reverse Geocode a latlng
+    operationId: addressGeocode
+    $ref: "./address/addressGeocode.yml"
 /zones:
   get:
     summary: List your Zones

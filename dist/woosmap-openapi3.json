@@ -83,20 +83,20 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
@@ -106,7 +106,7 @@
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -210,17 +210,18 @@
                               ],
                               "distance": 0,
                               "open": {
-                                "open_now": true,
+                                "open_now": false,
                                 "open_hours": [
                                   {
                                     "end": "22:00",
                                     "start": "08:30"
                                   }
                                 ],
-                                "week_day": 2,
-                                "current_slice": {
+                                "week_day": 3,
+                                "next_opening": {
                                   "end": "22:00",
-                                  "start": "08:30"
+                                  "start": "08:30",
+                                  "day": "2022-03-09"
                                 }
                               },
                               "weekly_opening": {
@@ -343,17 +344,18 @@
                               ],
                               "distance": 23062.07621905,
                               "open": {
-                                "open_now": true,
+                                "open_now": false,
                                 "open_hours": [
                                   {
                                     "end": "22:00",
                                     "start": "08:30"
                                   }
                                 ],
-                                "week_day": 2,
-                                "current_slice": {
+                                "week_day": 3,
+                                "next_opening": {
                                   "end": "22:00",
-                                  "start": "08:30"
+                                  "start": "08:30",
+                                  "day": "2022-03-09"
                                 }
                               },
                               "weekly_opening": {
@@ -451,13 +453,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -635,10 +637,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           }
         },
         "x-codeSamples": [
@@ -771,10 +773,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           }
         },
         "x-codeSamples": [
@@ -843,10 +845,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           }
         },
         "x-codeSamples": [
@@ -951,7 +953,7 @@
                           "Coffee shop"
                         ],
                         "open": {
-                          "open_now": true,
+                          "open_now": false,
                           "open_hours": [
                             {
                               "end": "20:00",
@@ -959,9 +961,10 @@
                             }
                           ],
                           "week_day": 2,
-                          "current_slice": {
+                          "next_opening": {
                             "end": "20:00",
-                            "start": "05:00"
+                            "start": "05:00",
+                            "day": "2022-03-09"
                           }
                         },
                         "weekly_opening": {
@@ -1092,10 +1095,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "404": {
             "description": "Not Found - `storeId` do not exist."
@@ -1276,10 +1279,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           }
         },
         "x-codeSamples": [
@@ -1344,9 +1347,6 @@
           },
           {
             "$ref": "#/components/parameters/search_page"
-          },
-          {
-            "$ref": "#/components/parameters/search_zone"
           }
         ],
         "responses": {
@@ -1396,17 +1396,18 @@
                             ],
                             "distance": 135.28682936,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "06:30"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "06:30"
+                                "start": "06:30",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -1567,17 +1568,18 @@
                             ],
                             "distance": 334.31148224,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "06:30"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "06:30"
+                                "start": "06:30",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -1739,17 +1741,18 @@
                             ],
                             "distance": 431.58415682,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:00"
+                                "start": "07:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -1905,17 +1908,18 @@
                             ],
                             "distance": 541.85737556,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "08:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "08:00"
+                                "start": "08:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -2078,17 +2082,18 @@
                             ],
                             "distance": 544.58185978,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:00"
+                                "start": "07:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -2251,17 +2256,18 @@
                             ],
                             "distance": 554.73026581,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:30"
+                                "start": "07:30",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -2423,17 +2429,18 @@
                             ],
                             "distance": 632.17523247,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:30"
+                                "start": "07:30",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -2592,17 +2599,18 @@
                             ],
                             "distance": 649.62722685,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "08:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "08:00"
+                                "start": "08:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -2765,17 +2773,18 @@
                             ],
                             "distance": 714.77455167,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:00"
+                                "start": "07:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -2937,17 +2946,18 @@
                             ],
                             "distance": 877.89870518,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:00"
+                                "start": "07:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -3110,17 +3120,18 @@
                             ],
                             "distance": 893.47601826,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:30"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:30"
+                                "start": "07:30",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -3282,17 +3293,18 @@
                             ],
                             "distance": 925.6334785,
                             "open": {
-                              "open_now": true,
+                              "open_now": false,
                               "open_hours": [
                                 {
                                   "end": "18:00",
                                   "start": "07:00"
                                 }
                               ],
-                              "week_day": 2,
-                              "current_slice": {
+                              "week_day": 3,
+                              "next_opening": {
                                 "end": "18:00",
-                                "start": "07:00"
+                                "start": "07:00",
+                                "day": "2022-03-09"
                               }
                             },
                             "weekly_opening": {
@@ -3429,13 +3441,27 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                },
+                "examples": {
+                  "Forbidden": {
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "x-codeSamples": [
@@ -3592,13 +3618,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -3808,13 +3834,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4015,13 +4041,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4126,13 +4152,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4264,13 +4290,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4292,64 +4318,407 @@
         ]
       }
     },
-    "/zones": {
+    "/address/geocode/json": {
       "get": {
-        "summary": "List your Zones",
-        "operationId": "listZones",
+        "summary": "Geocode an Address or Reverse Geocode a latlng",
+        "operationId": "addressGeocode",
         "servers": [
           {
             "url": "https://api.woosmap.com"
           }
         ],
         "tags": [
-          "Zones API"
+          "Address API"
         ],
-        "description": "List all zones for the current project, sorted by `zone_id`.\n",
+        "description": "Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required. Maximum of 25 queries per second (QPS)\n",
         "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
           {
             "PrivateApiKeyAuth": []
           }
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/zones_limit"
+            "$ref": "#/components/parameters/address_address"
           },
           {
-            "$ref": "#/components/parameters/zones_offset"
+            "$ref": "#/components/parameters/address_latlng"
+          },
+          {
+            "$ref": "#/components/parameters/address_components"
+          },
+          {
+            "$ref": "#/components/parameters/address_language"
+          },
+          {
+            "$ref": "#/components/parameters/address_location"
+          },
+          {
+            "$ref": "#/components/parameters/address_cc_format"
+          },
+          {
+            "$ref": "#/components/parameters/address_limit"
           }
         ],
         "responses": {
           "200": {
-            "description": "Zone successfully retrieved",
+            "description": "Request successful",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ZonesCollectionResponse"
+                  "$ref": "#/components/schemas/AddressGeocodeCollectionResponse"
                 },
                 "examples": {
                   "default": {
                     "value": {
-                      "zones": [
+                      "results": [
                         {
-                          "store_id": "STORE_ID_123456",
-                          "zone_id": "ZoneB",
-                          "polygon": "POLYGON ((-122.4546384 37.774656, -122.4515485 37.7595934, -122.4354306 37.7602172, -122.4333707 37.7512596, -122.423071 37.7511239, -122.4242726 37.7687665, -122.4259893 37.7691736, -122.4289075 37.7732444, -122.4306241 37.7850483, -122.4472753 37.7830133, -122.445902 37.7759581, -122.4546384 37.774656))",
+                          "formatted_address": "Place de la Résistance, 75007 Paris, France",
                           "types": [
-                            "delivery"
+                            "route"
                           ],
-                          "description": "Delivery Zone for Store B"
+                          "address_components": [
+                            {
+                              "types": [
+                                "country"
+                              ],
+                              "long_name": "France",
+                              "short_name": "FRA"
+                            },
+                            {
+                              "types": [
+                                "state"
+                              ],
+                              "long_name": "Ile-de-France",
+                              "short_name": "IDF"
+                            },
+                            {
+                              "types": [
+                                "county"
+                              ],
+                              "long_name": "Paris",
+                              "short_name": "Paris"
+                            },
+                            {
+                              "long_name": "Paris",
+                              "short_name": "Paris",
+                              "types": [
+                                "locality"
+                              ]
+                            },
+                            {
+                              "long_name": "Place de la Résistance",
+                              "short_name": "Place de la Résistance",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "75007",
+                              "short_name": "75007",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "geometry": {
+                            "location_type": "GEOMETRIC_CENTER",
+                            "location": {
+                              "lat": 48.86228,
+                              "lng": 2.30346
+                            },
+                            "viewport": {
+                              "northeast": {
+                                "lat": 48.86231,
+                                "lng": 2.30546
+                              },
+                              "southwest": {
+                                "lat": 48.86191,
+                                "lng": 2.30147
+                              }
+                            }
+                          }
                         },
                         {
-                          "store_id": "STORE_ID_45678",
-                          "zone_id": "ZoneC",
-                          "polygon": "POLYGON ((-122.4758889 37.7524995, -122.4751594 37.7321718, -122.4688079 37.7299995, -122.4648597 37.7261979, -122.4519851 37.7228035, -122.4483802 37.7215815, -122.4458053 37.726741, -122.4365356 37.7310857, -122.4315574 37.7324433, -122.4246909 37.7312214, -122.4219444 37.731493, -122.423071 37.7511239, -122.4333707 37.7512596, -122.4354306 37.7602172, -122.4515485 37.7595934, -122.4528628 37.7582744, -122.4540375 37.7566755, -122.4565266 37.7513144, -122.4601315 37.7521288, -122.4618481 37.7514501, -122.4635648 37.7530788, -122.4758889 37.7524995))",
+                          "formatted_address": "Place de la Résistance, 92130 Issy-les-Moulineaux, France",
                           "types": [
-                            "delivery"
+                            "route"
                           ],
-                          "description": "Delivery Zone for Store C"
+                          "address_components": [
+                            {
+                              "types": [
+                                "country"
+                              ],
+                              "long_name": "France",
+                              "short_name": "FRA"
+                            },
+                            {
+                              "types": [
+                                "state"
+                              ],
+                              "long_name": "Ile-de-France",
+                              "short_name": "IDF"
+                            },
+                            {
+                              "types": [
+                                "county"
+                              ],
+                              "long_name": "Hauts-de-Seine",
+                              "short_name": "Hauts-de-Seine"
+                            },
+                            {
+                              "long_name": "Issy-les-Moulineaux",
+                              "short_name": "Issy-les-Moulineaux",
+                              "types": [
+                                "locality"
+                              ]
+                            },
+                            {
+                              "long_name": "Place de la Résistance",
+                              "short_name": "Place de la Résistance",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "92130",
+                              "short_name": "92130",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "geometry": {
+                            "location_type": "GEOMETRIC_CENTER",
+                            "location": {
+                              "lat": 48.8212,
+                              "lng": 2.25029
+                            },
+                            "viewport": {
+                              "northeast": {
+                                "lat": 48.82195,
+                                "lng": 2.25052
+                              },
+                              "southwest": {
+                                "lat": 48.8209,
+                                "lng": 2.24999
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "formatted_address": "Place de la Résistance, 37000 Tours, France",
+                          "types": [
+                            "route"
+                          ],
+                          "address_components": [
+                            {
+                              "types": [
+                                "country"
+                              ],
+                              "long_name": "France",
+                              "short_name": "FRA"
+                            },
+                            {
+                              "types": [
+                                "state"
+                              ],
+                              "long_name": "Centre-Val de Loire",
+                              "short_name": "CVL"
+                            },
+                            {
+                              "types": [
+                                "county"
+                              ],
+                              "long_name": "Indre-et-Loire",
+                              "short_name": "Indre-et-Loire"
+                            },
+                            {
+                              "long_name": "Tours",
+                              "short_name": "Tours",
+                              "types": [
+                                "locality"
+                              ]
+                            },
+                            {
+                              "long_name": "Centre",
+                              "short_name": "Centre",
+                              "types": [
+                                "district"
+                              ]
+                            },
+                            {
+                              "long_name": "Place de la Résistance",
+                              "short_name": "Place de la Résistance",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "37000",
+                              "short_name": "37000",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "geometry": {
+                            "location_type": "GEOMETRIC_CENTER",
+                            "location": {
+                              "lat": 47.3944,
+                              "lng": 0.68574
+                            },
+                            "viewport": {
+                              "northeast": {
+                                "lat": 47.39473,
+                                "lng": 0.68626
+                              },
+                              "southwest": {
+                                "lat": 47.39416,
+                                "lng": 0.68542
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "formatted_address": "Place de la Résistance, 94500 Champigny-sur-Marne, France",
+                          "types": [
+                            "route"
+                          ],
+                          "address_components": [
+                            {
+                              "types": [
+                                "country"
+                              ],
+                              "long_name": "France",
+                              "short_name": "FRA"
+                            },
+                            {
+                              "types": [
+                                "state"
+                              ],
+                              "long_name": "Ile-de-France",
+                              "short_name": "IDF"
+                            },
+                            {
+                              "types": [
+                                "county"
+                              ],
+                              "long_name": "Val-de-Marne",
+                              "short_name": "Val-de-Marne"
+                            },
+                            {
+                              "long_name": "Champigny-sur-Marne",
+                              "short_name": "Champigny-sur-Marne",
+                              "types": [
+                                "locality"
+                              ]
+                            },
+                            {
+                              "long_name": "Place de la Résistance",
+                              "short_name": "Place de la Résistance",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "94500",
+                              "short_name": "94500",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "geometry": {
+                            "location_type": "GEOMETRIC_CENTER",
+                            "location": {
+                              "lat": 48.81359,
+                              "lng": 2.55785
+                            },
+                            "viewport": {
+                              "northeast": {
+                                "lat": 48.81398,
+                                "lng": 2.55815
+                              },
+                              "southwest": {
+                                "lat": 48.81359,
+                                "lng": 2.55754
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "formatted_address": "Place de la Résistance, 36700 Châtillon-sur-Indre, France",
+                          "types": [
+                            "route"
+                          ],
+                          "address_components": [
+                            {
+                              "types": [
+                                "country"
+                              ],
+                              "long_name": "France",
+                              "short_name": "FRA"
+                            },
+                            {
+                              "types": [
+                                "state"
+                              ],
+                              "long_name": "Centre-Val de Loire",
+                              "short_name": "CVL"
+                            },
+                            {
+                              "types": [
+                                "county"
+                              ],
+                              "long_name": "Indre",
+                              "short_name": "Indre"
+                            },
+                            {
+                              "long_name": "Châtillon-sur-Indre",
+                              "short_name": "Châtillon-sur-Indre",
+                              "types": [
+                                "locality"
+                              ]
+                            },
+                            {
+                              "long_name": "Place de la Résistance",
+                              "short_name": "Place de la Résistance",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "36700",
+                              "short_name": "36700",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "geometry": {
+                            "location_type": "GEOMETRIC_CENTER",
+                            "location": {
+                              "lat": 46.98904,
+                              "lng": 1.17172
+                            },
+                            "viewport": {
+                              "northeast": {
+                                "lat": 46.98907,
+                                "lng": 1.17191
+                              },
+                              "southwest": {
+                                "lat": 46.98885,
+                                "lng": 1.17149
+                              }
+                            }
+                          }
                         }
                       ],
-                      "status": "ok"
+                      "status": "OK"
                     }
                   }
                 }
@@ -4357,75 +4726,35 @@
             }
           },
           "401": {
-            "description": "Unauthorized. Incorrect authentication credentials.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error401"
-                },
-                "examples": {
-                  "Unauthorized": {
-                    "value": {
-                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "description": "Forbidden. This Woosmap API is not enabled for this project.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error403"
-                },
-                "examples": {
-                  "Forbidden": {
-                    "value": {
-                      "detail": "This Woosmap API is not enabled for this project."
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error429"
-                },
-                "examples": {
-                  "Forbidden": {
-                    "value": {
-                      "detail": "The rate limit for this endpoint has been exceeded"
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/address/geocode/json?address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
             "label": "JavaScript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/address/geocode/json?address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/address/geocode/json?address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
-      },
+      }
+    },
+    "/zones": {
       "post": {
         "summary": "Create your Zones",
         "operationId": "createZones",
@@ -4435,7 +4764,7 @@
           }
         ],
         "tags": [
-          "Zones API"
+          "Data Management API"
         ],
         "description": "Used to batch create Zones to a specific project identified with the `private_key` parameter.\n",
         "security": [
@@ -4512,10 +4841,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           }
         },
         "x-codeSamples": [
@@ -4531,7 +4860,7 @@
         ]
       },
       "put": {
-        "summary": "Update the Zones",
+        "summary": "Update the Zones.",
         "operationId": "updateZones",
         "servers": [
           {
@@ -4539,7 +4868,7 @@
           }
         ],
         "tags": [
-          "Zones API"
+          "Data Management API"
         ],
         "description": "Used to update zones in batch. `zone_id` must exists when using `PUT` method, if one zone does not exists, the batch will be refused.",
         "security": [
@@ -4630,10 +4959,38 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "description": "Unauthorized. Incorrect authentication credentials.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                },
+                "examples": {
+                  "Unauthorized": {
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                }
+              }
+            }
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "description": "Forbidden. This Woosmap API is not enabled for this project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                },
+                "examples": {
+                  "Forbidden": {
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "x-codeSamples": [
@@ -4663,7 +5020,7 @@
           }
         ],
         "tags": [
-          "Zones API"
+          "Data Management API"
         ],
         "description": "Used to delete one or more Zones. The `zone_id` is the id of the zone to delete. To delete several zones, use the comma as a separator.",
         "security": [
@@ -4702,10 +5059,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           }
         },
         "x-codeSamples": [
@@ -4737,10 +5094,14 @@
           }
         ],
         "tags": [
-          "Zones API"
+          "Data Management API"
         ],
         "description": "Used to retrieve a zone from his `zone_id`\n",
         "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
           {
             "PrivateApiKeyAuth": []
           }
@@ -4783,10 +5144,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "404": {
             "description": "Not Found - `zone_id` do not exist."
@@ -4796,7 +5157,7 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
@@ -4806,7 +5167,7 @@
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -4903,13 +5264,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5023,13 +5384,13 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5192,13 +5553,13 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5278,13 +5639,13 @@
             "description": "dirty_name was not provided"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5447,13 +5808,13 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5610,13 +5971,13 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "$ref": "#/paths/~1zones/put/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "$ref": "#/paths/~1zones/put/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "$ref": "#/paths/~1stores~1search/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5641,6 +6002,16 @@
   },
   "components": {
     "parameters": {
+      "address_address": {
+        "name": "address",
+        "description": "The address of which to find the coordinates for. A partial address is less likely to return the proper coordinates than the complete address.\n",
+        "schema": {
+          "type": "string"
+        },
+        "required": false,
+        "in": "query",
+        "example": "224%20Rue%20de%20Rivoli%2C%20Paris"
+      },
       "address_cc_format": {
         "name": "cc_format",
         "description": "To specify the format for the short country code expected to be returned in the address_components field (default is alpha3).\n",
@@ -5693,6 +6064,27 @@
         },
         "in": "query",
         "example": "en"
+      },
+      "address_latlng": {
+        "name": "latlng",
+        "description": "Geographic coordinates. Should be pass in `lat`,`lng` format.\n",
+        "schema": {
+          "type": "string"
+        },
+        "required": false,
+        "example": "5.2,-2.3",
+        "in": "query"
+      },
+      "address_limit": {
+        "name": "limit",
+        "description": "Maximum number of results to be returned (value from 1 to 100, default values for geocode request [20] and for reverse geocode request [1])\n",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "example": 10,
+        "in": "query"
       },
       "address_location": {
         "name": "location",
@@ -6028,36 +6420,6 @@
         },
         "example": 150,
         "in": "query"
-      },
-      "search_zone": {
-        "name": "zone",
-        "in": "query",
-        "example": true,
-        "schema": {
-          "type": "boolean"
-        },
-        "description": "returns the stores that are linked to a zone intersecting the provided `lat`,`lng` query parameters.\n"
-      },
-      "zones_limit": {
-        "name": "limit",
-        "description": "To limit number of zones retrieved (max 50).\n",
-        "schema": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 50
-        },
-        "example": 10,
-        "in": "query"
-      },
-      "zones_offset": {
-        "name": "offset",
-        "description": "To retrieve zones starting from an offset value.\n",
-        "schema": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "example": 20,
-        "in": "query"
       }
     },
     "schemas": {
@@ -6253,7 +6615,7 @@
               "Coffee shop"
             ],
             "open": {
-              "open_now": true,
+              "open_now": false,
               "open_hours": [
                 {
                   "end": "20:00",
@@ -6261,9 +6623,10 @@
                 }
               ],
               "week_day": 2,
-              "current_slice": {
+              "next_opening": {
                 "end": "20:00",
-                "start": "05:00"
+                "start": "05:00",
+                "day": "2022-03-09"
               }
             },
             "weekly_opening": {
@@ -6449,17 +6812,18 @@
                 ],
                 "distance": 135.28682936,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "06:30"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "06:30"
+                    "start": "06:30",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -6620,17 +6984,18 @@
                 ],
                 "distance": 334.31148224,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "06:30"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "06:30"
+                    "start": "06:30",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -6792,17 +7157,18 @@
                 ],
                 "distance": 431.58415682,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:00"
+                    "start": "07:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -6958,17 +7324,18 @@
                 ],
                 "distance": 541.85737556,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "08:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "08:00"
+                    "start": "08:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -7131,17 +7498,18 @@
                 ],
                 "distance": 544.58185978,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:00"
+                    "start": "07:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -7304,17 +7672,18 @@
                 ],
                 "distance": 554.73026581,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:30"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:30"
+                    "start": "07:30",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -7476,17 +7845,18 @@
                 ],
                 "distance": 632.17523247,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:30"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:30"
+                    "start": "07:30",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -7645,17 +8015,18 @@
                 ],
                 "distance": 649.62722685,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "08:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "08:00"
+                    "start": "08:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -7818,17 +8189,18 @@
                 ],
                 "distance": 714.77455167,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:00"
+                    "start": "07:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -7990,17 +8362,18 @@
                 ],
                 "distance": 877.89870518,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:00"
+                    "start": "07:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -8163,17 +8536,18 @@
                 ],
                 "distance": 893.47601826,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:30"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:30"
+                    "start": "07:30",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -8335,17 +8709,18 @@
                 ],
                 "distance": 925.6334785,
                 "open": {
-                  "open_now": true,
+                  "open_now": false,
                   "open_hours": [
                     {
                       "end": "18:00",
                       "start": "07:00"
                     }
                   ],
-                  "week_day": 2,
-                  "current_slice": {
+                  "week_day": 3,
+                  "next_opening": {
                     "end": "18:00",
-                    "start": "07:00"
+                    "start": "07:00",
+                    "day": "2022-03-09"
                   }
                 },
                 "weekly_opening": {
@@ -8659,11 +9034,35 @@
         "description": "Contains the type of result.",
         "enum": [
           "house_number",
-          "route address_block",
+          "route",
+          "address_block",
           "locality",
           "admin_level",
           "country"
         ]
+      },
+      "AddressGeometry": {
+        "title": "AddressGeometry",
+        "type": "object",
+        "description": "The location of the result, in latitude and logitude. Accuracy is also provided.",
+        "properties": {
+          "location_type": {
+            "description": "Specifies additional data about the geocoded location. The following values are currently supported: \n  - `ROOFTOP` result is a precise geocode for which we have location information accurate down to street address precision.\n  - `RANGE_INTERPOLATED` result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.\n  - `GEOMETRIC_CENTER` result is the geometric center of a result such as a polyline (for example, a street) or polygon (city, region, …).\n  - `APPROXIMATE` result is approximate (usually when no other above value applies)\n",
+            "type": "string",
+            "enum": [
+              "ROOFTOP",
+              "RANGE_INTERPOLATED",
+              "GEOMETRIC_CENTER",
+              "APPROXIMATE"
+            ]
+          },
+          "location": {
+            "$ref": "#/components/schemas/LatLngLiteral"
+          },
+          "viewport": {
+            "$ref": "#/components/schemas/Bounds"
+          }
+        }
       },
       "Success": {
         "title": "Success",
@@ -8924,17 +9323,18 @@
                   ],
                   "distance": 0,
                   "open": {
-                    "open_now": true,
+                    "open_now": false,
                     "open_hours": [
                       {
                         "end": "22:00",
                         "start": "08:30"
                       }
                     ],
-                    "week_day": 2,
-                    "current_slice": {
+                    "week_day": 3,
+                    "next_opening": {
                       "end": "22:00",
-                      "start": "08:30"
+                      "start": "08:30",
+                      "day": "2022-03-09"
                     }
                   },
                   "weekly_opening": {
@@ -9057,17 +9457,18 @@
                   ],
                   "distance": 23062.07621905,
                   "open": {
-                    "open_now": true,
+                    "open_now": false,
                     "open_hours": [
                       {
                         "end": "22:00",
                         "start": "08:30"
                       }
                     ],
-                    "week_day": 2,
-                    "current_slice": {
+                    "week_day": 3,
+                    "next_opening": {
                       "end": "22:00",
-                      "start": "08:30"
+                      "start": "08:30",
+                      "day": "2022-03-09"
                     }
                   },
                   "weekly_opening": {
@@ -10359,25 +10760,7 @@
                 }
               },
               "geometry": {
-                "description": "The location of the result, in latitude and logitude. Accuracy is also provided.",
-                "type": "object",
-                "properties": {
-                  "location_type": {
-                    "type": "string",
-                    "enum": [
-                      "ROOFTOP",
-                      "RANGE_INTERPOLATED",
-                      "GEOMETRIC_CENTER",
-                      "APPROXIMATE"
-                    ]
-                  },
-                  "location": {
-                    "$ref": "#/components/schemas/LatLngLiteral"
-                  },
-                  "viewport": {
-                    "$ref": "#/components/schemas/Bounds"
-                  }
-                }
+                "$ref": "#/components/schemas/AddressGeometry"
               }
             }
           }
@@ -10458,6 +10841,467 @@
           "UNKNOWN_ERROR"
         ]
       },
+      "AddressGeocodeCollectionResponse": {
+        "title": "AddressGeocodeCollectionResponse",
+        "type": "object",
+        "description": "Address Geocode Collection Response. Contains one or more Addresses with coordinates (default to one result for reverse geocoding)",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddressGeocodeResponse"
+            }
+          },
+          "status": {
+            "$ref": "#/components/schemas/AddressStatus"
+          }
+        },
+        "example": {
+          "results": [
+            {
+              "formatted_address": "Place de la Résistance, 75007 Paris, France",
+              "types": [
+                "route"
+              ],
+              "address_components": [
+                {
+                  "types": [
+                    "country"
+                  ],
+                  "long_name": "France",
+                  "short_name": "FRA"
+                },
+                {
+                  "types": [
+                    "state"
+                  ],
+                  "long_name": "Ile-de-France",
+                  "short_name": "IDF"
+                },
+                {
+                  "types": [
+                    "county"
+                  ],
+                  "long_name": "Paris",
+                  "short_name": "Paris"
+                },
+                {
+                  "long_name": "Paris",
+                  "short_name": "Paris",
+                  "types": [
+                    "locality"
+                  ]
+                },
+                {
+                  "long_name": "Place de la Résistance",
+                  "short_name": "Place de la Résistance",
+                  "types": [
+                    "route"
+                  ]
+                },
+                {
+                  "long_name": "75007",
+                  "short_name": "75007",
+                  "types": [
+                    "postal_code"
+                  ]
+                }
+              ],
+              "geometry": {
+                "location_type": "GEOMETRIC_CENTER",
+                "location": {
+                  "lat": 48.86228,
+                  "lng": 2.30346
+                },
+                "viewport": {
+                  "northeast": {
+                    "lat": 48.86231,
+                    "lng": 2.30546
+                  },
+                  "southwest": {
+                    "lat": 48.86191,
+                    "lng": 2.30147
+                  }
+                }
+              }
+            },
+            {
+              "formatted_address": "Place de la Résistance, 92130 Issy-les-Moulineaux, France",
+              "types": [
+                "route"
+              ],
+              "address_components": [
+                {
+                  "types": [
+                    "country"
+                  ],
+                  "long_name": "France",
+                  "short_name": "FRA"
+                },
+                {
+                  "types": [
+                    "state"
+                  ],
+                  "long_name": "Ile-de-France",
+                  "short_name": "IDF"
+                },
+                {
+                  "types": [
+                    "county"
+                  ],
+                  "long_name": "Hauts-de-Seine",
+                  "short_name": "Hauts-de-Seine"
+                },
+                {
+                  "long_name": "Issy-les-Moulineaux",
+                  "short_name": "Issy-les-Moulineaux",
+                  "types": [
+                    "locality"
+                  ]
+                },
+                {
+                  "long_name": "Place de la Résistance",
+                  "short_name": "Place de la Résistance",
+                  "types": [
+                    "route"
+                  ]
+                },
+                {
+                  "long_name": "92130",
+                  "short_name": "92130",
+                  "types": [
+                    "postal_code"
+                  ]
+                }
+              ],
+              "geometry": {
+                "location_type": "GEOMETRIC_CENTER",
+                "location": {
+                  "lat": 48.8212,
+                  "lng": 2.25029
+                },
+                "viewport": {
+                  "northeast": {
+                    "lat": 48.82195,
+                    "lng": 2.25052
+                  },
+                  "southwest": {
+                    "lat": 48.8209,
+                    "lng": 2.24999
+                  }
+                }
+              }
+            },
+            {
+              "formatted_address": "Place de la Résistance, 37000 Tours, France",
+              "types": [
+                "route"
+              ],
+              "address_components": [
+                {
+                  "types": [
+                    "country"
+                  ],
+                  "long_name": "France",
+                  "short_name": "FRA"
+                },
+                {
+                  "types": [
+                    "state"
+                  ],
+                  "long_name": "Centre-Val de Loire",
+                  "short_name": "CVL"
+                },
+                {
+                  "types": [
+                    "county"
+                  ],
+                  "long_name": "Indre-et-Loire",
+                  "short_name": "Indre-et-Loire"
+                },
+                {
+                  "long_name": "Tours",
+                  "short_name": "Tours",
+                  "types": [
+                    "locality"
+                  ]
+                },
+                {
+                  "long_name": "Centre",
+                  "short_name": "Centre",
+                  "types": [
+                    "district"
+                  ]
+                },
+                {
+                  "long_name": "Place de la Résistance",
+                  "short_name": "Place de la Résistance",
+                  "types": [
+                    "route"
+                  ]
+                },
+                {
+                  "long_name": "37000",
+                  "short_name": "37000",
+                  "types": [
+                    "postal_code"
+                  ]
+                }
+              ],
+              "geometry": {
+                "location_type": "GEOMETRIC_CENTER",
+                "location": {
+                  "lat": 47.3944,
+                  "lng": 0.68574
+                },
+                "viewport": {
+                  "northeast": {
+                    "lat": 47.39473,
+                    "lng": 0.68626
+                  },
+                  "southwest": {
+                    "lat": 47.39416,
+                    "lng": 0.68542
+                  }
+                }
+              }
+            },
+            {
+              "formatted_address": "Place de la Résistance, 94500 Champigny-sur-Marne, France",
+              "types": [
+                "route"
+              ],
+              "address_components": [
+                {
+                  "types": [
+                    "country"
+                  ],
+                  "long_name": "France",
+                  "short_name": "FRA"
+                },
+                {
+                  "types": [
+                    "state"
+                  ],
+                  "long_name": "Ile-de-France",
+                  "short_name": "IDF"
+                },
+                {
+                  "types": [
+                    "county"
+                  ],
+                  "long_name": "Val-de-Marne",
+                  "short_name": "Val-de-Marne"
+                },
+                {
+                  "long_name": "Champigny-sur-Marne",
+                  "short_name": "Champigny-sur-Marne",
+                  "types": [
+                    "locality"
+                  ]
+                },
+                {
+                  "long_name": "Place de la Résistance",
+                  "short_name": "Place de la Résistance",
+                  "types": [
+                    "route"
+                  ]
+                },
+                {
+                  "long_name": "94500",
+                  "short_name": "94500",
+                  "types": [
+                    "postal_code"
+                  ]
+                }
+              ],
+              "geometry": {
+                "location_type": "GEOMETRIC_CENTER",
+                "location": {
+                  "lat": 48.81359,
+                  "lng": 2.55785
+                },
+                "viewport": {
+                  "northeast": {
+                    "lat": 48.81398,
+                    "lng": 2.55815
+                  },
+                  "southwest": {
+                    "lat": 48.81359,
+                    "lng": 2.55754
+                  }
+                }
+              }
+            },
+            {
+              "formatted_address": "Place de la Résistance, 36700 Châtillon-sur-Indre, France",
+              "types": [
+                "route"
+              ],
+              "address_components": [
+                {
+                  "types": [
+                    "country"
+                  ],
+                  "long_name": "France",
+                  "short_name": "FRA"
+                },
+                {
+                  "types": [
+                    "state"
+                  ],
+                  "long_name": "Centre-Val de Loire",
+                  "short_name": "CVL"
+                },
+                {
+                  "types": [
+                    "county"
+                  ],
+                  "long_name": "Indre",
+                  "short_name": "Indre"
+                },
+                {
+                  "long_name": "Châtillon-sur-Indre",
+                  "short_name": "Châtillon-sur-Indre",
+                  "types": [
+                    "locality"
+                  ]
+                },
+                {
+                  "long_name": "Place de la Résistance",
+                  "short_name": "Place de la Résistance",
+                  "types": [
+                    "route"
+                  ]
+                },
+                {
+                  "long_name": "36700",
+                  "short_name": "36700",
+                  "types": [
+                    "postal_code"
+                  ]
+                }
+              ],
+              "geometry": {
+                "location_type": "GEOMETRIC_CENTER",
+                "location": {
+                  "lat": 46.98904,
+                  "lng": 1.17172
+                },
+                "viewport": {
+                  "northeast": {
+                    "lat": 46.98907,
+                    "lng": 1.17191
+                  },
+                  "southwest": {
+                    "lat": 46.98885,
+                    "lng": 1.17149
+                  }
+                }
+              }
+            }
+          ],
+          "status": "OK"
+        }
+      },
+      "AddressGeocodeResponse": {
+        "title": "AddressGeocodeResponse",
+        "type": "object",
+        "description": "Address Geocode Response",
+        "properties": {
+          "formatted_address": {
+            "description": "Contains the text description of the proposal to be used as suggestion in drop down list if needed.",
+            "type": "string",
+            "example": "London, England, United Kingdom"
+          },
+          "types": {
+            "description": "available address types",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddressTypes"
+            }
+          },
+          "public_id": {
+            "description": "Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.",
+            "type": "string",
+            "example": "aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0"
+          },
+          "address_components": {
+            "description": "An array containing the separate components applicable to this address.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddressComponents"
+            }
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/AddressGeometry"
+          }
+        },
+        "example": {
+          "result": {
+            "formatted_address": "London, England, United Kingdom",
+            "types": [
+              "locality"
+            ],
+            "public_id": "aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0",
+            "address_components": [
+              {
+                "types": [
+                  "country"
+                ],
+                "long_name": "United Kingdom",
+                "short_name": "GBR"
+              },
+              {
+                "types": [
+                  "state"
+                ],
+                "long_name": "England",
+                "short_name": "England"
+              },
+              {
+                "types": [
+                  "county"
+                ],
+                "long_name": "London",
+                "short_name": "LDN"
+              },
+              {
+                "long_name": "London",
+                "short_name": "London",
+                "types": [
+                  "locality"
+                ]
+              },
+              {
+                "long_name": "SW1A 2",
+                "short_name": "SW1A 2",
+                "types": [
+                  "postal_code"
+                ]
+              }
+            ],
+            "geometry": {
+              "location_type": "GEOMETRIC_CENTER",
+              "location": {
+                "lat": 51.50643,
+                "lng": -0.12719
+              },
+              "viewport": {
+                "northeast": {
+                  "lat": 51.68629,
+                  "lng": 0.28206
+                },
+                "southwest": {
+                  "lat": 51.28043,
+                  "lng": -0.56316
+                }
+              }
+            }
+          },
+          "status": "OK"
+        }
+      },
       "ZonesCollectionRequest": {
         "title": "ZonesCollectionRequest",
         "type": "object",
@@ -10504,48 +11348,6 @@
               ]
             }
           ]
-        }
-      },
-      "ZonesCollectionResponse": {
-        "title": "ZonesCollectionResponse",
-        "type": "object",
-        "description": "A Collection of Woosmap Zones retrieved in response to a get zones list.",
-        "properties": {
-          "zones": {
-            "description": "The Zones collection",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Zone"
-            }
-          },
-          "status": {
-            "type": "string",
-            "description": "the status as string",
-            "example": "ok"
-          }
-        },
-        "example": {
-          "zones": [
-            {
-              "store_id": "STORE_ID_123456",
-              "zone_id": "ZoneB",
-              "polygon": "POLYGON ((-122.4546384 37.774656, -122.4515485 37.7595934, -122.4354306 37.7602172, -122.4333707 37.7512596, -122.423071 37.7511239, -122.4242726 37.7687665, -122.4259893 37.7691736, -122.4289075 37.7732444, -122.4306241 37.7850483, -122.4472753 37.7830133, -122.445902 37.7759581, -122.4546384 37.774656))",
-              "types": [
-                "delivery"
-              ],
-              "description": "Delivery Zone for Store B"
-            },
-            {
-              "store_id": "STORE_ID_45678",
-              "zone_id": "ZoneC",
-              "polygon": "POLYGON ((-122.4758889 37.7524995, -122.4751594 37.7321718, -122.4688079 37.7299995, -122.4648597 37.7261979, -122.4519851 37.7228035, -122.4483802 37.7215815, -122.4458053 37.726741, -122.4365356 37.7310857, -122.4315574 37.7324433, -122.4246909 37.7312214, -122.4219444 37.731493, -122.423071 37.7511239, -122.4333707 37.7512596, -122.4354306 37.7602172, -122.4515485 37.7595934, -122.4528628 37.7582744, -122.4540375 37.7566755, -122.4565266 37.7513144, -122.4601315 37.7521288, -122.4618481 37.7514501, -122.4635648 37.7530788, -122.4758889 37.7524995))",
-              "types": [
-                "delivery"
-              ],
-              "description": "Delivery Zone for Store C"
-            }
-          ],
-          "status": "ok"
         }
       },
       "Zone": {
@@ -11557,13 +12359,6 @@
       "description": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
       "externalDocs": {
         "url": "https://developers.woosmap.com/products/merchant-api/get-started/"
-      }
-    },
-    {
-      "name": "Zones API",
-      "description": "Woosmap Zones API is a web service that uses an HTTP request to manage, create or edit your Zones (polygons) attached to your assets.\nThe general principle is that sometimes searching assets using crowfly distance is not good enough. For example to search the restaurant that will do the delivery for a specified address, each restaurant has a delivery zone and for topological or business reasons it’s not always the nearest restaurant in charge of your delivery. Woosmap Zones API allows you to associate a delivery zone to each of the restaurants.\n",
-      "externalDocs": {
-        "url": "https://developers.woosmap.com/products/data-api/zones/"
       }
     }
   ]
