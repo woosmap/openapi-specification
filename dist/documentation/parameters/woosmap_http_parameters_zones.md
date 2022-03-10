@@ -4,9 +4,13 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="zone_id">zone_id</h3>
+-   <h3 id="limit">limit</h3>
 
-    The zone ID to delete
+    To limit number of zones retrieved (max 50).
+
+-   <h3 id="offset">offset</h3>
+
+    To retrieve zones starting from an offset value.
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

@@ -1,4 +1,4 @@
-// [START woosmap_http_zones]
+// [START woosmap_http_zones_collection]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY"
+  url := "https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1"
   method := "GET"
 
   client := &http.Client {
@@ -34,4 +34,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END woosmap_http_zones]
+// [END woosmap_http_zones_collection]

@@ -169,8 +169,7 @@ export const REQUESTS: SnippetRequest[] = [
                         value: "173.79.254.254",
                     },
                 ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
+            })
         }),
     },
     {
@@ -383,14 +382,38 @@ export const REQUESTS: SnippetRequest[] = [
                 protocol: "https",
                 host: "api.woosmap.com",
                 path: "/zones/ZoneA/",
-                 query: [
+                query: [
                     {
                         key: "private_key",
                         value: "YOUR_PRIVATE_API_KEY",
                     }
                 ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
+            })
+        }),
+    },
+    {
+        regionTag: "woosmap_http_zones_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/zones/",
+                query: [
+                     {
+                        key: "private_key",
+                        value: "YOUR_PRIVATE_API_KEY",
+                    },
+                    {
+                        key: "limit",
+                        value: "2",
+                    },
+                    {
+                        key: "offset",
+                        value: "1",
+                    },
+
+                ],
+            })
         }),
     },
     {

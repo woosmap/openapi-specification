@@ -1,0 +1,35 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Data Management API
+description: >
+  List all zones for the current project, sorted by `zone_id`.
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/zones/limit.yml"
+  - $ref: "../../parameters/zones/offset.yml"
+
+responses:
+  "200":
+    description: Zone successfully retrieved
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/ZonesCollectionResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_zones_collection_response.yml"
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_zones_collection/woosmap_http_zones_collection.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_zones_collection/woosmap_http_zones_collection.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_zones_collection/woosmap_http_zones_collection.python.yml"
