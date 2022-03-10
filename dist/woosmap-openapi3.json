@@ -83,10 +83,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -96,7 +96,7 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254'"
           },
           {
             "lang": "javascript",
@@ -106,7 +106,7 @@
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -451,10 +451,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -635,10 +635,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -771,10 +771,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -843,10 +843,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -1092,10 +1092,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "404": {
             "description": "Not Found - `storeId` do not exist."
@@ -1276,10 +1276,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -1344,6 +1344,9 @@
           },
           {
             "$ref": "#/components/parameters/search_page"
+          },
+          {
+            "$ref": "#/components/parameters/search_zone"
           }
         ],
         "responses": {
@@ -3426,10 +3429,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "description": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
@@ -3603,10 +3606,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -3819,10 +3822,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -4026,10 +4029,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -4137,10 +4140,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -4275,10 +4278,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -4304,6 +4307,129 @@
       }
     },
     "/zones": {
+      "get": {
+        "summary": "List your Zones",
+        "operationId": "listZones",
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "tags": [
+          "Data Management API"
+        ],
+        "description": "List all zones for the current project, sorted by `zone_id`.\n",
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/zones_limit"
+          },
+          {
+            "$ref": "#/components/parameters/zones_offset"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Zone successfully retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ZonesCollectionResponse"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "zones": [
+                        {
+                          "store_id": "STORE_ID_123456",
+                          "zone_id": "ZoneB",
+                          "polygon": "POLYGON ((-122.4546384 37.774656, -122.4515485 37.7595934, -122.4354306 37.7602172, -122.4333707 37.7512596, -122.423071 37.7511239, -122.4242726 37.7687665, -122.4259893 37.7691736, -122.4289075 37.7732444, -122.4306241 37.7850483, -122.4472753 37.7830133, -122.445902 37.7759581, -122.4546384 37.774656))",
+                          "types": [
+                            "delivery"
+                          ],
+                          "description": "Delivery Zone for Store B"
+                        },
+                        {
+                          "store_id": "STORE_ID_45678",
+                          "zone_id": "ZoneC",
+                          "polygon": "POLYGON ((-122.4758889 37.7524995, -122.4751594 37.7321718, -122.4688079 37.7299995, -122.4648597 37.7261979, -122.4519851 37.7228035, -122.4483802 37.7215815, -122.4458053 37.726741, -122.4365356 37.7310857, -122.4315574 37.7324433, -122.4246909 37.7312214, -122.4219444 37.731493, -122.423071 37.7511239, -122.4333707 37.7512596, -122.4354306 37.7602172, -122.4515485 37.7595934, -122.4528628 37.7582744, -122.4540375 37.7566755, -122.4565266 37.7513144, -122.4601315 37.7521288, -122.4618481 37.7514501, -122.4635648 37.7530788, -122.4758889 37.7524995))",
+                          "types": [
+                            "delivery"
+                          ],
+                          "description": "Delivery Zone for Store C"
+                        }
+                      ],
+                      "status": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Incorrect authentication credentials.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                },
+                "examples": {
+                  "Unauthorized": {
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden. This Woosmap API is not enabled for this project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                },
+                "examples": {
+                  "Forbidden": {
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found - `zone_id` do not exist."
+          }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -L -X GET 'https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1'"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      },
       "post": {
         "summary": "Create your Zones",
         "operationId": "createZones",
@@ -4390,10 +4516,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -4409,7 +4535,7 @@
         ]
       },
       "put": {
-        "summary": "Update the Zones.",
+        "summary": "Update the Zones",
         "operationId": "updateZones",
         "servers": [
           {
@@ -4508,38 +4634,10 @@
             }
           },
           "401": {
-            "description": "Unauthorized. Incorrect authentication credentials.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error401"
-                },
-                "examples": {
-                  "Unauthorized": {
-                    "value": {
-                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "description": "Forbidden. This Woosmap API is not enabled for this project.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error403"
-                },
-                "examples": {
-                  "Forbidden": {
-                    "value": {
-                      "detail": "This Woosmap API is not enabled for this project."
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -4608,10 +4706,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           }
         },
         "x-codeSamples": [
@@ -4693,10 +4791,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "404": {
             "description": "Not Found - `zone_id` do not exist."
@@ -4706,7 +4804,7 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY'"
           },
           {
             "lang": "javascript",
@@ -4716,7 +4814,7 @@
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload={}\nheaders = {}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -4813,10 +4911,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -4933,10 +5031,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -5102,10 +5200,10 @@
             }
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -5188,10 +5286,10 @@
             "description": "dirty_name was not provided"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -5357,10 +5455,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -5520,10 +5618,10 @@
             "$ref": "#/paths/~1zones/put/responses/400"
           },
           "401": {
-            "$ref": "#/paths/~1zones/put/responses/401"
+            "$ref": "#/paths/~1zones/get/responses/401"
           },
           "403": {
-            "$ref": "#/paths/~1zones/put/responses/403"
+            "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
             "$ref": "#/paths/~1stores~1search/get/responses/429"
@@ -5937,6 +6035,36 @@
           "maximum": 300
         },
         "example": 150,
+        "in": "query"
+      },
+      "search_zone": {
+        "name": "zone",
+        "in": "query",
+        "example": true,
+        "schema": {
+          "type": "boolean"
+        },
+        "description": "returns the stores that are linked to a zone intersecting the provided `lat`,`lng` query parameters.\n"
+      },
+      "zones_limit": {
+        "name": "limit",
+        "description": "To limit number of zones retrieved (max 50).\n",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "example": 10,
+        "in": "query"
+      },
+      "zones_offset": {
+        "name": "offset",
+        "description": "To retrieve zones starting from an offset value.\n",
+        "schema": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "example": 20,
         "in": "query"
       }
     },
@@ -10384,6 +10512,48 @@
               ]
             }
           ]
+        }
+      },
+      "ZonesCollectionResponse": {
+        "title": "ZonesCollectionResponse",
+        "type": "object",
+        "description": "A Collection of Woosmap Zones retrieved in response to a get zones list.",
+        "properties": {
+          "zones": {
+            "description": "The Zones collection",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Zone"
+            }
+          },
+          "status": {
+            "type": "string",
+            "description": "the status as string",
+            "example": "ok"
+          }
+        },
+        "example": {
+          "zones": [
+            {
+              "store_id": "STORE_ID_123456",
+              "zone_id": "ZoneB",
+              "polygon": "POLYGON ((-122.4546384 37.774656, -122.4515485 37.7595934, -122.4354306 37.7602172, -122.4333707 37.7512596, -122.423071 37.7511239, -122.4242726 37.7687665, -122.4259893 37.7691736, -122.4289075 37.7732444, -122.4306241 37.7850483, -122.4472753 37.7830133, -122.445902 37.7759581, -122.4546384 37.774656))",
+              "types": [
+                "delivery"
+              ],
+              "description": "Delivery Zone for Store B"
+            },
+            {
+              "store_id": "STORE_ID_45678",
+              "zone_id": "ZoneC",
+              "polygon": "POLYGON ((-122.4758889 37.7524995, -122.4751594 37.7321718, -122.4688079 37.7299995, -122.4648597 37.7261979, -122.4519851 37.7228035, -122.4483802 37.7215815, -122.4458053 37.726741, -122.4365356 37.7310857, -122.4315574 37.7324433, -122.4246909 37.7312214, -122.4219444 37.731493, -122.423071 37.7511239, -122.4333707 37.7512596, -122.4354306 37.7602172, -122.4515485 37.7595934, -122.4528628 37.7582744, -122.4540375 37.7566755, -122.4565266 37.7513144, -122.4601315 37.7521288, -122.4618481 37.7514501, -122.4635648 37.7530788, -122.4758889 37.7524995))",
+              "types": [
+                "delivery"
+              ],
+              "description": "Delivery Zone for Store C"
+            }
+          ],
+          "status": "ok"
         }
       },
       "Zone": {

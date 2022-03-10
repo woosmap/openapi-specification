@@ -63,17 +63,15 @@ paths:
                     postal_code: '22309'
                     timezone: America/New_York
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
         - lang: curl
           label: cURL
-          source: |-
-            curl -L -X GET 'https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254' \
-            -H 'Referer: http://localhost'
+          source: 'curl -L -X GET ''https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254'''
         - lang: javascript
           label: JavaScript
           source: |-
@@ -94,9 +92,7 @@ paths:
             url = "https://api.woosmap.com/geolocation/position?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254"
 
             payload={}
-            headers = {
-                'Referer': 'http://localhost'
-            }
+            headers = {}
 
             response = requests.request("GET", url, headers=headers, data=payload)
 
@@ -315,9 +311,9 @@ paths:
                         page: 1
                         pageCount: 1
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -451,9 +447,9 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -867,9 +863,9 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1114,9 +1110,9 @@ paths:
                     status: success
                     value: 2
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1291,9 +1287,9 @@ paths:
                         - -122.712924
                         - 38.41244
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '404':
           description: Not Found - `storeId` do not exist.
       x-codeSamples:
@@ -1430,9 +1426,9 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1797,6 +1793,7 @@ paths:
         - $ref: '#/components/parameters/search_encoded_polyline'
         - $ref: '#/components/parameters/search_stores_by_page'
         - $ref: '#/components/parameters/search_page'
+        - $ref: '#/components/parameters/search_zone'
       responses:
         '200':
           description: Assets successfully retrieved
@@ -3052,9 +3049,9 @@ paths:
                       page: 1
                       pageCount: 1
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           description: Too Many Requests. The rate limit for this endpoint has been exceeded.
           content:
@@ -3172,9 +3169,9 @@ paths:
                             length: 6
                         highlighted: Doha <b>Street</b>
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -3321,9 +3318,9 @@ paths:
                         admin_0: United Kingdom
                         admin_1: Norfolk
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -3466,9 +3463,9 @@ paths:
                           - public_id: RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fSjl5NmMwVkhkOEw1ZGpnVktBbVVaaXIxRDc0PQ==
                             description: 'The Speakers House, 1 Parliament Square, London, SW1A 0AA'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -3550,9 +3547,9 @@ paths:
                         type: locality
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -3655,9 +3652,9 @@ paths:
                             lng: -0.56316
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -3694,6 +3691,97 @@ paths:
 
             print(response.text)
   /zones:
+    get:
+      summary: List your Zones
+      operationId: listZones
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Data Management API
+      description: |
+        List all zones for the current project, sorted by `zone_id`.
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/zones_limit'
+        - $ref: '#/components/parameters/zones_offset'
+      responses:
+        '200':
+          description: Zone successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZonesCollectionResponse'
+              examples:
+                default:
+                  value:
+                    zones:
+                      - store_id: STORE_ID_123456
+                        zone_id: ZoneB
+                        polygon: 'POLYGON ((-122.4546384 37.774656, -122.4515485 37.7595934, -122.4354306 37.7602172, -122.4333707 37.7512596, -122.423071 37.7511239, -122.4242726 37.7687665, -122.4259893 37.7691736, -122.4289075 37.7732444, -122.4306241 37.7850483, -122.4472753 37.7830133, -122.445902 37.7759581, -122.4546384 37.774656))'
+                        types:
+                          - delivery
+                        description: Delivery Zone for Store B
+                      - store_id: STORE_ID_45678
+                        zone_id: ZoneC
+                        polygon: 'POLYGON ((-122.4758889 37.7524995, -122.4751594 37.7321718, -122.4688079 37.7299995, -122.4648597 37.7261979, -122.4519851 37.7228035, -122.4483802 37.7215815, -122.4458053 37.726741, -122.4365356 37.7310857, -122.4315574 37.7324433, -122.4246909 37.7312214, -122.4219444 37.731493, -122.423071 37.7511239, -122.4333707 37.7512596, -122.4354306 37.7602172, -122.4515485 37.7595934, -122.4528628 37.7582744, -122.4540375 37.7566755, -122.4565266 37.7513144, -122.4601315 37.7521288, -122.4618481 37.7514501, -122.4635648 37.7530788, -122.4758889 37.7524995))'
+                        types:
+                          - delivery
+                        description: Delivery Zone for Store C
+                    status: ok
+        '401':
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+        '403':
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
+        '404':
+          description: Not Found - `zone_id` do not exist.
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: 'curl -L -X GET ''https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1'''
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+        - lang: python
+          label: Python
+          source: |
+            import requests
+
+            url = "https://api.woosmap.com/zones/?private_key=YOUR_PRIVATE_API_KEY&limit=2&offset=1"
+
+            payload={}
+            headers = {}
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            print(response.text)
     post:
       summary: Create your Zones
       operationId: createZones
@@ -3749,15 +3837,15 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - $ref: '#/paths/~1zones/put/x-codeSamples/0'
         - $ref: '#/paths/~1zones/put/x-codeSamples/1'
         - $ref: '#/paths/~1zones/put/x-codeSamples/2'
     put:
-      summary: Update the Zones.
+      summary: Update the Zones
       operationId: updateZones
       servers:
         - url: 'https://api.woosmap.com'
@@ -3818,25 +3906,9 @@ paths:
                     status: error
                     value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          description: Unauthorized. Incorrect authentication credentials.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-              examples:
-                Unauthorized:
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          description: Forbidden. This Woosmap API is not enabled for this project.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error403'
-              examples:
-                Forbidden:
-                  value:
-                    detail: This Woosmap API is not enabled for this project.
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4002,9 +4074,9 @@ paths:
                     status: ok
                     message: Zones deleted.
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4080,17 +4152,15 @@ paths:
                     description: Delivery Zone for Store A
                     status: ok
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '404':
           description: Not Found - `zone_id` do not exist.
       x-codeSamples:
         - lang: curl
           label: cURL
-          source: |-
-            curl -L -X GET 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY' \
-            -H 'Referer: http://localhost'
+          source: 'curl -L -X GET ''https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY'''
         - lang: javascript
           label: JavaScript
           source: |-
@@ -4111,9 +4181,7 @@ paths:
             url = "https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY"
 
             payload={}
-            headers = {
-                'Referer': 'http://localhost'
-            }
+            headers = {}
 
             response = requests.request("GET", url, headers=headers, data=payload)
 
@@ -4168,9 +4236,9 @@ paths:
                               value: 10287
                               text: 10.3 km
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -4264,9 +4332,9 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -4415,9 +4483,9 @@ paths:
                               lat: 48.708871
                               lng: 2.302968
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -4489,9 +4557,9 @@ paths:
         '400':
           description: dirty_name was not provided
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -4626,9 +4694,9 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -4858,9 +4926,9 @@ paths:
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
         '401':
-          $ref: '#/paths/~1zones/put/responses/401'
+          $ref: '#/paths/~1zones/get/responses/401'
         '403':
-          $ref: '#/paths/~1zones/put/responses/403'
+          $ref: '#/paths/~1zones/get/responses/403'
         '429':
           $ref: '#/paths/~1stores~1search/get/responses/429'
       x-codeSamples:
@@ -5409,6 +5477,33 @@ components:
         minimum: 1
         maximum: 300
       example: 150
+      in: query
+    search_zone:
+      name: zone
+      in: query
+      example: true
+      schema:
+        type: boolean
+      description: |
+        returns the stores that are linked to a zone intersecting the provided `lat`,`lng` query parameters.
+    zones_limit:
+      name: limit
+      description: |
+        To limit number of zones retrieved (max 50).
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 50
+      example: 10
+      in: query
+    zones_offset:
+      name: offset
+      description: |
+        To retrieve zones starting from an offset value.
+      schema:
+        type: integer
+        minimum: 1
+      example: 20
       in: query
   schemas:
     Bounds:
@@ -8294,6 +8389,35 @@ components:
             polygon: 'POLYGON ((-122.4758889 37.7524995,-122.4751594 37.7321718,-122.4688079 37.7299995,-122.4648597 37.7261979,-122.4519851 37.7228035,-122.4483802 37.7215815,-122.4458053 37.726741,-122.4365356 37.7310857,-122.4315574 37.7324433,-122.4246909 37.7312214,-122.4219444 37.731493,-122.423071 37.7511239,-122.4333707 37.7512596,-122.4354306 37.7602172,-122.4515485 37.7595934,-122.4528628 37.7582744,-122.4540375 37.7566755,-122.4565266 37.7513144,-122.4601315 37.7521288,-122.4618481 37.7514501,-122.4635648 37.7530788,-122.4758889 37.7524995))'
             types:
               - delivery
+    ZonesCollectionResponse:
+      title: ZonesCollectionResponse
+      type: object
+      description: A Collection of Woosmap Zones retrieved in response to a get zones list.
+      properties:
+        zones:
+          description: The Zones collection
+          type: array
+          items:
+            $ref: '#/components/schemas/Zone'
+        status:
+          type: string
+          description: the status as string
+          example: ok
+      example:
+        zones:
+          - store_id: STORE_ID_123456
+            zone_id: ZoneB
+            polygon: 'POLYGON ((-122.4546384 37.774656, -122.4515485 37.7595934, -122.4354306 37.7602172, -122.4333707 37.7512596, -122.423071 37.7511239, -122.4242726 37.7687665, -122.4259893 37.7691736, -122.4289075 37.7732444, -122.4306241 37.7850483, -122.4472753 37.7830133, -122.445902 37.7759581, -122.4546384 37.774656))'
+            types:
+              - delivery
+            description: Delivery Zone for Store B
+          - store_id: STORE_ID_45678
+            zone_id: ZoneC
+            polygon: 'POLYGON ((-122.4758889 37.7524995, -122.4751594 37.7321718, -122.4688079 37.7299995, -122.4648597 37.7261979, -122.4519851 37.7228035, -122.4483802 37.7215815, -122.4458053 37.726741, -122.4365356 37.7310857, -122.4315574 37.7324433, -122.4246909 37.7312214, -122.4219444 37.731493, -122.423071 37.7511239, -122.4333707 37.7512596, -122.4354306 37.7602172, -122.4515485 37.7595934, -122.4528628 37.7582744, -122.4540375 37.7566755, -122.4565266 37.7513144, -122.4601315 37.7521288, -122.4618481 37.7514501, -122.4635648 37.7530788, -122.4758889 37.7524995))'
+            types:
+              - delivery
+            description: Delivery Zone for Store C
+        status: ok
     Zone:
       title: Zone
       type: object
