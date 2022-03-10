@@ -67,12 +67,16 @@
     operationId: addressGeocode
     $ref: "./address/addressGeocode.yml"
 /zones:
+  get:
+    summary: List your Zones
+    operationId: listZones
+    $ref: "./zones/zonesList.yml"
   post:
     summary: Create your Zones
     operationId: createZones
     $ref: "./zones/zonesCreate.yml"
   put:
-    summary: Update the Zones.
+    summary: Update the Zones
     operationId: updateZones
     $ref: "./zones/zonesUpdate.yml"
   delete:

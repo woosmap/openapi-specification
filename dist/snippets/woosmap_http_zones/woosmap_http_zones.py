@@ -4,9 +4,7 @@ import requests
 url = "https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY"
 
 payload={}
-headers = {
-    'Referer': 'http://localhost'
-}
+headers = {}
 
 response = requests.request("GET", url, headers=headers, data=payload)
 

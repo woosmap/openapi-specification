@@ -87,6 +87,10 @@
 
     If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is 100, max is 300).
 
+-   <h3 id="zone">zone</h3>
+
+    returns the stores that are linked to a zone intersecting the provided `lat`,`lng` query parameters.
+
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a data-label="openapi-github-woosmap-http-parameters-storessearch" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/tree/main/specification/parameters" title="Edit on GitHub">✎ Edit</a>
