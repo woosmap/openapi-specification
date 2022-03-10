@@ -89,7 +89,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -457,7 +457,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -3435,21 +3435,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error429"
-                },
-                "examples": {
-                  "Forbidden": {
-                    "value": {
-                      "detail": "The rate limit for this endpoint has been exceeded"
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -3612,7 +3598,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -3828,7 +3814,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4035,7 +4021,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4146,7 +4132,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4284,7 +4270,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -4316,14 +4302,10 @@
           }
         ],
         "tags": [
-          "Data Management API"
+          "Zones API"
         ],
         "description": "List all zones for the current project, sorted by `zone_id`.\n",
         "security": [
-          {
-            "PublicApiKeyAuth": [],
-            "RefererHeader": []
-          },
           {
             "PrivateApiKeyAuth": []
           }
@@ -4408,8 +4390,22 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found - `zone_id` do not exist."
+          "429": {
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                },
+                "examples": {
+                  "Forbidden": {
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "x-codeSamples": [
@@ -4439,7 +4435,7 @@
           }
         ],
         "tags": [
-          "Data Management API"
+          "Zones API"
         ],
         "description": "Used to batch create Zones to a specific project identified with the `private_key` parameter.\n",
         "security": [
@@ -4543,7 +4539,7 @@
           }
         ],
         "tags": [
-          "Data Management API"
+          "Zones API"
         ],
         "description": "Used to update zones in batch. `zone_id` must exists when using `PUT` method, if one zone does not exists, the batch will be refused.",
         "security": [
@@ -4667,7 +4663,7 @@
           }
         ],
         "tags": [
-          "Data Management API"
+          "Zones API"
         ],
         "description": "Used to delete one or more Zones. The `zone_id` is the id of the zone to delete. To delete several zones, use the comma as a separator.",
         "security": [
@@ -4741,14 +4737,10 @@
           }
         ],
         "tags": [
-          "Data Management API"
+          "Zones API"
         ],
         "description": "Used to retrieve a zone from his `zone_id`\n",
         "security": [
-          {
-            "PublicApiKeyAuth": [],
-            "RefererHeader": []
-          },
           {
             "PrivateApiKeyAuth": []
           }
@@ -4917,7 +4909,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5037,7 +5029,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5206,7 +5198,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5292,7 +5284,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5461,7 +5453,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -5624,7 +5616,7 @@
             "$ref": "#/paths/~1zones/get/responses/403"
           },
           "429": {
-            "$ref": "#/paths/~1stores~1search/get/responses/429"
+            "$ref": "#/paths/~1zones/get/responses/429"
           }
         },
         "x-codeSamples": [
@@ -11565,6 +11557,13 @@
       "description": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
       "externalDocs": {
         "url": "https://developers.woosmap.com/products/merchant-api/get-started/"
+      }
+    },
+    {
+      "name": "Zones API",
+      "description": "Woosmap Zones API is a web service that uses an HTTP request to manage, create or edit your Zones (polygons) attached to your assets.\nThe general principle is that sometimes searching assets using crowfly distance is not good enough. For example to search the restaurant that will do the delivery for a specified address, each restaurant has a delivery zone and for topological or business reasons it’s not always the nearest restaurant in charge of your delivery. Woosmap Zones API allows you to associate a delivery zone to each of the restaurants.\n",
+      "externalDocs": {
+        "url": "https://developers.woosmap.com/products/data-api/zones/"
       }
     }
   ]

@@ -1,12 +1,10 @@
 servers:
   - url: https://api.woosmap.com
 tags:
-  - Data Management API
+  - Zones API
 description: >
   List all zones for the current project, sorted by `zone_id`.
 security:
-  - PublicApiKeyAuth: []
-    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/zones/limit.yml"
