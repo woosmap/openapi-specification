@@ -84,26 +84,6 @@
     <tr>
       <td align="left">
         <h4
-          id="AddressGeocodeResponse-public_id"
-          class="add-link schema-object-property-key"
-        >
-          <code>public_id</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains a unique ID for each suggestion. Please use this ID to give
-            feedbacks on results.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
           id="AddressGeocodeResponse-types"
           class="add-link schema-object-property-key"
         >
@@ -135,75 +115,6 @@
     </tr>
   </tbody>
 </table>
-<h4 class="schema-object-example" id="AddressGeocodeResponse-example">
-  Example
-</h4>
-<pre class="notranslate lang-json prettyprint">
-{
-  "result": {
-    "formatted_address": "London, England, United Kingdom",
-    "types": [
-      "locality"
-    ],
-    "public_id": "aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0",
-    "address_components": [
-      {
-        "types": [
-          "country"
-        ],
-        "long_name": "United Kingdom",
-        "short_name": "GBR"
-      },
-      {
-        "types": [
-          "state"
-        ],
-        "long_name": "England",
-        "short_name": "England"
-      },
-      {
-        "types": [
-          "county"
-        ],
-        "long_name": "London",
-        "short_name": "LDN"
-      },
-      {
-        "long_name": "London",
-        "short_name": "London",
-        "types": [
-          "locality"
-        ]
-      },
-      {
-        "long_name": "SW1A 2",
-        "short_name": "SW1A 2",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
-    "geometry": {
-      "location_type": "GEOMETRIC_CENTER",
-      "location": {
-        "lat": 51.50643,
-        "lng": -0.12719
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 51.68629,
-          "lng": 0.28206
-        },
-        "southwest": {
-          "lat": 51.28043,
-          "lng": -0.56316
-        }
-      }
-    }
-  },
-  "status": "OK"
-}</pre
->
 <p style="text-align: right; font-size: smaller">
   Generated from the
   <a
