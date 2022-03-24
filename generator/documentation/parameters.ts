@@ -1,4 +1,5 @@
 import $RefParser from "@apidevtools/json-schema-ref-parser";
+import clsx from "clsx";
 
 import {createWriteStream, readFileSync} from "fs";
 import {options} from "yargs";
@@ -15,7 +16,7 @@ import {
     listItem,
 } from "mdast-builder";
 import {Node, Parent} from "unist";
-import {feedbackLinks} from "./helpers";
+import {feedbackLinks, deprecatedAsideNode} from "./helpers";
 
 const argv = options({
     output: {
@@ -30,7 +31,18 @@ const argv = options({
 
 const buildParameterListItem = (p: OpenAPIV3.ParameterObject): Parent => {
     const nodes: any = [];
-    nodes.push(htmlNode(`<h3 id="${p.name.toLowerCase()}">${p.name}</h3>`));
+     nodes.push(
+    htmlNode(
+      `<h3 class="${clsx("parameter-name", {
+        "deprecated-item": p.deprecated,
+        "hide-from-toc": p.deprecated,
+      })}" id="${p.name.toLowerCase()}">${p.name}</h3>`
+    )
+  );
+
+  if (p.deprecated) {
+    nodes.push(deprecatedAsideNode(p.name));
+  }
 
     if (p.description) {
         nodes.push(paragraph(fromMarkdown(p.description)));

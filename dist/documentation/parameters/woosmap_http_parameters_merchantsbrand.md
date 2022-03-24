@@ -2,7 +2,7 @@
 <!--- [START woosmap_http_parameters_merchantsbrand] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="dirty_name">dirty_name</h3>
+-   <h3 class="parameter-name" id="dirty_name">dirty_name</h3>
 
     The dirty name is the unique merchant identifier which is provided on transactions by a payment provider.
 

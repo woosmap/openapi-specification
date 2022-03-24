@@ -2,21 +2,21 @@
 <!--- [START woosmap_http_parameters_addressautocomplete] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="input">input</h3>
+-   <h3 class="parameter-name" id="input">input</h3>
 
     The text string on which to search, for example: "london" or "123 Cross Road". The Woosmap Address API will return predictions matches based on this string and order the results based on their perceived relevance.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="components">components</h3>
+-   <h3 class="parameter-name" id="components">components</h3>
 
     To restrict your results to specific areas. Currently, you can use components to filter over countries. Countries must be passed as three characters string (ISO 3166-1 Alpha 3). Components should be passed as an array of different options which are separated by a `|`.
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language code, using ISO 639-1 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, the Localities service will use the default language of each country.
 
--   <h3 id="location">location</h3>
+-   <h3 class="parameter-name" id="location">location</h3>
 
     Bias for the results. Should be pass in `lat`,`lng` format.
 
