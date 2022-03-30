@@ -49,7 +49,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 135.28682936,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -57,10 +57,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "06:30",
-            "day": "2022-03-09"
+            "start": "06:30"
           }
         },
         "weekly_opening": {
@@ -221,7 +220,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 334.31148224,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -229,10 +228,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "06:30",
-            "day": "2022-03-09"
+            "start": "06:30"
           }
         },
         "weekly_opening": {
@@ -394,7 +392,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 431.58415682,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -402,10 +400,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:00",
-            "day": "2022-03-09"
+            "start": "07:00"
           }
         },
         "weekly_opening": {
@@ -561,7 +558,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 541.85737556,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -569,10 +566,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "08:00",
-            "day": "2022-03-09"
+            "start": "08:00"
           }
         },
         "weekly_opening": {
@@ -735,7 +731,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 544.58185978,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -743,10 +739,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:00",
-            "day": "2022-03-09"
+            "start": "07:00"
           }
         },
         "weekly_opening": {
@@ -909,7 +904,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 554.73026581,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -917,10 +912,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:30",
-            "day": "2022-03-09"
+            "start": "07:30"
           }
         },
         "weekly_opening": {
@@ -1082,7 +1076,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 632.17523247,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -1090,10 +1084,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:30",
-            "day": "2022-03-09"
+            "start": "07:30"
           }
         },
         "weekly_opening": {
@@ -1252,7 +1245,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 649.62722685,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -1260,10 +1253,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "08:00",
-            "day": "2022-03-09"
+            "start": "08:00"
           }
         },
         "weekly_opening": {
@@ -1426,7 +1418,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 714.77455167,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -1434,10 +1426,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:00",
-            "day": "2022-03-09"
+            "start": "07:00"
           }
         },
         "weekly_opening": {
@@ -1599,7 +1590,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 877.89870518,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -1607,10 +1598,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:00",
-            "day": "2022-03-09"
+            "start": "07:00"
           }
         },
         "weekly_opening": {
@@ -1773,7 +1763,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 893.47601826,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -1781,10 +1771,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:30",
-            "day": "2022-03-09"
+            "start": "07:30"
           }
         },
         "weekly_opening": {
@@ -1946,7 +1935,7 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
         ],
         "distance": 925.6334785,
         "open": {
-          "open_now": false,
+          "open_now": true,
           "open_hours": [
             {
               "end": "18:00",
@@ -1954,10 +1943,9 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
             }
           ],
           "week_day": 3,
-          "next_opening": {
+          "current_slice": {
             "end": "18:00",
-            "start": "07:00",
-            "day": "2022-03-09"
+            "start": "07:00"
           }
         },
         "weekly_opening": {
