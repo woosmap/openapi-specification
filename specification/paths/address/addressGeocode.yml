@@ -1,0 +1,40 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Address API
+description: >
+  Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required. Maximum of 25 queries per second (QPS)
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/address/address.yml"
+  - $ref: "../../parameters/address/latlng.yml"
+  - $ref: "../../parameters/address/components.yml"
+  - $ref: "../../parameters/address/language.yml"
+  - $ref: "../../parameters/address/location.yml"
+  - $ref: "../../parameters/address/cc_format.yml"
+  - $ref: "../../parameters/address/limit.yml"
+responses:
+  "200":
+    description: Request successful
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/AddressGeocodeCollectionResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_address_geocode_collection_response.yml"
+
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_address_geocode_collection/woosmap_http_address_geocode_collection.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_address_geocode_collection/woosmap_http_address_geocode_collection.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_address_geocode_collection/woosmap_http_address_geocode_collection.python.yml"

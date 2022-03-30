@@ -30,7 +30,9 @@ Asset Response as a GeoJSon Feature with Asset properties
       "city": "Santa Rosa",
       "zipcode": "954077625"
     },
-    "user_properties": null,
+    "user_properties": {
+      "take_away": "available"
+    },
     "tags": [
       "DT",
       "WA",
@@ -56,7 +58,7 @@ Asset Response as a GeoJSon Feature with Asset properties
           "start": "05:00"
         }
       ],
-      "week_day": 1,
+      "week_day": 3,
       "current_slice": {
         "end": "20:00",
         "start": "05:00"

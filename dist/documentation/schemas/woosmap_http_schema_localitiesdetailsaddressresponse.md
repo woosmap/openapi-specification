@@ -16,14 +16,14 @@ Attributes describing a locality. Not all attributes will be available for all l
 
 <pre class="notranslate lang-json prettyprint">{
   "result": {
-    "formatted_address": "House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA",
+    "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
     "types": [
       "address"
     ],
-    "public_id": "MVZWBfGZQnAQn9JtE9CJZjgeB4Q=",
+    "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
     "geometry": {
       "location": {
-        "lat": 51.49984,
+        "lat": 51.4998415,
         "lng": -0.1246375
       },
       "accuracy": "ROOFTOP"
@@ -46,13 +46,6 @@ Attributes describing a locality. Not all attributes will be available for all l
       },
       {
         "types": [
-          "premise"
-        ],
-        "long_name": "House Of Commons Palace Of Westminster",
-        "short_name": "House Of Commons Palace Of Westminster"
-      },
-      {
-        "types": [
           "locality"
         ],
         "long_name": "London",
@@ -67,17 +60,17 @@ Attributes describing a locality. Not all attributes will be available for all l
       },
       {
         "types": [
+          "premise"
+        ],
+        "long_name": "Houses Of Parliament",
+        "short_name": "Houses Of Parliament"
+      },
+      {
+        "types": [
           "organisation"
         ],
         "long_name": "House Of Commons",
         "short_name": "House Of Commons"
-      },
-      {
-        "types": [
-          "route"
-        ],
-        "long_name": "Parliament Square",
-        "short_name": "Parliament Square"
       }
     ]
   }
