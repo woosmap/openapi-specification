@@ -43,8 +43,6 @@
     -   `art_gallery`: includes art galleries
     -   `zoo`: includes zoos
 
-    > The information returned on an `address` suggestion contain only a "single-line" description. A request to the [Details endpoint](/products/localities/details/) of the API must be performed to retrieve the location (geographic coordinates) and the address components (street address, zipcode, city..).
-
     Not specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.
 
 
