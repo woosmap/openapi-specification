@@ -61,13 +61,22 @@
     summary: Details of an Address
     operationId: addressDetails
     $ref: "./address/addressDetails.yml"
+/address/geocode/json:
+  get:
+    summary: Geocode an Address or Reverse Geocode a latlng
+    operationId: addressGeocode
+    $ref: "./address/addressGeocode.yml"
 /zones:
+  get:
+    summary: List your Zones
+    operationId: listZones
+    $ref: "./zones/zonesList.yml"
   post:
     summary: Create your Zones
     operationId: createZones
     $ref: "./zones/zonesCreate.yml"
   put:
-    summary: Update the Zones.
+    summary: Update the Zones
     operationId: updateZones
     $ref: "./zones/zonesUpdate.yml"
   delete:
@@ -94,10 +103,14 @@
     operationId: getRoute
     $ref: "./distance/distanceRoute.yml"
 /merchants/brand:
-  post:
-    summary: Get Merchants Clean Names
+  get:
+    summary: Get Merchant Clean Name
     operationId: getMerchantsBrand
     $ref: "./merchants/merchantsBrand.yml"
+  post:
+    summary: Get Merchants Clean Names using POST
+    operationId: getMerchantsBrandPost
+    $ref: "./merchants/merchantsBrandPost.yml"
 /merchants/place:
   post:
     summary: Get Merchants Place

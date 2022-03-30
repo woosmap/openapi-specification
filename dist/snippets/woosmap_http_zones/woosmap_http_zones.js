@@ -4,9 +4,7 @@ var axios = require('axios');
 var config = {
   method: 'get',
   url: 'https://api.woosmap.com/zones/ZoneA/?private_key=YOUR_PRIVATE_API_KEY',
-  headers: { 
-    'Referer': 'http://localhost'
-  }
+  headers: { }
 };
 
 axios(config)

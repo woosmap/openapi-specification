@@ -1,0 +1,15 @@
+title: ZonesCollectionResponse
+type: object
+description: A Collection of Woosmap Zones retrieved in response to a get zones list.
+properties:
+  zones:
+    description: The Zones collection
+    type: array
+    items:
+      $ref: "./Zone.yml"
+  status:
+    type: string
+    description: the status as string
+    example: "ok"
+example:
+  $ref: "../responses/woosmap_http_zones_collection_response.yml"

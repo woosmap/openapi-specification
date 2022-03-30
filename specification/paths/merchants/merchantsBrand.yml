@@ -3,23 +3,16 @@ servers:
 tags:
   - Merchants API
 description: >
-  Retrieve clean names and logos in response to a dirty transactions POST.
+  Retrieve clean name and logo in response for a single dirty transaction.
 security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
   - PrivateApiKeyAuth: []
-requestBody:
-  description: The request body must be formatted as JSON.
-  required: true
-  content:
-    "application/json":
-      schema:
-        $ref: "../../schemas/MerchantsBrandRequest.yml"
-      examples:
-        default:
-          value:
-            $ref: "../../requests/woosmap_http_merchants_brand_request.yml"
+parameters:
+  - $ref: "../../parameters/merchants/dirty_name.yml"
 responses:
   "200":
-    description: Merchants Brand successfully retrieved
+    description: Request successful
     content:
       application/json:
         schema:
@@ -29,7 +22,7 @@ responses:
             value:
               $ref: "../../responses/woosmap_http_merchants_brand_response.yml"
   "400":
-    $ref: "../../responses/woosmap_http_error_400_invalid_response.yml"
+    description: dirty_name was not provided
   "401":
     $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
   "403":

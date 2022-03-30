@@ -1,12 +1,10 @@
 servers:
   - url: https://api.woosmap.com
 tags:
-  - Data Management API
+  - Zones API
 description: >
   Used to retrieve a zone from his `zone_id`
 security:
-  - PublicApiKeyAuth: []
-    RefererHeader: []
   - PrivateApiKeyAuth: []
 parameters:
   - in: path

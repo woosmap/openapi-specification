@@ -20,10 +20,10 @@ Attributes describing a locality. Not all attributes will be available for all l
     "types": [
       "address"
     ],
-    "public_id": "MVZWBfGZQnAQn9JtE9CJZjgeB4Q=",
+    "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
     "geometry": {
       "location": {
-        "lat": 51.49984,
+        "lat": 51.4998415,
         "lng": -0.1246375
       },
       "accuracy": "ROOFTOP"
@@ -46,13 +46,6 @@ Attributes describing a locality. Not all attributes will be available for all l
       },
       {
         "types": [
-          "premise"
-        ],
-        "long_name": "House Of Commons Palace Of Westminster",
-        "short_name": "House Of Commons Palace Of Westminster"
-      },
-      {
-        "types": [
           "locality"
         ],
         "long_name": "London",
@@ -67,17 +60,24 @@ Attributes describing a locality. Not all attributes will be available for all l
       },
       {
         "types": [
-          "organisation"
-        ],
-        "long_name": "House Of Commons",
-        "short_name": "House Of Commons"
-      },
-      {
-        "types": [
           "route"
         ],
         "long_name": "Parliament Square",
         "short_name": "Parliament Square"
+      },
+      {
+        "types": [
+          "premise"
+        ],
+        "long_name": "House Of Commons Palace Of Westminster",
+        "short_name": "House Of Commons Palace Of Westminster"
+      },
+      {
+        "types": [
+          "organisation"
+        ],
+        "long_name": "House Of Commons",
+        "short_name": "House Of Commons"
       }
     ]
   }

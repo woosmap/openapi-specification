@@ -66,6 +66,31 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_address_geocode_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/address/geocode/json",
+                query: [
+                    {
+                        key: "address",
+                        value: "Place de la Resistance",
+                    },
+                    {
+                        key: "components",
+                        value: "country:FR"
+                    },
+                    {
+                        key: "limit",
+                        value: "5"
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_distance_matrix",
         request: new Request({
             url: new Url({
@@ -169,8 +194,7 @@ export const REQUESTS: SnippetRequest[] = [
                         value: "173.79.254.254",
                     },
                 ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
+            })
         }),
     },
     {
@@ -224,7 +248,7 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "public_id",
-                        value: "MVZWBfGZQnAQn9JtE9CJZjgeB4Q=",
+                        value: "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
                     }
                 ],
             }),
@@ -250,6 +274,23 @@ export const REQUESTS: SnippetRequest[] = [
     },
     {
         regionTag: "woosmap_http_merchants_brand",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/merchants/brand",
+                query: [
+                    {
+                        key: "dirty_name",
+                        value: "APPLE.COM%2FBILL",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
+        regionTag: "woosmap_http_merchants_brand_request",
         request: new PostJsonRequest({
             url: "https://api.woosmap.com/merchants/brand",
             json: parseRequestBody(
@@ -366,14 +407,38 @@ export const REQUESTS: SnippetRequest[] = [
                 protocol: "https",
                 host: "api.woosmap.com",
                 path: "/zones/ZoneA/",
-                 query: [
+                query: [
                     {
                         key: "private_key",
                         value: "YOUR_PRIVATE_API_KEY",
                     }
                 ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
+            })
+        }),
+    },
+    {
+        regionTag: "woosmap_http_zones_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/zones/",
+                query: [
+                     {
+                        key: "private_key",
+                        value: "YOUR_PRIVATE_API_KEY",
+                    },
+                    {
+                        key: "limit",
+                        value: "2",
+                    },
+                    {
+                        key: "offset",
+                        value: "1",
+                    },
+
+                ],
+            })
         }),
     },
     {

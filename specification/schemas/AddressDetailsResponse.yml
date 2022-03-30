@@ -13,7 +13,7 @@ properties:
         type: string
         example: "London, England, United Kingdom"
       types:
-        description: available address types
+        description: The types of result.
         type: array
         items:
           $ref: "./AddressTypes.yml"
@@ -27,15 +27,6 @@ properties:
         items:
           $ref: "./AddressComponents.yml"
       geometry:
-        description: The location of the result, in latitude and logitude. Accuracy is also provided.
-        type: object
-        properties:
-          location_type:
-            type: string
-            enum: [ "ROOFTOP", "RANGE_INTERPOLATED", "GEOMETRIC_CENTER", "APPROXIMATE" ]
-          location:
-            $ref: "./LatLngLiteral.yml"
-          viewport:
-            $ref: "./Bounds.yml"
+        $ref: "./AddressGeometry.yml"
 example:
   $ref: "../responses/woosmap_http_address_details_response.yml"
