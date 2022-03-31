@@ -14,7 +14,7 @@
 
 -   <h3 id="custom_description">custom_description</h3>
 
-    This parameter allows to choose the description format for all or some of the suggestion types selected. The custom formats are described as follows: `custom_description=type_A:"{field_1}, {field_2}, [...]"|type_B:"{field_1}, {field_2}, [...]"`
+    This parameter allows to choose the description format for all or some of the suggestion types selected. The custom formats are described as follows (available fields depend on the returned type): `custom_description=type_A:"{field_1}, {field_2}, [...]"|type_B:"{field_1}, {field_2}, [...]"`
 
 -   <h3 id="data">data</h3>
 
