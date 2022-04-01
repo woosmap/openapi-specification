@@ -16,41 +16,50 @@ properties:
     type: string
     example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
   geometry:
-    description: The location of the PostalCode, in latitude and longitude.
+    description: The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport.
     type: object
     properties:
       location:
         $ref: "./LatLngLiteral.yml"
+      viewport:
+        $ref: "./Bounds.yml"
   address_components:
     description: An array containing the separate components applicable to this address.
     type: array
     items:
       $ref: "./AddressComponents.yml"
   addresses:
-    description: List of adresses attached to this Postal Code
+    description: UK Only. List of adresses attached to this Postal Code.
     type: object
     properties:
       pagination:
         type: object
         properties:
           page:
-            type: number
+            type: integer
+            description: the request page
           page_count:
-            type: number
+            type: integer
+            description: the number of available pages
           addresses_per_page:
-            type: number
+            type: integer
+            description: the number of available addresses per page
           address_count:
-            type: number
+            type: integer
+            description: the number of available addresses
       list:
         type: array
+        description: List of adresses
         items:
           type: object
           properties:
             description:
               type: string
+              description: The formatted address name.
               example: "Postmasters Redirection Service, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA"
             public_id:
               type: string
+              description: The unique public id attached to this address used to request details information.
               example: "DuxKg3/i5t1AuSt1qvwaiSgd+gI="
 example:
   $ref: "../responses/woosmap_http_localities_details_postal_code_response.yml"

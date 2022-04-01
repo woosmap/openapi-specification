@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "fb7c6e8a-3019-4952-a3f5-a4b8c0342cbc",
+            "id": "5dd9e74d-2a44-4f17-8313-0417233115f5",
             "name": "Store Search API",
             "description": {
                 "content": "Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/). Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/). If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).\n",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "4d7f7105-ea93-42cc-ac28-2ea4be61b26c",
+                    "id": "6cc4f032-7698-4ebb-825f-16c13fd1b41b",
                     "name": "Search for assets",
                     "request": {
                         "name": "Search for assets",
@@ -101,7 +101,7 @@
                     },
                     "response": [
                         {
-                            "id": "22146c5e-3bc3-49ec-b0b7-8fb39e158cdb",
+                            "id": "1c80d421-8ac0-46f4-8fd4-27a0cfd4cc8e",
                             "name": "Assets successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -171,7 +171,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "95c22f60-91d2-43c0-9b63-89c12d5752ab",
+                            "id": "5e562b64-4cb7-41f2-9f88-4309d0138e16",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -241,7 +241,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "829000fc-dc18-4d07-97ad-bda6d124fd4d",
+                            "id": "bb35a7e9-735a-485c-aefa-8fe1d8fb475d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -311,7 +311,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6f0f88d9-5376-4e4d-a5f8-429196e78567",
+                            "id": "0cf04881-8f97-4343-b30b-77afeb899083",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -384,7 +384,7 @@
                     "event": []
                 },
                 {
-                    "id": "8b4102a7-a2b2-4113-8cf1-d18f58ca72fe",
+                    "id": "4f7a4d8d-733d-4ec4-a815-2cbbf6050368",
                     "name": "Autocomplete for assets",
                     "request": {
                         "name": "Autocomplete for assets",
@@ -470,7 +470,7 @@
                     },
                     "response": [
                         {
-                            "id": "5a847702-8ba2-4c98-8ad3-819205335537",
+                            "id": "07e2e74c-2073-4d9f-8609-e49d2fe3f1a3",
                             "name": "Assets Successfully Replaced",
                             "originalRequest": {
                                 "url": {
@@ -536,7 +536,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a2d8375f-dfbb-4eaa-9b67-1baaa36edc17",
+                            "id": "a072767f-1231-414b-9129-1b1a2156e53a",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -602,7 +602,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "69530d89-af44-42b3-bba7-dfaaa7521e88",
+                            "id": "829ea5e4-c872-47f8-9b12-c56e6cdbd020",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -668,7 +668,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d6472750-3b5d-447b-a72d-be24d69a1766",
+                            "id": "8e4b9b09-2fd6-4564-89c2-d7223a6482e9",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -740,7 +740,7 @@
             "event": []
         },
         {
-            "id": "8f775316-000a-4e25-be93-1bc354cc06c6",
+            "id": "f148e7d8-6359-4f41-bc28-b1c0ba2a2992",
             "name": "Data Management API",
             "description": {
                 "content": "The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets. The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`) coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/), [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).\n",
@@ -748,7 +748,7 @@
             },
             "item": [
                 {
-                    "id": "2afdfab8-e2a7-4542-b967-67575db442d1",
+                    "id": "f95dcc55-4dfd-4796-b442-d56a7e7aa8a8",
                     "name": "Create your Assets",
                     "request": {
                         "name": "Create your Assets",
@@ -805,7 +805,7 @@
                     },
                     "response": [
                         {
-                            "id": "42714c9a-ba49-4453-a4de-14e0dc5af455",
+                            "id": "0855540e-91be-4c84-bf38-bf0a3a4b6971",
                             "name": "Assets successfully created",
                             "originalRequest": {
                                 "url": {
@@ -850,7 +850,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "980e8f63-4368-41b0-930f-2a586ed2f8ed",
+                            "id": "e20fe3d8-6579-4761-88d6-640724ca4455",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -895,7 +895,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fd095b78-8f7b-477e-9097-4ea61824de4a",
+                            "id": "e553643d-8abd-4b52-8237-aa9445c33d77",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -940,7 +940,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "511df1bf-55a9-412f-98e1-dd7d73d0f02c",
+                            "id": "a35ff311-d090-44e9-a3d6-f57b572b47a4",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -988,7 +988,7 @@
                     "event": []
                 },
                 {
-                    "id": "ad78b24e-e61d-4046-8a39-34a6146c30d3",
+                    "id": "dec51980-6625-4d00-8192-ab414395f7d0",
                     "name": "Update the Assets",
                     "request": {
                         "name": "Update the Assets",
@@ -1045,7 +1045,7 @@
                     },
                     "response": [
                         {
-                            "id": "83bde3b7-4abd-4c1b-bce1-08784aa85e24",
+                            "id": "f331584b-3103-4d29-85df-de279046a40f",
                             "name": "Assets successfully updated",
                             "originalRequest": {
                                 "url": {
@@ -1090,7 +1090,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a1acd852-53a9-43df-8244-7bca5b9c1091",
+                            "id": "9c989ae2-eda3-4a85-83c5-50ce086a98a4",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -1135,7 +1135,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "678d9240-8cbb-4ab2-9747-b8536079cf9f",
+                            "id": "bb763901-548c-4eb8-b470-96ef68325820",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1180,7 +1180,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "92002b55-847f-4670-b9a3-76fa45563b5d",
+                            "id": "27d2f9bf-6c50-4197-9e43-d80d16ec0f8f",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1228,7 +1228,7 @@
                     "event": []
                 },
                 {
-                    "id": "738c7123-a0bd-42d5-a057-14bd6b16d5ed",
+                    "id": "2c47f147-ccf3-437e-a567-9742021373a4",
                     "name": "Delete the Assets",
                     "request": {
                         "name": "Delete the Assets",
@@ -1277,7 +1277,7 @@
                     },
                     "response": [
                         {
-                            "id": "9e043201-47f6-401e-875e-851d15fdcdc6",
+                            "id": "66628195-e3ef-4f01-a9e7-d7c5c5ff2cbe",
                             "name": "Assets successfully deleted",
                             "originalRequest": {
                                 "url": {
@@ -1318,7 +1318,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "536240ea-df1a-476e-be7e-a1ebd0c0fa85",
+                            "id": "0da41bfa-40b2-4b5c-a694-d5d69130e82e",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1359,7 +1359,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3b976051-9f23-4efc-a39d-04e7ef65c08c",
+                            "id": "54e39807-2197-47cb-854b-625db7c4ea1c",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1403,7 +1403,7 @@
                     "event": []
                 },
                 {
-                    "id": "f2511d51-73ba-428c-9c63-cb78d325618b",
+                    "id": "e4a1bda9-0e89-43cb-a6a8-d64f3f4cd8cd",
                     "name": "Get Asset from ID",
                     "request": {
                         "name": "Get Asset from ID",
@@ -1454,7 +1454,7 @@
                     },
                     "response": [
                         {
-                            "id": "d73b8d2d-7100-436f-831a-226a536bb3ac",
+                            "id": "e02d8c11-c387-4d3a-906c-62499b4d469f",
                             "name": "Asset successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -1500,7 +1500,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "463c73fd-56db-40eb-8c8f-d7e866ed2b10",
+                            "id": "2e4bb514-d209-4e6d-be80-0c86ab7c291f",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1546,7 +1546,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "bf7d1b5b-a5d5-4b14-ae5f-38213cca5ae0",
+                            "id": "26083439-8f31-4770-965f-412db7f4406e",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1592,7 +1592,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8030d47a-23fb-42a4-bf6b-7712d5e786c3",
+                            "id": "d9b33289-46a7-4023-b18d-1e91dfd7dd51",
                             "name": "Not Found - `storeId` do not exist.",
                             "originalRequest": {
                                 "url": {
@@ -1641,7 +1641,7 @@
                     "event": []
                 },
                 {
-                    "id": "54c7ba79-e172-4730-881f-dcfe8176b200",
+                    "id": "6fe0f7f9-31be-4eec-9f6e-6245140707b8",
                     "name": "Replace all assets",
                     "request": {
                         "name": "Replace all assets",
@@ -1699,7 +1699,7 @@
                     },
                     "response": [
                         {
-                            "id": "937ee391-bec9-4b9d-8721-2b01e7acbde0",
+                            "id": "83fcfc0f-12df-4e8f-833a-6fae620fdb7c",
                             "name": "Assets successfully replaced",
                             "originalRequest": {
                                 "url": {
@@ -1745,7 +1745,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "276f7f9d-99e2-4de7-94b5-cd0b4ab210dc",
+                            "id": "f5c7159d-bb66-4ca5-99c8-6077374ec7e5",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -1791,7 +1791,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4df24dd4-ac4e-411b-972b-a526dec4debc",
+                            "id": "64b8d8b0-81ed-429b-b1ad-ae3838e954b6",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1837,7 +1837,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "979e1d17-10b9-4a93-96fc-2604fac9152c",
+                            "id": "ce9734ab-eac3-4f15-9664-1f159ce3617b",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1889,7 +1889,7 @@
             "event": []
         },
         {
-            "id": "54318213-5467-4142-92d1-81bc8d85c012",
+            "id": "43253fbc-3682-4a65-9ca2-e5ee30b6ab97",
             "name": "Geolocation API",
             "description": {
                 "content": "Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1897,7 +1897,7 @@
             },
             "item": [
                 {
-                    "id": "84a404ec-573b-451e-a5e8-f2bbf6ade4fe",
+                    "id": "6abc261c-39a9-4586-843d-aec52b1f22df",
                     "name": "Geolocation from an IP address",
                     "request": {
                         "name": "Geolocation from an IP address",
@@ -1953,7 +1953,7 @@
                     },
                     "response": [
                         {
-                            "id": "94919c12-cd6c-4ee3-b12d-44257cd40e94",
+                            "id": "d1902889-fa6d-4822-b07a-17bef5c6cc9b",
                             "name": "Geolocation successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -1999,7 +1999,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b55cee36-14cc-40f3-95c4-789a956a5daf",
+                            "id": "c212405f-a479-4aa7-b341-bda5ac4a95cc",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2045,7 +2045,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "16f89769-93d3-4f0e-b816-15df18a55186",
+                            "id": "9e45a62e-5585-4475-a9e4-671d63b1ab0b",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2091,7 +2091,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "37f7a544-2899-4995-a8b7-71130f04e6fa",
+                            "id": "d8376ee6-cd76-4976-9437-73069447ff54",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2140,7 +2140,7 @@
                     "event": []
                 },
                 {
-                    "id": "5c113244-b09d-41a5-a023-fce29859dca2",
+                    "id": "bc3ab763-8094-4381-8bda-65b74e6c9ce8",
                     "name": "Assets nearby a Geolocation",
                     "request": {
                         "name": "Assets nearby a Geolocation",
@@ -2202,7 +2202,7 @@
                     },
                     "response": [
                         {
-                            "id": "3a4176f9-4443-4a82-9521-087af19ff706",
+                            "id": "b588f369-6e7e-452a-89ad-1c32ca59d016",
                             "name": "Geolocation and Stores successufully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2252,7 +2252,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d5e07237-e1a2-49d9-b09e-b938d9d5354e",
+                            "id": "db02d5f7-f1ad-4fc9-a8ea-aee4c1c1d068",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2302,7 +2302,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "85a53eec-9653-457c-a504-c61290cfedda",
+                            "id": "91430db5-34d6-4f2c-8ba2-ae42a7b673df",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2352,7 +2352,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "bdf6beee-dc1c-452a-bc59-fd37724d5232",
+                            "id": "534feed2-1ebf-4edd-a017-ae61f2d80670",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2408,7 +2408,7 @@
             "event": []
         },
         {
-            "id": "9154da4f-3016-429b-9ead-2f9dee7a8075",
+            "id": "eff66fc0-24db-4037-a334-586f7bad6420",
             "name": "Localities API",
             "description": {
                 "content": "Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2416,7 +2416,7 @@
             },
             "item": [
                 {
-                    "id": "952d9fa1-a4da-4e84-9054-1f9aea7c17bc",
+                    "id": "ba6881be-b48e-400c-9e12-15624627f01b",
                     "name": "Autocomplete for Localities",
                     "request": {
                         "name": "Autocomplete for Localities",
@@ -2502,7 +2502,7 @@
                     },
                     "response": [
                         {
-                            "id": "8b127a4c-ba0b-47d2-a014-573389c5d1e4",
+                            "id": "5d950819-621d-4f9f-b8b4-0b8c5713cdd0",
                             "name": "Autocompletion successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2568,7 +2568,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ff061a78-0e83-4d20-854b-47635cdd3f8a",
+                            "id": "e86a0692-2b53-4300-a979-de7cba4d9e76",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2634,7 +2634,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "714c676d-e40e-481c-844f-4674a7f4921f",
+                            "id": "49de50ca-d371-4941-8665-c197a5e9f772",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2700,7 +2700,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "69f9076a-e483-4424-9676-53a7184d8cf3",
+                            "id": "8815c952-3b93-4114-a082-abe844aea2cb",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2769,7 +2769,7 @@
                     "event": []
                 },
                 {
-                    "id": "19ad2325-b3cd-4d75-a2e9-953ee3b7eb80",
+                    "id": "fb4fe81a-e55e-4e8c-938c-efe4022fb3d8",
                     "name": "Details of a Locality",
                     "request": {
                         "name": "Details of a Locality",
@@ -2825,7 +2825,7 @@
                     },
                     "response": [
                         {
-                            "id": "606c7db4-0cac-43a5-bfc4-1ae17c35e681",
+                            "id": "7a5acc6a-855f-439b-b445-77b32fe712f1",
                             "name": "Details successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2871,7 +2871,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9c03ac0d-21f1-4ba5-81eb-dace94c99d87",
+                            "id": "33ebf398-314b-48d3-a933-442219f33993",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2917,7 +2917,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "61e5ebd2-72c7-4b26-9e16-9b66266f8396",
+                            "id": "11cdd982-8289-404a-946e-52f13b825c0e",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2963,7 +2963,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c89cc866-3c79-4000-b748-a3da591b4497",
+                            "id": "b29b7c73-df89-47ce-9c69-1c1e71f41850",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3015,7 +3015,7 @@
             "event": []
         },
         {
-            "id": "5d76b96f-0bc8-4148-99d5-9204bea694ad",
+            "id": "6776bacc-03a5-4226-b8a9-62aa892e1d99",
             "name": "Address API",
             "description": {
                 "content": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3023,7 +3023,7 @@
             },
             "item": [
                 {
-                    "id": "eeb901d3-e6b6-4b6d-911f-4068f3bd137e",
+                    "id": "073b74f1-e6ff-49ab-98cd-8f1e86c48d55",
                     "name": "Autocomplete for Addresses",
                     "request": {
                         "name": "Autocomplete for Addresses",
@@ -3092,7 +3092,7 @@
                     },
                     "response": [
                         {
-                            "id": "b9250322-f27c-4e9a-8f95-7bab78aa935e",
+                            "id": "8586fc37-1361-4ff7-b6b2-0a85750d7af2",
                             "name": "Autocompletion successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -3147,7 +3147,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f7dddcab-90aa-482e-97e0-1f759fe9db65",
+                            "id": "5c9edac7-aaab-46ac-9ee3-4e641d59d185",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3202,7 +3202,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "cda50e76-00da-447a-87e3-d86e6d6bf29a",
+                            "id": "9bf1cdc0-bbb8-4acb-bc85-81cf1c26b8f7",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3257,7 +3257,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "28bd1937-f49b-4458-a442-c6fef8db93c7",
+                            "id": "851b3cd8-01f7-4d9f-901d-cd92b4b54b08",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3315,7 +3315,7 @@
                     "event": []
                 },
                 {
-                    "id": "2befb116-3958-4b5c-b761-a3d16a5a13d2",
+                    "id": "6fe37602-42db-4184-b550-676c0e6ac6e7",
                     "name": "Details of an Address",
                     "request": {
                         "name": "Details of an Address",
@@ -3372,7 +3372,7 @@
                     },
                     "response": [
                         {
-                            "id": "6a1a23e6-d085-46ef-8d96-7135f57931bc",
+                            "id": "2ea6c489-6bb6-4a25-887b-a516879a1da8",
                             "name": "Details successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -3419,7 +3419,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7d220726-13e4-46d8-976a-efcd14ab136b",
+                            "id": "9f9a44a2-c7fa-4a1a-b65e-ab77938658b3",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3466,7 +3466,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5e45207f-6031-4653-8e79-0ff364e86364",
+                            "id": "bdc6108a-7aac-483a-88e0-ac75204072aa",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3513,7 +3513,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fe8f4eac-9f60-4a91-aaf8-4060351c6e23",
+                            "id": "2f9253e0-9a53-4d30-b01c-fb8a9d81dc65",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3563,7 +3563,7 @@
                     "event": []
                 },
                 {
-                    "id": "715af102-3c9d-4452-9541-0f7fd5af7259",
+                    "id": "bd8eedea-c08e-42af-9b5f-6eccf8ebb235",
                     "name": "Geocode an Address or Reverse Geocode a latlng",
                     "request": {
                         "name": "Geocode an Address or Reverse Geocode a latlng",
@@ -3650,7 +3650,7 @@
                     },
                     "response": [
                         {
-                            "id": "5819e378-f5cf-459f-b875-a726df33056e",
+                            "id": "6d9898ca-b2e6-40b8-8ade-d23d426e23f6",
                             "name": "Request successful",
                             "originalRequest": {
                                 "url": {
@@ -3717,7 +3717,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ee4d0ed0-8d97-44b3-a7e6-b02318cc23cd",
+                            "id": "d4f5a320-2d82-4e65-a56c-e29745330caa",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3784,7 +3784,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fb6b42e6-6798-4c28-ba58-be484649a161",
+                            "id": "2fb8cae9-b0b7-44e6-b85d-a489758fa7f2",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3851,7 +3851,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2464e11b-34e4-415d-823d-dd734357c3e9",
+                            "id": "c16ec7e6-39c2-4aed-8d2f-6178735f5584",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3924,7 +3924,7 @@
             "event": []
         },
         {
-            "id": "be10110d-c14e-42f1-b63d-3f917d86d394",
+            "id": "cc67d114-4fb5-42ca-b86a-bfa0ff242978",
             "name": "Distance API",
             "description": {
                 "content": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3932,7 +3932,7 @@
             },
             "item": [
                 {
-                    "id": "9231d239-c624-40dd-8c97-e632a4836d05",
+                    "id": "4733e6e7-c78b-4667-a1a4-bc00261e99cf",
                     "name": "Distance Matrix",
                     "request": {
                         "name": "Distance Matrix",
@@ -4019,7 +4019,7 @@
                     },
                     "response": [
                         {
-                            "id": "c839f3cc-82e0-4ed4-bf12-d0a147ba5359",
+                            "id": "7a9ada72-ff3b-48ba-b1d4-b8c557425cf4",
                             "name": "Distance Matrix successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4086,7 +4086,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d8978571-72bc-4a2b-ad66-b5ba03dc3253",
+                            "id": "c88e7303-f9f5-45cf-bde8-606845b59dfe",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4153,7 +4153,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5c113ebb-bda6-4e0e-9af8-6e2b7635677b",
+                            "id": "5513ab34-6546-45e7-b61b-2b31ba9811c0",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4220,7 +4220,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8a0a5a06-f50c-4c3a-adcd-b251e9c570f9",
+                            "id": "b562b68f-2407-42ff-ad3d-6cd06e9d2e8f",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4290,7 +4290,7 @@
                     "event": []
                 },
                 {
-                    "id": "9609ad40-d45d-43db-b2f9-52cd22c228e3",
+                    "id": "b79f5b96-a96c-4c1f-8111-a45961366cab",
                     "name": "Get Distance Matrix using POST",
                     "request": {
                         "name": "Get Distance Matrix using POST",
@@ -4349,7 +4349,7 @@
                     },
                     "response": [
                         {
-                            "id": "94fd3b54-4b9c-457e-b9f2-645ec1eee124",
+                            "id": "ac4f8efe-93aa-437d-ab72-0784aaaeeced",
                             "name": "Distance Matrix successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4396,7 +4396,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "635b77da-f793-4757-87ea-183a13a03f81",
+                            "id": "baa05990-4030-43a8-ad75-be8b78077b62",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -4443,7 +4443,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c39390c3-c067-4f03-b9b9-43cc1775d723",
+                            "id": "0aa83040-baf5-4530-afa9-7443f8f440e4",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4490,7 +4490,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "970bcb7a-9304-494b-bd15-b5a5b6846aa7",
+                            "id": "31a2dc78-c36a-45ac-b565-9b5ef60bcfda",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4537,7 +4537,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d8e31c34-361e-4a68-bbf4-b343e3a8ebca",
+                            "id": "ec8eee65-b687-40d9-873b-9a0306b7edd6",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4587,7 +4587,7 @@
                     "event": []
                 },
                 {
-                    "id": "156f04ae-c6c3-486c-ac05-69211986c18a",
+                    "id": "0dcca348-d43e-4c02-83ea-8715ad2a6108",
                     "name": "Get Route",
                     "request": {
                         "name": "Get Route",
@@ -4680,7 +4680,7 @@
                     },
                     "response": [
                         {
-                            "id": "2ab946d4-de63-4f8b-baca-20e7d5fc5eb7",
+                            "id": "e1ce79d4-a42d-432e-8600-ee6807f87c0d",
                             "name": "Route successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4751,7 +4751,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "aa10080c-0ed4-4277-bd42-d6cac08c1c8e",
+                            "id": "942cf137-6903-4a73-ad8a-2cd87cbda04c",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4822,7 +4822,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e02a3865-fa53-47a4-85d1-22f5cdc66140",
+                            "id": "430ee4b5-3fac-4468-98b1-9a1468455c7d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4893,7 +4893,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "67e4c604-c298-4759-b00c-2e6b32af9828",
+                            "id": "2b7c3d0c-a5cc-4eb0-85b8-e9ca7d70239f",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4970,7 +4970,7 @@
             "event": []
         },
         {
-            "id": "241d7dca-c025-46ed-8922-ad5accf2fe85",
+            "id": "688d3710-7bf9-4926-8daf-85a87ad71bd1",
             "name": "Merchants API",
             "description": {
                 "content": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -4978,7 +4978,7 @@
             },
             "item": [
                 {
-                    "id": "edf59672-061e-45f7-ae95-ef69a982a1da",
+                    "id": "9c618f75-e175-447c-a48e-b29d5220438c",
                     "name": "Get Merchant Clean Name",
                     "request": {
                         "name": "Get Merchant Clean Name",
@@ -5028,7 +5028,7 @@
                     },
                     "response": [
                         {
-                            "id": "fa3cd2cc-8e26-4e68-83dd-7690a384edff",
+                            "id": "b7266416-eff1-40fd-84d3-3a667e47fc8c",
                             "name": "Request successful",
                             "originalRequest": {
                                 "url": {
@@ -5070,7 +5070,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7388db11-4b43-403b-a905-50470200a221",
+                            "id": "ad2ed860-c03b-4d74-9f82-c54dd10f20c5",
                             "name": "dirty_name was not provided",
                             "originalRequest": {
                                 "url": {
@@ -5112,7 +5112,7 @@
                             "_postman_previewlanguage": "text"
                         },
                         {
-                            "id": "99bcbfd8-56f1-4dc9-8398-f70debb1aa5c",
+                            "id": "4b664fbc-2402-472a-9415-1fc33f992c17",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5154,7 +5154,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8fc06f9b-5696-44d4-9ae0-38538bffd986",
+                            "id": "c30b531c-7a2b-4caa-b223-caf7e22a929a",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5196,7 +5196,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "15dd83d5-b45f-45df-b335-e347ab2a1be6",
+                            "id": "b62f2c62-452a-40b6-9e3e-1e6dca0f2015",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5241,7 +5241,7 @@
                     "event": []
                 },
                 {
-                    "id": "730d9ed4-d858-4793-886b-ae3b381bd931",
+                    "id": "b68afa40-0d79-4e0e-ab54-94917b246ec6",
                     "name": "Get Merchants Clean Names using POST",
                     "request": {
                         "name": "Get Merchants Clean Names using POST",
@@ -5299,7 +5299,7 @@
                     },
                     "response": [
                         {
-                            "id": "27fbd820-22a0-4145-93c8-6496a213e280",
+                            "id": "d205c756-67b7-4a25-ab65-0d85b8a99bb1",
                             "name": "Merchants Brand successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5345,7 +5345,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "16395888-3acc-4781-956a-034946fb8ca2",
+                            "id": "09357e76-6f34-41d4-8f6c-452babd6f39d",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -5391,7 +5391,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "31a83390-82d0-4404-89c6-b393d04e88fc",
+                            "id": "6d7d95ea-5bcf-4c5e-9a9c-afeadbeaa6f6",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5437,7 +5437,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "73487b9d-27fc-47e6-a050-6945b572b40d",
+                            "id": "2547cc7a-7b75-44bf-924f-a3e9f47b8d84",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5483,7 +5483,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a455bbdf-849b-4a7b-8918-e6892269c22b",
+                            "id": "58a67afe-becd-4c39-a1b3-15fa36bac326",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5532,7 +5532,7 @@
                     "event": []
                 },
                 {
-                    "id": "841a6265-ed5b-49e4-8025-40239373dc93",
+                    "id": "f11640d0-0f4f-412a-aee4-9c2eff60bccf",
                     "name": "Get Merchants Place",
                     "request": {
                         "name": "Get Merchants Place",
@@ -5590,7 +5590,7 @@
                     },
                     "response": [
                         {
-                            "id": "5685522d-fdd9-4a3e-8ba4-df6e59fba0bf",
+                            "id": "049a4b52-bc2a-47d4-9089-0633266f7e2e",
                             "name": "Merchants Place successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5636,7 +5636,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d4258787-f7ca-4124-97fe-0d12deaa9cca",
+                            "id": "8d0d1029-6314-41cd-ae01-99b04159e9bd",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -5682,7 +5682,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f68b014c-f56b-45d9-b088-8d7e478a6a56",
+                            "id": "53ca5305-4343-4d93-9225-be2177b19e5b",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5728,7 +5728,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "03b4d8f6-18b4-4cff-a67b-59aa280f1499",
+                            "id": "b5a3ff9d-d549-4792-9692-e2c68affcc2f",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5774,7 +5774,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "189a3c68-962c-4a07-8085-a2ae3607f45f",
+                            "id": "591ef5eb-8ca7-47bb-94c4-25dd110f6925",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5826,7 +5826,7 @@
             "event": []
         },
         {
-            "id": "4b7c9c98-2053-4669-9541-c0fbeb79cd44",
+            "id": "18b95dc7-4e3b-4ad7-a0f6-3e50fc66817e",
             "name": "Zones API",
             "description": {
                 "content": "Woosmap Zones API is a web service that uses an HTTP request to manage, create or edit your Zones (polygons) attached to your assets.\nThe general principle is that sometimes searching assets using crowfly distance is not good enough. For example to search the restaurant that will do the delivery for a specified address, each restaurant has a delivery zone and for topological or business reasons it’s not always the nearest restaurant in charge of your delivery. Woosmap Zones API allows you to associate a delivery zone to each of the restaurants.\n",
@@ -5834,7 +5834,7 @@
             },
             "item": [
                 {
-                    "id": "f99b11ee-51b4-4293-b984-d4d8a411fa49",
+                    "id": "fa5cb54a-21e1-4225-8049-27d2bb1ef7ba",
                     "name": "List your Zones",
                     "request": {
                         "name": "List your Zones",
@@ -5889,7 +5889,7 @@
                     },
                     "response": [
                         {
-                            "id": "c0ef27c9-6e44-4ea7-9f47-21e922e399f1",
+                            "id": "90843680-8f60-4e79-939a-20410d31e101",
                             "name": "Zone successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5934,7 +5934,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "dd0a5f20-d9fb-45ea-9693-7432d0e56e79",
+                            "id": "db3c128a-63b9-4c40-a540-73de683bf68c",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5979,7 +5979,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "680c87e2-732f-4a10-a0d6-a3d64496bc93",
+                            "id": "5c10eb3d-8289-45b9-ab7e-c13bf2b4f49a",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6024,7 +6024,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b426698c-0428-4814-a43b-b72e012fbb35",
+                            "id": "c8ceaa79-f1b7-4a8d-a93e-5473073753e6",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -6072,7 +6072,7 @@
                     "event": []
                 },
                 {
-                    "id": "e46a56b7-69ff-46b9-a8fc-d1d41c9c3f57",
+                    "id": "e3499bd0-942b-4d7e-bb1f-d591b6f72015",
                     "name": "Create your Zones",
                     "request": {
                         "name": "Create your Zones",
@@ -6129,7 +6129,7 @@
                     },
                     "response": [
                         {
-                            "id": "cfd8e718-c022-47b7-96a1-3367e7259c2f",
+                            "id": "638c8464-6554-47d5-929c-7ba99427e357",
                             "name": "Zones successfully created",
                             "originalRequest": {
                                 "url": {
@@ -6174,7 +6174,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d811835a-047c-4d40-b393-c11c5af110ce",
+                            "id": "5b2bc53e-995b-4208-87a2-0572ca9f6eb7",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -6219,7 +6219,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "33c32570-3fb7-4d39-b1c9-11493c5b20d9",
+                            "id": "1f2b4042-c110-41f5-bcc0-11252bb1c589",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6264,7 +6264,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "994910ab-4eb0-44e9-aae1-ac1d6b427b0d",
+                            "id": "40e528da-f063-45be-a335-a653d1de466e",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6312,7 +6312,7 @@
                     "event": []
                 },
                 {
-                    "id": "03c45ef3-90f9-4ec4-8dc3-0e27cf276536",
+                    "id": "02f58d03-2011-4565-9754-72a5200d311a",
                     "name": "Update the Zones",
                     "request": {
                         "name": "Update the Zones",
@@ -6369,7 +6369,7 @@
                     },
                     "response": [
                         {
-                            "id": "d4be5062-4f3c-423c-ab19-ff4f03ec34fc",
+                            "id": "d014215f-cf7e-4c3d-aed4-8fb1e2863131",
                             "name": "Zones successfully updated",
                             "originalRequest": {
                                 "url": {
@@ -6414,7 +6414,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ff570e02-fe72-473d-bce9-15e69311c17f",
+                            "id": "d49f5dac-e687-412e-8d26-2370d9f4b6b0",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -6459,7 +6459,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3bdf9850-8f9d-4e2d-a799-f23893b5957b",
+                            "id": "88ab2dd6-c259-49a6-968e-fe6b4e6c3c32",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6504,7 +6504,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ad6e1956-3615-479b-935e-5fbac81d827c",
+                            "id": "7bec9142-eb6d-47a9-9b4a-7049535a8c35",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6552,7 +6552,7 @@
                     "event": []
                 },
                 {
-                    "id": "116ba9cf-27d4-415f-972b-282e1538b38e",
+                    "id": "e277da57-1567-4237-b621-6b957910203e",
                     "name": "Delete the Zones",
                     "request": {
                         "name": "Delete the Zones",
@@ -6601,7 +6601,7 @@
                     },
                     "response": [
                         {
-                            "id": "bbef2960-6906-4ed9-9a5e-862f53196ed7",
+                            "id": "8c873cfb-6ea0-4fee-b3d5-e8b82c44349f",
                             "name": "Zones successfully deleted",
                             "originalRequest": {
                                 "url": {
@@ -6642,7 +6642,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "08956f09-39a3-42b6-9ecd-1f40722df7c1",
+                            "id": "f012acdd-1ed9-4193-98cc-71156d4509c5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6683,7 +6683,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "044a040c-3025-489f-8417-6d05b210da5d",
+                            "id": "aa968bb7-9ae6-49c7-b7cd-f090767e0591",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6727,7 +6727,7 @@
                     "event": []
                 },
                 {
-                    "id": "a24bbc72-e6f0-4d44-bef6-dbb176ddb5df",
+                    "id": "e8d67551-4435-4ed7-b24a-3c6991e7c3e5",
                     "name": "Get Zone from ID",
                     "request": {
                         "name": "Get Zone from ID",
@@ -6778,7 +6778,7 @@
                     },
                     "response": [
                         {
-                            "id": "0e3f1364-71e7-4dfd-b82a-801cd14dff8f",
+                            "id": "9313f6a0-4e90-4cfc-8bf2-5c12a7948600",
                             "name": "Zone successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6824,7 +6824,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "01e065bf-3275-4bac-befe-7ec0d58b715c",
+                            "id": "92e7830a-1c4d-44df-ac86-568771f5c238",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6870,7 +6870,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8135adef-d4e2-4903-8092-5e7640a5cda7",
+                            "id": "8857ca76-62d6-414a-83bb-f24d437c58af",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6916,7 +6916,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5e2edd6b-e3e7-4b49-b32d-d2070dad7a25",
+                            "id": "82d38e00-f09e-451f-8ae2-d27140d20751",
                             "name": "Not Found - `zone_id` do not exist.",
                             "originalRequest": {
                                 "url": {
@@ -6994,7 +6994,7 @@
         ]
     },
     "info": {
-        "_postman_id": "8c97d077-09b3-45fc-b7c6-3c2fb37f1aae",
+        "_postman_id": "3f952aa6-0250-4b8b-921d-352ebb3a5e36",
         "name": "Woosmap Platform API Reference",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
