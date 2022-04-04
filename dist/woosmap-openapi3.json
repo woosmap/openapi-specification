@@ -4008,17 +4008,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/localities/details?public_id=RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/details?public_id=TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
             "label": "JavaScript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/details?public_id=RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/details?public_id=TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/details?public_id=RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/details?public_id=TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -10451,7 +10451,7 @@
             }
           },
           "addresses": {
-            "description": "UK Only. List of adresses attached to this Postal Code.",
+            "description": "UK Only. List of addresses attached to this Postal Code.",
             "type": "object",
             "properties": {
               "pagination": {
@@ -10477,7 +10477,7 @@
               },
               "list": {
                 "type": "array",
-                "description": "List of adresses",
+                "description": "List of addresses",
                 "items": {
                   "type": "object",
                   "properties": {
