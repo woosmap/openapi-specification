@@ -273,6 +273,35 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_localities_geocode_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/geocode",
+                query: [
+                    {
+                        key: "public_id",
+                        value: "QaCU+fBtigK65ztSrqHqUoUDwZw=",
+                    },
+                    {
+                        key: "address",
+                        value: "Place de la Resistance",
+                    },
+                    {
+                        key: "components",
+                        value: "country:FR"
+                    },
+                    {
+                        key: "limit",
+                        value: "5"
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_merchants_brand",
         request: new Request({
             url: new Url({
