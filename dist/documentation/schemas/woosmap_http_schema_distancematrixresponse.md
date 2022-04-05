@@ -19,7 +19,7 @@ Attributes describing an distance Matrix response.
         {
           "status": "OK",
           "duration": {
-            "value": 938.91,
+            "value": 938,
             "text": "16 mins"
           },
           "distance": {
@@ -30,7 +30,7 @@ Attributes describing an distance Matrix response.
         {
           "status": "OK",
           "duration": {
-            "value": 886.55,
+            "value": 886,
             "text": "15 mins"
           },
           "distance": {
