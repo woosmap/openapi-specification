@@ -77,17 +77,13 @@ A successful geolocation request will return a JSON-formatted response defining 
           ],
           "distance": 0,
           "open": {
-            "open_now": true,
-            "open_hours": [
-              {
-                "end": "22:00",
-                "start": "08:30"
-              }
-            ],
-            "week_day": 3,
-            "current_slice": {
+            "open_now": false,
+            "open_hours": [],
+            "week_day": 1,
+            "next_opening": {
               "end": "22:00",
-              "start": "08:30"
+              "start": "08:30",
+              "day": "2022-04-05"
             }
           },
           "weekly_opening": {
@@ -210,17 +206,13 @@ A successful geolocation request will return a JSON-formatted response defining 
           ],
           "distance": 23062.07621905,
           "open": {
-            "open_now": true,
-            "open_hours": [
-              {
-                "end": "22:00",
-                "start": "08:30"
-              }
-            ],
-            "week_day": 3,
-            "current_slice": {
+            "open_now": false,
+            "open_hours": [],
+            "week_day": 1,
+            "next_opening": {
               "end": "22:00",
-              "start": "08:30"
+              "start": "08:30",
+              "day": "2022-04-05"
             }
           },
           "weekly_opening": {
