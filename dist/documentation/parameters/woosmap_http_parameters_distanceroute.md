@@ -40,8 +40,8 @@
 
 -   <h3 id="waypoints">waypoints</h3>
 
-    A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by | character.
-    Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter. This way the provided route is optimized by rearranging the waypoints in a more efficient order based on distance or time according to the method parameter. The route start point and end point order is not changed, their position is considered fixed.
+    A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by | character.\
+    Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter. This way the provided route is optimized by rearranging the waypoints in a more efficient order based on distance or time according to the method parameter. The route start point and end point order is not changed, their position is considered fixed.\
     `alternatives` and `waypoints` can not be used at the same time.
 
 
