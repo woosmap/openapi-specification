@@ -41,7 +41,7 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
     in the appropriate index.yml file.
 
 3. `npm run responses` (optional)
-    > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_PUBLIC_API_KEY` and `WOOSMAP_PRIVATE_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.
+    > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_PUBLIC_API_KEY` and `WOOSMAP_PRIVATE_API_KEY` environmental variable before running.
 
     > **Warning**: Data attached to the `WOOSMAP_PRIVATE_API_KEY` will be deleted. Use an empty test project for this.
     
