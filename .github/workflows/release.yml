@@ -1,0 +1,33 @@
+# use semantic-release to create a release
+name: Release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    env:
+      WOOSMAP_PUBLIC_API_KEY: "${{ secrets.WOOSMAP_PUBLIC_API_KEY }}"
+      WOOSMAP_PRIVATE_API_KEY: "${{ secrets.WOOSMAP_PRIVATE_API_KEY }}"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
+      - run: npm ci
+      - run: npm run build -- --jobs 8
+      - run: npm test -- --jobs 8
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          extra_plugins: |
+            "@semantic-release/commit-analyzer"
+            "@semantic-release/release-notes-generator"
+            "@semantic-release/git"
+            "@semantic-release/github"
+            "@semantic-release/exec"
+        env:
+          GH_TOKEN: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
+          NPM_TOKEN: skip # required in verify conditions
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
