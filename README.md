@@ -25,7 +25,8 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
 
 ### Build and test
 
-1. `npm run build`
+1. `npm i`
+2. `npm run build`
 
     This generates the following outputs in the dist folder:
 
@@ -39,16 +40,18 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
     > **Note**: If a documentation item is not generated, be sure it is included
     in the appropriate index.yml file.
 
-2. `npm run build:responses` (optional)
-    > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_PUBLIC_API_KEY` and `WOOSMAP_PRIVATE_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.
+3. `npm run responses` (optional)
+    > **Note**: This is an optional step requiring an API key. Set the `WOOSMAP_PUBLIC_API_KEY` and `WOOSMAP_PRIVATE_API_KEY` environmental variable before running.
 
     > **Warning**: Data attached to the `WOOSMAP_PRIVATE_API_KEY` will be deleted. Use an empty test project for this.
     
     > **Note**: This step only needs to run when the generation code or sample requests have been updated.
 
+    > **Note**: A single response can be updated similar to `npm run responses -- --only woosmap_http_address_details`. 
+
     > `WOOSMAP_PUBLIC_API_KEY=woos-xxx WOOSMAP_PRIVATE_API_KEY=xxxx npm run build:responses`
 
-3. `npm run build:samples` (optional)
+5. `npm run samples` (optional)
 
     > **Note**: Generates snippets from requests to be integrated as xCodeSamples in path schemas.
 
