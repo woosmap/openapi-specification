@@ -2,43 +2,43 @@
 <!--- [START woosmap_http_parameters_distanceroute] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="destination">destination</h3>
+-   <h3 class="parameter-name" id="destination">destination</h3>
 
     The ending point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
--   <h3 id="origin">origin</h3>
+-   <h3 class="parameter-name" id="origin">origin</h3>
 
     The starting point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="alternatives">alternatives</h3>
+-   <h3 class="parameter-name" id="alternatives">alternatives</h3>
 
     Specifies if alternative routes should be returned. default is `false`. Depending on the calculated route, alternatives may not be provided.
     `alternatives` and `waypoints` can not be used at the same time.
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language code, indicating in which language the results should be returned, if possible. If language is not supplied, the Distance API service will use the navigator language or “en”.
 
--   <h3 id="method">method</h3>
+-   <h3 class="parameter-name" id="method">method</h3>
 
     Specifies the method to compute the route between the start point and the end point:
 
     -   `time`: fastest route (default) - `distance`: shortest route
 
--   <h3 id="mode">mode</h3>
+-   <h3 class="parameter-name" id="mode">mode</h3>
 
     Specifies the mode of transport to use when calculating distance
 
--   <h3 id="units">units</h3>
+-   <h3 class="parameter-name" id="units">units</h3>
 
     Specifies the unit system to use when expressing distance as text. Two different units supported:
 
     -   `metric` (default) returns distances in kilometers and meters
     -   `imperial` returns distances in miles and feet
 
--   <h3 id="waypoints">waypoints</h3>
+-   <h3 class="parameter-name" id="waypoints">waypoints</h3>
 
     A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by | character.
     Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter. This way the provided route is optimized by rearranging the waypoints in a more efficient order based on distance or time according to the method parameter. The route start point and end point order is not changed, their position is considered fixed.
