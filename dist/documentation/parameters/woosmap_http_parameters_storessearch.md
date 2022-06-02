@@ -4,23 +4,23 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="encoded_polyline">encoded_polyline</h3>
+-   <h3 class="parameter-name" id="encoded_polyline">encoded_polyline</h3>
 
     Find assets nearby an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) and inside a defined radius.
 
--   <h3 id="lat">lat</h3>
+-   <h3 class="parameter-name" id="lat">lat</h3>
 
     Latitude bias for the results. Should be pass with `lng`.
 
--   <h3 id="lng">lng</h3>
+-   <h3 class="parameter-name" id="lng">lng</h3>
 
     Longitude bias for the results. Should be pass with `lat`.
 
--   <h3 id="page">page</h3>
+-   <h3 class="parameter-name" id="page">page</h3>
 
     Page number when accessing paginated assets feature collection
 
--   <h3 id="query">query</h3>
+-   <h3 class="parameter-name" id="query">query</h3>
 
     Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:="My cool store"`
 
@@ -79,15 +79,15 @@
     For compound clauses, you can use parentheses to group clauses together. For example: `(type:"type1" OR type:"type2") AND tag:"hockey"`
     You can use `NOT` operator to negates a search clause. For example: `not type:"type1"`
 
--   <h3 id="radius">radius</h3>
+-   <h3 class="parameter-name" id="radius">radius</h3>
 
     Unit in meters. Used to combine with lat/lng or encoded polyline. To bias the results within a given circular area. 3000 means to search for Assets that are at the most far from 3kms to search area (latlng or polyline).
 
--   <h3 id="stores_by_page">stores_by_page</h3>
+-   <h3 class="parameter-name" id="stores_by_page">stores_by_page</h3>
 
     If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is 100, max is 300).
 
--   <h3 id="zone">zone</h3>
+-   <h3 class="parameter-name" id="zone">zone</h3>
 
     returns the stores that are linked to a zone intersecting the provided `lat`,`lng` query parameters.
 

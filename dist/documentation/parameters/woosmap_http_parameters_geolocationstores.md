@@ -4,15 +4,15 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="ip_address">ip_address</h3>
+-   <h3 class="parameter-name" id="ip_address">ip_address</h3>
 
     The ip_address you want to geolocate. For **server call with private_key** only. Without this parameter, the API will geolocate the IP Address attached to the raw TCP request.
 
--   <h3 id="limit">limit</h3>
+-   <h3 class="parameter-name" id="limit">limit</h3>
 
     To limit number of assets retrieved from an IP location.
 
--   <h3 id="query">query</h3>
+-   <h3 class="parameter-name" id="query">query</h3>
 
     Search query combining one or more search clauses. Each search clause is made up of three parts structured as `field` `:` `operator` `value`. , e.g. `name:="My cool store"`
 

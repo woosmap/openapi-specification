@@ -4,11 +4,11 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="limit">limit</h3>
+-   <h3 class="parameter-name" id="limit">limit</h3>
 
     To limit number of zones retrieved (max 50).
 
--   <h3 id="offset">offset</h3>
+-   <h3 class="parameter-name" id="offset">offset</h3>
 
     To retrieve zones starting from an offset value.
 

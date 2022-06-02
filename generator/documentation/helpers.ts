@@ -67,3 +67,8 @@ export const sortSchemaProperties = (schema: OpenAPIV3.SchemaObject) => {
         return a < b ? -1 : 1;
     };
 };
+
+export const deprecatedAsideNode = (name: string) =>
+  htmlNode(
+    `<aside class="deprecated"><code>${name}</code> is deprecated.</aside>`
+  );
