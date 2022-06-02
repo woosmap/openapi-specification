@@ -3377,6 +3377,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/localities_public_id'
         - $ref: '#/components/parameters/localities_fields'
+        - $ref: '#/components/parameters/address_cc_format'
       responses:
         '200':
           description: Details successfully retrieved
@@ -3594,6 +3595,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/address_public_id'
         - $ref: '#/components/parameters/address_fields'
+        - $ref: '#/components/parameters/address_cc_format'
       responses:
         '200':
           description: Details successfully retrieved
@@ -5347,7 +5349,7 @@ components:
     address_cc_format:
       name: cc_format
       description: |
-        To specify the format for the short country code expected to be returned in the address_components field (default is alpha3).
+        To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field (default is `alpha3`).
       schema:
         type: string
         enum:
