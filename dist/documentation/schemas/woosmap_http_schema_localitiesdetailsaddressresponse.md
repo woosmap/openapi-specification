@@ -4,23 +4,23 @@
 
 Attributes describing a locality. Not all attributes will be available for all locality types.
 
-| Field                                                                                                                                         | Required | Type                                                                     | Description                                                                                                                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <h4 id="LocalitiesDetailsAddressResponse-address_components" class="add-link schema-object-property-key"><code>address_components</code></h4> | optional | Array&lt;[AddressComponents](#AddressComponents "AddressComponents")&gt; | <div class="ref-property-description"><p>An array containing the separate components applicable to this address.</p><p>See <a href="#AddressComponents">AddressComponents</a> for more information.</div> |
-| <h4 id="LocalitiesDetailsAddressResponse-formatted_address" class="add-link schema-object-property-key"><code>formatted_address</code></h4>   | optional | string                                                                   | <div class="nonref-property-description"><p>Contains the text description of the proposal to be used as suggestion in drop down list if needed.</p></div>                                                 |
-| <h4 id="LocalitiesDetailsAddressResponse-geometry" class="add-link schema-object-property-key"><code>geometry</code></h4>                     | optional | object                                                                   | <div class="nonref-property-description"><p>The location of the result, in latitude and longitude. Accuracy is also provided.</p></div>                                                                   |
-| <h4 id="LocalitiesDetailsAddressResponse-public_id" class="add-link schema-object-property-key"><code>public_id</code></h4>                   | optional | string                                                                   | <div class="nonref-property-description"><p>Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.</p></div>                                                          |
-| <h4 id="LocalitiesDetailsAddressResponse-types" class="add-link schema-object-property-key"><code>types</code></h4>                           | optional | Array&lt;[LocalitiesTypes](#LocalitiesTypes "LocalitiesTypes")&gt;       | <div class="ref-property-description"><p>available localities types</p><p>See <a href="#LocalitiesTypes">LocalitiesTypes</a> for more information.</div>                                                  |
+| Field                                                                                                                                         | Required | Type                                                                     | Description                                                                                                                                                                                                 |
+| :-------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="LocalitiesDetailsAddressResponse-address_components" class="add-link schema-object-property-key"><code>address_components</code></h4> | optional | Array&lt;[AddressComponents](#AddressComponents "AddressComponents")&gt; | <div class="ref-property-description"><p>An array containing the separate components applicable to this address.</p><p>See <a href="#AddressComponents">AddressComponents</a> for more information.</div>   |
+| <h4 id="LocalitiesDetailsAddressResponse-formatted_address" class="add-link schema-object-property-key"><code>formatted_address</code></h4>   | optional | string                                                                   | <div class="nonref-property-description"><p>Contains the text description of the proposal to be used as suggestion in drop down list if needed.</p></div>                                                   |
+| <h4 id="LocalitiesDetailsAddressResponse-geometry" class="add-link schema-object-property-key"><code>geometry</code></h4>                     | optional | object                                                                   | <div class="nonref-property-description"><p>The location of the result, in latitude and longitude, eventually associated with a Viewport. Accuracy is also provided for locality of type Address.</p></div> |
+| <h4 id="LocalitiesDetailsAddressResponse-public_id" class="add-link schema-object-property-key"><code>public_id</code></h4>                   | optional | string                                                                   | <div class="nonref-property-description"><p>Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.</p></div>                                                            |
+| <h4 id="LocalitiesDetailsAddressResponse-types" class="add-link schema-object-property-key"><code>types</code></h4>                           | optional | Array&lt;[LocalitiesTypes](#LocalitiesTypes "LocalitiesTypes")&gt;       | <div class="ref-property-description"><p>available localities types</p><p>See <a href="#LocalitiesTypes">LocalitiesTypes</a> for more information.</div>                                                    |
 
 <h4 class="schema-object-example" id="LocalitiesDetailsAddressResponse-example">Example</h4>
 
 <pre class="notranslate lang-json prettyprint">{
   "result": {
-    "formatted_address": "House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA",
+    "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
     "types": [
       "address"
     ],
-    "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+    "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
     "geometry": {
       "location": {
         "lat": 51.4998415,
@@ -60,17 +60,10 @@ Attributes describing a locality. Not all attributes will be available for all l
       },
       {
         "types": [
-          "route"
-        ],
-        "long_name": "Parliament Square",
-        "short_name": "Parliament Square"
-      },
-      {
-        "types": [
           "premise"
         ],
-        "long_name": "House Of Commons Palace Of Westminster",
-        "short_name": "House Of Commons Palace Of Westminster"
+        "long_name": "Houses Of Parliament",
+        "short_name": "Houses Of Parliament"
       },
       {
         "types": [

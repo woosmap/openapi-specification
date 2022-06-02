@@ -2,29 +2,33 @@
 <!--- [START woosmap_http_parameters_localitiesautocomplete] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 class="parameter-name" id="input">input</h3>
+-   <h3 id="input">input</h3>
 
     The text string on which to search, for example: "london" or "123 Cross Road". The Woosmap Localities API will return predictions matches based on this string and order the results based on their perceived relevance.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 class="parameter-name" id="components">components</h3>
+-   <h3 id="components">components</h3>
 
     A grouping of places to which you would like to restrict your results. Currently, you can use `components` to filter over countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple country:XX filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
 
--   <h3 class="parameter-name" id="data">data</h3>
+-   <h3 id="custom_description">custom_description</h3>
+
+    This parameter allows to choose the description format for all or some of the suggestion types selected. The custom formats are described as follows (available fields depend on the returned type): `custom_description=type_A:"{field_1}, {field_2}, [...]"|type_B:"{field_1}, {field_2}, [...]"`
+
+-   <h3 id="data">data</h3>
 
     Two values for this parameter: `standard` or `advanced`. By default, if the parameter is not defined, value is set as `standard`. The `advanced` value opens suggestions to worldwide postal codes in addition to postal codes for Western Europe. ***A dedicated option subject to specific billing on your license is needed to use this parameter. Please contact us if you are interested in using this parameter and you do not have subscribed the proper option yet.***
 
--   <h3 class="parameter-name" id="extended">extended</h3>
+-   <h3 id="extended">extended</h3>
 
     If set, this parameter allows a refined search over locality names that bears the same postal code. By triggering this parameter, integrators will benefit from a search spectrum on the `locality` type that ***includes postal codes***. To avoid confusion, it is recommended not to activate this parameter along with the `postal_code` type which could lead to duplicate locations. Also, the default description returned by the API changes to `name (postal code), admin_1, admin_0`. It is only available for France and Italy.
 
--   <h3 class="parameter-name" id="language">language</h3>
+-   <h3 id="language">language</h3>
 
     The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, the Localities service will use english as default language. No language necessary for `postal_code` request.
 
--   <h3 class="parameter-name" id="types">types</h3>
+-   <h3 id="types">types</h3>
 
     The types of suggestion to return.
 
@@ -42,8 +46,6 @@
     -   `amusement_park`: includes amusement parks like Disneyland Paris
     -   `art_gallery`: includes art galleries
     -   `zoo`: includes zoos
-
-    > The information returned on an `address` suggestion contain only a "single-line" description. A request to the [Details endpoint](/products/localities/details/) of the API must be performed to retrieve the location (geographic coordinates) and the address components (street address, zipcode, city..).
 
     Not specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.
 

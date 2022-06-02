@@ -248,7 +248,7 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "public_id",
-                        value: "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+                        value: "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
                     }
                 ],
             }),

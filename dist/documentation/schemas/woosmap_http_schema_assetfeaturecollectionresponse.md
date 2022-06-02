@@ -56,11 +56,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "06:30"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "06:30",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -228,11 +228,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "06:30"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "06:30",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -401,11 +401,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -568,11 +568,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "08:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "08:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -742,11 +742,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -916,11 +916,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:30"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:30",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -1089,11 +1089,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:30"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:30",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -1259,11 +1259,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "08:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "08:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -1433,11 +1433,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -1606,11 +1606,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -1780,11 +1780,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:30"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:30",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {
@@ -1953,11 +1953,11 @@ Assets Collection Response as a GeoJSon FeatureCollection with Asset properties
               "start": "07:00"
             }
           ],
-          "week_day": 3,
+          "week_day": 1,
           "next_opening": {
             "end": "18:00",
             "start": "07:00",
-            "day": "2022-03-09"
+            "day": "2022-04-05"
           }
         },
         "weekly_opening": {

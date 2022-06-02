@@ -7,9 +7,9 @@ Attributes describing a locality. Not all attributes will be available for all l
 | Field                                                                                                                                            | Required | Type                                                                     | Description                                                                                                                                                                                               |
 | :----------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <h4 id="LocalitiesDetailsPostalCodeResponse-address_components" class="add-link schema-object-property-key"><code>address_components</code></h4> | optional | Array&lt;[AddressComponents](#AddressComponents "AddressComponents")&gt; | <div class="ref-property-description"><p>An array containing the separate components applicable to this address.</p><p>See <a href="#AddressComponents">AddressComponents</a> for more information.</div> |
-| <h4 id="LocalitiesDetailsPostalCodeResponse-addresses" class="add-link schema-object-property-key"><code>addresses</code></h4>                   | optional | object                                                                   | <div class="nonref-property-description"><p>List of adresses attached to this Postal Code</p></div>                                                                                                       |
+| <h4 id="LocalitiesDetailsPostalCodeResponse-addresses" class="add-link schema-object-property-key"><code>addresses</code></h4>                   | optional | object                                                                   | <div class="nonref-property-description"><p>UK Only. List of addresses attached to this Postal Code.</p></div>                                                                                            |
 | <h4 id="LocalitiesDetailsPostalCodeResponse-formatted_address" class="add-link schema-object-property-key"><code>formatted_address</code></h4>   | optional | string                                                                   | <div class="nonref-property-description"><p>Contains the text description of the proposal to be used as suggestion in drop down list if needed.</p></div>                                                 |
-| <h4 id="LocalitiesDetailsPostalCodeResponse-geometry" class="add-link schema-object-property-key"><code>geometry</code></h4>                     | optional | object                                                                   | <div class="nonref-property-description"><p>The location of the PostalCode, in latitude and longitude.</p></div>                                                                                          |
+| <h4 id="LocalitiesDetailsPostalCodeResponse-geometry" class="add-link schema-object-property-key"><code>geometry</code></h4>                     | optional | object                                                                   | <div class="nonref-property-description"><p>The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport.</p></div>                                                   |
 | <h4 id="LocalitiesDetailsPostalCodeResponse-public_id" class="add-link schema-object-property-key"><code>public_id</code></h4>                   | optional | string                                                                   | <div class="nonref-property-description"><p>Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.</p></div>                                                          |
 | <h4 id="LocalitiesDetailsPostalCodeResponse-types" class="add-link schema-object-property-key"><code>types</code></h4>                           | optional | Array&lt;[LocalitiesTypes](#LocalitiesTypes "LocalitiesTypes")&gt;       | <div class="ref-property-description"><p>available localities types</p><p>See <a href="#LocalitiesTypes">LocalitiesTypes</a> for more information.</div>                                                  |
 
@@ -50,29 +50,13 @@ Attributes describing a locality. Not all attributes will be available for all l
       "pagination": {
         "page": 1,
         "page_count": 1,
-        "addresses_per_page": 5,
-        "address_count": 5
+        "addresses_per_page": 1,
+        "address_count": 1
       },
       "list": [
         {
-          "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
-          "description": "House Of Commons, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA"
-        },
-        {
-          "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9faTVXcUNQZCtxVFRuWnRpWG5LelY4S29JcFQ4PQ==",
-          "description": "Lord Chancellors Residence, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA"
-        },
-        {
-          "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fRHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPQ==",
-          "description": "Postmasters Redirection Service, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA"
-        },
-        {
-          "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fSzEzaVArWElmWUsyaCs2TkZxVlZYMnEwTlE4PQ==",
-          "description": "Speakers Housekeepers Apartment, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA"
-        },
-        {
-          "public_id": "RHV4S2czL2k1dDFBdVN0MXF2d2FpU2dkK2dJPV9fSjl5NmMwVkhkOEw1ZGpnVktBbVVaaXIxRDc0PQ==",
-          "description": "The Speakers House, 1 Parliament Square, London, SW1A 0AA"
+          "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+          "description": "House Of Commons, Houses Of Parliament, London, SW1A 0AA"
         }
       ]
     }

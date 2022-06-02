@@ -5,6 +5,9 @@ tags:
 description: >
   Autocomplete on worldwide suggestions for a for text-based geographic searches.
   It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.
+
+  >⚠️ To retrieve fields marked as  **deprecated** in response schema, please read [Details endpoint](#operation/localitiesDetails)
+
 security:
   - PublicApiKeyAuth: []
     RefererHeader: []
@@ -16,6 +19,7 @@ parameters:
   - $ref: "../../parameters/localities/language.yml"
   - $ref: "../../parameters/localities/data.yml"
   - $ref: "../../parameters/localities/extended.yml"
+  - $ref: "../../parameters/localities/custom_description.yml"
 responses:
   "200":
     description: Autocompletion successfully retrieved
