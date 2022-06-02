@@ -14,7 +14,7 @@ info:
   termsOfService: 'https://www.woosmap.com/en/policies/terms/'
   x-document-meta-data:
     copyright: © 2022 Woosmap
-  version: 1.0.1
+  version: 1.0.2
 servers:
   - url: 'https://api.woosmap.com'
 paths:
@@ -5557,6 +5557,17 @@ components:
         minimum: 1
         maximum: 300
       example: 10
+      in: query
+    localities_cc_format:
+      name: cc_format
+      description: |
+        To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field (default is `alpha2`).
+      schema:
+        type: string
+        enum:
+          - alpha2
+          - alpha3
+      example: alpha2
       in: query
     localities_components:
       name: components
