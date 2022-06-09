@@ -1,5 +1,8 @@
 # Woosmap OpenAPI3 Specification
 
+View the documentation here:
+<https://developers.woosmap.com/api-reference/>
+
 ## Description
 
 An OpenAPI specification for Woosmap Platform adapted from [googlemaps/openapi-specification](https://github.com/googlemaps/openapi-specification).
