@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cat package-lock.json
       - run: npm ci
       - run: npm run build -- --profile /tmp/bazel-profile-build.gz --jobs 8
       - run: npm test -- --jobs 8
