@@ -3,7 +3,7 @@
 <h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 id="public_id">public_id</h3>
+    <h3 class="parameter-name" id="public_id">public_id</h3>
     <p>
       A textual identifier that uniquely identifies a locality, returned from a
       <a href="https://developers.woosmap.com/products/localities/autocomplete/"
@@ -15,7 +15,16 @@
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 id="fields">fields</h3>
+    <h3 class="parameter-name" id="cc_format">cc_format</h3>
+    <p>
+      To specify the format for the short
+      <a href="https://en.wikipedia.org/wiki/ISO_3166-1">country code</a>
+      expected to be returned in the address_components field (default is
+      <code>alpha3</code>).
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="fields">fields</h3>
     <p>
       Used to limit the returning fields (by default, all fields are return).
       Available fields are (geometry) (fields should be separated by a ,). By

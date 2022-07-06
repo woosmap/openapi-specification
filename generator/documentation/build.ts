@@ -1,6 +1,11 @@
-
+import clsx from "clsx";
 import { Node, Parent } from "unist";
-import { feedbackLinks, localRefLink, sortSchemaProperties } from "./helpers";
+import {
+  feedbackLinks,
+  localRefLink,
+  sortSchemaProperties,
+  deprecatedAsideNode,
+} from "./helpers";
 import { fromMarkdown, htmlProcessor } from "./processors";
 import {
   html as htmlNode,
@@ -41,6 +46,7 @@ export const build = async (
   const nodes: any = [];
 
   nodes.push(htmlNode(`<h3 class="schema-object" id="${key}">${title}</h3>`));
+
   if (schema.description) {
     nodes.push(paragraph(fromMarkdown(schema.description)));
   }
@@ -109,7 +115,7 @@ export const build = async (
 const propertyToRow = async (
   key: string,
   property:
-    | OpenAPIV3.ReferenceObject
+    | (OpenAPIV3.ReferenceObject & OpenAPIV3.BaseSchemaObject)
     | OpenAPIV3.ArraySchemaObject
     | OpenAPIV3.NonArraySchemaObject,
   required: boolean,
@@ -122,7 +128,14 @@ const propertyToRow = async (
       htmlNode(
         // class="add-link" forces the link anchor button on hover
         // need to override styling to provide room for button on hover
-        `<h4 id="${title}-${key}" class="add-link schema-object-property-key"><code>${key}</code></h4>`
+        `<h4 id="${title}-${key}" class="${clsx(
+          "add-link",
+          "schema-object-property-key",
+          {
+            "deprecated-item": property.deprecated,
+            "hide-from-toc": property.deprecated,
+          }
+        )}"><code>${key}</code></h4>`
       )
     )
   );
@@ -196,7 +209,7 @@ const nonRefPropertyDescription = async (
 ) => {
   const nodes: Node[] = [];
 
-  if (!property.description) {
+  if (!property.description && !property.deprecated) {
     throw `
 		
 		
@@ -209,7 +222,7 @@ const nonRefPropertyDescription = async (
   // process description text as html since markdown does not support complex
   // values in table cells. this wraps all paragraphs in a div and removes new lines
   let description = (
-    await htmlProcessor.process(property.description)
+    await htmlProcessor.process(property.description || "")
   ).toString();
 
   if (property.enum) {
@@ -226,6 +239,10 @@ const nonRefPropertyDescription = async (
   }
 
   description = description.replace(/\n/g, "");
+
+  if (property.deprecated) {
+    nodes.push(deprecatedAsideNode(key));
+  }
 
   nodes.push(
     htmlNode(`<div class="nonref-property-description">${description}</div>`)

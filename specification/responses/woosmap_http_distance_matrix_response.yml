@@ -1,7 +1,23 @@
 # [START woosmap_http_distance_matrix_response]
 {
-  "rows": [],
-  "status": "REQUEST_DENIED",
-  "error_message": "Incorrect authentication credentials. Please check or use a valid API Key",
+  "status": "OK",
+  "rows":
+    [
+      {
+        "elements":
+          [
+            {
+              "status": "OK",
+              "duration": { "value": 938, "text": "16 mins" },
+              "distance": { "value": 10604, "text": "10.6 km" },
+            },
+            {
+              "status": "OK",
+              "duration": { "value": 886, "text": "15 mins" },
+              "distance": { "value": 10288, "text": "10.3 km" },
+            },
+          ],
+      },
+    ],
 }
 # [END woosmap_http_distance_matrix_response]

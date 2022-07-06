@@ -20,6 +20,7 @@ const argv = options({
         demandOption: true,
     },
     skip: {type: "string"},
+    only: {type: "string"},
 }).argv;
 
 const extractRequests = async (
@@ -114,11 +115,29 @@ const response = async (output, regionTag, request) => {
     );
 };
 
+const toArray = (value: string | string[]): string[] => {
+    return Array.isArray(value) ? value : [value];
+};
+
 const main = async (argv: any) => {
-    for (let [regionTag, request] of Object.entries(
-        await extractRequests(argv.archive)
-    )) {
-        if (argv.skip && argv.skip.indexOf(regionTag) != -1) continue;
+    const skip = toArray(argv.skip ?? []);
+    const only = toArray(argv.only ?? []);
+
+    const requests = Object.entries(await extractRequests(argv.archive)).filter(
+        ([regionTag]) => {
+            if (skip.length && skip.indexOf(regionTag) !== -1) {
+                return false;
+            }
+
+            if (only.length && only.indexOf(regionTag) === -1) {
+                return false;
+            }
+            console.log(regionTag);
+            return true;
+        }
+    );
+
+    for (let [regionTag, request] of requests) {
         await response(argv.output, regionTag, request);
     }
 };

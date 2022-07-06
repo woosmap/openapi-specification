@@ -1,5 +1,187 @@
 # [START woosmap_http_geolocation_stores_response]
 {
-  "detail": "Incorrect authentication credentials. Please check or use a valid API Key",
+  "country_code": "US",
+  "country_name": "United States",
+  "continent": "North America",
+  "latitude": 38.719,
+  "longitude": -77.1067,
+  "accuracy": 5,
+  "viewport":
+    {
+      "northeast": { "lat": 38.763915764205976, "lng": -77.0491321464058 },
+      "southwest": { "lat": 38.674084235794034, "lng": -77.16426785359421 },
+    },
+  "city": "Alexandria",
+  "region_state": "Virginia",
+  "postal_code": "22309",
+  "timezone": "America/New_York",
+  "stores":
+    {
+      "type": "FeatureCollection",
+      "features":
+        [
+          {
+            "type": "Feature",
+            "properties":
+              {
+                "store_id": "STORE_ID_123456",
+                "name": "My Cool Store",
+                "contact":
+                  {
+                    "email": "contact@woosmap.com",
+                    "phone": "+44 20 7693 4000",
+                    "website": "https://www.woosmap.com",
+                  },
+                "address":
+                  {
+                    "lines": ["Building Centre", "26 Store Street"],
+                    "country_code": "UK",
+                    "city": "London",
+                    "zipcode": "WC1E 7BT",
+                  },
+                "user_properties":
+                  { "some_user_properties": "associated user value" },
+                "tags": ["wifi", "covered_parking"],
+                "types": ["drive", "click_and_collect"],
+                "distance": 0,
+                "open":
+                  {
+                    "open_now": false,
+                    "open_hours": [],
+                    "week_day": 1,
+                    "next_opening":
+                      { "end": "22:00", "start": "08:30", "day": "2022-04-05" },
+                  },
+                "weekly_opening":
+                  {
+                    "1": { "hours": [], "isSpecial": false },
+                    "2":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "3":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "4":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "5":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "6":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "7":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "timezone": "Europe/London",
+                  },
+                "opening_hours":
+                  {
+                    "usual":
+                      {
+                        "1": [],
+                        "default": [{ "end": "22:00", "start": "08:30" }],
+                      },
+                    "special":
+                      { "2015-02-07": [{ "end": "23:00", "start": "08:00" }] },
+                    "timezone": "Europe/London",
+                  },
+              },
+            "geometry": { "type": "Point", "coordinates": [-77.1067, 38.719] },
+          },
+          {
+            "type": "Feature",
+            "properties":
+              {
+                "store_id": "STORE_ID_45678",
+                "name": "My Cool Store 2",
+                "contact":
+                  {
+                    "email": "contact@woosmap.com",
+                    "phone": "+44 20 7693 4000",
+                    "website": "https://www.woosmap.com",
+                  },
+                "address":
+                  {
+                    "lines": ["1805-1899", "Orchard St"],
+                    "country_code": "US",
+                    "city": "Alexandria",
+                    "zipcode": "22309",
+                  },
+                "user_properties":
+                  { "some_user_properties": "associated user value" },
+                "tags": ["covered_parking"],
+                "types": ["drive"],
+                "distance": 23062.07621905,
+                "open":
+                  {
+                    "open_now": false,
+                    "open_hours": [],
+                    "week_day": 1,
+                    "next_opening":
+                      { "end": "22:00", "start": "08:30", "day": "2022-04-05" },
+                  },
+                "weekly_opening":
+                  {
+                    "1": { "hours": [], "isSpecial": false },
+                    "2":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "3":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "4":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "5":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "6":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "7":
+                      {
+                        "hours": [{ "end": "22:00", "start": "08:30" }],
+                        "isSpecial": false,
+                      },
+                    "timezone": "America/New_York",
+                  },
+                "opening_hours":
+                  {
+                    "usual":
+                      {
+                        "1": [],
+                        "default": [{ "end": "22:00", "start": "08:30" }],
+                      },
+                    "timezone": "America/New_York",
+                  },
+              },
+            "geometry": { "type": "Point", "coordinates": [-77.0157, 38.5239] },
+          },
+        ],
+      "pagination": { "page": 1, "pageCount": 1 },
+    },
 }
 # [END woosmap_http_geolocation_stores_response]

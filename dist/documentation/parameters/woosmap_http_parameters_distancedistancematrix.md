@@ -2,35 +2,35 @@
 <!--- [START woosmap_http_parameters_distancedistancematrix] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="destinations">destinations</h3>
+-   <h3 class="parameter-name" id="destinations">destinations</h3>
 
     One or more locations to use as the finishing point for calculating travel distance. The options for the destinations parameter are the same as for the origins parameter, described above. In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
 
--   <h3 id="origins">origins</h3>
+-   <h3 class="parameter-name" id="origins">origins</h3>
 
     The starting point for calculating travel distance. You can supply one or more locations separated by the pipe character (|), in the form of latitude/longitude coordinates. They are used unchanged to calculate distance. Ensure that no space exists between the latitude and longitude values. In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="elements">elements</h3>
+-   <h3 class="parameter-name" id="elements">elements</h3>
 
     Specifies element values that will be part of the API response (distance and/or duration). if not specified default is `distance`
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language code, indicating in which language the results should be returned, if possible. If language is not supplied, the Distance API service will use the navigator language or “en”.
 
--   <h3 id="method">method</h3>
+-   <h3 class="parameter-name" id="method">method</h3>
 
     Specifies the method to compute the route between the start point and the end point:
 
     -   `time`: fastest route (default) - `distance`: shortest route
 
--   <h3 id="mode">mode</h3>
+-   <h3 class="parameter-name" id="mode">mode</h3>
 
     Specifies the mode of transport to use when calculating distance
 
--   <h3 id="units">units</h3>
+-   <h3 class="parameter-name" id="units">units</h3>
 
     Specifies the unit system to use when expressing distance as text. Two different units supported:
 

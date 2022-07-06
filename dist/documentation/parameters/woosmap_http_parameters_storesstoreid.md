@@ -2,7 +2,7 @@
 <!--- [START woosmap_http_parameters_storesstoreid] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="storeid">storeId</h3>
+-   <h3 class="parameter-name" id="storeid">storeId</h3>
 
     ID of the asset to get
 

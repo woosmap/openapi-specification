@@ -2,13 +2,17 @@
 <!--- [START woosmap_http_parameters_localitiesdetails] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="public_id">public_id</h3>
+-   <h3 class="parameter-name" id="public_id">public_id</h3>
 
     A textual identifier that uniquely identifies a locality, returned from a [Localities Autocomplete](https://developers.woosmap.com/products/localities/autocomplete/).
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="fields">fields</h3>
+-   <h3 class="parameter-name" id="cc_format">cc_format</h3>
+
+    To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO\_3166-1) expected to be returned in the address_components field (default is `alpha3`).
+
+-   <h3 class="parameter-name" id="fields">fields</h3>
 
     Used to limit the returning fields (by default, all fields are return). Available fields are (geometry) (fields should be separated by a ,). By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
 
