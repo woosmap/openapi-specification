@@ -1,5 +1,42 @@
 # [START woosmap_http_localities_details_postal_code_response]
 {
-  "detail": "Incorrect authentication credentials. Please check or use a valid API Key",
+  "result":
+    {
+      "formatted_address": "SW1A 0AA, City of London",
+      "types": ["postal_code"],
+      "public_id": "QaCU+fBtigK65ztSrqHqUoUDwZw=",
+      "name": "SW1A 0AA",
+      "geometry": { "location": { "lat": 51.49984, "lng": -0.124663 } },
+      "address_components":
+        [
+          {
+            "types": ["country", "administrative_area_level_0"],
+            "long_name": "United Kingdom",
+            "short_name": "GB",
+          },
+          {
+            "types": ["administrative_area_level_1"],
+            "long_name": "City of London",
+            "short_name": "City of London",
+          },
+        ],
+      "addresses":
+        {
+          "pagination":
+            {
+              "page": 1,
+              "page_count": 1,
+              "addresses_per_page": 1,
+              "address_count": 1,
+            },
+          "list":
+            [
+              {
+                "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+                "description": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
+              },
+            ],
+        },
+    },
 }
 # [END woosmap_http_localities_details_postal_code_response]
