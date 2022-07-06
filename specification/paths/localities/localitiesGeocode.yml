@@ -13,20 +13,18 @@ parameters:
   - $ref: "../../parameters/address/latlng.yml"
   - $ref: "../../parameters/address/components.yml"
   - $ref: "../../parameters/address/language.yml"
-  - $ref: "../../parameters/address/location.yml"
   - $ref: "../../parameters/address/cc_format.yml"
-  - $ref: "../../parameters/address/limit.yml"
 responses:
   "200":
     description: Request successful
     content:
       application/json:
         schema:
-          $ref: "../../schemas/AddressGeocodeCollectionResponse.yml"
+          $ref: "../../schemas/LocalitiesGeocodeCollectionResponse.yml"
         examples:
           default:
             value:
-              $ref: "../../responses/woosmap_http_address_geocode_collection_response.yml"
+              $ref: "../../responses/woosmap_http_localities_geocode_collection_response.yml"
 
   "401":
     $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
