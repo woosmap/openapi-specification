@@ -21,8 +21,10 @@
     Distance API service (e.g. wrong API Key, wrong/no referer, …).
   </li>
   <li>
-    <code>UNKNOWN_ERROR</code> indicates a Distance API request could not be
-    processed due to a server error. The request may succeed if you try again.
+    <code>BACKEND_ERROR</code> indicates a Distance API request could not be
+    processed due to a server error. This may indicate that the origin and/or
+    destination of this pairing could not be matched to the network. The request
+    may or may not succeed if you try again.
   </li>
   <li>
     <code>OVER_QUERY_LIMIT</code> (associated to a 429 status code) indicates

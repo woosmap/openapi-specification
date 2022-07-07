@@ -289,7 +289,7 @@ Address Geocode Collection Response. Contains one or more Addresses with coordin
       }
     },
     {
-      "formatted_address": "Place de la Résistance, 36700 Châtillon-sur-Indre, France",
+      "formatted_address": "Place de la Résistance, 21400 Châtillon-sur-Seine, France",
       "types": [
         "route"
       ],
@@ -305,19 +305,19 @@ Address Geocode Collection Response. Contains one or more Addresses with coordin
           "types": [
             "state"
           ],
-          "long_name": "Centre-Val de Loire",
-          "short_name": "CVL"
+          "long_name": "Bourgogne-Franche-Comte",
+          "short_name": "BFC"
         },
         {
           "types": [
             "county"
           ],
-          "long_name": "Indre",
-          "short_name": "Indre"
+          "long_name": "Côte-d'Or",
+          "short_name": "Côte-d'Or"
         },
         {
-          "long_name": "Châtillon-sur-Indre",
-          "short_name": "Châtillon-sur-Indre",
+          "long_name": "Châtillon-sur-Seine",
+          "short_name": "Châtillon-sur-Seine",
           "types": [
             "locality"
           ]
@@ -330,8 +330,8 @@ Address Geocode Collection Response. Contains one or more Addresses with coordin
           ]
         },
         {
-          "long_name": "36700",
-          "short_name": "36700",
+          "long_name": "21400",
+          "short_name": "21400",
           "types": [
             "postal_code"
           ]
@@ -340,17 +340,17 @@ Address Geocode Collection Response. Contains one or more Addresses with coordin
       "geometry": {
         "location_type": "GEOMETRIC_CENTER",
         "location": {
-          "lat": 46.98904,
-          "lng": 1.17172
+          "lat": 47.86017,
+          "lng": 4.57346
         },
         "viewport": {
           "northeast": {
-            "lat": 46.98907,
-            "lng": 1.17191
+            "lat": 47.86048,
+            "lng": 4.57421
           },
           "southwest": {
-            "lat": 46.98885,
-            "lng": 1.17149
+            "lat": 47.86003,
+            "lng": 4.57263
           }
         }
       }
