@@ -9,7 +9,7 @@ Returns more info on if the request was successful or not.
 - `MAX_ELEMENTS_EXCEEDED` indicates that the product of origins and destinations exceeds the per-query limit (fixed at 200 elts/q).
 - `MAX_ROUTE_LENGTH_EXCEEDED` indicates that at least one of requested route is too long and the matrix cannot be processed (>1000km).
 - `REQUEST_DENIED` indicates that the service denied use of the Distance API service (e.g. wrong API Key, wrong/no referer, …).
-- `UNKNOWN_ERROR` indicates a Distance API request could not be processed due to a server error. The request may succeed if you try again.
+- `BACKEND_ERROR` indicates a Distance API request could not be processed due to a server error. This may indicate that the origin and/or destination of this pairing could not be matched to the network. The request may or may not succeed if you try again.
 - `OVER_QUERY_LIMIT` (associated to a 429 status code) indicates that the number of queries per second (QPS) or the number of elements per second (EPS) exceed the [usage limits](https://developers.woosmap.com/products/distance-api/distance-matrix-endpoint/#usage-limits)
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
