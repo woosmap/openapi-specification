@@ -3296,22 +3296,6 @@ paths:
                           lng: -0.6805281
                         admin_0: United Kingdom
                         admin_1: East Riding of Yorkshire
-                      - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
-                        description: 'London Apprentice, Cornwall, United Kingdom'
-                        type: locality
-                        matched_substrings:
-                          name:
-                            - offset: 0
-                              length: 4
-                          description:
-                            - offset: 0
-                              length: 4
-                        name: London Apprentice
-                        location:
-                          lat: 50.31655
-                          lng: -4.8009524
-                        admin_0: United Kingdom
-                        admin_1: Cornwall
                       - public_id: Js0mQmmeI46X3hiqRj/R4pvb8mQ=
                         description: 'Long Stratton, Norfolk, United Kingdom'
                         type: locality
@@ -3321,6 +3305,15 @@ paths:
                           lng: 1.233093
                         admin_0: United Kingdom
                         admin_1: Norfolk
+                      - public_id: BQOzBfxua+W9eLymBnVKRkqK2Zc=
+                        description: 'Long Sutton, Lincolnshire, United Kingdom'
+                        type: locality
+                        name: Long Sutton
+                        location:
+                          lat: 52.786278
+                          lng: 0.12017952
+                        admin_0: United Kingdom
+                        admin_1: Lincolnshire
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
         '403':
@@ -3485,6 +3478,106 @@ paths:
             import requests
 
             url = "https://api.woosmap.com/localities/details?public_id=TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY"
+
+            payload={}
+            headers = {
+                'Referer': 'http://localhost'
+            }
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            print(response.text)
+  /localities/geocode:
+    get:
+      summary: Geocode an Address or Reverse Geocode a latlng
+      operationId: localitiesGeocode
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Localities API
+      description: |
+        Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required.
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/address_address'
+        - $ref: '#/components/parameters/address_latlng'
+        - $ref: '#/components/parameters/address_components'
+        - $ref: '#/components/parameters/address_language'
+        - $ref: '#/components/parameters/address_cc_format'
+      responses:
+        '200':
+          description: Request successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocalitiesGeocodeCollectionResponse'
+              examples:
+                default:
+                  value:
+                    results:
+                      - formatted_address: 'Place Jeanne D’Arc, 75013, Paris'
+                        types:
+                          - route
+                        geometry:
+                          location:
+                            lat: 48.829405
+                            lng: 2.367944
+                          location_type: GEOMETRIC_CENTER
+                        address_components:
+                          - types:
+                              - country
+                              - administrative_area_level_0
+                            long_name: France
+                            short_name: FR
+                          - types:
+                              - postal_town
+                            long_name: Paris
+                            short_name: Paris
+                          - types:
+                              - locality
+                            long_name: Paris
+                            short_name: Paris
+                          - types:
+                              - postal_codes
+                            long_name: '75013'
+                            short_name: '75013'
+                          - types:
+                              - route
+                            long_name: Place Jeanne D’Arc
+                            short_name: Place Jeanne D’Arc
+        '401':
+          $ref: '#/paths/~1zones/get/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/get/responses/403'
+        '429':
+          $ref: '#/paths/~1zones/get/responses/429'
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |-
+            curl -L -X GET 'https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY' \
+            -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+        - lang: python
+          label: Python
+          source: |
+            import requests
+
+            url = "https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY"
 
             payload={}
             headers = {
@@ -3881,7 +3974,7 @@ paths:
                             southwest:
                               lat: 48.81359
                               lng: 2.55754
-                      - formatted_address: 'Place de la Résistance, 36700 Châtillon-sur-Indre, France'
+                      - formatted_address: 'Place de la Résistance, 21400 Châtillon-sur-Seine, France'
                         types:
                           - route
                         address_components:
@@ -3891,36 +3984,36 @@ paths:
                             short_name: FRA
                           - types:
                               - state
-                            long_name: Centre-Val de Loire
-                            short_name: CVL
+                            long_name: Bourgogne-Franche-Comte
+                            short_name: BFC
                           - types:
                               - county
-                            long_name: Indre
-                            short_name: Indre
-                          - long_name: Châtillon-sur-Indre
-                            short_name: Châtillon-sur-Indre
+                            long_name: Côte-d'Or
+                            short_name: Côte-d'Or
+                          - long_name: Châtillon-sur-Seine
+                            short_name: Châtillon-sur-Seine
                             types:
                               - locality
                           - long_name: Place de la Résistance
                             short_name: Place de la Résistance
                             types:
                               - route
-                          - long_name: '36700'
-                            short_name: '36700'
+                          - long_name: '21400'
+                            short_name: '21400'
                             types:
                               - postal_code
                         geometry:
                           location_type: GEOMETRIC_CENTER
                           location:
-                            lat: 46.98904
-                            lng: 1.17172
+                            lat: 47.86017
+                            lng: 4.57346
                           viewport:
                             northeast:
-                              lat: 46.98907
-                              lng: 1.17191
+                              lat: 47.86048
+                              lng: 4.57421
                             southwest:
-                              lat: 46.98885
-                              lng: 1.17149
+                              lat: 47.86003
+                              lng: 4.57263
                     status: OK
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
@@ -8179,22 +8272,6 @@ components:
               lng: -0.6805281
             admin_0: United Kingdom
             admin_1: East Riding of Yorkshire
-          - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
-            description: 'London Apprentice, Cornwall, United Kingdom'
-            type: locality
-            matched_substrings:
-              name:
-                - offset: 0
-                  length: 4
-              description:
-                - offset: 0
-                  length: 4
-            name: London Apprentice
-            location:
-              lat: 50.31655
-              lng: -4.8009524
-            admin_0: United Kingdom
-            admin_1: Cornwall
           - public_id: Js0mQmmeI46X3hiqRj/R4pvb8mQ=
             description: 'Long Stratton, Norfolk, United Kingdom'
             type: locality
@@ -8204,6 +8281,15 @@ components:
               lng: 1.233093
             admin_0: United Kingdom
             admin_1: Norfolk
+          - public_id: BQOzBfxua+W9eLymBnVKRkqK2Zc=
+            description: 'Long Sutton, Lincolnshire, United Kingdom'
+            type: locality
+            name: Long Sutton
+            location:
+              lat: 52.786278
+              lng: 0.12017952
+            admin_0: United Kingdom
+            admin_1: Lincolnshire
     LocalitiesAutocompleteMatchedFields:
       title: LocalitiesAutocompleteMatchedFields
       type: object
@@ -8472,6 +8558,7 @@ components:
         - tourist_attraction
         - country
         - address
+        - route
     LocalitiesViewpoint:
       title: LocalitiesViewpoint
       type: object
@@ -8564,6 +8651,72 @@ components:
                 - organisation
               long_name: House Of Commons
               short_name: House Of Commons
+    LocalitiesGeocodeCollectionResponse:
+      title: LocalitiesGeocodeCollectionResponse
+      type: object
+      description: 'Localities Geocode Collection Response. Contains one or more detailled Localities or Addresses in FR or in the UK, with coordinates (default to one result for reverse geocoding)'
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesGeocodeResponse'
+      example:
+        results:
+          - formatted_address: 'Place Jeanne D’Arc, 75013, Paris'
+            types:
+              - route
+            geometry:
+              location:
+                lat: 48.829405
+                lng: 2.367944
+              location_type: GEOMETRIC_CENTER
+            address_components:
+              - types:
+                  - country
+                  - administrative_area_level_0
+                long_name: France
+                short_name: FR
+              - types:
+                  - postal_town
+                long_name: Paris
+                short_name: Paris
+              - types:
+                  - locality
+                long_name: Paris
+                short_name: Paris
+              - types:
+                  - postal_codes
+                long_name: '75013'
+                short_name: '75013'
+              - types:
+                  - route
+                long_name: Place Jeanne D’Arc
+                short_name: Place Jeanne D’Arc
+    LocalitiesGeocodeResponse:
+      title: LocalitiesGeocodeResponse
+      type: object
+      description: Attributes describing a locality. Not all attributes will be available for all locality types.
+      properties:
+        formatted_address:
+          description: Contains the text description of the proposal to be used as suggestion in drop down list if needed.
+          type: string
+          example: 'Parliament Square, London, SW1A 0AA'
+        types:
+          description: available localities types
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesTypes'
+        public_id:
+          description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
+          type: string
+          example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
+        geometry:
+          $ref: '#/components/schemas/AddressGeometry'
+        address_components:
+          description: An array containing the separate components applicable to this address.
+          type: array
+          items:
+            $ref: '#/components/schemas/AddressComponents'
     AddressAutocompleteCollectionResponse:
       title: AddressAutocompleteCollectionResponse
       type: object
@@ -8891,7 +9044,7 @@ components:
                 southwest:
                   lat: 48.81359
                   lng: 2.55754
-          - formatted_address: 'Place de la Résistance, 36700 Châtillon-sur-Indre, France'
+          - formatted_address: 'Place de la Résistance, 21400 Châtillon-sur-Seine, France'
             types:
               - route
             address_components:
@@ -8901,36 +9054,36 @@ components:
                 short_name: FRA
               - types:
                   - state
-                long_name: Centre-Val de Loire
-                short_name: CVL
+                long_name: Bourgogne-Franche-Comte
+                short_name: BFC
               - types:
                   - county
-                long_name: Indre
-                short_name: Indre
-              - long_name: Châtillon-sur-Indre
-                short_name: Châtillon-sur-Indre
+                long_name: Côte-d'Or
+                short_name: Côte-d'Or
+              - long_name: Châtillon-sur-Seine
+                short_name: Châtillon-sur-Seine
                 types:
                   - locality
               - long_name: Place de la Résistance
                 short_name: Place de la Résistance
                 types:
                   - route
-              - long_name: '36700'
-                short_name: '36700'
+              - long_name: '21400'
+                short_name: '21400'
                 types:
                   - postal_code
             geometry:
               location_type: GEOMETRIC_CENTER
               location:
-                lat: 46.98904
-                lng: 1.17172
+                lat: 47.86017
+                lng: 4.57346
               viewport:
                 northeast:
-                  lat: 46.98907
-                  lng: 1.17191
+                  lat: 47.86048
+                  lng: 4.57421
                 southwest:
-                  lat: 46.98885
-                  lng: 1.17149
+                  lat: 47.86003
+                  lng: 4.57263
         status: OK
     AddressGeocodeResponse:
       title: AddressGeocodeResponse
