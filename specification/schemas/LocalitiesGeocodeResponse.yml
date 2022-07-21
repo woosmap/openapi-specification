@@ -16,16 +16,7 @@ properties:
     type: string
     example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
   geometry:
-    description: The location of the result, in latitude and longitude, eventually associated with a Viewport. Accuracy is also provided for locality of type Address.
-    type: object
-    properties:
-      location:
-        $ref: "./LatLngLiteral.yml"
-      viewport:
-        $ref: "./Bounds.yml"
-      accuracy:
-        type: string
-        enum: [ ROOFTOP, APPROXIMATE, INTERPOLATED, POSTAL_CODE, DISTRICT]
+    $ref: "./AddressGeometry.yml"
   address_components:
     description: An array containing the separate components applicable to this address.
     type: array

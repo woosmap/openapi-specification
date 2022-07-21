@@ -281,20 +281,12 @@ export const REQUESTS: SnippetRequest[] = [
                 path: "/localities/geocode",
                 query: [
                     {
-                        key: "public_id",
-                        value: "QaCU+fBtigK65ztSrqHqUoUDwZw=",
-                    },
-                    {
                         key: "address",
-                        value: "Place de la Resistance",
+                        value: "Place Jeanne-d'Arc",
                     },
                     {
                         key: "components",
                         value: "country:FR"
-                    },
-                    {
-                        key: "limit",
-                        value: "5"
                     }
                 ],
             }),
