@@ -4040,19 +4040,19 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/address_address"
+            "$ref": "#/components/parameters/localities_address"
           },
           {
-            "$ref": "#/components/parameters/address_latlng"
+            "$ref": "#/components/parameters/localities_latlng"
           },
           {
-            "$ref": "#/components/parameters/address_components"
+            "$ref": "#/components/parameters/localities_components"
           },
           {
-            "$ref": "#/components/parameters/address_language"
+            "$ref": "#/components/parameters/localities_language"
           },
           {
-            "$ref": "#/components/parameters/address_cc_format"
+            "$ref": "#/components/parameters/localities_cc_format"
           }
         ],
         "responses": {
@@ -6435,6 +6435,16 @@
         "example": 10,
         "in": "query"
       },
+      "localities_address": {
+        "name": "address",
+        "description": "The input string to geocode. Can represent an address, a street, a locality or a postal code. The `address` parameter must be URL encoded.\n",
+        "schema": {
+          "type": "string"
+        },
+        "required": false,
+        "in": "query",
+        "example": "224%20Rue%20de%20Rivoli%2C%20Paris"
+      },
       "localities_cc_format": {
         "name": "cc_format",
         "description": "To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field (default is `alpha2`).\n",
@@ -6522,6 +6532,16 @@
         },
         "in": "query",
         "example": "en"
+      },
+      "localities_latlng": {
+        "name": "latlng",
+        "description": "The latlng parameter is used for reverse geocoding, it’s required if the `address` parameter is missing.\n",
+        "schema": {
+          "type": "string"
+        },
+        "required": false,
+        "example": "5.2,-2.3",
+        "in": "query"
       },
       "localities_public_id": {
         "name": "public_id",
@@ -10705,6 +10725,17 @@
           "route"
         ]
       },
+      "LocalitiesGeocodeTypes": {
+        "title": "LocalitiesGeocodeTypes",
+        "type": "string",
+        "description": "Contains the type of the suggestion.",
+        "enum": [
+          "locality",
+          "postal_code",
+          "route",
+          "address"
+        ]
+      },
       "LocalitiesViewpoint": {
         "title": "LocalitiesViewpoint",
         "type": "object",
@@ -10928,7 +10959,7 @@
             "description": "available localities types",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LocalitiesTypes"
+              "$ref": "#/components/schemas/LocalitiesGeocodeTypes"
             }
           },
           "public_id": {
