@@ -5,8 +5,9 @@
   <li>
     <h3 class="parameter-name" id="address">address</h3>
     <p>
-      The address of which to find the coordinates for. A partial address is
-      less likely to return the proper coordinates than the complete address.
+      The input string to geocode. Can represent an address, a street, a
+      locality or a postal code. The <code>address</code> parameter must be URL
+      encoded.
     </p>
   </li>
   <li>
@@ -15,34 +16,42 @@
       To specify the format for the short
       <a href="https://en.wikipedia.org/wiki/ISO_3166-1">country code</a>
       expected to be returned in the address_components field (default is
-      <code>alpha3</code>).
+      <code>alpha2</code>).
     </p>
   </li>
   <li>
     <h3 class="parameter-name" id="components">components</h3>
     <p>
-      To restrict your results to specific areas. Currently, you can use
-      components to filter over countries. Countries must be passed as three
-      characters string (ISO 3166-1 Alpha 3). Components should be passed as an
-      array of different options which are separated by a <code>|</code>.
+      A grouping of places to which you would like to restrict your results.
+      Currently, you can use <code>components</code> to filter over countries.
+      Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible
+      country code. For example: <code>components=country:fr</code> would
+      restrict your results to places within France and
+      <code>components=country:fr-fr</code> returns locations only in
+      Metropolitan France. Multiple countries must be passed as multiple
+      country:XX filters, with the pipe character (<code>|</code>) as a
+      separator. For example:
+      <code
+        >components=country:gb|country:fr|country:be|country:sp|country:it</code
+      >
+      would restrict your results to city names or postal codes within the
+      United Kingdom, France, Belgium, Spain and Italy.
     </p>
   </li>
   <li>
     <h3 class="parameter-name" id="language">language</h3>
     <p>
-      The language code, using ISO 639-1 country codes, indicating in which
-      language the results should be returned, if possible. If language is not
-      supplied, the Localities service will use the default language of each
-      country.
+      The language code, using ISO 3166-1 Alpha-2 country codes, indicating in
+      which language the results should be returned, if possible. If language is
+      not supplied, the Localities service will use english as default language.
+      No language necessary for <code>postal_code</code> request.
     </p>
   </li>
   <li>
     <h3 class="parameter-name" id="latlng">latlng</h3>
     <p>
-      Geographic coordinates. Should be pass in <code>lat</code>,<code
-        >lng</code
-      >
-      format.
+      The latlng parameter is used for reverse geocoding, it’s required if the
+      <code>address</code> parameter is missing.
     </p>
   </li>
 </ul>
