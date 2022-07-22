@@ -5663,7 +5663,7 @@ components:
     localities_cc_format:
       name: cc_format
       description: |
-        To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field (default is `alpha2`).
+        To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field. Default is the format used to specify `components` or `alpha2` if no components are specified.
       schema:
         type: string
         enum:
@@ -5674,7 +5674,7 @@ components:
     localities_components:
       name: components
       description: |
-        A grouping of places to which you would like to restrict your results. Currently, you can use `components` to filter over countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple country:XX filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
+        A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
       schema:
         type: string
       example: 'country:fr|country:es'
@@ -7542,7 +7542,7 @@ components:
           type: string
           example: UK
         types:
-          description: An array indicating the type of the address component. Those fields are provided when no fields parameter is set in the request.
+          description: An array indicating the type of the address component.
           type: array
           items:
             type: string
@@ -8725,18 +8725,14 @@ components:
       description: Attributes describing a locality. Not all attributes will be available for all locality types.
       properties:
         formatted_address:
-          description: Contains the text description of the proposal to be used as suggestion in drop down list if needed.
+          description: Contains the human readable address.
           type: string
           example: 'Parliament Square, London, SW1A 0AA'
         types:
-          description: available localities types
+          description: An array containing the types of the result
           type: array
           items:
             $ref: '#/components/schemas/LocalitiesGeocodeTypes'
-        public_id:
-          description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
-          type: string
-          example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
         geometry:
           $ref: '#/components/schemas/AddressGeometry'
         address_components:

@@ -10,11 +10,11 @@
 
 -   <h3 class="parameter-name" id="cc_format">cc_format</h3>
 
-    To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO\_3166-1) expected to be returned in the address_components field (default is `alpha2`).
+    To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO\_3166-1) expected to be returned in the address_components field. Default is the format used to specify `components` or `alpha2` if no components are specified.
 
 -   <h3 class="parameter-name" id="components">components</h3>
 
-    A grouping of places to which you would like to restrict your results. Currently, you can use `components` to filter over countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple country:XX filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
+    A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
