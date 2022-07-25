@@ -99,14 +99,19 @@
     operationId: getDistanceMatrix
     $ref: "./distance/distanceMatrix.yml"
   post:
-    summary: Get Distance Matrix using POST
+    summary: Distance Matrix using POST
     operationId: postDistanceMatrix
     $ref: "./distance/distanceMatrixPost.yml"
 /distance/route/json:
   get:
-    summary: Get Route
+    summary: Route
     operationId: getRoute
     $ref: "./distance/distanceRoute.yml"
+/distance/isochrone/json:
+  get:
+    summary: Isochrone (Early Access)
+    operationId: getIsochrone
+    $ref: "./distance/distanceIsochrone.yml"
 /merchants/brand:
   get:
     summary: Get Merchant Clean Name

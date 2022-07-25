@@ -1,0 +1,38 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Distance API
+description: >
+  Find all destinations that can be reached in a specific amount of time or a maximum travel distance
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/distance/origin.yml"
+  - $ref: "../../parameters/distance/value.yml"
+  - $ref: "../../parameters/distance/mode.yml"
+  - $ref: "../../parameters/distance/language.yml"
+  - $ref: "../../parameters/distance/units.yml"
+  - $ref: "../../parameters/distance/method.yml"
+responses:
+  "200":
+    description: Isochrone successfully retrieved
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/DistanceIsochroneResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_distance_isochrone_response.yml"
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_distance_isochrone/woosmap_http_distance_isochrone.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_distance_isochrone/woosmap_http_distance_isochrone.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_distance_isochrone/woosmap_http_distance_isochrone.python.yml"

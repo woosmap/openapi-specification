@@ -178,6 +178,39 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_distance_isochrone",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/distance/isochrone/json",
+                query: [
+                    {
+                        key: "origin",
+                        value: "48.709,2.403",
+                    },
+                    {
+                        key: "value",
+                        value: "1",
+                    },
+                    {
+                        key: "mode",
+                        value: "driving",
+                    },
+                    {
+                        key: "language",
+                        value: "en",
+                    },
+                    {
+                        key: "method",
+                        value: "distance",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_geolocation_position",
         request: new Request({
             url: new Url({
