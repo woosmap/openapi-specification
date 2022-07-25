@@ -3296,22 +3296,6 @@ paths:
                           lng: -0.6805281
                         admin_0: United Kingdom
                         admin_1: East Riding of Yorkshire
-                      - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
-                        description: 'London Apprentice, Cornwall, United Kingdom'
-                        type: locality
-                        matched_substrings:
-                          name:
-                            - offset: 0
-                              length: 4
-                          description:
-                            - offset: 0
-                              length: 4
-                        name: London Apprentice
-                        location:
-                          lat: 50.31655
-                          lng: -4.8009524
-                        admin_0: United Kingdom
-                        admin_1: Cornwall
                       - public_id: Js0mQmmeI46X3hiqRj/R4pvb8mQ=
                         description: 'Long Stratton, Norfolk, United Kingdom'
                         type: locality
@@ -3321,6 +3305,15 @@ paths:
                           lng: 1.233093
                         admin_0: United Kingdom
                         admin_1: Norfolk
+                      - public_id: BQOzBfxua+W9eLymBnVKRkqK2Zc=
+                        description: 'Long Sutton, Lincolnshire, United Kingdom'
+                        type: locality
+                        name: Long Sutton
+                        location:
+                          lat: 52.786278
+                          lng: 0.12017952
+                        admin_0: United Kingdom
+                        admin_1: Lincolnshire
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
         '403':
@@ -3485,6 +3478,106 @@ paths:
             import requests
 
             url = "https://api.woosmap.com/localities/details?public_id=TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ%3D%3D&key=YOUR_PUBLIC_API_KEY"
+
+            payload={}
+            headers = {
+                'Referer': 'http://localhost'
+            }
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            print(response.text)
+  /localities/geocode:
+    get:
+      summary: Geocode an Address or Reverse Geocode a latlng
+      operationId: localitiesGeocode
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Localities API
+      description: |
+        Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required.
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/localities_address'
+        - $ref: '#/components/parameters/localities_latlng'
+        - $ref: '#/components/parameters/localities_components'
+        - $ref: '#/components/parameters/localities_language'
+        - $ref: '#/components/parameters/localities_cc_format'
+      responses:
+        '200':
+          description: Request successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocalitiesGeocodeCollectionResponse'
+              examples:
+                default:
+                  value:
+                    results:
+                      - formatted_address: 'Place Jeanne D’Arc, 75013, Paris'
+                        types:
+                          - route
+                        geometry:
+                          location:
+                            lat: 48.829405
+                            lng: 2.367944
+                          location_type: GEOMETRIC_CENTER
+                        address_components:
+                          - types:
+                              - country
+                              - administrative_area_level_0
+                            long_name: France
+                            short_name: FR
+                          - types:
+                              - postal_town
+                            long_name: Paris
+                            short_name: Paris
+                          - types:
+                              - locality
+                            long_name: Paris
+                            short_name: Paris
+                          - types:
+                              - postal_codes
+                            long_name: '75013'
+                            short_name: '75013'
+                          - types:
+                              - route
+                            long_name: Place Jeanne D’Arc
+                            short_name: Place Jeanne D’Arc
+        '401':
+          $ref: '#/paths/~1zones/get/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/get/responses/403'
+        '429':
+          $ref: '#/paths/~1zones/get/responses/429'
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |-
+            curl -L -X GET 'https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY' \
+            -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+        - lang: python
+          label: Python
+          source: |
+            import requests
+
+            url = "https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY"
 
             payload={}
             headers = {
@@ -3881,7 +3974,7 @@ paths:
                             southwest:
                               lat: 48.81359
                               lng: 2.55754
-                      - formatted_address: 'Place de la Résistance, 36700 Châtillon-sur-Indre, France'
+                      - formatted_address: 'Place de la Résistance, 21400 Châtillon-sur-Seine, France'
                         types:
                           - route
                         address_components:
@@ -3891,36 +3984,36 @@ paths:
                             short_name: FRA
                           - types:
                               - state
-                            long_name: Centre-Val de Loire
-                            short_name: CVL
+                            long_name: Bourgogne-Franche-Comte
+                            short_name: BFC
                           - types:
                               - county
-                            long_name: Indre
-                            short_name: Indre
-                          - long_name: Châtillon-sur-Indre
-                            short_name: Châtillon-sur-Indre
+                            long_name: Côte-d'Or
+                            short_name: Côte-d'Or
+                          - long_name: Châtillon-sur-Seine
+                            short_name: Châtillon-sur-Seine
                             types:
                               - locality
                           - long_name: Place de la Résistance
                             short_name: Place de la Résistance
                             types:
                               - route
-                          - long_name: '36700'
-                            short_name: '36700'
+                          - long_name: '21400'
+                            short_name: '21400'
                             types:
                               - postal_code
                         geometry:
                           location_type: GEOMETRIC_CENTER
                           location:
-                            lat: 46.98904
-                            lng: 1.17172
+                            lat: 47.86017
+                            lng: 4.57346
                           viewport:
                             northeast:
-                              lat: 46.98907
-                              lng: 1.17191
+                              lat: 47.86048
+                              lng: 4.57421
                             southwest:
-                              lat: 46.98885
-                              lng: 1.17149
+                              lat: 47.86003
+                              lng: 4.57263
                     status: OK
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
@@ -5558,10 +5651,19 @@ components:
         maximum: 300
       example: 10
       in: query
+    localities_address:
+      name: address
+      description: |
+        The input string to geocode. Can represent an address, a street, a locality or a postal code. The `address` parameter must be URL encoded.
+      schema:
+        type: string
+      required: false
+      in: query
+      example: 224%20Rue%20de%20Rivoli%2C%20Paris
     localities_cc_format:
       name: cc_format
       description: |
-        To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field (default is `alpha2`).
+        To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO_3166-1) expected to be returned in the address_components field. Default is the format used to specify `components` or `alpha2` if no components are specified.
       schema:
         type: string
         enum:
@@ -5572,7 +5674,7 @@ components:
     localities_components:
       name: components
       description: |
-        A grouping of places to which you would like to restrict your results. Currently, you can use `components` to filter over countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple country:XX filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
+        A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
       schema:
         type: string
       example: 'country:fr|country:es'
@@ -5634,6 +5736,15 @@ components:
         type: string
       in: query
       example: en
+    localities_latlng:
+      name: latlng
+      description: |
+        The latlng parameter is used for reverse geocoding, it’s required if the `address` parameter is missing.
+      schema:
+        type: string
+      required: false
+      example: '5.2,-2.3'
+      in: query
     localities_public_id:
       name: public_id
       description: |
@@ -7431,7 +7542,7 @@ components:
           type: string
           example: UK
         types:
-          description: An array indicating the type of the address component. Those fields are provided when no fields parameter is set in the request.
+          description: An array indicating the type of the address component.
           type: array
           items:
             type: string
@@ -8179,22 +8290,6 @@ components:
               lng: -0.6805281
             admin_0: United Kingdom
             admin_1: East Riding of Yorkshire
-          - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
-            description: 'London Apprentice, Cornwall, United Kingdom'
-            type: locality
-            matched_substrings:
-              name:
-                - offset: 0
-                  length: 4
-              description:
-                - offset: 0
-                  length: 4
-            name: London Apprentice
-            location:
-              lat: 50.31655
-              lng: -4.8009524
-            admin_0: United Kingdom
-            admin_1: Cornwall
           - public_id: Js0mQmmeI46X3hiqRj/R4pvb8mQ=
             description: 'Long Stratton, Norfolk, United Kingdom'
             type: locality
@@ -8204,6 +8299,15 @@ components:
               lng: 1.233093
             admin_0: United Kingdom
             admin_1: Norfolk
+          - public_id: BQOzBfxua+W9eLymBnVKRkqK2Zc=
+            description: 'Long Sutton, Lincolnshire, United Kingdom'
+            type: locality
+            name: Long Sutton
+            location:
+              lat: 52.786278
+              lng: 0.12017952
+            admin_0: United Kingdom
+            admin_1: Lincolnshire
     LocalitiesAutocompleteMatchedFields:
       title: LocalitiesAutocompleteMatchedFields
       type: object
@@ -8472,6 +8576,16 @@ components:
         - tourist_attraction
         - country
         - address
+        - route
+    LocalitiesGeocodeTypes:
+      title: LocalitiesGeocodeTypes
+      type: string
+      description: Contains the type of the suggestion.
+      enum:
+        - locality
+        - postal_code
+        - route
+        - address
     LocalitiesViewpoint:
       title: LocalitiesViewpoint
       type: object
@@ -8564,6 +8678,68 @@ components:
                 - organisation
               long_name: House Of Commons
               short_name: House Of Commons
+    LocalitiesGeocodeCollectionResponse:
+      title: LocalitiesGeocodeCollectionResponse
+      type: object
+      description: 'Localities Geocode Collection Response. Contains one or more detailled Localities or Addresses in FR or in the UK, with coordinates (default to one result for reverse geocoding)'
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesGeocodeResponse'
+      example:
+        results:
+          - formatted_address: 'Place Jeanne D’Arc, 75013, Paris'
+            types:
+              - route
+            geometry:
+              location:
+                lat: 48.829405
+                lng: 2.367944
+              location_type: GEOMETRIC_CENTER
+            address_components:
+              - types:
+                  - country
+                  - administrative_area_level_0
+                long_name: France
+                short_name: FR
+              - types:
+                  - postal_town
+                long_name: Paris
+                short_name: Paris
+              - types:
+                  - locality
+                long_name: Paris
+                short_name: Paris
+              - types:
+                  - postal_codes
+                long_name: '75013'
+                short_name: '75013'
+              - types:
+                  - route
+                long_name: Place Jeanne D’Arc
+                short_name: Place Jeanne D’Arc
+    LocalitiesGeocodeResponse:
+      title: LocalitiesGeocodeResponse
+      type: object
+      description: Attributes describing a locality. Not all attributes will be available for all locality types.
+      properties:
+        formatted_address:
+          description: Contains the human readable address.
+          type: string
+          example: 'Parliament Square, London, SW1A 0AA'
+        types:
+          description: An array containing the types of the result
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesGeocodeTypes'
+        geometry:
+          $ref: '#/components/schemas/AddressGeometry'
+        address_components:
+          description: An array containing the separate components applicable to this address.
+          type: array
+          items:
+            $ref: '#/components/schemas/AddressComponents'
     AddressAutocompleteCollectionResponse:
       title: AddressAutocompleteCollectionResponse
       type: object
@@ -8891,7 +9067,7 @@ components:
                 southwest:
                   lat: 48.81359
                   lng: 2.55754
-          - formatted_address: 'Place de la Résistance, 36700 Châtillon-sur-Indre, France'
+          - formatted_address: 'Place de la Résistance, 21400 Châtillon-sur-Seine, France'
             types:
               - route
             address_components:
@@ -8901,36 +9077,36 @@ components:
                 short_name: FRA
               - types:
                   - state
-                long_name: Centre-Val de Loire
-                short_name: CVL
+                long_name: Bourgogne-Franche-Comte
+                short_name: BFC
               - types:
                   - county
-                long_name: Indre
-                short_name: Indre
-              - long_name: Châtillon-sur-Indre
-                short_name: Châtillon-sur-Indre
+                long_name: Côte-d'Or
+                short_name: Côte-d'Or
+              - long_name: Châtillon-sur-Seine
+                short_name: Châtillon-sur-Seine
                 types:
                   - locality
               - long_name: Place de la Résistance
                 short_name: Place de la Résistance
                 types:
                   - route
-              - long_name: '36700'
-                short_name: '36700'
+              - long_name: '21400'
+                short_name: '21400'
                 types:
                   - postal_code
             geometry:
               location_type: GEOMETRIC_CENTER
               location:
-                lat: 46.98904
-                lng: 1.17172
+                lat: 47.86017
+                lng: 4.57346
               viewport:
                 northeast:
-                  lat: 46.98907
-                  lng: 1.17191
+                  lat: 47.86048
+                  lng: 4.57421
                 southwest:
-                  lat: 46.98885
-                  lng: 1.17149
+                  lat: 47.86003
+                  lng: 4.57263
         status: OK
     AddressGeocodeResponse:
       title: AddressGeocodeResponse

@@ -51,6 +51,11 @@
     summary: Details of a Locality
     operationId: localitiesDetails
     $ref: "./localities/localitiesDetails.yml"
+/localities/geocode:
+  get:
+    summary: Geocode an Address or Reverse Geocode a latlng
+    operationId: localitiesGeocode
+    $ref: "./localities/localitiesGeocode.yml"
 /address/autocomplete/json:
   get:
     summary: Autocomplete for Addresses

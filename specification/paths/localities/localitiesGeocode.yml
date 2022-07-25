@@ -1,0 +1,38 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Localities API
+description: >
+  Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required.
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+parameters:
+  - $ref: "../../parameters/localities/address.yml"
+  - $ref: "../../parameters/localities/latlng.yml"
+  - $ref: "../../parameters/localities/components.yml"
+  - $ref: "../../parameters/localities/language.yml"
+  - $ref: "../../parameters/localities/cc_format.yml"
+responses:
+  "200":
+    description: Request successful
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LocalitiesGeocodeCollectionResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_localities_geocode_collection_response.yml"
+
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_localities_geocode_collection/woosmap_http_localities_geocode_collection.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_localities_geocode_collection/woosmap_http_localities_geocode_collection.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_localities_geocode_collection/woosmap_http_localities_geocode_collection.python.yml"

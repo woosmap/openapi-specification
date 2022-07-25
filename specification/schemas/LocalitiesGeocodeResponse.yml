@@ -1,0 +1,20 @@
+title: LocalitiesGeocodeResponse
+type: object
+description: Attributes describing a locality. Not all attributes will be available for all locality types.
+properties:
+  formatted_address:
+    description: Contains the human readable address.
+    type: string
+    example: "Parliament Square, London, SW1A 0AA"
+  types:
+    description: An array containing the types of the result
+    type: array
+    items:
+      $ref: "./LocalitiesGeocodeTypes.yml"
+  geometry:
+    $ref: "./AddressGeometry.yml"
+  address_components:
+    description: An array containing the separate components applicable to this address.
+    type: array
+    items:
+      $ref: "./AddressComponents.yml"

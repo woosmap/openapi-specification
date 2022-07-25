@@ -1,0 +1,5 @@
+{
+  "lang": "javascript",
+  "label": "JavaScript",
+  "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/geocode?public_id=QaCU%2BfBtigK65ztSrqHqUoUDwZw%3D&address=Place%20de%20la%20Resistance&components=country%3AFR&limit=5&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));",
+}

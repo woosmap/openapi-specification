@@ -273,6 +273,27 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_localities_geocode_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/geocode",
+                query: [
+                    {
+                        key: "address",
+                        value: "Place Jeanne-d'Arc",
+                    },
+                    {
+                        key: "components",
+                        value: "country:FR"
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_merchants_brand",
         request: new Request({
             url: new Url({
