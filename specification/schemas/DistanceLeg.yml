@@ -26,7 +26,41 @@ properties:
         example: "5 mins"
   start_location:
     description: The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.
-    $ref: "./LatLngLiteral.yml"
+    type: object
+    properties:
+      lat:
+        type: number
+        description: Latitude in decimal degrees
+      lng:
+        type: number
+        description: Longitude in decimal degrees
+      waypoint:
+        type: integer
+        description: The waypoint order number
   end_location:
     description: The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.
-    $ref: "./LatLngLiteral.yml"
+    type: object
+    properties:
+      lat:
+        type: number
+        description: Latitude in decimal degrees
+      lng:
+        type: number
+        description: Longitude in decimal degrees
+      waypoint:
+        type: integer
+        description: The waypoint order number
+  start_address:
+    type: string
+    description: the starting address of the leg
+    example: "Chemin de la Tuilerie"
+  end_address:
+    type: string
+    description: the ending address of the leg
+    example: "D 8043, E 44"
+  steps:
+    description: List of steps constituting the leg. Steps are returned when `details=full` parameter is specified. A step is the most atomic unit of a route, containing a single step describing a specific, single instruction on the journey. The step not only describes the instruction but also contains distance and duration information relating to how this step relates to the following step.
+    type: array
+    items:
+      $ref: "./DistanceStep.yml"
+

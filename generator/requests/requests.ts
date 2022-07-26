@@ -146,11 +146,11 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "origin",
-                        value: "48.709,2.403",
+                        value: "49.31067,4.14525",
                     },
                     {
                         key: "destination",
-                        value: "48.709,2.303",
+                        value: "49.31344,4.15293",
                     },
                     {
                         key: "mode",
@@ -165,13 +165,13 @@ export const REQUESTS: SnippetRequest[] = [
                         value: "true",
                     },
                     {
-                        key: "waypoints",
-                        value: "48.850077,3.311124|48.850077,3.411124",
-                    },
-                    {
                         key: "method",
                         value: "distance",
-                    }
+                    },
+                    {
+                        key: "details",
+                        value: "full",
+                    },
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],
