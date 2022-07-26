@@ -8,7 +8,7 @@
 
 -   <h3 class="parameter-name" id="origin">origin</h3>
 
-    The starting point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
+    The starting point for a route or origin for an isochrone. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 

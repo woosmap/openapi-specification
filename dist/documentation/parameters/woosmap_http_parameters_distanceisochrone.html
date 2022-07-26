@@ -1,15 +1,7 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START woosmap_http_parameters_distanceroute] -->
+<!--- [START woosmap_http_parameters_distanceisochrone] -->
 <h2 id="required-parameters">Required parameters</h2>
 <ul>
-  <li>
-    <h3 class="parameter-name" id="destination">destination</h3>
-    <p>
-      The ending point for the route. It should be supplied in the form of
-      latitude/longitude coordinates. Ensure that no space exists between the
-      latitude and longitude values.
-    </p>
-  </li>
   <li>
     <h3 class="parameter-name" id="origin">origin</h3>
     <p>
@@ -18,18 +10,17 @@
       space exists between the latitude and longitude values.
     </p>
   </li>
+  <li>
+    <h3 class="parameter-name" id="value">value</h3>
+    <p>
+      The value to use for isochrone contour. You can specify time in minutes or
+      distance in kilometers (cf. method parameter). The maximum value that can
+      be specified is 120 (120 minutes : 2 hours or 120 km).
+    </p>
+  </li>
 </ul>
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
-  <li>
-    <h3 class="parameter-name" id="alternatives">alternatives</h3>
-    <p>
-      Specifies if alternative routes should be returned. default is
-      <code>false</code>. Depending on the calculated route, alternatives may
-      not be provided. <code>alternatives</code> and <code>waypoints</code> can
-      not be used at the same time.
-    </p>
-  </li>
   <li>
     <h3 class="parameter-name" id="language">language</h3>
     <p>
@@ -68,20 +59,6 @@
       <li><code>imperial</code> returns distances in miles and feet</li>
     </ul>
   </li>
-  <li>
-    <h3 class="parameter-name" id="waypoints">waypoints</h3>
-    <p>
-      A list of points by which the route should pass (route response is divided
-      into legs, one leg corresponding to a route between two waypoints).
-      Waypoints should be separated by | character. Optionally, you may pass
-      <code>optimize:true</code> as the first argument within the waypoints
-      parameter. This way the provided route is optimized by rearranging the
-      waypoints in a more efficient order based on distance or time according to
-      the method parameter. The route start point and end point order is not
-      changed, their position is considered fixed. <code>alternatives</code> and
-      <code>waypoints</code> can not be used at the same time.
-    </p>
-  </li>
 </ul>
 <p style="text-align: right; font-size: smaller">
   Generated from the
@@ -93,7 +70,7 @@
     >OpenAPI specification</a
   >.
   <a
-    data-label="openapi-github-woosmap-http-parameters-distanceroute"
+    data-label="openapi-github-woosmap-http-parameters-distanceisochrone"
     data-action="edit"
     style="margin-left: 5px"
     href="https://github.com/woosmap/openapi-specification/tree/main/specification/parameters"
@@ -101,13 +78,13 @@
     >✎ Edit</a
   >
   <a
-    data-label="openapi-github-woosmap-http-parameters-distanceroute"
+    data-label="openapi-github-woosmap-http-parameters-distanceisochrone"
     data-action="bug"
     style="margin-left: 5px"
-    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /distance/route/json"
+    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /distance/isochrone/json"
     title="File bug for parameters on GitHub"
     ><span class="material-icons">bug_report</span> Report bug</a
   >
 </p>
 
-<!--- [END woosmap_http_parameters_distanceroute] -->
+<!--- [END woosmap_http_parameters_distanceisochrone] -->
