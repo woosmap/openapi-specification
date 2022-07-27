@@ -17,6 +17,10 @@
     Specifies if alternative routes should be returned. default is `false`. Depending on the calculated route, alternatives may not be provided.
     `alternatives` and `waypoints` can not be used at the same time.
 
+-   <h3 class="parameter-name" id="details">details</h3>
+
+    Specifies if maneuver instructions should be returned (roadbook). Valid values are `none` and `full` (default is `none`)
+
 -   <h3 class="parameter-name" id="language">language</h3>
 
     The language code, indicating in which language the results should be returned, if possible. If language is not supplied, the Distance API service will use the navigator language or “en”.

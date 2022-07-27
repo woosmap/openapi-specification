@@ -49,6 +49,23 @@
     <tr>
       <td align="left">
         <h4
+          id="DistanceLeg-end_address"
+          class="add-link schema-object-property-key"
+        >
+          <code>end_address</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>the ending address of the leg</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
           id="DistanceLeg-end_location"
           class="add-link schema-object-property-key"
         >
@@ -56,9 +73,9 @@
         </h4>
       </td>
       <td>optional</td>
-      <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
+      <td>object</td>
       <td>
-        <div class="ref-property-description">
+        <div class="nonref-property-description">
           <p>
             The latitude/longitude coordinates of the given destination of this
             leg. Because the Distance Route API calculates directions between
@@ -67,9 +84,23 @@
             different than the provided destination of this leg if, for example,
             a road is not near the destination.
           </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="DistanceLeg-start_address"
+          class="add-link schema-object-property-key"
+        >
+          <code>start_address</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>the starting address of the leg</p>
         </div>
       </td>
     </tr>
@@ -83,9 +114,9 @@
         </h4>
       </td>
       <td>optional</td>
-      <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
+      <td>object</td>
       <td>
-        <div class="ref-property-description">
+        <div class="nonref-property-description">
           <p>
             The latitude/longitude coordinates of the origin of this leg.
             Because the Distance Route API calculates directions between
@@ -94,8 +125,32 @@
             be different than the provided origin of this leg if, for example, a
             road is not near the origin.
           </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4 id="DistanceLeg-steps" class="add-link schema-object-property-key">
+          <code>steps</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        Array&#x3C;<a href="#DistanceStep" title="DistanceStep">DistanceStep</a
+        >>
+      </td>
+      <td>
+        <div class="ref-property-description">
           <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
+            List of steps constituting the leg. Steps are returned when
+            <code>details=full</code> parameter is specified. A step is the most
+            atomic unit of a route, containing a single step describing a
+            specific, single instruction on the journey. The step not only
+            describes the instruction but also contains distance and duration
+            information relating to how this step relates to the following step.
+          </p>
+          <p>
+            See <a href="#DistanceStep">DistanceStep</a> for more information.
           </p>
         </div>
       </td>
