@@ -4791,6 +4791,7 @@ paths:
         - $ref: '#/components/parameters/distance_alternatives'
         - $ref: '#/components/parameters/distance_waypoints'
         - $ref: '#/components/parameters/distance_method'
+        - $ref: '#/components/parameters/distance_details'
       responses:
         '200':
           description: Route successfully retrieved
@@ -4804,52 +4805,128 @@ paths:
                     status: OK
                     routes:
                       - overview_polyline:
-                          points: 'gohhH}ftMAAa@KE?KAGAOCKCQGUGAAIE_Ac@UKGCmAm@UOs@]g@U[QYMAAQIiAk@WI?ICCCCCAC?CBEIEIcAm@YIOMg@]k@i@WWo@u@}@iAc@m@a@o@u@oAm@kAa@u@[u@Yw@Qo@Y_A[y@MYQYUa@{AmC]k@S[MQ]c@Wa@o@eAS_@S]Q_@Um@Wo@Yo@[o@_AcBm@cAMSACS]CG[g@GMeAoBiCgF]q@Mg@a@sABC@E?E?E?ECCACC?C?EW]_BKa@Qi@M[cAuB[o@IQQa@Ma@[cAMi@gAuEg@wBYaAEOI[UaA[_Bk@kD_@wBa@wBCOEUe@uCk@cDq@uDCOHO?S?CGm@m@wHOeDEe@CW?W?c@O{DEo@CO?OGoAUsB_AmIWwAEUGQEG?M?MCSI_@GMO_AQ{AGWGMKIg@QoA[[IsCw@]OOI@_@A_@E}@G_AIwAUyCIm@ISGO?C?IAGCGCCECC@Wa@KSSa@Wc@KQQ]OSIUKe@E[A]@c@Dc@ZiBxAqJHk@PaA@IJo@DWe@Yw@k@w@g@_Ao@a@YSMMG_@MOCCACCCCII?GAINS^?TPLg@DSH]FO\cAHQ@EBIBGDO?M?KCKWo@Yc@e@m@IQEIGWOw@O}@ASBSFSLSJEF?t@P|Bf@TDP?RGzAc@XGPIB@D?BADC@E@G@GAGAGCCE]AGE[YoACGmAqFoAmFAEUeAYeASm@EKISO]CC]i@m@aAAAU]o@_Ag@u@qBwCi@y@c@q@i@cA[w@c@oAQc@Ye@eEgHaAeB[g@cB_DOWSc@cB_DWe@[m@KS{EyJQ[Sc@IS}BgFi@aB]qAu@aEI[[qAe@yAoAuCOa@BI@KAKAKEIGEGAIBEDWYm@mAc@}@S_@o@kAg@i@g@e@eBgBaCoBMK}AqAuAeAEEO_@E[AyABg@X}FJgBBs@B[HgB@GDy@VsFCi@ASBEBG@G?IAICGCEECG?EBCDEOKg@YqCWeCIu@k@aGKgACiBAoBC}DQuGEmBMcEMkEGcBQ_BC[DEBI?QGKGCIBEc@E]YgBS_BEaA?oAJ{Ar@qJJuBC_AMaBi@qGc@kFEQHEDK@MAOCIEEGCGa@KmAMuAGm@MaBWuCC[Io@Ow@I_@I]_@sAKa@m@uBKYMa@IOQk@K[]eAgBuFe@qAsAaDg@}@k@{@CEUYOUEE{@oAWa@Wa@W[GMSYaAwAcAaB_A}A_CsDIOQ[K]KS_@}@KQeBuBIMYm@Ss@ESAIKyBCw@AUE_@AEMa@]u@e@cAo@}@{@mAOUKWO[OUKSQSg@cASg@[}@cAwCK[mC}HQu@Kk@CWEa@?KQ}AIm@?C?G@WBEBI@IAKAIEGEEG?E?GDCFCJKEIEGCaK{Ok@}@a@o@SWsAkBg@k@cFyFeAmAmAuAu@_AGIKMOWCEs@aAoAgBgCmDkDyEQ_@MSBABCBE@E@GAG?ECGCCEAC?E@CBCDOKWUQS]g@oCgEIMYe@MUe@w@q@gAIO@E@E@G?IACAGECCCE?E@EDO[cCyEcH{M[e@GGe@o@YYmLkIUOUO]UoCoBy@k@_@Y{B_BUQ_@WkBqAKIuB{AcBmAk@a@KGsCsBSOiBqA_BkAMMIKEGIMEGOU]i@IOUg@GMYw@K]ACIUIUAC}@gCUg@Qe@O[GMGSCGe@oAi@_BCEGSKY}@gCoCkIOk@Uu@w@wCkCqJwGoVCMGSI_@QaAa@iCAGG]G[E]U}Ai@cEOwAEi@Eu@i@sMAa@Au@AaAG}BAS?QEaAOyD?ECY?MAOBc@@]?[CYCECKISCSAMAQ?]?]HqA?k@?S@e@A}B?QC[SeAK_@i@yBc@kBw@gDKg@CMEQGYIc@Ki@EQI]ESEOAQAQAQAK?GBYBOB_@D_@DY@MBU@KSASC}@GiAGOAOC??UCKAcAKUAwAOI?E[Kg@G]CO_@{AK]G[Ia@AIAMCi@AWA[AWCy@CgAA_@AUGsC?{@?G?S?E?EAEACCACAC@QAm@?}ABk@@MAOCYSWSyAcAOMkAy@k@a@EEm@_@KIGGEGEGIOIOGSm@oAi@qAo@uAm@uACGe@cAYq@GMwAcDKWq@yAsCsGeBaEOYUk@Ue@EQCMAKAU@A@G??@G?G?E?GAGAEACCGEEGCEAG?E@EBGCIGKMi@kA}CcHCEQ_@aAyBg@kAeBwDaCsFQa@Ym@oEaKKU_AsBCEEMWk@Sc@KWCC}@sBqBqEgAeC}BgF}@oB]u@]w@M]uA_DKUDG@K?KCICIGEBMBKDKBCHMb@k@x@kATW@ABFDDD@D?FCBG@G@GAIAGCEEECAE@ACCQKi@GWMc@Mc@CKQm@Uu@aC_I_@{@i@kAKUg@iAUi@CESc@GQYm@Uk@IOGOcA_CIQIOwEmKKWGQ{@kBaBmDGI[m@O[IOACWi@GICEAC?AKUCCAECCAIAGAI?Kl@mCJg@PkAJa@Ty@J_@BGFMHGDGD@D@HAHCFIBK@K@KAMCKGKGOCGAOCM?MAU?GDWDQFYNe@l@uBp@oCFUFQDMFMFKBEDGFEBCFCDAPAFBF?F?DAFCFEDIDIBK@M@K?MCKAMEIEGCEIWEUC{@De@Hc@VsAdAqEt@_BDIHIFEHAN@^DF@D@FDFDFFDHFLxA|CBD@FBJ@H?F@F?FAF?DAHCFCFABEFCBCBCBE@C@E?C?C?EAC?GCECEC{A}@ME_BiAoBsAqBqAkAy@cAi@qCyBQ?c@Wk@]cBw@}@_@YKeBc@cAOe@IO?w@I}@EeAAw@@w@BaAHeANgATgAXeA^_Ab@q@\w@d@w@h@u@l@s@n@s@r@{@bAy@fAk@|@g@z@aAhBWj@_@x@_@dAEHUp@kA~DUz@s@`CmBxG{BdIs@vBu@tBo@~Ak@nAwAzBkAbBeAhAeAdA[Dy@h@m@Zg@TqAd@_ATgAR_APq@F}@B_A@iAEgAKu@Mw@Ms@So@Uq@Y}@e@c@WmBeA]UYWSUYYc@g@iAyAm@kAkB{DkBiEsAgCaCuDS_@Qa@[_AI_@Ke@Is@Gu@IiBEeCSoAUoKq@oSIcCUyGIyBe@oMi@{N]}IK{CyAya@Q{E_AsWc@gNYcNGcGGyG?YAs@?k@?}@CoC?kHDwHDkERgNfAef@`DatAH_EHoDfCyeADsAFuBH}Dx@w]f@iTj@yUBcABk@bBau@PyHJ{JDwD@oD@iIA{IIyGIsFKkFa@sOi@uPKuCa@iMUkHiCgw@yAgd@m@uQcA{[QmFm@sQKmD_Cct@k@iPsAma@GsBg@uNa@qLKcC_@kHkA}Pu@kIg@_Fe@oEg@gEm@sEoBkMgByJScAuBcKsA{Fs@sC}@qD{BaI_CuH_DiJgA}CyBsF{BmFgCsFaCaF{C}FuDoGmD{FwAyBs@cA_CeDw@cAsCsDQUuAcBeGwGc@c@{E}Ei@e@mC{CoAwA_EaEcAoAY[OMwMsI}B}AyEeEeGgF_HuGmAoAsCaDsDiE}AmBwC{DqC_Ee@s@a@m@iAiBgAeBkAoBaAcBu@wAcAmBmCmFaBoDyA_DeCeGsAkDuAwDoAqDkAsDiCwIqBwHaByG_@{AeAkES}@WoAIqAQeAMs@Iw@s@mGCc@?YB[FW@IPANIHSDW?WLWNSZ]hEwCr[{TRQNM`@m@NW^}@`CuFnDmI|BkFpByEdAqBZu@nBqEJYRw@PaA\qCh@oF\qC\kCtA{KtAyKTiBb@iDrCeTJ}@Bc@d@wNLaED{@DeA@e@PeFBk@DyARwITsEDyB?QBcA@W@g@@w@DsAAiE?mAC{@JyKBcGHeB@{BHeC?YPwBJoBFcAp@mHNqALeCB[lAkMNmBDgA@]JaEAsAAUEcAWiCEoAL}@Ro@ZgADMbB_Cd@k@tByCvCkE~@cAhA}@`Aw@`Ao@hDyBfGuDrEaDl@k@f@s@b@w@b@iAp@yBxByHxBuHpEkO^mA|C{JlKs^HUfHeVvHwWpDiM|@iG|BqUtDi_@~@gJbBwPx@aIrCmY`CiUbBgQXsCHwB@gAAmAG}A@aADc@DO@QAQEMEKAY@g@JkA^}Ad@qAn@gAb@oAXsAnMspA~Eof@pDa^`CoUtCmYFi@P}A@Qb@qEJoAJcAJq@TuBD_@T_CJgAD_@Fg@JmAZ}CPcB^wDD[d@iEl@kB`ByEt@qBpBuFPg@X}@nCyHRk@L]Ro@dBwEx@_CDKDKhAeD`@mATo@bDeJRi@Z}@Xw@Rm@pAoDRo@p@kBNc@v@uB`H{RjBmFlDyJb@kArAyDFWTeATsAf@mEHo@`BcNtCuVpBwPLaArDi[PuALgAj@_FR}AJy@P_A~@{CL[v@cCHYx@gC`@wARm@IIKUAGk@sEM}@C[_@mCIe@e@sDCOEYGYIQMUKSo@gAm@iACEMSQ[EKOWCEy@}A_@q@O[OUmA}BM_@OWEGK[G]AWAW?CDGDK@G?G?E?IHm@?KBYHqBF[HIJAlBWPCVCRMnAaBf@m@X_@V[RWJWFFFDH?FEDI@E@G?GAKCICGGC@[OmCImBImBGyAs@{Pm@{Nk@iNAU?GeA_WC]IuBEgAGqAKeC}@eUAYHCHGDMDM?O?MCMEKIKKEK@IDESGi@@uB?k@G}@oBuQGe@uAeMWeCQ_BE]Gi@Q_Ba@wDgEs_@E_@I{@OmAw@uHSuASiAW_ACOcBwGU}@Oi@e@oBc@gBmE_QI[I_@aDcMQs@YgAgBcHS}@Uy@k@}BMi@a@_B{@iDCIWeAGUk@_CKq@CQAW@E?G?GAECGCCCCEAIKEKCGIWMg@[aA}AeG{Lmf@yF_U}BaJyBwICOiBmHs@qCw@}CkAuEKc@uBkI_GuUiCcKwBoICMyFeUaGuUK_@yB{IuGoWkCoKuCkLwCiL_Ji^IYOm@i@wBK_@_Ii[uJ}_@WsAKaAi@sKqGiwA?G_@eIa@uIEuA?u@Bm@No@JYFOr@w@BUA]g@k@Uw@Qm@Oi@a@uFSwDG]Mq@^OXGh@S`@Q@CRYT_@Hi@Dg@De@D[V}A]m@g@m@U]a@u@O]iA_C[q@YsBMy@AI]wCY_C_@uCIs@YeCAa@Ai@@[F_@FKBM@SCQGOMIOMMSQe@M_@QeAK{AYwN_@kRUoHEaAIcAq@wE}G_f@q@aF}Fua@oS_yAgF}^}DkYsAsJCaALuAx@qEd@qBp@wAb@m@j@wAxDoLl@kAjAgD~@iDb@sCv@qHFaACeDUaDe@kCmAmEgBwFk@uBWcBKkB?_BPgCZcB|@oDfCgJh@cCVkCDoCBkH?aACgH?c@?mG?_@D@p@JtA?t@F^Fv@l@P@`@At@Cf@@f@LVJp@\\N^Ab@Ij@Ld@z@^|ATj@p@v@j@^|@\rDxEdBdBx@b@l@DX@??`@@fAVpD`A|DfAnAn@v@j@v@j@zB~@`Bh@?c@PqB`@mHTwETaEXyDV_DjAcJP{AFmADqCBaBCe@Hg@Tm@k@TCkAAaCb@yCz@eCr@iC^_BLgA?sB?_CBmCTmCFsALaA`AqDL}@VcA|@}Ah@o@\[@w@FuDHi@JGDCPGTSH[^aCiAm@cBq@iBm@]M]WW]Me@eAgFeBoIe@sBy@mCi@oB[_BU_BK}AEmAIqGGiJ?k@By@T{@|AqCXk@Pu@NmA^oEJ}AR}AX{ATw@TkAHm@@aAAiAY}CKeBEeBGu@Ow@w@}Co@aDKe@Uo@oA}B_@_AQg@[yAOcAIu@I_AOu@S{@_CuI}AuGi@gCS_B]gECi@AgBB}AHgAt@mHN_BBaA?aAMcEAcCPgO?wCC_CUeMQyM@[NcAd@oBHi@Hm@Bs@Au@OwEu@mUo@uTOeBSgAiA_FsD_OOw@Ce@~Dgs@tDkp@}D{@_Cy@cB{@oBsAsA}@??rA|@nBrAbBz@~Bx@|Dz@uDjp@_Efs@Bd@Nv@rD~NhA~ERfANdBn@tTt@lUNvE@t@Cr@Il@Ih@e@nBObAAZPxMTdMB~B?vCQfO@bCLbE?`AC`AO~Au@lHIfAC|A@fBBh@\fER~Ah@fC|AtG~BtIRz@Nt@H~@Ht@NbAZxAPf@^~@nA|BTn@Jd@n@`Dv@|CNv@Ft@DdBJdBX|C@hAA`AIl@UjAUv@YzAS|AK|A_@nEOlAQt@Yj@}ApCUz@Cx@?j@FhJHpGDlAJ|AT~AZ~Ah@nBx@lCd@rBdBnIdAfFLd@V\\V\LhBl@bBp@hAl@lAt@r@f@P^h@x@`@j@x@r@d@j@fBpCj@v@x@jAN`@f@fB^rAF?b@tDPtAHb@lFfNTt@Jb@NnAFdBHfDfAb\v@jUpDlg@p@hJHnHj@|e@z@p|@XtVBfCO|SAzAMjB_@|Gi@nHiB|VSfCMhAUfAWdAoElLc@rAUbAKbAE|@Y|Uc@~ZGjBKfA[~A_EzOe@fB[bA{@fBcCnFY~@sGtTaB`Ga@jB[pBcAbJ[pA[r@mA|B[dACrAAnCIxA]jBWdAi@vAeChFeAxB]jBU`B[vBE~@Ar@E~EC|Aw@GsF[wCQKBKHWr@iA|FSdAQl@W|AEZEd@Ef@Ih@U^SXABa@Pi@RYF_@NLp@F\RvD`@tFNh@Pl@Tv@Jz@Eb@Sv@GNKXOn@Cl@?t@DtA`@tI^dI?FpGhwAh@rKJ`AVrAtJ|_@~Hh[J^h@vBNl@HX~Ih^vChLtCjLjCnKtGnWxBzIJ^`GtUxFdUBLvBnIhCbK~FtUtBjIJb@jAtEv@|Cr@pChBlHBNxBvI|B`JxF~TzLlf@|AdGRdAVbA@P@NBHAB?D?F@D@DBD@BDBD?J\Vj@j@~BFTVdABHz@hD`@~ALh@j@|BTx@R|@fBbHXfAPr@`DbMH^HZlE~Pb@fBd@nBNh@T|@bBvGBNV~@RhARtAv@tHNlAHz@D^fEr_@`@vDP~AFh@D\P~AVdCtAdMFd@nBtQF|@?j@AtBFh@DRIHENCN?PBPFJFHHDJ?@X|@dUJdCFpADfAHtBB\dA~V?F@Tj@hNl@zNr@zPFxAHlBHlBNlCAZGAEBGBCHCH?H@J@HKVSVWZY^g@l@oA`BSLWBQBmBVK@IHGZIpBKVGJEFIFG?E?EBEBCFCFAHAJ@J@HDFBFFBH\BPDXFRFPHNd@h@lA|BNTNZ^p@x@|ABDNVDJPZLRBDl@hAn@fAJRLTHPFXDXBNd@rDHd@^lCBZL|@j@rE@FBp@AZa@vAy@fCIXw@bCMZ_AzCQ~@Kx@S|Ak@~EMfAQtAsDh[M`AqBvPuCtVaBbNIn@g@lEUrAUdAGVsAxDc@jAmDxJkBlFaHzRw@tBOb@q@jBSn@qAnDSl@Yv@[|@Sh@cDdJUn@a@lAiAdDEJEJy@~BeBvESn@M\Sj@oCxHY|@Qf@qBtFu@pBaBxEm@jBe@hEEZ_@vDQbB[|CKlAGf@E^KfAU~BE^UtBKp@KbAKnAc@pEAPQ|AGh@uClYaCnUqD`^_Fnf@oMrpAYrAc@nAo@fAe@pA_@|Aa@jBKXKFGJCNAP?PDLFLJFD@XlAF|A@lAAfAIvBYrCcBfQaChUsClYy@`IcBvP_AfJuDh_@}BpU}@hGqDhMwHvWgHdVITmKr^}CzJ_@lAqEjOyBtHyBxHq@xBc@hAc@v@g@r@m@j@sE`DgGtDiDxBaAn@aAv@iA|@_AbAwCjEuBxCe@j@cB~BEL[fASn@M|@DnAVhCDbA@T@rAK`EA\EfAOlBmAjMCZ[~BMnAUlCg@fFKdBGn@CfAAb@EtACrB?`DCbGKxKCx@A`ACdFA~@EtA?L?\E~@M|G?`ASvIExACj@QdFAd@EdAEz@M`Ee@vNCb@K|@sCdTc@hDUhBuAxKuAzK]jC]pCy@nFOrAO`AOx@On@O`@KTeA|Bu@jBy@|BqBxE}BjFoDlIaCtF_@|@OVa@l@OLSPs[zTiEvCq@VQBIBIEKCK@IFIHELCNAJENELILKHWZoAv@ETAL?NFZDVlEnMXhAPn@J`@RJJf@p@vCf@rB|ArGXdAxAnFhA|Df@~AxAvEf@zAr@lBp@jBx@zB~@`ClBvEdA~B`AvBnAjCbAvBjCbF|BbEjCjEjAjBhAbBxAxBnAdBf@r@|@lAlH|ItCxCjAnAxEpEfAdAdGlFn@h@tD|Cd@b@|DnDbI~IdAv@d@d@nJ~FlB`BhGfGbGrGxAhBnA`BpAbBv@bAbChDr@bAvArBjD~FvDrGvCtF`C`FfCtFrB~E~B~FfA|C`DdJxBlHfAvDj@tBdB|GhCdL`BdI`AvFf@zCnBxLhAxIl@jFn@bGb@dF\bE`@dGZ|Ef@tJBz@\pILrDNnEPpEFrBv@dVl@`RVpHpCx{@v@vV|@bXFbB@\j@jQzAfd@z@tXhBtj@XpIHtCh@xPb@nOJjFHpFFxGBzIA`HAtEE~EKjIO`IkBlx@ErAWxKWbK_@vOy@r]SvHCnASnIqBd{@UpJyC`oAIbD_@rOa@nROnFG|FI`HKrJ@~J@fA@tB?bAD~CBjCDlCBjBDfBFjCJnDV~IHnCRlFj@xONxEHzB|@jVt@fS`Bfd@Br@PfFH`CRxFH|ARbGFdCJ|DFvCB~BDjB@|BDrE?bB@rE?~CCfD?b@AtCGlEIvEOjGG`CInCUrFo@bMi@bI_@tEa@zEO`BGr@Q~Ao@jGw@pHeHhn@i@tE[tCe@~E]lE]hEi@lHGbA_@vHYvHOjE_@jQMbGKpEKhFYxMe@vVMbH]jPGhC?T[lOkAtl@_@nRAz@IlDS~JKtEANG`DIhEEdBAdBAx@?n@?bA@v@Bz@DfANhCZtC^hC\bB^fBh@nB^nAdAbDnAxDfAvCvArDpErKhCfFt@xAvApCxAjClClEtCpEfBfCpAdBxA~BfArBn@xAv@tBdAzD`@lBZjBNlARnBLlBDjADlADxCAzDKhFQ|FGzBM|D_@fMs@`P}@rMQ`CMvAi@zFUrB]pC{@lGqA~H_B~He@bC_@dCq@|D]bA]jCq@|FYnDIbCD^BFBDBBD@D?B?XAd@Af@AF?F@JBJ?L?F@XBN@L@R?HAJALEPG|Au@`Ag@b@Ub@UlBy@HEvCuArCuAhDqBp@a@b@]FCvBcADCTIH`@h@rCH\n@`DVlADRf@hCBHLn@\hBFXFZDTBHH^H^Jf@BNb@vBf@fCJh@Nz@FVDTBJ`@rB|@fELp@H\^pBDTx@jEBNBh@FXFV\rBNzA@L@JH|@@VFl@Bx@AlBFJH?L?F?`AHP@J@t@FL@J?fBNz@Fn@Dj@DL@^BZBrCRf@Bf@DVDLBRHd@TpBxAZRRNNJ`D|BFDvDhCLHJFlAz@RLDDrBtAlA|@`@VRNNJET_AdFCNFDh@^RLbBlAHDHFfAv@vAbAHFLHRPlCjBFDFD~DpC\TGTMRQRi@f@]ZURqDvEKJMNQVs@|@[ZQ`@CFBVBXJ?NC^Ah@A|CCVAfFML?NAt@CZARAp@EF?\C\C~AOr@GxAMxAK^AN?T?~@E`@?\AhASvAYb@IZEREdASd@IBAHAPANBJDPFVF^PlCvAZTN\F\BTj@dKFfALbBHzAF|@FpAHnA@\Lv@Pf@@L`@n@JNh@j@~ArAfB`BbA|@PHRFd@JtAf@xAp@\TZR`@^z@v@zEbEPN~@jA@@Xf@Zl@T`@P\Vp@`@tAHV\nANh@Ld@xAvEFVpBhHL`@V`AtAzEb@~A`@~ARx@Nd@LVd@v@X\bAx@xAdAvD~ChA~@f@`@PNFFFDXVxE~DdAt@vC`CvFtExAlABBNLd@b@??dAz@tAbAlGhFhDtCxAnAf@`@VTNLDBfCrBlB|AtExDrC~BvHjGXXXNDB?H?^F\FPNPRJR?HTNd@x@vDrAlGh@rCHf@Lt@Hn@Jd@L`@BHjCtLjGh[lAlGLl@rCrN~@vE@JDXH`@j@rC^lBH`@H^j@hCH\XrAh@jCF^d@`CP|@DV^jBVx@DPp@bDXvAVtAVtAVvAJj@Hh@NhAf@|Cp@xDd@pCJf@PhAJj@BXB^BLNt@DRt@|DJb@Lb@Tp@DJRl@Lb@Lf@\|ANv@J^BJJf@FTBHFTH\nAbGx@~DDN~@|EDJ@HBHDHFNLVd@h@b@\\VxCzBlBzArAbAj@b@n@f@DDHHRf@Nf@Lj@Hb@xAbILj@vAnHdBdJ@DHb@Jf@tBxKh@rCp@vDV|ADL@FNn@?@?H@H@HBJFFFFF@VNDBj@^ZRl@p@f@r@P\NZNf@Tr@Nr@ZrAv@bEb@vCF|@NbDNjBJdAXnB`@`BZfAdAtDFXTx@Pz@Hh@Hz@D~@DnBA~CGvCIjCu@zQKlCE`BAzA?zCDlE@x@@~@FrJBvB@`CHpIBfBDzGA|@ElQAjC@nABhBBhBErCKxCAJSvEWrEm@~ImAlO]~Dw@nKKbAGj@Gl@O`AQ|@YhA_AdCe@`Ai@|@w@`AqAfBqClDyBpCSXQXMXITKTOp@I^Gb@E`@C^Ab@A`@@d@Bb@B`@D`@F^H`@FTPh@LXPZPTPTTTRPRLVLh@TVJTLPHRLVRlCrB~FhFxBlB~AxAfFpEbEpDlHtGxCrCdCbCtCrCxCvCZX~D|DtCrCvCxCzC~CxEfFbAbAhB|BpA~ArA|ApAvAtAvA~@z@`Ax@`At@|@l@~@l@~@f@h@Vj@V`Bl@lEpAr@ZdAj@l@`@t@j@XXh@h@d@f@r@|@n@~@t@rA\j@rTr_@`BvCxBvDbGpKF`@DHBDr@xAbCnGJRrAvD\~@Vj@Xn@Xb@Z`@NPv@h@fA^PFD@LFjNhALArDXbCRrGh@L@r@DN@VBD?Z@lBJpFf@fALlBPpBPj@DFBPBb@NxA`@D?F?JERQRGRCh@@^BJ@RBH?ZDb@DH?H@F@vAJr@DN@\B|CVb@DpCRTBXB@W@E?C?[C]KYEW?Wz@cOFaADu@TsDP_BP}@Ja@N]R[VWXQXKXET?J??R@^QbD'
+                          points: 'a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?QBIBU?WFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELCJBJAHGFIDMBSASBKDILURa@LWt@eAHQ'
                         bounds:
                           northeast:
-                            lat: 48.874685
-                            lng: 3.410849
+                            lat: 49.315678
+                            lng: 4.15292
                           southwest:
-                            lat: 48.708782
-                            lng: 2.297587
+                            lat: 49.31073
+                            lng: 4.145162
                         summary: ''
                         legs:
                           - distance:
-                              text: 83.7 km
-                              value: 83736
+                              text: 1 km
+                              value: 1038
                             duration:
-                              text: 1 hour 33 mins
-                              value: 5590.1594700000005
+                              text: 1 min
+                              value: 75
                             start_location:
-                              lat: 48.709
-                              lng: 2.403
+                              lat: 49.31067
+                              lng: 4.14525
+                              waypoint: 0
                             end_location:
-                              lat: 48.850077
-                              lng: 3.311124
-                          - distance:
-                              text: 8.7 km
-                              value: 8691
-                            duration:
-                              text: 42 mins
-                              value: 2501.61443
-                            start_location:
-                              lat: 48.850077
-                              lng: 3.311124
-                            end_location:
-                              lat: 48.850077
-                              lng: 3.411124
-                          - distance:
-                              text: 99.1 km
-                              value: 99065
-                            duration:
-                              text: 1 hour 45 mins
-                              value: 6329.826579999999
-                            start_location:
-                              lat: 48.850077
-                              lng: 3.411124
-                            end_location:
-                              lat: 48.709
-                              lng: 2.303
+                              lat: 49.31344
+                              lng: 4.15293
+                              waypoint: 1
+                            end_address: D 30
+                            start_address: D 151
+                            steps:
+                              - distance: 676 m
+                                duration: 1 min
+                                polyline: 'a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?Q'
+                                start_location:
+                                  - 4.145163
+                                  - 49.31073
+                                end_location:
+                                  - 4.149621
+                                  - 49.315679
+                                travel_mode: DRIVING
+                                instructions:
+                                  action: 2
+                                  summary: Drive northeast on D 151.
+                                  verbal_succint: Drive northeast. Then Enter the roundabout and take the 2nd exit onto D 30.
+                                  verbal_before: Drive northeast on D 151. Then Enter the roundabout and take the 2nd exit onto D 30.
+                                  verbal_after: Continue for 700 meters.
+                              - distance: 22 m
+                                duration: 1 min
+                                polyline: '}}~kHcniXBIBU?W'
+                                start_location:
+                                  - 4.149621
+                                  - 49.315679
+                                end_location:
+                                  - 4.149905
+                                  - 49.31563
+                                travel_mode: DRIVING
+                                instructions:
+                                  action: 26
+                                  summary: Enter the roundabout and take the 2nd exit onto D 30.
+                                  verbal_alert: Enter the roundabout and take the 2nd exit onto D 30.
+                                  verbal_succint: Enter the roundabout and take the 2nd exit.
+                                  verbal_before: Enter the roundabout and take the 2nd exit onto D 30.
+                              - distance: 198 m
+                                duration: 1 min
+                                polyline: 'u}~kH{oiXFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELC'
+                                start_location:
+                                  - 4.149905
+                                  - 49.31563
+                                end_location:
+                                  - 4.151623
+                                  - 49.314292
+                                travel_mode: DRIVING
+                                instructions:
+                                  action: 27
+                                  summary: Exit the roundabout onto D 30.
+                                  verbal_succint: Exit the roundabout.
+                                  verbal_before: Exit the roundabout onto D 30.
+                                  verbal_after: Continue for 200 meters.
+                              - distance: 46 m
+                                duration: 1 min
+                                polyline: iu~kHsziXJBJAHGFIDMBSAS
+                                start_location:
+                                  - 4.151623
+                                  - 49.314292
+                                end_location:
+                                  - 4.151976
+                                  - 49.314041
+                                travel_mode: DRIVING
+                                instructions:
+                                  action: 26
+                                  summary: Enter the roundabout and take the 2nd exit onto D 30.
+                                  verbal_alert: Enter the roundabout and take the 2nd exit onto D 30.
+                                  verbal_succint: Enter the roundabout and take the 2nd exit.
+                                  verbal_before: Enter the roundabout and take the 2nd exit onto D 30.
+                              - distance: 96 m
+                                duration: 1 min
+                                polyline: ws~kHy|iXBKDILURa@LWt@eAHQ
+                                start_location:
+                                  - 4.151976
+                                  - 49.314041
+                                end_location:
+                                  - 4.152921
+                                  - 49.313434
+                                travel_mode: DRIVING
+                                instructions:
+                                  action: 27
+                                  summary: Exit the roundabout onto D 30.
+                                  verbal_succint: 'Exit the roundabout. Then, in 100 meters, You will arrive at your destination.'
+                                  verbal_before: 'Exit the roundabout onto D 30. Then, in 100 meters, You will arrive at your destination.'
+                                  verbal_after: Continue for 100 meters.
+                              - distance: 1 m
+                                duration: 1 min
+                                polyline: '}o~kHwbjX'
+                                start_location:
+                                  - 4.152921
+                                  - 49.313434
+                                end_location:
+                                  - 4.152921
+                                  - 49.313434
+                                travel_mode: DRIVING
+                                instructions:
+                                  action: 4
+                                  summary: You have arrived at your destination.
+                                  verbal_alert: You will arrive at your destination.
+                                  verbal_before: You have arrived at your destination.
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
         '403':
@@ -4860,7 +4937,7 @@ paths:
         - lang: curl
           label: cURL
           source: |-
-            curl -L -X GET 'https://api.woosmap.com/distance/route/json?origin=48.709%2C2.403&destination=48.709%2C2.303&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY' \
+            curl -L -X GET 'https://api.woosmap.com/distance/route/json?origin=49.31067%2C4.14525&destination=49.31344%2C4.15293&mode=driving&language=en&alternatives=true&method=distance&details=full&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
         - lang: javascript
           label: JavaScript
@@ -4870,7 +4947,7 @@ paths:
               redirect: 'follow'
             };
 
-            fetch("https://api.woosmap.com/distance/route/json?origin=48.709%2C2.403&destination=48.709%2C2.303&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY", requestOptions)
+            fetch("https://api.woosmap.com/distance/route/json?origin=49.31067%2C4.14525&destination=49.31344%2C4.15293&mode=driving&language=en&alternatives=true&method=distance&details=full&key=YOUR_PUBLIC_API_KEY", requestOptions)
               .then(response => response.text())
               .then(result => console.log(result))
               .catch(error => console.log('error', error));
@@ -4879,7 +4956,7 @@ paths:
           source: |
             import requests
 
-            url = "https://api.woosmap.com/distance/route/json?origin=48.709%2C2.403&destination=48.709%2C2.303&mode=driving&language=en&alternatives=true&waypoints=48.850077%2C3.311124%7C48.850077%2C3.411124&method=distance&key=YOUR_PUBLIC_API_KEY"
+            url = "https://api.woosmap.com/distance/route/json?origin=49.31067%2C4.14525&destination=49.31344%2C4.15293&mode=driving&language=en&alternatives=true&method=distance&details=full&key=YOUR_PUBLIC_API_KEY"
 
             payload={}
             headers = {
@@ -5627,6 +5704,17 @@ components:
         type: string
       description: |
         One or more locations to use as the finishing point for calculating travel distance. The options for the destinations parameter are the same as for the origins parameter, described above. In order to reduce URL size, [encoded polylines](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) are also supported using `enc:encoded-polyline:`
+    distance_details:
+      name: details
+      in: query
+      example: full
+      schema:
+        type: string
+        enum:
+          - full
+          - none
+      description: |
+        Specifies if maneuver instructions should be returned (roadbook). Valid values are `none` and `full` (default is `none`)
     distance_elements:
       name: elements
       in: query
@@ -9352,10 +9440,43 @@ components:
               example: 5 mins
         start_location:
           description: 'The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.'
-          $ref: '#/components/schemas/LatLngLiteral'
+          type: object
+          properties:
+            lat:
+              type: number
+              description: Latitude in decimal degrees
+            lng:
+              type: number
+              description: Longitude in decimal degrees
+            waypoint:
+              type: integer
+              description: The waypoint order number
         end_location:
           description: 'The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.'
-          $ref: '#/components/schemas/LatLngLiteral'
+          type: object
+          properties:
+            lat:
+              type: number
+              description: Latitude in decimal degrees
+            lng:
+              type: number
+              description: Longitude in decimal degrees
+            waypoint:
+              type: integer
+              description: The waypoint order number
+        start_address:
+          type: string
+          description: the starting address of the leg
+          example: Chemin de la Tuilerie
+        end_address:
+          type: string
+          description: the ending address of the leg
+          example: 'D 8043, E 44'
+        steps:
+          description: 'List of steps constituting the leg. Steps are returned when `details=full` parameter is specified. A step is the most atomic unit of a route, containing a single step describing a specific, single instruction on the journey. The step not only describes the instruction but also contains distance and duration information relating to how this step relates to the following step.'
+          type: array
+          items:
+            $ref: '#/components/schemas/DistanceStep'
     DistanceMatrixElementsResponse:
       title: DistanceMatrixElementsResponse
       type: object
@@ -9472,77 +9593,6 @@ components:
           description: Legs part of the route response
           items:
             $ref: '#/components/schemas/DistanceLeg'
-      example:
-        routes:
-          - overview_polyline:
-              points: 'w_diHa_fSb@@dAXpD~@~DfAlAn@x@j@v@l@xB|@bBh@Ac@PoBb@oHRuETcEXwDXaDhAaJR}AFkABqCBcBDg@BUT{@`@o@t@i@fA{@fAmA`B{C`@eAr@uBfAaCz@sB`@eAHK|@GdAoABSC]qAsJE]gB\]qDy@iFIi@Gk@@sAFsDJk@JGDAPITSHY^cCkAk@cBs@gBm@_@K]YW]Me@cAeFgBoIc@uBy@kCk@oB[_BSaBM}ACkAKsGGgJ?k@D{@Ry@~AsCVi@Pw@PmA\mELaBPyAX{ATy@VkAFm@BaACgAW}CMgBEeBGs@Oy@w@{Cm@cDKe@Wo@oA{B]aAQe@[yAQeAIs@I_AMw@U{@_CuI}AsGi@iCS_B[gECi@AeBB_BFgAv@kHNaBBaA?aAMaECcCPgO@wCEaCUeMQwM@]NcAf@mBHi@Hm@@s@Au@OwEs@oUq@uTMeBSgAiA}EsDaOQu@Ce@~Dgs@vDmp@}Dy@aCy@aB}@eEoC'
-            bounds:
-              northeast:
-                lat: 48.85017
-                lng: 3.41085
-              southwest:
-                lat: 48.84051
-                lng: 3.31062
-            summary: ''
-            legs:
-              - distance:
-                  text: 8.8 km
-                  value: 8848.7
-                duration:
-                  text: 16 mins
-                  value: 971.2
-                start_location:
-                  lat: 48.850036
-                  lng: 3.312646
-                end_location:
-                  lat: 48.850165
-                  lng: 3.41085
-          - overview_polyline:
-              points: 'w_diHa_fSb@@dAXpD~@~DfAlAn@x@j@v@l@xB|@bBh@Ac@PoBb@oHRuETcEXwDXaDhAaJR}AFkABqCBcBDg@BUT{@`@o@t@i@fA{@fAmA`B{C`@eAr@uBfAaCz@sB`@eAHK|@GdAoABSC]qAsJE]dDm@fJeBFATED]xDsHpB{DhC_Ff@aAz@wB`BeLFuAXaHNmAtAkHLu@tDqRNq@bAoFXoBf@mHH_A~Bm]HiABw@@u@Cg@Y}ECw@ByADq@PkA\sAv@kCNe@P_APmADeA?cAE_AKcAw@{DMaAIu@CiADeAHiAN{@nB_LXyAtCmLpAe^l@kNBcCQ}CiBaU[{DqAj@{At@c@Gk@{@gByFqFcQaP_\_HaTsFcQuEsNuByBq@aAqAuC{CgGaMsXaLaYg@uAKe@oDk@}Dy@aCy@aB}@eEoC'
-            bounds:
-              northeast:
-                lat: 48.85017
-                lng: 3.41085
-              southwest:
-                lat: 48.82936
-                lng: 3.31062
-            summary: ''
-            legs:
-              - distance:
-                  text: 9.7 km
-                  value: 9669.2
-                duration:
-                  text: 17 mins
-                  value: 1023.1
-                start_location:
-                  lat: 48.850036
-                  lng: 3.312646
-                end_location:
-                  lat: 48.850165
-                  lng: 3.41085
-          - overview_polyline:
-              points: 'w_diHa_fSY?m@Ey@c@eBeBsD{E}@[k@_@o@w@Wk@]_B_@y@o@a@e@L[A[Iq@Y]Qg@Mo@Cu@FS@OAy@k@a@IwC@o@I?i@E}AKiAKc@Is@K[Qm@w@}GAIa@uDe@uEQaBuDo]]kDOcCGkDQgRGwGMgPKkEM{NGuFMiA_@qAk@w@w@a@w@Ea@D]L_@NBc@Tc@r@aBzAmCd@{@l@cAb@y@^m@l@w@z@uAV_@ZSXK^IRKRYHs@Hi@L[LOEUu@_D}@gDaB{Ca@mBDc@n@OdFzFz@`@\s@BgAgFmT]_PxDaJvAwFRyCZ{EB@f@P@?n@NVLNHfCC~ACZBVN^h@VVXLd@?|DO`AAvIHF?T?RCPMTQ|AiBnAwAxA}AXM\Gt@Ed@St@i@~DyCCi@AeBB_BFgAv@kHNaBBaA?aAMaECcCPgO@wCEaCUeMQwM@]NcAf@mBHi@Hm@@s@Au@OwEs@oUq@uTMeBSgAiA}EsDaOQu@Ce@~Dgs@vDmp@}Dy@aCy@aB}@eEoC'
-            bounds:
-              northeast:
-                lat: 48.86089
-                lng: 3.41085
-              southwest:
-                lat: 48.84682
-                lng: 3.31265
-            summary: ''
-            legs:
-              - distance:
-                  text: 9.8 km
-                  value: 9810.3
-                duration:
-                  text: 19 mins
-                  value: 1158.3
-                start_location:
-                  lat: 48.850036
-                  lng: 3.312646
-                end_location:
-                  lat: 48.850165
-                  lng: 3.41085
     DistanceRouteResponse:
       title: DistanceRouteResponse
       type: object
@@ -9559,52 +9609,128 @@ components:
         status: OK
         routes:
           - overview_polyline:
-              points: 'gohhH}ftMAAa@KE?KAGAOCKCQGUGAAIE_Ac@UKGCmAm@UOs@]g@U[QYMAAQIiAk@WI?ICCCCCAC?CBEIEIcAm@YIOMg@]k@i@WWo@u@}@iAc@m@a@o@u@oAm@kAa@u@[u@Yw@Qo@Y_A[y@MYQYUa@{AmC]k@S[MQ]c@Wa@o@eAS_@S]Q_@Um@Wo@Yo@[o@_AcBm@cAMSACS]CG[g@GMeAoBiCgF]q@Mg@a@sABC@E?E?E?ECCACC?C?EW]_BKa@Qi@M[cAuB[o@IQQa@Ma@[cAMi@gAuEg@wBYaAEOI[UaA[_Bk@kD_@wBa@wBCOEUe@uCk@cDq@uDCOHO?S?CGm@m@wHOeDEe@CW?W?c@O{DEo@CO?OGoAUsB_AmIWwAEUGQEG?M?MCSI_@GMO_AQ{AGWGMKIg@QoA[[IsCw@]OOI@_@A_@E}@G_AIwAUyCIm@ISGO?C?IAGCGCCECC@Wa@KSSa@Wc@KQQ]OSIUKe@E[A]@c@Dc@ZiBxAqJHk@PaA@IJo@DWe@Yw@k@w@g@_Ao@a@YSMMG_@MOCCACCCCII?GAINS^?TPLg@DSH]FO\cAHQ@EBIBGDO?M?KCKWo@Yc@e@m@IQEIGWOw@O}@ASBSFSLSJEF?t@P|Bf@TDP?RGzAc@XGPIB@D?BADC@E@G@GAGAGCCE]AGE[YoACGmAqFoAmFAEUeAYeASm@EKISO]CC]i@m@aAAAU]o@_Ag@u@qBwCi@y@c@q@i@cA[w@c@oAQc@Ye@eEgHaAeB[g@cB_DOWSc@cB_DWe@[m@KS{EyJQ[Sc@IS}BgFi@aB]qAu@aEI[[qAe@yAoAuCOa@BI@KAKAKEIGEGAIBEDWYm@mAc@}@S_@o@kAg@i@g@e@eBgBaCoBMK}AqAuAeAEEO_@E[AyABg@X}FJgBBs@B[HgB@GDy@VsFCi@ASBEBG@G?IAICGCEECG?EBCDEOKg@YqCWeCIu@k@aGKgACiBAoBC}DQuGEmBMcEMkEGcBQ_BC[DEBI?QGKGCIBEc@E]YgBS_BEaA?oAJ{Ar@qJJuBC_AMaBi@qGc@kFEQHEDK@MAOCIEEGCGa@KmAMuAGm@MaBWuCC[Io@Ow@I_@I]_@sAKa@m@uBKYMa@IOQk@K[]eAgBuFe@qAsAaDg@}@k@{@CEUYOUEE{@oAWa@Wa@W[GMSYaAwAcAaB_A}A_CsDIOQ[K]KS_@}@KQeBuBIMYm@Ss@ESAIKyBCw@AUE_@AEMa@]u@e@cAo@}@{@mAOUKWO[OUKSQSg@cASg@[}@cAwCK[mC}HQu@Kk@CWEa@?KQ}AIm@?C?G@WBEBI@IAKAIEGEEG?E?GDCFCJKEIEGCaK{Ok@}@a@o@SWsAkBg@k@cFyFeAmAmAuAu@_AGIKMOWCEs@aAoAgBgCmDkDyEQ_@MSBABCBE@E@GAG?ECGCCEAC?E@CBCDOKWUQS]g@oCgEIMYe@MUe@w@q@gAIO@E@E@G?IACAGECCCE?E@EDO[cCyEcH{M[e@GGe@o@YYmLkIUOUO]UoCoBy@k@_@Y{B_BUQ_@WkBqAKIuB{AcBmAk@a@KGsCsBSOiBqA_BkAMMIKEGIMEGOU]i@IOUg@GMYw@K]ACIUIUAC}@gCUg@Qe@O[GMGSCGe@oAi@_BCEGSKY}@gCoCkIOk@Uu@w@wCkCqJwGoVCMGSI_@QaAa@iCAGG]G[E]U}Ai@cEOwAEi@Eu@i@sMAa@Au@AaAG}BAS?QEaAOyD?ECY?MAOBc@@]?[CYCECKISCSAMAQ?]?]HqA?k@?S@e@A}B?QC[SeAK_@i@yBc@kBw@gDKg@CMEQGYIc@Ki@EQI]ESEOAQAQAQAK?GBYBOB_@D_@DY@MBU@KSASC}@GiAGOAOC??UCKAcAKUAwAOI?E[Kg@G]CO_@{AK]G[Ia@AIAMCi@AWA[AWCy@CgAA_@AUGsC?{@?G?S?E?EAEACCACAC@QAm@?}ABk@@MAOCYSWSyAcAOMkAy@k@a@EEm@_@KIGGEGEGIOIOGSm@oAi@qAo@uAm@uACGe@cAYq@GMwAcDKWq@yAsCsGeBaEOYUk@Ue@EQCMAKAU@A@G??@G?G?E?GAGAEACCGEEGCEAG?E@EBGCIGKMi@kA}CcHCEQ_@aAyBg@kAeBwDaCsFQa@Ym@oEaKKU_AsBCEEMWk@Sc@KWCC}@sBqBqEgAeC}BgF}@oB]u@]w@M]uA_DKUDG@K?KCICIGEBMBKDKBCHMb@k@x@kATW@ABFDDD@D?FCBG@G@GAIAGCEEECAE@ACCQKi@GWMc@Mc@CKQm@Uu@aC_I_@{@i@kAKUg@iAUi@CESc@GQYm@Uk@IOGOcA_CIQIOwEmKKWGQ{@kBaBmDGI[m@O[IOACWi@GICEAC?AKUCCAECCAIAGAI?Kl@mCJg@PkAJa@Ty@J_@BGFMHGDGD@D@HAHCFIBK@K@KAMCKGKGOCGAOCM?MAU?GDWDQFYNe@l@uBp@oCFUFQDMFMFKBEDGFEBCFCDAPAFBF?F?DAFCFEDIDIBK@M@K?MCKAMEIEGCEIWEUC{@De@Hc@VsAdAqEt@_BDIHIFEHAN@^DF@D@FDFDFFDHFLxA|CBD@FBJ@H?F@F?FAF?DAHCFCFABEFCBCBCBE@C@E?C?C?EAC?GCECEC{A}@ME_BiAoBsAqBqAkAy@cAi@qCyBQ?c@Wk@]cBw@}@_@YKeBc@cAOe@IO?w@I}@EeAAw@@w@BaAHeANgATgAXeA^_Ab@q@\w@d@w@h@u@l@s@n@s@r@{@bAy@fAk@|@g@z@aAhBWj@_@x@_@dAEHUp@kA~DUz@s@`CmBxG{BdIs@vBu@tBo@~Ak@nAwAzBkAbBeAhAeAdA[Dy@h@m@Zg@TqAd@_ATgAR_APq@F}@B_A@iAEgAKu@Mw@Ms@So@Uq@Y}@e@c@WmBeA]UYWSUYYc@g@iAyAm@kAkB{DkBiEsAgCaCuDS_@Qa@[_AI_@Ke@Is@Gu@IiBEeCSoAUoKq@oSIcCUyGIyBe@oMi@{N]}IK{CyAya@Q{E_AsWc@gNYcNGcGGyG?YAs@?k@?}@CoC?kHDwHDkERgNfAef@`DatAH_EHoDfCyeADsAFuBH}Dx@w]f@iTj@yUBcABk@bBau@PyHJ{JDwD@oD@iIA{IIyGIsFKkFa@sOi@uPKuCa@iMUkHiCgw@yAgd@m@uQcA{[QmFm@sQKmD_Cct@k@iPsAma@GsBg@uNa@qLKcC_@kHkA}Pu@kIg@_Fe@oEg@gEm@sEoBkMgByJScAuBcKsA{Fs@sC}@qD{BaI_CuH_DiJgA}CyBsF{BmFgCsFaCaF{C}FuDoGmD{FwAyBs@cA_CeDw@cAsCsDQUuAcBeGwGc@c@{E}Ei@e@mC{CoAwA_EaEcAoAY[OMwMsI}B}AyEeEeGgF_HuGmAoAsCaDsDiE}AmBwC{DqC_Ee@s@a@m@iAiBgAeBkAoBaAcBu@wAcAmBmCmFaBoDyA_DeCeGsAkDuAwDoAqDkAsDiCwIqBwHaByG_@{AeAkES}@WoAIqAQeAMs@Iw@s@mGCc@?YB[FW@IPANIHSDW?WLWNSZ]hEwCr[{TRQNM`@m@NW^}@`CuFnDmI|BkFpByEdAqBZu@nBqEJYRw@PaA\qCh@oF\qC\kCtA{KtAyKTiBb@iDrCeTJ}@Bc@d@wNLaED{@DeA@e@PeFBk@DyARwITsEDyB?QBcA@W@g@@w@DsAAiE?mAC{@JyKBcGHeB@{BHeC?YPwBJoBFcAp@mHNqALeCB[lAkMNmBDgA@]JaEAsAAUEcAWiCEoAL}@Ro@ZgADMbB_Cd@k@tByCvCkE~@cAhA}@`Aw@`Ao@hDyBfGuDrEaDl@k@f@s@b@w@b@iAp@yBxByHxBuHpEkO^mA|C{JlKs^HUfHeVvHwWpDiM|@iG|BqUtDi_@~@gJbBwPx@aIrCmY`CiUbBgQXsCHwB@gAAmAG}A@aADc@DO@QAQEMEKAY@g@JkA^}Ad@qAn@gAb@oAXsAnMspA~Eof@pDa^`CoUtCmYFi@P}A@Qb@qEJoAJcAJq@TuBD_@T_CJgAD_@Fg@JmAZ}CPcB^wDD[d@iEl@kB`ByEt@qBpBuFPg@X}@nCyHRk@L]Ro@dBwEx@_CDKDKhAeD`@mATo@bDeJRi@Z}@Xw@Rm@pAoDRo@p@kBNc@v@uB`H{RjBmFlDyJb@kArAyDFWTeATsAf@mEHo@`BcNtCuVpBwPLaArDi[PuALgAj@_FR}AJy@P_A~@{CL[v@cCHYx@gC`@wARm@IIKUAGk@sEM}@C[_@mCIe@e@sDCOEYGYIQMUKSo@gAm@iACEMSQ[EKOWCEy@}A_@q@O[OUmA}BM_@OWEGK[G]AWAW?CDGDK@G?G?E?IHm@?KBYHqBF[HIJAlBWPCVCRMnAaBf@m@X_@V[RWJWFFFDH?FEDI@E@G?GAKCICGGC@[OmCImBImBGyAs@{Pm@{Nk@iNAU?GeA_WC]IuBEgAGqAKeC}@eUAYHCHGDMDM?O?MCMEKIKKEK@IDESGi@@uB?k@G}@oBuQGe@uAeMWeCQ_BE]Gi@Q_Ba@wDgEs_@E_@I{@OmAw@uHSuASiAW_ACOcBwGU}@Oi@e@oBc@gBmE_QI[I_@aDcMQs@YgAgBcHS}@Uy@k@}BMi@a@_B{@iDCIWeAGUk@_CKq@CQAW@E?G?GAECGCCCCEAIKEKCGIWMg@[aA}AeG{Lmf@yF_U}BaJyBwICOiBmHs@qCw@}CkAuEKc@uBkI_GuUiCcKwBoICMyFeUaGuUK_@yB{IuGoWkCoKuCkLwCiL_Ji^IYOm@i@wBK_@_Ii[uJ}_@WsAKaAi@sKqGiwA?G_@eIa@uIEuA?u@Bm@No@JYFOr@w@BUA]g@k@Uw@Qm@Oi@a@uFSwDG]Mq@^OXGh@S`@Q@CRYT_@Hi@Dg@De@D[V}A]m@g@m@U]a@u@O]iA_C[q@YsBMy@AI]wCY_C_@uCIs@YeCAa@Ai@@[F_@FKBM@SCQGOMIOMMSQe@M_@QeAK{AYwN_@kRUoHEaAIcAq@wE}G_f@q@aF}Fua@oS_yAgF}^}DkYsAsJCaALuAx@qEd@qBp@wAb@m@j@wAxDoLl@kAjAgD~@iDb@sCv@qHFaACeDUaDe@kCmAmEgBwFk@uBWcBKkB?_BPgCZcB|@oDfCgJh@cCVkCDoCBkH?aACgH?c@?mG?_@D@p@JtA?t@F^Fv@l@P@`@At@Cf@@f@LVJp@\\N^Ab@Ij@Ld@z@^|ATj@p@v@j@^|@\rDxEdBdBx@b@l@DX@??`@@fAVpD`A|DfAnAn@v@j@v@j@zB~@`Bh@?c@PqB`@mHTwETaEXyDV_DjAcJP{AFmADqCBaBCe@Hg@Tm@k@TCkAAaCb@yCz@eCr@iC^_BLgA?sB?_CBmCTmCFsALaA`AqDL}@VcA|@}Ah@o@\[@w@FuDHi@JGDCPGTSH[^aCiAm@cBq@iBm@]M]WW]Me@eAgFeBoIe@sBy@mCi@oB[_BU_BK}AEmAIqGGiJ?k@By@T{@|AqCXk@Pu@NmA^oEJ}AR}AX{ATw@TkAHm@@aAAiAY}CKeBEeBGu@Ow@w@}Co@aDKe@Uo@oA}B_@_AQg@[yAOcAIu@I_AOu@S{@_CuI}AuGi@gCS_B]gECi@AgBB}AHgAt@mHN_BBaA?aAMcEAcCPgO?wCC_CUeMQyM@[NcAd@oBHi@Hm@Bs@Au@OwEu@mUo@uTOeBSgAiA_FsD_OOw@Ce@~Dgs@tDkp@}D{@_Cy@cB{@oBsAsA}@??rA|@nBrAbBz@~Bx@|Dz@uDjp@_Efs@Bd@Nv@rD~NhA~ERfANdBn@tTt@lUNvE@t@Cr@Il@Ih@e@nBObAAZPxMTdMB~B?vCQfO@bCLbE?`AC`AO~Au@lHIfAC|A@fBBh@\fER~Ah@fC|AtG~BtIRz@Nt@H~@Ht@NbAZxAPf@^~@nA|BTn@Jd@n@`Dv@|CNv@Ft@DdBJdBX|C@hAA`AIl@UjAUv@YzAS|AK|A_@nEOlAQt@Yj@}ApCUz@Cx@?j@FhJHpGDlAJ|AT~AZ~Ah@nBx@lCd@rBdBnIdAfFLd@V\\V\LhBl@bBp@hAl@lAt@r@f@P^h@x@`@j@x@r@d@j@fBpCj@v@x@jAN`@f@fB^rAF?b@tDPtAHb@lFfNTt@Jb@NnAFdBHfDfAb\v@jUpDlg@p@hJHnHj@|e@z@p|@XtVBfCO|SAzAMjB_@|Gi@nHiB|VSfCMhAUfAWdAoElLc@rAUbAKbAE|@Y|Uc@~ZGjBKfA[~A_EzOe@fB[bA{@fBcCnFY~@sGtTaB`Ga@jB[pBcAbJ[pA[r@mA|B[dACrAAnCIxA]jBWdAi@vAeChFeAxB]jBU`B[vBE~@Ar@E~EC|Aw@GsF[wCQKBKHWr@iA|FSdAQl@W|AEZEd@Ef@Ih@U^SXABa@Pi@RYF_@NLp@F\RvD`@tFNh@Pl@Tv@Jz@Eb@Sv@GNKXOn@Cl@?t@DtA`@tI^dI?FpGhwAh@rKJ`AVrAtJ|_@~Hh[J^h@vBNl@HX~Ih^vChLtCjLjCnKtGnWxBzIJ^`GtUxFdUBLvBnIhCbK~FtUtBjIJb@jAtEv@|Cr@pChBlHBNxBvI|B`JxF~TzLlf@|AdGRdAVbA@P@NBHAB?D?F@D@DBD@BDBD?J\Vj@j@~BFTVdABHz@hD`@~ALh@j@|BTx@R|@fBbHXfAPr@`DbMH^HZlE~Pb@fBd@nBNh@T|@bBvGBNV~@RhARtAv@tHNlAHz@D^fEr_@`@vDP~AFh@D\P~AVdCtAdMFd@nBtQF|@?j@AtBFh@DRIHENCN?PBPFJFHHDJ?@X|@dUJdCFpADfAHtBB\dA~V?F@Tj@hNl@zNr@zPFxAHlBHlBNlCAZGAEBGBCHCH?H@J@HKVSVWZY^g@l@oA`BSLWBQBmBVK@IHGZIpBKVGJEFIFG?E?EBEBCFCFAHAJ@J@HDFBFFBH\BPDXFRFPHNd@h@lA|BNTNZ^p@x@|ABDNVDJPZLRBDl@hAn@fAJRLTHPFXDXBNd@rDHd@^lCBZL|@j@rE@FBp@AZa@vAy@fCIXw@bCMZ_AzCQ~@Kx@S|Ak@~EMfAQtAsDh[M`AqBvPuCtVaBbNIn@g@lEUrAUdAGVsAxDc@jAmDxJkBlFaHzRw@tBOb@q@jBSn@qAnDSl@Yv@[|@Sh@cDdJUn@a@lAiAdDEJEJy@~BeBvESn@M\Sj@oCxHY|@Qf@qBtFu@pBaBxEm@jBe@hEEZ_@vDQbB[|CKlAGf@E^KfAU~BE^UtBKp@KbAKnAc@pEAPQ|AGh@uClYaCnUqD`^_Fnf@oMrpAYrAc@nAo@fAe@pA_@|Aa@jBKXKFGJCNAP?PDLFLJFD@XlAF|A@lAAfAIvBYrCcBfQaChUsClYy@`IcBvP_AfJuDh_@}BpU}@hGqDhMwHvWgHdVITmKr^}CzJ_@lAqEjOyBtHyBxHq@xBc@hAc@v@g@r@m@j@sE`DgGtDiDxBaAn@aAv@iA|@_AbAwCjEuBxCe@j@cB~BEL[fASn@M|@DnAVhCDbA@T@rAK`EA\EfAOlBmAjMCZ[~BMnAUlCg@fFKdBGn@CfAAb@EtACrB?`DCbGKxKCx@A`ACdFA~@EtA?L?\E~@M|G?`ASvIExACj@QdFAd@EdAEz@M`Ee@vNCb@K|@sCdTc@hDUhBuAxKuAzK]jC]pCy@nFOrAO`AOx@On@O`@KTeA|Bu@jBy@|BqBxE}BjFoDlIaCtF_@|@OVa@l@OLSPs[zTiEvCq@VQBIBIEKCK@IFIHELCNAJENELILKHWZoAv@ETAL?NFZDVlEnMXhAPn@J`@RJJf@p@vCf@rB|ArGXdAxAnFhA|Df@~AxAvEf@zAr@lBp@jBx@zB~@`ClBvEdA~B`AvBnAjCbAvBjCbF|BbEjCjEjAjBhAbBxAxBnAdBf@r@|@lAlH|ItCxCjAnAxEpEfAdAdGlFn@h@tD|Cd@b@|DnDbI~IdAv@d@d@nJ~FlB`BhGfGbGrGxAhBnA`BpAbBv@bAbChDr@bAvArBjD~FvDrGvCtF`C`FfCtFrB~E~B~FfA|C`DdJxBlHfAvDj@tBdB|GhCdL`BdI`AvFf@zCnBxLhAxIl@jFn@bGb@dF\bE`@dGZ|Ef@tJBz@\pILrDNnEPpEFrBv@dVl@`RVpHpCx{@v@vV|@bXFbB@\j@jQzAfd@z@tXhBtj@XpIHtCh@xPb@nOJjFHpFFxGBzIA`HAtEE~EKjIO`IkBlx@ErAWxKWbK_@vOy@r]SvHCnASnIqBd{@UpJyC`oAIbD_@rOa@nROnFG|FI`HKrJ@~J@fA@tB?bAD~CBjCDlCBjBDfBFjCJnDV~IHnCRlFj@xONxEHzB|@jVt@fS`Bfd@Br@PfFH`CRxFH|ARbGFdCJ|DFvCB~BDjB@|BDrE?bB@rE?~CCfD?b@AtCGlEIvEOjGG`CInCUrFo@bMi@bI_@tEa@zEO`BGr@Q~Ao@jGw@pHeHhn@i@tE[tCe@~E]lE]hEi@lHGbA_@vHYvHOjE_@jQMbGKpEKhFYxMe@vVMbH]jPGhC?T[lOkAtl@_@nRAz@IlDS~JKtEANG`DIhEEdBAdBAx@?n@?bA@v@Bz@DfANhCZtC^hC\bB^fBh@nB^nAdAbDnAxDfAvCvArDpErKhCfFt@xAvApCxAjClClEtCpEfBfCpAdBxA~BfArBn@xAv@tBdAzD`@lBZjBNlARnBLlBDjADlADxCAzDKhFQ|FGzBM|D_@fMs@`P}@rMQ`CMvAi@zFUrB]pC{@lGqA~H_B~He@bC_@dCq@|D]bA]jCq@|FYnDIbCD^BFBDBBD@D?B?XAd@Af@AF?F@JBJ?L?F@XBN@L@R?HAJALEPG|Au@`Ag@b@Ub@UlBy@HEvCuArCuAhDqBp@a@b@]FCvBcADCTIH`@h@rCH\n@`DVlADRf@hCBHLn@\hBFXFZDTBHH^H^Jf@BNb@vBf@fCJh@Nz@FVDTBJ`@rB|@fELp@H\^pBDTx@jEBNBh@FXFV\rBNzA@L@JH|@@VFl@Bx@AlBFJH?L?F?`AHP@J@t@FL@J?fBNz@Fn@Dj@DL@^BZBrCRf@Bf@DVDLBRHd@TpBxAZRRNNJ`D|BFDvDhCLHJFlAz@RLDDrBtAlA|@`@VRNNJET_AdFCNFDh@^RLbBlAHDHFfAv@vAbAHFLHRPlCjBFDFD~DpC\TGTMRQRi@f@]ZURqDvEKJMNQVs@|@[ZQ`@CFBVBXJ?NC^Ah@A|CCVAfFML?NAt@CZARAp@EF?\C\C~AOr@GxAMxAK^AN?T?~@E`@?\AhASvAYb@IZEREdASd@IBAHAPANBJDPFVF^PlCvAZTN\F\BTj@dKFfALbBHzAF|@FpAHnA@\Lv@Pf@@L`@n@JNh@j@~ArAfB`BbA|@PHRFd@JtAf@xAp@\TZR`@^z@v@zEbEPN~@jA@@Xf@Zl@T`@P\Vp@`@tAHV\nANh@Ld@xAvEFVpBhHL`@V`AtAzEb@~A`@~ARx@Nd@LVd@v@X\bAx@xAdAvD~ChA~@f@`@PNFFFDXVxE~DdAt@vC`CvFtExAlABBNLd@b@??dAz@tAbAlGhFhDtCxAnAf@`@VTNLDBfCrBlB|AtExDrC~BvHjGXXXNDB?H?^F\FPNPRJR?HTNd@x@vDrAlGh@rCHf@Lt@Hn@Jd@L`@BHjCtLjGh[lAlGLl@rCrN~@vE@JDXH`@j@rC^lBH`@H^j@hCH\XrAh@jCF^d@`CP|@DV^jBVx@DPp@bDXvAVtAVtAVvAJj@Hh@NhAf@|Cp@xDd@pCJf@PhAJj@BXB^BLNt@DRt@|DJb@Lb@Tp@DJRl@Lb@Lf@\|ANv@J^BJJf@FTBHFTH\nAbGx@~DDN~@|EDJ@HBHDHFNLVd@h@b@\\VxCzBlBzArAbAj@b@n@f@DDHHRf@Nf@Lj@Hb@xAbILj@vAnHdBdJ@DHb@Jf@tBxKh@rCp@vDV|ADL@FNn@?@?H@H@HBJFFFFF@VNDBj@^ZRl@p@f@r@P\NZNf@Tr@Nr@ZrAv@bEb@vCF|@NbDNjBJdAXnB`@`BZfAdAtDFXTx@Pz@Hh@Hz@D~@DnBA~CGvCIjCu@zQKlCE`BAzA?zCDlE@x@@~@FrJBvB@`CHpIBfBDzGA|@ElQAjC@nABhBBhBErCKxCAJSvEWrEm@~ImAlO]~Dw@nKKbAGj@Gl@O`AQ|@YhA_AdCe@`Ai@|@w@`AqAfBqClDyBpCSXQXMXITKTOp@I^Gb@E`@C^Ab@A`@@d@Bb@B`@D`@F^H`@FTPh@LXPZPTPTTTRPRLVLh@TVJTLPHRLVRlCrB~FhFxBlB~AxAfFpEbEpDlHtGxCrCdCbCtCrCxCvCZX~D|DtCrCvCxCzC~CxEfFbAbAhB|BpA~ArA|ApAvAtAvA~@z@`Ax@`At@|@l@~@l@~@f@h@Vj@V`Bl@lEpAr@ZdAj@l@`@t@j@XXh@h@d@f@r@|@n@~@t@rA\j@rTr_@`BvCxBvDbGpKF`@DHBDr@xAbCnGJRrAvD\~@Vj@Xn@Xb@Z`@NPv@h@fA^PFD@LFjNhALArDXbCRrGh@L@r@DN@VBD?Z@lBJpFf@fALlBPpBPj@DFBPBb@NxA`@D?F?JERQRGRCh@@^BJ@RBH?ZDb@DH?H@F@vAJr@DN@\B|CVb@DpCRTBXB@W@E?C?[C]KYEW?Wz@cOFaADu@TsDP_BP}@Ja@N]R[VWXQXKXET?J??R@^QbD'
+              points: 'a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?QBIBU?WFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELCJBJAHGFIDMBSASBKDILURa@LWt@eAHQ'
             bounds:
               northeast:
-                lat: 48.874685
-                lng: 3.410849
+                lat: 49.315678
+                lng: 4.15292
               southwest:
-                lat: 48.708782
-                lng: 2.297587
+                lat: 49.31073
+                lng: 4.145162
             summary: ''
             legs:
               - distance:
-                  text: 83.7 km
-                  value: 83736
+                  text: 1 km
+                  value: 1038
                 duration:
-                  text: 1 hour 33 mins
-                  value: 5590.1594700000005
+                  text: 1 min
+                  value: 75
                 start_location:
-                  lat: 48.709
-                  lng: 2.403
+                  lat: 49.31067
+                  lng: 4.14525
+                  waypoint: 0
                 end_location:
-                  lat: 48.850077
-                  lng: 3.311124
-              - distance:
-                  text: 8.7 km
-                  value: 8691
-                duration:
-                  text: 42 mins
-                  value: 2501.61443
-                start_location:
-                  lat: 48.850077
-                  lng: 3.311124
-                end_location:
-                  lat: 48.850077
-                  lng: 3.411124
-              - distance:
-                  text: 99.1 km
-                  value: 99065
-                duration:
-                  text: 1 hour 45 mins
-                  value: 6329.826579999999
-                start_location:
-                  lat: 48.850077
-                  lng: 3.411124
-                end_location:
-                  lat: 48.709
-                  lng: 2.303
+                  lat: 49.31344
+                  lng: 4.15293
+                  waypoint: 1
+                end_address: D 30
+                start_address: D 151
+                steps:
+                  - distance: 676 m
+                    duration: 1 min
+                    polyline: 'a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?Q'
+                    start_location:
+                      - 4.145163
+                      - 49.31073
+                    end_location:
+                      - 4.149621
+                      - 49.315679
+                    travel_mode: DRIVING
+                    instructions:
+                      action: 2
+                      summary: Drive northeast on D 151.
+                      verbal_succint: Drive northeast. Then Enter the roundabout and take the 2nd exit onto D 30.
+                      verbal_before: Drive northeast on D 151. Then Enter the roundabout and take the 2nd exit onto D 30.
+                      verbal_after: Continue for 700 meters.
+                  - distance: 22 m
+                    duration: 1 min
+                    polyline: '}}~kHcniXBIBU?W'
+                    start_location:
+                      - 4.149621
+                      - 49.315679
+                    end_location:
+                      - 4.149905
+                      - 49.31563
+                    travel_mode: DRIVING
+                    instructions:
+                      action: 26
+                      summary: Enter the roundabout and take the 2nd exit onto D 30.
+                      verbal_alert: Enter the roundabout and take the 2nd exit onto D 30.
+                      verbal_succint: Enter the roundabout and take the 2nd exit.
+                      verbal_before: Enter the roundabout and take the 2nd exit onto D 30.
+                  - distance: 198 m
+                    duration: 1 min
+                    polyline: 'u}~kH{oiXFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELC'
+                    start_location:
+                      - 4.149905
+                      - 49.31563
+                    end_location:
+                      - 4.151623
+                      - 49.314292
+                    travel_mode: DRIVING
+                    instructions:
+                      action: 27
+                      summary: Exit the roundabout onto D 30.
+                      verbal_succint: Exit the roundabout.
+                      verbal_before: Exit the roundabout onto D 30.
+                      verbal_after: Continue for 200 meters.
+                  - distance: 46 m
+                    duration: 1 min
+                    polyline: iu~kHsziXJBJAHGFIDMBSAS
+                    start_location:
+                      - 4.151623
+                      - 49.314292
+                    end_location:
+                      - 4.151976
+                      - 49.314041
+                    travel_mode: DRIVING
+                    instructions:
+                      action: 26
+                      summary: Enter the roundabout and take the 2nd exit onto D 30.
+                      verbal_alert: Enter the roundabout and take the 2nd exit onto D 30.
+                      verbal_succint: Enter the roundabout and take the 2nd exit.
+                      verbal_before: Enter the roundabout and take the 2nd exit onto D 30.
+                  - distance: 96 m
+                    duration: 1 min
+                    polyline: ws~kHy|iXBKDILURa@LWt@eAHQ
+                    start_location:
+                      - 4.151976
+                      - 49.314041
+                    end_location:
+                      - 4.152921
+                      - 49.313434
+                    travel_mode: DRIVING
+                    instructions:
+                      action: 27
+                      summary: Exit the roundabout onto D 30.
+                      verbal_succint: 'Exit the roundabout. Then, in 100 meters, You will arrive at your destination.'
+                      verbal_before: 'Exit the roundabout onto D 30. Then, in 100 meters, You will arrive at your destination.'
+                      verbal_after: Continue for 100 meters.
+                  - distance: 1 m
+                    duration: 1 min
+                    polyline: '}o~kHwbjX'
+                    start_location:
+                      - 4.152921
+                      - 49.313434
+                    end_location:
+                      - 4.152921
+                      - 49.313434
+                    travel_mode: DRIVING
+                    instructions:
+                      action: 4
+                      summary: You have arrived at your destination.
+                      verbal_alert: You will arrive at your destination.
+                      verbal_before: You have arrived at your destination.
     DistanceStatus:
       title: DistanceStatus
       type: string
@@ -9743,6 +9869,74 @@ components:
             value: 1
             text: 1 km
           geometry: 's|ihHouuMZ`GdClCsA~QhCnQmBhEvQhWpD|AnHqJ`OwBx@lC|DhAgFnKlBx@v@tHfEvDlBqF{@{NvDgDhAeIbEI~AfL`EnAfHiEiAOE_EuCq@c@cD_FY}C_EqF_@gEoEoKMcCkDsI}@_C}CyG]aG{G[eFoCw@gAiIkDYg@_DwA@'
+    DistanceStep:
+      title: DistanceStep
+      type: object
+      description: step in a leg
+      properties:
+        distance:
+          description: the distance as text covered by this step until the next step.
+          type: string
+          example: 2.8 km
+        duration:
+          description: 'the typical time as text required to perform the step, until the next step'
+          type: string
+          example: 5 minutes
+        polyline:
+          type: string
+          description: 'the polyline representation of the step (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)'
+          example: _igoHa~hYgApBMHOEKO
+        start_location:
+          description: 'The location of the starting point of this step in the form of `[lng,lat]`'
+          type: array
+          items:
+            type: number
+          example:
+            - 42.2
+            - 2.23
+        end_location:
+          description: 'The location of the last point of this step in the form of `[lng,lat]`'
+          type: array
+          items:
+            type: number
+          example:
+            - 42.3
+            - 3.45
+        travel_mode:
+          type: string
+          description: the type of travel mode used
+          example: driving
+        instructions:
+          $ref: '#/components/schemas/DistanceInstructions'
+    DistanceInstructions:
+      title: DistanceInstructions
+      type: object
+      description: Formatted instructions for this leg
+      properties:
+        action:
+          type: integer
+          description: 'The action to take for the current step (turn left, merge, straight, etc.). See [list of available actions](https://developers.woosmap.com/products/distance-api/route-endpoint/#instructions).'
+          example: 2
+        summary:
+          type: string
+          description: Written maneuver instruction.
+          example: Drive northeast on D 151.
+        verbal_alert:
+          type: string
+          description: The transition alert instruction will prepare the user for the forthcoming transition.
+          example: Enter the roundabout and take the 2nd exit onto D 30.
+        verbal_succint:
+          type: string
+          description: Text suitable for use as a verbal alert in a navigation application
+          example: Drive northeast. Then Enter the roundabout and take the 2nd exit onto D 30.
+        verbal_before:
+          type: string
+          description: Text suitable for use as a verbal message immediately prior to the maneuver transition
+          example: Drive northeast on D 151. Then Enter the roundabout and take the 2nd exit onto D 30.
+        verbal_after:
+          type: string
+          description: Text suitable for use as a verbal message immediately after the maneuver transition
+          example: Continue for 700 meters.
     MerchantsBrandClean:
       title: MerchantsBrandClean
       type: object

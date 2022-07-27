@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/distance/route/json?origin=48.709,2.403&destination=48.709,2.303&mode=driving&language=en&alternatives=true&waypoints=48.850077,3.311124%7C48.850077,3.411124&method=distance&key=YOUR_PUBLIC_API_KEY"
+  url := "https://api.woosmap.com/distance/route/json?origin=49.31067,4.14525&destination=49.31344,4.15293&mode=driving&language=en&alternatives=true&method=distance&details=full&key=YOUR_PUBLIC_API_KEY"
   method := "GET"
 
   client := &http.Client {
