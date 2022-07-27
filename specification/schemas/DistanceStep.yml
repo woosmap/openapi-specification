@@ -15,13 +15,13 @@ properties:
     description: the polyline representation of the step (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)
     example: "_igoHa~hYgApBMHOEKO"
   start_location:
-    description: The location of the starting point of this step in the form of `[lat,lng]`
+    description: The location of the starting point of this step in the form of `[lng,lat]`
     type: array
     items:
       type: number
     example: [42.2, 2.23]
   end_location:
-    description: The location of the last point of this step in the form of `[lat,lng]`
+    description: The location of the last point of this step in the form of `[lng,lat]`
     type: array
     items:
       type: number
