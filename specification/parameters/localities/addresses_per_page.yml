@@ -1,0 +1,11 @@
+name: addresses_per_page
+description: >
+  In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters.
+  Notice: as all the addresses are now automatically returned in the response, the `addresses_per_page` parameter is deprecated and has be turned off on December 31, 2021.
+schema:
+  type: integer
+in: query
+deprecated: true
+example: "10"
+
+
