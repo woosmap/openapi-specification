@@ -3371,6 +3371,8 @@ paths:
         - $ref: '#/components/parameters/localities_public_id'
         - $ref: '#/components/parameters/localities_fields'
         - $ref: '#/components/parameters/address_cc_format'
+        - $ref: '#/components/parameters/localities_page'
+        - $ref: '#/components/parameters/localities_addresses_per_page'
       responses:
         '200':
           description: Details successfully retrieved
@@ -5838,6 +5840,15 @@ components:
       required: false
       in: query
       example: 224%20Rue%20de%20Rivoli%2C%20Paris
+    localities_addresses_per_page:
+      name: addresses_per_page
+      description: |
+        In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `addresses_per_page` parameter is deprecated and has been turned off on December 31, 2021.
+      schema:
+        type: integer
+      in: query
+      deprecated: true
+      example: 10
     localities_cc_format:
       name: cc_format
       description: |
@@ -5923,6 +5934,15 @@ components:
       required: false
       example: '5.2,-2.3'
       in: query
+    localities_page:
+      name: page
+      description: |
+        In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `page` parameter is deprecated and has been turned off on December 31, 2021.
+      schema:
+        type: integer
+      in: query
+      deprecated: true
+      example: 1
     localities_public_id:
       name: public_id
       description: |
@@ -8677,13 +8697,17 @@ components:
           properties:
             pagination:
               type: object
+              deprecated: true
+              description: 'The pagination part of the response is deprecated as all the addresses are now automatically returned in the response. It will be turned off at some point. From now on, the pagination will systematically return `page=1`, `pages_count=1`, `addresses_per_page=total addresses count` and `address_count=total addresses count`.'
               properties:
                 page:
                   type: integer
                   description: the request page
+                  deprecated: true
                 page_count:
                   type: integer
                   description: the number of available pages
+                  deprecated: true
                 addresses_per_page:
                   type: integer
                   description: the number of available addresses per page
@@ -8691,6 +8715,7 @@ components:
                 address_count:
                   type: integer
                   description: the number of available addresses
+                  deprecated: true
             list:
               type: array
               description: List of addresses

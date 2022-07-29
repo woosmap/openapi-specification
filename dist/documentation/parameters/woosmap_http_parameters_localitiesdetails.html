@@ -15,6 +15,26 @@
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
+    <h3
+      class="parameter-name deprecated-item hide-from-toc"
+      id="addresses_per_page"
+    >
+      addresses_per_page
+    </h3>
+    <aside class="deprecated">
+      <code>addresses_per_page</code> is deprecated.
+    </aside>
+    <p>
+      In a few cases, a postal code details may contain addresses (UK postal
+      codes). The address list is paginated. In that case, you can navigate in
+      the address list thanks to the <code>addresses_per_page</code> and
+      <code>page</code> parameters. Notice: as all the addresses are now
+      automatically returned in the response, the
+      <code>addresses_per_page</code> parameter is deprecated and has been
+      turned off on December 31, 2021.
+    </p>
+  </li>
+  <li>
     <h3 class="parameter-name" id="cc_format">cc_format</h3>
     <p>
       To specify the format for the short
@@ -30,6 +50,18 @@
       Available fields are (geometry) (fields should be separated by a ,). By
       using this parameter you will limit content of responses to the geometry
       part. No address component will be returned.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name deprecated-item hide-from-toc" id="page">page</h3>
+    <aside class="deprecated"><code>page</code> is deprecated.</aside>
+    <p>
+      In a few cases, a postal code details may contain addresses (UK postal
+      codes). The address list is paginated. In that case, you can navigate in
+      the address list thanks to the <code>addresses_per_page</code> and
+      <code>page</code> parameters. Notice: as all the addresses are now
+      automatically returned in the response, the <code>page</code> parameter is
+      deprecated and has been turned off on December 31, 2021.
     </p>
   </li>
 </ul>

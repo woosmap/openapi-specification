@@ -34,13 +34,17 @@ properties:
     properties:
       pagination:
         type: object
+        deprecated: true
+        description: The pagination part of the response is deprecated as all the addresses are now automatically returned in the response. It will be turned off at some point. From now on, the pagination will systematically return `page=1`, `pages_count=1`, `addresses_per_page=total addresses count` and `address_count=total addresses count`.
         properties:
           page:
             type: integer
             description: the request page
+            deprecated: true
           page_count:
             type: integer
             description: the number of available pages
+            deprecated: true
           addresses_per_page:
             type: integer
             description: the number of available addresses per page
@@ -48,6 +52,7 @@ properties:
           address_count:
             type: integer
             description: the number of available addresses
+            deprecated: true
       list:
         type: array
         description: List of addresses
