@@ -12,7 +12,7 @@
 
     <aside class="deprecated"><code>addresses_per_page</code> is deprecated.</aside>
 
-    In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `addresses_per_page` parameter is deprecated and has be turned off on December 31, 2021.
+    In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `addresses_per_page` parameter is deprecated and has been turned off on December 31, 2021.
 
 -   <h3 class="parameter-name" id="cc_format">cc_format</h3>
 
@@ -26,7 +26,7 @@
 
     <aside class="deprecated"><code>page</code> is deprecated.</aside>
 
-    In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `page` parameter is deprecated and has be turned off on December 31, 2021.
+    In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `page` parameter is deprecated and has been turned off on December 31, 2021.
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
