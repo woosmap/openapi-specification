@@ -8,6 +8,12 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
+-   <h3 class="parameter-name deprecated-item hide-from-toc" id="addresses_per_page">addresses_per_page</h3>
+
+    <aside class="deprecated"><code>addresses_per_page</code> is deprecated.</aside>
+
+    In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `addresses_per_page` parameter is deprecated and has be turned off on December 31, 2021.
+
 -   <h3 class="parameter-name" id="cc_format">cc_format</h3>
 
     To specify the format for the short [country code](https://en.wikipedia.org/wiki/ISO\_3166-1) expected to be returned in the address_components field (default is `alpha3`).
@@ -15,6 +21,12 @@
 -   <h3 class="parameter-name" id="fields">fields</h3>
 
     Used to limit the returning fields (by default, all fields are return). Available fields are (geometry) (fields should be separated by a ,). By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
+
+-   <h3 class="parameter-name deprecated-item hide-from-toc" id="page">page</h3>
+
+    <aside class="deprecated"><code>page</code> is deprecated.</aside>
+
+    In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `page` parameter is deprecated and has be turned off on December 31, 2021.
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
