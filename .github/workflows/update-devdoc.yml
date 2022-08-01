@@ -1,0 +1,18 @@
+# On release, send update-openapi event to woosmap/developers.woosmap.com repository
+name: Update DevDoc
+on:
+  release:
+    types: [published]
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch Release Event
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
+          repository: woosmap/developers.woosmap.com
+          event-type: update-openapi
+          client-payload: '{"release-name": "${{ github.event.release.tag_name }}", "openapi-spec-url": "${{ github.server_url }}/${{ github.repository }}/releases/latest/download/woosmap-openapi3.json"}'
+
+
