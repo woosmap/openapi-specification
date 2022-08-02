@@ -12,7 +12,7 @@ jobs:
         with:
           token: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
           repository: woosmap/developers.woosmap.com
-          event-type: update-openapi
-          client-payload: '{"release-name": "${{ github.event.release.tag_name }}", "openapi-spec-url": "${{ github.server_url }}/${{ github.repository }}/releases/latest/download/woosmap-openapi3.json"}'
+          event-type: update_openapi
+          client-payload: '{"release_name": "${{ github.event.release.tag_name }}", "openapi_spec_url": "${{ github.server_url }}/${{ github.repository }}/releases/latest/download/woosmap-openapi3.json"}'
 
 
