@@ -3660,6 +3660,12 @@
             "$ref": "#/components/parameters/localities_language"
           },
           {
+            "$ref": "#/components/parameters/localities_location"
+          },
+          {
+            "$ref": "#/components/parameters/localities_radius"
+          },
+          {
             "$ref": "#/components/parameters/localities_data"
           },
           {
@@ -6782,6 +6788,16 @@
         "example": "5.2,-2.3",
         "in": "query"
       },
+      "localities_location": {
+        "name": "location",
+        "description": "This parameter is used to add a bias to the autocomplete feature. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.\n",
+        "schema": {
+          "type": "string"
+        },
+        "required": false,
+        "example": "5.2,-2.3",
+        "in": "query"
+      },
       "localities_page": {
         "name": "page",
         "description": "In a few cases, a postal code details may contain addresses (UK postal codes). The address list is paginated. In that case, you can navigate in the address list thanks to the `addresses_per_page` and `page` parameters. Notice: as all the addresses are now automatically returned in the response, the `page` parameter is deprecated and has been turned off on December 31, 2021.\n",
@@ -6801,6 +6817,16 @@
         "required": true,
         "in": "query",
         "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
+      },
+      "localities_radius": {
+        "name": "radius",
+        "description": "This parameter may be used in addition to the `location` parameter to define the distance in meters within which the API will return results in priority. Results outside of the defined area may still be displayed. Default radius if this parameter is not set is 100 000.\n",
+        "schema": {
+          "type": "integer"
+        },
+        "in": "query",
+        "required": false,
+        "example": 200000
       },
       "localities_types": {
         "name": "types",
