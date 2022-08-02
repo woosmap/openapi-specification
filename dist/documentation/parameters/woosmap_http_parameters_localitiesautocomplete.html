@@ -86,6 +86,24 @@
     </p>
   </li>
   <li>
+    <h3 class="parameter-name" id="location">location</h3>
+    <p>
+      This parameter is used to add a bias to the autocomplete feature. The
+      location defines the point around which to retrieve results in priority.
+      It must be specified in the <code>latitude,longitude</code> string format.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="radius">radius</h3>
+    <p>
+      This parameter may be used in addition to the
+      <code>location</code> parameter to define the distance in meters within
+      which the API will return results in priority. Results outside of the
+      defined area may still be displayed. Default radius if this parameter is
+      not set is 100 000.
+    </p>
+  </li>
+  <li>
     <h3 class="parameter-name" id="types">types</h3>
     <p>The types of suggestion to return.</p>
     <ul>

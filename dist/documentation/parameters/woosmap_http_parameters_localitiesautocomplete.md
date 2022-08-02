@@ -28,6 +28,14 @@
 
     The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, the Localities service will use english as default language. No language necessary for `postal_code` request.
 
+-   <h3 class="parameter-name" id="location">location</h3>
+
+    This parameter is used to add a bias to the autocomplete feature. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
+
+-   <h3 class="parameter-name" id="radius">radius</h3>
+
+    This parameter may be used in addition to the `location` parameter to define the distance in meters within which the API will return results in priority. Results outside of the defined area may still be displayed. Default radius if this parameter is not set is 100 000.
+
 -   <h3 class="parameter-name" id="types">types</h3>
 
     The types of suggestion to return.
