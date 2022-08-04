@@ -16,16 +16,10 @@ properties:
     example: "_igoHa~hYgApBMHOEKO"
   start_location:
     description: The location of the starting point of this step in the form of `[lng,lat]`
-    type: array
-    items:
-      type: number
-    example: [42.2, 2.23]
+    $ref: "./LatLngLiteral.yml"
   end_location:
     description: The location of the last point of this step in the form of `[lng,lat]`
-    type: array
-    items:
-      type: number
-    example: [42.3, 3.45]
+    $ref: "./LatLngLiteral.yml"
   travel_mode:
     type: string
     description: the type of travel mode used
