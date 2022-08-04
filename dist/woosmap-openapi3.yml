@@ -4828,11 +4828,11 @@ paths:
                             start_location:
                               lat: 49.31067
                               lng: 4.14525
-                              waypoint: 0
                             end_location:
                               lat: 49.31344
                               lng: 4.15293
-                              waypoint: 1
+                            start_waypoint: 0
+                            end_waypoint: 1
                             end_address: D 30
                             start_address: D 151
                             steps:
@@ -4840,11 +4840,11 @@ paths:
                                 duration: 1 min
                                 polyline: 'a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?Q'
                                 start_location:
-                                  - 4.145163
-                                  - 49.31073
+                                  lat: 49.31073
+                                  lng: 4.145163
                                 end_location:
-                                  - 4.149621
-                                  - 49.315679
+                                  lat: 49.315679
+                                  lng: 4.149621
                                 travel_mode: DRIVING
                                 instructions:
                                   action: 2
@@ -4856,11 +4856,11 @@ paths:
                                 duration: 1 min
                                 polyline: '}}~kHcniXBIBU?W'
                                 start_location:
-                                  - 4.149621
-                                  - 49.315679
+                                  lat: 49.315679
+                                  lng: 4.149621
                                 end_location:
-                                  - 4.149905
-                                  - 49.31563
+                                  lat: 49.31563
+                                  lng: 4.149905
                                 travel_mode: DRIVING
                                 instructions:
                                   action: 26
@@ -4872,11 +4872,11 @@ paths:
                                 duration: 1 min
                                 polyline: 'u}~kH{oiXFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELC'
                                 start_location:
-                                  - 4.149905
-                                  - 49.31563
+                                  lat: 49.31563
+                                  lng: 4.149905
                                 end_location:
-                                  - 4.151623
-                                  - 49.314292
+                                  lat: 49.314292
+                                  lng: 4.151623
                                 travel_mode: DRIVING
                                 instructions:
                                   action: 27
@@ -4888,11 +4888,11 @@ paths:
                                 duration: 1 min
                                 polyline: iu~kHsziXJBJAHGFIDMBSAS
                                 start_location:
-                                  - 4.151623
-                                  - 49.314292
+                                  lat: 49.314292
+                                  lng: 4.151623
                                 end_location:
-                                  - 4.151976
-                                  - 49.314041
+                                  lat: 49.314041
+                                  lng: 4.151976
                                 travel_mode: DRIVING
                                 instructions:
                                   action: 26
@@ -4904,11 +4904,11 @@ paths:
                                 duration: 1 min
                                 polyline: ws~kHy|iXBKDILURa@LWt@eAHQ
                                 start_location:
-                                  - 4.151976
-                                  - 49.314041
+                                  lat: 49.314041
+                                  lng: 4.151976
                                 end_location:
-                                  - 4.152921
-                                  - 49.313434
+                                  lat: 49.313434
+                                  lng: 4.152921
                                 travel_mode: DRIVING
                                 instructions:
                                   action: 27
@@ -4920,11 +4920,11 @@ paths:
                                 duration: 1 min
                                 polyline: '}o~kHwbjX'
                                 start_location:
-                                  - 4.152921
-                                  - 49.313434
+                                  lat: 49.313434
+                                  lng: 4.152921
                                 end_location:
-                                  - 4.152921
-                                  - 49.313434
+                                  lat: 49.313434
+                                  lng: 4.152921
                                 travel_mode: DRIVING
                                 instructions:
                                   action: 4
@@ -9485,30 +9485,18 @@ components:
               example: 5 mins
         start_location:
           description: 'The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.'
-          type: object
-          properties:
-            lat:
-              type: number
-              description: Latitude in decimal degrees
-            lng:
-              type: number
-              description: Longitude in decimal degrees
-            waypoint:
-              type: integer
-              description: The waypoint order number
+          $ref: '#/components/schemas/LatLngLiteral'
         end_location:
           description: 'The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.'
-          type: object
-          properties:
-            lat:
-              type: number
-              description: Latitude in decimal degrees
-            lng:
-              type: number
-              description: Longitude in decimal degrees
-            waypoint:
-              type: integer
-              description: The waypoint order number
+          $ref: '#/components/schemas/LatLngLiteral'
+        start_waypoint:
+          type: integer
+          description: The start waypoint order number
+          example: 1
+        end_waypoint:
+          type: integer
+          description: The end waypoint order number
+          example: 2
         start_address:
           type: string
           description: the starting address of the leg
@@ -9673,11 +9661,11 @@ components:
                 start_location:
                   lat: 49.31067
                   lng: 4.14525
-                  waypoint: 0
                 end_location:
                   lat: 49.31344
                   lng: 4.15293
-                  waypoint: 1
+                start_waypoint: 0
+                end_waypoint: 1
                 end_address: D 30
                 start_address: D 151
                 steps:
@@ -9685,11 +9673,11 @@ components:
                     duration: 1 min
                     polyline: 'a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?Q'
                     start_location:
-                      - 4.145163
-                      - 49.31073
+                      lat: 49.31073
+                      lng: 4.145163
                     end_location:
-                      - 4.149621
-                      - 49.315679
+                      lat: 49.315679
+                      lng: 4.149621
                     travel_mode: DRIVING
                     instructions:
                       action: 2
@@ -9701,11 +9689,11 @@ components:
                     duration: 1 min
                     polyline: '}}~kHcniXBIBU?W'
                     start_location:
-                      - 4.149621
-                      - 49.315679
+                      lat: 49.315679
+                      lng: 4.149621
                     end_location:
-                      - 4.149905
-                      - 49.31563
+                      lat: 49.31563
+                      lng: 4.149905
                     travel_mode: DRIVING
                     instructions:
                       action: 26
@@ -9717,11 +9705,11 @@ components:
                     duration: 1 min
                     polyline: 'u}~kH{oiXFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELC'
                     start_location:
-                      - 4.149905
-                      - 49.31563
+                      lat: 49.31563
+                      lng: 4.149905
                     end_location:
-                      - 4.151623
-                      - 49.314292
+                      lat: 49.314292
+                      lng: 4.151623
                     travel_mode: DRIVING
                     instructions:
                       action: 27
@@ -9733,11 +9721,11 @@ components:
                     duration: 1 min
                     polyline: iu~kHsziXJBJAHGFIDMBSAS
                     start_location:
-                      - 4.151623
-                      - 49.314292
+                      lat: 49.314292
+                      lng: 4.151623
                     end_location:
-                      - 4.151976
-                      - 49.314041
+                      lat: 49.314041
+                      lng: 4.151976
                     travel_mode: DRIVING
                     instructions:
                       action: 26
@@ -9749,11 +9737,11 @@ components:
                     duration: 1 min
                     polyline: ws~kHy|iXBKDILURa@LWt@eAHQ
                     start_location:
-                      - 4.151976
-                      - 49.314041
+                      lat: 49.314041
+                      lng: 4.151976
                     end_location:
-                      - 4.152921
-                      - 49.313434
+                      lat: 49.313434
+                      lng: 4.152921
                     travel_mode: DRIVING
                     instructions:
                       action: 27
@@ -9765,11 +9753,11 @@ components:
                     duration: 1 min
                     polyline: '}o~kHwbjX'
                     start_location:
-                      - 4.152921
-                      - 49.313434
+                      lat: 49.313434
+                      lng: 4.152921
                     end_location:
-                      - 4.152921
-                      - 49.313434
+                      lat: 49.313434
+                      lng: 4.152921
                     travel_mode: DRIVING
                     instructions:
                       action: 4
@@ -9932,21 +9920,11 @@ components:
           description: 'the polyline representation of the step (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)'
           example: _igoHa~hYgApBMHOEKO
         start_location:
-          description: 'The location of the starting point of this step in the form of `[lng,lat]`'
-          type: array
-          items:
-            type: number
-          example:
-            - 42.2
-            - 2.23
+          description: The location of the starting point of this step
+          $ref: '#/components/schemas/LatLngLiteral'
         end_location:
-          description: 'The location of the last point of this step in the form of `[lng,lat]`'
-          type: array
-          items:
-            type: number
-          example:
-            - 42.3
-            - 3.45
+          description: The location of the last point of this step
+          $ref: '#/components/schemas/LatLngLiteral'
         travel_mode:
           type: string
           description: the type of travel mode used

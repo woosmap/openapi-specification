@@ -41,14 +41,14 @@ Attributes describing a distance route response.
           },
           "start_location": {
             "lat": 49.31067,
-            "lng": 4.14525,
-            "waypoint": 0
+            "lng": 4.14525
           },
           "end_location": {
             "lat": 49.31344,
-            "lng": 4.15293,
-            "waypoint": 1
+            "lng": 4.15293
           },
+          "start_waypoint": 0,
+          "end_waypoint": 1,
           "end_address": "D 30",
           "start_address": "D 151",
           "steps": [
@@ -56,14 +56,14 @@ Attributes describing a distance route response.
               "distance": "676 m",
               "duration": "1 min",
               "polyline": "a_~kHgrhXu@yAe@y@c@q@e@q@c@o@e@m@y@eAa@g@a@c@Y[UUQQYUQOSOQKSKOKQISIWKSEUEMCQAa@CeA@[E}@EUAOEOGKKIOM[I]Ea@A[?Q",
-              "start_location": [
-                4.145163,
-                49.31073
-              ],
-              "end_location": [
-                4.149621,
-                49.315679
-              ],
+              "start_location": {
+                "lat": 49.31073,
+                "lng": 4.145163
+              },
+              "end_location": {
+                "lat": 49.315679,
+                "lng": 4.149621
+              },
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 2,
@@ -77,14 +77,14 @@ Attributes describing a distance route response.
               "distance": "22 m",
               "duration": "1 min",
               "polyline": "}}~kHcniXBIBU?W",
-              "start_location": [
-                4.149621,
-                49.315679
-              ],
-              "end_location": [
-                4.149905,
-                49.31563
-              ],
+              "start_location": {
+                "lat": 49.315679,
+                "lng": 4.149621
+              },
+              "end_location": {
+                "lat": 49.31563,
+                "lng": 4.149905
+              },
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 26,
@@ -98,14 +98,14 @@ Attributes describing a distance route response.
               "distance": "198 m",
               "duration": "1 min",
               "polyline": "u}~kH{oiXFWDOLUP[P]j@y@^g@`@i@NUNONMJKJIFELC",
-              "start_location": [
-                4.149905,
-                49.31563
-              ],
-              "end_location": [
-                4.151623,
-                49.314292
-              ],
+              "start_location": {
+                "lat": 49.31563,
+                "lng": 4.149905
+              },
+              "end_location": {
+                "lat": 49.314292,
+                "lng": 4.151623
+              },
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 27,
@@ -119,14 +119,14 @@ Attributes describing a distance route response.
               "distance": "46 m",
               "duration": "1 min",
               "polyline": "iu~kHsziXJBJAHGFIDMBSAS",
-              "start_location": [
-                4.151623,
-                49.314292
-              ],
-              "end_location": [
-                4.151976,
-                49.314041
-              ],
+              "start_location": {
+                "lat": 49.314292,
+                "lng": 4.151623
+              },
+              "end_location": {
+                "lat": 49.314041,
+                "lng": 4.151976
+              },
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 26,
@@ -140,14 +140,14 @@ Attributes describing a distance route response.
               "distance": "96 m",
               "duration": "1 min",
               "polyline": "ws~kHy|iXBKDILURa@LWt@eAHQ",
-              "start_location": [
-                4.151976,
-                49.314041
-              ],
-              "end_location": [
-                4.152921,
-                49.313434
-              ],
+              "start_location": {
+                "lat": 49.314041,
+                "lng": 4.151976
+              },
+              "end_location": {
+                "lat": 49.313434,
+                "lng": 4.152921
+              },
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 27,
@@ -161,14 +161,14 @@ Attributes describing a distance route response.
               "distance": "1 m",
               "duration": "1 min",
               "polyline": "}o~kHwbjX",
-              "start_location": [
-                4.152921,
-                49.313434
-              ],
-              "end_location": [
-                4.152921,
-                49.313434
-              ],
+              "start_location": {
+                "lat": 49.313434,
+                "lng": 4.152921
+              },
+              "end_location": {
+                "lat": 49.313434,
+                "lng": 4.152921
+              },
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 4,

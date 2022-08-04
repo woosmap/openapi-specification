@@ -26,30 +26,18 @@ properties:
         example: "5 mins"
   start_location:
     description: The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.
-    type: object
-    properties:
-      lat:
-        type: number
-        description: Latitude in decimal degrees
-      lng:
-        type: number
-        description: Longitude in decimal degrees
-      waypoint:
-        type: integer
-        description: The waypoint order number
+    $ref: "./LatLngLiteral.yml"
   end_location:
     description: The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.
-    type: object
-    properties:
-      lat:
-        type: number
-        description: Latitude in decimal degrees
-      lng:
-        type: number
-        description: Longitude in decimal degrees
-      waypoint:
-        type: integer
-        description: The waypoint order number
+    $ref: "./LatLngLiteral.yml"
+  start_waypoint:
+    type: integer
+    description: The start waypoint order number
+    example: 1
+  end_waypoint:
+    type: integer
+    description: The end waypoint order number
+    example: 2
   start_address:
     type: string
     description: the starting address of the leg
