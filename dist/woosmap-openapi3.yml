@@ -9491,11 +9491,11 @@ components:
           $ref: '#/components/schemas/LatLngLiteral'
         start_waypoint:
           type: integer
-          description: The waypoint order number
+          description: The start waypoint order number
           example: 1
         end_waypoint:
           type: integer
-          description: The waypoint order number
+          description: The end waypoint order number
           example: 2
         start_address:
           type: string
@@ -9920,10 +9920,10 @@ components:
           description: 'the polyline representation of the step (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)'
           example: _igoHa~hYgApBMHOEKO
         start_location:
-          description: 'The location of the starting point of this step in the form of `[lng,lat]`'
+          description: The location of the starting point of this step
           $ref: '#/components/schemas/LatLngLiteral'
         end_location:
-          description: 'The location of the last point of this step in the form of `[lng,lat]`'
+          description: The location of the last point of this step
           $ref: '#/components/schemas/LatLngLiteral'
         travel_mode:
           type: string
