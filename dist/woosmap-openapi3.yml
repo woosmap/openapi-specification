@@ -4262,7 +4262,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Success'
+                $ref: '#/components/schemas/SuccessZones'
               examples:
                 default:
                   value:
@@ -4441,7 +4441,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Success'
+                $ref: '#/components/schemas/SuccessZones'
               examples:
                 default:
                   value:
@@ -8171,8 +8171,13 @@ components:
             - wifi
             - covered_parking
         userProperties:
-          description: Contains all additional information relative to an Asset
-          type: object
+          description: Contains all additional information relative to an Asset. If not set it returns null value.
+          nullable: true
+          oneOf:
+            - type: object
+            - type: string
+          example:
+            some_user_properties: some_value
         localizedNames:
           description: Alternate names for your assets. These localized names are useful for multi-language integrations. Combined with our Autocomplete API endpoint you can let your users find your store in their native language.
           type: object
@@ -8589,9 +8594,15 @@ components:
           example: 'London, UK'
           deprecated: true
         location:
-          title: LatLngLiteral
           type: object
           description: An object describing a specific location with Latitude and Longitude in decimal degrees.
+          properties:
+            lat:
+              type: number
+              description: Latitude in decimal degrees
+            lng:
+              type: number
+              description: Longitude in decimal degrees
           deprecated: true
         admin_0:
           description: Contains the country name.
@@ -9456,6 +9467,19 @@ components:
           - delivery
         description: Delivery Zone for Store A
         status: ok
+    SuccessZones:
+      title: SuccessZones
+      type: object
+      description: Message returned to a success request
+      properties:
+        status:
+          type: string
+          description: the status of the request
+          example: success
+        message:
+          description: message returned with the request
+          example: Zones successfully updated.
+          type: string
     DistanceLeg:
       title: DistanceLeg
       type: object
