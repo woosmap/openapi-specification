@@ -31,8 +31,12 @@ properties:
       type: string
     example: [ "wifi", "covered_parking" ]
   userProperties:
-    description: Contains all additional information relative to an Asset
-    type: object
+    description: Contains all additional information relative to an Asset. If not set it returns null value.
+    nullable: true
+    oneOf:
+      - type: object
+      - type: string
+    example: { "some_user_properties": "some_value" }
   localizedNames:
     description: Alternate names for your assets. These localized names are useful for multi-language integrations.
       Combined with our Autocomplete API endpoint you can let your users find your store in their native language.
