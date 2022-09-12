@@ -33,9 +33,8 @@ properties:
   userProperties:
     description: Contains all additional information relative to an Asset. If not set it returns null value.
     nullable: true
-    oneOf:
-      - type: object
-      - type: string
+    type: object
+    additionalProperties: true
     example: { "some_user_properties": "some_value" }
   localizedNames:
     description: Alternate names for your assets. These localized names are useful for multi-language integrations.
