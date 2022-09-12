@@ -29,9 +29,15 @@ properties:
     example: "London, UK"
     deprecated: true
   location:
-    title: LatLngLiteral
     type: object
     description: An object describing a specific location with Latitude and Longitude in decimal degrees.
+    properties:
+      lat:
+        type: number
+        description: Latitude in decimal degrees
+      lng:
+        type: number
+        description: Longitude in decimal degrees
     deprecated: true
   admin_0:
     description: Contains the country name.
