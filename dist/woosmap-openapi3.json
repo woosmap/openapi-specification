@@ -5057,7 +5057,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Success"
+                  "$ref": "#/components/schemas/SuccessZones"
                 },
                 "examples": {
                   "default": {
@@ -7073,14 +7073,8 @@
           "user_properties": {
             "description": "Contains all additional information relative to an Asset. If not set it returns null value.",
             "nullable": true,
-            "oneOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ],
+            "type": "object",
+            "additionalProperties": true,
             "example": {
               "some_user_properties": "some_value"
             }
@@ -10140,14 +10134,8 @@
           "userProperties": {
             "description": "Contains all additional information relative to an Asset. If not set it returns null value.",
             "nullable": true,
-            "oneOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ],
+            "type": "object",
+            "additionalProperties": true,
             "example": {
               "some_user_properties": "some_value"
             }
