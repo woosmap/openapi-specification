@@ -16,6 +16,10 @@
 
     A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
 
+-   <h3 class="parameter-name" id="fields">fields</h3>
+
+    Used to limit the returning fields (by default, all fields are return). Available fields are (geometry) (fields should be separated by a ,). By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
+
 -   <h3 class="parameter-name" id="language">language</h3>
 
     The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, the Localities service will use english as default language. No language necessary for `postal_code` request.
