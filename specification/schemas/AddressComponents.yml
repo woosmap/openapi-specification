@@ -6,14 +6,16 @@ properties:
     oneOf:
       - type : string
       - type : array
-        items: string
+        items:
+          type: string
     description: The full text description or name of the address component, or a list of names (ie. list of postal codes).
     example: United Kingdom
   short_name:
     oneOf:
       - type: string
       - type: array
-        items: string
+        items:
+          type: string
     description: An abbreviated textual name for the address component, if available. For example, an address component for the state of United Kingdom may have a `long_name` of `United Kingdom` and a `short_name` of `UK` using the 2-letter postal abbreviation.
     example: UK
   types:
