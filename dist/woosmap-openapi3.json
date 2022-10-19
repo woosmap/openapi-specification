@@ -9543,13 +9543,33 @@
         "description": "Address Components with additional information",
         "properties": {
           "long_name": {
-            "type": "string",
-            "description": "The full text description or name of the address component as returned by the Details.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "The full text description or name of the address component, or a list of names (ie. list of postal codes).",
             "example": "United Kingdom"
           },
           "short_name": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
             "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of United Kingdom may have a `long_name` of `United Kingdom` and a `short_name` of `UK` using the 2-letter postal abbreviation.",
-            "type": "string",
             "example": "UK"
           },
           "types": {
@@ -9578,7 +9598,7 @@
       "AddressGeometry": {
         "title": "AddressGeometry",
         "type": "object",
-        "description": "The location of the result, in latitude and logitude. Accuracy is also provided.",
+        "description": "The location of the result, in latitude and longitude. Accuracy is also provided.",
         "properties": {
           "location_type": {
             "description": "Specifies additional data about the geocoded location. The following values are currently supported: \n  - `ROOFTOP` result is a precise geocode for which we have location information accurate down to street address precision.\n  - `RANGE_INTERPOLATED` result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.\n  - `GEOMETRIC_CENTER` result is the geometric center of a result such as a polyline (for example, a street) or polygon (city, region, …).\n  - `APPROXIMATE` result is approximate (usually when no other above value applies)\n",
