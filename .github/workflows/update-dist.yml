@@ -27,3 +27,13 @@ jobs:
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reaction-type: rocket
+      - name: Add Preview Link Comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Preview the reference [here][1]
+            
+            [1]: https://developers.woosmap.com/api-reference/?ref=https://raw.githubusercontent.com/${{ github.event.client_payload.github.payload.repository.full_name }}/${{ github.head_ref || github.ref_name }}/dist/woosmap-openapi3.json
+          token: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
