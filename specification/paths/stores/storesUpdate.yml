@@ -16,6 +16,7 @@ requestBody:
          $ref: "../../schemas/AssetsCollectionRequest.yml"
       examples:
         default:
+          summary: Stores data as JSON
           value:
             $ref: "../../requests/woosmap_http_assets_update_request.yml"
 responses:
@@ -27,6 +28,7 @@ responses:
           $ref: "../../schemas/Success.yml"
         examples:
           default:
+            summary: Success response for Stores updated
             value:
               $ref: "../../responses/woosmap_http_assets_update_request_response.yml"
   "400":

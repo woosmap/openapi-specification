@@ -15,6 +15,7 @@ requestBody:
         $ref: "../../schemas/MerchantsPlaceRequest.yml"
       examples:
         default:
+          summary: Merchant Clean name body request as JSON
           value:
             $ref: "../../requests/woosmap_http_merchants_place_request.yml"
 responses:
@@ -26,6 +27,7 @@ responses:
           $ref: "../../schemas/MerchantsPlaceResponse.yml"
         examples:
           default:
+            summary: Merchant Clean names with google place_id for various dirty names such as `MCDO UK 2231 EP`
             value:
               $ref: "../../responses/woosmap_http_merchants_place_response.yml"
   "400":

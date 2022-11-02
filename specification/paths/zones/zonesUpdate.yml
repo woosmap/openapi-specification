@@ -15,6 +15,7 @@ requestBody:
          $ref: "../../schemas/ZonesCollectionRequest.yml"
       examples:
         default:
+          summary: Zones data
           value:
             $ref: "../../requests/woosmap_http_zones_collection_request.yml"
 responses:
@@ -26,6 +27,7 @@ responses:
           $ref: "../../schemas/SuccessZones.yml"
         examples:
           default:
+            summary: Success response for Zones updated
             value:
               $ref: "../../responses/woosmap_http_zones_collection_request_response.yml"
   "400":

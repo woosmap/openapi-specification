@@ -18,6 +18,7 @@ requestBody:
          $ref: "../../schemas/DistanceMatrixRequest.yml"
       examples:
         default:
+          summary: Request as a JSON for a distance matrix call
           value:
             $ref: "../../requests/woosmap_http_distance_matrix_request.yml"
 responses:
@@ -29,6 +30,7 @@ responses:
           $ref: "../../schemas/DistanceMatrixResponse.yml"
         examples:
           default:
+            summary: Distance Matrix Result for driving from origins `48.73534,2.368308|48.73534,2.368308` to destinations `48.83534,2.368308`,
             value:
               $ref: "../../responses/woosmap_http_distance_matrix_response.yml"
   "400":
