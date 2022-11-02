@@ -1,7 +1,9 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START woosmap_http_schema_distancematrixrequest] -->
-<h3 class="schema-object" id="DistanceMatrixRequest">DistanceMatrixRequest</h3>
-<p>Attributes describing a distance Matrix request</p>
+<!--- [START woosmap_http_schema_trafficdistancematrixrequest] -->
+<h3 class="schema-object" id="TrafficDistanceMatrixRequest">
+  TrafficDistanceMatrixRequest
+</h3>
+<p>Attributes describing a Traffic Distance Matrix request</p>
 <table>
   <thead>
     <tr>
@@ -15,7 +17,7 @@
     <tr>
       <td align="left">
         <h4
-          id="DistanceMatrixRequest-destinations"
+          id="TrafficDistanceMatrixRequest-destinations"
           class="add-link schema-object-property-key"
         >
           <code>destinations</code>
@@ -31,7 +33,7 @@
     <tr>
       <td align="left">
         <h4
-          id="DistanceMatrixRequest-origins"
+          id="TrafficDistanceMatrixRequest-origins"
           class="add-link schema-object-property-key"
         >
           <code>origins</code>
@@ -46,10 +48,10 @@
     <tr>
       <td align="left">
         <h4
-          id="DistanceMatrixRequest-elements"
+          id="TrafficDistanceMatrixRequest-departure_time"
           class="add-link schema-object-property-key"
         >
-          <code>elements</code>
+          <code>departure_time</code>
         </h4>
       </td>
       <td>optional</td>
@@ -57,21 +59,18 @@
       <td>
         <div class="nonref-property-description">
           <p>
-            Specifies element values that will be part of the API response
-            (distance and/or duration). if not specified default is
-            <code>distance</code>
+            Specifies the date/time at which to base the calculations on for
+            traffic purposes. Valid values are a timestamp (e.g.
+            <code>1600799173</code> for the date:<code>22/09/2020 20:26:13</code
+            >) or <code>now</code>.
           </p>
-          <div class="notranslate">
-            The allowed values include: <code>distance</code>,
-            <code>duration</code>, and <code>duration_distance</code>
-          </div>
         </div>
       </td>
     </tr>
     <tr>
       <td align="left">
         <h4
-          id="DistanceMatrixRequest-language"
+          id="TrafficDistanceMatrixRequest-language"
           class="add-link schema-object-property-key"
         >
           <code>language</code>
@@ -92,10 +91,10 @@
     <tr>
       <td align="left">
         <h4
-          id="DistanceMatrixRequest-method"
+          id="TrafficDistanceMatrixRequest-routing"
           class="add-link schema-object-property-key"
         >
-          <code>method</code>
+          <code>routing</code>
         </h4>
       </td>
       <td>optional</td>
@@ -103,16 +102,21 @@
       <td>
         <div class="nonref-property-description">
           <p>
-            Specifies the method to compute the route between the start point
-            and the end point:
+            Specifies what to base the cost calculation on. If not specified
+            default is <code>fastest</code>.
           </p>
           <ul>
-            <li><code>time</code>: fastest route (default)</li>
-            <li><code>distance</code>: shortest route</li>
+            <li>
+              <code>fastest</code> will include traffic and optimise the route
+              based on the smallest travel time.
+            </li>
+            <li>
+              <code>shortest</code> will optimise based on travel distance.
+            </li>
           </ul>
           <div class="notranslate">
-            The allowed values include: <code>time</code>, and
-            <code>distance</code>
+            The allowed values include: <code>fastest</code>, and
+            <code>shortest</code>
           </div>
         </div>
       </td>
@@ -120,30 +124,7 @@
     <tr>
       <td align="left">
         <h4
-          id="DistanceMatrixRequest-mode"
-          class="add-link schema-object-property-key"
-        >
-          <code>mode</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Specifies the mode of transport to use when calculating distance
-          </p>
-          <div class="notranslate">
-            The allowed values include: <code>driving</code>,
-            <code>cycling</code>, and <code>walking</code>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixRequest-units"
+          id="TrafficDistanceMatrixRequest-units"
           class="add-link schema-object-property-key"
         >
           <code>units</code>
@@ -157,7 +138,7 @@
     </tr>
   </tbody>
 </table>
-<h4 class="schema-object-example" id="DistanceMatrixRequest-example">
+<h4 class="schema-object-example" id="TrafficDistanceMatrixRequest-example">
   Example
 </h4>
 <pre class="notranslate lang-json prettyprint">
@@ -165,8 +146,8 @@
   "origins": "48.73534,2.368308|48.73534,2.368308",
   "destinations": "48.83534,2.368308",
   "units": "imperial",
-  "elements": "duration_distance",
-  "method": "distance"
+  "routing": "fastest",
+  "departure_time": "now"
 }</pre
 >
 <p style="text-align: right; font-size: smaller">
@@ -179,21 +160,21 @@
     >OpenAPI specification</a
   >.
   <a
-    data-label="openapi-github-woosmap-http-schema-distancematrixrequest"
+    data-label="openapi-github-woosmap-http-schema-trafficdistancematrixrequest"
     data-action="edit"
     style="margin-left: 5px"
-    href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/DistanceMatrixRequest.yml"
+    href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/TrafficDistanceMatrixRequest.yml"
     title="Edit on GitHub"
     >✎ Edit</a
   >
   <a
-    data-label="openapi-github-woosmap-http-schema-distancematrixrequest"
+    data-label="openapi-github-woosmap-http-schema-trafficdistancematrixrequest"
     data-action="bug"
     style="margin-left: 5px"
-    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DistanceMatrixRequest"
+    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - TrafficDistanceMatrixRequest"
     title="File bug for schemas on GitHub"
     ><span class="material-icons">bug_report</span> Report bug</a
   >
 </p>
 
-<!--- [END woosmap_http_schema_distancematrixrequest] -->
+<!--- [END woosmap_http_schema_trafficdistancematrixrequest] -->
