@@ -1,0 +1,45 @@
+title: TrafficDistanceLeg
+type: object
+description: Leg in a route
+properties:
+  distance:
+    description: The total distance covered by this leg.
+    type: object
+    properties:
+      value:
+        description: The distance in meter
+        type: number
+        example: 2775.1
+      text:
+        type: string
+        example: "2.8 km"
+  duration_with_traffic:
+    description: The duration of the leg, considering the traffic.
+    type: object
+    properties:
+      value:
+        description: The duration in seconds
+        type: number
+        example: 360
+      text:
+        type: string
+        example: "6 mins"
+  duration_without_traffic:
+    description: The duration of the leg, considering no traffic.
+    type: object
+    properties:
+      value:
+        description: The duration in seconds
+        type: number
+        example: 272.5
+      text:
+        type: string
+        example: "5 mins"
+  start_location:
+    description: The latitude/longitude coordinates of the origin of this leg. Because the Traffic Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.
+    $ref: "./LatLngLiteral.yml"
+  end_location:
+    description: The latitude/longitude coordinates of the given destination of this leg. Because the Traffic Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.
+    $ref: "./LatLngLiteral.yml"
+
+
