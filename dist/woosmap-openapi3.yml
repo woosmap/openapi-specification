@@ -5284,15 +5284,7 @@ paths:
         - $ref: '#/components/parameters/distance_language'
         - $ref: '#/components/parameters/distance_units'
         - $ref: '#/components/parameters/distance_alternatives'
-        - name: waypoints
-          in: query
-          example: '48.850077,3.311124|48.850077,3.411124'
-          schema:
-            type: string
-          description: |
-            A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by `|` character.
-              
-            `alternatives` and `waypoints` can not be used at the same time.
+        - $ref: '#/components/parameters/traffic_waypoints'
         - $ref: '#/components/parameters/traffic_departure_time'
         - $ref: '#/components/parameters/traffic_arrival_time'
         - $ref: '#/components/parameters/traffic_avoid'
@@ -6503,6 +6495,16 @@ components:
         Specifies what to base the cost calculation on. If not specified default is `fastest`.
           * `fastest` will include traffic and optimise the route based on the smallest travel time.
           * `shortest` will optimise based on travel distance.
+    traffic_waypoints:
+      name: waypoints
+      in: query
+      example: '48.850077,3.311124|48.850077,3.411124'
+      schema:
+        type: string
+      description: |
+        A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by `|` character.
+          
+        `alternatives` and `waypoints` can not be used at the same time.
     zones_limit:
       name: limit
       description: |
