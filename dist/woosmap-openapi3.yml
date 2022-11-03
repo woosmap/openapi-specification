@@ -15,6 +15,9 @@ info:
   x-document-meta-data:
     copyright: © 2022 Woosmap
   version: 1.5.1
+  contact:
+    name: Woosmap API
+    url: 'https://developers.woosmap.com/support/contact/'
 servers:
   - url: 'https://api.woosmap.com'
 paths:
@@ -3508,7 +3511,7 @@ paths:
             print(response.text)
   /localities/geocode:
     get:
-      summary: Geocode an Address or Reverse Geocode a latlng
+      summary: Geocode a locality or Reverse Geocode a latlng
       operationId: localitiesGeocode
       servers:
         - url: 'https://api.woosmap.com'
@@ -6226,13 +6229,13 @@ components:
       title: LatLngArrayString
       description: 'An array of comma separated {latitude,longitude} strings.'
       example:
-        - '43.4,-2.1'
-        - '46.32,-89.45'
+        - 43.4
+        - -2.1
       type: array
+      minItems: 2
+      maxItems: 2
       items:
         type: number
-        minItems: 2
-        maxItems: 2
     GeoJsonPoint:
       title: GeoJsonPoint
       type: object
@@ -8716,28 +8719,6 @@ components:
         admin_1: City of London
         locality: ''
         admin_0: United Kingdom
-    LocalitiesBounds:
-      title: LocalitiesBounds
-      type: object
-      description: A rectangle in geographical coordinates from points at the southwest and northeast corners.
-      required:
-        - north
-        - east
-        - south
-        - west
-      properties:
-        north:
-          type: number
-          description: Latitude in decimal degrees for upper right corner
-        east:
-          type: number
-          description: Longitude in decimal degrees for upper right corner
-        south:
-          type: number
-          description: Latitude in decimal degrees for lower left corner
-        west:
-          type: number
-          description: Longitude in decimal degrees for lower left corner
     LocalitiesDetailsPostalCodeResponse:
       title: LocalitiesDetailsPostalCodeResponse
       type: object
@@ -8867,13 +8848,6 @@ components:
         - postal_code
         - route
         - address
-    LocalitiesViewpoint:
-      title: LocalitiesViewpoint
-      type: object
-      description: Contains the bounds for the locality
-      properties:
-        bounds:
-          $ref: '#/components/schemas/LocalitiesBounds'
     LocalitiesDetailsResponse:
       title: LocalitiesDetailsResponse
       type: object
@@ -9555,10 +9529,8 @@ components:
               type: string
               example: 5 mins
         start_location:
-          description: 'The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.'
           $ref: '#/components/schemas/LatLngLiteral'
         end_location:
-          description: 'The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.'
           $ref: '#/components/schemas/LatLngLiteral'
         start_waypoint:
           type: integer
@@ -9933,7 +9905,6 @@ components:
           type: object
           properties:
             origin:
-              description: The point around which the isochrone is centered
               $ref: '#/components/schemas/LatLngLiteral'
             time:
               description: The time of the isochrone (returned as default or when specifying `method=time` in parameters)
@@ -9991,10 +9962,8 @@ components:
           description: 'the polyline representation of the step (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)'
           example: _igoHa~hYgApBMHOEKO
         start_location:
-          description: The location of the starting point of this step
           $ref: '#/components/schemas/LatLngLiteral'
         end_location:
-          description: The location of the last point of this step
           $ref: '#/components/schemas/LatLngLiteral'
         travel_mode:
           type: string

@@ -7,7 +7,11 @@
     "x-document-meta-data": {
       "copyright": "© 2022 Woosmap"
     },
-    "version": "1.5.1"
+    "version": "1.5.1",
+    "contact": {
+      "name": "Woosmap API",
+      "url": "https://developers.woosmap.com/support/contact/"
+    }
   },
   "servers": [
     {
@@ -4045,7 +4049,7 @@
     },
     "/localities/geocode": {
       "get": {
-        "summary": "Geocode an Address or Reverse Geocode a latlng",
+        "summary": "Geocode a locality or Reverse Geocode a latlng",
         "operationId": "localitiesGeocode",
         "servers": [
           {
@@ -7039,14 +7043,14 @@
         "title": "LatLngArrayString",
         "description": "An array of comma separated {latitude,longitude} strings.",
         "example": [
-          "43.4,-2.1",
-          "46.32,-89.45"
+          43.4,
+          -2.1
         ],
         "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
         "items": {
-          "type": "number",
-          "minItems": 2,
-          "maxItems": 2
+          "type": "number"
         }
       },
       "GeoJsonPoint": {
@@ -10883,35 +10887,6 @@
           "admin_0": "United Kingdom"
         }
       },
-      "LocalitiesBounds": {
-        "title": "LocalitiesBounds",
-        "type": "object",
-        "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
-        "required": [
-          "north",
-          "east",
-          "south",
-          "west"
-        ],
-        "properties": {
-          "north": {
-            "type": "number",
-            "description": "Latitude in decimal degrees for upper right corner"
-          },
-          "east": {
-            "type": "number",
-            "description": "Longitude in decimal degrees for upper right corner"
-          },
-          "south": {
-            "type": "number",
-            "description": "Latitude in decimal degrees for lower left corner"
-          },
-          "west": {
-            "type": "number",
-            "description": "Longitude in decimal degrees for lower left corner"
-          }
-        }
-      },
       "LocalitiesDetailsPostalCodeResponse": {
         "title": "LocalitiesDetailsPostalCodeResponse",
         "type": "object",
@@ -11086,16 +11061,6 @@
           "route",
           "address"
         ]
-      },
-      "LocalitiesViewpoint": {
-        "title": "LocalitiesViewpoint",
-        "type": "object",
-        "description": "Contains the bounds for the locality",
-        "properties": {
-          "bounds": {
-            "$ref": "#/components/schemas/LocalitiesBounds"
-          }
-        }
       },
       "LocalitiesDetailsResponse": {
         "title": "LocalitiesDetailsResponse",
@@ -12134,11 +12099,9 @@
             }
           },
           "start_location": {
-            "description": "The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "start_waypoint": {
@@ -12622,7 +12585,6 @@
             "type": "object",
             "properties": {
               "origin": {
-                "description": "The point around which the isochrone is centered",
                 "$ref": "#/components/schemas/LatLngLiteral"
               },
               "time": {
@@ -12701,11 +12663,9 @@
             "example": "_igoHa~hYgApBMHOEKO"
           },
           "start_location": {
-            "description": "The location of the starting point of this step",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The location of the last point of this step",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "travel_mode": {
