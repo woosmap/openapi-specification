@@ -5059,7 +5059,7 @@ paths:
       tags:
         - Traffic API
       description: |
-        Get distances and durations (including traffic) for a matrix of origins and destinations, based on the recommended route between start and end points for a specified travel mode.
+        Get distances and durations (including traffic) for a matrix of origins and destinations, based on the recommended routes between start and end points for a specified travel mode.
       security:
         - PublicApiKeyAuth: []
           RefererHeader: []
@@ -5145,7 +5145,7 @@ paths:
       tags:
         - Traffic API
       description: |
-        Get distances and durations (including traffic) for a matrix of origins and destinations, based on the recommended route between start and end points. If the URL size is too short for your origins and destinations, you should request the server using this POST method and passing arguments as json.
+        Get distances and durations (including traffic) for a matrix of origins and destinations, based on the recommended routes between start and end points. If the URL size is too short for your origins and destinations, you should request the server using this POST method and passing arguments as json.
       security:
         - PublicApiKeyAuth: []
           RefererHeader: []
@@ -5272,7 +5272,7 @@ paths:
       tags:
         - Traffic API
       description: |
-        Get distance, duration and path (as a polyline) for a pair of origin and destination, based on the recommended route between those two points (including traffic).
+        Get distance, duration and path (as a polyline) for a pair of origin and destination, based on the recommended route between those two points, while taking traffic into account.
       security:
         - PublicApiKeyAuth: []
           RefererHeader: []
@@ -5284,7 +5284,15 @@ paths:
         - $ref: '#/components/parameters/distance_language'
         - $ref: '#/components/parameters/distance_units'
         - $ref: '#/components/parameters/distance_alternatives'
-        - $ref: '#/components/parameters/distance_waypoints'
+        - name: waypoints
+          in: query
+          example: '48.850077,3.311124|48.850077,3.411124'
+          schema:
+            type: string
+          description: |
+            A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by `|` character.
+              
+            `alternatives` and `waypoints` can not be used at the same time.
         - $ref: '#/components/parameters/traffic_departure_time'
         - $ref: '#/components/parameters/traffic_arrival_time'
         - $ref: '#/components/parameters/traffic_avoid'
@@ -6087,7 +6095,7 @@ components:
       schema:
         type: string
       description: |
-        The starting point for a route or origin for an isochrone. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
+        The starting point. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
     distance_origins:
       name: origins
       in: query
@@ -6462,6 +6470,7 @@ components:
         type: string
       description: |
         Specifies the arrival date/time as a timestamp to base the calculation on (e.g. `1600799173` for the date:`22/09/2020 20:26:13`).
+        Use either `arrival_time` or `departure_time`, not both.
     traffic_avoid:
       name: avoid
       in: query
@@ -6471,7 +6480,7 @@ components:
         enum:
           - tolls
       description: |
-        The list of nodes that you want to avoid. Valid values are `tolls`.
+        The list of features that you want to avoid. Valid values are `tolls`.
     traffic_departure_time:
       name: departure_time
       in: query
@@ -6480,6 +6489,7 @@ components:
         type: string
       description: |
         Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.
+        Use either `arrival_time` or `departure_time`, not both.
     traffic_routing:
       name: routing
       in: query
@@ -9874,7 +9884,7 @@ components:
           type: object
           properties:
             value:
-              description: The distance in meter
+              description: The distance in meters
               type: number
               example: 2775.1
             text:
@@ -10562,7 +10572,7 @@ components:
           type: object
           properties:
             value:
-              description: The distance in meter
+              description: The distance in meters
               type: number
               example: 2775.1
             text:

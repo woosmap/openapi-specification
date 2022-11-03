@@ -15,6 +15,7 @@
 -   <h3 class="parameter-name" id="departure_time">departure_time</h3>
 
     Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.
+    Use either `arrival_time` or `departure_time`, not both.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 

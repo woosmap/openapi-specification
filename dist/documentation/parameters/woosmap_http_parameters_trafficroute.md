@@ -8,7 +8,7 @@
 
 -   <h3 class="parameter-name" id="origin">origin</h3>
 
-    The starting point for a route or origin for an isochrone. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
+    The starting point. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
@@ -20,14 +20,16 @@
 -   <h3 class="parameter-name" id="arrival_time">arrival_time</h3>
 
     Specifies the arrival date/time as a timestamp to base the calculation on (e.g. `1600799173` for the date:`22/09/2020 20:26:13`).
+    Use either `arrival_time` or `departure_time`, not both.
 
 -   <h3 class="parameter-name" id="avoid">avoid</h3>
 
-    The list of nodes that you want to avoid. Valid values are `tolls`.
+    The list of features that you want to avoid. Valid values are `tolls`.
 
 -   <h3 class="parameter-name" id="departure_time">departure_time</h3>
 
     Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.
+    Use either `arrival_time` or `departure_time`, not both.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
@@ -49,8 +51,8 @@
 
 -   <h3 class="parameter-name" id="waypoints">waypoints</h3>
 
-    A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by | character.
-    Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter. This way the provided route is optimized by rearranging the waypoints in a more efficient order based on distance or time according to the method parameter. The route start point and end point order is not changed, their position is considered fixed.
+    A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by `|` character.
+
     `alternatives` and `waypoints` can not be used at the same time.
 
 
