@@ -1,0 +1,45 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Traffic API
+description: >
+  Get distances and durations (including traffic) for a matrix of origins and destinations, based on the recommended routes between start and end points.
+  If the URL size is too short for your origins and destinations, you should request the server using this POST method and passing arguments as json.
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+requestBody:
+  description: The request body must be formatted as JSON.
+  required: true
+  content:
+    "application/json":
+      schema:
+         $ref: "../../schemas/TrafficDistanceMatrixRequest.yml"
+      examples:
+        default:
+          value:
+            $ref: "../../requests/woosmap_http_traffic_distance_matrix_request.yml"
+responses:
+  "200":
+    description: Traffic Distance Matrix successfully retrieved
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/TrafficDistanceMatrixResponse.yml"
+        examples:
+          default:
+            value:
+              $ref: "../../responses/woosmap_http_traffic_distance_matrix_response.yml"
+  "400":
+    $ref: "../../responses/woosmap_http_error_400_invalid_response.yml"
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_traffic_distance_matrix_request/woosmap_http_traffic_distance_matrix_request.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_traffic_distance_matrix_request/woosmap_http_traffic_distance_matrix_request.python.yml"
+  - $ref:  "../../snippets/woosmap_http_traffic_distance_matrix_request/woosmap_http_traffic_distance_matrix_request.nodejs.yml"
