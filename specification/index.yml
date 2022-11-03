@@ -16,7 +16,7 @@ info:
   termsOfService: "https://www.woosmap.com/en/policies/terms/"
   x-document-meta-data:
     copyright: "© 2022 Woosmap"
-  version: 1.5.1
+  version: 1.6.0
   contact:
     name: "Woosmap API"
     url: "https://developers.woosmap.com/support/contact/"
@@ -102,6 +102,14 @@ tags:
       This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
     externalDocs:
       url: https://developers.woosmap.com/products/distance-api/get-started/
+  - name: Traffic API
+    description: >
+      Woosmap Traffic API (Early Access) is a service that provides travel distances and durations with traffic, on a Worldwide scale. Compared to the Woosmap Distance API, this API uses traffic information when returning duration times. 
+      Request is done over HTTPS using GET or POST. Response is formatted as JSON.
+      You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+      This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
+    externalDocs:
+      url: https://developers.woosmap.com/products/traffic-api/get-started/
   - name: Merchants API
     description: >
       Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider.
