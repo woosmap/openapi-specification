@@ -7,7 +7,11 @@
     "x-document-meta-data": {
       "copyright": "© 2022 Woosmap"
     },
-    "version": "1.6.0"
+    "version": "1.6.0",
+    "contact": {
+      "name": "Woosmap API",
+      "url": "https://developers.woosmap.com/support/contact/"
+    }
   },
   "servers": [
     {
@@ -55,6 +59,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geolocation position for the IP `173.79.254.254`",
                     "value": {
                       "country_code": "US",
                       "country_name": "United States",
@@ -154,6 +159,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geolocation Position and Stores for the IP `173.79.254.254`",
                     "value": {
                       "country_code": "US",
                       "country_name": "United States",
@@ -499,6 +505,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Stores data as JSON",
                   "value": {
                     "stores": [
                       {
@@ -614,6 +621,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores Created",
                     "value": {
                       "status": "success",
                       "value": "2 stores"
@@ -678,6 +686,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Stores data as JSON",
                   "value": {
                     "stores": [
                       {
@@ -750,6 +759,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores updated",
                     "value": {
                       "status": "success",
                       "value": "1 stores"
@@ -825,6 +835,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores deleted",
                     "value": {
                       "status": "success",
                       "value": 2
@@ -904,6 +915,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Get a store from its store_id",
                     "value": {
                       "type": "Feature",
                       "properties": {
@@ -1140,6 +1152,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Stores Data as JSON",
                   "value": {
                     "stores": [
                       {
@@ -1255,6 +1268,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores replaced",
                     "value": {
                       "status": "success",
                       "value": "2 stores deleted, 2 stores created"
@@ -1351,6 +1365,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Search stores nearby a latlng and given a radius",
                     "value": {
                       "type": "FeatureCollection",
                       "features": [
@@ -3516,6 +3531,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Autocomplete on stores in localized names nearby a latlng and specifying a radius",
                     "value": {
                       "predictions": [
                         {
@@ -3685,6 +3701,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Autocomplete localities results for input `Lond` and components `country:gb`",
                     "value": {
                       "localities": [
                         {
@@ -3884,6 +3901,7 @@
                 },
                 "examples": {
                   "Address": {
+                    "summary": "Localities Address details from a `public_id` retrieved using Localities autocomplete",
                     "value": {
                       "result": {
                         "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
@@ -3947,6 +3965,7 @@
                     }
                   },
                   "PostalCode": {
+                    "summary": "Localities Postal Code details from a `public_id` retrieved using Localities autocomplete",
                     "value": {
                       "result": {
                         "formatted_address": "SW1A 0AA, City of London",
@@ -4030,7 +4049,7 @@
     },
     "/localities/geocode": {
       "get": {
-        "summary": "Geocode an Address or Reverse Geocode a latlng",
+        "summary": "Geocode a locality or Reverse Geocode a latlng",
         "operationId": "localitiesGeocode",
         "servers": [
           {
@@ -4080,6 +4099,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geocode Results for address `Place Jeanne-d'Arc` with components `country:FR`",
                     "value": {
                       "results": [
                         {
@@ -4215,6 +4235,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Autocomplete address results for input `Lond` and components `country:gb`",
                     "value": {
                       "predictions": [
                         {
@@ -4323,6 +4344,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Address Details for `London, England, United Kingdom`",
                     "value": {
                       "result": {
                         "formatted_address": "London, England, United Kingdom",
@@ -4476,6 +4498,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geocode Results for address `Place de la Resistance` with components `country:FR`",
                     "value": {
                       "results": [
                         {
@@ -4893,6 +4916,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Zones data",
                     "value": {
                       "zones": [
                         {
@@ -4930,6 +4954,7 @@
                 },
                 "examples": {
                   "Unauthorized": {
+                    "summary": "Error 401",
                     "value": {
                       "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
                     }
@@ -4947,6 +4972,7 @@
                 },
                 "examples": {
                   "Forbidden": {
+                    "summary": "Error 403",
                     "value": {
                       "detail": "This Woosmap API is not enabled for this project."
                     }
@@ -4964,6 +4990,7 @@
                 },
                 "examples": {
                   "Forbidden": {
+                    "summary": "Error 429",
                     "value": {
                       "detail": "The rate limit for this endpoint has been exceeded"
                     }
@@ -5018,6 +5045,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Zones data as JSON",
                   "value": {
                     "zones": [
                       {
@@ -5064,6 +5092,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Zones Created",
                     "value": {
                       "status": "ok",
                       "message": "Zones successfully added."
@@ -5121,6 +5150,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Zones data",
                   "value": {
                     "zones": [
                       {
@@ -5167,6 +5197,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Zones updated",
                     "value": {
                       "status": "ok",
                       "message": "Zones successfully added."
@@ -5185,6 +5216,7 @@
                 },
                 "examples": {
                   "Invalid": {
+                    "summary": "Error 400",
                     "value": {
                       "status": "error",
                       "value": "The request is invalid, the data is not a valid JSON."
@@ -5257,6 +5289,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Zones deleted",
                     "value": {
                       "status": "ok",
                       "message": "Zones deleted."
@@ -5332,6 +5365,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Get a zone from its zone_id",
                     "value": {
                       "store_id": "STORE_ID_123456",
                       "zone_id": "ZoneA",
@@ -5431,6 +5465,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Matrix Result for driving from origins `48.709,2.403` to destinations `48.709,2.303|48.768,2.338`,",
                     "value": {
                       "status": "OK",
                       "rows": [
@@ -5526,6 +5561,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Request as a JSON for a distance matrix call",
                   "value": {
                     "origins": "48.73534,2.368308|48.73534,2.368308",
                     "destinations": "48.83534,2.368308",
@@ -5548,6 +5584,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Matrix Result for driving from origins `48.73534,2.368308|48.73534,2.368308` to destinations `48.83534,2.368308`,",
                     "value": {
                       "status": "OK",
                       "rows": [
@@ -5677,6 +5714,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Route Result for driving from origin `49.31067,4.14525` to destination `49.31344,4.15293` and retrieving alternatives routes.",
                     "value": {
                       "status": "OK",
                       "routes": [
@@ -5935,6 +5973,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Isochrone Result for driving 1km by car from origin `48.709,2.403`",
                     "value": {
                       "status": "OK",
                       "isoline": {
@@ -6400,6 +6439,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Merchant Clean name for dirty_name `APPLE.COM%2FBILL`",
                     "value": {
                       "merchants": [
                         {
@@ -6475,6 +6515,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Merchant Clean name body request as JSON",
                   "value": {
                     "merchants": [
                       {
@@ -6521,6 +6562,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Merchant Clean names for various dirty names such as `MCDO UK 2231 EP`",
                     "value": {
                       "merchants": [
                         {
@@ -6646,6 +6688,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Merchant Clean name body request as JSON",
                   "value": {
                     "merchants": [
                       {
@@ -6690,6 +6733,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Merchant Clean names with google place_id for various dirty names such as `MCDO UK 2231 EP`",
                     "value": {
                       "merchants": [
                         {
@@ -7431,14 +7475,14 @@
         "title": "LatLngArrayString",
         "description": "An array of comma separated {latitude,longitude} strings.",
         "example": [
-          "43.4,-2.1",
-          "46.32,-89.45"
+          43.4,
+          -2.1
         ],
         "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
         "items": {
-          "type": "number",
-          "minItems": 2,
-          "maxItems": 2
+          "type": "number"
         }
       },
       "GeoJsonPoint": {
@@ -11297,35 +11341,6 @@
           "admin_0": "United Kingdom"
         }
       },
-      "LocalitiesBounds": {
-        "title": "LocalitiesBounds",
-        "type": "object",
-        "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
-        "required": [
-          "north",
-          "east",
-          "south",
-          "west"
-        ],
-        "properties": {
-          "north": {
-            "type": "number",
-            "description": "Latitude in decimal degrees for upper right corner"
-          },
-          "east": {
-            "type": "number",
-            "description": "Longitude in decimal degrees for upper right corner"
-          },
-          "south": {
-            "type": "number",
-            "description": "Latitude in decimal degrees for lower left corner"
-          },
-          "west": {
-            "type": "number",
-            "description": "Longitude in decimal degrees for lower left corner"
-          }
-        }
-      },
       "LocalitiesDetailsPostalCodeResponse": {
         "title": "LocalitiesDetailsPostalCodeResponse",
         "type": "object",
@@ -11500,16 +11515,6 @@
           "route",
           "address"
         ]
-      },
-      "LocalitiesViewpoint": {
-        "title": "LocalitiesViewpoint",
-        "type": "object",
-        "description": "Contains the bounds for the locality",
-        "properties": {
-          "bounds": {
-            "$ref": "#/components/schemas/LocalitiesBounds"
-          }
-        }
       },
       "LocalitiesDetailsResponse": {
         "title": "LocalitiesDetailsResponse",
@@ -12548,11 +12553,9 @@
             }
           },
           "start_location": {
-            "description": "The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "start_waypoint": {
@@ -13026,7 +13029,6 @@
             "type": "object",
             "properties": {
               "origin": {
-                "description": "The point around which the isochrone is centered",
                 "$ref": "#/components/schemas/LatLngLiteral"
               },
               "time": {
@@ -13105,11 +13107,9 @@
             "example": "_igoHa~hYgApBMHOEKO"
           },
           "start_location": {
-            "description": "The location of the starting point of this step",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The location of the last point of this step",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "travel_mode": {
