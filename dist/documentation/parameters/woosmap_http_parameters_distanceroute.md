@@ -19,7 +19,7 @@
 
 -   <h3 class="parameter-name" id="avoid">avoid</h3>
 
-    The list of features that you want to avoid. Valid values are `tolls` or polygons coordinates whose vertex latlng are separated by a comma. To add multiple polygons, separate them with the `|` character.
+    The list of features that you want to avoid. Valid values are `tolls` or polygons coordinates whose vertex latlng are separated by a semicolon. To add multiple polygons, separate them with the `|` character.
 
 -   <h3 class="parameter-name" id="details">details</h3>
 
