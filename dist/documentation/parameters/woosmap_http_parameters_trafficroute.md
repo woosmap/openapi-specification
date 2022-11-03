@@ -51,7 +51,7 @@
 
 -   <h3 class="parameter-name" id="waypoints">waypoints</h3>
 
-    A list of points by which the route should pass (route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by `|` character.
+    A list of points by which the route should pass (traffic route response is divided into legs, one leg corresponding to a route between two waypoints). Waypoints should be separated by `|` character.
 
     `alternatives` and `waypoints` can not be used at the same time.
 
