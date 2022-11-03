@@ -17,6 +17,10 @@
     Specifies if alternative routes should be returned. default is `false`. Depending on the calculated route, alternatives may not be provided.
     `alternatives` and `waypoints` can not be used at the same time.
 
+-   <h3 class="parameter-name" id="avoid">avoid</h3>
+
+    The list of features that you want to avoid. Valid values are `tolls` or polygons coordinates whose vertex latlng are separated by a semicolon. To add multiple polygons, separate them with the `|` character.
+
 -   <h3 class="parameter-name" id="details">details</h3>
 
     Specifies if maneuver instructions should be returned (roadbook). Valid values are `none` and `full` (default is `none`)
