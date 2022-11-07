@@ -21,13 +21,19 @@ properties:
     type: array
     items:
       type: string
-    example: [ "drive", "click_and_collect" ]
+      example: "drive"
+    example:
+      - "drive"
+      - "click_and_collect"
   tags:
     description: Contains an array of tags describing the Asset. For example a list of available amenities.
     type: array
     items:
       type: string
-    example: [ "wifi", "covered_parking" ]
+      example: "wifi"
+    example:
+      - "wifi"
+      - "covered_parking"
   user_properties:
     description: Contains all additional information relative to an Asset. If not set it returns null value.
     nullable: true

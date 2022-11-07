@@ -5,9 +5,12 @@ properties:
   lines:
     description: An Array for lines of an Asset Address
     type: array
+    example:
+      - "Building Centre"
+      - "26 Store Street"
     items:
       type: string
-    example: ["Building Centre", "26 Store Street"]
+      example: "26 Store Street"
   country_code:
     description: An ISO_3166-1 Country Code where the Asset is located (see <https://en.wikipedia.org/wiki/ISO_3166-1> for full list)
     type: string
@@ -21,3 +24,11 @@ properties:
     description: An Zipcode / Postal code of an Asset Address
     type: string
     example: "WC1E 7BT"
+example: {
+  "lines": [
+    "8 Southwark St"
+  ],
+  "country_code": "UK",
+  "city": "London",
+  "zipcode": "SE1 1TL"
+}

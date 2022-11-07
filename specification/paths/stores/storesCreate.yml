@@ -7,7 +7,7 @@ description: >
 security:
   - PrivateApiKeyAuth: []
 requestBody:
-  description: The request body must be formatted as JSON.
+  description: The request body must of Stores Creation be formatted as JSON.
   required: true
   content:
     "application/json":
@@ -15,7 +15,7 @@ requestBody:
          $ref: "../../schemas/AssetsCollectionRequest.yml"
       examples:
         default:
-          summary: Stores data as JSON
+          summary: Stores data to create as JSON
           value:
             $ref: "../../requests/woosmap_http_assets_collection_request.yml"
 responses:
