@@ -20,7 +20,9 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../schemas/LocalitiesDetailsResponse.yml"
+          anyOf:
+            - $ref: "../../schemas/LocalitiesDetailsAddressResponse.yml"
+            - $ref: "../../schemas/LocalitiesDetailsPostalCodeResponse.yml"
         examples:
           Address:
             summary: Localities Address details from a `public_id` retrieved using Localities autocomplete
