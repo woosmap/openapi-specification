@@ -25,13 +25,4 @@ properties:
         type: string
         example: "5 hours 42 mins"
   distance:
-    description: The total distance of this route, expressed in meters (value) and as text. The textual value uses the unit system specified with the units parameter of the original request.
-    type: object
-    properties:
-      value:
-        description: The distance in meter
-        type: number
-        example: 544752
-      text:
-        type: string
-        example: "545 km"
+    $ref: "./DistanceValue.yml"

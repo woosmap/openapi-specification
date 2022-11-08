@@ -20,11 +20,7 @@ properties:
         store_id:
           $ref: "./AssetId.yml"
         types:
-          description: Contains an array of types describing the Asset.
-          type: array
-          items:
-            type: string
-          example: [ "drive", "click_and_collect" ]
+          $ref: "./AssetTypes.yml"
         matched_substrings:
           type: array
           items:

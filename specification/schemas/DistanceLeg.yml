@@ -3,17 +3,7 @@ type: object
 description: Leg in a route
 properties:
   distance:
-    description: The total distance covered by this leg.
-    type: object
-    properties:
-      value:
-        description: The distance in meters
-        type: number
-        example: 2775.1
-      text:
-        type: string
-        example: "2.8 km"
-    example: { "value": 2775.1, "text": "2.8 km" }
+    $ref: "./DistanceValue.yml"
   duration:
     description: The total duration of this leg.
     type: object

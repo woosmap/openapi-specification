@@ -27,9 +27,6 @@ properties:
         type: string
         enum: [ ROOFTOP, POSTAL_CODE, DISTRICT]
   address_components:
-    description: An array containing the separate components applicable to this address.
-    type: array
-    items:
-      $ref: "./AddressComponents.yml"
+    $ref: "./AddressComponents.yml"
 example:
   $ref: "../responses/woosmap_http_localities_details_address_response.yml"

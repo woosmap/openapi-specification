@@ -23,11 +23,9 @@ properties:
         $ref: "./LatLngLiteral.yml"
       viewport:
         $ref: "./Bounds.yml"
+    example: { "location": { "lat": 51.49984, "lng": -0.124663 } }
   address_components:
-    description: An array containing the separate components applicable to this address.
-    type: array
-    items:
-      $ref: "./AddressComponents.yml"
+    $ref: "./AddressComponents.yml"
   addresses:
     description: UK Only. List of addresses attached to this Postal Code.
     type: object
