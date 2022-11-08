@@ -3,6 +3,7 @@ type: array
 description: An array containing Address Components with additional information
 items:
   type: object
+  description: The address component object
   properties:
     long_name:
       oneOf:
@@ -25,6 +26,14 @@ items:
       type: array
       items:
         type: string
+        description: address component type
+      example:
+        - "country"
+        - "administrative_area_level_0"
+  example: { "types": [ "country" ],
+             "long_name": "United Kingdom",
+             "short_name": "GBR"
+  }
 example:
   - { "types": [ "country" ],
       "long_name": "United Kingdom",

@@ -25,8 +25,11 @@ properties:
         $ref: "./Bounds.yml"
       accuracy:
         type: string
-        enum: [ ROOFTOP, POSTAL_CODE, DISTRICT]
+        enum: [ ROOFTOP, STREET, GEOMETRIC_CENTER ]
+    example: {
+      "location": { "lat": 51.4998415, "lng": -0.1246375 },
+      "accuracy": "ROOFTOP",
+    }
   address_components:
     $ref: "./AddressComponents.yml"
-example:
-  $ref: "../responses/woosmap_http_localities_details_address_response.yml"
+

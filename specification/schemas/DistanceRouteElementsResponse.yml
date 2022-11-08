@@ -3,12 +3,7 @@ type: object
 description: Attributes describing routes from an origin to a destination returned in distance route response.
 properties:
   overview_polyline:
-    type: object
-    description: The polyline of the route (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)).
-    properties:
-      points:
-        type: string
-        example: "a_jyHfol@aAfEzGlIfER~JqV_KqLu@pDiHv@bAfEeCfE"
+    $ref: "./EncodedPolyline.yml"
   bounds:
     $ref: "./Bounds.yml"
   summary:

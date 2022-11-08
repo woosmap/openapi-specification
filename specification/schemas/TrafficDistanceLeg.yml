@@ -5,27 +5,9 @@ properties:
   distance:
     $ref: "./DistanceValue.yml"
   duration_with_traffic:
-    description: The duration of the leg, considering the traffic.
-    type: object
-    properties:
-      value:
-        description: The duration in seconds
-        type: number
-        example: 360
-      text:
-        type: string
-        example: "6 mins"
+    $ref: "./DurationValue.yml"
   duration_without_traffic:
-    description: The duration of the leg, considering no traffic.
-    type: object
-    properties:
-      value:
-        description: The duration in seconds
-        type: number
-        example: 272.5
-      text:
-        type: string
-        example: "5 mins"
+    $ref: "./DurationValue.yml"
   start_location:
     $ref: "./LatLngLiteral.yml"
   end_location:

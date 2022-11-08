@@ -65,5 +65,12 @@ properties:
               type: string
               description: The unique public id attached to this address used to request details information.
               example: "DuxKg3/i5t1AuSt1qvwaiSgd+gI="
-example:
-  $ref: "../responses/woosmap_http_localities_details_postal_code_response.yml"
+    example:
+      pagination:
+        page: 1
+        page_count: 1
+        addresses_per_page: 1
+        address_count: 1
+      list:
+        - public_id: TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==
+          description: 'House Of Commons, Houses Of Parliament, London, SW1A 0AA'

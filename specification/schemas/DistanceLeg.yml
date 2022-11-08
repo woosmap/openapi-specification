@@ -5,17 +5,7 @@ properties:
   distance:
     $ref: "./DistanceValue.yml"
   duration:
-    description: The total duration of this leg.
-    type: object
-    properties:
-      value:
-        description: The duration in seconds
-        type: number
-        example: 272.5
-      text:
-        type: string
-        example: "5 mins"
-    example: { "value": 272.5, "text": "5 mins" }
+    $ref: "./DurationValue.yml"
   start_location:
     $ref: "./LatLngLiteral.yml"
   end_location:

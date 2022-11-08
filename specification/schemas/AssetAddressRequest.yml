@@ -3,14 +3,7 @@ type: object
 description: An object containing the separate components applicable to this address.
 properties:
   lines:
-    description: An Array for lines of an Asset Address
-    type: array
-    items:
-      type: string
-      example: "26 Store Street"
-    example:
-      - "Building Centre"
-      - "26 Store Street"
+    $ref: "./AssetAddressLines.yml"
   countryCode:
     description: An ISO_3166-1 Country Code where the Asset is located (see <https://en.wikipedia.org/wiki/ISO_3166-1> for full list)
     type: string
@@ -24,3 +17,11 @@ properties:
     description: An Zipcode / Postal code of an Asset Address
     type: string
     example: "WC1E 7BT"
+example: {
+  "lines": [
+    "8 Southwark St"
+  ],
+  "countryCode": "UK",
+  "city": "London",
+  "zipcode": "WC1E 7BT"
+}
