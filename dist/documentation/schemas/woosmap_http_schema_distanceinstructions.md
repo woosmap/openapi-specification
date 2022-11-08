@@ -13,6 +13,15 @@ Formatted instructions for this leg
 | <h4 id="DistanceInstructions-verbal_before" class="add-link schema-object-property-key"><code>verbal_before</code></h4>   | optional | string  | <div class="nonref-property-description"><p>Text suitable for use as a verbal message immediately prior to the maneuver transition</p></div>                                                                                                                     |
 | <h4 id="DistanceInstructions-verbal_succint" class="add-link schema-object-property-key"><code>verbal_succint</code></h4> | optional | string  | <div class="nonref-property-description"><p>Text suitable for use as a verbal alert in a navigation application</p></div>                                                                                                                                        |
 
+<h4 class="schema-object-example" id="DistanceInstructions-example">Example</h4>
+
+<pre class="notranslate lang-json prettyprint">{
+  "action": 2,
+  "summary": "Drive northeast on D 151.",
+  "verbal_alert": "Enter the roundabout and take the 2nd exit onto D 30.",
+  "verbal_before": "Drive northeast on D 151. Then Enter the roundabout and take the 2nd exit onto D 30."
+}</pre>
+
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a data-label="openapi-github-woosmap-http-schema-distanceinstructions" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/DistanceInstructions.yml" title="Edit on GitHub">✎ Edit</a>
 <a data-label="openapi-github-woosmap-http-schema-distanceinstructions" data-action="bug" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DistanceInstructions" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>

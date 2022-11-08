@@ -32,7 +32,7 @@
 
 -   <h3 class="parameter-name" id="units">units</h3>
 
-    Specifies the unit system to use when expressing distance as text. Two different units supported:
+    Specifies the unit system parameter to use when expressing distance as text. Two different units supported:
 
     -   `metric` (default) returns distances in kilometers and meters
     -   `imperial` returns distances in miles and feet

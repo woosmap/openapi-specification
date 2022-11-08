@@ -4,7 +4,7 @@
 
 -   <h3 class="parameter-name" id="public_id">public_id</h3>
 
-    A textual identifier that uniquely identifies a locality, returned from a [Localities Autocomplete](https://developers.woosmap.com/products/localities/autocomplete/).
+    A textual identifier that uniquely identifies a locality, returned from an [Address Autocomplete](https://developers.woosmap.com/products/address-api/autocomplete/).
 
 <h2 id="optional-parameters">Optional parameters</h2>
 

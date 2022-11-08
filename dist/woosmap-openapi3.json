@@ -7,7 +7,11 @@
     "x-document-meta-data": {
       "copyright": "© 2022 Woosmap"
     },
-    "version": "1.7.0"
+    "version": "1.7.0",
+    "contact": {
+      "name": "Woosmap API",
+      "url": "https://developers.woosmap.com/support/contact/"
+    }
   },
   "servers": [
     {
@@ -55,6 +59,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geolocation position for the IP `173.79.254.254`",
                     "value": {
                       "country_code": "US",
                       "country_name": "United States",
@@ -154,6 +159,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geolocation Position and Stores for the IP `173.79.254.254`",
                     "value": {
                       "country_code": "US",
                       "country_name": "United States",
@@ -490,7 +496,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body must of Stores Creation be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -499,6 +505,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Stores data to create as JSON",
                   "value": {
                     "stores": [
                       {
@@ -614,6 +621,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores Created",
                     "value": {
                       "status": "success",
                       "value": "2 stores"
@@ -669,7 +677,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Stores Update must be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -678,6 +686,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Stores data to update as JSON",
                   "value": {
                     "stores": [
                       {
@@ -750,6 +759,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores updated",
                     "value": {
                       "status": "success",
                       "value": "1 stores"
@@ -825,6 +835,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores deleted",
                     "value": {
                       "status": "success",
                       "value": 2
@@ -904,6 +915,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Get a store from its store_id",
                     "value": {
                       "type": "Feature",
                       "properties": {
@@ -1131,7 +1143,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Stores Replace must be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -1140,6 +1152,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Stores Data to replace as JSON",
                   "value": {
                     "stores": [
                       {
@@ -1255,6 +1268,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Stores replaced",
                     "value": {
                       "status": "success",
                       "value": "2 stores deleted, 2 stores created"
@@ -1351,6 +1365,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Search stores nearby a latlng and given a radius",
                     "value": {
                       "type": "FeatureCollection",
                       "features": [
@@ -3516,6 +3531,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Autocomplete on stores in localized names nearby a latlng and specifying a radius",
                     "value": {
                       "predictions": [
                         {
@@ -3677,7 +3693,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Autocompletion successfully retrieved",
+            "description": "Autocompletion Localities successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -3685,6 +3701,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Autocomplete localities results for input `Lond` and components `country:gb`",
                     "value": {
                       "localities": [
                         {
@@ -3876,7 +3893,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Details successfully retrieved",
+            "description": "Details Localities successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -3884,6 +3901,7 @@
                 },
                 "examples": {
                   "Address": {
+                    "summary": "Localities Address details from a `public_id` retrieved using Localities autocomplete",
                     "value": {
                       "result": {
                         "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
@@ -3947,6 +3965,7 @@
                     }
                   },
                   "PostalCode": {
+                    "summary": "Localities Postal Code details from a `public_id` retrieved using Localities autocomplete",
                     "value": {
                       "result": {
                         "formatted_address": "SW1A 0AA, City of London",
@@ -4030,7 +4049,7 @@
     },
     "/localities/geocode": {
       "get": {
-        "summary": "Geocode an Address or Reverse Geocode a latlng",
+        "summary": "Geocode a locality or Reverse Geocode a latlng",
         "operationId": "localitiesGeocode",
         "servers": [
           {
@@ -4072,7 +4091,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Request successful",
+            "description": "Request Localities Geocode successful",
             "content": {
               "application/json": {
                 "schema": {
@@ -4080,6 +4099,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geocode Results for address `Place Jeanne-d'Arc` with components `country:FR`",
                     "value": {
                       "results": [
                         {
@@ -4207,7 +4227,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Autocompletion successfully retrieved",
+            "description": "Autocompletion Address successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -4215,6 +4235,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Autocomplete address results for input `Lond` and components `country:gb`",
                     "value": {
                       "predictions": [
                         {
@@ -4315,7 +4336,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Details successfully retrieved",
+            "description": "Details Address successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -4323,6 +4344,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Address Details for `London, England, United Kingdom`",
                     "value": {
                       "result": {
                         "formatted_address": "London, England, United Kingdom",
@@ -4468,7 +4490,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Request successful",
+            "description": "Request Address Geocode successful",
             "content": {
               "application/json": {
                 "schema": {
@@ -4476,6 +4498,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Geocode Results for address `Place de la Resistance` with components `country:FR`",
                     "value": {
                       "results": [
                         {
@@ -4885,7 +4908,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Zone successfully retrieved",
+            "description": "Zones successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -4893,6 +4916,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Zones data",
                     "value": {
                       "zones": [
                         {
@@ -4930,6 +4954,7 @@
                 },
                 "examples": {
                   "Unauthorized": {
+                    "summary": "Error 401",
                     "value": {
                       "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
                     }
@@ -4947,6 +4972,7 @@
                 },
                 "examples": {
                   "Forbidden": {
+                    "summary": "Error 403",
                     "value": {
                       "detail": "This Woosmap API is not enabled for this project."
                     }
@@ -4964,6 +4990,7 @@
                 },
                 "examples": {
                   "Forbidden": {
+                    "summary": "Error 429",
                     "value": {
                       "detail": "The rate limit for this endpoint has been exceeded"
                     }
@@ -5009,7 +5036,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Zones Creation must be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -5018,6 +5045,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Zones data as JSON",
                   "value": {
                     "zones": [
                       {
@@ -5064,6 +5092,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Zones Created",
                     "value": {
                       "status": "ok",
                       "message": "Zones successfully added."
@@ -5113,7 +5142,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Zones Update must be formatted as JSON.",
           "content": {
             "application/json": {
               "schema": {
@@ -5121,6 +5150,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Zones data",
                   "value": {
                     "zones": [
                       {
@@ -5167,6 +5197,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Zones updated",
                     "value": {
                       "status": "ok",
                       "message": "Zones successfully added."
@@ -5185,6 +5216,7 @@
                 },
                 "examples": {
                   "Invalid": {
+                    "summary": "Error 400",
                     "value": {
                       "status": "error",
                       "value": "The request is invalid, the data is not a valid JSON."
@@ -5257,6 +5289,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Success response for Zones deleted",
                     "value": {
                       "status": "ok",
                       "message": "Zones deleted."
@@ -5332,6 +5365,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Get a zone from its zone_id",
                     "value": {
                       "store_id": "STORE_ID_123456",
                       "zone_id": "ZoneA",
@@ -5431,6 +5465,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Matrix Result for driving from origins `48.709,2.403` to destinations `48.709,2.303|48.768,2.338`,",
                     "value": {
                       "status": "OK",
                       "rows": [
@@ -5517,7 +5552,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Distance Matrix must be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -5526,6 +5561,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Request as a JSON for a distance matrix call",
                   "value": {
                     "origins": "48.73534,2.368308|48.73534,2.368308",
                     "destinations": "48.83534,2.368308",
@@ -5540,7 +5576,7 @@
         },
         "responses": {
           "200": {
-            "description": "Distance Matrix successfully retrieved",
+            "description": "Distance Matrix with POST successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -5548,6 +5584,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Matrix Result for driving from origins `48.73534,2.368308|48.73534,2.368308` to destinations `48.83534,2.368308`,",
                     "value": {
                       "status": "OK",
                       "rows": [
@@ -5680,6 +5717,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Route Result for driving from origin `49.31067,4.14525` to destination `49.31344,4.15293` and retrieving alternatives routes.",
                     "value": {
                       "status": "OK",
                       "routes": [
@@ -5938,6 +5976,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Isochrone Result for driving 1km by car from origin `48.709,2.403`",
                     "value": {
                       "status": "OK",
                       "isoline": {
@@ -6038,6 +6077,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Matrix Result (including traffic) for driving from origins `48.709,2.403` to destinations `48.709,2.303|48.768,2.338`,",
                     "value": {
                       "rows": [
                         {
@@ -6124,7 +6164,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Traffic Distance Matrix must be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -6133,6 +6173,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Request as a JSON for a distance matrix (including traffic) call",
                   "value": {
                     "origins": "48.73534,2.368308|48.73534,2.368308",
                     "destinations": "48.83534,2.368308",
@@ -6147,7 +6188,7 @@
         },
         "responses": {
           "200": {
-            "description": "Traffic Distance Matrix successfully retrieved",
+            "description": "Traffic Distance Matrix with POST successfully retrieved",
             "content": {
               "application/json": {
                 "schema": {
@@ -6155,6 +6196,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Matrix Result (including traffic) for driving from origins `48.73534,2.368308|48.73534,2.368308` to destinations `48.83534,2.368308`,",
                     "value": {
                       "rows": [
                         {
@@ -6287,6 +6329,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Distance Route Result (including traffic) for driving from origin `49.31067,4.14525` to destination `49.31344,4.15293` and retrieving alternatives routes with `departure_time=now`.",
                     "value": {
                       "routes": [
                         {
@@ -6395,7 +6438,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Request successful",
+            "description": "Request Merchants successful",
             "content": {
               "application/json": {
                 "schema": {
@@ -6403,6 +6446,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Merchant Clean name for dirty_name `APPLE.COM%2FBILL`",
                     "value": {
                       "merchants": [
                         {
@@ -6469,7 +6513,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Merchants Brand must be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -6478,6 +6522,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Merchant Clean name body request as JSON",
                   "value": {
                     "merchants": [
                       {
@@ -6524,6 +6569,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Merchant Clean names for various dirty names such as `MCDO UK 2231 EP`",
                     "value": {
                       "merchants": [
                         {
@@ -6640,7 +6686,7 @@
           }
         ],
         "requestBody": {
-          "description": "The request body must be formatted as JSON.",
+          "description": "The request body of Merchants Placemust be formatted as JSON.",
           "required": true,
           "content": {
             "application/json": {
@@ -6649,6 +6695,7 @@
               },
               "examples": {
                 "default": {
+                  "summary": "Merchant Clean name body request as JSON",
                   "value": {
                     "merchants": [
                       {
@@ -6693,6 +6740,7 @@
                 },
                 "examples": {
                   "default": {
+                    "summary": "Merchant Clean names with google place_id for various dirty names such as `MCDO UK 2231 EP`",
                     "value": {
                       "merchants": [
                         {
@@ -6882,7 +6930,7 @@
       },
       "address_public_id": {
         "name": "public_id",
-        "description": "A textual identifier that uniquely identifies a locality, returned from a [Localities Autocomplete](https://developers.woosmap.com/products/localities/autocomplete/).\n",
+        "description": "A textual identifier that uniquely identifies a locality, returned from an [Address Autocomplete](https://developers.woosmap.com/products/address-api/autocomplete/).\n",
         "schema": {
           "type": "string"
         },
@@ -7022,7 +7070,7 @@
             "metric"
           ]
         },
-        "description": "Specifies the unit system to use when expressing distance as text. Two different units supported:\n  * `metric` (default) returns distances in kilometers and meters\n  * `imperial` returns distances in miles and feet\n"
+        "description": "Specifies the unit system parameter to use when expressing distance as text. Two different units supported:\n  * `metric` (default) returns distances in kilometers and meters\n  * `imperial` returns distances in miles and feet\n"
       },
       "distance_value": {
         "name": "value",
@@ -7418,6 +7466,16 @@
           "southwest": {
             "$ref": "#/components/schemas/LatLngLiteral"
           }
+        },
+        "example": {
+          "northeast": {
+            "lat": 49.315678,
+            "lng": 4.15292
+          },
+          "southwest": {
+            "lat": 49.31073,
+            "lng": 4.145162
+          }
         }
       },
       "LatLngLiteral": {
@@ -7428,14 +7486,20 @@
           "lat",
           "lng"
         ],
+        "example": {
+          "lat": 43.3,
+          "lng": 3.46
+        },
         "properties": {
           "lat": {
             "type": "number",
-            "description": "Latitude in decimal degrees"
+            "description": "Latitude in decimal degrees",
+            "example": 42.3
           },
           "lng": {
             "type": "number",
-            "description": "Longitude in decimal degrees"
+            "description": "Longitude in decimal degrees",
+            "example": 3.46
           }
         }
       },
@@ -7443,14 +7507,14 @@
         "title": "LatLngArrayString",
         "description": "An array of comma separated {latitude,longitude} strings.",
         "example": [
-          "43.4,-2.1",
-          "46.32,-89.45"
+          43.4,
+          -2.1
         ],
         "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
         "items": {
-          "type": "number",
-          "minItems": 2,
-          "maxItems": 2
+          "type": "number"
         }
       },
       "GeoJsonPoint": {
@@ -7468,7 +7532,20 @@
           "coordinates": {
             "$ref": "#/components/schemas/LatLngArrayString"
           }
+        },
+        "example": {
+          "type": "Point",
+          "coordinates": [
+            -0.14408,
+            51.5088
+          ]
         }
+      },
+      "Timezone": {
+        "title": "Timezone",
+        "description": "Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>",
+        "type": "string",
+        "example": "Europe/London"
       },
       "AssetResponse": {
         "title": "AssetResponse",
@@ -7476,9 +7553,7 @@
         "description": "Attributes describing an Asset.",
         "properties": {
           "name": {
-            "description": "The asset's name.",
-            "type": "string",
-            "example": "My Cool Store"
+            "$ref": "#/components/schemas/AssetName"
           },
           "store_id": {
             "$ref": "#/components/schemas/AssetId"
@@ -7496,26 +7571,10 @@
             "$ref": "#/components/schemas/AssetWeeklyOpeningResponse"
           },
           "types": {
-            "description": "Contains an array of types describing the Asset.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "drive",
-              "click_and_collect"
-            ]
+            "$ref": "#/components/schemas/AssetTypes"
           },
           "tags": {
-            "description": "Contains an array of tags describing the Asset. For example a list of available amenities.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "wifi",
-              "covered_parking"
-            ]
+            "$ref": "#/components/schemas/AssetTags"
           },
           "user_properties": {
             "description": "Contains all additional information relative to an Asset. If not set it returns null value.",
@@ -7531,7 +7590,8 @@
           },
           "distance": {
             "description": "The distance in meters from the geolocated position or searched position if exist",
-            "type": "number"
+            "type": "number",
+            "example": 544.581
           }
         }
       },
@@ -9853,15 +9913,7 @@
                   "$ref": "#/components/schemas/AssetId"
                 },
                 "types": {
-                  "description": "Contains an array of types describing the Asset.",
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "example": [
-                    "drive",
-                    "click_and_collect"
-                  ]
+                  "$ref": "#/components/schemas/AssetTypes"
                 },
                 "matched_substrings": {
                   "type": "array",
@@ -9955,11 +10007,13 @@
         "properties": {
           "page": {
             "type": "integer",
-            "description": "the request page"
+            "description": "the request page",
+            "example": 1
           },
           "pageCount": {
             "type": "integer",
-            "description": "the number of available pages"
+            "description": "the number of available pages",
+            "example": 10
           }
         }
       },
@@ -9983,47 +10037,79 @@
       },
       "AddressComponents": {
         "title": "AddressComponents",
-        "type": "object",
-        "description": "Address Components with additional information",
-        "properties": {
-          "long_name": {
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
+        "type": "array",
+        "description": "An array containing Address Components with additional information",
+        "items": {
+          "type": "object",
+          "description": "The address component object",
+          "properties": {
+            "long_name": {
+              "oneOf": [
+                {
                   "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
-              }
-            ],
-            "description": "The full text description or name of the address component, or a list of names (ie. list of postal codes).",
-            "example": "United Kingdom"
-          },
-          "short_name": {
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
+              ],
+              "description": "The full text description or name of the address component, or a list of names (ie. list of postal codes).",
+              "example": "United Kingdom"
+            },
+            "short_name": {
+              "oneOf": [
+                {
                   "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
-              }
-            ],
-            "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of United Kingdom may have a `long_name` of `United Kingdom` and a `short_name` of `UK` using the 2-letter postal abbreviation.",
-            "example": "UK"
-          },
-          "types": {
-            "description": "An array indicating the type of the address component.",
-            "type": "array",
-            "items": {
-              "type": "string"
+              ],
+              "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of United Kingdom may have a `long_name` of `United Kingdom` and a `short_name` of `UK` using the 2-letter postal abbreviation.",
+              "example": "UK"
+            },
+            "types": {
+              "description": "An array indicating the type of the address component.",
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "address component type"
+              },
+              "example": [
+                "country",
+                "administrative_area_level_0"
+              ]
             }
+          },
+          "example": {
+            "types": [
+              "country"
+            ],
+            "long_name": "United Kingdom",
+            "short_name": "GBR"
           }
-        }
+        },
+        "example": [
+          {
+            "types": [
+              "country"
+            ],
+            "long_name": "United Kingdom",
+            "short_name": "GBR"
+          },
+          {
+            "long_name": "London",
+            "short_name": "London",
+            "types": [
+              "locality"
+            ]
+          }
+        ]
       },
       "AddressTypes": {
         "title": "AddressTypes",
@@ -10060,6 +10146,13 @@
           "viewport": {
             "$ref": "#/components/schemas/Bounds"
           }
+        },
+        "example": {
+          "location": {
+            "lat": 48.829405,
+            "lng": 2.367944
+          },
+          "location_type": "GEOMETRIC_CENTER"
         }
       },
       "Destinations": {
@@ -10091,11 +10184,11 @@
         "properties": {
           "status": {
             "type": "string",
-            "description": "the status of the request",
+            "description": "the status of the 200 response",
             "example": "success"
           },
           "value": {
-            "description": "the value of request",
+            "description": "The value of request for this 200 response",
             "example": "129 stores",
             "oneOf": [
               {
@@ -10115,11 +10208,11 @@
         "properties": {
           "status": {
             "type": "string",
-            "description": "the status of the request",
+            "description": "the status of the 400 response",
             "example": "error"
           },
           "value": {
-            "description": "the value of request",
+            "description": "the value of request causing the Error",
             "example": "The request is invalid, the data is not a valid JSON.",
             "type": "string"
           }
@@ -10171,44 +10264,52 @@
           },
           "accuracy": {
             "description": "The accuracy of the estimated location, in meters. This represents the radius of a circle around the given `location` where the IP address is likely to be. If your Geolocation response shows a low value in the `accuracy` field (<=50), the IP has strong chance to be correctly located.",
-            "type": "number"
+            "type": "number",
+            "example": 5
           },
           "latitude": {
             "description": "Approximate latitude of the geographical area associated with the IP address",
-            "type": "number"
+            "type": "number",
+            "example": 38.719
           },
           "longitude": {
             "description": "Approximate longitude of the geographical area associated with the IP address",
-            "type": "number"
+            "type": "number",
+            "example": -77.1067
           },
           "country_code": {
             "description": "ISO 3166-1 Alpha-2 compatible country code",
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "example": "US"
           },
           "country_name": {
             "description": "Country name",
-            "type": "string"
+            "type": "string",
+            "example": "United States"
           },
           "continent": {
             "description": "Continent name",
-            "type": "string"
+            "type": "string",
+            "example": "North America"
           },
           "region_state": {
             "description": "Region name when available",
-            "type": "string"
+            "type": "string",
+            "example": "Virginia"
           },
           "city": {
             "description": "City name when available",
-            "type": "string"
+            "type": "string",
+            "example": "Alexandria"
           },
           "postal_code": {
             "description": "A postal code close to the user's location, when available",
-            "type": "string"
+            "type": "string",
+            "example": "22309"
           },
           "timezone": {
-            "description": "The time zone associated with location, as specified by the IANA Time Zone Database",
-            "type": "string"
+            "$ref": "#/components/schemas/Timezone"
           }
         },
         "example": {
@@ -10247,44 +10348,52 @@
           },
           "accuracy": {
             "description": "The accuracy of the estimated location, in meters. This represents the radius of a circle around the given `location` where the IP address is likely to be. If your Geolocation response shows a low value in the `accuracy` field (<=50), the IP has strong chance to be correctly located.",
-            "type": "number"
+            "type": "number",
+            "example": 5
           },
           "latitude": {
             "description": "Approximate latitude of the geographical area associated with the IP address",
-            "type": "number"
+            "type": "number",
+            "example": 38.719
           },
           "longitude": {
             "description": "Approximate longitude of the geographical area associated with the IP address",
-            "type": "number"
+            "type": "number",
+            "example": -77.1067
           },
           "country_code": {
             "description": "ISO 3166-1 Alpha-2 compatible country code",
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "example": "US"
           },
           "country_name": {
             "description": "Country name",
-            "type": "string"
+            "type": "string",
+            "example": "United States"
           },
           "continent": {
             "description": "Continent name",
-            "type": "string"
+            "type": "string",
+            "example": "North America"
           },
           "region_state": {
             "description": "Region name when available",
-            "type": "string"
+            "type": "string",
+            "example": "Virginia"
           },
           "city": {
             "description": "City name when available",
-            "type": "string"
+            "type": "string",
+            "example": "Alexandria"
           },
           "postal_code": {
             "description": "A postal code close to the user's location, when available",
-            "type": "string"
+            "type": "string",
+            "example": "22309"
           },
           "timezone": {
-            "description": "The time zone associated with location, as specified by the IANA Time Zone Database",
-            "type": "string"
+            "$ref": "#/components/schemas/Timezone"
           }
         },
         "example": {
@@ -10574,7 +10683,7 @@
       "AssetRequest": {
         "title": "AssetRequest",
         "type": "object",
-        "description": "Attributes describing an Asset.",
+        "description": "Attributes describing an Asset Request.",
         "required": [
           "location",
           "name",
@@ -10585,9 +10694,7 @@
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "name": {
-            "description": "The asset's name.",
-            "type": "string",
-            "example": "My Cool Store"
+            "$ref": "#/components/schemas/AssetName"
           },
           "storeId": {
             "$ref": "#/components/schemas/AssetId"
@@ -10599,26 +10706,10 @@
             "$ref": "#/components/schemas/AssetContact"
           },
           "types": {
-            "description": "Contains an array of types describing the Asset.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "drive",
-              "click_and_collect"
-            ]
+            "$ref": "#/components/schemas/AssetTypes"
           },
           "tags": {
-            "description": "Contains an array of tags describing the Asset. For example a list of available amenities.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "wifi",
-              "covered_parking"
-            ]
+            "$ref": "#/components/schemas/AssetTags"
           },
           "userProperties": {
             "description": "Contains all additional information relative to an Asset. If not set it returns null value.",
@@ -10650,6 +10741,38 @@
         "type": "string",
         "example": "STORE_ID_12345"
       },
+      "AssetName": {
+        "title": "AssetName",
+        "description": "The asset's name.",
+        "type": "string",
+        "example": "My Cool Store"
+      },
+      "AssetTypes": {
+        "title": "AssetTypes",
+        "description": "Contains an array of types describing the Asset.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "example": "drive"
+        },
+        "example": [
+          "drive",
+          "click_and_collect"
+        ]
+      },
+      "AssetTags": {
+        "title": "AssetTags",
+        "description": "Contains an array of tags describing the Asset. For example a list of available amenities.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "example": "wifi"
+        },
+        "example": [
+          "wifi",
+          "covered_parking"
+        ]
+      },
       "AssetsCollectionRequest": {
         "title": "AssetsCollectionRequest",
         "description": "A Collection of Woosmap Assets as expected for Data Management Data API.",
@@ -10665,6 +10788,106 @@
               "$ref": "#/components/schemas/AssetRequest"
             }
           }
+        },
+        "example": {
+          "stores": [
+            {
+              "types": [
+                "drive",
+                "click_and_collect"
+              ],
+              "tags": [
+                "wifi",
+                "covered_parking"
+              ],
+              "location": {
+                "lat": 38.719,
+                "lng": -77.1067
+              },
+              "storeId": "STORE_ID_123456",
+              "name": "My Cool Store",
+              "address": {
+                "lines": [
+                  "Building Centre",
+                  "26 Store Street"
+                ],
+                "countryCode": "UK",
+                "city": "London",
+                "zipcode": "WC1E 7BT"
+              },
+              "contact": {
+                "website": "https://www.woosmap.com",
+                "phone": "+44 20 7693 4000",
+                "email": "contact@woosmap.com"
+              },
+              "userProperties": {
+                "some_user_properties": "associated user value"
+              },
+              "openingHours": {
+                "timezone": "Europe/London",
+                "usual": {
+                  "1": [],
+                  "default": [
+                    {
+                      "start": "08:30",
+                      "end": "22:00"
+                    }
+                  ]
+                },
+                "special": {
+                  "2015-02-07": [
+                    {
+                      "start": "08:00",
+                      "end": "23:00"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "types": [
+                "drive"
+              ],
+              "tags": [
+                "covered_parking"
+              ],
+              "location": {
+                "lat": 38.5239,
+                "lng": -77.0157
+              },
+              "storeId": "STORE_ID_45678",
+              "name": "My Cool Store 2",
+              "address": {
+                "lines": [
+                  "1805-1899",
+                  "Orchard St"
+                ],
+                "countryCode": "US",
+                "city": "Alexandria",
+                "zipcode": "22309"
+              },
+              "contact": {
+                "website": "https://www.woosmap.com",
+                "phone": "+44 20 7693 4000",
+                "email": "contact@woosmap.com"
+              },
+              "userProperties": {
+                "some_user_properties": "associated user value"
+              },
+              "openingHours": {
+                "timezone": "America/New_York",
+                "usual": {
+                  "1": [],
+                  "default": [
+                    {
+                      "start": "08:30",
+                      "end": "22:00"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
         }
       },
       "AssetAddressRequest": {
@@ -10673,15 +10896,7 @@
         "description": "An object containing the separate components applicable to this address.",
         "properties": {
           "lines": {
-            "description": "An Array for lines of an Asset Address",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "Building Centre",
-              "26 Store Street"
-            ]
+            "$ref": "#/components/schemas/AssetAddressLines"
           },
           "countryCode": {
             "description": "An ISO_3166-1 Country Code where the Asset is located (see <https://en.wikipedia.org/wiki/ISO_3166-1> for full list)",
@@ -10699,6 +10914,14 @@
             "type": "string",
             "example": "WC1E 7BT"
           }
+        },
+        "example": {
+          "lines": [
+            "8 Southwark St"
+          ],
+          "countryCode": "UK",
+          "city": "London",
+          "zipcode": "WC1E 7BT"
         }
       },
       "AssetAddressResponse": {
@@ -10707,15 +10930,7 @@
         "description": "An object containing the separate components applicable to this address.",
         "properties": {
           "lines": {
-            "description": "An Array for lines of an Asset Address",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "Building Centre",
-              "26 Store Street"
-            ]
+            "$ref": "#/components/schemas/AssetAddressLines"
           },
           "country_code": {
             "description": "An ISO_3166-1 Country Code where the Asset is located (see <https://en.wikipedia.org/wiki/ISO_3166-1> for full list)",
@@ -10733,6 +10948,27 @@
             "type": "string",
             "example": "WC1E 7BT"
           }
+        },
+        "example": {
+          "lines": [
+            "8 Southwark St"
+          ],
+          "country_code": "UK",
+          "city": "London",
+          "zipcode": "SE1 1TL"
+        }
+      },
+      "AssetAddressLines": {
+        "title": "AssetAddressLines",
+        "description": "An Array for lines of an Asset Address",
+        "type": "array",
+        "example": [
+          "Building Centre",
+          "26 Store Street"
+        ],
+        "items": {
+          "type": "string",
+          "example": "26 Store Street"
         }
       },
       "AssetContact": {
@@ -10755,6 +10991,11 @@
             "type": "string",
             "example": "contact@woosmap.com"
           }
+        },
+        "example": {
+          "website": "https://www.woosmap.com",
+          "phone": "+44 20 7693 4000",
+          "email": "contact@woosmap.com"
         }
       },
       "AssetOpeningHours": {
@@ -10764,15 +11005,33 @@
         "description": "An object describing the opening hours of an Asset.",
         "properties": {
           "timezone": {
-            "description": "Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>",
-            "type": "string",
-            "example": "Europe/London"
+            "$ref": "#/components/schemas/Timezone"
           },
           "usual": {
             "$ref": "#/components/schemas/AssetOpeningHoursUsual"
           },
           "special": {
             "$ref": "#/components/schemas/AssetOpeningHoursSpecial"
+          }
+        },
+        "example": {
+          "timezone": "Europe/London",
+          "usual": {
+            "1": [],
+            "default": [
+              {
+                "start": "08:30",
+                "end": "22:00"
+              }
+            ]
+          },
+          "special": {
+            "2015-02-07": [
+              {
+                "start": "08:00",
+                "end": "23:00"
+              }
+            ]
           }
         }
       },
@@ -10860,13 +11119,7 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AssetOpeningHoursPeriod"
-            },
-            "example": [
-              {
-                "start": "08:30",
-                "end": "19:30"
-              }
-            ]
+            }
           }
         }
       },
@@ -10932,16 +11185,23 @@
           },
           "week_day": {
             "description": "the day of the week starting from 1 to 7",
-            "type": "number",
-            "enum": [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7
-            ]
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          }
+        },
+        "example": {
+          "open_now": true,
+          "open_hours": [
+            {
+              "end": "20:00",
+              "start": "05:00"
+            }
+          ],
+          "week_day": 1,
+          "current_slice": {
+            "end": "20:00",
+            "start": "05:00"
           }
         }
       },
@@ -10972,10 +11232,69 @@
             "$ref": "#/components/schemas/AssetWeeklyOpeningHoursPeriod"
           },
           "timezone": {
-            "description": "Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>",
-            "type": "string",
-            "example": "Europe/London"
+            "$ref": "#/components/schemas/Timezone"
           }
+        },
+        "example": {
+          "1": {
+            "hours": [],
+            "isSpecial": false
+          },
+          "2": {
+            "hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "isSpecial": false
+          },
+          "3": {
+            "hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "isSpecial": false
+          },
+          "4": {
+            "hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "isSpecial": false
+          },
+          "5": {
+            "hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "isSpecial": false
+          },
+          "6": {
+            "hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "isSpecial": false
+          },
+          "7": {
+            "hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "isSpecial": false
+          },
+          "timezone": "Europe/London"
         }
       },
       "AssetWeeklyOpeningHoursPeriod": {
@@ -10994,6 +11313,15 @@
             "description": "Define if the hours comes from a special opening hours day.",
             "example": false
           }
+        },
+        "example": {
+          "hours": [
+            {
+              "start": "06:30",
+              "end": "18:00"
+            }
+          ],
+          "isSpecial": false
         }
       },
       "LocalitiesAutocompleteCollectionResponse": {
@@ -11309,35 +11637,6 @@
           "admin_0": "United Kingdom"
         }
       },
-      "LocalitiesBounds": {
-        "title": "LocalitiesBounds",
-        "type": "object",
-        "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
-        "required": [
-          "north",
-          "east",
-          "south",
-          "west"
-        ],
-        "properties": {
-          "north": {
-            "type": "number",
-            "description": "Latitude in decimal degrees for upper right corner"
-          },
-          "east": {
-            "type": "number",
-            "description": "Longitude in decimal degrees for upper right corner"
-          },
-          "south": {
-            "type": "number",
-            "description": "Latitude in decimal degrees for lower left corner"
-          },
-          "west": {
-            "type": "number",
-            "description": "Longitude in decimal degrees for lower left corner"
-          }
-        }
-      },
       "LocalitiesDetailsPostalCodeResponse": {
         "title": "LocalitiesDetailsPostalCodeResponse",
         "type": "object",
@@ -11370,14 +11669,16 @@
               "viewport": {
                 "$ref": "#/components/schemas/Bounds"
               }
+            },
+            "example": {
+              "location": {
+                "lat": 51.49984,
+                "lng": -0.124663
+              }
             }
           },
           "address_components": {
-            "description": "An array containing the separate components applicable to this address.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AddressComponents"
-            }
+            "$ref": "#/components/schemas/AddressComponents"
           },
           "addresses": {
             "description": "UK Only. List of addresses attached to this Postal Code.",
@@ -11429,41 +11730,8 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "example": {
-          "result": {
-            "formatted_address": "SW1A 0AA, City of London",
-            "types": [
-              "postal_code"
-            ],
-            "public_id": "QaCU+fBtigK65ztSrqHqUoUDwZw=",
-            "name": "SW1A 0AA",
-            "geometry": {
-              "location": {
-                "lat": 51.49984,
-                "lng": -0.124663
-              }
             },
-            "address_components": [
-              {
-                "types": [
-                  "country",
-                  "administrative_area_level_0"
-                ],
-                "long_name": "United Kingdom",
-                "short_name": "GB"
-              },
-              {
-                "types": [
-                  "administrative_area_level_1"
-                ],
-                "long_name": "City of London",
-                "short_name": "City of London"
-              }
-            ],
-            "addresses": {
+            "example": {
               "pagination": {
                 "page": 1,
                 "page_count": 1,
@@ -11513,16 +11781,6 @@
           "address"
         ]
       },
-      "LocalitiesViewpoint": {
-        "title": "LocalitiesViewpoint",
-        "type": "object",
-        "description": "Contains the bounds for the locality",
-        "properties": {
-          "bounds": {
-            "$ref": "#/components/schemas/LocalitiesBounds"
-          }
-        }
-      },
       "LocalitiesDetailsResponse": {
         "title": "LocalitiesDetailsResponse",
         "type": "object",
@@ -11539,57 +11797,6 @@
                 "$ref": "#/components/schemas/LocalitiesDetailsPostalCodeResponse"
               }
             ]
-          }
-        }
-      },
-      "LocalitiesDetailsAddressResponse": {
-        "title": "LocalitiesDetailsAddressResponse",
-        "type": "object",
-        "description": "Attributes describing a locality. Not all attributes will be available for all locality types.",
-        "properties": {
-          "formatted_address": {
-            "description": "Contains the text description of the proposal to be used as suggestion in drop down list if needed.",
-            "type": "string",
-            "example": "Parliament Square, London, SW1A 0AA"
-          },
-          "types": {
-            "description": "available localities types",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LocalitiesTypes"
-            }
-          },
-          "public_id": {
-            "description": "Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.",
-            "type": "string",
-            "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
-          },
-          "geometry": {
-            "description": "The location of the result, in latitude and longitude, eventually associated with a Viewport. Accuracy is also provided for locality of type Address.",
-            "type": "object",
-            "properties": {
-              "location": {
-                "$ref": "#/components/schemas/LatLngLiteral"
-              },
-              "viewport": {
-                "$ref": "#/components/schemas/Bounds"
-              },
-              "accuracy": {
-                "type": "string",
-                "enum": [
-                  "ROOFTOP",
-                  "POSTAL_CODE",
-                  "DISTRICT"
-                ]
-              }
-            }
-          },
-          "address_components": {
-            "description": "An array containing the separate components applicable to this address.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AddressComponents"
-            }
           }
         },
         "example": {
@@ -11651,6 +11858,60 @@
                 "short_name": "House Of Commons"
               }
             ]
+          }
+        }
+      },
+      "LocalitiesDetailsAddressResponse": {
+        "title": "LocalitiesDetailsAddressResponse",
+        "type": "object",
+        "description": "Attributes describing a locality. Not all attributes will be available for all locality types.",
+        "properties": {
+          "formatted_address": {
+            "description": "Contains the text description of the proposal to be used as suggestion in drop down list if needed.",
+            "type": "string",
+            "example": "Parliament Square, London, SW1A 0AA"
+          },
+          "types": {
+            "description": "available localities types",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesTypes"
+            }
+          },
+          "public_id": {
+            "description": "Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.",
+            "type": "string",
+            "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
+          },
+          "geometry": {
+            "description": "The location of the result, in latitude and longitude, eventually associated with a Viewport. Accuracy is also provided for locality of type Address.",
+            "type": "object",
+            "properties": {
+              "location": {
+                "$ref": "#/components/schemas/LatLngLiteral"
+              },
+              "viewport": {
+                "$ref": "#/components/schemas/Bounds"
+              },
+              "accuracy": {
+                "type": "string",
+                "enum": [
+                  "ROOFTOP",
+                  "STREET",
+                  "GEOMETRIC_CENTER"
+                ]
+              }
+            },
+            "example": {
+              "location": {
+                "lat": 51.4998415,
+                "lng": -0.1246375
+              },
+              "accuracy": "ROOFTOP"
+            }
+          },
+          "address_components": {
+            "$ref": "#/components/schemas/AddressComponents"
           }
         }
       },
@@ -11743,11 +12004,7 @@
             "$ref": "#/components/schemas/AddressGeometry"
           },
           "address_components": {
-            "description": "An array containing the separate components applicable to this address.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AddressComponents"
-            }
+            "$ref": "#/components/schemas/AddressComponents"
           }
         }
       },
@@ -11881,11 +12138,7 @@
                 "example": "aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0"
               },
               "address_components": {
-                "description": "An array containing the separate components applicable to this address.",
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/AddressComponents"
-                }
+                "$ref": "#/components/schemas/AddressComponents"
               },
               "geometry": {
                 "$ref": "#/components/schemas/AddressGeometry"
@@ -11961,6 +12214,7 @@
       "AddressStatus": {
         "title": "AddressStatus",
         "type": "string",
+        "example": "OK",
         "description": "Returns more info on if the request was successful or not, valid responses.\n  * `OK` indicates the response contains a valid result.\n  * `INVALID_REQUEST` indicates that the provided request was invalid (e.g. wrong URL syntax).\n  * `REQUEST_DENIED` indicates that the service denied use of the Address API (e.g. wrong API Key, wrong/no referer, …).\n  * `UNKNOWN_ERROR` indicates an Address API request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
@@ -12350,11 +12604,7 @@
             }
           },
           "address_components": {
-            "description": "An array containing the separate components applicable to this address.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AddressComponents"
-            }
+            "$ref": "#/components/schemas/AddressComponents"
           },
           "geometry": {
             "$ref": "#/components/schemas/AddressGeometry"
@@ -12480,7 +12730,7 @@
             "example": "POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))"
           },
           "types": {
-            "description": "Contains an array of types describing the Asset.",
+            "description": "Contains an array of types describing the Zone.",
             "type": "array",
             "items": {
               "type": "string"
@@ -12514,7 +12764,7 @@
         "properties": {
           "status": {
             "type": "string",
-            "description": "the status of the request",
+            "description": "the status of the 2OO response",
             "example": "success"
           },
           "message": {
@@ -12530,41 +12780,15 @@
         "description": "Leg in a route",
         "properties": {
           "distance": {
-            "description": "The total distance covered by this leg.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The distance in meters",
-                "type": "number",
-                "example": 2775.1
-              },
-              "text": {
-                "type": "string",
-                "example": "2.8 km"
-              }
-            }
+            "$ref": "#/components/schemas/DistanceValue"
           },
           "duration": {
-            "description": "The total duration of this leg.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The duration in seconds",
-                "type": "number",
-                "example": 272.5
-              },
-              "text": {
-                "type": "string",
-                "example": "5 mins"
-              }
-            }
+            "$ref": "#/components/schemas/DurationValue"
           },
           "start_location": {
-            "description": "The latitude/longitude coordinates of the origin of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The latitude/longitude coordinates of the given destination of this leg. Because the Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "start_waypoint": {
@@ -12594,6 +12818,63 @@
               "$ref": "#/components/schemas/DistanceStep"
             }
           }
+        }
+      },
+      "DistanceValue": {
+        "title": "DistanceValue",
+        "description": "The total distance expressed in meters (value) and as text. The textual value uses the unit system specified with the units parameter of the original request.",
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "The distance in meters.",
+            "type": "number",
+            "example": 2775.1
+          },
+          "text": {
+            "description": "The readable distance using the unit system specified.",
+            "type": "string",
+            "example": "2.8 km"
+          }
+        },
+        "example": {
+          "value": 2775.1,
+          "text": "2.8 km"
+        }
+      },
+      "DurationValue": {
+        "title": "DurationValue",
+        "description": "The total duration to travel this route/leg, expressed in seconds (value) and as text. The textual value gives a structured string for duration in the specified language (if available).",
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "The duration in seconds",
+            "type": "number",
+            "example": 272.5
+          },
+          "text": {
+            "type": "string",
+            "description": "The readable duration value",
+            "example": "5 mins"
+          }
+        },
+        "example": {
+          "value": 272.5,
+          "text": "5 mins"
+        }
+      },
+      "EncodedPolyline": {
+        "title": "EncodedPolyline",
+        "type": "object",
+        "description": "The polyline of the route (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)).",
+        "properties": {
+          "points": {
+            "type": "string",
+            "description": "The encoded string value for points of the polyline",
+            "example": "a_jyHfol@aAfEzGlIfER~JqV_KqLu@pDiHv@bAfEeCfE"
+          }
+        },
+        "example": {
+          "points": "a_jyHfol@aAfEzGlIfER~JqV_KqLu@pDiHv@bAfEeCfE"
         }
       },
       "DistanceMatrixElementsResponse": {
@@ -12651,34 +12932,10 @@
             ]
           },
           "duration": {
-            "description": "The total duration to travel this route, expressed in seconds (value) and as text. The textual value gives a structured string for duration in the specified language (if available).",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The duration in seconds",
-                "type": "number",
-                "example": 20495
-              },
-              "text": {
-                "type": "string",
-                "example": "5 hours 42 mins"
-              }
-            }
+            "$ref": "#/components/schemas/DurationValue"
           },
           "distance": {
-            "description": "The total distance of this route, expressed in meters (value) and as text. The textual value uses the unit system specified with the units parameter of the original request.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The distance in meter",
-                "type": "number",
-                "example": 544752
-              },
-              "text": {
-                "type": "string",
-                "example": "545 km"
-              }
-            }
+            "$ref": "#/components/schemas/DistanceValue"
           }
         }
       },
@@ -12736,21 +12993,15 @@
         "description": "Attributes describing routes from an origin to a destination returned in distance route response.",
         "properties": {
           "overview_polyline": {
-            "type": "object",
-            "description": "The polyline of the route (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)).",
-            "properties": {
-              "points": {
-                "type": "string",
-                "example": "a_jyHfol@aAfEzGlIfER~JqV_KqLu@pDiHv@bAfEeCfE"
-              }
-            }
+            "$ref": "#/components/schemas/EncodedPolyline"
           },
           "bounds": {
             "$ref": "#/components/schemas/Bounds"
           },
           "summary": {
             "type": "string",
-            "description": "A short name for the route."
+            "description": "A short name for the route.",
+            "example": "Route from A to Z"
           },
           "legs": {
             "type": "array",
@@ -13038,7 +13289,6 @@
             "type": "object",
             "properties": {
               "origin": {
-                "description": "The point around which the isochrone is centered",
                 "$ref": "#/components/schemas/LatLngLiteral"
               },
               "time": {
@@ -13117,11 +13367,9 @@
             "example": "_igoHa~hYgApBMHOEKO"
           },
           "start_location": {
-            "description": "The location of the starting point of this step",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The location of the last point of this step",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "travel_mode": {
@@ -13169,6 +13417,12 @@
             "description": "Text suitable for use as a verbal message immediately after the maneuver transition",
             "example": "Continue for 700 meters."
           }
+        },
+        "example": {
+          "action": 2,
+          "summary": "Drive northeast on D 151.",
+          "verbal_alert": "Enter the roundabout and take the 2nd exit onto D 30.",
+          "verbal_before": "Drive northeast on D 151. Then Enter the roundabout and take the 2nd exit onto D 30."
         }
       },
       "TrafficDistanceMatrixElementsResponse": {
@@ -13226,34 +13480,10 @@
             ]
           },
           "duration_with_traffic": {
-            "description": "The total duration to travel this route, expressed in seconds (value) and as text. The textual value gives a structured string for duration in the specified language (if available).",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The duration in seconds",
-                "type": "number",
-                "example": 20495
-              },
-              "text": {
-                "type": "string",
-                "example": "5 hours 42 mins"
-              }
-            }
+            "$ref": "#/components/schemas/DurationValue"
           },
           "distance": {
-            "description": "The total distance of this route, expressed in meters (value) and as text. The textual value uses the unit system specified with the units parameter of the original request.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The distance in meter",
-                "type": "number",
-                "example": 544752
-              },
-              "text": {
-                "type": "string",
-                "example": "545 km"
-              }
-            }
+            "$ref": "#/components/schemas/DistanceValue"
           }
         }
       },
@@ -13357,21 +13587,15 @@
         "description": "Attributes describing routes from an origin to a destination returned in traffic distance route response.",
         "properties": {
           "overview_polyline": {
-            "type": "object",
-            "description": "The polyline of the route (encoded with the [poyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)).",
-            "properties": {
-              "points": {
-                "type": "string",
-                "example": "a_jyHfol@aAfEzGlIfER~JqV_KqLu@pDiHv@bAfEeCfE"
-              }
-            }
+            "$ref": "#/components/schemas/EncodedPolyline"
           },
           "bounds": {
             "$ref": "#/components/schemas/Bounds"
           },
           "summary": {
             "type": "string",
-            "description": "A short name for the route."
+            "description": "A short name for the route.",
+            "example": "Route from A to Z"
           },
           "legs": {
             "type": "array",
@@ -13450,57 +13674,41 @@
         "description": "Leg in a route",
         "properties": {
           "distance": {
-            "description": "The total distance covered by this leg.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The distance in meters",
-                "type": "number",
-                "example": 2775.1
-              },
-              "text": {
-                "type": "string",
-                "example": "2.8 km"
-              }
-            }
+            "$ref": "#/components/schemas/DistanceValue"
           },
           "duration_with_traffic": {
-            "description": "The duration of the leg, considering the traffic.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The duration in seconds",
-                "type": "number",
-                "example": 360
-              },
-              "text": {
-                "type": "string",
-                "example": "6 mins"
-              }
-            }
+            "$ref": "#/components/schemas/DurationValue"
           },
           "duration_without_traffic": {
-            "description": "The duration of the leg, considering no traffic.",
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The duration in seconds",
-                "type": "number",
-                "example": 272.5
-              },
-              "text": {
-                "type": "string",
-                "example": "5 mins"
-              }
-            }
+            "$ref": "#/components/schemas/DurationValue"
           },
           "start_location": {
-            "description": "The latitude/longitude coordinates of the origin of this leg. Because the Traffic Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "end_location": {
-            "description": "The latitude/longitude coordinates of the given destination of this leg. Because the Traffic Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.",
             "$ref": "#/components/schemas/LatLngLiteral"
+          }
+        },
+        "example": {
+          "distance": {
+            "value": 1073.570921248021,
+            "text": "1.1 km"
+          },
+          "duration_with_traffic": {
+            "value": 100,
+            "text": "2 mins"
+          },
+          "duration_without_traffic": {
+            "value": 88,
+            "text": "1 min"
+          },
+          "start_location": {
+            "lat": 49.310753,
+            "lng": 4.1451221
+          },
+          "end_location": {
+            "lat": 49.3134,
+            "lng": 4.15297
           }
         }
       },
@@ -13544,7 +13752,8 @@
           },
           "custom_id": {
             "description": "Provided in request and returned if specified.",
-            "type": "string"
+            "type": "string",
+            "example": "mobile app transaction"
           }
         }
       },
@@ -13702,7 +13911,8 @@
           },
           "custom_id": {
             "description": "Provided in request and returned if specified.",
-            "type": "string"
+            "type": "string",
+            "example": "mobile app transaction"
           }
         }
       },
@@ -13811,23 +14021,43 @@
           },
           "street": {
             "type": "string",
-            "description": "The merchant’s street, typically found in the raw transaction."
+            "description": "The merchant’s street, typically found in the raw transaction.",
+            "example": "Hollyhill Ln, Hollyhill Industrial Estate"
           },
           "zipcode": {
             "type": "string",
-            "description": "The merchant’s zipcode."
+            "description": "The merchant’s zipcode.",
+            "example": "T23 YK84"
           },
           "city": {
             "type": "string",
-            "description": "The merchant’s city."
+            "description": "The merchant’s city.",
+            "example": "Cork"
           },
           "state": {
             "type": "string",
-            "description": "The merchant’s state."
+            "description": "The merchant’s state.",
+            "example": "Munster"
           },
           "position": {
-            "type": "string",
-            "description": "The geographic coordinates where the transaction occurred. Sending in a position will significantly increase the possibility of finding a Place ID.\n"
+            "type": "object",
+            "description": "The geographic coordinates where the transaction occurred. Sending in a position will significantly increase the possibility of finding a Place ID.\n",
+            "properties": {
+              "lat": {
+                "type": "number",
+                "description": "Latitude where the transaction occurred.",
+                "example": 41.3
+              },
+              "lng": {
+                "type": "number",
+                "description": "Longitude where the transaction occurred.",
+                "example": -2.46
+              }
+            },
+            "example": {
+              "lat": 41.3,
+              "lng": -2.46
+            }
           }
         }
       },
