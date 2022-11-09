@@ -7,9 +7,7 @@ properties:
     type: object
     properties:
       formatted_address:
-        description: Contains the text description of the proposal to be used as suggestion in drop down list if needed.
-        type: string
-        example: "Parliament Square, London, SW1A 0AA"
+        $ref: "./FormattedAddress.yml"
       types:
         description: available localities types
         type: array
