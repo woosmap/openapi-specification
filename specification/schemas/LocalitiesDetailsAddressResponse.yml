@@ -1,6 +1,6 @@
 title: LocalitiesDetailsAddressResponse
 type: object
-description: Attributes describing a locality. Not all attributes will be available for all locality types.
+description: Attributes describing. Not all attributes will be available for all locality types.
 properties:
   result:
     description: The Root Node for Localities Details
@@ -27,7 +27,8 @@ properties:
             $ref: "./Bounds.yml"
           accuracy:
             type: string
-            enum: [ ROOFTOP, STREET, GEOMETRIC_CENTER ]
+            description: This accuracy represents the type of address returned - `DISTRICT` and `POSTAL_CODE` are for UK only.
+            enum: [ ROOFTOP, ROUTE, DISTRICT, POSTAL_CODE ]
         example: {
           "location": { "lat": 51.4998415, "lng": -0.1246375 },
           "accuracy": "ROOFTOP",

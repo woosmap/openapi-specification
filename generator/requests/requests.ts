@@ -325,6 +325,10 @@ export const REQUESTS: SnippetRequest[] = [
                         key: "ip_address",
                         value: "173.79.254.254",
                     },
+                     {
+                        key: "limit",
+                        value: "2",
+                    },
                 ],
             })
         }),
@@ -460,7 +464,10 @@ export const REQUESTS: SnippetRequest[] = [
                         key: "radius",
                         value: "1000",
                     },
-
+                    {
+                        key: "stores_by_page",
+                        value: "3",
+                    }
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],
@@ -490,6 +497,10 @@ export const REQUESTS: SnippetRequest[] = [
                         key: "query",
                         value: "localized:street",
                     },
+                    {
+                        key: "stores_by_page",
+                        value: "3",
+                    }
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],
