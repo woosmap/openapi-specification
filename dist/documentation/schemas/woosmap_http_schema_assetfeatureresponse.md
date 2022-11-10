@@ -44,12 +44,12 @@ Asset Response as a GeoJSon Feature with Asset properties
       "MX",
       "NB",
       "BE",
-      "LU",
-      "UC"
+      "LU"
     ],
     "types": [
       "Coffee shop"
     ],
+    "last_updated": "2022-11-10T13:26:55.066524+00:00",
     "open": {
       "open_now": true,
       "open_hours": [
@@ -58,7 +58,7 @@ Asset Response as a GeoJSon Feature with Asset properties
           "start": "05:00"
         }
       ],
-      "week_day": 1,
+      "week_day": 4,
       "current_slice": {
         "end": "20:00",
         "start": "05:00"
@@ -175,6 +175,7 @@ Asset Response as a GeoJSon Feature with Asset properties
           }
         ]
       },
+      "special": {},
       "timezone": "America/Los_Angeles"
     }
   },

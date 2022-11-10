@@ -2,7 +2,7 @@
 <!--- [START woosmap_http_schema_geolocationstoresresponse] -->
 <h3 class="schema-object" id="GeolocationStoresResponse">GeolocationStoresResponse</h3>
 
-A successful geolocation request will return a JSON-formatted response defining a location and radius.
+JSON-formatted response defining a location, radius, and stores if accuracy of geocoded IP is 20km or less.
 
 | Field                                                                                                                      | Required | Type                                                                                               | Description                                                                                                                                                                                                                                                                                                                                                                   |
 | :------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -75,15 +75,20 @@ A successful geolocation request will return a JSON-formatted response defining 
             "drive",
             "click_and_collect"
           ],
+          "last_updated": "2022-11-10T13:27:03.490955+00:00",
           "distance": 0,
           "open": {
-            "open_now": false,
-            "open_hours": [],
-            "week_day": 1,
-            "next_opening": {
+            "open_now": true,
+            "open_hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "week_day": 4,
+            "current_slice": {
               "end": "22:00",
-              "start": "08:30",
-              "day": "2022-04-05"
+              "start": "08:30"
             }
           },
           "weekly_opening": {
@@ -204,15 +209,21 @@ A successful geolocation request will return a JSON-formatted response defining 
           "types": [
             "drive"
           ],
+          "last_updated": "2022-11-10T13:27:03.491058+00:00",
           "distance": 23062.07621905,
           "open": {
             "open_now": false,
-            "open_hours": [],
-            "week_day": 1,
+            "open_hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "week_day": 4,
             "next_opening": {
               "end": "22:00",
               "start": "08:30",
-              "day": "2022-04-05"
+              "day": "2022-11-10"
             }
           },
           "weekly_opening": {

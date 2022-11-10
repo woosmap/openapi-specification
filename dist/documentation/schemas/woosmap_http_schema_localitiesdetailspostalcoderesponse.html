@@ -20,130 +20,77 @@
     <tr>
       <td align="left">
         <h4
-          id="LocalitiesDetailsPostalCodeResponse-address_components"
+          id="LocalitiesDetailsPostalCodeResponse-result"
           class="add-link schema-object-property-key"
         >
-          <code>address_components</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>
-        <a href="#AddressComponents" title="AddressComponents"
-          >AddressComponents</a
-        >
-      </td>
-      <td>
-        See
-        <a href="#AddressComponents" title="AddressComponents"
-          >AddressComponents</a
-        >
-        for more information.
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesDetailsPostalCodeResponse-addresses"
-          class="add-link schema-object-property-key"
-        >
-          <code>addresses</code>
+          <code>result</code>
         </h4>
       </td>
       <td>optional</td>
       <td>object</td>
       <td>
         <div class="nonref-property-description">
-          <p>UK Only. List of addresses attached to this Postal Code.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesDetailsPostalCodeResponse-formatted_address"
-          class="add-link schema-object-property-key"
-        >
-          <code>formatted_address</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the text description of the proposal to be used as
-            suggestion in drop down list if needed.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesDetailsPostalCodeResponse-geometry"
-          class="add-link schema-object-property-key"
-        >
-          <code>geometry</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>object</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The location of the PostalCode, in latitude and longitude,
-            eventually associated with a Viewport.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesDetailsPostalCodeResponse-public_id"
-          class="add-link schema-object-property-key"
-        >
-          <code>public_id</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains a unique ID for each suggestion. Please use this ID to give
-            feedbacks on results.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesDetailsPostalCodeResponse-types"
-          class="add-link schema-object-property-key"
-        >
-          <code>types</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>
-        Array&#x3C;<a href="#LocalitiesTypes" title="LocalitiesTypes"
-          >LocalitiesTypes</a
-        >>
-      </td>
-      <td>
-        <div class="ref-property-description">
-          <p>available localities types</p>
-          <p>
-            See <a href="#LocalitiesTypes">LocalitiesTypes</a> for more
-            information.
-          </p>
+          <p>The Root Node for Localities Details</p>
         </div>
       </td>
     </tr>
   </tbody>
 </table>
+<h4
+  class="schema-object-example"
+  id="LocalitiesDetailsPostalCodeResponse-example"
+>
+  Example
+</h4>
+<pre class="notranslate lang-json prettyprint">
+{
+  "result": {
+    "formatted_address": "SW1A 0AA, City of London",
+    "types": [
+      "postal_code"
+    ],
+    "public_id": "QaCU+fBtigK65ztSrqHqUoUDwZw=",
+    "name": "SW1A 0AA",
+    "geometry": {
+      "location": {
+        "lat": 51.49984,
+        "lng": -0.124663
+      }
+    },
+    "address_components": [
+      {
+        "types": [
+          "country",
+          "administrative_area_level_0"
+        ],
+        "long_name": "United Kingdom",
+        "short_name": "GB"
+      },
+      {
+        "types": [
+          "administrative_area_level_1"
+        ],
+        "long_name": "City of London",
+        "short_name": "City of London"
+      }
+    ],
+    "addresses": {
+      "pagination": {
+        "page": 1,
+        "page_count": 1,
+        "addresses_per_page": 1,
+        "address_count": 1
+      },
+      "list": [
+        {
+          "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+          "description": "House Of Commons, Houses Of Parliament, London, SW1A 0AA"
+        }
+      ]
+    }
+  }
+}</pre
+>
 <p style="text-align: right; font-size: smaller">
   Generated from the
   <a

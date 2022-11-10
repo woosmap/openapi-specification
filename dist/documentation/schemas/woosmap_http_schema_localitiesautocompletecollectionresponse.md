@@ -42,8 +42,8 @@ Localities Collection Response containing Localities
       },
       "name": "London",
       "location": {
-        "lat": 51.50732,
-        "lng": -0.12764746
+        "lat": 51.50732184627219,
+        "lng": -0.1276474581028424
       },
       "admin_0": "United Kingdom",
       "admin_1": "City of London"
@@ -68,37 +68,11 @@ Localities Collection Response containing Localities
       },
       "name": "Londonderry/Derry",
       "location": {
-        "lat": 54.997868,
-        "lng": -7.3213058
+        "lat": 54.997867773710254,
+        "lng": -7.321305634744732
       },
       "admin_0": "United Kingdom",
       "admin_1": "Derry City and Strabane"
-    },
-    {
-      "public_id": "VOBREUi72/VtnsYgE6aI8HNYcxg=",
-      "description": "Londesborough, East Riding of Yorkshire, United Kingdom",
-      "type": "locality",
-      "matched_substrings": {
-        "name": [
-          {
-            "offset": 0,
-            "length": 4
-          }
-        ],
-        "description": [
-          {
-            "offset": 0,
-            "length": 4
-          }
-        ]
-      },
-      "name": "Londesborough",
-      "location": {
-        "lat": 53.898506,
-        "lng": -0.6805281
-      },
-      "admin_0": "United Kingdom",
-      "admin_1": "East Riding of Yorkshire"
     },
     {
       "public_id": "Js0mQmmeI46X3hiqRj/R4pvb8mQ=",
@@ -106,8 +80,8 @@ Localities Collection Response containing Localities
       "type": "locality",
       "name": "Long Stratton",
       "location": {
-        "lat": 52.487827,
-        "lng": 1.233093
+        "lat": 52.48782556394062,
+        "lng": 1.2330929989479102
       },
       "admin_0": "United Kingdom",
       "admin_1": "Norfolk"
@@ -118,11 +92,23 @@ Localities Collection Response containing Localities
       "type": "locality",
       "name": "Long Sutton",
       "location": {
-        "lat": 52.786278,
-        "lng": 0.12017952
+        "lat": 52.78556417570891,
+        "lng": 0.12170158845447077
       },
       "admin_0": "United Kingdom",
       "admin_1": "Lincolnshire"
+    },
+    {
+      "public_id": "mHNVDJIyyaDOZvny8JaurHbov4I=",
+      "description": "Long Eaton, Derbyshire, United Kingdom",
+      "type": "locality",
+      "name": "Long Eaton",
+      "location": {
+        "lat": 52.89857142504616,
+        "lng": -1.2708130709654881
+      },
+      "admin_0": "United Kingdom",
+      "admin_1": "Derbyshire"
     }
   ]
 }</pre>

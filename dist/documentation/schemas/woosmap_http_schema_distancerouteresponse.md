@@ -28,7 +28,7 @@ Attributes describing a distance route response.
           "lng": 4.145162
         }
       },
-      "summary": "",
+      "notice": "",
       "legs": [
         {
           "distance": {
@@ -130,10 +130,10 @@ Attributes describing a distance route response.
               "travel_mode": "DRIVING",
               "instructions": {
                 "action": 26,
-                "summary": "Enter the roundabout and take the 2nd exit onto D 30.",
-                "verbal_alert": "Enter the roundabout and take the 2nd exit onto D 30.",
-                "verbal_succint": "Enter the roundabout and take the 2nd exit.",
-                "verbal_before": "Enter the roundabout and take the 2nd exit onto D 30."
+                "summary": "Enter the roundabout and take the 1st exit onto D 30.",
+                "verbal_alert": "Enter the roundabout and take the 1st exit onto D 30.",
+                "verbal_succint": "Enter the roundabout and take the 1st exit.",
+                "verbal_before": "Enter the roundabout and take the 1st exit onto D 30."
               }
             },
             {
