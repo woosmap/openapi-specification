@@ -14,13 +14,14 @@ parameters:
   - $ref: "../../parameters/address/cc_format.yml"
 responses:
   "200":
-    description: Details successfully retrieved
+    description: Details Address successfully retrieved
     content:
       application/json:
         schema:
           $ref: "../../schemas/AddressDetailsResponse.yml"
         examples:
           default:
+            summary: Address Details for `London, England, United Kingdom`
             value:
               $ref: "../../responses/woosmap_http_address_details_response.yml"
 

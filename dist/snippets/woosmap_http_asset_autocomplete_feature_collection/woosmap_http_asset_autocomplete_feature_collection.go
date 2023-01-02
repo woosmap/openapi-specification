@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized:street&key=YOUR_PUBLIC_API_KEY"
+  url := "https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized:street&stores_by_page=3&key=YOUR_PUBLIC_API_KEY"
   method := "GET"
 
   client := &http.Client {

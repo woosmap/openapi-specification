@@ -29,17 +29,32 @@ properties:
   street:
     type: string
     description: The merchant’s street, typically found in the raw transaction.
+    example: "Hollyhill Ln, Hollyhill Industrial Estate"
   zipcode:
     type: string
     description: The merchant’s zipcode.
+    example: "T23 YK84"
   city:
     type: string
     description: The merchant’s city.
+    example: "Cork"
   state:
     type: string
     description: The merchant’s state.
+    example: "Munster"
   position:
-    type: string
+    type: object
     description: >
       The geographic coordinates where the transaction occurred.
       Sending in a position will significantly increase the possibility of finding a Place ID.
+    properties:
+      lat:
+        type: number
+        description: Latitude where the transaction occurred.
+        example: 41.3
+      lng:
+        type: number
+        description: Longitude where the transaction occurred.
+        example: -2.46
+    example: { "lat": 41.3, "lng": -2.46 }
+

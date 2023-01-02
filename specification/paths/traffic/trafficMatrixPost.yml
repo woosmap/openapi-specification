@@ -10,7 +10,7 @@ security:
     RefererHeader: []
   - PrivateApiKeyAuth: []
 requestBody:
-  description: The request body must be formatted as JSON.
+  description: The request body of Traffic Distance Matrix must be formatted as JSON.
   required: true
   content:
     "application/json":
@@ -18,17 +18,19 @@ requestBody:
          $ref: "../../schemas/TrafficDistanceMatrixRequest.yml"
       examples:
         default:
+          summary: Request as a JSON for a distance matrix (including traffic) call
           value:
             $ref: "../../requests/woosmap_http_traffic_distance_matrix_request.yml"
 responses:
   "200":
-    description: Traffic Distance Matrix successfully retrieved
+    description: Traffic Distance Matrix with POST successfully retrieved
     content:
       application/json:
         schema:
           $ref: "../../schemas/TrafficDistanceMatrixResponse.yml"
         examples:
           default:
+            summary: Distance Matrix Result (including traffic) for driving from origins `48.73534,2.368308|48.73534,2.368308` to destinations `48.83534,2.368308`,
             value:
               $ref: "../../responses/woosmap_http_traffic_distance_matrix_response.yml"
   "400":

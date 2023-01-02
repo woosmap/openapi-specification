@@ -18,13 +18,14 @@ parameters:
 
 responses:
   "200":
-    description: Request successful
+    description: Request Localities Geocode successful
     content:
       application/json:
         schema:
           $ref: "../../schemas/LocalitiesGeocodeCollectionResponse.yml"
         examples:
           default:
+            summary: Geocode Results for address `Place Jeanne-d'Arc` with components `country:FR`
             value:
               $ref: "../../responses/woosmap_http_localities_geocode_collection_response.yml"
 

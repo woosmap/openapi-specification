@@ -9,9 +9,7 @@ properties:
     type: object
     properties:
       formatted_address:
-        description: Contains the text description of the proposal to be used as suggestion in drop down list if needed.
-        type: string
-        example: "London, England, United Kingdom"
+        $ref: "./FormattedAddress.yml"
       types:
         description: The types of result.
         type: array
@@ -22,10 +20,7 @@ properties:
         type: string
         example: aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0
       address_components:
-        description: An array containing the separate components applicable to this address.
-        type: array
-        items:
-          $ref: "./AddressComponents.yml"
+        $ref: "./AddressComponents.yml"
       geometry:
         $ref: "./AddressGeometry.yml"
 example:

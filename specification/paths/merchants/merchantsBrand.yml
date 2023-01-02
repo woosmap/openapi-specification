@@ -12,13 +12,14 @@ parameters:
   - $ref: "../../parameters/merchants/dirty_name.yml"
 responses:
   "200":
-    description: Request successful
+    description: Request Merchants successful
     content:
       application/json:
         schema:
           $ref: "../../schemas/MerchantsBrandResponse.yml"
         examples:
           default:
+            summary: Merchant Clean name for dirty_name `APPLE.COM%2FBILL`
             value:
               $ref: "../../responses/woosmap_http_merchants_brand_response.yml"
   "400":

@@ -1,6 +1,6 @@
 title: AssetRequest
 type: object
-description: Attributes describing an Asset.
+description: Attributes describing an Asset Request.
 required:
   - location
   - name
@@ -9,9 +9,7 @@ properties:
   location:
     $ref: "./LatLngLiteral.yml"
   name:
-    description: The asset's name.
-    type: string
-    example: "My Cool Store"
+    $ref: "./AssetName.yml"
   storeId:
     $ref: "./AssetId.yml"
   address:
@@ -19,17 +17,9 @@ properties:
   contact:
     $ref: "./AssetContact.yml"
   types:
-    description: Contains an array of types describing the Asset.
-    type: array
-    items:
-      type: string
-    example: [ "drive", "click_and_collect" ]
+    $ref: "./AssetTypes.yml"
   tags:
-    description: Contains an array of tags describing the Asset. For example a list of available amenities.
-    type: array
-    items:
-      type: string
-    example: [ "wifi", "covered_parking" ]
+    $ref: "./AssetTags.yml"
   userProperties:
     description: Contains all additional information relative to an Asset. If not set it returns null value.
     nullable: true

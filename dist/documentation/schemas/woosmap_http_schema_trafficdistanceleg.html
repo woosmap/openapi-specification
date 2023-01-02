@@ -22,11 +22,10 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
+      <td><a href="#DistanceValue" title="DistanceValue">DistanceValue</a></td>
       <td>
-        <div class="nonref-property-description">
-          <p>The total distance covered by this leg.</p>
-        </div>
+        See <a href="#DistanceValue" title="DistanceValue">DistanceValue</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -39,11 +38,10 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
+      <td><a href="#DurationValue" title="DurationValue">DurationValue</a></td>
       <td>
-        <div class="nonref-property-description">
-          <p>The duration of the leg, considering the traffic.</p>
-        </div>
+        See <a href="#DurationValue" title="DurationValue">DurationValue</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -56,11 +54,10 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
+      <td><a href="#DurationValue" title="DurationValue">DurationValue</a></td>
       <td>
-        <div class="nonref-property-description">
-          <p>The duration of the leg, considering no traffic.</p>
-        </div>
+        See <a href="#DurationValue" title="DurationValue">DurationValue</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -75,20 +72,8 @@
       <td>optional</td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The latitude/longitude coordinates of the given destination of this
-            leg. Because the Traffic Distance Route API calculates directions
-            between locations by using the nearest transportation option
-            (usually a road) at the start and end points,
-            <code>end_location</code> may be different than the provided
-            destination of this leg if, for example, a road is not near the
-            destination.
-          </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        See <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -103,23 +88,37 @@
       <td>optional</td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The latitude/longitude coordinates of the origin of this leg.
-            Because the Traffic Distance Route API calculates directions between
-            locations by using the nearest transportation option (usually a
-            road) at the start and end points, <code>start_location</code> may
-            be different than the provided origin of this leg if, for example, a
-            road is not near the origin.
-          </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        See <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
       </td>
     </tr>
   </tbody>
 </table>
+<h4 class="schema-object-example" id="TrafficDistanceLeg-example">Example</h4>
+<pre class="notranslate lang-json prettyprint">
+{
+  "distance": {
+    "value": 1073.570921248021,
+    "text": "1.1 km"
+  },
+  "duration_with_traffic": {
+    "value": 100,
+    "text": "2 mins"
+  },
+  "duration_without_traffic": {
+    "value": 88,
+    "text": "1 min"
+  },
+  "start_location": {
+    "lat": 49.310753,
+    "lng": 4.1451221
+  },
+  "end_location": {
+    "lat": 49.3134,
+    "lng": 4.15297
+  }
+}</pre
+>
 <p style="text-align: right; font-size: smaller">
   Generated from the
   <a

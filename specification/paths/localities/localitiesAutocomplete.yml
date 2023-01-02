@@ -24,13 +24,14 @@ parameters:
   - $ref: "../../parameters/localities/custom_description.yml"
 responses:
   "200":
-    description: Autocompletion successfully retrieved
+    description: Autocompletion Localities successfully retrieved
     content:
       application/json:
         schema:
           $ref: "../../schemas/LocalitiesAutocompleteCollectionResponse.yml"
         examples:
           default:
+            summary: Autocomplete localities results for input `Lond` and components `country:gb`
             value:
               $ref: "../../responses/woosmap_http_localities_autocomplete_collection_response.yml"
   "401":

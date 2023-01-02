@@ -7,7 +7,7 @@ description: >
 security:
   - PrivateApiKeyAuth: []
 requestBody:
-  description: The request body must be formatted as JSON.
+  description: The request body of Zones Creation must be formatted as JSON.
   required: true
   content:
     "application/json":
@@ -15,6 +15,7 @@ requestBody:
          $ref: "../../schemas/ZonesCollectionRequest.yml"
       examples:
         default:
+          summary: Zones data as JSON
           value:
             $ref: "../../requests/woosmap_http_zones_collection_request.yml"
 
@@ -27,6 +28,7 @@ responses:
           $ref: "../../schemas/SuccessZones.yml"
         examples:
           default:
+            summary: Success response for Zones Created
             value:
               $ref: "../../responses/woosmap_http_zones_collection_request_response.yml"
   "400":

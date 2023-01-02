@@ -14,24 +14,6 @@ properties:
       - NOT_FOUND
       - ZERO_RESULTS
   duration:
-    description: The total duration to travel this route, expressed in seconds (value) and as text. The textual value gives a structured string for duration in the specified language (if available).
-    type: object
-    properties:
-      value:
-        description: The duration in seconds
-        type: number
-        example: 20495
-      text:
-        type: string
-        example: "5 hours 42 mins"
+    $ref: "./DurationValue.yml"
   distance:
-    description: The total distance of this route, expressed in meters (value) and as text. The textual value uses the unit system specified with the units parameter of the original request.
-    type: object
-    properties:
-      value:
-        description: The distance in meter
-        type: number
-        example: 544752
-      text:
-        type: string
-        example: "545 km"
+    $ref: "./DistanceValue.yml"

@@ -2,7 +2,7 @@
 <!--- [START woosmap_http_schema_geolocationstoresresponse] -->
 <h3 class="schema-object" id="GeolocationStoresResponse">GeolocationStoresResponse</h3>
 
-A successful geolocation request will return a JSON-formatted response defining a location and radius.
+JSON-formatted response defining a location, radius, and stores if accuracy of geocoded IP is 20km or less.
 
 | Field                                                                                                                      | Required | Type                                                                                               | Description                                                                                                                                                                                                                                                                                                                                                                   |
 | :------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,7 +16,7 @@ A successful geolocation request will return a JSON-formatted response defining 
 | <h4 id="GeolocationStoresResponse-postal_code" class="add-link schema-object-property-key"><code>postal_code</code></h4>   | optional | string                                                                                             | <div class="nonref-property-description"><p>A postal code close to the user's location, when available</p></div>                                                                                                                                                                                                                                                              |
 | <h4 id="GeolocationStoresResponse-region_state" class="add-link schema-object-property-key"><code>region_state</code></h4> | optional | string                                                                                             | <div class="nonref-property-description"><p>Region name when available</p></div>                                                                                                                                                                                                                                                                                              |
 | <h4 id="GeolocationStoresResponse-stores" class="add-link schema-object-property-key"><code>stores</code></h4>             | optional | [AssetFeatureCollectionResponse](#AssetFeatureCollectionResponse "AssetFeatureCollectionResponse") | See [AssetFeatureCollectionResponse](#AssetFeatureCollectionResponse "AssetFeatureCollectionResponse") for more information.                                                                                                                                                                                                                                                  |
-| <h4 id="GeolocationStoresResponse-timezone" class="add-link schema-object-property-key"><code>timezone</code></h4>         | optional | string                                                                                             | <div class="nonref-property-description"><p>The time zone associated with location, as specified by the IANA Time Zone Database</p></div>                                                                                                                                                                                                                                     |
+| <h4 id="GeolocationStoresResponse-timezone" class="add-link schema-object-property-key"><code>timezone</code></h4>         | optional | [Timezone](#Timezone "Timezone")                                                                   | See [Timezone](#Timezone "Timezone") for more information.                                                                                                                                                                                                                                                                                                                    |
 | <h4 id="GeolocationStoresResponse-viewport" class="add-link schema-object-property-key"><code>viewport</code></h4>         | optional | [Bounds](#Bounds "Bounds")                                                                         | See [Bounds](#Bounds "Bounds") for more information.                                                                                                                                                                                                                                                                                                                          |
 
 <h4 class="schema-object-example" id="GeolocationStoresResponse-example">Example</h4>
@@ -75,15 +75,20 @@ A successful geolocation request will return a JSON-formatted response defining 
             "drive",
             "click_and_collect"
           ],
+          "last_updated": "2022-11-10T13:27:03.490955+00:00",
           "distance": 0,
           "open": {
-            "open_now": false,
-            "open_hours": [],
-            "week_day": 1,
-            "next_opening": {
+            "open_now": true,
+            "open_hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "week_day": 4,
+            "current_slice": {
               "end": "22:00",
-              "start": "08:30",
-              "day": "2022-04-05"
+              "start": "08:30"
             }
           },
           "weekly_opening": {
@@ -204,15 +209,21 @@ A successful geolocation request will return a JSON-formatted response defining 
           "types": [
             "drive"
           ],
+          "last_updated": "2022-11-10T13:27:03.491058+00:00",
           "distance": 23062.07621905,
           "open": {
             "open_now": false,
-            "open_hours": [],
-            "week_day": 1,
+            "open_hours": [
+              {
+                "end": "22:00",
+                "start": "08:30"
+              }
+            ],
+            "week_day": 4,
             "next_opening": {
               "end": "22:00",
               "start": "08:30",
-              "day": "2022-04-05"
+              "day": "2022-11-10"
             }
           },
           "weekly_opening": {

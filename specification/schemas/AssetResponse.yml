@@ -3,9 +3,7 @@ type: object
 description: Attributes describing an Asset.
 properties:
   name:
-    description: The asset's name.
-    type: string
-    example: "My Cool Store"
+    $ref: "./AssetName.yml"
   store_id:
     $ref: "./AssetId.yml"
   address:
@@ -17,17 +15,14 @@ properties:
   weekly_opening:
     $ref: "./AssetWeeklyOpeningResponse.yml"
   types:
-    description: Contains an array of types describing the Asset.
-    type: array
-    items:
-      type: string
-    example: [ "drive", "click_and_collect" ]
+    $ref: "./AssetTypes.yml"
   tags:
-    description: Contains an array of tags describing the Asset. For example a list of available amenities.
-    type: array
-    items:
-      type: string
-    example: [ "wifi", "covered_parking" ]
+    $ref: "./AssetTags.yml"
+  last_updated:
+    type: string
+    nullable: true
+    description: the previous date timestamp when the asset has been updated
+    example: "2022-11-08T15:48:08.556803+00:00"
   user_properties:
     description: Contains all additional information relative to an Asset. If not set it returns null value.
     nullable: true
@@ -39,3 +34,4 @@ properties:
   distance:
     description: The distance in meters from the geolocated position or searched position if exist
     type: number
+    example: 544.581

@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&key=YOUR_PUBLIC_API_KEY")
+url = URI("https://api.woosmap.com/stores/search/?lat=51.50976&lng=-0.145276&radius=1000&stores_by_page=3&key=YOUR_PUBLIC_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

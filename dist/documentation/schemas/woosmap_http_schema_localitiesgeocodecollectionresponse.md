@@ -13,7 +13,7 @@ Localities Geocode Collection Response. Contains one or more detailled Localitie
 <pre class="notranslate lang-json prettyprint">{
   "results": [
     {
-      "formatted_address": "Place Jeanne D’Arc, 75013, Paris",
+      "formatted_address": "Place Jeanne D'Arc, 75013, Paris",
       "types": [
         "route"
       ],
@@ -58,8 +58,8 @@ Localities Geocode Collection Response. Contains one or more detailled Localitie
           "types": [
             "route"
           ],
-          "long_name": "Place Jeanne D’Arc",
-          "short_name": "Place Jeanne D’Arc"
+          "long_name": "Place Jeanne D'Arc",
+          "short_name": "Place Jeanne D'Arc"
         }
       ]
     }

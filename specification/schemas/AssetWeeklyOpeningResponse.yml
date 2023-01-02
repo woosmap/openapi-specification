@@ -17,6 +17,6 @@ properties:
   7:
     $ref: "./AssetWeeklyOpeningHoursPeriod.yml"
   timezone:
-    description: Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>
-    type: string
-    example: "Europe/London"
+    $ref: "./Timezone.yml"
+example:
+  $ref: "../responses/woosmap_http_asset_weekly_opening_response.yml"

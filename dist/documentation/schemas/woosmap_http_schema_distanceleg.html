@@ -22,11 +22,10 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
+      <td><a href="#DistanceValue" title="DistanceValue">DistanceValue</a></td>
       <td>
-        <div class="nonref-property-description">
-          <p>The total distance covered by this leg.</p>
-        </div>
+        See <a href="#DistanceValue" title="DistanceValue">DistanceValue</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -39,11 +38,10 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
+      <td><a href="#DurationValue" title="DurationValue">DurationValue</a></td>
       <td>
-        <div class="nonref-property-description">
-          <p>The total duration of this leg.</p>
-        </div>
+        See <a href="#DurationValue" title="DurationValue">DurationValue</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -75,19 +73,8 @@
       <td>optional</td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The latitude/longitude coordinates of the given destination of this
-            leg. Because the Distance Route API calculates directions between
-            locations by using the nearest transportation option (usually a
-            road) at the start and end points, <code>end_location</code> may be
-            different than the provided destination of this leg if, for example,
-            a road is not near the destination.
-          </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        See <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -136,19 +123,8 @@
       <td>optional</td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The latitude/longitude coordinates of the origin of this leg.
-            Because the Distance Route API calculates directions between
-            locations by using the nearest transportation option (usually a
-            road) at the start and end points, <code>start_location</code> may
-            be different than the provided origin of this leg if, for example, a
-            road is not near the origin.
-          </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        See <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
       </td>
     </tr>
     <tr>
@@ -197,6 +173,31 @@
     </tr>
   </tbody>
 </table>
+<h4 class="schema-object-example" id="DistanceLeg-example">Example</h4>
+<pre class="notranslate lang-json prettyprint">
+{
+  "distance": {
+    "text": "1 km",
+    "value": 1038
+  },
+  "duration": {
+    "text": "1 min",
+    "value": 75
+  },
+  "start_location": {
+    "lat": 49.31067,
+    "lng": 4.14525
+  },
+  "end_location": {
+    "lat": 49.31344,
+    "lng": 4.15293
+  },
+  "start_waypoint": 0,
+  "end_waypoint": 1,
+  "end_address": "D 30",
+  "start_address": "D 151"
+}</pre
+>
 <p style="text-align: right; font-size: smaller">
   Generated from the
   <a

@@ -8,7 +8,7 @@ description: To replace all your Assets. This endpoint will delete all previous 
 security:
   - PrivateApiKeyAuth: []
 requestBody:
-  description: The request body must be formatted as JSON.
+  description: The request body of Stores Replace must be formatted as JSON.
   required: true
   content:
     "application/json":
@@ -16,6 +16,7 @@ requestBody:
          $ref: "../../schemas/AssetsCollectionRequest.yml"
       examples:
         default:
+          summary: Stores Data to replace as JSON
           value:
             $ref: "../../requests/woosmap_http_assets_collection_request.yml"
 responses:
@@ -27,6 +28,7 @@ responses:
           $ref: "../../schemas/Success.yml"
         examples:
           default:
+            summary: Success response for Stores replaced
             value:
               $ref: "../../responses/woosmap_http_assets_replace_request_response.yml"
   "400":

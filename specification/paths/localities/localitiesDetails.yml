@@ -16,16 +16,20 @@ parameters:
   - $ref: "../../parameters/localities/addresses_per_page.yml"
 responses:
   "200":
-    description: Details successfully retrieved
+    description: Details Localities successfully retrieved
     content:
       application/json:
         schema:
-          $ref: "../../schemas/LocalitiesDetailsResponse.yml"
+          anyOf:
+            - $ref: "../../schemas/LocalitiesDetailsAddressResponse.yml"
+            - $ref: "../../schemas/LocalitiesDetailsPostalCodeResponse.yml"
         examples:
           Address:
+            summary: Localities Address details from a `public_id` retrieved using Localities autocomplete
             value:
               $ref: "../../responses/woosmap_http_localities_details_address_response.yml"
           PostalCode:
+            summary: Localities Postal Code details from a `public_id` retrieved using Localities autocomplete
             value:
               $ref: "../../responses/woosmap_http_localities_details_postal_code_response.yml"
 

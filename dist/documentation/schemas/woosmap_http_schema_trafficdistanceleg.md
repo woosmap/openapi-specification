@@ -4,13 +4,38 @@
 
 Leg in a route
 
-| Field                                                                                                                                       | Required | Type                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| :------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <h4 id="TrafficDistanceLeg-distance" class="add-link schema-object-property-key"><code>distance</code></h4>                                 | optional | object                                          | <div class="nonref-property-description"><p>The total distance covered by this leg.</p></div>                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| <h4 id="TrafficDistanceLeg-duration_with_traffic" class="add-link schema-object-property-key"><code>duration_with_traffic</code></h4>       | optional | object                                          | <div class="nonref-property-description"><p>The duration of the leg, considering the traffic.</p></div>                                                                                                                                                                                                                                                                                                                                                                                                              |
-| <h4 id="TrafficDistanceLeg-duration_without_traffic" class="add-link schema-object-property-key"><code>duration_without_traffic</code></h4> | optional | object                                          | <div class="nonref-property-description"><p>The duration of the leg, considering no traffic.</p></div>                                                                                                                                                                                                                                                                                                                                                                                                               |
-| <h4 id="TrafficDistanceLeg-end_location" class="add-link schema-object-property-key"><code>end_location</code></h4>                         | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | <div class="ref-property-description"><p>The latitude/longitude coordinates of the given destination of this leg. Because the Traffic Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, <code>end_location</code> may be different than the provided destination of this leg if, for example, a road is not near the destination.</p><p>See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.</div> |
-| <h4 id="TrafficDistanceLeg-start_location" class="add-link schema-object-property-key"><code>start_location</code></h4>                     | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | <div class="ref-property-description"><p>The latitude/longitude coordinates of the origin of this leg. Because the Traffic Distance Route API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, <code>start_location</code> may be different than the provided origin of this leg if, for example, a road is not near the origin.</p><p>See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.</div>                    |
+| Field                                                                                                                                       | Required | Type                                            | Description                                                               |
+| :------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ----------------------------------------------- | ------------------------------------------------------------------------- |
+| <h4 id="TrafficDistanceLeg-distance" class="add-link schema-object-property-key"><code>distance</code></h4>                                 | optional | [DistanceValue](#DistanceValue "DistanceValue") | See [DistanceValue](#DistanceValue "DistanceValue") for more information. |
+| <h4 id="TrafficDistanceLeg-duration_with_traffic" class="add-link schema-object-property-key"><code>duration_with_traffic</code></h4>       | optional | [DurationValue](#DurationValue "DurationValue") | See [DurationValue](#DurationValue "DurationValue") for more information. |
+| <h4 id="TrafficDistanceLeg-duration_without_traffic" class="add-link schema-object-property-key"><code>duration_without_traffic</code></h4> | optional | [DurationValue](#DurationValue "DurationValue") | See [DurationValue](#DurationValue "DurationValue") for more information. |
+| <h4 id="TrafficDistanceLeg-end_location" class="add-link schema-object-property-key"><code>end_location</code></h4>                         | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
+| <h4 id="TrafficDistanceLeg-start_location" class="add-link schema-object-property-key"><code>start_location</code></h4>                     | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
+
+<h4 class="schema-object-example" id="TrafficDistanceLeg-example">Example</h4>
+
+<pre class="notranslate lang-json prettyprint">{
+  "distance": {
+    "value": 1073.570921248021,
+    "text": "1.1 km"
+  },
+  "duration_with_traffic": {
+    "value": 100,
+    "text": "2 mins"
+  },
+  "duration_without_traffic": {
+    "value": 88,
+    "text": "1 min"
+  },
+  "start_location": {
+    "lat": 49.310753,
+    "lng": 4.1451221
+  },
+  "end_location": {
+    "lat": 49.3134,
+    "lng": 4.15297
+  }
+}</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a data-label="openapi-github-woosmap-http-schema-trafficdistanceleg" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/TrafficDistanceLeg.yml" title="Edit on GitHub">✎ Edit</a>

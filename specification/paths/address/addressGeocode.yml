@@ -18,13 +18,14 @@ parameters:
   - $ref: "../../parameters/address/limit.yml"
 responses:
   "200":
-    description: Request successful
+    description: Request Address Geocode successful
     content:
       application/json:
         schema:
           $ref: "../../schemas/AddressGeocodeCollectionResponse.yml"
         examples:
           default:
+            summary: Geocode Results for address `Place de la Resistance` with components `country:FR`
             value:
               $ref: "../../responses/woosmap_http_address_geocode_collection_response.yml"
 

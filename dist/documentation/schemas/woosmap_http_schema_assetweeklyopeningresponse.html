@@ -213,25 +213,80 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>string</td>
+      <td><a href="#Timezone" title="Timezone">Timezone</a></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Timezone for the Opening Hours of an Asset. It is used to compute
-            the <code>open_now</code> property of an asset. see
-            <a
-              href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
-              ><a
-                href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
-                >https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a
-              ></a
-            >
-          </p>
-        </div>
+        See <a href="#Timezone" title="Timezone">Timezone</a> for more
+        information.
       </td>
     </tr>
   </tbody>
 </table>
+<h4 class="schema-object-example" id="AssetWeeklyOpeningResponse-example">
+  Example
+</h4>
+<pre class="notranslate lang-json prettyprint">
+{
+  "1": {
+    "hours": [],
+    "isSpecial": false
+  },
+  "2": {
+    "hours": [
+      {
+        "end": "22:00",
+        "start": "08:30"
+      }
+    ],
+    "isSpecial": false
+  },
+  "3": {
+    "hours": [
+      {
+        "end": "22:00",
+        "start": "08:30"
+      }
+    ],
+    "isSpecial": false
+  },
+  "4": {
+    "hours": [
+      {
+        "end": "22:00",
+        "start": "08:30"
+      }
+    ],
+    "isSpecial": false
+  },
+  "5": {
+    "hours": [
+      {
+        "end": "22:00",
+        "start": "08:30"
+      }
+    ],
+    "isSpecial": false
+  },
+  "6": {
+    "hours": [
+      {
+        "end": "22:00",
+        "start": "08:30"
+      }
+    ],
+    "isSpecial": false
+  },
+  "7": {
+    "hours": [
+      {
+        "end": "22:00",
+        "start": "08:30"
+      }
+    ],
+    "isSpecial": false
+  },
+  "timezone": "Europe/London"
+}</pre
+>
 <p style="text-align: right; font-size: smaller">
   Generated from the
   <a

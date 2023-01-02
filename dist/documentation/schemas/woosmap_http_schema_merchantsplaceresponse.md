@@ -16,8 +16,8 @@ Attributes describing a Merchant Place Response
       "dirty_name": "MCDO UK 2231 EP",
       "clean_name": "McDonald's",
       "status": "OK",
-      "logo": "956bcb3591a8976ff94871a59b09eecc",
-      "logo_url": "https://api.woosmap.com/merchants/logos/956bcb3591a8976ff94871a59b09eecc.png",
+      "logo": "419b279b6609768a3106ce5a5b4dd70b",
+      "logo_url": "https://api.woosmap.com/merchants/logos/419b279b6609768a3106ce5a5b4dd70b.png",
       "country": "GB",
       "merchant_id": "234482729011",
       "place_id": "ChIJGS7Sga0cdkgR46nd-S661TM"
