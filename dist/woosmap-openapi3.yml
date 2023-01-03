@@ -6368,6 +6368,17 @@ components:
         - locality
         - admin_level
         - country
+    AddressGeocodeTypes:
+      title: AddressGeocodeTypes
+      type: string
+      description: Contains the type of result.
+      enum:
+        - house_number
+        - route
+        - address_block
+        - locality
+        - admin_level
+        - country
         - place
     AddressGeometry:
       title: AddressGeometry
@@ -8093,7 +8104,7 @@ components:
           description: 'The types of result. If result type is a `place`, additional types may be returned (`eat_and_drink`, `going_out_entertainment`, `sights_and_museums`, `natural_and_geographical`, `transport`, `accommodations`, `leisure_and_outdoor`, `shopping`, `business_and_services`, `facilities`, `areas_and_buildings`)'
           type: array
           items:
-            $ref: '#/components/schemas/AddressTypes'
+            $ref: '#/components/schemas/AddressGeocodeTypes'
         address_components:
           $ref: '#/components/schemas/AddressComponents'
         geometry:
