@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START woosmap_http_schema_addressgeocodetypes] -->
-<h3 class="schema-object" id="AddressGeocodeTypes">AddressTypes</h3>
+<h3 class="schema-object" id="AddressGeocodeTypes">AddressGeocodeTypes</h3>
 
 Contains the type of result.
 
