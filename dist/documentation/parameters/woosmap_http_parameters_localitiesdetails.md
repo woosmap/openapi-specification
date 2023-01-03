@@ -22,6 +22,10 @@
 
     Used to limit the returning fields (by default, all fields are return). Available fields are (geometry) (fields should be separated by a ,). By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
 
+-   <h3 class="parameter-name" id="language">language</h3>
+
+    The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, the Localities service will use english as default language. No language necessary for `postal_code` request.
+
 -   <h3 class="parameter-name deprecated-item hide-from-toc" id="page">page</h3>
 
     <aside class="deprecated"><code>page</code> is deprecated.</aside>
