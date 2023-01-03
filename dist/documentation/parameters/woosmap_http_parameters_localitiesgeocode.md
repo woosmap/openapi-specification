@@ -16,6 +16,10 @@
 
     A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
 
+-   <h3 class="parameter-name" id="data">data</h3>
+
+    Two values for this parameter: `standard` or `advanced`. By default, if the parameter is not defined, value is set as `standard`. The `advanced` value opens suggestions to worldwide postal codes in addition to postal codes for Western Europe. ***A dedicated option subject to specific billing on your license is needed to use this parameter. Please contact us if you are interested in using this parameter and you do not have subscribed the proper option yet.***
+
 -   <h3 class="parameter-name" id="fields">fields</h3>
 
     Used to limit the returning fields (by default, all fields are return). Available fields are (geometry) (fields should be separated by a ,). By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
