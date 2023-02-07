@@ -38,6 +38,19 @@ Address Collection Response containing Localities
         ]
       },
       "type": "locality"
+    },
+    {
+      "public_id": "aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDExMTIz",
+      "description": "County Londonderry, Northern Ireland, United Kingdom",
+      "matched_substring": {
+        "description": [
+          {
+            "offset": 7,
+            "length": 4
+          }
+        ]
+      },
+      "type": "admin_level"
     }
   ],
   "status": "OK"

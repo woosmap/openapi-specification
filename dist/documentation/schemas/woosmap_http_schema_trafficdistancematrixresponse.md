@@ -18,8 +18,8 @@ Attributes describing a Traffic Distance Matrix response.
         {
           "status": "OK",
           "duration_with_traffic": {
-            "value": 1420,
-            "text": "24 mins"
+            "value": 1626,
+            "text": "27 mins"
           },
           "distance": {
             "value": 10731,
@@ -29,8 +29,8 @@ Attributes describing a Traffic Distance Matrix response.
         {
           "status": "OK",
           "duration_with_traffic": {
-            "value": 1146,
-            "text": "19 mins"
+            "value": 1288,
+            "text": "21 mins"
           },
           "distance": {
             "value": 10185,

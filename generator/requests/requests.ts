@@ -327,7 +327,7 @@ export const REQUESTS: SnippetRequest[] = [
                     },
                      {
                         key: "limit",
-                        value: "2",
+                        value: "1",
                     },
                 ],
             })
@@ -462,11 +462,7 @@ export const REQUESTS: SnippetRequest[] = [
                     },
                     {
                         key: "radius",
-                        value: "1000",
-                    },
-                    {
-                        key: "stores_by_page",
-                        value: "3",
+                        value: "300",
                     }
                 ],
             }),
