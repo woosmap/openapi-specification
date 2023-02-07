@@ -14,8 +14,8 @@ Localities Collection Response containing Localities
   "localities": [
     {
       "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
-      "description": "London, City of London, United Kingdom",
       "type": "locality",
+      "description": "London, City of London, United Kingdom",
       "matched_substrings": {
         "name": [
           {
@@ -41,17 +41,17 @@ Localities Collection Response containing Localities
         ]
       },
       "name": "London",
+      "admin_0": "United Kingdom",
+      "admin_1": "City of London",
       "location": {
         "lat": 51.50732184627219,
         "lng": -0.1276474581028424
-      },
-      "admin_0": "United Kingdom",
-      "admin_1": "City of London"
+      }
     },
     {
       "public_id": "m/T2C4YI2LgszkKXrELBC+9dfC8=",
-      "description": "Londonderry/Derry, Derry City and Strabane, United Kingdom",
       "type": "locality",
+      "description": "Londonderry/Derry, Derry City and Strabane, United Kingdom",
       "matched_substrings": {
         "name": [
           {
@@ -67,48 +67,62 @@ Localities Collection Response containing Localities
         ]
       },
       "name": "Londonderry/Derry",
+      "admin_0": "United Kingdom",
+      "admin_1": "Derry City and Strabane",
       "location": {
         "lat": 54.997867773710254,
         "lng": -7.321305634744732
+      }
+    },
+    {
+      "public_id": "VOBREUi72/VtnsYgE6aI8HNYcxg=",
+      "type": "locality",
+      "description": "Londesborough, East Riding of Yorkshire, United Kingdom",
+      "matched_substrings": {
+        "name": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ],
+        "description": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ]
       },
+      "name": "Londesborough",
       "admin_0": "United Kingdom",
-      "admin_1": "Derry City and Strabane"
+      "admin_1": "East Riding of Yorkshire",
+      "location": {
+        "lat": 53.898504729546914,
+        "lng": -0.6805281011687327
+      }
     },
     {
       "public_id": "Js0mQmmeI46X3hiqRj/R4pvb8mQ=",
-      "description": "Long Stratton, Norfolk, United Kingdom",
       "type": "locality",
+      "description": "Long Stratton, Norfolk, United Kingdom",
       "name": "Long Stratton",
+      "admin_0": "United Kingdom",
+      "admin_1": "Norfolk",
       "location": {
         "lat": 52.48782556394062,
         "lng": 1.2330929989479102
-      },
-      "admin_0": "United Kingdom",
-      "admin_1": "Norfolk"
+      }
     },
     {
       "public_id": "BQOzBfxua+W9eLymBnVKRkqK2Zc=",
-      "description": "Long Sutton, Lincolnshire, United Kingdom",
       "type": "locality",
+      "description": "Long Sutton, Lincolnshire, United Kingdom",
       "name": "Long Sutton",
+      "admin_0": "United Kingdom",
+      "admin_1": "Lincolnshire",
       "location": {
         "lat": 52.78556417570891,
         "lng": 0.12170158845447077
-      },
-      "admin_0": "United Kingdom",
-      "admin_1": "Lincolnshire"
-    },
-    {
-      "public_id": "mHNVDJIyyaDOZvny8JaurHbov4I=",
-      "description": "Long Eaton, Derbyshire, United Kingdom",
-      "type": "locality",
-      "name": "Long Eaton",
-      "location": {
-        "lat": 52.89857142504616,
-        "lng": -1.2708130709654881
-      },
-      "admin_0": "United Kingdom",
-      "admin_1": "Derbyshire"
+      }
     }
   ]
 }</pre>

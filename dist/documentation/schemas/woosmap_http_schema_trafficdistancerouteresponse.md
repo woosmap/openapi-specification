@@ -21,7 +21,7 @@ Attributes describing a traffic distance route response.
             "text": "1.1 km"
           },
           "duration_with_traffic": {
-            "value": 99,
+            "value": 97,
             "text": "2 mins"
           },
           "duration_without_traffic": {

@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254&limit=2"
+  url := "https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254&limit=1"
   method := "GET"
 
   client := &http.Client {

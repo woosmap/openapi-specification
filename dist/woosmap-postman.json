@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "0a8447a8-d138-4c68-b5be-4dbef91bedbf",
+            "id": "2236382b-07a1-4dd8-86f6-f9e1976903d5",
             "name": "Store Search API",
             "description": {
                 "content": "Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/). Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/). If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).\n",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "052e3e78-cdee-4e82-bf0f-0ffc4d032963",
+                    "id": "b160e134-81bb-4714-900f-0a0d265e27b4",
                     "name": "Search for assets",
                     "request": {
                         "name": "Search for assets",
@@ -107,7 +107,7 @@
                     },
                     "response": [
                         {
-                            "id": "d16d354e-a4b8-4c4c-a30b-f1daebeb5695",
+                            "id": "11aade4e-3097-46fa-a75f-cbb54d3eb48e",
                             "name": "Assets successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -172,12 +172,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"type\": \"Feature\",\n      \"properties\": {\n        \"store_id\": \"2354\",\n        \"name\": \"Berkeley Street/Berkeley Square\",\n        \"contact\": {\n          \"phone\": \"02076295779\",\n          \"website\": \"https://www.starbucks.com/store-locator/store/2354/berkeley-street-berkeley-square-27-berkeley-st-berkeley-square-london-eng-w-1-x-5-\"\n        },\n        \"address\": {\n          \"lines\": [\n            \"27 Berkeley St\",\n            \"London, ENG W1X 5AD\"\n          ],\n          \"country_code\": \"GB\",\n          \"city\": \"London\",\n          \"zipcode\": \"W1X 5AD\"\n        },\n        \"user_properties\": {\n          \"take_away\": \"available\"\n        },\n        \"tags\": [\n          \"WA\",\n          \"WF\",\n          \"CD\",\n          \"DR\",\n          \"XO\"\n        ],\n        \"types\": [\n          \"Coffee shop\"\n        ],\n        \"last_updated\": \"2022-11-10T13:23:53.564829+00:00\",\n        \"distance\": 135.28682936,\n        \"open\": {\n          \"open_now\": true,\n          \"open_hours\": [\n            {\n              \"end\": \"18:00\",\n              \"start\": \"06:30\"\n            }\n          ],\n          \"week_day\": 4,\n          \"current_slice\": {\n            \"end\": \"18:00\",\n            \"start\": \"06:30\"\n          }\n        },\n        \"weekly_opening\": {\n          \"1\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"2\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"3\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"4\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"5\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"6\": {\n            \"hours\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"7\": {\n            \"hours\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"timezone\": \"Europe/London\"\n        },\n        \"opening_hours\": {\n          \"usual\": {\n            \"1\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"2\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"3\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"4\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"5\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"6\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"7\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ]\n          },\n          \"special\": {},\n          \"timezone\": \"Europe/London\"\n        }\n      },\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -0.14408,\n          51.5088\n        ]\n      }\n    },\n    {\n      \"type\": \"Feature\",\n      \"properties\": {\n        \"store_id\": \"2671\",\n        \"name\": \"Berkeley Street\",\n        \"contact\": {\n          \"phone\": \"02076294911\",\n          \"website\": \"https://www.starbucks.com/store-locator/store/2671/berkeley-street-52-berkeley-st-london-eng-w-1-j-8-et-gb\"\n        },\n        \"address\": {\n          \"lines\": [\n            \"52 Berkeley St.\",\n            \"London, ENG W1J 8ET\"\n          ],\n          \"country_code\": \"GB\",\n          \"city\": \"London\",\n          \"zipcode\": \"W1J 8ET\"\n        },\n        \"user_properties\": {\n          \"take_away\": \"available\"\n        },\n        \"tags\": [\n          \"WA\",\n          \"WF\",\n          \"CD\",\n          \"DR\",\n          \"XO\",\n          \"NB\",\n          \"WC\"\n        ],\n        \"types\": [\n          \"Coffee shop\"\n        ],\n        \"last_updated\": \"2022-11-10T13:24:08.923233+00:00\",\n        \"distance\": 334.31148224,\n        \"open\": {\n          \"open_now\": true,\n          \"open_hours\": [\n            {\n              \"end\": \"18:00\",\n              \"start\": \"06:30\"\n            }\n          ],\n          \"week_day\": 4,\n          \"current_slice\": {\n            \"end\": \"18:00\",\n            \"start\": \"06:30\"\n          }\n        },\n        \"weekly_opening\": {\n          \"1\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"2\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"3\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"4\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"5\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"6\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"7\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"timezone\": \"Europe/London\"\n        },\n        \"opening_hours\": {\n          \"usual\": {\n            \"1\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"2\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"3\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"4\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"5\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"6\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"7\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ]\n          },\n          \"special\": {},\n          \"timezone\": \"Europe/London\"\n        }\n      },\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -0.1424,\n          51.50735\n        ]\n      }\n    },\n    {\n      \"type\": \"Feature\",\n      \"properties\": {\n        \"store_id\": \"2888\",\n        \"name\": \"Vigo Street\",\n        \"contact\": {\n          \"phone\": \"02077347632\",\n          \"website\": \"https://www.starbucks.com/store-locator/store/2888/vigo-street-6-a-vigo-street-london-eng-w-1-s-3-hf-gb\"\n        },\n        \"address\": {\n          \"lines\": [\n            \"6A Vigo Street\",\n            \"London\",\n            \"London, ENG W1S 3HF\"\n          ],\n          \"country_code\": \"GB\",\n          \"city\": \"London\",\n          \"zipcode\": \"W1S 3HF\"\n        },\n        \"user_properties\": {\n          \"take_away\": \"available\"\n        },\n        \"tags\": [\n          \"WA\",\n          \"WF\",\n          \"CD\",\n          \"DR\",\n          \"XO\",\n          \"NB\",\n          \"LU\"\n        ],\n        \"types\": [\n          \"Coffee shop\"\n        ],\n        \"last_updated\": \"2022-11-10T13:23:10.669940+00:00\",\n        \"distance\": 431.58415682,\n        \"open\": {\n          \"open_now\": true,\n          \"open_hours\": [\n            {\n              \"end\": \"18:00\",\n              \"start\": \"07:00\"\n            }\n          ],\n          \"week_day\": 4,\n          \"current_slice\": {\n            \"end\": \"18:00\",\n            \"start\": \"07:00\"\n          }\n        },\n        \"weekly_opening\": {\n          \"1\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"2\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"3\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"4\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"5\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"6\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"7\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"timezone\": \"Europe/London\"\n        },\n        \"opening_hours\": {\n          \"usual\": {\n            \"1\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"2\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"3\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"4\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"5\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"07:00\"\n              }\n            ],\n            \"6\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"7\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"08:00\"\n              }\n            ]\n          },\n          \"special\": {},\n          \"timezone\": \"Europe/London\"\n        }\n      },\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -0.13912,\n          51.5103\n        ]\n      }\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"pageCount\": 4\n  }\n}",
+                            "body": "{\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"type\": \"Feature\",\n      \"properties\": {\n        \"store_id\": \"2354\",\n        \"name\": \"Berkeley Street/Berkeley Square\",\n        \"contact\": {\n          \"phone\": \"02076295779\",\n          \"website\": \"https://www.starbucks.com/store-locator/store/2354/berkeley-street-berkeley-square-27-berkeley-st-berkeley-square-london-eng-w-1-x-5-\"\n        },\n        \"address\": {\n          \"lines\": [\n            \"27 Berkeley St\",\n            \"London, ENG W1X 5AD\"\n          ],\n          \"country_code\": \"GB\",\n          \"city\": \"London\",\n          \"zipcode\": \"W1X 5AD\"\n        },\n        \"user_properties\": {\n          \"take_away\": \"available\"\n        },\n        \"tags\": [\n          \"WA\",\n          \"WF\",\n          \"CD\",\n          \"DR\",\n          \"XO\"\n        ],\n        \"types\": [\n          \"Coffee shop\"\n        ],\n        \"last_updated\": \"2022-11-10T13:23:53.564829+00:00\",\n        \"distance\": 135.28682936,\n        \"open\": {\n          \"open_now\": true,\n          \"open_hours\": [\n            {\n              \"end\": \"18:00\",\n              \"start\": \"06:30\"\n            }\n          ],\n          \"week_day\": 5,\n          \"current_slice\": {\n            \"end\": \"18:00\",\n            \"start\": \"06:30\"\n          }\n        },\n        \"weekly_opening\": {\n          \"1\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"2\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"3\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"4\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"5\": {\n            \"hours\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"6\": {\n            \"hours\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"7\": {\n            \"hours\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"isSpecial\": false\n          },\n          \"timezone\": \"Europe/London\"\n        },\n        \"opening_hours\": {\n          \"usual\": {\n            \"1\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"2\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"3\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"4\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"5\": [\n              {\n                \"end\": \"18:00\",\n                \"start\": \"06:30\"\n              }\n            ],\n            \"6\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ],\n            \"7\": [\n              {\n                \"end\": \"17:00\",\n                \"start\": \"08:00\"\n              }\n            ]\n          },\n          \"special\": {},\n          \"timezone\": \"Europe/London\"\n        }\n      },\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -0.14408,\n          51.5088\n        ]\n      }\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"pageCount\": 1\n  }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "29c1f4e7-9632-4c12-ba9e-e24e0596095c",
+                            "id": "5c9e86f4-4ae9-4ccb-8bc1-a432b6294043",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -247,7 +247,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "373f882e-d8f7-461d-a8da-39d76497b04a",
+                            "id": "4373a7c5-20e6-4af3-8d2d-7b5a4b5fc18d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -317,7 +317,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "163a7ee7-7a85-4c67-b453-e152c999ff34",
+                            "id": "8703acea-0b1c-46a7-869b-9a2f1164d65b",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -390,7 +390,7 @@
                     "event": []
                 },
                 {
-                    "id": "57991480-2917-4104-8e7a-d64ed806cc06",
+                    "id": "f0c41c2e-6dcf-463f-832c-2c97b01cafa0",
                     "name": "Autocomplete for assets",
                     "request": {
                         "name": "Autocomplete for assets",
@@ -482,7 +482,7 @@
                     },
                     "response": [
                         {
-                            "id": "4eea8232-69ce-4a32-9664-8bdb8ddb3300",
+                            "id": "69d8a831-e746-47be-a180-7496b8422d9d",
                             "name": "Assets Successfully Replaced",
                             "originalRequest": {
                                 "url": {
@@ -548,7 +548,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "30b4f709-719a-4be9-a1fb-0ad481ee1821",
+                            "id": "52aec588-1b26-42f0-a9e2-12870c2d08ce",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -614,7 +614,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "15d9cc98-97d2-4f0d-81de-2db6753e24a7",
+                            "id": "f3a8132a-961b-4719-91fd-74265cfc93d2",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -680,7 +680,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c7dfeb31-912a-44fa-a292-7c11b810aef8",
+                            "id": "f55766c3-156b-47a9-8751-82a05de66c59",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -752,7 +752,7 @@
             "event": []
         },
         {
-            "id": "9a05db3f-0096-4c1b-93a9-2d4ab75dd42a",
+            "id": "41fb4fce-7ba9-4a9b-9588-13b1cbdcf456",
             "name": "Data Management API",
             "description": {
                 "content": "The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets. The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`) coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/), [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).\n",
@@ -760,7 +760,7 @@
             },
             "item": [
                 {
-                    "id": "291df82f-d506-41ea-81a5-41c106634952",
+                    "id": "16b85146-c3c3-4a97-9f34-600163e344a7",
                     "name": "Create your Assets",
                     "request": {
                         "name": "Create your Assets",
@@ -811,7 +811,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"commodo_a7\": 64593639.968515456,\n        \"Excepteur_a5\": true,\n        \"aliqua_f\": 74880029\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"Duisdfa\": false\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"magna_6\": true,\n        \"voluptatea3\": 98905184,\n        \"Duis_0c4\": true,\n        \"cillum_0e\": \"laborum tempor in\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"in0\": -55518478,\n        \"incididunt_734\": false,\n        \"sit_42\": -43998702\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -821,7 +821,7 @@
                     },
                     "response": [
                         {
-                            "id": "a7df4656-d7c6-4469-bfb3-f1956d7ce3f8",
+                            "id": "70e9deee-04fa-41d5-89f6-bd1c94d59550",
                             "name": "Assets successfully created",
                             "originalRequest": {
                                 "url": {
@@ -866,7 +866,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4e328e17-dc0e-44f1-be37-1ca8f2864fb0",
+                            "id": "796a4b5d-3c5b-4df3-935f-b3eeb8427118",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -911,7 +911,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9b6a7dc7-384d-40f9-bf06-2d72856709af",
+                            "id": "122456bd-7146-4531-b857-0f2660c2e2a0",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -956,7 +956,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "37d7deee-8f15-4eaa-9cad-8aa8740ff8bb",
+                            "id": "b12450d2-f649-4bb2-a6b9-6ac1b1f04be3",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1007,7 +1007,7 @@
                     }
                 },
                 {
-                    "id": "e58f6fcb-f647-4d7f-a3d2-74a8b40d9617",
+                    "id": "fd56b6f9-312b-4b6f-82c4-cd02c8ac0ab0",
                     "name": "Update the Assets",
                     "request": {
                         "name": "Update the Assets",
@@ -1058,7 +1058,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"voluptate79e\": -56683734,\n        \"fugiat_c31\": \"voluptate nostrud reprehenderit\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"enim_d\": true\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"consequat_8a\": \"cupidatat ea\",\n        \"incididunt_b_\": -12603429,\n        \"in757\": \"velit eu consequat sit ut\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"dolore39\": 21443060.09729679,\n        \"aute_7e\": \"veniam Duis ex\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -1068,7 +1068,7 @@
                     },
                     "response": [
                         {
-                            "id": "60ef347f-bffd-4428-ab7f-0b59e4557703",
+                            "id": "eeb0e755-ee50-4599-9cd0-6f359f85640f",
                             "name": "Assets successfully updated",
                             "originalRequest": {
                                 "url": {
@@ -1113,7 +1113,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "02128188-e793-4580-abc9-d9218b508350",
+                            "id": "7e8ff5fa-36b1-4506-a03c-10dee6a7c3a2",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -1158,7 +1158,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a128a898-487f-496d-8472-1601ee1e0070",
+                            "id": "33620b22-20ea-4da9-8a74-0b62f3b7bc80",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1203,7 +1203,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7d0e64a0-43a4-4ca2-a2b4-ba51db2a841d",
+                            "id": "819fddea-a14a-4a75-ad93-9280adf7e9a0",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1254,7 +1254,7 @@
                     }
                 },
                 {
-                    "id": "125a9c78-64ef-49b0-9005-1eeea62e236b",
+                    "id": "09d32946-93ec-4253-8c8e-3d858076f6d0",
                     "name": "Delete the Assets",
                     "request": {
                         "name": "Delete the Assets",
@@ -1309,7 +1309,7 @@
                     },
                     "response": [
                         {
-                            "id": "dc7b04ab-df7c-4ab6-b54e-32dd1146ea69",
+                            "id": "c2510737-18c4-4c9b-bd7b-cf3d85aaf929",
                             "name": "Assets successfully deleted",
                             "originalRequest": {
                                 "url": {
@@ -1350,7 +1350,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a199c026-a8d1-41f1-a82e-7a79d70924b5",
+                            "id": "da599096-af1e-479a-8fbf-d289b00a83b1",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1391,7 +1391,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f54a1b08-a1d3-43d0-aefe-6d89f62c9810",
+                            "id": "f0b02f0d-1c88-4041-84d4-1d7d4c0d6914",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1435,7 +1435,7 @@
                     "event": []
                 },
                 {
-                    "id": "40a28ce3-aaef-433a-ae96-fa5342342daf",
+                    "id": "c07aa99d-549b-411a-b378-35964cc5a267",
                     "name": "Get Asset from ID",
                     "request": {
                         "name": "Get Asset from ID",
@@ -1492,7 +1492,7 @@
                     },
                     "response": [
                         {
-                            "id": "8e4abc00-1954-4713-b349-a2634eb7723c",
+                            "id": "c954e6e7-0266-4244-b0e6-3e33dcb3ee0d",
                             "name": "Asset successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -1533,12 +1533,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"store_id\": \"10031\",\n    \"name\": \"Santa Rosa & Yolanda\",\n    \"contact\": {\n      \"phone\": \"707-527-1006\",\n      \"website\": \"https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us\"\n    },\n    \"address\": {\n      \"lines\": [\n        \"2688 Santa Rosa Ave\",\n        \"Santa Rosa, CA 95407\"\n      ],\n      \"country_code\": \"US\",\n      \"city\": \"Santa Rosa\",\n      \"zipcode\": \"954077625\"\n    },\n    \"user_properties\": {\n      \"take_away\": \"available\"\n    },\n    \"tags\": [\n      \"DT\",\n      \"WA\",\n      \"CD\",\n      \"DR\",\n      \"LB\",\n      \"GO\",\n      \"XO\",\n      \"MX\",\n      \"NB\",\n      \"BE\",\n      \"LU\"\n    ],\n    \"types\": [\n      \"Coffee shop\"\n    ],\n    \"last_updated\": \"2022-11-10T13:26:55.066524+00:00\",\n    \"open\": {\n      \"open_now\": true,\n      \"open_hours\": [\n        {\n          \"end\": \"20:00\",\n          \"start\": \"05:00\"\n        }\n      ],\n      \"week_day\": 4,\n      \"current_slice\": {\n        \"end\": \"20:00\",\n        \"start\": \"05:00\"\n      }\n    },\n    \"weekly_opening\": {\n      \"1\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"2\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"3\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"4\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"5\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"6\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"7\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"timezone\": \"America/Los_Angeles\"\n    },\n    \"opening_hours\": {\n      \"usual\": {\n        \"1\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"2\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"3\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"4\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"5\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"6\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"7\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ]\n      },\n      \"special\": {},\n      \"timezone\": \"America/Los_Angeles\"\n    }\n  },\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -122.712924,\n      38.41244\n    ]\n  }\n}",
+                            "body": "{\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"store_id\": \"10031\",\n    \"name\": \"Santa Rosa & Yolanda\",\n    \"contact\": {\n      \"phone\": \"707-527-1006\",\n      \"website\": \"https://www.starbucks.com/store-locator/store/10031/santa-rosa-yolanda-2688-santa-rosa-ave-santa-rosa-ca-954077625-us\"\n    },\n    \"address\": {\n      \"lines\": [\n        \"2688 Santa Rosa Ave\",\n        \"Santa Rosa, CA 95407\"\n      ],\n      \"country_code\": \"US\",\n      \"city\": \"Santa Rosa\",\n      \"zipcode\": \"954077625\"\n    },\n    \"user_properties\": {\n      \"take_away\": \"available\"\n    },\n    \"tags\": [\n      \"DT\",\n      \"WA\",\n      \"CD\",\n      \"DR\",\n      \"LB\",\n      \"GO\",\n      \"XO\",\n      \"MX\",\n      \"NB\",\n      \"BE\",\n      \"LU\"\n    ],\n    \"types\": [\n      \"Coffee shop\"\n    ],\n    \"last_updated\": \"2022-11-10T13:26:55.066524+00:00\",\n    \"open\": {\n      \"open_now\": true,\n      \"open_hours\": [\n        {\n          \"end\": \"20:00\",\n          \"start\": \"05:00\"\n        }\n      ],\n      \"week_day\": 5,\n      \"current_slice\": {\n        \"end\": \"20:00\",\n        \"start\": \"05:00\"\n      }\n    },\n    \"weekly_opening\": {\n      \"1\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"2\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"3\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"4\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"5\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"6\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"7\": {\n        \"hours\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"isSpecial\": false\n      },\n      \"timezone\": \"America/Los_Angeles\"\n    },\n    \"opening_hours\": {\n      \"usual\": {\n        \"1\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"2\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"3\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"4\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"5\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"6\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ],\n        \"7\": [\n          {\n            \"end\": \"20:00\",\n            \"start\": \"05:00\"\n          }\n        ]\n      },\n      \"special\": {},\n      \"timezone\": \"America/Los_Angeles\"\n    }\n  },\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -122.712924,\n      38.41244\n    ]\n  }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "716609f5-ed95-431d-bca1-554a9c019d09",
+                            "id": "2b99a609-b17c-4085-ad89-4e7d597d1cfc",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1584,7 +1584,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "19909da2-c520-4be2-9c2a-e0a485f612b9",
+                            "id": "706ac20f-6e46-499b-baa4-c62d211843bf",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1630,7 +1630,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b3c9600f-274c-4677-8c43-2648be8cb02e",
+                            "id": "cd795099-3358-4fa0-8807-51048f8fb3bc",
                             "name": "Not Found - `storeId` do not exist.",
                             "originalRequest": {
                                 "url": {
@@ -1679,7 +1679,7 @@
                     "event": []
                 },
                 {
-                    "id": "deea8203-4574-4665-9186-5cd751336201",
+                    "id": "a6d1af21-640c-4a70-aaae-54d90659066c",
                     "name": "Replace all assets",
                     "request": {
                         "name": "Replace all assets",
@@ -1731,7 +1731,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"voluptate79e\": -56683734,\n        \"fugiat_c31\": \"voluptate nostrud reprehenderit\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"enim_d\": true\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"consequat_8a\": \"cupidatat ea\",\n        \"incididunt_b_\": -12603429,\n        \"in757\": \"velit eu consequat sit ut\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"dolore39\": 21443060.09729679,\n        \"aute_7e\": \"veniam Duis ex\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -1741,7 +1741,7 @@
                     },
                     "response": [
                         {
-                            "id": "3e4b8049-57ee-4523-a4a0-b97a396e2c88",
+                            "id": "835da57a-89ac-4004-b658-95c5db1a8972",
                             "name": "Assets successfully replaced",
                             "originalRequest": {
                                 "url": {
@@ -1787,7 +1787,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5d7c1cf9-eeb6-4298-8ad5-027492972349",
+                            "id": "092c0285-c399-44a5-8993-fe6f93469542",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -1833,7 +1833,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5913483f-418c-4bd5-be3d-0f5e751cb9dc",
+                            "id": "c8422e55-bd84-4d4f-8aa7-f30d8aca8b4a",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1879,7 +1879,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b1f6ffe1-3582-419e-aea4-992d366e976c",
+                            "id": "08de8e53-51cd-4ef9-9768-944f4a1ed6cb",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1934,7 +1934,7 @@
             "event": []
         },
         {
-            "id": "a1d0248f-ef1b-49c2-9a0a-ce0a4525ab42",
+            "id": "25e25ad7-7e6d-4221-856b-28691c167241",
             "name": "Geolocation API",
             "description": {
                 "content": "Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1942,7 +1942,7 @@
             },
             "item": [
                 {
-                    "id": "07d11e3d-4815-477d-978e-d1ce70419425",
+                    "id": "f5efb6df-74df-482d-a00c-811a0de79310",
                     "name": "Geolocation from an IP address",
                     "request": {
                         "name": "Geolocation from an IP address",
@@ -2004,7 +2004,7 @@
                     },
                     "response": [
                         {
-                            "id": "537fda22-9d5f-477b-971a-4bfb561afe07",
+                            "id": "82007b16-59ab-4918-b938-e898c8e5c392",
                             "name": "Geolocation successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2045,12 +2045,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"country_code\": \"US\",\n  \"country_name\": \"United States\",\n  \"continent\": \"North America\",\n  \"latitude\": 38.719,\n  \"longitude\": -77.1067,\n  \"accuracy\": 5,\n  \"viewport\": {\n    \"northeast\": {\n      \"lat\": 38.763915764205976,\n      \"lng\": -77.0491321464058\n    },\n    \"southwest\": {\n      \"lat\": 38.674084235794034,\n      \"lng\": -77.16426785359421\n    }\n  },\n  \"city\": \"Alexandria\",\n  \"region_state\": \"Virginia\",\n  \"postal_code\": \"22309\",\n  \"timezone\": \"America/New_York\"\n}",
+                            "body": "{\n  \"country_code\": \"US\",\n  \"country_name\": \"United States\",\n  \"continent\": \"North America\",\n  \"latitude\": 38.719,\n  \"longitude\": -77.1067,\n  \"accuracy\": 10,\n  \"viewport\": {\n    \"northeast\": {\n      \"lat\": 38.80883152841196,\n      \"lng\": -76.99156428711444\n    },\n    \"southwest\": {\n      \"lat\": 38.62916847158805,\n      \"lng\": -77.22183571288556\n    }\n  },\n  \"region_state\": \"Virginia\",\n  \"postal_code\": \"22309\",\n  \"timezone\": \"America/New_York\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ba22d331-51ef-40ed-83d4-dff4d1254ebe",
+                            "id": "f2c7f4ef-bdff-42e0-8218-8c66c2139051",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2096,7 +2096,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "cbbc8db1-2ecc-423e-ae5a-abd77693b8e3",
+                            "id": "ec7c3fcc-e9f7-4e7c-9d01-a8041eaeeb1b",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2142,7 +2142,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4c548577-c238-4048-a212-46e1d03ff9e9",
+                            "id": "5c428b46-fc71-4a0a-ac2c-7eb0751f7ab8",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2191,7 +2191,7 @@
                     "event": []
                 },
                 {
-                    "id": "0b7ba9f7-3617-4e18-a787-d871bcf72e04",
+                    "id": "d50cda75-4971-4900-a972-20c00cc71aee",
                     "name": "Assets nearby a Geolocation",
                     "request": {
                         "name": "Assets nearby a Geolocation",
@@ -2259,7 +2259,7 @@
                     },
                     "response": [
                         {
-                            "id": "5e822737-8f1c-45af-a8cd-262fed5bc7a2",
+                            "id": "204d8c64-e801-43d3-ab84-5b8254a80deb",
                             "name": "Geolocation and Stores successufully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2304,12 +2304,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"country_code\": \"US\",\n  \"country_name\": \"United States\",\n  \"continent\": \"North America\",\n  \"latitude\": 38.719,\n  \"longitude\": -77.1067,\n  \"accuracy\": 5,\n  \"viewport\": {\n    \"northeast\": {\n      \"lat\": 38.763915764205976,\n      \"lng\": -77.0491321464058\n    },\n    \"southwest\": {\n      \"lat\": 38.674084235794034,\n      \"lng\": -77.16426785359421\n    }\n  },\n  \"city\": \"Alexandria\",\n  \"region_state\": \"Virginia\",\n  \"postal_code\": \"22309\",\n  \"timezone\": \"America/New_York\",\n  \"stores\": {\n    \"type\": \"FeatureCollection\",\n    \"features\": [\n      {\n        \"type\": \"Feature\",\n        \"properties\": {\n          \"store_id\": \"STORE_ID_123456\",\n          \"name\": \"My Cool Store\",\n          \"contact\": {\n            \"email\": \"contact@woosmap.com\",\n            \"phone\": \"+44 20 7693 4000\",\n            \"website\": \"https://www.woosmap.com\"\n          },\n          \"address\": {\n            \"lines\": [\n              \"Building Centre\",\n              \"26 Store Street\"\n            ],\n            \"country_code\": \"UK\",\n            \"city\": \"London\",\n            \"zipcode\": \"WC1E 7BT\"\n          },\n          \"user_properties\": {\n            \"some_user_properties\": \"associated user value\"\n          },\n          \"tags\": [\n            \"wifi\",\n            \"covered_parking\"\n          ],\n          \"types\": [\n            \"drive\",\n            \"click_and_collect\"\n          ],\n          \"last_updated\": \"2022-11-10T13:27:03.490955+00:00\",\n          \"distance\": 0,\n          \"open\": {\n            \"open_now\": true,\n            \"open_hours\": [\n              {\n                \"end\": \"22:00\",\n                \"start\": \"08:30\"\n              }\n            ],\n            \"week_day\": 4,\n            \"current_slice\": {\n              \"end\": \"22:00\",\n              \"start\": \"08:30\"\n            }\n          },\n          \"weekly_opening\": {\n            \"1\": {\n              \"hours\": [],\n              \"isSpecial\": false\n            },\n            \"2\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"3\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"4\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"5\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"6\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"7\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"timezone\": \"Europe/London\"\n          },\n          \"opening_hours\": {\n            \"usual\": {\n              \"1\": [],\n              \"default\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ]\n            },\n            \"special\": {\n              \"2015-02-07\": [\n                {\n                  \"end\": \"23:00\",\n                  \"start\": \"08:00\"\n                }\n              ]\n            },\n            \"timezone\": \"Europe/London\"\n          }\n        },\n        \"geometry\": {\n          \"type\": \"Point\",\n          \"coordinates\": [\n            -77.1067,\n            38.719\n          ]\n        }\n      },\n      {\n        \"type\": \"Feature\",\n        \"properties\": {\n          \"store_id\": \"STORE_ID_45678\",\n          \"name\": \"My Cool Store 2\",\n          \"contact\": {\n            \"email\": \"contact@woosmap.com\",\n            \"phone\": \"+44 20 7693 4000\",\n            \"website\": \"https://www.woosmap.com\"\n          },\n          \"address\": {\n            \"lines\": [\n              \"1805-1899\",\n              \"Orchard St\"\n            ],\n            \"country_code\": \"US\",\n            \"city\": \"Alexandria\",\n            \"zipcode\": \"22309\"\n          },\n          \"user_properties\": {\n            \"some_user_properties\": \"associated user value\"\n          },\n          \"tags\": [\n            \"covered_parking\"\n          ],\n          \"types\": [\n            \"drive\"\n          ],\n          \"last_updated\": \"2022-11-10T13:27:03.491058+00:00\",\n          \"distance\": 23062.07621905,\n          \"open\": {\n            \"open_now\": false,\n            \"open_hours\": [\n              {\n                \"end\": \"22:00\",\n                \"start\": \"08:30\"\n              }\n            ],\n            \"week_day\": 4,\n            \"next_opening\": {\n              \"end\": \"22:00\",\n              \"start\": \"08:30\",\n              \"day\": \"2022-11-10\"\n            }\n          },\n          \"weekly_opening\": {\n            \"1\": {\n              \"hours\": [],\n              \"isSpecial\": false\n            },\n            \"2\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"3\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"4\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"5\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"6\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"7\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"timezone\": \"America/New_York\"\n          },\n          \"opening_hours\": {\n            \"usual\": {\n              \"1\": [],\n              \"default\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ]\n            },\n            \"timezone\": \"America/New_York\"\n          }\n        },\n        \"geometry\": {\n          \"type\": \"Point\",\n          \"coordinates\": [\n            -77.0157,\n            38.5239\n          ]\n        }\n      }\n    ],\n    \"pagination\": {\n      \"page\": 1,\n      \"pageCount\": 1\n    }\n  }\n}",
+                            "body": "{\n  \"country_code\": \"US\",\n  \"country_name\": \"United States\",\n  \"continent\": \"North America\",\n  \"latitude\": 38.719,\n  \"longitude\": -77.1067,\n  \"accuracy\": 10,\n  \"viewport\": {\n    \"northeast\": {\n      \"lat\": 38.80883152841196,\n      \"lng\": -76.99156428711444\n    },\n    \"southwest\": {\n      \"lat\": 38.62916847158805,\n      \"lng\": -77.22183571288556\n    }\n  },\n  \"region_state\": \"Virginia\",\n  \"postal_code\": \"22309\",\n  \"timezone\": \"America/New_York\",\n  \"stores\": {\n    \"type\": \"FeatureCollection\",\n    \"features\": [\n      {\n        \"type\": \"Feature\",\n        \"properties\": {\n          \"store_id\": \"STORE_ID_123456\",\n          \"name\": \"My Cool Store\",\n          \"contact\": {\n            \"email\": \"contact@woosmap.com\",\n            \"phone\": \"+44 20 7693 4000\",\n            \"website\": \"https://www.woosmap.com\"\n          },\n          \"address\": {\n            \"lines\": [\n              \"Building Centre\",\n              \"26 Store Street\"\n            ],\n            \"country_code\": \"UK\",\n            \"city\": \"London\",\n            \"zipcode\": \"WC1E 7BT\"\n          },\n          \"user_properties\": {\n            \"some_user_properties\": \"associated user value\"\n          },\n          \"tags\": [\n            \"wifi\",\n            \"covered_parking\"\n          ],\n          \"types\": [\n            \"drive\",\n            \"click_and_collect\"\n          ],\n          \"last_updated\": \"2023-02-03T16:43:04.817680+00:00\",\n          \"distance\": 0,\n          \"open\": {\n            \"open_now\": true,\n            \"open_hours\": [\n              {\n                \"end\": \"22:00\",\n                \"start\": \"08:30\"\n              }\n            ],\n            \"week_day\": 5,\n            \"current_slice\": {\n              \"end\": \"22:00\",\n              \"start\": \"08:30\"\n            }\n          },\n          \"weekly_opening\": {\n            \"1\": {\n              \"hours\": [],\n              \"isSpecial\": false\n            },\n            \"2\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"3\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"4\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"5\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"6\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"7\": {\n              \"hours\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ],\n              \"isSpecial\": false\n            },\n            \"timezone\": \"Europe/London\"\n          },\n          \"opening_hours\": {\n            \"usual\": {\n              \"1\": [],\n              \"default\": [\n                {\n                  \"end\": \"22:00\",\n                  \"start\": \"08:30\"\n                }\n              ]\n            },\n            \"special\": {\n              \"2015-02-07\": [\n                {\n                  \"end\": \"23:00\",\n                  \"start\": \"08:00\"\n                }\n              ]\n            },\n            \"timezone\": \"Europe/London\"\n          }\n        },\n        \"geometry\": {\n          \"type\": \"Point\",\n          \"coordinates\": [\n            -77.1067,\n            38.719\n          ]\n        }\n      }\n    ],\n    \"pagination\": {\n      \"page\": 1,\n      \"pageCount\": 2\n    }\n  }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9b7214b1-936a-492d-a7d8-adae71053d13",
+                            "id": "4614099c-88fe-4493-9326-b23f1b5446cd",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2359,7 +2359,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7346191f-008f-475e-822e-877876b069c7",
+                            "id": "6f4eea2a-d2b9-46fa-bb0b-9d1133920707",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2409,7 +2409,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "58936349-ce3d-4783-8097-a3f4979b7fca",
+                            "id": "9789c43b-d0ca-4fe0-8cee-f5443e603d22",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2465,7 +2465,7 @@
             "event": []
         },
         {
-            "id": "4ac65644-27af-4842-9484-9094dbd3ead0",
+            "id": "52ac5b52-067a-4f5e-b71c-7f9de439da52",
             "name": "Localities API",
             "description": {
                 "content": "Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2473,7 +2473,7 @@
             },
             "item": [
                 {
-                    "id": "442bdd7c-15b8-4e58-84c7-0d7f15c6fe4d",
+                    "id": "06227472-27e1-4c4e-9988-2b747669ce20",
                     "name": "Autocomplete for Localities",
                     "request": {
                         "name": "Autocomplete for Localities",
@@ -2577,7 +2577,7 @@
                     },
                     "response": [
                         {
-                            "id": "8e08c889-5872-4310-9191-98b2d8977619",
+                            "id": "7a8934a8-ab8b-4a22-9276-90ff54e7d122",
                             "name": "Autocompletion Localities successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2646,12 +2646,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"localities\": [\n    {\n      \"public_id\": \"Ch6qA8cLmvyvEEoFy6nYeFcEdNU=\",\n      \"description\": \"London, City of London, United Kingdom\",\n      \"type\": \"locality\",\n      \"matched_substrings\": {\n        \"name\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ],\n        \"admin_1\": [\n          {\n            \"offset\": 8,\n            \"length\": 4\n          }\n        ],\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          },\n          {\n            \"offset\": 16,\n            \"length\": 4\n          }\n        ]\n      },\n      \"name\": \"London\",\n      \"location\": {\n        \"lat\": 51.50732184627219,\n        \"lng\": -0.1276474581028424\n      },\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"City of London\"\n    },\n    {\n      \"public_id\": \"m/T2C4YI2LgszkKXrELBC+9dfC8=\",\n      \"description\": \"Londonderry/Derry, Derry City and Strabane, United Kingdom\",\n      \"type\": \"locality\",\n      \"matched_substrings\": {\n        \"name\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ],\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"name\": \"Londonderry/Derry\",\n      \"location\": {\n        \"lat\": 54.997867773710254,\n        \"lng\": -7.321305634744732\n      },\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Derry City and Strabane\"\n    },\n    {\n      \"public_id\": \"Js0mQmmeI46X3hiqRj/R4pvb8mQ=\",\n      \"description\": \"Long Stratton, Norfolk, United Kingdom\",\n      \"type\": \"locality\",\n      \"name\": \"Long Stratton\",\n      \"location\": {\n        \"lat\": 52.48782556394062,\n        \"lng\": 1.2330929989479102\n      },\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Norfolk\"\n    },\n    {\n      \"public_id\": \"BQOzBfxua+W9eLymBnVKRkqK2Zc=\",\n      \"description\": \"Long Sutton, Lincolnshire, United Kingdom\",\n      \"type\": \"locality\",\n      \"name\": \"Long Sutton\",\n      \"location\": {\n        \"lat\": 52.78556417570891,\n        \"lng\": 0.12170158845447077\n      },\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Lincolnshire\"\n    },\n    {\n      \"public_id\": \"mHNVDJIyyaDOZvny8JaurHbov4I=\",\n      \"description\": \"Long Eaton, Derbyshire, United Kingdom\",\n      \"type\": \"locality\",\n      \"name\": \"Long Eaton\",\n      \"location\": {\n        \"lat\": 52.89857142504616,\n        \"lng\": -1.2708130709654881\n      },\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Derbyshire\"\n    }\n  ]\n}",
+                            "body": "{\n  \"localities\": [\n    {\n      \"public_id\": \"Ch6qA8cLmvyvEEoFy6nYeFcEdNU=\",\n      \"type\": \"locality\",\n      \"description\": \"London, City of London, United Kingdom\",\n      \"matched_substrings\": {\n        \"name\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ],\n        \"admin_1\": [\n          {\n            \"offset\": 8,\n            \"length\": 4\n          }\n        ],\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          },\n          {\n            \"offset\": 16,\n            \"length\": 4\n          }\n        ]\n      },\n      \"name\": \"London\",\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"City of London\",\n      \"location\": {\n        \"lat\": 51.50732184627219,\n        \"lng\": -0.1276474581028424\n      }\n    },\n    {\n      \"public_id\": \"m/T2C4YI2LgszkKXrELBC+9dfC8=\",\n      \"type\": \"locality\",\n      \"description\": \"Londonderry/Derry, Derry City and Strabane, United Kingdom\",\n      \"matched_substrings\": {\n        \"name\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ],\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"name\": \"Londonderry/Derry\",\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Derry City and Strabane\",\n      \"location\": {\n        \"lat\": 54.997867773710254,\n        \"lng\": -7.321305634744732\n      }\n    },\n    {\n      \"public_id\": \"VOBREUi72/VtnsYgE6aI8HNYcxg=\",\n      \"type\": \"locality\",\n      \"description\": \"Londesborough, East Riding of Yorkshire, United Kingdom\",\n      \"matched_substrings\": {\n        \"name\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ],\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"name\": \"Londesborough\",\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"East Riding of Yorkshire\",\n      \"location\": {\n        \"lat\": 53.898504729546914,\n        \"lng\": -0.6805281011687327\n      }\n    },\n    {\n      \"public_id\": \"Js0mQmmeI46X3hiqRj/R4pvb8mQ=\",\n      \"type\": \"locality\",\n      \"description\": \"Long Stratton, Norfolk, United Kingdom\",\n      \"name\": \"Long Stratton\",\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Norfolk\",\n      \"location\": {\n        \"lat\": 52.48782556394062,\n        \"lng\": 1.2330929989479102\n      }\n    },\n    {\n      \"public_id\": \"BQOzBfxua+W9eLymBnVKRkqK2Zc=\",\n      \"type\": \"locality\",\n      \"description\": \"Long Sutton, Lincolnshire, United Kingdom\",\n      \"name\": \"Long Sutton\",\n      \"admin_0\": \"United Kingdom\",\n      \"admin_1\": \"Lincolnshire\",\n      \"location\": {\n        \"lat\": 52.78556417570891,\n        \"lng\": 0.12170158845447077\n      }\n    }\n  ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4a3f9497-0518-467d-8ffa-1ffc43903477",
+                            "id": "bcb1708b-bfca-4baf-b467-0c0c2e97f7be",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2725,7 +2725,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9ce371f1-7961-40b2-b2e5-3fff929abe43",
+                            "id": "2c1952d1-cfb2-4b55-8452-d1da979610d2",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2799,7 +2799,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2eae9bee-b479-4de8-aae9-906ef17c4fb5",
+                            "id": "56254a79-15f8-4c70-9392-53637b0dd5bf",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2876,7 +2876,7 @@
                     "event": []
                 },
                 {
-                    "id": "52f0cb09-b65e-4ebc-a8c5-9c53812078c2",
+                    "id": "386ac6a6-ce0c-40b9-9c1e-ef50fe259293",
                     "name": "Details of a Locality",
                     "request": {
                         "name": "Details of a Locality",
@@ -2962,7 +2962,7 @@
                     },
                     "response": [
                         {
-                            "id": "d80eb516-54c3-430a-919d-dd20d054af7e",
+                            "id": "bd640a73-a020-4a2f-989a-cac3ed781635",
                             "name": "Details Localities successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -3019,12 +3019,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"result\": {\n    \"formatted_address\": \"House Of Commons, Houses Of Parliament, London, SW1A 0AA\",\n    \"types\": [\n      \"address\"\n    ],\n    \"public_id\": \"TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==\",\n    \"geometry\": {\n      \"location\": {\n        \"lat\": 51.4998415,\n        \"lng\": -0.1246375\n      },\n      \"accuracy\": \"ROOFTOP\"\n    },\n    \"address_components\": [\n      {\n        \"types\": [\n          \"country\",\n          \"administrative_area_level_0\"\n        ],\n        \"long_name\": \"United Kingdom\",\n        \"short_name\": \"GB\"\n      },\n      {\n        \"types\": [\n          \"administrative_area_level_1\"\n        ],\n        \"long_name\": \"City of London\",\n        \"short_name\": \"City of London\"\n      },\n      {\n        \"types\": [\n          \"locality\"\n        ],\n        \"long_name\": \"London\",\n        \"short_name\": \"London\"\n      },\n      {\n        \"types\": [\n          \"postal_codes\"\n        ],\n        \"long_name\": \"SW1A 0AA\",\n        \"short_name\": \"SW1A 0AA\"\n      },\n      {\n        \"types\": [\n          \"premise\"\n        ],\n        \"long_name\": \"Houses Of Parliament\",\n        \"short_name\": \"Houses Of Parliament\"\n      },\n      {\n        \"types\": [\n          \"organisation\"\n        ],\n        \"long_name\": \"House Of Commons\",\n        \"short_name\": \"House Of Commons\"\n      }\n    ]\n  }\n}",
+                            "body": "{\n  \"result\": {\n    \"public_id\": \"TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==\",\n    \"types\": [\n      \"address\"\n    ],\n    \"formatted_address\": \"House Of Commons, Houses Of Parliament, London, SW1A 0AA\",\n    \"geometry\": {\n      \"location\": {\n        \"lat\": 51.4998415,\n        \"lng\": -0.1246375\n      },\n      \"accuracy\": \"ROOFTOP\"\n    },\n    \"address_components\": [\n      {\n        \"short_name\": \"GB\",\n        \"long_name\": \"United Kingdom\",\n        \"types\": [\n          \"country\",\n          \"administrative_area_level_0\"\n        ]\n      },\n      {\n        \"short_name\": \"City of London\",\n        \"long_name\": \"City of London\",\n        \"types\": [\n          \"administrative_area_level_1\"\n        ]\n      },\n      {\n        \"short_name\": \"London\",\n        \"long_name\": \"London\",\n        \"types\": [\n          \"locality\"\n        ]\n      },\n      {\n        \"short_name\": \"SW1A 0AA\",\n        \"long_name\": \"SW1A 0AA\",\n        \"types\": [\n          \"postal_codes\"\n        ]\n      },\n      {\n        \"short_name\": \"Houses Of Parliament\",\n        \"long_name\": \"Houses Of Parliament\",\n        \"types\": [\n          \"premise\"\n        ]\n      },\n      {\n        \"short_name\": \"House Of Commons\",\n        \"long_name\": \"House Of Commons\",\n        \"types\": [\n          \"organisation\"\n        ]\n      }\n    ]\n  }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "38e85877-9e08-4046-85b9-fe9632171eec",
+                            "id": "c0e718ea-e6e6-45ef-94d9-6da213559e5d",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3086,7 +3086,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "546748ec-4412-4219-a3fd-6efa250d1a9f",
+                            "id": "421e3d6e-62c6-4c7f-a451-5bcc0d55acc4",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3148,7 +3148,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "387f0f87-1e05-4afd-9c09-c2a110218fce",
+                            "id": "16c03437-1542-4501-b67c-e6c5298d3917",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3213,7 +3213,7 @@
                     "event": []
                 },
                 {
-                    "id": "b1985cb1-b7d4-4d3b-82e5-b7648da40a7a",
+                    "id": "a7550eaa-db6c-4a63-a06c-da23ff2a092e",
                     "name": "Geocode a locality or Reverse Geocode a latlng",
                     "request": {
                         "name": "Geocode a locality or Reverse Geocode a latlng",
@@ -3305,7 +3305,7 @@
                     },
                     "response": [
                         {
-                            "id": "4a7394b9-5210-49dd-b2e2-38eeac62cdd5",
+                            "id": "ea4041f8-ebca-46fa-aea9-124c3c7c0eb4",
                             "name": "Request Localities Geocode successful",
                             "originalRequest": {
                                 "url": {
@@ -3366,12 +3366,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"results\": [\n    {\n      \"formatted_address\": \"Place Jeanne D'Arc, 75013, Paris\",\n      \"types\": [\n        \"route\"\n      ],\n      \"geometry\": {\n        \"location\": {\n          \"lat\": 48.829405,\n          \"lng\": 2.367944\n        },\n        \"location_type\": \"GEOMETRIC_CENTER\"\n      },\n      \"address_components\": [\n        {\n          \"types\": [\n            \"country\",\n            \"administrative_area_level_0\"\n          ],\n          \"long_name\": \"France\",\n          \"short_name\": \"FR\"\n        },\n        {\n          \"types\": [\n            \"postal_town\"\n          ],\n          \"long_name\": \"Paris\",\n          \"short_name\": \"Paris\"\n        },\n        {\n          \"types\": [\n            \"locality\"\n          ],\n          \"long_name\": \"Paris\",\n          \"short_name\": \"Paris\"\n        },\n        {\n          \"types\": [\n            \"postal_codes\"\n          ],\n          \"long_name\": \"75013\",\n          \"short_name\": \"75013\"\n        },\n        {\n          \"types\": [\n            \"route\"\n          ],\n          \"long_name\": \"Place Jeanne D'Arc\",\n          \"short_name\": \"Place Jeanne D'Arc\"\n        }\n      ]\n    }\n  ]\n}",
+                            "body": "{\n  \"results\": [\n    {\n      \"types\": [\n        \"route\"\n      ],\n      \"formatted_address\": \"Place Jeanne D'Arc, 75013, Paris\",\n      \"geometry\": {\n        \"location\": {\n          \"lat\": 48.829405,\n          \"lng\": 2.367944\n        },\n        \"location_type\": \"GEOMETRIC_CENTER\"\n      },\n      \"address_components\": [\n        {\n          \"short_name\": \"FR\",\n          \"long_name\": \"France\",\n          \"types\": [\n            \"country\",\n            \"administrative_area_level_0\"\n          ]\n        },\n        {\n          \"short_name\": \"Paris\",\n          \"long_name\": \"Paris\",\n          \"types\": [\n            \"locality\"\n          ]\n        },\n        {\n          \"short_name\": \"75013\",\n          \"long_name\": \"75013\",\n          \"types\": [\n            \"postal_codes\"\n          ]\n        },\n        {\n          \"short_name\": \"Place Jeanne D'Arc\",\n          \"long_name\": \"Place Jeanne D'Arc\",\n          \"types\": [\n            \"route\"\n          ]\n        }\n      ]\n    }\n  ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c54a8287-7372-4b2d-a24a-569cb7e83254",
+                            "id": "768e4ad8-5f98-428d-adef-dd9653657dc5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3437,7 +3437,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1450b26b-601b-4eb3-a46d-df5a144e7620",
+                            "id": "90441dc0-77e6-4014-8459-f23dfd97b558",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3503,7 +3503,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a515efd0-87c2-41f8-9cb0-61bbf552cc2e",
+                            "id": "887f5e02-bf7d-4204-ad9e-c3a55673eb8e",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3575,7 +3575,7 @@
             "event": []
         },
         {
-            "id": "43785173-13b1-4dc5-ba0e-e5850be3e56d",
+            "id": "c4f188cc-6326-46cc-8bdb-ca4c7224a7a4",
             "name": "Address API",
             "description": {
                 "content": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3583,7 +3583,7 @@
             },
             "item": [
                 {
-                    "id": "319204a1-3737-427c-a20f-4d062bd6bdda",
+                    "id": "bdccd18e-164b-4b44-aa07-93631a1ad4f8",
                     "name": "Autocomplete for Addresses",
                     "request": {
                         "name": "Autocomplete for Addresses",
@@ -3658,7 +3658,7 @@
                     },
                     "response": [
                         {
-                            "id": "a37ccf06-8f70-419e-ad3e-c28e0f482ab6",
+                            "id": "3447b310-e999-49f6-b15e-3975d52fd525",
                             "name": "Autocompletion Address successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -3708,12 +3708,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"predictions\": [\n    {\n      \"public_id\": \"aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0\",\n      \"description\": \"London, England, United Kingdom\",\n      \"matched_substring\": {\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"type\": \"locality\"\n    },\n    {\n      \"public_id\": \"aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDE5Nzgz\",\n      \"description\": \"Londonderry, Northern Ireland, United Kingdom\",\n      \"matched_substring\": {\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"type\": \"locality\"\n    }\n  ],\n  \"status\": \"OK\"\n}",
+                            "body": "{\n  \"predictions\": [\n    {\n      \"public_id\": \"aGVyZTpjbTpuYW1lZHBsYWNlOjIwMzM3NDU0\",\n      \"description\": \"London, England, United Kingdom\",\n      \"matched_substring\": {\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"type\": \"locality\"\n    },\n    {\n      \"public_id\": \"aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDE5Nzgz\",\n      \"description\": \"Londonderry, Northern Ireland, United Kingdom\",\n      \"matched_substring\": {\n        \"description\": [\n          {\n            \"offset\": 0,\n            \"length\": 4\n          }\n        ]\n      },\n      \"type\": \"locality\"\n    },\n    {\n      \"public_id\": \"aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDExMTIz\",\n      \"description\": \"County Londonderry, Northern Ireland, United Kingdom\",\n      \"matched_substring\": {\n        \"description\": [\n          {\n            \"offset\": 7,\n            \"length\": 4\n          }\n        ]\n      },\n      \"type\": \"admin_level\"\n    }\n  ],\n  \"status\": \"OK\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "19421835-ec19-41ba-b2a0-3f4817390fbe",
+                            "id": "a7b8e869-7bf5-4aa3-ba24-b51bb04782fc",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3768,7 +3768,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c2684128-29cc-40e9-b386-7ca8b2a8737d",
+                            "id": "1bbe6e6a-6e18-418e-8736-bfdf7cbd732e",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3823,7 +3823,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ee360ccb-57a1-48f4-8ede-34171e1db47b",
+                            "id": "6dd90b24-2fde-4ef2-885e-841e154c9e24",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3881,7 +3881,7 @@
                     "event": []
                 },
                 {
-                    "id": "1bed14dd-0fc4-42cf-bff0-782465ac5a10",
+                    "id": "c4d589e2-be67-4ecb-a137-82eb50915a2a",
                     "name": "Details of an Address",
                     "request": {
                         "name": "Details of an Address",
@@ -3950,7 +3950,7 @@
                     },
                     "response": [
                         {
-                            "id": "2669b407-871e-4fac-b9c9-18600ec6ac17",
+                            "id": "12ebaccb-4c84-424d-9d87-b48ae1acbf2f",
                             "name": "Details Address successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4001,7 +4001,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8c643592-f915-4a55-ba2c-57db7d35592e",
+                            "id": "22bdf914-a18f-4298-b6a0-87ece6e66b25",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4052,7 +4052,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ce9eb037-99d5-4a93-b5ab-feef5c6cc802",
+                            "id": "98c0581b-20ee-42dc-ab15-87d241f8743f",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4103,7 +4103,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e6e1bedd-008c-40a9-94ed-3d44be1a5f31",
+                            "id": "77946f37-d32c-4234-87b3-2e7378c36345",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4157,7 +4157,7 @@
                     "event": []
                 },
                 {
-                    "id": "85e8a415-d8a7-4970-9a78-4ea72f887185",
+                    "id": "70ebbeef-80cb-42c8-a6d7-b938e7174adc",
                     "name": "Geocode an Address or Reverse Geocode a latlng",
                     "request": {
                         "name": "Geocode an Address or Reverse Geocode a latlng",
@@ -4250,7 +4250,7 @@
                     },
                     "response": [
                         {
-                            "id": "4e46f390-1f15-4d05-99c6-5e4d873da305",
+                            "id": "4e41cc35-b74d-436b-b3f2-93ad6aefef46",
                             "name": "Request Address Geocode successful",
                             "originalRequest": {
                                 "url": {
@@ -4317,7 +4317,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "334fd07b-997a-48aa-95e0-1de04be923d8",
+                            "id": "c619f5f0-476a-4db7-95b4-0823bdf544cf",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4384,7 +4384,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "08d783f1-e0e8-44de-9c69-cfbb554b4518",
+                            "id": "0685f99a-d8c2-496f-8c8c-537ce44ca476",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4451,7 +4451,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "392781ea-0258-4ac8-88de-ebae30e942e1",
+                            "id": "118a1eec-33c1-4501-b068-8539d6b13548",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4524,7 +4524,7 @@
             "event": []
         },
         {
-            "id": "f67d2a17-902c-4528-9062-2c0a29966d0a",
+            "id": "d82bd085-b341-42c7-9e98-320e70dce849",
             "name": "Distance API",
             "description": {
                 "content": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -4532,7 +4532,7 @@
             },
             "item": [
                 {
-                    "id": "3c47ac60-1be1-4281-b858-e1e4f12174dd",
+                    "id": "ebc5eef2-7346-4071-ade5-2b97481ac121",
                     "name": "Distance Matrix",
                     "request": {
                         "name": "Distance Matrix",
@@ -4625,7 +4625,7 @@
                     },
                     "response": [
                         {
-                            "id": "956f3010-8658-46da-898a-64a6cc99fc79",
+                            "id": "7b6a4486-304b-4422-8206-7b0c90aa2d0d",
                             "name": "Distance Matrix successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4692,7 +4692,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9573e661-94b6-4760-b47c-597f80187d29",
+                            "id": "749972ed-ba57-4522-9ebf-152337c3e0d2",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4759,7 +4759,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "384f6687-fe5e-4604-9963-321e1738ed2f",
+                            "id": "5f467561-59dd-4b31-baab-8ee8b96ffa33",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4826,7 +4826,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2cd3a9ca-3552-4300-bbb6-df33c7fceda0",
+                            "id": "a543a53f-2f99-4299-b477-10a43670f940",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4896,7 +4896,7 @@
                     "event": []
                 },
                 {
-                    "id": "68036a01-2b2d-4ea1-bbfe-764fe8a08019",
+                    "id": "b5a65f7e-7739-470e-8f43-4b3e38a01911",
                     "name": "Distance Matrix using POST",
                     "request": {
                         "name": "Distance Matrix using POST",
@@ -4959,7 +4959,7 @@
                     },
                     "response": [
                         {
-                            "id": "592d4dab-bcb1-46f8-a888-b46e8c62c8d2",
+                            "id": "c7b4d951-f7e3-4b7f-b545-8e2fc6d056ae",
                             "name": "Distance Matrix with POST successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5006,7 +5006,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "01e56fe4-0905-4d5c-a606-2eaac0bba362",
+                            "id": "87eb1b55-4e30-46f3-948a-6422109821b3",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -5053,7 +5053,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ad1bf066-3a38-4a36-ab66-37047e9ce16d",
+                            "id": "7d8b2c91-421a-47d3-b60b-1b72c3e8a890",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5100,7 +5100,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e1871247-7583-4684-8521-1e8ca9a3eaa5",
+                            "id": "9d5f5a4c-bddd-4468-8649-cf7857ac10e0",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5147,7 +5147,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ccbdf598-235a-4570-8189-5046fb78d1fa",
+                            "id": "9dbdb038-ecf2-444e-ba8a-bf9445031874",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5200,7 +5200,7 @@
                     }
                 },
                 {
-                    "id": "e5c9b8ec-2cfb-431d-b79f-bff1c27cc7e3",
+                    "id": "390018fc-6997-4b57-87a2-bbec79e181b9",
                     "name": "Route",
                     "request": {
                         "name": "Route",
@@ -5311,7 +5311,7 @@
                     },
                     "response": [
                         {
-                            "id": "40118296-4175-40ad-96b1-0592338c6b4b",
+                            "id": "59769e66-d97d-470c-88cd-3677188e1038",
                             "name": "Route successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5390,7 +5390,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a826756a-a210-44a5-a363-095207461414",
+                            "id": "3b6cc8c1-49b4-4eff-a087-c13fdc6385b9",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5469,7 +5469,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6706de1b-e122-47dd-bbc6-f7cd42a5a0b5",
+                            "id": "3976f7dd-69e1-4e04-8d6d-b9d7b031a136",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5548,7 +5548,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "939fd5cd-3cd1-4064-ad49-cc18c31bfcd6",
+                            "id": "e55c4dbb-ad29-4154-a1ed-8d70cc4e3526",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5630,7 +5630,7 @@
                     "event": []
                 },
                 {
-                    "id": "ed79b3b4-06f0-4add-a987-b4b628ec6ffe",
+                    "id": "4b823fcf-f9e4-4e94-a125-bcc633cbc039",
                     "name": "Isochrone (Early Access)",
                     "request": {
                         "name": "Isochrone (Early Access)",
@@ -5717,7 +5717,7 @@
                     },
                     "response": [
                         {
-                            "id": "e6d27a97-cbc4-46c7-a75a-3c9e95411e87",
+                            "id": "c05c215f-e2a1-4e6b-ba55-72ac1ec493e4",
                             "name": "Isochrone successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5780,7 +5780,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "23174242-dfb8-435e-a9e1-945a4ca380ec",
+                            "id": "c3b4e7a1-86c2-4e39-a477-c3a0881d1daa",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5843,7 +5843,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f8fbb0ed-5c77-4322-84cb-b2b6252a8d88",
+                            "id": "0bc38064-1d88-48b1-8dd9-a7a427c84921",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5906,7 +5906,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ec46e810-8c4c-476f-bc29-eb82e46e43f8",
+                            "id": "3190aa37-950b-425e-8a3f-928ff4a3ef05",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5975,7 +5975,7 @@
             "event": []
         },
         {
-            "id": "c94f123f-f7d2-4bde-b626-e7746fb56324",
+            "id": "b809fd91-d575-4445-b0c1-455baa548410",
             "name": "Traffic API",
             "description": {
                 "content": "Woosmap Traffic API (Early Access) is a service that provides travel distances and durations with traffic, on a Worldwide scale. Compared to the Woosmap Distance API, this API uses traffic information when returning duration times.  Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -5983,7 +5983,7 @@
             },
             "item": [
                 {
-                    "id": "054181de-ea34-4fd4-ad21-2907c660f74c",
+                    "id": "b5937988-4b0c-47d3-a5e5-75bd77bf85b6",
                     "name": "Traffic Distance Matrix",
                     "request": {
                         "name": "Traffic Distance Matrix",
@@ -6070,7 +6070,7 @@
                     },
                     "response": [
                         {
-                            "id": "60e5eea2-1c0a-4875-a097-9fd799c6872b",
+                            "id": "72fec220-b83a-46ba-9d72-0668e39aa7d1",
                             "name": "Traffic Distance Matrix successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6128,12 +6128,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"rows\": [\n    {\n      \"elements\": [\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1420,\n            \"text\": \"24 mins\"\n          },\n          \"distance\": {\n            \"value\": 10731,\n            \"text\": \"10.7 km\"\n          }\n        },\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1146,\n            \"text\": \"19 mins\"\n          },\n          \"distance\": {\n            \"value\": 10185,\n            \"text\": \"10.2 km\"\n          }\n        }\n      ]\n    }\n  ],\n  \"status\": \"OK\"\n}",
+                            "body": "{\n  \"rows\": [\n    {\n      \"elements\": [\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1626,\n            \"text\": \"27 mins\"\n          },\n          \"distance\": {\n            \"value\": 10731,\n            \"text\": \"10.7 km\"\n          }\n        },\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1288,\n            \"text\": \"21 mins\"\n          },\n          \"distance\": {\n            \"value\": 10185,\n            \"text\": \"10.2 km\"\n          }\n        }\n      ]\n    }\n  ],\n  \"status\": \"OK\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f9304f91-dd67-41c9-8de9-662a20f4c23c",
+                            "id": "191d83ec-0642-4286-b312-17800a17cb87",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6196,7 +6196,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "36c509fb-835d-4a6d-8736-f82512be2df3",
+                            "id": "40d8968f-6bc4-4474-9ca9-0831a4b5391f",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6259,7 +6259,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f6d96738-6e6a-45b5-8d42-3a7234c29cea",
+                            "id": "465c3fb1-52f2-4ace-8899-91a074ce12e9",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -6325,7 +6325,7 @@
                     "event": []
                 },
                 {
-                    "id": "1f977e79-c7d1-4823-89f9-b95a4cb9f1ec",
+                    "id": "4e003625-a407-4999-a2e5-2aee4ecf4ae3",
                     "name": "Traffic Distance Matrix using POST",
                     "request": {
                         "name": "Traffic Distance Matrix using POST",
@@ -6388,7 +6388,7 @@
                     },
                     "response": [
                         {
-                            "id": "7af15f3a-a875-49d9-86fb-0c4ae91709f5",
+                            "id": "a056ebff-6d4c-4e7c-b689-9c10ac7897fa",
                             "name": "Traffic Distance Matrix with POST successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6430,12 +6430,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"rows\": [\n    {\n      \"elements\": [\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1420,\n            \"text\": \"24 mins\"\n          },\n          \"distance\": {\n            \"value\": 10731,\n            \"text\": \"10.7 km\"\n          }\n        },\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1146,\n            \"text\": \"19 mins\"\n          },\n          \"distance\": {\n            \"value\": 10185,\n            \"text\": \"10.2 km\"\n          }\n        }\n      ]\n    }\n  ],\n  \"status\": \"OK\"\n}",
+                            "body": "{\n  \"rows\": [\n    {\n      \"elements\": [\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1626,\n            \"text\": \"27 mins\"\n          },\n          \"distance\": {\n            \"value\": 10731,\n            \"text\": \"10.7 km\"\n          }\n        },\n        {\n          \"status\": \"OK\",\n          \"duration_with_traffic\": {\n            \"value\": 1288,\n            \"text\": \"21 mins\"\n          },\n          \"distance\": {\n            \"value\": 10185,\n            \"text\": \"10.2 km\"\n          }\n        }\n      ]\n    }\n  ],\n  \"status\": \"OK\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a9c44964-8572-4e54-ae1d-40258c8b6567",
+                            "id": "8160a6c2-5e87-4fa0-b18c-ec2c6979b63a",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -6482,7 +6482,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "96bcf8e9-dc5f-49c4-8a4d-d00bb8ff3508",
+                            "id": "069f8bee-4921-4afb-9eeb-362e7422ef94",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6529,7 +6529,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "07631003-55fe-43e5-9e26-b8eed1a9758c",
+                            "id": "03c3232c-2d09-448d-a38b-a5ee8c3953d1",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6576,7 +6576,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f2a673c2-ad76-4a81-9105-abc221a88d1c",
+                            "id": "c7f23346-04d8-4234-b61f-ab0ac466d05d",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -6629,7 +6629,7 @@
                     }
                 },
                 {
-                    "id": "3a814aad-fbfc-4b7d-bab6-25e65508c891",
+                    "id": "acc9ea3d-bd63-4678-8849-dc958e6cc0d7",
                     "name": "Traffic Route",
                     "request": {
                         "name": "Traffic Route",
@@ -6740,7 +6740,7 @@
                     },
                     "response": [
                         {
-                            "id": "0c445098-aed0-42d1-9f8f-854710a2e41d",
+                            "id": "a24b550f-1b92-4c68-8d4f-5e90cdab93b5",
                             "name": "Traffic Route successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6814,12 +6814,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"routes\": [\n    {\n      \"legs\": [\n        {\n          \"distance\": {\n            \"value\": 1073.570921248021,\n            \"text\": \"1.1 km\"\n          },\n          \"duration_with_traffic\": {\n            \"value\": 99,\n            \"text\": \"2 mins\"\n          },\n          \"duration_without_traffic\": {\n            \"value\": 88,\n            \"text\": \"1 min\"\n          },\n          \"start_location\": {\n            \"lat\": 49.310753,\n            \"lng\": 4.1451221\n          },\n          \"end_location\": {\n            \"lat\": 49.3134,\n            \"lng\": 4.15297\n          }\n        }\n      ],\n      \"overview_polyline\": {\n        \"points\": \"e_~kH_rhXkBcDsAwBeAaB]c@a@g@c@g@c@a@[[a@_@YS[Ui@Y]O]K_@Gc@Gi@AcBCg@?_@ESCOMMMMUKYI]Ow@FIFMBI@G@O?IAMCMCKjCsDNShBaCDFDDDBF@F?FABADABEBCBKBM@M?KAKCKCG|@kAfA}A\"\n      },\n      \"summary\": \"route_0\",\n      \"bounds\": {\n        \"northeast\": {\n          \"lat\": 49.31575,\n          \"lng\": 4.15297\n        },\n        \"southwest\": {\n          \"lat\": 49.310753,\n          \"lng\": 4.145122\n        }\n      }\n    }\n  ],\n  \"status\": \"OK\"\n}",
+                            "body": "{\n  \"routes\": [\n    {\n      \"legs\": [\n        {\n          \"distance\": {\n            \"value\": 1073.570921248021,\n            \"text\": \"1.1 km\"\n          },\n          \"duration_with_traffic\": {\n            \"value\": 97,\n            \"text\": \"2 mins\"\n          },\n          \"duration_without_traffic\": {\n            \"value\": 88,\n            \"text\": \"1 min\"\n          },\n          \"start_location\": {\n            \"lat\": 49.310753,\n            \"lng\": 4.1451221\n          },\n          \"end_location\": {\n            \"lat\": 49.3134,\n            \"lng\": 4.15297\n          }\n        }\n      ],\n      \"overview_polyline\": {\n        \"points\": \"e_~kH_rhXkBcDsAwBeAaB]c@a@g@c@g@c@a@[[a@_@YS[Ui@Y]O]K_@Gc@Gi@AcBCg@?_@ESCOMMMMUKYI]Ow@FIFMBI@G@O?IAMCMCKjCsDNShBaCDFDDDBF@F?FABADABEBCBKBM@M?KAKCKCG|@kAfA}A\"\n      },\n      \"summary\": \"route_0\",\n      \"bounds\": {\n        \"northeast\": {\n          \"lat\": 49.31575,\n          \"lng\": 4.15297\n        },\n        \"southwest\": {\n          \"lat\": 49.310753,\n          \"lng\": 4.145122\n        }\n      }\n    }\n  ],\n  \"status\": \"OK\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fefc0310-5b56-4d8f-8235-0fc4a041f3bd",
+                            "id": "f8c812a6-ed0d-4c9c-8561-edbf978db1a5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6898,7 +6898,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fab0b301-a96f-47ac-a1f0-c50e78bbd7c2",
+                            "id": "4f6fad6a-2791-43c5-adea-1d8d9895ee0b",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6977,7 +6977,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d7df54e4-6189-46d6-859c-c9774faa4a48",
+                            "id": "2952be88-e54a-4d7b-ac8c-98adf4927f8e",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7062,7 +7062,7 @@
             "event": []
         },
         {
-            "id": "24e49018-aa07-472e-b64d-6afc5d95cf06",
+            "id": "8cfe2a3a-7f1f-448b-9b84-293fc95b3d00",
             "name": "Merchants API",
             "description": {
                 "content": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -7070,7 +7070,7 @@
             },
             "item": [
                 {
-                    "id": "bdbd3659-51c5-428f-a365-7202a7f856d0",
+                    "id": "3d3b7fc2-c01a-4315-b848-90925976096c",
                     "name": "Get Merchant Clean Name",
                     "request": {
                         "name": "Get Merchant Clean Name",
@@ -7126,7 +7126,7 @@
                     },
                     "response": [
                         {
-                            "id": "5b6ee566-4b36-4842-a293-575d46bac7f7",
+                            "id": "e0cfdff4-47d2-4f3f-bf21-33810edb0a20",
                             "name": "Request Merchants successful",
                             "originalRequest": {
                                 "url": {
@@ -7168,7 +7168,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8c00a5c3-88f6-4088-aee5-f35279304eea",
+                            "id": "8be51136-dfb1-475d-9370-319d5b7fa34a",
                             "name": "dirty_name was not provided",
                             "originalRequest": {
                                 "url": {
@@ -7210,7 +7210,7 @@
                             "_postman_previewlanguage": "text"
                         },
                         {
-                            "id": "27fdd758-2884-4c4d-9bf9-86386e0887f6",
+                            "id": "22dfe04c-af89-40b9-89de-bfd9135dbf8b",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -7252,7 +7252,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "30c8441e-706d-4f3b-a244-201fa4f0239a",
+                            "id": "8e7cc685-6ee4-40ed-93f3-44ebe1f04e20",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -7294,7 +7294,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d69b6a60-8fea-4a84-9caf-dc6e2c16951a",
+                            "id": "91d7cd0e-8a63-4391-884d-7d5a33ac52d5",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7339,7 +7339,7 @@
                     "event": []
                 },
                 {
-                    "id": "06bfc2e3-f0ec-450e-b0c7-6e6b58198d7b",
+                    "id": "48d13e02-340f-4487-9827-97b25cd433b5",
                     "name": "Get Merchants Clean Names using POST",
                     "request": {
                         "name": "Get Merchants Clean Names using POST",
@@ -7401,7 +7401,7 @@
                     },
                     "response": [
                         {
-                            "id": "8e7eeb87-2758-475b-827b-52f5c2204275",
+                            "id": "d1474d15-cdfa-416f-a521-0c58a82fb523",
                             "name": "Merchants Brand successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -7447,7 +7447,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d29504f8-88cc-4d37-a4fe-fabaf7d4c1d1",
+                            "id": "6c386938-245b-4824-ac7d-76b78d2445dd",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -7493,7 +7493,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "14854025-7d8a-47ae-8eea-c4644b0ef705",
+                            "id": "d62ec1e7-b882-4767-8b61-bdf700ba68b9",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -7539,7 +7539,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a91e965c-3850-48c2-a5e0-c9b7bbbcb62a",
+                            "id": "18e95f8d-3652-4ff0-ab0c-3b9e3ee9cc3d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -7585,7 +7585,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "453820f1-be78-4361-9ef8-e5d045c9819a",
+                            "id": "b45426c7-f65e-4cac-8d91-815103123b91",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7637,7 +7637,7 @@
                     }
                 },
                 {
-                    "id": "847df10c-cdd6-45c8-a188-01105689ee5e",
+                    "id": "302f2d78-faaf-48b3-8d6a-235140bf4228",
                     "name": "Get Merchants Place",
                     "request": {
                         "name": "Get Merchants Place",
@@ -7699,7 +7699,7 @@
                     },
                     "response": [
                         {
-                            "id": "7e5c8e6a-3357-4af7-a2f3-5bc530bca268",
+                            "id": "304b9004-720e-419b-939e-97bb5c5a8597",
                             "name": "Merchants Place successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -7745,7 +7745,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8061836e-c6d9-46b3-b1c8-a1a8d0aefa76",
+                            "id": "3fc16dad-1933-44d0-b74a-29f68eae75b3",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -7791,7 +7791,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6a37936d-c32e-4269-a4d2-3ee5d8be70f8",
+                            "id": "45a35bd1-2b9c-476a-9ba5-64608a524fee",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -7837,7 +7837,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "63a97613-7282-4c15-a00c-f181fcd68525",
+                            "id": "7ee274de-690e-486a-bf67-d5e8e9387cba",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -7883,7 +7883,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "821ff381-eb7b-4624-9e55-191288845397",
+                            "id": "1fb28b5b-fc25-434b-a25b-6f78bafb360a",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7938,7 +7938,7 @@
             "event": []
         },
         {
-            "id": "0fdc44d4-e620-403c-b06f-a226fd1563d5",
+            "id": "b3a7177a-067a-4ed6-b11e-616db46a4c27",
             "name": "Zones API",
             "description": {
                 "content": "Woosmap Zones API is a web service that uses an HTTP request to manage, create or edit your Zones (polygons) attached to your assets.\nThe general principle is that sometimes searching assets using crowfly distance is not good enough. For example to search the restaurant that will do the delivery for a specified address, each restaurant has a delivery zone and for topological or business reasons it’s not always the nearest restaurant in charge of your delivery. Woosmap Zones API allows you to associate a delivery zone to each of the restaurants.\n",
@@ -7946,7 +7946,7 @@
             },
             "item": [
                 {
-                    "id": "97b26b26-3860-4b00-bffb-0b664e07ccb1",
+                    "id": "b6176783-a400-4a11-8fc7-9a30f42b7e14",
                     "name": "List your Zones",
                     "request": {
                         "name": "List your Zones",
@@ -8007,7 +8007,7 @@
                     },
                     "response": [
                         {
-                            "id": "659de5a3-ab49-4bcc-be40-d978aa0485d9",
+                            "id": "a0e6236c-f431-49da-943c-f2ce2492b7f6",
                             "name": "Zones successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -8052,7 +8052,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0ebf6c4d-91fb-4808-b202-27b886972eb0",
+                            "id": "308ee6f7-889e-4e68-9fcd-d87c775e9616",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8097,7 +8097,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2141092d-09c9-4062-8bbd-e2f78f1e1f86",
+                            "id": "a23da1fb-f899-4c16-98a0-ce14f431530d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8142,7 +8142,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "99ae3a42-25d8-4ea3-9115-12837e3db0b9",
+                            "id": "3baa62ea-d665-418b-b227-0582d3b13b1d",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -8190,7 +8190,7 @@
                     "event": []
                 },
                 {
-                    "id": "3efc2a1f-01e3-4fb8-a1f9-36fed4d8b5a5",
+                    "id": "aef4e662-cc55-482a-ba2a-517eabd36729",
                     "name": "Create your Zones",
                     "request": {
                         "name": "Create your Zones",
@@ -8251,7 +8251,7 @@
                     },
                     "response": [
                         {
-                            "id": "3016183e-0c2d-4770-9738-74a4aa791b86",
+                            "id": "11ff4117-6e69-4578-88ed-82519489f68a",
                             "name": "Zones successfully created",
                             "originalRequest": {
                                 "url": {
@@ -8296,7 +8296,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "318b530e-c15d-4871-9a1d-b30272933c25",
+                            "id": "e6dc3c8f-7b97-46ff-bfe5-ab49db63308b",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -8341,7 +8341,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e28da6d4-c6db-4654-b177-85190d7a9ff0",
+                            "id": "43d352d0-d1d3-4195-b661-49f0d00d5ac0",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8386,7 +8386,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "218e198c-c80a-4214-be97-1a3a9a3168e2",
+                            "id": "c980660f-3106-4e4c-8f22-2e955bf6c795",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8437,7 +8437,7 @@
                     }
                 },
                 {
-                    "id": "34246184-8f10-4c5f-97f5-0d53a91c5efe",
+                    "id": "1fdb6de4-020f-4d4f-9687-4625abdee8b0",
                     "name": "Update the Zones",
                     "request": {
                         "name": "Update the Zones",
@@ -8498,7 +8498,7 @@
                     },
                     "response": [
                         {
-                            "id": "0b9450ad-d968-4e1c-bca7-0136a2b2733a",
+                            "id": "713dcc56-c736-46b8-b691-5c3e6f19f94e",
                             "name": "Zones successfully updated",
                             "originalRequest": {
                                 "url": {
@@ -8543,7 +8543,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "dcc31b7c-b296-4459-9cf4-e6d5b04be07e",
+                            "id": "7358d1b0-df1d-4271-80e4-61e4ddb908fb",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -8588,7 +8588,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "779991ae-65f2-4bcd-a6df-d65ce61dd405",
+                            "id": "3f281fc7-e099-4f68-af1e-87147e8e69d2",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8633,7 +8633,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7df69f06-04b3-41b3-916b-fc0f0f2c65d6",
+                            "id": "a090a920-4168-4c90-bac7-e4cf04d2b3ff",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8684,7 +8684,7 @@
                     }
                 },
                 {
-                    "id": "1292199a-52a1-4564-acbc-caca0ab514c2",
+                    "id": "a071f70a-f0be-407f-af41-8c5d0c80eeb0",
                     "name": "Delete the Zones",
                     "request": {
                         "name": "Delete the Zones",
@@ -8739,7 +8739,7 @@
                     },
                     "response": [
                         {
-                            "id": "d8486443-16f2-402e-84d0-c553b3baafbc",
+                            "id": "bb9b2933-18ec-422f-a5b7-db60aa3b6196",
                             "name": "Zones successfully deleted",
                             "originalRequest": {
                                 "url": {
@@ -8780,7 +8780,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "735580ac-5990-43dc-9d1f-1a97345faf82",
+                            "id": "bad3ff50-8dbf-4847-be74-72182c1658f6",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8821,7 +8821,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "46f82a0d-7962-4259-91cc-58abea22c86e",
+                            "id": "ca5b9b8e-f2bd-4cd3-b318-7c543ba0a4c0",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8865,7 +8865,7 @@
                     "event": []
                 },
                 {
-                    "id": "05e709a0-0116-403f-bf42-dc24cfc93b06",
+                    "id": "18ac1528-163f-4ed6-90d4-f5f5af9c8cf2",
                     "name": "Get Zone from ID",
                     "request": {
                         "name": "Get Zone from ID",
@@ -8922,7 +8922,7 @@
                     },
                     "response": [
                         {
-                            "id": "aefcaa5f-9571-441f-b295-84f171c3270d",
+                            "id": "8741888c-4ac1-4b3e-a7e2-54740dd69993",
                             "name": "Zone successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -8968,7 +8968,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "cc0b8750-1d54-46e1-bffb-203b71fbdc4a",
+                            "id": "424af38a-ffff-40ef-a695-9f6e6af99505",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -9014,7 +9014,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7a1f15db-cc99-4b81-a782-2817c4a29b5e",
+                            "id": "e5766d81-48fa-43d0-a2f5-e07bf68f05bd",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -9060,7 +9060,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "54a3cde9-a472-440a-ba32-03239770dd76",
+                            "id": "fbda7255-135b-4163-8ed7-c3530285aaeb",
                             "name": "Not Found - `zone_id` do not exist.",
                             "originalRequest": {
                                 "url": {
@@ -9138,7 +9138,7 @@
         ]
     },
     "info": {
-        "_postman_id": "cfd04b62-b598-4ede-97a4-0f5fd8df08bb",
+        "_postman_id": "24309546-1362-4e36-9c7c-15983a27e743",
         "name": "Woosmap Platform API Reference",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

@@ -12,33 +12,33 @@ Attributes describing a locality. Not all attributes will be available for all l
 
 <pre class="notranslate lang-json prettyprint">{
   "result": {
-    "formatted_address": "SW1A 0AA, City of London",
+    "public_id": "QaCU+fBtigK65ztSrqHqUoUDwZw=",
     "types": [
       "postal_code"
     ],
-    "public_id": "QaCU+fBtigK65ztSrqHqUoUDwZw=",
-    "name": "SW1A 0AA",
+    "formatted_address": "SW1A 0AA, City of London",
     "geometry": {
       "location": {
         "lat": 51.49984,
         "lng": -0.124663
       }
     },
+    "name": "SW1A 0AA",
     "address_components": [
       {
+        "short_name": "GB",
+        "long_name": "United Kingdom",
         "types": [
           "country",
           "administrative_area_level_0"
-        ],
-        "long_name": "United Kingdom",
-        "short_name": "GB"
+        ]
       },
       {
+        "short_name": "City of London",
+        "long_name": "City of London",
         "types": [
           "administrative_area_level_1"
-        ],
-        "long_name": "City of London",
-        "short_name": "City of London"
+        ]
       }
     ],
     "addresses": {
