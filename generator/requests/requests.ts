@@ -75,7 +75,7 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "address",
-                        value: "Place de la Resistance",
+                        value: "Place de la Resistance Paris",
                     },
                     {
                         key: "components",
@@ -325,7 +325,7 @@ export const REQUESTS: SnippetRequest[] = [
                         key: "ip_address",
                         value: "173.79.254.254",
                     },
-                     {
+                    {
                         key: "limit",
                         value: "1",
                     },
@@ -348,6 +348,10 @@ export const REQUESTS: SnippetRequest[] = [
                     {
                         key: "components",
                         value: "country:gb",
+                    },
+                    {
+                        key: "no_deprecated_fields",
+                        value: "true",
                     },
                 ],
             }),

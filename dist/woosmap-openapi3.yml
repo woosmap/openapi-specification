@@ -2039,73 +2039,31 @@ paths:
                         type: locality
                         description: 'London, City of London, United Kingdom'
                         matched_substrings:
-                          name:
-                            - offset: 0
-                              length: 4
-                          admin_1:
-                            - offset: 8
-                              length: 4
                           description:
                             - offset: 0
                               length: 4
                             - offset: 16
                               length: 4
-                        name: London
-                        admin_0: United Kingdom
-                        admin_1: City of London
-                        location:
-                          lat: 51.50732184627219
-                          lng: -0.1276474581028424
                       - public_id: m/T2C4YI2LgszkKXrELBC+9dfC8=
                         type: locality
                         description: 'Londonderry/Derry, Derry City and Strabane, United Kingdom'
                         matched_substrings:
-                          name:
-                            - offset: 0
-                              length: 4
                           description:
                             - offset: 0
                               length: 4
-                        name: Londonderry/Derry
-                        admin_0: United Kingdom
-                        admin_1: Derry City and Strabane
-                        location:
-                          lat: 54.997867773710254
-                          lng: -7.321305634744732
                       - public_id: VOBREUi72/VtnsYgE6aI8HNYcxg=
                         type: locality
                         description: 'Londesborough, East Riding of Yorkshire, United Kingdom'
                         matched_substrings:
-                          name:
-                            - offset: 0
-                              length: 4
                           description:
                             - offset: 0
                               length: 4
-                        name: Londesborough
-                        admin_0: United Kingdom
-                        admin_1: East Riding of Yorkshire
-                        location:
-                          lat: 53.898504729546914
-                          lng: -0.6805281011687327
                       - public_id: Js0mQmmeI46X3hiqRj/R4pvb8mQ=
                         type: locality
                         description: 'Long Stratton, Norfolk, United Kingdom'
-                        name: Long Stratton
-                        admin_0: United Kingdom
-                        admin_1: Norfolk
-                        location:
-                          lat: 52.48782556394062
-                          lng: 1.2330929989479102
                       - public_id: BQOzBfxua+W9eLymBnVKRkqK2Zc=
                         type: locality
                         description: 'Long Sutton, Lincolnshire, United Kingdom'
-                        name: Long Sutton
-                        admin_0: United Kingdom
-                        admin_1: Lincolnshire
-                        location:
-                          lat: 52.78556417570891
-                          lng: 0.12170158845447077
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
         '403':
@@ -2618,46 +2576,6 @@ paths:
                   summary: 'Geocode Results for address `Place de la Resistance` with components `country:FR`'
                   value:
                     results:
-                      - formatted_address: 'Place de la Résistance, 92130 Issy-les-Moulineaux, France'
-                        types:
-                          - route
-                        address_components:
-                          - types:
-                              - country
-                            long_name: France
-                            short_name: FRA
-                          - types:
-                              - state
-                            long_name: Ile-de-France
-                            short_name: IDF
-                          - types:
-                              - county
-                            long_name: Hauts-de-Seine
-                            short_name: Hauts-de-Seine
-                          - long_name: Issy-les-Moulineaux
-                            short_name: Issy-les-Moulineaux
-                            types:
-                              - locality
-                          - long_name: Place de la Résistance
-                            short_name: Place de la Résistance
-                            types:
-                              - route
-                          - long_name: '92130'
-                            short_name: '92130'
-                            types:
-                              - postal_code
-                        geometry:
-                          location_type: GEOMETRIC_CENTER
-                          location:
-                            lat: 48.82138
-                            lng: 2.25009
-                          viewport:
-                            northeast:
-                              lat: 48.82195
-                              lng: 2.25052
-                            southwest:
-                              lat: 48.8209
-                              lng: 2.24999
                       - formatted_address: 'Place de la Résistance, 75007 Paris, France'
                         types:
                           - route
@@ -2702,130 +2620,6 @@ paths:
                             southwest:
                               lat: 48.86191
                               lng: 2.30147
-                      - formatted_address: 'Place de la Résistance, 37000 Tours, France'
-                        types:
-                          - route
-                        address_components:
-                          - types:
-                              - country
-                            long_name: France
-                            short_name: FRA
-                          - types:
-                              - state
-                            long_name: Centre-Val de Loire
-                            short_name: CVL
-                          - types:
-                              - county
-                            long_name: Indre-et-Loire
-                            short_name: Indre-et-Loire
-                          - long_name: Tours
-                            short_name: Tours
-                            types:
-                              - locality
-                          - long_name: Centre
-                            short_name: Centre
-                            types:
-                              - district
-                          - long_name: Place de la Résistance
-                            short_name: Place de la Résistance
-                            types:
-                              - route
-                          - long_name: '37000'
-                            short_name: '37000'
-                            types:
-                              - postal_code
-                        geometry:
-                          location_type: GEOMETRIC_CENTER
-                          location:
-                            lat: 47.3944
-                            lng: 0.68574
-                          viewport:
-                            northeast:
-                              lat: 47.39473
-                              lng: 0.68626
-                            southwest:
-                              lat: 47.39416
-                              lng: 0.68542
-                      - formatted_address: 'Place de la Résistance, 94500 Champigny-sur-Marne, France'
-                        types:
-                          - route
-                        address_components:
-                          - types:
-                              - country
-                            long_name: France
-                            short_name: FRA
-                          - types:
-                              - state
-                            long_name: Ile-de-France
-                            short_name: IDF
-                          - types:
-                              - county
-                            long_name: Val-de-Marne
-                            short_name: Val-de-Marne
-                          - long_name: Champigny-sur-Marne
-                            short_name: Champigny-sur-Marne
-                            types:
-                              - locality
-                          - long_name: Place de la Résistance
-                            short_name: Place de la Résistance
-                            types:
-                              - route
-                          - long_name: '94500'
-                            short_name: '94500'
-                            types:
-                              - postal_code
-                        geometry:
-                          location_type: GEOMETRIC_CENTER
-                          location:
-                            lat: 48.81359
-                            lng: 2.55785
-                          viewport:
-                            northeast:
-                              lat: 48.81398
-                              lng: 2.55815
-                            southwest:
-                              lat: 48.81359
-                              lng: 2.55754
-                      - formatted_address: 'Place de la Résistance, 21400 Châtillon-sur-Seine, France'
-                        types:
-                          - route
-                        address_components:
-                          - types:
-                              - country
-                            long_name: France
-                            short_name: FRA
-                          - types:
-                              - state
-                            long_name: Bourgogne-Franche-Comte
-                            short_name: BFC
-                          - types:
-                              - county
-                            long_name: Côte-d'Or
-                            short_name: Côte-d'Or
-                          - long_name: Châtillon-sur-Seine
-                            short_name: Châtillon-sur-Seine
-                            types:
-                              - locality
-                          - long_name: Place de la Résistance
-                            short_name: Place de la Résistance
-                            types:
-                              - route
-                          - long_name: '21400'
-                            short_name: '21400'
-                            types:
-                              - postal_code
-                        geometry:
-                          location_type: GEOMETRIC_CENTER
-                          location:
-                            lat: 47.86017
-                            lng: 4.57346
-                          viewport:
-                            northeast:
-                              lat: 47.86048
-                              lng: 4.57421
-                            southwest:
-                              lat: 47.86003
-                              lng: 4.57263
                     status: OK
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
@@ -6682,73 +6476,31 @@ components:
             type: locality
             description: 'London, City of London, United Kingdom'
             matched_substrings:
-              name:
-                - offset: 0
-                  length: 4
-              admin_1:
-                - offset: 8
-                  length: 4
               description:
                 - offset: 0
                   length: 4
                 - offset: 16
                   length: 4
-            name: London
-            admin_0: United Kingdom
-            admin_1: City of London
-            location:
-              lat: 51.50732184627219
-              lng: -0.1276474581028424
           - public_id: m/T2C4YI2LgszkKXrELBC+9dfC8=
             type: locality
             description: 'Londonderry/Derry, Derry City and Strabane, United Kingdom'
             matched_substrings:
-              name:
-                - offset: 0
-                  length: 4
               description:
                 - offset: 0
                   length: 4
-            name: Londonderry/Derry
-            admin_0: United Kingdom
-            admin_1: Derry City and Strabane
-            location:
-              lat: 54.997867773710254
-              lng: -7.321305634744732
           - public_id: VOBREUi72/VtnsYgE6aI8HNYcxg=
             type: locality
             description: 'Londesborough, East Riding of Yorkshire, United Kingdom'
             matched_substrings:
-              name:
-                - offset: 0
-                  length: 4
               description:
                 - offset: 0
                   length: 4
-            name: Londesborough
-            admin_0: United Kingdom
-            admin_1: East Riding of Yorkshire
-            location:
-              lat: 53.898504729546914
-              lng: -0.6805281011687327
           - public_id: Js0mQmmeI46X3hiqRj/R4pvb8mQ=
             type: locality
             description: 'Long Stratton, Norfolk, United Kingdom'
-            name: Long Stratton
-            admin_0: United Kingdom
-            admin_1: Norfolk
-            location:
-              lat: 52.48782556394062
-              lng: 1.2330929989479102
           - public_id: BQOzBfxua+W9eLymBnVKRkqK2Zc=
             type: locality
             description: 'Long Sutton, Lincolnshire, United Kingdom'
-            name: Long Sutton
-            admin_0: United Kingdom
-            admin_1: Lincolnshire
-            location:
-              lat: 52.78556417570891
-              lng: 0.12170158845447077
     LocalitiesAutocompleteMatchedFields:
       title: LocalitiesAutocompleteMatchedFields
       type: object
@@ -7322,46 +7074,6 @@ components:
           $ref: '#/components/schemas/AddressStatus'
       example:
         results:
-          - formatted_address: 'Place de la Résistance, 92130 Issy-les-Moulineaux, France'
-            types:
-              - route
-            address_components:
-              - types:
-                  - country
-                long_name: France
-                short_name: FRA
-              - types:
-                  - state
-                long_name: Ile-de-France
-                short_name: IDF
-              - types:
-                  - county
-                long_name: Hauts-de-Seine
-                short_name: Hauts-de-Seine
-              - long_name: Issy-les-Moulineaux
-                short_name: Issy-les-Moulineaux
-                types:
-                  - locality
-              - long_name: Place de la Résistance
-                short_name: Place de la Résistance
-                types:
-                  - route
-              - long_name: '92130'
-                short_name: '92130'
-                types:
-                  - postal_code
-            geometry:
-              location_type: GEOMETRIC_CENTER
-              location:
-                lat: 48.82138
-                lng: 2.25009
-              viewport:
-                northeast:
-                  lat: 48.82195
-                  lng: 2.25052
-                southwest:
-                  lat: 48.8209
-                  lng: 2.24999
           - formatted_address: 'Place de la Résistance, 75007 Paris, France'
             types:
               - route
@@ -7406,130 +7118,6 @@ components:
                 southwest:
                   lat: 48.86191
                   lng: 2.30147
-          - formatted_address: 'Place de la Résistance, 37000 Tours, France'
-            types:
-              - route
-            address_components:
-              - types:
-                  - country
-                long_name: France
-                short_name: FRA
-              - types:
-                  - state
-                long_name: Centre-Val de Loire
-                short_name: CVL
-              - types:
-                  - county
-                long_name: Indre-et-Loire
-                short_name: Indre-et-Loire
-              - long_name: Tours
-                short_name: Tours
-                types:
-                  - locality
-              - long_name: Centre
-                short_name: Centre
-                types:
-                  - district
-              - long_name: Place de la Résistance
-                short_name: Place de la Résistance
-                types:
-                  - route
-              - long_name: '37000'
-                short_name: '37000'
-                types:
-                  - postal_code
-            geometry:
-              location_type: GEOMETRIC_CENTER
-              location:
-                lat: 47.3944
-                lng: 0.68574
-              viewport:
-                northeast:
-                  lat: 47.39473
-                  lng: 0.68626
-                southwest:
-                  lat: 47.39416
-                  lng: 0.68542
-          - formatted_address: 'Place de la Résistance, 94500 Champigny-sur-Marne, France'
-            types:
-              - route
-            address_components:
-              - types:
-                  - country
-                long_name: France
-                short_name: FRA
-              - types:
-                  - state
-                long_name: Ile-de-France
-                short_name: IDF
-              - types:
-                  - county
-                long_name: Val-de-Marne
-                short_name: Val-de-Marne
-              - long_name: Champigny-sur-Marne
-                short_name: Champigny-sur-Marne
-                types:
-                  - locality
-              - long_name: Place de la Résistance
-                short_name: Place de la Résistance
-                types:
-                  - route
-              - long_name: '94500'
-                short_name: '94500'
-                types:
-                  - postal_code
-            geometry:
-              location_type: GEOMETRIC_CENTER
-              location:
-                lat: 48.81359
-                lng: 2.55785
-              viewport:
-                northeast:
-                  lat: 48.81398
-                  lng: 2.55815
-                southwest:
-                  lat: 48.81359
-                  lng: 2.55754
-          - formatted_address: 'Place de la Résistance, 21400 Châtillon-sur-Seine, France'
-            types:
-              - route
-            address_components:
-              - types:
-                  - country
-                long_name: France
-                short_name: FRA
-              - types:
-                  - state
-                long_name: Bourgogne-Franche-Comte
-                short_name: BFC
-              - types:
-                  - county
-                long_name: Côte-d'Or
-                short_name: Côte-d'Or
-              - long_name: Châtillon-sur-Seine
-                short_name: Châtillon-sur-Seine
-                types:
-                  - locality
-              - long_name: Place de la Résistance
-                short_name: Place de la Résistance
-                types:
-                  - route
-              - long_name: '21400'
-                short_name: '21400'
-                types:
-                  - postal_code
-            geometry:
-              location_type: GEOMETRIC_CENTER
-              location:
-                lat: 47.86017
-                lng: 4.57346
-              viewport:
-                northeast:
-                  lat: 47.86048
-                  lng: 4.57421
-                southwest:
-                  lat: 47.86003
-                  lng: 4.57263
         status: OK
     AddressGeocodeResponse:
       title: AddressGeocodeResponse
