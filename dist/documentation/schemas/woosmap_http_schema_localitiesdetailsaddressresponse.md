@@ -12,11 +12,11 @@ Attributes describing. Not all attributes will be available for all locality typ
 
 <pre class="notranslate lang-json prettyprint">{
   "result": {
-    "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
+    "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
     "types": [
       "address"
     ],
-    "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
+    "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
     "geometry": {
       "location": {
         "lat": 51.4998415,
@@ -26,47 +26,47 @@ Attributes describing. Not all attributes will be available for all locality typ
     },
     "address_components": [
       {
+        "short_name": "GB",
+        "long_name": "United Kingdom",
         "types": [
           "country",
           "administrative_area_level_0"
-        ],
-        "long_name": "United Kingdom",
-        "short_name": "GB"
+        ]
       },
       {
+        "short_name": "City of London",
+        "long_name": "City of London",
         "types": [
           "administrative_area_level_1"
-        ],
-        "long_name": "City of London",
-        "short_name": "City of London"
+        ]
       },
       {
+        "short_name": "London",
+        "long_name": "London",
         "types": [
           "locality"
-        ],
-        "long_name": "London",
-        "short_name": "London"
+        ]
       },
       {
+        "short_name": "SW1A 0AA",
+        "long_name": "SW1A 0AA",
         "types": [
           "postal_codes"
-        ],
-        "long_name": "SW1A 0AA",
-        "short_name": "SW1A 0AA"
+        ]
       },
       {
+        "short_name": "Houses Of Parliament",
+        "long_name": "Houses Of Parliament",
         "types": [
           "premise"
-        ],
-        "long_name": "Houses Of Parliament",
-        "short_name": "Houses Of Parliament"
+        ]
       },
       {
+        "short_name": "House Of Commons",
+        "long_name": "House Of Commons",
         "types": [
           "organisation"
-        ],
-        "long_name": "House Of Commons",
-        "short_name": "House Of Commons"
+        ]
       }
     ]
   }

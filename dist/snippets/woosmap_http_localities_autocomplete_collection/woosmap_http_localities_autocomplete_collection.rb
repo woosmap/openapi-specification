@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&key=YOUR_PUBLIC_API_KEY")
+url = URI("https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

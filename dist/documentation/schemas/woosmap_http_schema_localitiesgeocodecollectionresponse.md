@@ -13,10 +13,10 @@ Localities Geocode Collection Response. Contains one or more detailled Localitie
 <pre class="notranslate lang-json prettyprint">{
   "results": [
     {
-      "formatted_address": "Place Jeanne D'Arc, 75013, Paris",
       "types": [
         "route"
       ],
+      "formatted_address": "Place Jeanne D'Arc, 75013, Paris",
       "geometry": {
         "location": {
           "lat": 48.829405,
@@ -26,40 +26,33 @@ Localities Geocode Collection Response. Contains one or more detailled Localitie
       },
       "address_components": [
         {
+          "short_name": "FR",
+          "long_name": "France",
           "types": [
             "country",
             "administrative_area_level_0"
-          ],
-          "long_name": "France",
-          "short_name": "FR"
+          ]
         },
         {
-          "types": [
-            "postal_town"
-          ],
+          "short_name": "Paris",
           "long_name": "Paris",
-          "short_name": "Paris"
-        },
-        {
           "types": [
             "locality"
-          ],
-          "long_name": "Paris",
-          "short_name": "Paris"
+          ]
         },
         {
+          "short_name": "75013",
+          "long_name": "75013",
           "types": [
             "postal_codes"
-          ],
-          "long_name": "75013",
-          "short_name": "75013"
+          ]
         },
         {
+          "short_name": "Place Jeanne D'Arc",
+          "long_name": "Place Jeanne D'Arc",
           "types": [
             "route"
-          ],
-          "long_name": "Place Jeanne D'Arc",
-          "short_name": "Place Jeanne D'Arc"
+          ]
         }
       ]
     }
