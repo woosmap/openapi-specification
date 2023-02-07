@@ -75,7 +75,7 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "address",
-                        value: "Place de la Resistance",
+                        value: "Place de la Resistance Paris",
                     },
                     {
                         key: "components",
