@@ -2,7 +2,7 @@
 <!--- [START woosmap_http_schema_localitiesgeocodecollectionresponse] -->
 <h3 class="schema-object" id="LocalitiesGeocodeCollectionResponse">LocalitiesGeocodeCollectionResponse</h3>
 
-Localities Geocode Collection Response. Contains one or more detailled Localities or Addresses in FR or in the UK, with coordinates (default to one result for reverse geocoding)
+Localities Geocode Collection Response. Contains one or more detailed Localities or Addresses in FR or in the UK, with coordinates (default to one result for reverse geocoding)
 
 | Field                                                                                                                      | Required | Type                                                                                             | Description                                                                                                   |
 | :------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |

@@ -22,7 +22,7 @@
 
 -   <h3 class="parameter-name" id="fields">fields</h3>
 
-    Used to limit the returning fields (by default, all fields are return). Available fields are (geometry) (fields should be separated by a ,). By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
+    Used to limit the returning fields when type=address (by default, and for other types localities, all fields are return). Only one field is available: `geometry`. By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
