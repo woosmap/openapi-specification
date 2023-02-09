@@ -24,7 +24,7 @@ const main = async (argv: any) => {
     {
       collection: data,
     },
-    { headers: { "X-API-KEY": process.env.POSTMAN_API_KEY } }
+    { headers: { "X-API-KEY": process.env.POSTMAN_API_KEY! } }
   );
 };
 
