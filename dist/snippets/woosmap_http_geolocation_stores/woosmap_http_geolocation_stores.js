@@ -1,18 +1,11 @@
 // [START woosmap_http_geolocation_stores]
-var axios = require('axios');
-
-var config = {
-  method: 'get',
-  url: 'https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254&limit=1',
-  headers: { }
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
 };
 
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
-
+fetch("https://api.woosmap.com/geolocation/stores?private_key=YOUR_PRIVATE_API_KEY&ip_address=173.79.254.254&limit=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 // [END woosmap_http_geolocation_stores]
