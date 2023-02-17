@@ -49,6 +49,7 @@ const GENERATOR_OPTIONS = {
     python: {indentCount: 4},
     java: {},
     ruby: {},
+    http: {}
 };
 
 const urlSnippet = (request: Request, encode = true): string => {
@@ -82,11 +83,7 @@ const generateSnippet = async (
     options: any
 ): Promise<string | undefined> => {
     if (lang === "http") {
-        if (request.method === "GET") {
-            return urlSnippet(request);
-        } else {
-            return;
-        }
+        return urlSnippet(request);
     }
 
     request = request.clone();
@@ -94,7 +91,6 @@ const generateSnippet = async (
     if (lang === "javascript") {
         if (request.method === "GET") {
             request.removeHeader('Referer', {ignoreCase: false})
-            console.log(request.url.query.toObject())
         } else {
             return;
         }
