@@ -1,20 +1,11 @@
 // [START woosmap_http_asset_feature]
-var axios = require('axios');
-
-var config = {
-  method: 'get',
-  url: 'https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY',
-  headers: { 
-    'Referer': 'http://localhost'
-  }
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
 };
 
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
-
+fetch("https://api.woosmap.com/stores/10031/?key=YOUR_PUBLIC_API_KEY", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 // [END woosmap_http_asset_feature]
