@@ -1,4 +1,4 @@
-// [START woosmap_http_assets_delete_simple_request]
+// [START woosmap_http_assets_delete_by_id_request]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/stores/?private_key=YOUR_PRIVATE_API_KEY"
+  url := "https://api.woosmap.com/stores/?query=idstore:store_123&private_key=YOUR_PRIVATE_API_KEY"
   method := "DELETE"
 
   client := &http.Client {
@@ -34,4 +34,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END woosmap_http_assets_delete_simple_request]
+// [END woosmap_http_assets_delete_by_id_request]

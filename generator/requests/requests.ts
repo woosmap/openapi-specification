@@ -642,12 +642,18 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
-        regionTag: "woosmap_http_assets_delete_simple_request",
+        regionTag: "woosmap_http_assets_delete_by_id_request",
         request: new DeleteRequest({
             url: new Url({
                 protocol: "https",
                 host: "api.woosmap.com",
-                path: "/stores/"
+                path: "/stores/",
+                query: [
+                    {
+                        key: "query",
+                        value: "idstore:store_123",
+                    },
+                ],
             }),
         }),
     },

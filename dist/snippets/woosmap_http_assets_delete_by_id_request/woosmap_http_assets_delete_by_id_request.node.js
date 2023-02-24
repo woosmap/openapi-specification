@@ -1,9 +1,9 @@
-// [START woosmap_http_assets_delete_simple_request]
+// [START woosmap_http_assets_delete_by_id_request]
 var axios = require('axios');
 
 var config = {
   method: 'delete',
-  url: 'https://api.woosmap.com/stores/?private_key=YOUR_PRIVATE_API_KEY',
+  url: 'https://api.woosmap.com/stores/?query=idstore%3Astore_123&private_key=YOUR_PRIVATE_API_KEY',
   headers: { }
 };
 
@@ -15,4 +15,4 @@ axios(config)
   console.log(error);
 });
 
-// [END woosmap_http_assets_delete_simple_request]
+// [END woosmap_http_assets_delete_by_id_request]
