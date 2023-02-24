@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "d58e0a16-402a-43fa-a577-ca94d37e78cd",
+            "id": "0ffb7955-fe8d-4b57-b182-0df9bd2a4987",
             "name": "Store Search API",
             "description": {
                 "content": "Stores Search API lets you query the Assets which are returned as a [GeoJson](https://geojson.org/). Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/). If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is **100**, max is **300**).\n",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "406629ee-a72d-4065-9661-5dd7b550c9c9",
+                    "id": "282b3e33-cade-4f38-87b8-9a128bdac580",
                     "name": "Search for assets",
                     "request": {
                         "name": "Search for assets",
@@ -107,7 +107,7 @@
                     },
                     "response": [
                         {
-                            "id": "1704165f-0f2a-43c4-9a0b-c52f7c91ff14",
+                            "id": "2b3e54a8-eeb1-4599-be45-4b05e9e210a4",
                             "name": "Assets successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -177,7 +177,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1d2cba35-164e-4cac-bab8-f33c929b323e",
+                            "id": "3b07c8cd-8b43-4439-a237-640dc4959666",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -247,7 +247,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "19aafa89-fa03-483e-a27c-e496e58d8d38",
+                            "id": "6724acfb-28e5-42ab-a190-bd93564a3f3a",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -317,7 +317,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "df064ad0-b89f-4bb7-8e6d-ed63f1d797b1",
+                            "id": "7fdb9c80-2670-4dc0-bf5a-d8980ef1e007",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -390,7 +390,7 @@
                     "event": []
                 },
                 {
-                    "id": "32378892-077b-4cdb-b148-4a67ae42d441",
+                    "id": "616f25e9-28ed-42f7-8ddf-6181870f4ebe",
                     "name": "Autocomplete for assets",
                     "request": {
                         "name": "Autocomplete for assets",
@@ -482,7 +482,7 @@
                     },
                     "response": [
                         {
-                            "id": "06315bfb-7183-4018-a1e5-39e4089c9b65",
+                            "id": "9f0c287c-855f-464c-a8fd-e8428e07d41e",
                             "name": "Assets Successfully Replaced",
                             "originalRequest": {
                                 "url": {
@@ -548,7 +548,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "46ec2940-dbc8-46c8-ab80-9a94e6755a28",
+                            "id": "6311f6db-1156-4351-9a2c-02eb8c8fb629",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -614,7 +614,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2463d597-da79-4d27-8f63-84a121a95d43",
+                            "id": "399af6b0-75d6-4307-aed3-b5e94394ae49",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -680,7 +680,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "75b3b1a3-bcd7-4db3-9f1d-df8a3c240311",
+                            "id": "8512cd54-45e0-4089-8979-71b2ed70a4de",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -752,7 +752,7 @@
             "event": []
         },
         {
-            "id": "d7da6041-27b5-459b-ba83-333c85c0b4cd",
+            "id": "c783aefe-900f-46c9-a670-8e48e1a4c4f4",
             "name": "Data Management API",
             "description": {
                 "content": "The Data Management API is a web service that uses an HTTP request to manage, create or edit your Assets. The API only supports JSON. So you have to create a JSON file with your assets’ addresses and other information. You’ll need to convert, or geocode, the addresses in your file to latitude/longitude (`lat` / `long`) coordinates. Those coordinates will be used for most of Woosmap features like [local searches](https://developers.woosmap.com/products/search-api/get-started/), [stores nearby a user location](https://developers.woosmap.com/products/geolocation-api/stores/) or for displaying markers on a map with [Woosmap Javascript API](https://developers.woosmap.com/products/js-api/get-started/).\n",
@@ -760,7 +760,7 @@
             },
             "item": [
                 {
-                    "id": "efa76bad-5b12-4e0e-96c3-cbea8d6cdab5",
+                    "id": "57404013-6118-4e5e-b857-b4feed683c92",
                     "name": "Create your Assets",
                     "request": {
                         "name": "Create your Assets",
@@ -811,7 +811,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"dolore__5_\": -97406012.1024063,\n        \"officia_1d5\": false\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"dolore_8c\": \"culpa veniam\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"cupidatatbe\": \"et labore laboris\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"incididunt_6\": 55963141,\n        \"laborisc\": 9963730\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -821,7 +821,7 @@
                     },
                     "response": [
                         {
-                            "id": "b07fbb97-3094-481a-94c6-f1eae16e9483",
+                            "id": "fca49c10-7a79-4f31-b3a4-d7013c69f737",
                             "name": "Assets successfully created",
                             "originalRequest": {
                                 "url": {
@@ -866,7 +866,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a1b9ec1c-a969-4557-8889-3f9e186728eb",
+                            "id": "7ffd632e-d2de-423d-b5e6-73a0b9d2a961",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -911,7 +911,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "28b4a986-7942-4e76-8d57-ccf2d6adaa55",
+                            "id": "b0d61bf3-994f-4627-9aee-e99cb70e956f",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -956,7 +956,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "44163f99-b660-4ae0-abe2-6481c49c7e9c",
+                            "id": "82753faf-d8bc-4f60-9166-2c694d27d750",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1007,7 +1007,7 @@
                     }
                 },
                 {
-                    "id": "49e7411a-06a3-49b7-84ae-774ca7667fcc",
+                    "id": "471574de-ae0d-4812-be88-49f4b2dcba32",
                     "name": "Update the Assets",
                     "request": {
                         "name": "Update the Assets",
@@ -1058,7 +1058,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"est_0a4\": false,\n        \"minim_67b\": 65758525.40225154\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"deserunt_\": -50820511,\n        \"magna_b62\": true,\n        \"nisi_4\": -94161980\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"velit5\": -46778136.890373155,\n        \"Lorem__7\": \"consectetur cupidatat tempor consequat proident\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"nulla_3\": false\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -1068,7 +1068,7 @@
                     },
                     "response": [
                         {
-                            "id": "95eb2f84-b9e9-44ce-94df-e7111223d000",
+                            "id": "75d348f5-5f9c-4f93-b62a-b7ed0bcec222",
                             "name": "Assets successfully updated",
                             "originalRequest": {
                                 "url": {
@@ -1113,7 +1113,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9d010bfe-8d03-462a-9336-4b3722a337fc",
+                            "id": "1de568d1-77e3-4c60-96cd-db02f82ea6ed",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -1158,7 +1158,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "51aaa01a-02cd-4008-8708-aa93c89c6391",
+                            "id": "3ac03b9a-8690-48cf-b0f7-8c9d5d69bff5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1203,7 +1203,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5549ce39-cf0d-480c-b1df-d8dd79fd4998",
+                            "id": "0538727f-435d-4f74-bc9b-5d11f1094536",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1254,7 +1254,7 @@
                     }
                 },
                 {
-                    "id": "e3db91e5-945e-4af4-80b5-d5e9133654d7",
+                    "id": "b0b1c675-a60e-45fc-a3a2-6373d980e54b",
                     "name": "Delete the Assets",
                     "request": {
                         "name": "Delete the Assets",
@@ -1309,7 +1309,7 @@
                     },
                     "response": [
                         {
-                            "id": "22afaee4-cc9b-4bb4-a8ae-2b05171f8cfd",
+                            "id": "7d9cae22-6994-42a2-b025-3a279873c4c2",
                             "name": "Assets successfully deleted",
                             "originalRequest": {
                                 "url": {
@@ -1350,7 +1350,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0b324311-55a3-425f-b2c2-bdd30fd53367",
+                            "id": "c02b0e33-92f3-4ad4-ba01-be6248e68db1",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1391,7 +1391,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1f4a6c99-25ee-4e8f-b227-3a79cbe07ad8",
+                            "id": "c3f2e052-eb32-43af-83ca-7cb9aee67c41",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1435,7 +1435,7 @@
                     "event": []
                 },
                 {
-                    "id": "2e975fad-ba80-40e8-b0ad-6c8e407d09ed",
+                    "id": "b5fdb1d2-e8eb-4a74-960a-68003a0b235d",
                     "name": "Get Asset from ID",
                     "request": {
                         "name": "Get Asset from ID",
@@ -1492,7 +1492,7 @@
                     },
                     "response": [
                         {
-                            "id": "b3da20ae-33ee-4caa-b4c3-2d39767fdeb2",
+                            "id": "f9a5a121-ceba-43cb-9f84-ff40fde3cddd",
                             "name": "Asset successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -1538,7 +1538,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ed09147c-8f2a-4c70-ac89-bc12f9e492f7",
+                            "id": "19423b50-72e8-4382-99c6-aa237c1193e5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1584,7 +1584,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ca72a5c3-7439-4e8e-b447-9a515fbb7dac",
+                            "id": "88a26ba6-f045-4640-8da9-3c340cae0836",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1630,7 +1630,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "71a4fde8-79af-4423-9ca4-975b097d4879",
+                            "id": "1800eecd-0d95-4c4a-9698-2842463e1824",
                             "name": "Not Found - `storeId` do not exist.",
                             "originalRequest": {
                                 "url": {
@@ -1679,7 +1679,7 @@
                     "event": []
                 },
                 {
-                    "id": "ca80299b-34db-400b-9838-c51427ad149b",
+                    "id": "7f0840a2-92de-4e4d-bfae-4f4a99a1a89e",
                     "name": "Replace all assets",
                     "request": {
                         "name": "Replace all assets",
@@ -1731,7 +1731,7 @@
                         },
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"est_0a4\": false,\n        \"minim_67b\": 65758525.40225154\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"deserunt_\": -50820511,\n        \"magna_b62\": true,\n        \"nisi_4\": -94161980\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+                            "raw": "{\n  \"stores\": [\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"velit5\": -46778136.890373155,\n        \"Lorem__7\": \"consectetur cupidatat tempor consequat proident\"\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"location\": {\n        \"lat\": \"<number>\",\n        \"lng\": \"<number>\"\n      },\n      \"name\": \"<string>\",\n      \"storeId\": \"<string>\",\n      \"address\": {\n        \"lines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"countryCode\": \"<string>\",\n        \"city\": \"<string>\",\n        \"zipcode\": \"<string>\"\n      },\n      \"contact\": {\n        \"website\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"types\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"userProperties\": {\n        \"nulla_3\": false\n      },\n      \"localizedNames\": \"<object>\",\n      \"openingHours\": {\n        \"timezone\": \"<string>\",\n        \"usual\": {\n          \"1\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"3\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"4\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"5\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"6\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"7\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"default\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"special\": {\n          \"2015-02-07\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"2015-02-08\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -1741,7 +1741,7 @@
                     },
                     "response": [
                         {
-                            "id": "f91bbf48-bdbc-455a-9bef-487df955eec3",
+                            "id": "e09b1740-8892-4c06-af1d-4daee2821f1d",
                             "name": "Assets successfully replaced",
                             "originalRequest": {
                                 "url": {
@@ -1787,7 +1787,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "06d41492-c86c-4816-96e4-b8b99bec602a",
+                            "id": "ed71e3da-b403-4e73-b9fa-332d2f209eca",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -1833,7 +1833,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d385dd0b-1c54-4c86-96e5-c69b56ed22fe",
+                            "id": "215ef65b-ec80-49f6-a021-854cc6f897d0",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -1879,7 +1879,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9785c5ba-ff2a-40c2-ab46-2e502f1285cf",
+                            "id": "ac31ee75-267b-490a-92b1-cbae52c5636e",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -1934,7 +1934,7 @@
             "event": []
         },
         {
-            "id": "c443f828-15f6-48d3-902b-22000c113ad8",
+            "id": "27a48714-a853-4667-9dee-abdd0339acee",
             "name": "Geolocation API",
             "description": {
                 "content": "Geolocation API returns a location (or nearby stores) and accuracy radius based on an IP address. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -1942,7 +1942,7 @@
             },
             "item": [
                 {
-                    "id": "f126e772-7d0b-4578-8116-f836002949ef",
+                    "id": "f176d361-955e-4a28-bee0-0a963bf974e4",
                     "name": "Geolocation from an IP address",
                     "request": {
                         "name": "Geolocation from an IP address",
@@ -2004,7 +2004,7 @@
                     },
                     "response": [
                         {
-                            "id": "1725ab5e-6514-4b38-941b-ebf6ac631a72",
+                            "id": "73c2c172-145c-4951-be14-9733f8c2357c",
                             "name": "Geolocation successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2050,7 +2050,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "dfc76f12-6552-401a-b249-6f8cd733ec82",
+                            "id": "32a8c6a9-73e3-46df-a347-beba212c6ddb",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2096,7 +2096,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0bf77aef-5ab1-42f2-8971-4193df203c81",
+                            "id": "4c4db6c6-23ba-4911-8e4c-5ca224cf712d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2142,7 +2142,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "996621c5-1a62-4d4c-bbbb-7ce87588b01c",
+                            "id": "56876915-024e-4d9c-b12f-2b38c4987d13",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2191,7 +2191,7 @@
                     "event": []
                 },
                 {
-                    "id": "a69929de-12d2-4c1d-b4ef-889bde820322",
+                    "id": "5b4b7bb6-4e12-45e1-ae1d-146566a41fe3",
                     "name": "Assets nearby a Geolocation",
                     "request": {
                         "name": "Assets nearby a Geolocation",
@@ -2259,7 +2259,7 @@
                     },
                     "response": [
                         {
-                            "id": "a703d6d8-36ee-4415-8f3b-0f38d11509f8",
+                            "id": "804aa705-415e-4211-8b2f-12fb42796acb",
                             "name": "Geolocation and Stores successufully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2309,7 +2309,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7986d804-e484-48d9-9c88-e889a65012e4",
+                            "id": "c0648dd7-8854-4658-9fa8-ea17f3a87b11",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2359,7 +2359,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b9ddb08e-529a-45e4-821e-21ed492a7d62",
+                            "id": "1d2ff95f-4dad-475b-ad43-ca84bb632fbc",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2409,7 +2409,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d506f833-dfc5-473d-a28d-31bb2f2ca811",
+                            "id": "11997b61-a7bc-4207-9846-6e78aa38b9b3",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2465,7 +2465,7 @@
             "event": []
         },
         {
-            "id": "1eec390f-0a86-47bf-b745-096730a4c498",
+            "id": "7e3859d9-cbb3-4003-9856-e7119d72fbaa",
             "name": "Localities API",
             "description": {
                 "content": "Woosmap Localities API is a web service that returns a great amount of geographical places in response to an HTTP request. Among others are city names, postal codes, suburbs, addresses or airports. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -2473,7 +2473,7 @@
             },
             "item": [
                 {
-                    "id": "851629d1-9aed-4c45-afcc-675bd6741ad0",
+                    "id": "f1e4111d-aaf1-49d2-95f1-bbdfa04e8e77",
                     "name": "Autocomplete for Localities",
                     "request": {
                         "name": "Autocomplete for Localities",
@@ -2577,7 +2577,7 @@
                     },
                     "response": [
                         {
-                            "id": "cdc5a94b-e703-4970-81b4-a5f658618260",
+                            "id": "bb4dea8b-ba93-4a4a-afca-9ac6f39656a4",
                             "name": "Autocompletion Localities successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -2651,7 +2651,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b1723086-95d9-4af8-b85f-a7f5f6d3370a",
+                            "id": "05d93512-4b10-4d6b-a8f8-ccee56c81d51",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -2725,7 +2725,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "37e515e1-baec-4e9c-8f8e-10534ac180eb",
+                            "id": "ff4933b5-5181-4349-a8ed-2e27ac340079",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -2799,7 +2799,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e6e9fc3b-16d0-4ad8-8161-23c1526ea2f2",
+                            "id": "6fd106a7-564a-4e7c-ae25-64a357165157",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -2876,7 +2876,7 @@
                     "event": []
                 },
                 {
-                    "id": "55c73e56-e8e9-450b-b55e-5fd04cbfe078",
+                    "id": "8c5fd5a7-1826-4bb5-b354-14f1f36f8632",
                     "name": "Details of a Locality",
                     "request": {
                         "name": "Details of a Locality",
@@ -2962,7 +2962,7 @@
                     },
                     "response": [
                         {
-                            "id": "213c9793-7f17-4027-b4f0-7cee44cb5232",
+                            "id": "efdb7edf-342d-4c5f-ac15-128845c77bf8",
                             "name": "Details Localities successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -3024,7 +3024,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "79fcd8f9-1e1b-4c04-b5ad-d2d0a8ce4561",
+                            "id": "d6d2f858-4bb8-4d21-8b64-84e7988b38f5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3086,7 +3086,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "856a6076-b37c-43d8-b9b7-ff5969864a67",
+                            "id": "8d86cac4-79b0-4f05-8dd3-db89c3cadb5e",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3148,7 +3148,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fe24df6a-17b2-4f0c-9dd0-3f98804a3829",
+                            "id": "58de9dc6-c251-47ca-977a-1e0b05af9ea1",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3213,7 +3213,7 @@
                     "event": []
                 },
                 {
-                    "id": "3c1941c9-68f2-422b-9dae-cee6a71989c1",
+                    "id": "0ed77f45-70b3-4f82-822c-b447e554bd4e",
                     "name": "Geocode a locality or Reverse Geocode a latlng",
                     "request": {
                         "name": "Geocode a locality or Reverse Geocode a latlng",
@@ -3305,7 +3305,7 @@
                     },
                     "response": [
                         {
-                            "id": "766fe0df-7831-454f-8960-05d711cfd703",
+                            "id": "6c52c5e5-33b3-46cc-865a-1dc1697a7f0e",
                             "name": "Request Localities Geocode successful",
                             "originalRequest": {
                                 "url": {
@@ -3371,7 +3371,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4f69569d-9812-4a4e-99e5-f7f74af0cd28",
+                            "id": "f899e5c3-82b0-487a-ae96-fee2b12baaff",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3437,7 +3437,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9aacb709-54b9-4648-8fef-bbccb3eed807",
+                            "id": "e0bea40d-42d0-4bc9-acec-5ff10b802b1d",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3503,7 +3503,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "35ce6318-e6d9-4d21-a37c-8dcdbd556e1f",
+                            "id": "8857ca42-210c-4402-929d-996ec1f49318",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3575,7 +3575,7 @@
             "event": []
         },
         {
-            "id": "67481ff8-2c7f-4e16-83f4-139b505fb7c8",
+            "id": "a0608457-51ad-40ac-afc9-676cb9ded3b4",
             "name": "Address API",
             "description": {
                 "content": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -3583,7 +3583,7 @@
             },
             "item": [
                 {
-                    "id": "29e0caf8-6cb5-4366-b288-35cf55ba1d11",
+                    "id": "1d02ad1c-d986-461a-bfaf-037c1efe2b53",
                     "name": "Autocomplete for Addresses",
                     "request": {
                         "name": "Autocomplete for Addresses",
@@ -3658,7 +3658,7 @@
                     },
                     "response": [
                         {
-                            "id": "35e7ce74-4441-4d8a-81b0-318719e07aa3",
+                            "id": "09a9774b-ba89-4dd5-a3a3-03c0aaf1f981",
                             "name": "Autocompletion Address successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -3713,7 +3713,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "50a44cc2-7a45-4c28-9f07-7755f63f697e",
+                            "id": "fcf56e69-dd03-482b-850b-3d23bf51deb6",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -3768,7 +3768,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1c696c37-8a44-4039-9bec-9a7b5f11aa31",
+                            "id": "f2fcef57-935f-4dac-985b-09359792776f",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -3823,7 +3823,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8b8bc159-da42-45fc-814d-807bafd84056",
+                            "id": "cbbaaf48-b51d-4b6d-a19c-7bd30b34fb60",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -3881,7 +3881,7 @@
                     "event": []
                 },
                 {
-                    "id": "b019fcf1-91dc-4c51-a6c9-4ecb526dca75",
+                    "id": "c0f44290-c3fc-48a0-aca6-a2c00cae36ed",
                     "name": "Details of an Address",
                     "request": {
                         "name": "Details of an Address",
@@ -3950,7 +3950,7 @@
                     },
                     "response": [
                         {
-                            "id": "1782cdd2-02c9-4769-a542-e5e126dc4ab8",
+                            "id": "ff712368-5fbf-444a-8208-2d1ed4421343",
                             "name": "Details Address successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4001,7 +4001,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "537d8d23-4b0d-4772-adf8-57ca6adca033",
+                            "id": "41c07f99-944b-4ad4-afea-de096dd8703b",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4052,7 +4052,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "14acb7d6-1fd0-4002-b594-55f6b308c084",
+                            "id": "5ba53237-7041-4925-b55c-a2e43ee202d3",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4103,7 +4103,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2d9b3103-fc14-492a-9120-6dd737a11b44",
+                            "id": "8069982c-32e5-4cc0-bdb1-76de6eeeeb96",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4157,7 +4157,7 @@
                     "event": []
                 },
                 {
-                    "id": "d3ff206d-6e44-40f3-87a1-b52a36e5ab94",
+                    "id": "ab4251fa-f648-420b-a0b3-10028c4f79ed",
                     "name": "Geocode an Address or Reverse Geocode a latlng",
                     "request": {
                         "name": "Geocode an Address or Reverse Geocode a latlng",
@@ -4250,7 +4250,7 @@
                     },
                     "response": [
                         {
-                            "id": "82d6024d-ad9f-4a4b-b140-1a3f7083bfcd",
+                            "id": "328585dd-6045-435c-9b68-ebce667d27f3",
                             "name": "Request Address Geocode successful",
                             "originalRequest": {
                                 "url": {
@@ -4317,7 +4317,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e29809dd-6796-4f45-a0d2-9e0057d61639",
+                            "id": "2333071f-a538-47d9-9bc1-52a242c715ab",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4384,7 +4384,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7e9e7b22-f7f0-41bf-8ccd-87c43cf33af6",
+                            "id": "338dbe79-6713-4fdc-8d3c-94a8ecfa36dd",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4451,7 +4451,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9b9a245a-adcb-4c5c-a125-72669a99d15c",
+                            "id": "ade929b3-f4d0-4f8f-895e-d655dde02c0f",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4524,7 +4524,7 @@
             "event": []
         },
         {
-            "id": "98cd08ef-4a3f-4ee9-969d-6dba45f60c55",
+            "id": "e3c88d7a-9df4-48b6-b812-fe7114d11076",
             "name": "Distance API",
             "description": {
                 "content": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -4532,7 +4532,7 @@
             },
             "item": [
                 {
-                    "id": "f3251564-ab4c-45cc-a647-a91d6b55e00c",
+                    "id": "5225cf87-bba2-4ae1-a265-180d584e2b4b",
                     "name": "Distance Matrix",
                     "request": {
                         "name": "Distance Matrix",
@@ -4625,7 +4625,7 @@
                     },
                     "response": [
                         {
-                            "id": "d82be743-2904-4796-87c9-a42f553e3e70",
+                            "id": "2305c9c5-d5fd-402e-86c1-0ae5e0c85508",
                             "name": "Distance Matrix successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -4692,7 +4692,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "68cd7755-ce1b-45a1-8c15-4a5b525e2ccb",
+                            "id": "15390758-c00a-46c3-bd5c-bbf22364fdbe",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -4759,7 +4759,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8a2920f2-d168-42bd-8d81-178f307c2e44",
+                            "id": "0be4381d-847c-45e9-b0e5-2f0120c459f7",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -4826,7 +4826,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1e020458-9507-4c7c-8652-d07cfda76ed8",
+                            "id": "38d71865-99eb-4a97-a481-88bc5b04f5b7",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -4896,7 +4896,7 @@
                     "event": []
                 },
                 {
-                    "id": "959853eb-0300-4616-a3ec-b6f5a2754df5",
+                    "id": "a314e42b-3243-4b6e-99d4-601b9dfa5f40",
                     "name": "Distance Matrix using POST",
                     "request": {
                         "name": "Distance Matrix using POST",
@@ -4959,7 +4959,7 @@
                     },
                     "response": [
                         {
-                            "id": "e584809c-dffa-4777-8e04-f85a7203fc5c",
+                            "id": "6f638957-d9b4-4710-8b3d-7c21efee375d",
                             "name": "Distance Matrix with POST successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5006,7 +5006,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1d750a99-7925-40ec-9db3-39fbae60fb13",
+                            "id": "7cffae57-4496-4be7-9e3e-e2116f28b450",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -5053,7 +5053,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2c041ce3-b20b-4e8c-a164-a6a8d2cc4975",
+                            "id": "b2fe63d3-9b80-4f10-b97a-0773ec8d4ec1",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5100,7 +5100,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b5ea7420-f5f5-4319-83dc-f6356f94bd29",
+                            "id": "7f1773b9-7cdd-4a34-8e9a-7f2341af0307",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5147,7 +5147,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b7d636c2-3d8b-4289-90bb-bd66eda1ada9",
+                            "id": "702156a8-58ec-4aff-8512-7f93758cdb74",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5200,7 +5200,7 @@
                     }
                 },
                 {
-                    "id": "4111cfcd-ac86-4534-8daf-fe88a90bbbf1",
+                    "id": "ea5030cb-2be6-41af-ba97-8210ac53d28d",
                     "name": "Route",
                     "request": {
                         "name": "Route",
@@ -5311,7 +5311,7 @@
                     },
                     "response": [
                         {
-                            "id": "c725c7ac-9aa3-4f4f-a135-8176d4f15994",
+                            "id": "6c77cc81-08f7-4d08-a636-434b8a2ff8b6",
                             "name": "Route successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5390,7 +5390,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f39957aa-1716-466c-8fee-5b0601bccf8a",
+                            "id": "2ebb5df4-f49e-4762-ad34-d7c8584dc01d",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5469,7 +5469,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "309ba954-7553-4acd-bb04-0cb00a8e45bb",
+                            "id": "6eff7a7f-89ea-45a8-b2e7-c89946365180",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5548,7 +5548,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a8afc8c4-cf00-4deb-946f-340b9ba30197",
+                            "id": "db48bbbe-b9b7-4bb7-872f-d803dec8b5b7",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5630,7 +5630,7 @@
                     "event": []
                 },
                 {
-                    "id": "2787576a-e611-4447-9677-aba7ff4baeff",
+                    "id": "f9c062a0-ecf1-44ff-8c19-77572f49e953",
                     "name": "Isochrone (Early Access)",
                     "request": {
                         "name": "Isochrone (Early Access)",
@@ -5717,7 +5717,7 @@
                     },
                     "response": [
                         {
-                            "id": "cb3834de-80da-46d4-b9a5-0a1037c25939",
+                            "id": "007ff9f2-6bcf-4c18-9a87-13f79af5d02e",
                             "name": "Isochrone successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -5780,7 +5780,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "092c3326-5052-4aef-abd7-95dff84e83e6",
+                            "id": "8dd4a4ac-ead3-414b-9ca1-8d21c78dbebd",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -5843,7 +5843,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9d039119-0ce8-4d7a-8ab2-14488c0a614f",
+                            "id": "9ac0d3c7-f91e-4642-b035-e2e8bc9a2729",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -5906,7 +5906,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c7569ee8-7cb6-4726-bd05-5642737280fe",
+                            "id": "51baf94b-de24-41d8-85a1-6950746b177d",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -5975,7 +5975,7 @@
             "event": []
         },
         {
-            "id": "2e41d622-8bd5-4fc4-b7cf-ae67f7845aea",
+            "id": "473e584c-57e7-466d-a78f-9128de3faaa6",
             "name": "Traffic API",
             "description": {
                 "content": "Woosmap Traffic API (Early Access) is a service that provides travel distances and durations with traffic, on a Worldwide scale. Compared to the Woosmap Distance API, this API uses traffic information when returning duration times.  Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -5983,7 +5983,7 @@
             },
             "item": [
                 {
-                    "id": "d493b183-88ee-49f4-854b-bbaa61a5e7d1",
+                    "id": "d340aaaf-66e8-456a-8b18-e0f28ed29f94",
                     "name": "Traffic Distance Matrix",
                     "request": {
                         "name": "Traffic Distance Matrix",
@@ -6070,7 +6070,7 @@
                     },
                     "response": [
                         {
-                            "id": "6d66d5cd-7868-45f4-87ca-1950021ee2af",
+                            "id": "097bd46a-f499-45e5-beec-76f370786547",
                             "name": "Traffic Distance Matrix successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6133,7 +6133,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "05e5698e-fe34-41ee-b05b-f5bafcd5dbbc",
+                            "id": "aebc4200-0c15-4c90-9dad-6a5f33b17687",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6196,7 +6196,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "519eccaf-5a19-42d0-9bbf-f122dba06c8b",
+                            "id": "731b8be2-2eaa-4a83-a100-2a9f89248694",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6259,7 +6259,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b54950f1-7660-4049-85c9-96457282772a",
+                            "id": "1736bf45-468c-4daf-a808-165e02444ec9",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -6325,7 +6325,7 @@
                     "event": []
                 },
                 {
-                    "id": "a953bd24-26a9-48bc-abe5-8a0596c51dcd",
+                    "id": "9d842cf5-58bb-48d1-b1ee-4828ce53462e",
                     "name": "Traffic Distance Matrix using POST",
                     "request": {
                         "name": "Traffic Distance Matrix using POST",
@@ -6388,7 +6388,7 @@
                     },
                     "response": [
                         {
-                            "id": "d9093062-7f5b-4e75-9cf1-7a70db8c4cda",
+                            "id": "7d045ea9-ddf7-47f4-89fc-719665bfc1ac",
                             "name": "Traffic Distance Matrix with POST successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6435,7 +6435,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f605768a-bc53-4014-bac5-6a55e1fd8e57",
+                            "id": "7746ff5e-1d69-45fc-9d97-4e5aca1d3dcf",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -6482,7 +6482,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "477437d4-8b13-4fa5-841f-bfc70cd52aac",
+                            "id": "967fd9e1-fd7f-4c9c-a29b-69a33394e18a",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6529,7 +6529,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "66f290ed-9950-4680-9d3f-9f8a02d0d30d",
+                            "id": "9d92ac65-0088-4c64-9fb5-664b9a2add80",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6576,7 +6576,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e62cd0d3-e50f-4db6-847a-dd606635e2f7",
+                            "id": "947280be-c98b-46e2-830a-3b9cb53fd24c",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -6629,7 +6629,7 @@
                     }
                 },
                 {
-                    "id": "951dbd60-baf8-401c-a3b0-1f6f41ceb025",
+                    "id": "566d925c-9819-40db-8181-9dc700f5e665",
                     "name": "Traffic Route",
                     "request": {
                         "name": "Traffic Route",
@@ -6740,7 +6740,7 @@
                     },
                     "response": [
                         {
-                            "id": "826b28fd-058f-47b6-a42b-3aab08e74af6",
+                            "id": "6569a1db-a0f2-4e3c-bda1-af9bca90db7e",
                             "name": "Traffic Route successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -6819,7 +6819,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4d777919-c11a-44a1-977c-42862a908de6",
+                            "id": "e914e9a9-5827-4b7a-9c85-3af8d856dba4",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -6898,7 +6898,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d464b704-add5-4075-b606-d7d0f16155fa",
+                            "id": "e9e782c6-194f-48e1-97cf-6589f7b63098",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -6977,7 +6977,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0d208f97-ffde-4223-b4b5-16efd77acee1",
+                            "id": "209bdda4-3c1e-427b-b4ad-edb1ef09bf81",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7062,7 +7062,7 @@
             "event": []
         },
         {
-            "id": "cb7bbc58-a6de-4b32-9e0a-6f3ba6c549ac",
+            "id": "4a0a337c-1dab-4450-a2d7-4e21f0d665bc",
             "name": "Merchants API",
             "description": {
                 "content": "Woosmap Merchant API is a REST API aiming at cleaning “dirty” merchant names on transactions provided by a payment provider. It can be used to enrich end users’ transactions list by replacing hardly understandable labels with a commonly known merchant name along with their logo. Additionally, the API can provide a Google Maps Place ID. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `private_key` parameter for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
@@ -7070,7 +7070,7 @@
             },
             "item": [
                 {
-                    "id": "41ef405a-900f-4333-8668-a7e54265d84d",
+                    "id": "80edba79-478f-4473-baa6-d713204d4125",
                     "name": "Get Merchant Clean Name",
                     "request": {
                         "name": "Get Merchant Clean Name",
@@ -7126,7 +7126,7 @@
                     },
                     "response": [
                         {
-                            "id": "8cb405b5-d43e-4535-9cb6-526d49bdb222",
+                            "id": "34a09b7b-dd21-48bb-9921-9cd99aaf43a2",
                             "name": "Request Merchants successful",
                             "originalRequest": {
                                 "url": {
@@ -7168,7 +7168,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "83c84016-bb18-4bcf-8502-804f2a84fd2e",
+                            "id": "f3b5de81-4052-4bab-b661-cbaf24d940c0",
                             "name": "dirty_name was not provided",
                             "originalRequest": {
                                 "url": {
@@ -7210,7 +7210,7 @@
                             "_postman_previewlanguage": "text"
                         },
                         {
-                            "id": "8a6ed4bf-2da2-4f61-b101-c32faf1b3ca2",
+                            "id": "966b5070-11f0-4f0e-a3de-9b0a220a8478",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -7252,7 +7252,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ad1688bb-51a1-4fd7-a046-6dbf931495bf",
+                            "id": "7c1a99fe-69df-4531-aaef-0df986e57723",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -7294,7 +7294,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8ecb4af6-80b0-4a08-9736-0bb8b934adb5",
+                            "id": "0551bd01-302f-46c7-8d27-c79dee9bce2d",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7339,7 +7339,7 @@
                     "event": []
                 },
                 {
-                    "id": "75be6e01-b65f-42f5-a644-58dfe2397527",
+                    "id": "397d043a-0963-415e-876e-ef26f35ba30f",
                     "name": "Get Merchants Clean Names using POST",
                     "request": {
                         "name": "Get Merchants Clean Names using POST",
@@ -7401,7 +7401,7 @@
                     },
                     "response": [
                         {
-                            "id": "e631e379-f41a-479f-bda6-8ce67c52cfc1",
+                            "id": "9eb44355-c36a-4e92-bfee-99f64a216dda",
                             "name": "Merchants Brand successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -7447,7 +7447,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "74fe88a9-ab99-4b79-b36c-008abf89137d",
+                            "id": "dd3d36ea-f718-43c9-81f0-2a6d8912ee1c",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -7493,7 +7493,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c2c6a765-9512-4731-92b2-3490db89a6df",
+                            "id": "094f908d-95a6-4735-a6bf-f61b556016f8",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -7539,7 +7539,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9dfddf1b-5b7a-4e68-b4ac-7ff5dce7acdf",
+                            "id": "98fdbfba-c172-49a4-91a4-3742f5aad881",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -7585,7 +7585,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e07756f8-e9a2-4ec3-9f41-2abc719a0a21",
+                            "id": "f87f6139-49b2-4929-b32f-4f1d24c942ac",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7637,7 +7637,7 @@
                     }
                 },
                 {
-                    "id": "26d7b36b-be66-47e4-800a-4a8e9f484fa9",
+                    "id": "76b17b0b-b3c6-4e0e-a412-ad103b65d348",
                     "name": "Get Merchants Place",
                     "request": {
                         "name": "Get Merchants Place",
@@ -7699,7 +7699,7 @@
                     },
                     "response": [
                         {
-                            "id": "b78ac4e1-bd3b-4b53-bfaa-fbc9cbf08049",
+                            "id": "9da4d023-2a1c-4ad4-abbe-5f0fcbeb1800",
                             "name": "Merchants Place successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -7745,7 +7745,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5f97232b-319a-4bf9-9d2b-929d31e3123f",
+                            "id": "643ee9e0-7aea-4401-a5d1-e23e8b14561b",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -7791,7 +7791,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "26f14d19-72f2-422d-955d-c41b3319e941",
+                            "id": "43227cb6-c386-4dfd-b49c-28e701d6371a",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -7837,7 +7837,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1f726f0a-4603-455c-98e4-4584f0c989de",
+                            "id": "89a453ef-b0dd-4348-a472-bb88eb328ce0",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -7883,7 +7883,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7198c46d-0758-4431-8854-491b5cc77674",
+                            "id": "bcf606af-0794-4468-a572-f9dc35ea2ca5",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -7938,7 +7938,7 @@
             "event": []
         },
         {
-            "id": "b7855c96-4b7f-4294-aa9b-b3180cca05cc",
+            "id": "d10cfa2f-d2f9-462f-9b65-405f14c7f607",
             "name": "Zones API",
             "description": {
                 "content": "Woosmap Zones API is a web service that uses an HTTP request to manage, create or edit your Zones (polygons) attached to your assets.\nThe general principle is that sometimes searching assets using crowfly distance is not good enough. For example to search the restaurant that will do the delivery for a specified address, each restaurant has a delivery zone and for topological or business reasons it’s not always the nearest restaurant in charge of your delivery. Woosmap Zones API allows you to associate a delivery zone to each of the restaurants.\n",
@@ -7946,7 +7946,7 @@
             },
             "item": [
                 {
-                    "id": "958c8784-4850-4ce4-bb7f-89b24903b886",
+                    "id": "515ae7b0-28f0-4d82-b160-974a21561931",
                     "name": "List your Zones",
                     "request": {
                         "name": "List your Zones",
@@ -8007,7 +8007,7 @@
                     },
                     "response": [
                         {
-                            "id": "c689c0da-6b14-4c30-b578-192e1980012d",
+                            "id": "7e2b25f1-4482-4a76-94f3-0283624d56bc",
                             "name": "Zones successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -8052,7 +8052,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "237d0908-efbc-472b-8b67-58fb7c90715a",
+                            "id": "05746938-8f45-4b88-8ae9-a9f10a8168b8",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8097,7 +8097,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c02605a9-a0d6-44db-b003-38f55ebda8ca",
+                            "id": "cc04f434-d9b5-4b5f-9b2c-b98dc372fc50",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8142,7 +8142,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ce3d99bb-f4f8-4b14-a96e-b63216dae8b1",
+                            "id": "7a126ea8-e8c7-4716-a084-17d257e550f2",
                             "name": "Too Many Requests. The rate limit for this endpoint has been exceeded.",
                             "originalRequest": {
                                 "url": {
@@ -8190,7 +8190,7 @@
                     "event": []
                 },
                 {
-                    "id": "7109eb4e-a644-44c0-80f7-1867cbcd63cb",
+                    "id": "d4906e99-57de-455d-ab8f-28b5342d8f6c",
                     "name": "Create your Zones",
                     "request": {
                         "name": "Create your Zones",
@@ -8251,7 +8251,7 @@
                     },
                     "response": [
                         {
-                            "id": "d4828c3e-fc27-49e3-bc63-1229a5fbae84",
+                            "id": "74964acb-e04d-45ce-9537-28180302dd9b",
                             "name": "Zones successfully created",
                             "originalRequest": {
                                 "url": {
@@ -8296,7 +8296,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6ed357b5-d32f-4d6b-9ac6-a03a30363872",
+                            "id": "8f5a3f9b-6411-48ba-88c2-facf2bd39d3b",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -8341,7 +8341,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c9e4fc4a-674d-48cb-bc23-0593e4e84651",
+                            "id": "22ae46a5-8dbd-41c4-ab0a-3b2dcf60b2c5",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8386,7 +8386,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ba1d19ba-81d1-4995-965c-1d49b2292c05",
+                            "id": "eda46cc2-3f28-461e-8bb1-75853ce45966",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8437,7 +8437,7 @@
                     }
                 },
                 {
-                    "id": "843d878d-5d76-47fd-a351-5350839fb0be",
+                    "id": "0918d73d-3edc-4e7c-bf23-92e8c91a94d2",
                     "name": "Update the Zones",
                     "request": {
                         "name": "Update the Zones",
@@ -8498,7 +8498,7 @@
                     },
                     "response": [
                         {
-                            "id": "0f1d43ca-167c-4632-82f6-41cb033b3f24",
+                            "id": "5dd9944f-fac7-4099-8e32-46f8797e886b",
                             "name": "Zones successfully updated",
                             "originalRequest": {
                                 "url": {
@@ -8543,7 +8543,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7a021139-4d32-423c-805f-65b59c6eac40",
+                            "id": "607c6649-2439-4489-88bd-882f28e442e8",
                             "name": "Invalid. The data is not a valid JSON.",
                             "originalRequest": {
                                 "url": {
@@ -8588,7 +8588,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3180fb88-0e40-4f27-9091-95f47f29eee3",
+                            "id": "d6a18840-689e-4f3f-85d4-a37f63a24c5e",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8633,7 +8633,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "280a9622-a38c-4f78-9623-cbf2572d5e32",
+                            "id": "fdcf33f7-f0be-4c42-9af1-af786a44a9f5",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8684,7 +8684,7 @@
                     }
                 },
                 {
-                    "id": "8da217f1-3117-45fa-9c6d-08d12bc65749",
+                    "id": "880c4a65-6a2e-44d7-9133-0e6d53846d14",
                     "name": "Delete the Zones",
                     "request": {
                         "name": "Delete the Zones",
@@ -8739,7 +8739,7 @@
                     },
                     "response": [
                         {
-                            "id": "7de00dad-7134-493e-ab7f-260ab7a112d3",
+                            "id": "2ee634b3-21df-43e9-bfdb-fa980069882a",
                             "name": "Zones successfully deleted",
                             "originalRequest": {
                                 "url": {
@@ -8780,7 +8780,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c450d031-e2f9-4484-a032-72fd196af6ea",
+                            "id": "e7f65f49-4a98-4671-960c-6a9221902ec8",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -8821,7 +8821,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "93186423-733b-47b4-b693-9bf04f6f4f63",
+                            "id": "e0fc19cc-3902-4b38-a880-3f2c2439850a",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -8865,7 +8865,7 @@
                     "event": []
                 },
                 {
-                    "id": "60bcc1fb-3145-40c7-bee1-fd03708c77fa",
+                    "id": "2c2a55b5-b0d4-4f3c-a455-b0268154328e",
                     "name": "Get Zone from ID",
                     "request": {
                         "name": "Get Zone from ID",
@@ -8922,7 +8922,7 @@
                     },
                     "response": [
                         {
-                            "id": "b72c02bd-5213-4ce5-918b-5035df8ef5d2",
+                            "id": "bd726698-88a4-496c-93c9-c5991989fcef",
                             "name": "Zone successfully retrieved",
                             "originalRequest": {
                                 "url": {
@@ -8968,7 +8968,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ecdd6979-c3a7-4aa5-aada-74698626d67d",
+                            "id": "c7205182-a312-49d5-8b01-85136a8f5c3b",
                             "name": "Unauthorized. Incorrect authentication credentials.",
                             "originalRequest": {
                                 "url": {
@@ -9014,7 +9014,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "63b8581a-7faf-4bc8-be0a-3a495f1535ca",
+                            "id": "73ba94d9-71b0-4b79-8ee2-c91e442c7070",
                             "name": "Forbidden. This Woosmap API is not enabled for this project.",
                             "originalRequest": {
                                 "url": {
@@ -9060,7 +9060,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "2d59c6bd-1425-4f32-a837-606e2706e549",
+                            "id": "cf6435ad-f5f1-41b3-8f24-12b532ae3575",
                             "name": "Not Found - `zone_id` do not exist.",
                             "originalRequest": {
                                 "url": {
@@ -9138,7 +9138,7 @@
         ]
     },
     "info": {
-        "_postman_id": "2eead263-df06-49d4-9aad-4dfd2f495521",
+        "_postman_id": "d6582d1f-136d-4abb-abc1-a90993ab1079",
         "name": "Woosmap Platform API Reference",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

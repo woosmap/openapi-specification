@@ -614,4 +614,42 @@ export const REQUESTS: SnippetRequest[] = [
             }),
         }),
     },
+    {
+        regionTag: "woosmap_http_assets_create_simple_request",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/stores",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_assets_collection_simple_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_assets_replace_simple_request",
+        request: new PostJsonRequest({
+            url: "https://api.woosmap.com/stores",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_assets_collection_simple_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_assets_update_simple_request",
+        request: new PutJsonRequest({
+            url: "https://api.woosmap.com/stores",
+            json: parseRequestBody(
+                "../../specification/requests/woosmap_http_assets_update_simple_request.yml"
+            ),
+        }),
+    },
+    {
+        regionTag: "woosmap_http_assets_delete_simple_request",
+        request: new DeleteRequest({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/stores/"
+            }),
+        }),
+    },
+
 ];
