@@ -3,7 +3,7 @@ require "uri"
 require "json"
 require "net/http"
 
-url = URI("https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY")
+url = URI("https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true
@@ -13,7 +13,7 @@ request["content-type"] = "application/json"
 request.body = JSON.dump({
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My first cool store",
       "location": {
         "lat": 43.61,

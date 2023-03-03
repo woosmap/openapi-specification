@@ -48,8 +48,8 @@ Address Geocode Collection Response. Contains one or more Addresses with coordin
           ]
         },
         {
-          "long_name": "7e Arrondissement",
-          "short_name": "7e Arrondissement",
+          "long_name": "7th Arrondissement",
+          "short_name": "7th Arrondissement",
           "types": [
             "district"
           ]

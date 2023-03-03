@@ -3,7 +3,7 @@ var axios = require('axios');
 var data = JSON.stringify({
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My first cool store",
       "location": {
         "lat": 43.61,
@@ -15,7 +15,7 @@ var data = JSON.stringify({
 
 var config = {
   method: 'post',
-  url: 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY',
+  url: 'https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY',
   headers: { 
     'content-type': 'application/json'
   },
