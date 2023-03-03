@@ -43,6 +43,19 @@ Localities Collection Response containing Localities
       }
     },
     {
+      "public_id": "52MnrbHVWH21CLWH8VY/YWKhqeM=",
+      "type": "locality",
+      "description": "London Apprentice, Cornwall, United Kingdom",
+      "matched_substrings": {
+        "description": [
+          {
+            "offset": 0,
+            "length": 4
+          }
+        ]
+      }
+    },
+    {
       "public_id": "VOBREUi72/VtnsYgE6aI8HNYcxg=",
       "type": "locality",
       "description": "Londesborough, East Riding of Yorkshire, United Kingdom",
@@ -59,11 +72,6 @@ Localities Collection Response containing Localities
       "public_id": "Js0mQmmeI46X3hiqRj/R4pvb8mQ=",
       "type": "locality",
       "description": "Long Stratton, Norfolk, United Kingdom"
-    },
-    {
-      "public_id": "BQOzBfxua+W9eLymBnVKRkqK2Zc=",
-      "type": "locality",
-      "description": "Long Sutton, Lincolnshire, United Kingdom"
     }
   ]
 }</pre>

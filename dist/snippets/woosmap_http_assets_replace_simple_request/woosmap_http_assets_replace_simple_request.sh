@@ -1,10 +1,10 @@
 # [START woosmap_http_assets_replace_simple_request]
-curl -L -X POST 'https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY' \
+curl -L -X POST 'https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY' \
 -H 'content-type: application/json' \
 --data-raw '{
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My first cool store",
       "location": {
         "lat": 43.61,

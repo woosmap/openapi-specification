@@ -3,7 +3,7 @@ var axios = require('axios');
 var data = JSON.stringify({
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My first cool store",
       "location": {
         "lat": 43.61,

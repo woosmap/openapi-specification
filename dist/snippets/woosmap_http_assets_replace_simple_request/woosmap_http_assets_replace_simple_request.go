@@ -10,13 +10,13 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY"
+  url := "https://api.woosmap.com/stores/replace?private_key=YOUR_PRIVATE_API_KEY"
   method := "POST"
 
   payload := strings.NewReader(`{
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My first cool store",
       "location": {
         "lat": 43.61,
