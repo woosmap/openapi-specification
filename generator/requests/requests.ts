@@ -626,7 +626,7 @@ export const REQUESTS: SnippetRequest[] = [
     {
         regionTag: "woosmap_http_assets_replace_simple_request",
         request: new PostJsonRequest({
-            url: "https://api.woosmap.com/stores",
+            url: "https://api.woosmap.com/stores/replace",
             json: parseRequestBody(
                 "../../specification/requests/woosmap_http_assets_collection_simple_request.yml"
             ),
