@@ -5,7 +5,8 @@ var data = JSON.stringify({
   "destinations": "48.83534,2.368308",
   "units": "imperial",
   "elements": "duration_distance",
-  "method": "distance"
+  "method": "distance",
+  "departure_time": "now"
 });
 
 var config = {

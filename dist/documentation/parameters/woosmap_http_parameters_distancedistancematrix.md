@@ -12,6 +12,16 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
+-   <h3 class="parameter-name" id="arrival_time">arrival_time</h3>
+
+    By using this parameter, Distance will calculate the duration with traffic Specifies the arrival date/time as a timestamp to base the calculation on (e.g. `1600799173` for the date:`22/09/2020 20:26:13`).
+    Use either `arrival_time` or `departure_time`, not both.
+
+-   <h3 class="parameter-name" id="departure_time">departure_time</h3>
+
+    By using this parameter, Distance will calculate the duration with traffic Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.
+    Use either `arrival_time` or `departure_time`, not both.
+
 -   <h3 class="parameter-name" id="elements">elements</h3>
 
     Specifies element values that will be part of the API response (distance and/or duration). if not specified default is `distance`
