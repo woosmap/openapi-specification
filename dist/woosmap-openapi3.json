@@ -7,7 +7,7 @@
     "x-document-meta-data": {
       "copyright": "© 2022 Woosmap"
     },
-    "version": "1.12.0",
+    "version": "1.13.0",
     "contact": {
       "name": "Woosmap API"
     }
@@ -63,21 +63,22 @@
                       "country_code": "US",
                       "country_name": "United States",
                       "continent": "North America",
-                      "latitude": 38.719,
-                      "longitude": -77.1067,
-                      "accuracy": 10,
+                      "latitude": 38.7304,
+                      "longitude": -77.0634,
+                      "accuracy": 5,
                       "viewport": {
                         "northeast": {
-                          "lat": 38.80883152841196,
-                          "lng": -76.99156428711444
+                          "lat": 38.77531576420598,
+                          "lng": -77.00582296106178
                         },
                         "southwest": {
-                          "lat": 38.62916847158805,
-                          "lng": -77.22183571288556
+                          "lat": 38.68548423579403,
+                          "lng": -77.12097703893822
                         }
                       },
+                      "city": "Alexandria",
                       "region_state": "Virginia",
-                      "postal_code": "22309",
+                      "postal_code": "22308",
                       "timezone": "America/New_York"
                     }
                   }
@@ -162,21 +163,22 @@
                       "country_code": "US",
                       "country_name": "United States",
                       "continent": "North America",
-                      "latitude": 38.719,
-                      "longitude": -77.1067,
-                      "accuracy": 10,
+                      "latitude": 38.7304,
+                      "longitude": -77.0634,
+                      "accuracy": 5,
                       "viewport": {
                         "northeast": {
-                          "lat": 38.80883152841196,
-                          "lng": -76.99156428711444
+                          "lat": 38.77531576420598,
+                          "lng": -77.00582296106178
                         },
                         "southwest": {
-                          "lat": 38.62916847158805,
-                          "lng": -77.22183571288556
+                          "lat": 38.68548423579403,
+                          "lng": -77.12097703893822
                         }
                       },
+                      "city": "Alexandria",
                       "region_state": "Virginia",
-                      "postal_code": "22309",
+                      "postal_code": "22308",
                       "timezone": "America/New_York",
                       "stores": {
                         "type": "FeatureCollection",
@@ -211,8 +213,8 @@
                                 "drive",
                                 "click_and_collect"
                               ],
-                              "last_updated": "2023-02-03T16:43:04.817680+00:00",
-                              "distance": 0,
+                              "last_updated": "2023-03-03T09:06:24.421371+00:00",
+                              "distance": 3972.39013285,
                               "open": {
                                 "open_now": true,
                                 "open_hours": [
@@ -1720,6 +1722,19 @@
                           }
                         },
                         {
+                          "public_id": "52MnrbHVWH21CLWH8VY/YWKhqeM=",
+                          "type": "locality",
+                          "description": "London Apprentice, Cornwall, United Kingdom",
+                          "matched_substrings": {
+                            "description": [
+                              {
+                                "offset": 0,
+                                "length": 4
+                              }
+                            ]
+                          }
+                        },
+                        {
                           "public_id": "VOBREUi72/VtnsYgE6aI8HNYcxg=",
                           "type": "locality",
                           "description": "Londesborough, East Riding of Yorkshire, United Kingdom",
@@ -1736,11 +1751,6 @@
                           "public_id": "Js0mQmmeI46X3hiqRj/R4pvb8mQ=",
                           "type": "locality",
                           "description": "Long Stratton, Norfolk, United Kingdom"
-                        },
-                        {
-                          "public_id": "BQOzBfxua+W9eLymBnVKRkqK2Zc=",
-                          "type": "locality",
-                          "description": "Long Sutton, Lincolnshire, United Kingdom"
                         }
                       ]
                     }
@@ -2481,8 +2491,8 @@
                               ]
                             },
                             {
-                              "long_name": "7e Arrondissement",
-                              "short_name": "7e Arrondissement",
+                              "long_name": "7th Arrondissement",
+                              "short_name": "7th Arrondissement",
                               "types": [
                                 "district"
                               ]
@@ -3130,12 +3140,6 @@
           },
           {
             "$ref": "#/components/parameters/distance_method"
-          },
-          {
-            "$ref": "#/components/parameters/distance_departure_time"
-          },
-          {
-            "$ref": "#/components/parameters/distance_arrival_time"
           }
         ],
         "responses": {
@@ -3250,8 +3254,7 @@
                     "destinations": "48.83534,2.368308",
                     "units": "imperial",
                     "elements": "duration_distance",
-                    "method": "distance",
-                    "departure_time": "now"
+                    "method": "distance"
                   }
                 }
               }
@@ -3389,12 +3392,6 @@
           },
           {
             "$ref": "#/components/parameters/distance_avoid"
-          },
-          {
-            "$ref": "#/components/parameters/distance_departure_time"
-          },
-          {
-            "$ref": "#/components/parameters/distance_arrival_time"
           }
         ],
         "responses": {
@@ -3717,7 +3714,6 @@
     },
     "/traffic/distancematrix/json": {
       "get": {
-        "deprecated": true,
         "summary": "Traffic Distance Matrix",
         "operationId": "getTrafficDistanceMatrix",
         "servers": [
@@ -3834,7 +3830,6 @@
         ]
       },
       "post": {
-        "deprecated": true,
         "summary": "Traffic Distance Matrix using POST",
         "operationId": "postTrafficDistanceMatrix",
         "servers": [
@@ -3959,7 +3954,6 @@
     },
     "/traffic/route/json": {
       "get": {
-        "deprecated": true,
         "summary": "Traffic Route",
         "operationId": "getTrafficRoute",
         "servers": [
@@ -4640,15 +4634,6 @@
         },
         "description": "Specifies if alternative routes should be returned. default is `false`. Depending on the calculated route, alternatives may not be provided.\n`alternatives` and `waypoints` can not be used at the same time.\n"
       },
-      "distance_arrival_time": {
-        "name": "arrival_time",
-        "in": "query",
-        "example": "1600799173",
-        "schema": {
-          "type": "string"
-        },
-        "description": "By using this parameter, Distance will calculate the duration with traffic Specifies the arrival date/time as a timestamp to base the calculation on (e.g. `1600799173` for the date:`22/09/2020 20:26:13`).\nUse either `arrival_time` or `departure_time`, not both.\n"
-      },
       "distance_avoid": {
         "name": "avoid",
         "in": "query",
@@ -4657,15 +4642,6 @@
           "type": "string"
         },
         "description": "The list of features that you want to avoid. Valid values are `tolls`, `highways`, `ferries` or polygons coordinates whose vertex latlng are separated by a semicolon. To add multiple polygons, separate them with the `|` character.\n"
-      },
-      "distance_departure_time": {
-        "name": "departure_time",
-        "in": "query",
-        "example": "1600799173",
-        "schema": {
-          "type": "string"
-        },
-        "description": "By using this parameter, Distance will calculate the duration with traffic Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.\nUse either `arrival_time` or `departure_time`, not both.\n"
       },
       "distance_destination": {
         "name": "destination",
@@ -6156,21 +6132,22 @@
           "country_code": "US",
           "country_name": "United States",
           "continent": "North America",
-          "latitude": 38.719,
-          "longitude": -77.1067,
-          "accuracy": 10,
+          "latitude": 38.7304,
+          "longitude": -77.0634,
+          "accuracy": 5,
           "viewport": {
             "northeast": {
-              "lat": 38.80883152841196,
-              "lng": -76.99156428711444
+              "lat": 38.77531576420598,
+              "lng": -77.00582296106178
             },
             "southwest": {
-              "lat": 38.62916847158805,
-              "lng": -77.22183571288556
+              "lat": 38.68548423579403,
+              "lng": -77.12097703893822
             }
           },
+          "city": "Alexandria",
           "region_state": "Virginia",
-          "postal_code": "22309",
+          "postal_code": "22308",
           "timezone": "America/New_York"
         }
       },
@@ -6239,21 +6216,22 @@
           "country_code": "US",
           "country_name": "United States",
           "continent": "North America",
-          "latitude": 38.719,
-          "longitude": -77.1067,
-          "accuracy": 10,
+          "latitude": 38.7304,
+          "longitude": -77.0634,
+          "accuracy": 5,
           "viewport": {
             "northeast": {
-              "lat": 38.80883152841196,
-              "lng": -76.99156428711444
+              "lat": 38.77531576420598,
+              "lng": -77.00582296106178
             },
             "southwest": {
-              "lat": 38.62916847158805,
-              "lng": -77.22183571288556
+              "lat": 38.68548423579403,
+              "lng": -77.12097703893822
             }
           },
+          "city": "Alexandria",
           "region_state": "Virginia",
-          "postal_code": "22309",
+          "postal_code": "22308",
           "timezone": "America/New_York",
           "stores": {
             "type": "FeatureCollection",
@@ -6288,8 +6266,8 @@
                     "drive",
                     "click_and_collect"
                   ],
-                  "last_updated": "2023-02-03T16:43:04.817680+00:00",
-                  "distance": 0,
+                  "last_updated": "2023-03-03T09:06:24.421371+00:00",
+                  "distance": 3972.39013285,
                   "open": {
                     "open_now": true,
                     "open_hours": [
@@ -7123,6 +7101,19 @@
               }
             },
             {
+              "public_id": "52MnrbHVWH21CLWH8VY/YWKhqeM=",
+              "type": "locality",
+              "description": "London Apprentice, Cornwall, United Kingdom",
+              "matched_substrings": {
+                "description": [
+                  {
+                    "offset": 0,
+                    "length": 4
+                  }
+                ]
+              }
+            },
+            {
               "public_id": "VOBREUi72/VtnsYgE6aI8HNYcxg=",
               "type": "locality",
               "description": "Londesborough, East Riding of Yorkshire, United Kingdom",
@@ -7139,11 +7130,6 @@
               "public_id": "Js0mQmmeI46X3hiqRj/R4pvb8mQ=",
               "type": "locality",
               "description": "Long Stratton, Norfolk, United Kingdom"
-            },
-            {
-              "public_id": "BQOzBfxua+W9eLymBnVKRkqK2Zc=",
-              "type": "locality",
-              "description": "Long Sutton, Lincolnshire, United Kingdom"
             }
           ]
         }
@@ -8015,8 +8001,8 @@
                   ]
                 },
                 {
-                  "long_name": "7e Arrondissement",
-                  "short_name": "7e Arrondissement",
+                  "long_name": "7th Arrondissement",
+                  "short_name": "7th Arrondissement",
                   "types": [
                     "district"
                   ]
@@ -8758,16 +8744,6 @@
               "distance"
             ],
             "description": "Specifies the method to compute the route between the start point and the end point:\n  - `time`: fastest route (default)\n  - `distance`: shortest route\n"
-          },
-          "departure_time": {
-            "example": "now",
-            "type": "string",
-            "description": "Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`. Use either `arrival_time` or `departure_time`, not both.\n"
-          },
-          "arrival_time": {
-            "example": 1600799173,
-            "type": "string",
-            "description": "Specifies the arrival date/time as a timestamp to base the calculation on (e.g. `1600799173` for the date:`22/09/2020 20:26:13`). Use either `arrival_time` or `departure_time`, not both.\n"
           }
         },
         "example": {
@@ -8775,8 +8751,7 @@
           "destinations": "48.83534,2.368308",
           "units": "imperial",
           "elements": "duration_distance",
-          "method": "distance",
-          "departure_time": "now"
+          "method": "distance"
         }
       },
       "DistanceIsochroneResponse": {

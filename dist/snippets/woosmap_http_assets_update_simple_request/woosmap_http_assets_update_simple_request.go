@@ -16,7 +16,7 @@ func main() {
   payload := strings.NewReader(`{
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My amazing store",
       "location": {
         "lat": 43.61,

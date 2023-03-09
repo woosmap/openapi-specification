@@ -595,6 +595,31 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_asset_search_by_zone_feature_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/stores/search/",
+                query: [
+                    {
+                        key: "lat",
+                        value: "51.50976",
+                    },
+                    {
+                        key: "lng",
+                        value: "-0.145276",
+                    },
+                    {
+                        key: "zone",
+                        value: "true",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_zones_delete_request",
         request: new DeleteRequest({
             url: new Url({
@@ -626,7 +651,7 @@ export const REQUESTS: SnippetRequest[] = [
     {
         regionTag: "woosmap_http_assets_replace_simple_request",
         request: new PostJsonRequest({
-            url: "https://api.woosmap.com/stores",
+            url: "https://api.woosmap.com/stores/replace",
             json: parseRequestBody(
                 "../../specification/requests/woosmap_http_assets_collection_simple_request.yml"
             ),

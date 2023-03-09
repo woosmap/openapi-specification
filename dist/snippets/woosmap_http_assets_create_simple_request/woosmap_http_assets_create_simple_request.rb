@@ -13,7 +13,7 @@ request["content-type"] = "application/json"
 request.body = JSON.dump({
   "stores": [
     {
-      "store_id": "store_123",
+      "storeId": "store_123",
       "name": "My first cool store",
       "location": {
         "lat": 43.61,
