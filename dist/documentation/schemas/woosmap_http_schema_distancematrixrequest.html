@@ -46,6 +46,28 @@
     <tr>
       <td align="left">
         <h4
+          id="DistanceMatrixRequest-departure_time"
+          class="add-link schema-object-property-key"
+        >
+          <code>departure_time</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Specifies the date/time at which to base the calculations on for
+            traffic purposes. Valid values are a timestamp (e.g.
+            <code>1600799173</code> for the date:<code>22/09/2020 20:26:13</code
+            >) or <code>now</code>.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
           id="DistanceMatrixRequest-elements"
           class="add-link schema-object-property-key"
         >
@@ -166,7 +188,8 @@
   "destinations": "48.83534,2.368308",
   "units": "imperial",
   "elements": "duration_distance",
-  "method": "distance"
+  "method": "distance",
+  "departure_time": "now"
 }</pre
 >
 <p style="text-align: right; font-size: smaller">

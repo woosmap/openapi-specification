@@ -3140,6 +3140,9 @@
           },
           {
             "$ref": "#/components/parameters/distance_method"
+          },
+          {
+            "$ref": "#/components/parameters/distance_departure_time"
           }
         ],
         "responses": {
@@ -3254,7 +3257,8 @@
                     "destinations": "48.83534,2.368308",
                     "units": "imperial",
                     "elements": "duration_distance",
-                    "method": "distance"
+                    "method": "distance",
+                    "departure_time": "now"
                   }
                 }
               }
@@ -3392,6 +3396,12 @@
           },
           {
             "$ref": "#/components/parameters/distance_avoid"
+          },
+          {
+            "$ref": "#/components/parameters/distance_departure_time"
+          },
+          {
+            "$ref": "#/components/parameters/distance_arrival_time"
           }
         ],
         "responses": {
@@ -3714,6 +3724,7 @@
     },
     "/traffic/distancematrix/json": {
       "get": {
+        "deprecated": true,
         "summary": "Traffic Distance Matrix",
         "operationId": "getTrafficDistanceMatrix",
         "servers": [
@@ -3830,6 +3841,7 @@
         ]
       },
       "post": {
+        "deprecated": true,
         "summary": "Traffic Distance Matrix using POST",
         "operationId": "postTrafficDistanceMatrix",
         "servers": [
@@ -3954,6 +3966,7 @@
     },
     "/traffic/route/json": {
       "get": {
+        "deprecated": true,
         "summary": "Traffic Route",
         "operationId": "getTrafficRoute",
         "servers": [
@@ -4634,6 +4647,15 @@
         },
         "description": "Specifies if alternative routes should be returned. default is `false`. Depending on the calculated route, alternatives may not be provided.\n`alternatives` and `waypoints` can not be used at the same time.\n"
       },
+      "distance_arrival_time": {
+        "name": "arrival_time",
+        "in": "query",
+        "example": "1600799173",
+        "schema": {
+          "type": "string"
+        },
+        "description": "By using this parameter, Distance will calculate the duration with traffic Specifies the arrival date/time as a timestamp to base the calculation on (e.g. `1600799173` for the date:`22/09/2020 20:26:13`).\nUse either `arrival_time` or `departure_time`, not both.\n"
+      },
       "distance_avoid": {
         "name": "avoid",
         "in": "query",
@@ -4642,6 +4664,15 @@
           "type": "string"
         },
         "description": "The list of features that you want to avoid. Valid values are `tolls`, `highways`, `ferries` or polygons coordinates whose vertex latlng are separated by a semicolon. To add multiple polygons, separate them with the `|` character.\n"
+      },
+      "distance_departure_time": {
+        "name": "departure_time",
+        "in": "query",
+        "example": "1600799173",
+        "schema": {
+          "type": "string"
+        },
+        "description": "By using this parameter, Distance will calculate the duration with traffic Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.\nUse either `arrival_time` or `departure_time`, not both.\n"
       },
       "distance_destination": {
         "name": "destination",
@@ -8744,6 +8775,11 @@
               "distance"
             ],
             "description": "Specifies the method to compute the route between the start point and the end point:\n  - `time`: fastest route (default)\n  - `distance`: shortest route\n"
+          },
+          "departure_time": {
+            "example": "now",
+            "type": "string",
+            "description": "Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.\n"
           }
         },
         "example": {
@@ -8751,7 +8787,8 @@
           "destinations": "48.83534,2.368308",
           "units": "imperial",
           "elements": "duration_distance",
-          "method": "distance"
+          "method": "distance",
+          "departure_time": "now"
         }
       },
       "DistanceIsochroneResponse": {
