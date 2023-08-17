@@ -1,0 +1,24 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START woosmap_http_schema_woosmap-platform-api-reference_assetopeninghoursperiod] -->
+<h3 class="schema-object" id="Woosmap Platform API Reference_AssetOpeningHoursPeriod">AssetOpeningHoursPeriod</h3>
+
+The hours for an opening period. To define a slice of time where the asset is open you must define a `start` and `end` keys. `start` and `end` must belong to the same day (crossing midnight may result in open_now being always false.)
+
+| Field                                                                                                      | Required     | Type   | Description                                                                                                                                                               |
+| :--------------------------------------------------------------------------------------------------------- | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="AssetOpeningHoursPeriod-end" class="add-link schema-object-property-key"><code>end</code></h4>     | **required** | string | <div class="nonref-property-description"><p>Contains a time of day in 24-hour hh:mm format for the end of opening period. Values are in the range 00:00–23:59</p></div>   |
+| <h4 id="AssetOpeningHoursPeriod-start" class="add-link schema-object-property-key"><code>start</code></h4> | **required** | string | <div class="nonref-property-description"><p>Contains a time of day in 24-hour hh:mm format for the begin of opening period. Values are in the range 00:00–23:59</p></div> |
+
+<h4 class="schema-object-example" id="Woosmap Platform API Reference_AssetOpeningHoursPeriod-example">Example</h4>
+
+<pre class="notranslate lang-json prettyprint">{
+  "start": "08:30",
+  "end": "19:30"
+}</pre>
+
+<p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
+<a data-label="openapi-github-woosmap-http-schema-woosmap-platform-api-reference-assetopeninghoursperiod" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/Woosmap Platform API Reference_AssetOpeningHoursPeriod.yml" title="Edit on GitHub">✎ Edit</a>
+<a data-label="openapi-github-woosmap-http-schema-woosmap-platform-api-reference-assetopeninghoursperiod" data-action="bug" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - Woosmap Platform API Reference_AssetOpeningHoursPeriod" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+</p>
+
+<!--- [END woosmap_http_schema_woosmap-platform-api-reference_assetopeninghoursperiod] -->

@@ -1,0 +1,407 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START woosmap_http_schema_woosmap-platform-api-reference_localitiesautocompleteresponse] -->
+<h3
+  class="schema-object"
+  id="Woosmap Platform API Reference_LocalitiesAutocompleteResponse"
+>
+  LocalitiesAutocompleteResponse
+</h3>
+<p>
+  Attributes describing a locality. Not all attributes will be available for all
+  locality types.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-admin_0"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>admin_0</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <aside class="deprecated"><code>admin_0</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>Contains the country name.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-admin_1"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>admin_1</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <aside class="deprecated"><code>admin_1</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>Contains the administrative level including the suggestion.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-admin_2"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>admin_2</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <aside class="deprecated"><code>admin_2</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>
+            For small locality type points of interests (suburbs, neighborhoods,
+            villages), contains the municipality it belongs to.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-description"
+          class="add-link schema-object-property-key"
+        >
+          <code>description</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Concatenation of <code>name</code>, <code>admin_1</code>,
+            <code>admin_0</code> to be used as suggestion in drop down list if
+            needed. The description can vary depending on the type requested.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-has_addresses"
+          class="add-link schema-object-property-key"
+        >
+          <code>has_addresses</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>boolean</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            On the specific territory of United Kingdom, Localities autocomplete
+            request can return the additional attribute
+            <code>has_addresses</code> for a postal code, which indicates if a
+            postal code bears addresses. When <code>has_addresses</code> is
+            <code>true</code>, it is possible to display a list of the available
+            addresses by requesting <code>details</code> with the Localities
+            <code>public_id</code>. To get the details of an address you will
+            need to request again <code>/details</code> endpoint passing in the
+            dedicated address <code>public_id</code>.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-locality"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>locality</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <aside class="deprecated"><code>locality</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>The parent locality when retrieving a POI. often empty.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-location"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>location</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>object</td>
+      <td>
+        <aside class="deprecated"><code>location</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>
+            An object describing a specific location with Latitude and Longitude
+            in decimal degrees.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-matched_substrings"
+          class="add-link schema-object-property-key"
+        >
+          <code>matched_substrings</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a
+          href="#Woosmap%20Platform%20API%20Reference_LocalitiesAutocompleteMatchedFields"
+          title="LocalitiesAutocompleteMatchedFields"
+          >LocalitiesAutocompleteMatchedFields</a
+        >
+      </td>
+      <td>
+        See
+        <a
+          href="#Woosmap%20Platform%20API%20Reference_LocalitiesAutocompleteMatchedFields"
+          title="LocalitiesAutocompleteMatchedFields"
+          >LocalitiesAutocompleteMatchedFields</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-name"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>name</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <aside class="deprecated"><code>name</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>
+            contains the human-readable name for the returned result. For
+            <code>postal_code</code> results, this is directly the postal code
+            value. For <code>locality</code> results, name in the specified
+            language is returns. If no language is specified, default name
+            (country local language) is returned.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-postal_codes"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>postal_codes</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <aside class="deprecated">
+          <code>postal_codes</code> is deprecated.
+        </aside>
+        <div class="nonref-property-description">
+          <p>
+            Contains an array of known postal codes for a locality (only
+            available on <em>suggestions</em> with country:<code>fr</code> for
+            France or <code>it</code> for Italy and type:
+            <code>locality</code>).
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-postal_town"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>postal_town</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <aside class="deprecated">
+          <code>postal_town</code> is deprecated.
+        </aside>
+        <div class="nonref-property-description">
+          <p>
+            Contains the larger city (or the post office city) for a
+            <code>postal_code</code> (only available on suggestions with type:
+            <code>postal_code</code>).
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-public_id"
+          class="add-link schema-object-property-key"
+        >
+          <code>public_id</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains a unique ID for each suggestion. Please use this ID if you
+            need to give us feedbacks on results. This ID is also required to
+            perform Localities Details request.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-type"
+          class="add-link schema-object-property-key"
+        >
+          <code>type</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a
+          href="#Woosmap%20Platform%20API%20Reference_LocalitiesTypes"
+          title="LocalitiesTypes"
+          >LocalitiesTypes</a
+        >
+      </td>
+      <td>
+        See
+        <a
+          href="#Woosmap%20Platform%20API%20Reference_LocalitiesTypes"
+          title="LocalitiesTypes"
+          >LocalitiesTypes</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesAutocompleteResponse-viewpoint"
+          class="add-link schema-object-property-key deprecated-item hide-from-toc"
+        >
+          <code>viewpoint</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>object</td>
+      <td>
+        <aside class="deprecated"><code>viewpoint</code> is deprecated.</aside>
+        <div class="nonref-property-description">
+          <p>Contains the bounds for the locality</p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h4
+  class="schema-object-example"
+  id="Woosmap Platform API Reference_LocalitiesAutocompleteResponse-example"
+>
+  Example
+</h4>
+<pre class="notranslate lang-json prettyprint">
+{
+  "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
+  "description": "London, City of London, United Kingdom",
+  "name": "London",
+  "type": "locality",
+  "location": {
+    "lat": 51.50732,
+    "lng": -0.12764746
+  },
+  "matched_substrings": {
+    "name": [
+      {
+        "offset": 0,
+        "length": 6
+      }
+    ],
+    "admin_1": [
+      {
+        "offset": 8,
+        "length": 6
+      }
+    ],
+    "description": [
+      {
+        "offset": 0,
+        "length": 6
+      },
+      {
+        "offset": 16,
+        "length": 6
+      }
+    ]
+  },
+  "admin_1": "City of London",
+  "locality": "",
+  "admin_0": "United Kingdom"
+}</pre
+>
+<p style="text-align: right; font-size: smaller">
+  Generated from the
+  <a
+    data-label="openapi-github"
+    href="https://github.com/woosmap/openapi-specification"
+    title="Woosmap OpenAPI Specification"
+    class="external"
+    >OpenAPI specification</a
+  >.
+  <a
+    data-label="openapi-github-woosmap-http-schema-woosmap-platform-api-reference-localitiesautocompleteresponse"
+    data-action="edit"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/Woosmap Platform API Reference_LocalitiesAutocompleteResponse.yml"
+    title="Edit on GitHub"
+    >✎ Edit</a
+  >
+  <a
+    data-label="openapi-github-woosmap-http-schema-woosmap-platform-api-reference-localitiesautocompleteresponse"
+    data-action="bug"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - Woosmap Platform API Reference_LocalitiesAutocompleteResponse"
+    title="File bug for schemas on GitHub"
+    ><span class="material-icons">bug_report</span> Report bug</a
+  >
+</p>
+
+<!--- [END woosmap_http_schema_woosmap-platform-api-reference_localitiesautocompleteresponse] -->

@@ -47,3 +47,11 @@ http_archive(
 load("@rules_pkg//:deps.bzl", "rules_pkg_dependencies")
 
 rules_pkg_dependencies()
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
+
+# get other openapi specs
+http_file(
+    name = "indoor",
+    urls = ["https://develop-api.woosmap.com/237/what3words/openapi.json"],
+)

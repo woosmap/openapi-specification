@@ -3,6 +3,7 @@ load("@rules_pkg//:pkg.bzl", "pkg_tar")
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_test")
 load("@npm//openapi-examples-validator:index.bzl", "openapi_examples_validator_test")
 load("@npm//openapi-to-postmanv2:index.bzl", "openapi2postmanv2")
+load("//rules:swagger_merge.bzl", "merge")
 
 exports_files(
     ["tsconfig.json"],
@@ -13,9 +14,16 @@ BUNDLE_NAME = "woosmap-openapi3"
 
 # has .yml and .json outputs
 bundle(
-    name = BUNDLE_NAME,
+    name = BUNDLE_NAME + "_original",
     data = ["//specification:openapi3"],
     entry = "$(locations //specification:openapi3)/index.yml",
+)
+
+merge(
+    name = BUNDLE_NAME,
+    data = ["//:{}.yml".format(BUNDLE_NAME + "_original"), "@indoor//file"],
+    specs = ["$(location //:{}.yml)".format(BUNDLE_NAME + "_original"), "$(location @indoor//file)"],
+    visibility = ["//visibility:public"],
 )
 
 validate(
