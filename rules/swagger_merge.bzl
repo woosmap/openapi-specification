@@ -4,7 +4,7 @@ def merge(name, data, specs, **kwargs):
     redocly(
         name = "{}-yml".format(name),
         outs = ["//:{}.yml".format(name)],
-        args = ["join"] + specs + ["--output", "$(location //:{}.yml)".format(name), "--prefix-components-with-info-prop", "title"],
+        args = ["join"] + specs + ["--output", "$(location //:{}.yml)".format(name), "--without-x-tag-groups"],
         data = data,
         **kwargs
     )
