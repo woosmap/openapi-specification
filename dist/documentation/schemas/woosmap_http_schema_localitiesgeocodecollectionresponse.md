@@ -13,6 +13,7 @@ Localities Geocode Collection Response. Contains one or more detailed Localities
 <pre class="notranslate lang-json prettyprint">{
   "results": [
     {
+      "public_id": "MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f",
       "types": [
         "route"
       ],
