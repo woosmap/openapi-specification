@@ -6980,6 +6980,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LocalitiesGeocodeTypes'
+        public_id:
+          description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
+          type: string
+          example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
         geometry:
           $ref: '#/components/schemas/LocalitiesAddressGeometry'
         status:
