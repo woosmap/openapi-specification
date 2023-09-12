@@ -474,6 +474,31 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_bounds_search",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/stores/search/bounds",
+                query: [
+                    {
+                        key: "lat",
+                        value: "51.50976",
+                    },
+                    {
+                        key: "lng",
+                        value: "-0.145276",
+                    },
+                    {
+                        key: "radius",
+                        value: "300",
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_asset_autocomplete_feature_collection",
         request: new Request({
             url: new Url({
