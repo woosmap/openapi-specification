@@ -1627,6 +1627,95 @@
         ]
       }
     },
+    "/stores/search/bounds": {
+      "get": {
+        "summary": "Retrieve Bounds for assets",
+        "operationId": "storesBounds",
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "tags": [
+          "Bounds API"
+        ],
+        "description": "Used to retrieve Bounds for assets. You can refine the search using same parameters as Store Search API.\n",
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/search_query"
+          },
+          {
+            "$ref": "#/components/parameters/search_lat"
+          },
+          {
+            "$ref": "#/components/parameters/search_lng"
+          },
+          {
+            "$ref": "#/components/parameters/search_radius"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounds successfully retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BoundsResponse"
+                },
+                "examples": {
+                  "default": {
+                    "summary": "Retrieve Bounds nearby a latlng and given a radius",
+                    "value": {
+                      "bounds": {
+                        "west": -0.14408,
+                        "south": 51.5088,
+                        "east": -0.14408,
+                        "north": 51.5088
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/paths/~1zones/get/responses/401"
+          },
+          "403": {
+            "$ref": "#/paths/~1zones/get/responses/403"
+          },
+          "429": {
+            "$ref": "#/paths/~1zones/get/responses/429"
+          }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      }
+    },
     "/localities/autocomplete": {
       "get": {
         "summary": "Autocomplete for Localities",
@@ -3329,17 +3418,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X POST 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\"\n}'"
+            "source": "curl -L -X POST 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\",\n  \"departure_time\": \"now\"\n}'"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n    \"destinations\": \"48.83534,2.368308\",\n    \"units\": \"imperial\",\n    \"elements\": \"duration_distance\",\n    \"method\": \"distance\"\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n    \"destinations\": \"48.83534,2.368308\",\n    \"units\": \"imperial\",\n    \"elements\": \"duration_distance\",\n    \"method\": \"distance\",\n    \"departure_time\": \"now\"\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           },
           {
             "lang": "nodejs",
             "label": "NodeJS",
-            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\"\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\",\n  \"departure_time\": \"now\"\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
           }
         ]
       }
@@ -9635,6 +9724,39 @@
             }
           ]
         }
+      },
+      "BoundsResponse": {
+        "title": "BoundsResponse",
+        "type": "object",
+        "description": "Message returned to a success Search Bounds request",
+        "properties": {
+          "bounds": {
+            "description": "The bounds object",
+            "type": "object",
+            "properties": {
+              "west": {
+                "description": "The west longitude of bounds",
+                "type": "number",
+                "example": -0.14408
+              },
+              "south": {
+                "description": "The south latitude of bounds",
+                "type": "number",
+                "example": -51.5088
+              },
+              "east": {
+                "description": "The east longitude of bounds",
+                "type": "number",
+                "example": -0.14408
+              },
+              "north": {
+                "description": "The north latitude of bounds",
+                "type": "number",
+                "example": 51.5088
+              }
+            }
+          }
+        }
       }
     },
     "securitySchemes": {
@@ -9708,6 +9830,13 @@
       "description": "Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
       "externalDocs": {
         "url": "https://developers.woosmap.com/products/distance-api/get-started/"
+      }
+    },
+    {
+      "name": "Bounds API",
+      "description": "Woosmap Bounds API is a web service that uses an HTTP request to retrieve Bounds for your Assets, accepting a Search Query parameter. Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.\n",
+      "externalDocs": {
+        "url": "https://developers.woosmap.com/products/data-api/zones/"
       }
     },
     {

@@ -1,0 +1,38 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Bounds API
+description: >
+  Used to retrieve Bounds for assets. You can refine the search using same parameters as Store Search API.
+security:
+  - PublicApiKeyAuth: [ ]
+    RefererHeader: [ ]
+  - PrivateApiKeyAuth: [ ]
+parameters:
+  - $ref: "../../parameters/search/query.yml"
+  - $ref: "../../parameters/search/lat.yml"
+  - $ref: "../../parameters/search/lng.yml"
+  - $ref: "../../parameters/search/radius.yml"
+responses:
+  "200":
+    description: Bounds successfully retrieved
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/BoundsResponse.yml"
+        examples:
+          default:
+            summary: Retrieve Bounds nearby a latlng and given a radius
+            value:
+              $ref: "../../responses/woosmap_http_bounds_search_response.yml"
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_bounds_search/woosmap_http_bounds_search.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_bounds_search/woosmap_http_bounds_search.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_bounds_search/woosmap_http_bounds_search.python.yml"
+

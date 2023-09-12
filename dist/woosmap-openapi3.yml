@@ -2000,6 +2000,80 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
+  /stores/search/bounds:
+    get:
+      summary: Retrieve Bounds for assets
+      operationId: storesBounds
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Bounds API
+      description: |
+        Used to retrieve Bounds for assets. You can refine the search using same parameters as Store Search API.
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/search_query'
+        - $ref: '#/components/parameters/search_lat'
+        - $ref: '#/components/parameters/search_lng'
+        - $ref: '#/components/parameters/search_radius'
+      responses:
+        '200':
+          description: Bounds successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BoundsResponse'
+              examples:
+                default:
+                  summary: Retrieve Bounds nearby a latlng and given a radius
+                  value:
+                    bounds:
+                      west: -0.14408
+                      south: 51.5088
+                      east: -0.14408
+                      north: 51.5088
+        '401':
+          $ref: '#/paths/~1zones/get/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/get/responses/403'
+        '429':
+          $ref: '#/paths/~1zones/get/responses/429'
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |-
+            curl -L -X GET 'https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY' \
+            -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+        - lang: python
+          label: Python
+          source: |
+            import requests
+
+            url = "https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY"
+
+            payload={}
+            headers = {
+                'Referer': 'http://localhost'
+            }
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            print(response.text)
   /localities/autocomplete:
     get:
       summary: Autocomplete for Localities
@@ -3344,7 +3418,8 @@ paths:
               "destinations": "48.83534,2.368308",
               "units": "imperial",
               "elements": "duration_distance",
-              "method": "distance"
+              "method": "distance",
+              "departure_time": "now"
             }'
         - lang: python
           label: Python
@@ -3359,7 +3434,8 @@ paths:
                 "destinations": "48.83534,2.368308",
                 "units": "imperial",
                 "elements": "duration_distance",
-                "method": "distance"
+                "method": "distance",
+                "departure_time": "now"
             })
             headers = {
                 'content-type': 'application/json'
@@ -3377,7 +3453,8 @@ paths:
               "destinations": "48.83534,2.368308",
               "units": "imperial",
               "elements": "duration_distance",
-              "method": "distance"
+              "method": "distance",
+              "departure_time": "now"
             });
 
             var config = {
@@ -8358,6 +8435,31 @@ components:
           - dirty_name: Pepa SL Gracia
             country: ES
             merchant_id: 34J21189
+    BoundsResponse:
+      title: BoundsResponse
+      type: object
+      description: Message returned to a success Search Bounds request
+      properties:
+        bounds:
+          description: The bounds object
+          type: object
+          properties:
+            west:
+              description: The west longitude of bounds
+              type: number
+              example: -0.14408
+            south:
+              description: The south latitude of bounds
+              type: number
+              example: -51.5088
+            east:
+              description: The east longitude of bounds
+              type: number
+              example: -0.14408
+            north:
+              description: The north latitude of bounds
+              type: number
+              example: 51.5088
   securitySchemes:
     PrivateApiKeyAuth:
       description: 'A Private key generated specifically to authenticate API requests on server side. Required for Data management API. See how to [register a Private API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-private-api-key).'
@@ -8409,6 +8511,11 @@ tags:
       Woosmap Distance API is a service providing road travel distance and duration calculations, on a Worldwide scale. Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).
     externalDocs:
       url: 'https://developers.woosmap.com/products/distance-api/get-started/'
+  - name: Bounds API
+    description: |
+      Woosmap Bounds API is a web service that uses an HTTP request to retrieve Bounds for your Assets, accepting a Search Query parameter. Request is done over HTTPS using GET. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key.
+    externalDocs:
+      url: 'https://developers.woosmap.com/products/data-api/zones/'
   - name: Traffic API
     description: |
       Woosmap Traffic API (Early Access) is a service that provides travel distances and durations with traffic, on a Worldwide scale. Compared to the Woosmap Distance API, this API uses traffic information when returning duration times.  Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).

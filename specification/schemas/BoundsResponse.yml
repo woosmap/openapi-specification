@@ -1,0 +1,24 @@
+title: BoundsResponse
+type: object
+description: Message returned to a success Search Bounds request
+properties:
+  bounds:
+    description: The bounds object
+    type: object
+    properties:
+      west:
+        description: The west longitude of bounds
+        type: number
+        example: -0.14408
+      south:
+        description: The south latitude of bounds
+        type: number
+        example: -51.5088
+      east:
+        description: The east longitude of bounds
+        type: number
+        example: -0.14408
+      north:
+        description: The north latitude of bounds
+        type: number
+        example: 51.5088
