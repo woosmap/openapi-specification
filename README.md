@@ -16,7 +16,6 @@ An OpenAPI specification for Woosmap Platform.
 | [Address](https://developers.woosmap.com/products/address-api/get-started/)      | Complete |
 | [Distance](https://developers.woosmap.com/products/distance-api/get-started/)    | Complete |
 | [Merchant](https://developers.woosmap.com/products/merchant-api/get-started/)    | Complete |
-| Bounds API                                                                       | Complete |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9?action=collection%2Ffork&collection-url=entityId%3D18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9%26entityType%3Dcollection%26workspaceId%3Dwoosmap-public)
 
