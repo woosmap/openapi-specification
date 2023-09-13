@@ -1716,7 +1716,7 @@ paths:
       tags:
         - Store Search API
       description: |
-        Used to retrieve assets from query
+        Used to retrieve assets from query.
       security:
         - PublicApiKeyAuth: []
           RefererHeader: []
@@ -2002,14 +2002,14 @@ paths:
             print(response.text)
   /stores/search/bounds:
     get:
-      summary: Retrieve Bounds for assets
+      summary: Bounds for assets
       operationId: storesBounds
       servers:
         - url: 'https://api.woosmap.com'
       tags:
-        - Bounds API
+        - Store Search API
       description: |
-        Used to retrieve Bounds for assets. You can refine the search using same parameters as Store Search API.
+        Used to retrieve Bounds for assets.
       security:
         - PublicApiKeyAuth: []
           RefererHeader: []
