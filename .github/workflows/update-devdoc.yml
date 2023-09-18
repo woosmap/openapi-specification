@@ -2,7 +2,7 @@
 name: Update DevDoc
 on:
   release:
-    types: [published]
+    types: [ published ]
 jobs:
   dispatch:
     runs-on: ubuntu-latest
@@ -13,6 +13,6 @@ jobs:
           token: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
           repository: woosmap/developers.woosmap.com
           event-type: update_openapi
-          client-payload: '{"release_name": "${{ github.event.release.tag_name }}", "openapi_spec_url": "${{ github.server_url }}/${{ github.repository }}/releases/latest/download/woosmap-openapi3.json"}'
+          client-payload: '{"release_name": "${{ github.event.release.tag_name }}", "source_url":  "${{ github.server_url }}/${{ github.repository }}/archive/refs/tags/${{ github.event.release.tag_name }}.tar.gz", "openapi_spec_url": "${{ github.server_url }}/${{ github.repository }}/releases/latest/download/woosmap-openapi3.json"}'
 
 
