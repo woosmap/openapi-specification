@@ -17,6 +17,8 @@ jobs:
           token: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
       - run: npm ci
       - run: npm run build -- --jobs 8
+        env:
+          GH_TOKEN: ${{ secrets.WOOSMAP_GH_ACCESS_TOKEN }}
       - run: npm test -- --jobs 8
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
