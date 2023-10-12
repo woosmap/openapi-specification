@@ -8,15 +8,15 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]
 then
     if [[ "$ARCH" == "arm64" ]]
     then
-         RELEASE_BINARY_SUFFIX = "_linux_arm64.tar.gz"
+         RELEASE_BINARY_SUFFIX="_linux_arm64.tar.gz"
     else
-         RELEASE_BINARY_SUFFIX = "_linux_amd64.tar.gz"
+         RELEASE_BINARY_SUFFIX="_linux_amd64.tar.gz"
     fi
 elif [[ "$OSTYPE" == "darwin"* ]]
 then
     if [[ "$ARCH" == "x86_64" ]]
-then
-         RELEASE_BINARY_SUFFIX = "_darwin_amd64.tar.gz"
+    then
+         RELEASE_BINARY_SUFFIX="_darwin_amd64.tar.gz"
     fi
 fi
 
