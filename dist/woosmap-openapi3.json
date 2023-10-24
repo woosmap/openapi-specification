@@ -7,7 +7,7 @@
     "x-document-meta-data": {
       "copyright": "© 2022 Woosmap"
     },
-    "version": "1.13.1",
+    "version": "1.15.1",
     "contact": {
       "name": "Woosmap API"
     }
@@ -1203,7 +1203,7 @@
         "tags": [
           "Store Search API"
         ],
-        "description": "Used to retrieve assets from query\n",
+        "description": "Used to retrieve assets from query.\n",
         "security": [
           {
             "PublicApiKeyAuth": [],
@@ -1623,6 +1623,95 @@
             "lang": "python",
             "label": "Python",
             "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      }
+    },
+    "/stores/search/bounds": {
+      "get": {
+        "summary": "Bounds for assets",
+        "operationId": "storesBounds",
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "tags": [
+          "Store Search API"
+        ],
+        "description": "Used to retrieve Bounds for assets.\n",
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/search_query"
+          },
+          {
+            "$ref": "#/components/parameters/search_lat"
+          },
+          {
+            "$ref": "#/components/parameters/search_lng"
+          },
+          {
+            "$ref": "#/components/parameters/search_radius"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounds successfully retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BoundsResponse"
+                },
+                "examples": {
+                  "default": {
+                    "summary": "Retrieve Bounds nearby a latlng and given a radius",
+                    "value": {
+                      "bounds": {
+                        "west": -0.14408,
+                        "south": 51.5088,
+                        "east": -0.14408,
+                        "north": 51.5088
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/paths/~1zones/get/responses/401"
+          },
+          "403": {
+            "$ref": "#/paths/~1zones/get/responses/403"
+          },
+          "429": {
+            "$ref": "#/paths/~1zones/get/responses/429"
+          }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -2052,7 +2141,6 @@
                     "value": {
                       "results": [
                         {
-                          "public_id": "MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f",
                           "types": [
                             "route"
                           ],
@@ -3330,17 +3418,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X POST 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\"\n}'"
+            "source": "curl -L -X POST 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY' \\\n-H 'content-type: application/json' \\\n--data-raw '{\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\",\n  \"departure_time\": \"now\"\n}'"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n    \"destinations\": \"48.83534,2.368308\",\n    \"units\": \"imperial\",\n    \"elements\": \"duration_distance\",\n    \"method\": \"distance\"\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n    \"destinations\": \"48.83534,2.368308\",\n    \"units\": \"imperial\",\n    \"elements\": \"duration_distance\",\n    \"method\": \"distance\",\n    \"departure_time\": \"now\"\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           },
           {
             "lang": "nodejs",
             "label": "NodeJS",
-            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\"\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
+            "source": "var axios = require('axios');\nvar data = JSON.stringify({\n  \"origins\": \"48.73534,2.368308|48.73534,2.368308\",\n  \"destinations\": \"48.83534,2.368308\",\n  \"units\": \"imperial\",\n  \"elements\": \"duration_distance\",\n  \"method\": \"distance\",\n  \"departure_time\": \"now\"\n});\n\nvar config = {\n  method: 'post',\n  url: 'https://api.woosmap.com/distance/distancematrix/json?private_key=YOUR_PRIVATE_API_KEY',\n  headers: { \n    'content-type': 'application/json'\n  },\n  data : data\n};\n\naxios(config)\n.then(function (response) {\n  console.log(JSON.stringify(response.data));\n})\n.catch(function (error) {\n  console.log(error);\n});\n"
           }
         ]
       }
@@ -7683,7 +7771,6 @@
         "example": {
           "results": [
             {
-              "public_id": "MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f",
               "types": [
                 "route"
               ],
@@ -7745,11 +7832,6 @@
               "$ref": "#/components/schemas/LocalitiesGeocodeTypes"
             }
           },
-          "public_id": {
-            "description": "Contains a unique ID for each suggestion. `public_id` will be empty for interpolated locations. Please use this ID to give feedbacks on results.",
-            "type": "string",
-            "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
-          },
           "geometry": {
             "$ref": "#/components/schemas/LocalitiesAddressGeometry"
           },
@@ -7758,11 +7840,6 @@
           },
           "address_components": {
             "$ref": "#/components/schemas/AddressComponents"
-          },
-          "distance": {
-            "description": "When reverse geocoding, this field represents the distance (in meter) to the requested latlng",
-            "type": "number",
-            "example": 5.234
           }
         }
       },
@@ -9646,6 +9723,39 @@
               "merchant_id": "34J21189"
             }
           ]
+        }
+      },
+      "BoundsResponse": {
+        "title": "BoundsResponse",
+        "type": "object",
+        "description": "Message returned to a success Search Bounds request",
+        "properties": {
+          "bounds": {
+            "description": "The bounds object",
+            "type": "object",
+            "properties": {
+              "west": {
+                "description": "The west longitude of bounds",
+                "type": "number",
+                "example": -0.14408
+              },
+              "south": {
+                "description": "The south latitude of bounds",
+                "type": "number",
+                "example": -51.5088
+              },
+              "east": {
+                "description": "The east longitude of bounds",
+                "type": "number",
+                "example": -0.14408
+              },
+              "north": {
+                "description": "The north latitude of bounds",
+                "type": "number",
+                "example": 51.5088
+              }
+            }
+          }
         }
       }
     },

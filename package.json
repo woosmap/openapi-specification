@@ -1,7 +1,7 @@
 {
   "name": "openapi-specification",
   "private": true,
-  "version": "1.13.1",
+  "version": "1.15.1",
   "homepage": "https://github.com/woosmap/openapi-specification#readme",
   "bugs": {
     "url": "https://github.com/woosmap/openapi-specification/issues"
@@ -17,7 +17,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "bazel build //:outputs",
-    "postbuild": "mkdir -p dist; tar xf bazel-bin/dist.tar -C dist && cp bazel-bin/parameters.yml specification/parameters/_index.yml",
+    "postbuild": "mkdir -p dist; tar xf bazel-bin/dist.tar -C dist && cp bazel-bin/parameters.yml specification/parameters/_index.yml  && ./openapi-smusher.sh",
     "responses": "bazel run generator/responses:_responses_bin -- --output `pwd`/specification/responses",
     "samples": "bazel run generator/requests:_samples_bin -- --output `pwd`/specification/snippets",
     "publish:postman": "bazel run generator/postman:_postman_bin",

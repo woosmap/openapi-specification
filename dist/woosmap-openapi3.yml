@@ -14,7 +14,7 @@ info:
   termsOfService: 'https://www.woosmap.com/en/policies/terms/'
   x-document-meta-data:
     copyright: © 2022 Woosmap
-  version: 1.13.1
+  version: 1.15.1
   contact:
     name: Woosmap API
 servers:
@@ -1716,7 +1716,7 @@ paths:
       tags:
         - Store Search API
       description: |
-        Used to retrieve assets from query
+        Used to retrieve assets from query.
       security:
         - PublicApiKeyAuth: []
           RefererHeader: []
@@ -1991,6 +1991,80 @@ paths:
             import requests
 
             url = "https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY"
+
+            payload={}
+            headers = {
+                'Referer': 'http://localhost'
+            }
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            print(response.text)
+  /stores/search/bounds:
+    get:
+      summary: Bounds for assets
+      operationId: storesBounds
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Store Search API
+      description: |
+        Used to retrieve Bounds for assets.
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/search_query'
+        - $ref: '#/components/parameters/search_lat'
+        - $ref: '#/components/parameters/search_lng'
+        - $ref: '#/components/parameters/search_radius'
+      responses:
+        '200':
+          description: Bounds successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BoundsResponse'
+              examples:
+                default:
+                  summary: Retrieve Bounds nearby a latlng and given a radius
+                  value:
+                    bounds:
+                      west: -0.14408
+                      south: 51.5088
+                      east: -0.14408
+                      north: 51.5088
+        '401':
+          $ref: '#/paths/~1zones/get/responses/401'
+        '403':
+          $ref: '#/paths/~1zones/get/responses/403'
+        '429':
+          $ref: '#/paths/~1zones/get/responses/429'
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |-
+            curl -L -X GET 'https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY' \
+            -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+        - lang: python
+          label: Python
+          source: |
+            import requests
+
+            url = "https://api.woosmap.com/stores/search/bounds?lat=51.50976&lng=-0.145276&radius=300&key=YOUR_PUBLIC_API_KEY"
 
             payload={}
             headers = {
@@ -2284,8 +2358,7 @@ paths:
                   summary: 'Geocode Results for address `Place Jeanne-d''Arc` with components `country:FR`'
                   value:
                     results:
-                      - public_id: MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f
-                        types:
+                      - types:
                           - route
                         formatted_address: 'Place Jeanne D''Arc, 75013, Paris'
                         geometry:
@@ -3345,7 +3418,8 @@ paths:
               "destinations": "48.83534,2.368308",
               "units": "imperial",
               "elements": "duration_distance",
-              "method": "distance"
+              "method": "distance",
+              "departure_time": "now"
             }'
         - lang: python
           label: Python
@@ -3360,7 +3434,8 @@ paths:
                 "destinations": "48.83534,2.368308",
                 "units": "imperial",
                 "elements": "duration_distance",
-                "method": "distance"
+                "method": "distance",
+                "departure_time": "now"
             })
             headers = {
                 'content-type': 'application/json'
@@ -3378,7 +3453,8 @@ paths:
               "destinations": "48.83534,2.368308",
               "units": "imperial",
               "elements": "duration_distance",
-              "method": "distance"
+              "method": "distance",
+              "departure_time": "now"
             });
 
             var config = {
@@ -6943,8 +7019,7 @@ components:
             $ref: '#/components/schemas/LocalitiesGeocodeResponse'
       example:
         results:
-          - public_id: MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f
-            types:
+          - types:
               - route
             formatted_address: 'Place Jeanne D''Arc, 75013, Paris'
             geometry:
@@ -6982,20 +7057,12 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LocalitiesGeocodeTypes'
-        public_id:
-          description: Contains a unique ID for each suggestion. `public_id` will be empty for interpolated locations. Please use this ID to give feedbacks on results.
-          type: string
-          example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
         geometry:
           $ref: '#/components/schemas/LocalitiesAddressGeometry'
         status:
           $ref: '#/components/schemas/LocalitiesStatus'
         address_components:
           $ref: '#/components/schemas/AddressComponents'
-        distance:
-          description: 'When reverse geocoding, this field represents the distance (in meter) to the requested latlng'
-          type: number
-          example: 5.234
     AddressAutocompleteCollectionResponse:
       title: AddressAutocompleteCollectionResponse
       type: object
@@ -8368,6 +8435,31 @@ components:
           - dirty_name: Pepa SL Gracia
             country: ES
             merchant_id: 34J21189
+    BoundsResponse:
+      title: BoundsResponse
+      type: object
+      description: Message returned to a success Search Bounds request
+      properties:
+        bounds:
+          description: The bounds object
+          type: object
+          properties:
+            west:
+              description: The west longitude of bounds
+              type: number
+              example: -0.14408
+            south:
+              description: The south latitude of bounds
+              type: number
+              example: -51.5088
+            east:
+              description: The east longitude of bounds
+              type: number
+              example: -0.14408
+            north:
+              description: The north latitude of bounds
+              type: number
+              example: 51.5088
   securitySchemes:
     PrivateApiKeyAuth:
       description: 'A Private key generated specifically to authenticate API requests on server side. Required for Data management API. See how to [register a Private API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-private-api-key).'
