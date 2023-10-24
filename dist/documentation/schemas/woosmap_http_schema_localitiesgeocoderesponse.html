@@ -43,6 +43,26 @@
     <tr>
       <td align="left">
         <h4
+          id="LocalitiesGeocodeResponse-distance"
+          class="add-link schema-object-property-key"
+        >
+          <code>distance</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            When reverse geocoding, this field represents the distance (in
+            meter) to the requested latlng
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
           id="LocalitiesGeocodeResponse-formatted_address"
           class="add-link schema-object-property-key"
         >
@@ -84,6 +104,27 @@
           >LocalitiesAddressGeometry</a
         >
         for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="LocalitiesGeocodeResponse-public_id"
+          class="add-link schema-object-property-key"
+        >
+          <code>public_id</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains a unique ID for each suggestion.
+            <code>public_id</code> will be empty for interpolated locations.
+            Please use this ID to give feedbacks on results.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
