@@ -2358,7 +2358,8 @@ paths:
                   summary: 'Geocode Results for address `Place Jeanne-d''Arc` with components `country:FR`'
                   value:
                     results:
-                      - types:
+                      - public_id: MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f
+                        types:
                           - route
                         formatted_address: 'Place Jeanne D''Arc, 75013, Paris'
                         geometry:
@@ -7019,7 +7020,8 @@ components:
             $ref: '#/components/schemas/LocalitiesGeocodeResponse'
       example:
         results:
-          - types:
+          - public_id: MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f
+            types:
               - route
             formatted_address: 'Place Jeanne D''Arc, 75013, Paris'
             geometry:
@@ -7057,12 +7059,20 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LocalitiesGeocodeTypes'
+        public_id:
+          description: Contains a unique ID for each suggestion. `public_id` will be empty for interpolated locations. Please use this ID to give feedbacks on results.
+          type: string
+          example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
         geometry:
           $ref: '#/components/schemas/LocalitiesAddressGeometry'
         status:
           $ref: '#/components/schemas/LocalitiesStatus'
         address_components:
           $ref: '#/components/schemas/AddressComponents'
+        distance:
+          description: 'When reverse geocoding, this field represents the distance (in meter) to the requested latlng'
+          type: number
+          example: 5.234
     AddressAutocompleteCollectionResponse:
       title: AddressAutocompleteCollectionResponse
       type: object
