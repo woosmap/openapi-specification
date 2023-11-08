@@ -26,6 +26,19 @@ requests.
 
 ### Build and test
 
+To be able to build the spec locally, you'll need a github personal access token (mandatory for merging with auto generated spec such as Woosmap x What3Words).
+Generate one with repository access here: <https://github.com/settings/tokens>.
+To be able to generate responses, you'll need a woosmap public key and woosmap private key.
+Once generated, it's convenient to add these environment variables in the file `.bazelrc.user` at the root of the repository like this:
+
+```bash
+build --action_env GH_TOKEN=ghp_xxxxxxxxx
+run --action_env WOOSMAP_PUBLIC_API_KEY=woos-xxxxxxxx
+run --action_env WOOSMAP_PRIVATE_API_KEY=da4e8e73-xxxxx-xxxx
+```
+
+Then you'll be able to execute following command.
+
 1. `npm i`
 2. `npm run build`
 
@@ -51,13 +64,10 @@ requests.
 
    > **Note**: A single response can be updated similar to `npm run responses -- --only woosmap_http_address_details`.
 
-   > `WOOSMAP_PUBLIC_API_KEY=woos-xxx WOOSMAP_PRIVATE_API_KEY=xxxx npm run build:responses`
-
 5. `npm run samples` (optional)
 
    > **Note**: Generates snippets from requests to be integrated as xCodeSamples in path schemas.
-
-
+   
 4. `npm run test`
 
    Validate the OpenAPI Schema
