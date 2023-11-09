@@ -29,7 +29,7 @@ jq --arg spec "$SPEC" --arg output "$OUTPUT" '."input-file"= $spec | ."output-fi
   smusher-config.json > tmp-smusher-config.json && mv tmp-smusher-config.json smusher-config.json
 
 RELEASE_BINARY_SUFFIX="_darwin_arm64.tar.gz"
-ARCH="$(arch)"
+ARCH="$(uname -m)"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]
 then
