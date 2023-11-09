@@ -507,23 +507,15 @@ export const REQUESTS: SnippetRequest[] = [
                 path: "/stores/autocomplete/",
                 query: [
                     {
-                        key: "lat",
-                        value: "51.50976",
-                    },
-                    {
-                        key: "lng",
-                        value: "-0.145276",
-                    },
-                    {
-                        key: "radius",
-                        value: "50000",
+                        key: "language",
+                        value: "en",
                     },
                     {
                         key: "query",
                         value: "localized:street",
                     },
                     {
-                        key: "stores_by_page",
+                        key: "limit",
                         value: "3",
                     }
                 ],
