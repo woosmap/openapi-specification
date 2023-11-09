@@ -33,6 +33,7 @@ pkg_tar(
     srcs = [
         "//:{}.yml".format(BUNDLE_NAME),
         "//:{}.json".format(BUNDLE_NAME),
+        "//:merged-woosmap-openapi3.json",
         "//:woosmap-postman.json",
     ],
     strip_prefix = ".",
@@ -114,14 +115,14 @@ openapi2postmanv2(
     outs = ["woosmap-postman.json"],
     args = [
         "--spec",
-        "$(location //:woosmap-openapi3.json)",
+        "$(location //:merged-woosmap-openapi3.json)",
         "--pretty",
         "--options-config",
         "$(location //:postman-config.json)",
         "--output $@",
     ],
     data = [
-        "//:woosmap-openapi3.json",
+        "//:merged-woosmap-openapi3.json",
         "//:postman-config.json",
     ],
     visibility = ["//visibility:public"],
@@ -137,4 +138,16 @@ genrule(
     outs = ["parameters.yml"],
     cmd = "$(location //rules:parameters) --output $@ $(locations //specification:openapi3)",
     tools = ["//rules:parameters"],
+)
+
+genrule(
+    name = "smusher",
+    srcs =  [
+        "//:openapi-smusher.sh",
+        "//:woosmap-openapi3.json",
+        "//:smusher-config.json",
+    ],
+    outs = ["merged-woosmap-openapi3.json"],
+    cmd = "$(location openapi-smusher.sh) --spec $(location //:woosmap-openapi3.json) --output $@",
+    visibility = ["//visibility:public"],
 )

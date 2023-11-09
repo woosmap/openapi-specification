@@ -1,6 +1,33 @@
 #!/usr/bin/env bash
 set -e
 
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --spec*|-s*)
+      if [[ "$1" != *=* ]]; then shift; fi
+      SPEC="${1#*=}"
+      ;;
+    --output*|-o*)
+      if [[ "$1" != *=* ]]; then shift; fi
+      OUTPUT="${1#*=}"
+      ;;
+    *)
+      >&2 printf "Error: Invalid argument\n"
+      exit 1
+      ;;
+  esac
+  shift
+done
+
+if ! command -v jq &> /dev/null
+then
+    echo -e "\033[31m'jq' could not be found. It is a requirement."
+    exit 1
+fi
+
+jq --arg spec "$SPEC" --arg output "$OUTPUT" '."input-file"= $spec | ."output-file"= $output' \
+  smusher-config.json > tmp-smusher-config.json && mv tmp-smusher-config.json smusher-config.json
+
 RELEASE_BINARY_SUFFIX="_darwin_arm64.tar.gz"
 ARCH="$(arch)"
 
