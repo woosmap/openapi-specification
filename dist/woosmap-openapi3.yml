@@ -1903,12 +1903,8 @@ paths:
         - PrivateApiKeyAuth: []
       parameters:
         - $ref: '#/components/parameters/search_query'
-        - $ref: '#/components/parameters/search_lat'
-        - $ref: '#/components/parameters/search_lng'
-        - $ref: '#/components/parameters/search_radius'
-        - $ref: '#/components/parameters/search_encoded_polyline'
-        - $ref: '#/components/parameters/search_stores_by_page'
-        - $ref: '#/components/parameters/search_page'
+        - $ref: '#/components/parameters/search_language'
+        - $ref: '#/components/parameters/search_limit'
       responses:
         '200':
           description: Assets Successfully Replaced
@@ -1971,7 +1967,7 @@ paths:
         - lang: curl
           label: cURL
           source: |-
-            curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY' \
+            curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?language=en&query=localized%3Astreet&limit=3&key=YOUR_PUBLIC_API_KEY' \
             -H 'Referer: http://localhost'
         - lang: javascript
           label: JavaScript
@@ -1981,7 +1977,7 @@ paths:
               redirect: 'follow'
             };
 
-            fetch("https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY", requestOptions)
+            fetch("https://api.woosmap.com/stores/autocomplete/?language=en&query=localized%3Astreet&limit=3&key=YOUR_PUBLIC_API_KEY", requestOptions)
               .then(response => response.text())
               .then(result => console.log(result))
               .catch(error => console.log('error', error));
@@ -1990,7 +1986,7 @@ paths:
           source: |
             import requests
 
-            url = "https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY"
+            url = "https://api.woosmap.com/stores/autocomplete/?language=en&query=localized%3Astreet&limit=3&key=YOUR_PUBLIC_API_KEY"
 
             payload={}
             headers = {
@@ -3274,6 +3270,7 @@ paths:
         - $ref: '#/components/parameters/distance_units'
         - $ref: '#/components/parameters/distance_elements'
         - $ref: '#/components/parameters/distance_method'
+        - $ref: '#/components/parameters/distance_avoid'
         - $ref: '#/components/parameters/distance_departure_time'
       responses:
         '200':
@@ -5089,6 +5086,14 @@ components:
         type: string
       example: _p~iF~ps|U_ulLnnqC_mqNvxq`@
       in: query
+    search_language:
+      name: language
+      description: |
+        The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the `localized` name  property should be searched , if present, or else the default `name` property.
+      schema:
+        type: string
+      in: query
+      example: en
     search_lat:
       name: lat
       description: |
@@ -5096,6 +5101,16 @@ components:
       schema:
         type: number
       example: 5.2
+      in: query
+    search_limit:
+      name: limit
+      description: |
+        If your request returns a high number of assets you should use the `limit` parameters to return only the firsts matching elements (Default is 5, max is 50).
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 50
+      example: 15
       in: query
     search_lng:
       name: lng

@@ -4,21 +4,13 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 class="parameter-name" id="encoded_polyline">encoded_polyline</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
-    Find assets nearby an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) and inside a defined radius.
+    The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the `localized` name  property should be searched , if present, or else the default `name` property.
 
--   <h3 class="parameter-name" id="lat">lat</h3>
+-   <h3 class="parameter-name" id="limit">limit</h3>
 
-    Latitude bias for the results. Should be pass with `lng`.
-
--   <h3 class="parameter-name" id="lng">lng</h3>
-
-    Longitude bias for the results. Should be pass with `lat`.
-
--   <h3 class="parameter-name" id="page">page</h3>
-
-    Page number when accessing paginated assets feature collection
+    If your request returns a high number of assets you should use the `limit` parameters to return only the firsts matching elements (Default is 5, max is 50).
 
 -   <h3 class="parameter-name" id="query">query</h3>
 
@@ -78,14 +70,6 @@
 
     For compound clauses, you can use parentheses to group clauses together. For example: `(type:"type1" OR type:"type2") AND tag:"hockey"`
     You can use `NOT` operator to negates a search clause. For example: `not type:"type1"`
-
--   <h3 class="parameter-name" id="radius">radius</h3>
-
-    Unit in meters. Used to combine with lat/lng or encoded polyline. To bias the results within a given circular area. 3000 means to search for Assets that are at the most far from 3kms to search area (latlng or polyline).
-
--   <h3 class="parameter-name" id="stores_by_page">stores_by_page</h3>
-
-    If your request returns a high number of assets, the result will be paginated. If so, you can request assets by page using `page` and `stores_by_page` parameters (Default is 100, max is 300).
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

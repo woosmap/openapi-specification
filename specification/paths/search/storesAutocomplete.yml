@@ -11,12 +11,8 @@ security:
   - PrivateApiKeyAuth: []
 parameters:
   - $ref: "../../parameters/search/query.yml"
-  - $ref: "../../parameters/search/lat.yml"
-  - $ref: "../../parameters/search/lng.yml"
-  - $ref: "../../parameters/search/radius.yml"
-  - $ref: "../../parameters/search/encoded_polyline.yml"
-  - $ref: "../../parameters/search/stores_by_page.yml"
-  - $ref: "../../parameters/search/page.yml"
+  - $ref: "../../parameters/search/language.yml"
+  - $ref: "../../parameters/search/limit.yml"
 responses:
   "200":
     description: Assets Successfully Replaced

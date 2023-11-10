@@ -1490,22 +1490,10 @@
             "$ref": "#/components/parameters/search_query"
           },
           {
-            "$ref": "#/components/parameters/search_lat"
+            "$ref": "#/components/parameters/search_language"
           },
           {
-            "$ref": "#/components/parameters/search_lng"
-          },
-          {
-            "$ref": "#/components/parameters/search_radius"
-          },
-          {
-            "$ref": "#/components/parameters/search_encoded_polyline"
-          },
-          {
-            "$ref": "#/components/parameters/search_stores_by_page"
-          },
-          {
-            "$ref": "#/components/parameters/search_page"
+            "$ref": "#/components/parameters/search_limit"
           }
         ],
         "responses": {
@@ -1612,17 +1600,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?language=en&query=localized%3Astreet&limit=3&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
             "label": "JavaScript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/stores/autocomplete/?language=en&query=localized%3Astreet&limit=3&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/autocomplete/?lat=51.50976&lng=-0.145276&radius=50000&query=localized%3Astreet&stores_by_page=3&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/autocomplete/?language=en&query=localized%3Astreet&limit=3&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -3230,6 +3218,9 @@
           },
           {
             "$ref": "#/components/parameters/distance_method"
+          },
+          {
+            "$ref": "#/components/parameters/distance_avoid"
           },
           {
             "$ref": "#/components/parameters/distance_departure_time"
@@ -5123,6 +5114,15 @@
         "example": "_p~iF~ps|U_ulLnnqC_mqNvxq`@",
         "in": "query"
       },
+      "search_language": {
+        "name": "language",
+        "description": "The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the `localized` name  property should be searched , if present, or else the default `name` property.\n",
+        "schema": {
+          "type": "string"
+        },
+        "in": "query",
+        "example": "en"
+      },
       "search_lat": {
         "name": "lat",
         "description": "Latitude bias for the results. Should be pass with `lng`.\n",
@@ -5130,6 +5130,17 @@
           "type": "number"
         },
         "example": 5.2,
+        "in": "query"
+      },
+      "search_limit": {
+        "name": "limit",
+        "description": "If your request returns a high number of assets you should use the `limit` parameters to return only the firsts matching elements (Default is 5, max is 50).\n",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "example": 15,
         "in": "query"
       },
       "search_lng": {

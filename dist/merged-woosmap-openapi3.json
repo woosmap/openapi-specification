@@ -492,6 +492,15 @@
           "type": "string"
         }
       },
+      "search_language": {
+        "description": "The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the `localized` name  property should be searched , if present, or else the default `name` property.\n",
+        "example": "en",
+        "in": "query",
+        "name": "language",
+        "schema": {
+          "type": "string"
+        }
+      },
       "search_lat": {
         "description": "Latitude bias for the results. Should be pass with `lng`.\n",
         "example": 5.2,
@@ -499,6 +508,17 @@
         "name": "lat",
         "schema": {
           "type": "number"
+        }
+      },
+      "search_limit": {
+        "description": "If your request returns a high number of assets you should use the `limit` parameters to return only the firsts matching elements (Default is 5, max is 50).\n",
+        "example": 15,
+        "in": "query",
+        "name": "limit",
+        "schema": {
+          "maximum": 50,
+          "minimum": 1,
+          "type": "integer"
         }
       },
       "search_lng": {
@@ -6052,6 +6072,9 @@
             "$ref": "#/components/parameters/distance_method"
           },
           {
+            "$ref": "#/components/parameters/distance_avoid"
+          },
+          {
             "$ref": "#/components/parameters/distance_departure_time"
           }
         ],
@@ -8323,22 +8346,10 @@
             "$ref": "#/components/parameters/search_query"
           },
           {
-            "$ref": "#/components/parameters/search_lat"
+            "$ref": "#/components/parameters/search_language"
           },
           {
-            "$ref": "#/components/parameters/search_lng"
-          },
-          {
-            "$ref": "#/components/parameters/search_radius"
-          },
-          {
-            "$ref": "#/components/parameters/search_encoded_polyline"
-          },
-          {
-            "$ref": "#/components/parameters/search_stores_by_page"
-          },
-          {
-            "$ref": "#/components/parameters/search_page"
+            "$ref": "#/components/parameters/search_limit"
           }
         ],
         "responses": {
@@ -8463,17 +8474,17 @@
           {
             "label": "cURL",
             "lang": "curl",
-            "source": "curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?lat=51.50976\u0026lng=-0.145276\u0026radius=50000\u0026query=localized%3Astreet\u0026stores_by_page=3\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/stores/autocomplete/?language=en\u0026query=localized%3Astreet\u0026limit=3\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "label": "JavaScript",
             "lang": "javascript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/stores/autocomplete/?lat=51.50976\u0026lng=-0.145276\u0026radius=50000\u0026query=localized%3Astreet\u0026stores_by_page=3\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/stores/autocomplete/?language=en\u0026query=localized%3Astreet\u0026limit=3\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
           },
           {
             "label": "Python",
             "lang": "python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/autocomplete/?lat=51.50976\u0026lng=-0.145276\u0026radius=50000\u0026query=localized%3Astreet\u0026stores_by_page=3\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/stores/autocomplete/?language=en\u0026query=localized%3Astreet\u0026limit=3\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }

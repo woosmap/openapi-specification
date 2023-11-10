@@ -12,6 +12,10 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
+-   <h3 class="parameter-name" id="avoid">avoid</h3>
+
+    The list of features that you want to avoid. Valid values are `tolls`, `highways`, `ferries` or polygons coordinates whose vertex latlng are separated by a semicolon. To add multiple polygons, separate them with the `|` character.
+
 -   <h3 class="parameter-name" id="departure_time">departure_time</h3>
 
     By using this parameter, Distance will calculate the duration with traffic Specifies the date/time at which to base the calculations on for traffic purposes. Valid values are a timestamp (e.g. `1600799173` for the date:`22/09/2020 20:26:13`) or `now`.
