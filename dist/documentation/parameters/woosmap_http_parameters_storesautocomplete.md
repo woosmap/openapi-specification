@@ -6,7 +6,7 @@
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
-    The language code, using ISO 3166-1 Alpha-2 country codes, indicating in which language the `localized` name  property should be searched , if present, or else the default `name` property.
+    The language code, using ISO 639-2 Alpha-2 country codes, indicating in which language the `localized` name  property should be searched , if present, or else the default `name` property.
 
 -   <h3 class="parameter-name" id="limit">limit</h3>
 
