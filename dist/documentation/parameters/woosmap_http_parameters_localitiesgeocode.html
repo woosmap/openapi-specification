@@ -70,10 +70,14 @@
   <li>
     <h3 class="parameter-name" id="language">language</h3>
     <p>
-      The language code, using ISO 3166-1 Alpha-2 country codes, indicating in
+      The language code, using ISO 639-2 Alpha-2 country codes, indicating in
       which language the results should be returned, if possible. If language is
-      not supplied, the Localities service will use english as default language.
-      No language necessary for <code>postal_code</code> request.
+      not supplied, first <code>Accept-Language</code> of the browser will be
+      used. If neither the provided <code>language</code> or the
+      <code>Accept-Language</code> are known, the Localities service uses the
+      international default language (English). No <code>language</code> is
+      necessary for a postal_code request. According to requested language, only
+      parts of the address components might be translated.
     </p>
   </li>
   <li>
