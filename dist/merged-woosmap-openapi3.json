@@ -5611,6 +5611,7 @@
   "paths": {
     "/address/autocomplete/json": {
       "get": {
+        "deprecated": true,
         "description": "Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings.\n",
         "operationId": "addressAutocomplete",
         "parameters": [
@@ -5736,6 +5737,7 @@
     },
     "/address/details/json": {
       "get": {
+        "deprecated": true,
         "description": "Provides details of an address autocomplete suggestion (using the suggestion’s `public_id`).\n",
         "operationId": "addressDetails",
         "parameters": [
@@ -5878,6 +5880,7 @@
     },
     "/address/geocode/json": {
       "get": {
+        "deprecated": true,
         "description": "Provides details for an address or a geographic position. Either parameter `address` **or** `latlng` is required. Maximum of 25 queries per second (QPS)\n",
         "operationId": "addressGeocode",
         "parameters": [
@@ -10862,7 +10865,7 @@
       "name": "Localities API"
     },
     {
-      "description": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
+      "description": "Woosmap Address API is a web service that returns addresses and other geographical places in response to an HTTP request. Request is done over HTTPS using GET. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n\u003e**⚠️ This API has been deprecated in favour of Localities API**\n",
       "externalDocs": {
         "url": "https://developers.woosmap.com/products/address-api/get-started/"
       },
@@ -10876,7 +10879,7 @@
       "name": "Distance API"
     },
     {
-      "description": "Woosmap Traffic API (Early Access) is a service that provides travel distances and durations with traffic, on a Worldwide scale. Compared to the Woosmap Distance API, this API uses traffic information when returning duration times.  Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).\n",
+      "description": "Woosmap Traffic API (Early Access) is a service that provides travel distances and durations with traffic, on a Worldwide scale. Compared to the Woosmap Distance API, this API uses traffic information when returning duration times.  Request is done over HTTPS using GET or POST. Response is formatted as JSON. You must specify a key in your request, included as the value of a `key` parameter for your public key or `private_key` for your private key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.woosmap.com/support/api-keys/).  \n\u003e**⚠️ This API has been deprecated in favour of Distance API**\n",
       "externalDocs": {
         "url": "https://developers.woosmap.com/products/traffic-api/get-started/"
       },
