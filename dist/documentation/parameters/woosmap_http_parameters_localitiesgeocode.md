@@ -32,6 +32,10 @@
 
     The latlng parameter is used for reverse geocoding, it’s required if the `address` parameter is missing.
 
+-   <h3 class="parameter-name" id="list_sub_buildings">list_sub_buildings</h3>
+
+    When latlng parameter is used for reverse geocoding, setting `list_sub_building=true` allows to retrieve all addresses at the same location for a common street number or building. Results may contain an additional key "sub_buildings" with "public_id" and "description" values for every addresses at the same location sharing the same address components.
+
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a data-label="openapi-github-woosmap-http-parameters-localitiesgeocode" data-action="edit" style="margin-left: 5px;" href="https://github.com/woosmap/openapi-specification/tree/main/specification/parameters" title="Edit on GitHub">✎ Edit</a>
