@@ -23,3 +23,8 @@ properties:
     description: When reverse geocoding, this field represents the distance (in meter) to the requested latlng
     type: number
     example: 5.234
+  sub_buildings:
+    description: When reverse geocoding with `list_sub_buildings=true`, this field will contain a list of precise addresses that can be found at that location, i.e. all flats within a building.
+    type: array
+    items:
+      $ref: "./LocalitiesAddressSummary.yml"

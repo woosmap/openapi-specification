@@ -414,6 +414,27 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_localities_reverse_geocode_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/geocode",
+                query: [
+                    {
+                        key: "latlng",
+                        value: "51.52089223979333,-0.195460973340401",
+                    },
+                    {
+                        key: "list_sub_buildings",
+                        value: "true"
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_merchants_brand",
         request: new Request({
             url: new Url({

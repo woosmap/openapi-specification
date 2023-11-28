@@ -11,6 +11,7 @@ security:
 parameters:
   - $ref: "../../parameters/localities/address.yml"
   - $ref: "../../parameters/localities/latlng.yml"
+  - $ref: "../../parameters/localities/list_sub_buildings.yml"
   - $ref: "../../parameters/localities/components.yml"
   - $ref: "../../parameters/localities/language.yml"
   - $ref: "../../parameters/localities/fields.yml"
@@ -25,10 +26,14 @@ responses:
         schema:
           $ref: "../../schemas/LocalitiesGeocodeCollectionResponse.yml"
         examples:
-          default:
+          geocode:
             summary: Geocode Results for address `Place Jeanne-d'Arc` with components `country:FR`
             value:
               $ref: "../../responses/woosmap_http_localities_geocode_collection_response.yml"
+          reverse:
+            summary: Reverse Geocode Results for latlng `51.52089223979333, -0.195460973340401` with list_sub_buildings `true`
+            value:
+              $ref: "../../responses/woosmap_http_localities_reverse_geocode_collection_response.yml"
 
   "401":
     $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
