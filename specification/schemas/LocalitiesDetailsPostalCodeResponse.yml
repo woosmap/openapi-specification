@@ -61,15 +61,6 @@ properties:
             type: array
             description: List of addresses
             items:
-              type: object
-              properties:
-                description:
-                  type: string
-                  description: The formatted address name.
-                  example: "Postmasters Redirection Service, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA"
-                public_id:
-                  type: string
-                  description: The unique public id attached to this address used to request details information.
-                  example: "DuxKg3/i5t1AuSt1qvwaiSgd+gI="
+              $ref: "./LocalitiesAddressSummary.yml"
 example:
   $ref: "../responses/woosmap_http_localities_details_postal_code_response.yml"

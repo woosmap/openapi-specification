@@ -410,6 +410,15 @@
           "type": "string"
         }
       },
+      "localities_list_sub_buildings": {
+        "description": "When latlng parameter is used for reverse geocoding, setting `list_sub_building=true` allows to retrieve all addresses at the same location for a common street number or building. Results may contain an additional key \"sub_buildings\" with \"public_id\" and \"description\" values for every addresses at the same location sharing the same address components.\n",
+        "example": true,
+        "in": "query",
+        "name": "list_sub_buildings",
+        "schema": {
+          "type": "boolean"
+        }
+      },
       "localities_location": {
         "description": "This parameter is used to add a bias to the autocomplete feature. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.\n",
         "example": "5.2,-2.3",
@@ -1115,6 +1124,26 @@
         "example": "OK",
         "title": "AddressStatus",
         "type": "string"
+      },
+      "AddressSummary": {
+        "properties": {
+          "description": {
+            "description": "Human readable address",
+            "title": "Description",
+            "type": "string"
+          },
+          "public_id": {
+            "description": "Public ID of address listed as sub_building",
+            "title": "Public Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "public_id",
+          "description"
+        ],
+        "title": "AddressSummary",
+        "type": "object"
       },
       "AddressTypes": {
         "description": "Contains the type of result.",
@@ -3815,6 +3844,64 @@
         "type": "object"
       },
       "LiteAddressResponse": {
+        "example": {
+          "results": [
+            {
+              "description": "Radway House, Alfred Road, London, W2 5ER",
+              "public_id": "",
+              "status": null,
+              "sub_buildings": [
+                {
+                  "description": "Flat 1, Radway House, Alfred Road, London, W2 5ER",
+                  "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9faitia1pNNURnOWYvQmRjMUdweXl5SjdLZUZnPQ=="
+                },
+                {
+                  "description": "Flat 2, Radway House, Alfred Road, London, W2 5ER",
+                  "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fbTRoZVpxYkhBYVVXSytqek04UGtGQ1VLTVI0PQ=="
+                }
+              ],
+              "types": [
+                "address"
+              ]
+            },
+            {
+              "description": "Astley House, Alfred Road, London, W2 5EX",
+              "public_id": "",
+              "status": "not_yet_built",
+              "sub_buildings": [
+                {
+                  "description": "Flat 1, Astley House, Alfred Road, London, W2 5EX",
+                  "public_id": "N3VCclhUODduWjJxd2NCSUdFclJ6SnRseGxrPV9fSTBKM1YxOFBBWEJjRVNKb1J0T3hNTFNiLzhFPQ=="
+                },
+                {
+                  "description": "Flat 2, Astley House, Alfred Road, London, W2 5EX",
+                  "public_id": "N3VCclhUODduWjJxd2NCSUdFclJ6SnRseGxrPV9fN3VCclhUODduWjJxd2NCSUdFclJ6SnRseGxrPQ=="
+                }
+              ],
+              "types": [
+                "address"
+              ]
+            },
+            {
+              "description": "65 Alfred Road, London, W2 5EU",
+              "public_id": "",
+              "status": null,
+              "sub_buildings": [
+                {
+                  "description": "Blaiz Ltd, 65 Alfred Road, London, W2 5EU",
+                  "public_id": "MUVBZWttTlo4OUYxL2dQWmJteDdFV2VidmVvPV9fMUVBZWttTlo4OUYxL2dQWmJteDdFV2VidmVvPQ=="
+                },
+                {
+                  "description": "Carnot Ltd, 65 Alfred Road, London, W2 5EU",
+                  "public_id": "MUVBZWttTlo4OUYxL2dQWmJteDdFV2VidmVvPV9fRDRPb0VLd0UvNEZYMlpLR21EMC9xRGQvMUZJPQ=="
+                }
+              ],
+              "types": [
+                "address"
+              ]
+            }
+          ]
+        },
         "properties": {
           "results": {
             "description": "Results",
@@ -3833,7 +3920,7 @@
       },
       "LiteAddressResult": {
         "properties": {
-          "formatted_address": {
+          "description": {
             "description": "Human readable address",
             "title": "Formatted Address",
             "type": "string"
@@ -3842,6 +3929,22 @@
             "description": "Public ID of the POI",
             "title": "Public Id",
             "type": "string"
+          },
+          "status": {
+            "description": "Address Status",
+            "enum": [
+              "not_yet_built"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "sub_buildings": {
+            "description": "list of specific addresses at that location",
+            "items": {
+              "$ref": "#/components/schemas/AddressSummary"
+            },
+            "title": "Sub Buildings",
+            "type": "array"
           },
           "types": {
             "description": "Address Types",
@@ -3860,7 +3963,7 @@
         },
         "required": [
           "types",
-          "formatted_address",
+          "description",
           "public_id"
         ],
         "title": "LiteAddressResult",
@@ -3896,6 +3999,31 @@
           }
         },
         "title": "LocalitiesAddressGeometry",
+        "type": "object"
+      },
+      "LocalitiesAddressSummary": {
+        "description": "A short description of an address",
+        "example": {
+          "description": "Flat 1, Radway House, Alfred Road, London, W2 5ER",
+          "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9faitia1pNNURnOWYvQmRjMUdweXl5SjdLZUZnPQ=="
+        },
+        "properties": {
+          "description": {
+            "description": "A human readable description of the address",
+            "example": "Flat 1, Radway House, Alfred Road, London, W2 5ER",
+            "type": "string"
+          },
+          "public_id": {
+            "description": "The public_id of the address can be used to gather details on that specific address",
+            "example": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9faitia1pNNURnOWYvQmRjMUdweXl5SjdLZUZnPQ==",
+            "type": "string"
+          }
+        },
+        "required": [
+          "public_id",
+          "description"
+        ],
+        "title": "LocalitiesAddressSummary",
         "type": "object"
       },
       "LocalitiesAutocompleteCollectionResponse": {
@@ -4346,19 +4474,7 @@
                   "list": {
                     "description": "List of addresses",
                     "items": {
-                      "properties": {
-                        "description": {
-                          "description": "The formatted address name.",
-                          "example": "Postmasters Redirection Service, House Of Commons Palace Of Westminster, Parliament Square, London, SW1A 0AA",
-                          "type": "string"
-                        },
-                        "public_id": {
-                          "description": "The unique public id attached to this address used to request details information.",
-                          "example": "DuxKg3/i5t1AuSt1qvwaiSgd+gI=",
-                          "type": "string"
-                        }
-                      },
-                      "type": "object"
+                      "$ref": "#/components/schemas/LocalitiesAddressSummary"
                     },
                     "type": "array"
                   },
@@ -4523,6 +4639,13 @@
           },
           "status": {
             "$ref": "#/components/schemas/LocalitiesStatus"
+          },
+          "sub_buildings": {
+            "description": "When reverse geocoding with `list_sub_buildings=true`, this field will contain a list of precise addresses that can be found at that location, i.e. all flats within a building.",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesAddressSummary"
+            },
+            "type": "array"
           },
           "types": {
             "description": "An array containing the types of the result",
@@ -7396,6 +7519,9 @@
             "$ref": "#/components/parameters/localities_latlng"
           },
           {
+            "$ref": "#/components/parameters/localities_list_sub_buildings"
+          },
+          {
             "$ref": "#/components/parameters/localities_components"
           },
           {
@@ -7416,7 +7542,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "default": {
+                  "geocode": {
                     "summary": "Geocode Results for address `Place Jeanne-d'Arc` with components `country:FR`",
                     "value": {
                       "results": [
@@ -7463,6 +7589,153 @@
                           "public_id": "MCtGVFlkLzFNc2lCU3hMQUtxKy9GaXl5K3VNPV9f",
                           "types": [
                             "route"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "reverse": {
+                    "summary": "Reverse Geocode Results for latlng `51.52089223979333, -0.195460973340401` with list_sub_buildings `true`",
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "United Kingdom",
+                              "short_name": "GB",
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ]
+                            },
+                            {
+                              "long_name": "City of London",
+                              "short_name": "City of London",
+                              "types": [
+                                "administrative_area_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "London W",
+                              "short_name": "London W",
+                              "types": [
+                                "district"
+                              ]
+                            },
+                            {
+                              "long_name": "City of London",
+                              "short_name": "City of London",
+                              "types": [
+                                "county"
+                              ]
+                            },
+                            {
+                              "long_name": "London",
+                              "short_name": "London",
+                              "types": [
+                                "locality"
+                              ]
+                            },
+                            {
+                              "long_name": "W2 5ER",
+                              "short_name": "W2 5ER",
+                              "types": [
+                                "postal_codes"
+                              ]
+                            },
+                            {
+                              "long_name": "Alfred Road",
+                              "short_name": "Alfred Road",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Radway House",
+                              "short_name": "Radway House",
+                              "types": [
+                                "premise"
+                              ]
+                            }
+                          ],
+                          "distance": 28.62347934634507,
+                          "formatted_address": "Radway House, Alfred Road, London, W2 5ER",
+                          "geometry": {
+                            "location": {
+                              "lat": 51.5211258,
+                              "lng": -0.1956346
+                            },
+                            "location_type": "ROOFTOP"
+                          },
+                          "public_id": "",
+                          "sub_buildings": [
+                            {
+                              "description": "Flat 1, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9faitia1pNNURnOWYvQmRjMUdweXl5SjdLZUZnPQ=="
+                            },
+                            {
+                              "description": "Flat 2, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fbTRoZVpxYkhBYVVXSytqek04UGtGQ1VLTVI0PQ=="
+                            },
+                            {
+                              "description": "Flat 3, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fcmY1MHV6aE5kVytLWWZLV3JabzFzR2lnbThzPQ=="
+                            },
+                            {
+                              "description": "Flat 4, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fajlaWXJJUDFKSmI1Y0dpNElDanBQejF2YUg4PQ=="
+                            },
+                            {
+                              "description": "Flat 5, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fbkdEZTNOODZNL0VlWGtoR0pSa2tBS1NMYndVPQ=="
+                            },
+                            {
+                              "description": "Flat 6, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fTGxlWUlKN2NhU1JXcTBuSEs1RExiamliNlpNPQ=="
+                            },
+                            {
+                              "description": "Flat 7, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9feVZXa05ISjhzVGNHK2NQUHFpNlFIUWgvSnpJPQ=="
+                            },
+                            {
+                              "description": "Flat 8, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fTVc5NldSeWpuOENUS2xST21vZzdnNGxGQldrPQ=="
+                            },
+                            {
+                              "description": "Flat 9, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fN3RkdE9HeHBwT2M5R1hQMUFwNDJUc3NwRklZPQ=="
+                            },
+                            {
+                              "description": "Flat 10, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fR2RVRHpoYll4a2RlTldjLzF3NVNFTXNZYzlFPQ=="
+                            },
+                            {
+                              "description": "Flat 11, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fL3FXbnVZU2h4bjAwMDNKK3hJeU9OL3lnemFzPQ=="
+                            },
+                            {
+                              "description": "Flat 12, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fVVVCUWhpNVJQWWk2eTl1WFBTVTRmK3Zma3VBPQ=="
+                            },
+                            {
+                              "description": "Flat 13, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fV2hSUDNadnFMN3ZzaWJ6UFd2MWM3aW1qT3hBPQ=="
+                            },
+                            {
+                              "description": "Flat 14, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fcWxGbFRlcE1TVStZVElodzFSdVhiTGxZTXl3PQ=="
+                            },
+                            {
+                              "description": "Flat 15, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fYjR5VHRXMmZTQ0FOMGwwZHJNaFh5TFRnVHlnPQ=="
+                            },
+                            {
+                              "description": "Flat 16, Radway House, Alfred Road, London, W2 5ER",
+                              "public_id": "Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fNmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PQ=="
+                            }
+                          ],
+                          "types": [
+                            "address"
                           ]
                         }
                       ]

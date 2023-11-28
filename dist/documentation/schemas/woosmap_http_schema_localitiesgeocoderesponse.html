@@ -153,6 +153,38 @@
     <tr>
       <td align="left">
         <h4
+          id="LocalitiesGeocodeResponse-sub_buildings"
+          class="add-link schema-object-property-key"
+        >
+          <code>sub_buildings</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        Array&#x3C;<a
+          href="#LocalitiesAddressSummary"
+          title="LocalitiesAddressSummary"
+          >LocalitiesAddressSummary</a
+        >>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            When reverse geocoding with <code>list_sub_buildings=true</code>,
+            this field will contain a list of precise addresses that can be
+            found at that location, i.e. all flats within a building.
+          </p>
+          <p>
+            See
+            <a href="#LocalitiesAddressSummary">LocalitiesAddressSummary</a> for
+            more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
           id="LocalitiesGeocodeResponse-types"
           class="add-link schema-object-property-key"
         >
