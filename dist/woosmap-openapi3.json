@@ -7457,45 +7457,10 @@
       "LocalitiesAutocompleteMatchedFields": {
         "title": "LocalitiesAutocompleteMatchedFields",
         "type": "object",
-        "description": "Contains a set of substrings for each field (`description`, `name`, `admin_0`, `admin_1`, `admin_2`, `postal_town`) that match elements in the `input`. It can be used to highlight those substrings. Each substring is identified by an `offset` and a `length`.`",
+        "description": "Contains a set of substrings in the `description` field that match elements in the `input`. It can be used to highlight those substrings. Each substring is identified by an `offset` and a `length`.`",
         "properties": {
           "description": {
             "description": "match substrings for localities `description`",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            }
-          },
-          "name": {
-            "description": "match substrings for `name`",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            }
-          },
-          "admin_0": {
-            "description": "match substrings for `admin_0`",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            }
-          },
-          "admin_1": {
-            "description": "match substrings for `admin_1`",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            }
-          },
-          "admin_2": {
-            "description": "match substrings for `admin_2`",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            }
-          },
-          "postal_town": {
-            "description": "match substrings for `postal_town`",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MatchedSubstring"
@@ -7528,100 +7493,13 @@
             "description": "On the specific territory of United Kingdom, Localities autocomplete request can return the additional attribute `has_addresses` for a postal code, which indicates if a postal code bears addresses. When `has_addresses` is `true`, it is possible to display a list of the available addresses by requesting `details` with the Localities `public_id`. To get the details of an address you will need to request again `/details` endpoint passing in the dedicated address `public_id`.\n",
             "type": "boolean",
             "example": true
-          },
-          "name": {
-            "description": "contains the human-readable name for the returned result. For `postal_code` results, this is directly the postal code value. For `locality` results, name in the specified language is returns. If no language is specified, default name (country local language) is returned.",
-            "type": "string",
-            "example": "London, UK",
-            "deprecated": true
-          },
-          "location": {
-            "type": "object",
-            "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
-            "properties": {
-              "lat": {
-                "type": "number",
-                "description": "Latitude in decimal degrees"
-              },
-              "lng": {
-                "type": "number",
-                "description": "Longitude in decimal degrees"
-              }
-            },
-            "deprecated": true
-          },
-          "admin_0": {
-            "description": "Contains the country name.",
-            "type": "string",
-            "example": "Italy",
-            "deprecated": true
-          },
-          "admin_1": {
-            "description": "Contains the administrative level including the suggestion.",
-            "type": "string",
-            "example": "Milano",
-            "deprecated": true
-          },
-          "admin_2": {
-            "description": "For small locality type points of interests (suburbs, neighborhoods, villages), contains the municipality it belongs to.",
-            "type": "string",
-            "example": "Borgo Santa Caterina",
-            "deprecated": true
-          },
-          "viewpoint": {
-            "title": "LocalitiesViewpoint",
-            "type": "object",
-            "description": "Contains the bounds for the locality",
-            "deprecated": true
-          },
-          "postal_codes": {
-            "description": "Contains an array of known postal codes for a locality (only available on *suggestions* with country:`fr` for France or `it` for Italy and type: `locality`).\n",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "34000",
-              "34070",
-              "34080",
-              "34090"
-            ],
-            "deprecated": true
-          },
-          "postal_town": {
-            "description": "Contains the larger city (or the post office city) for a `postal_code` (only available on  suggestions with type: `postal_code`).\n",
-            "type": "string",
-            "example": "London",
-            "deprecated": true
-          },
-          "locality": {
-            "type": "string",
-            "description": "The parent locality when retrieving a POI. often empty.",
-            "deprecated": true
           }
         },
         "example": {
           "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
           "description": "London, City of London, United Kingdom",
-          "name": "London",
           "type": "locality",
-          "location": {
-            "lat": 51.50732,
-            "lng": -0.12764746
-          },
           "matched_substrings": {
-            "name": [
-              {
-                "offset": 0,
-                "length": 6
-              }
-            ],
-            "admin_1": [
-              {
-                "offset": 8,
-                "length": 6
-              }
-            ],
             "description": [
               {
                 "offset": 0,
@@ -7632,10 +7510,7 @@
                 "length": 6
               }
             ]
-          },
-          "admin_1": "City of London",
-          "locality": "",
-          "admin_0": "United Kingdom"
+          }
         }
       },
       "LocalitiesDetailsPostalCodeResponse": {

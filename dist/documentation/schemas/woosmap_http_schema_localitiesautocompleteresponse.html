@@ -20,63 +20,6 @@
     <tr>
       <td align="left">
         <h4
-          id="LocalitiesAutocompleteResponse-admin_0"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>admin_0</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <aside class="deprecated"><code>admin_0</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>Contains the country name.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-admin_1"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>admin_1</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <aside class="deprecated"><code>admin_1</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>Contains the administrative level including the suggestion.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-admin_2"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>admin_2</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <aside class="deprecated"><code>admin_2</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>
-            For small locality type points of interests (suburbs, neighborhoods,
-            villages), contains the municipality it belongs to.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
           id="LocalitiesAutocompleteResponse-description"
           class="add-link schema-object-property-key"
         >
@@ -125,45 +68,6 @@
     <tr>
       <td align="left">
         <h4
-          id="LocalitiesAutocompleteResponse-locality"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>locality</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <aside class="deprecated"><code>locality</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>The parent locality when retrieving a POI. often empty.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-location"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>location</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>object</td>
-      <td>
-        <aside class="deprecated"><code>location</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>
-            An object describing a specific location with Latitude and Longitude
-            in decimal degrees.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
           id="LocalitiesAutocompleteResponse-matched_substrings"
           class="add-link schema-object-property-key"
         >
@@ -186,79 +90,6 @@
           >LocalitiesAutocompleteMatchedFields</a
         >
         for more information.
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-name"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>name</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <aside class="deprecated"><code>name</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>
-            contains the human-readable name for the returned result. For
-            <code>postal_code</code> results, this is directly the postal code
-            value. For <code>locality</code> results, name in the specified
-            language is returns. If no language is specified, default name
-            (country local language) is returned.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-postal_codes"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>postal_codes</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>Array&#x3C;string></td>
-      <td>
-        <aside class="deprecated">
-          <code>postal_codes</code> is deprecated.
-        </aside>
-        <div class="nonref-property-description">
-          <p>
-            Contains an array of known postal codes for a locality (only
-            available on <em>suggestions</em> with country:<code>fr</code> for
-            France or <code>it</code> for Italy and type:
-            <code>locality</code>).
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-postal_town"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>postal_town</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <aside class="deprecated">
-          <code>postal_town</code> is deprecated.
-        </aside>
-        <div class="nonref-property-description">
-          <p>
-            Contains the larger city (or the post office city) for a
-            <code>postal_code</code> (only available on suggestions with type:
-            <code>postal_code</code>).
-          </p>
-        </div>
       </td>
     </tr>
     <tr>
@@ -301,24 +132,6 @@
         for more information.
       </td>
     </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="LocalitiesAutocompleteResponse-viewpoint"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>viewpoint</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>object</td>
-      <td>
-        <aside class="deprecated"><code>viewpoint</code> is deprecated.</aside>
-        <div class="nonref-property-description">
-          <p>Contains the bounds for the locality</p>
-        </div>
-      </td>
-    </tr>
   </tbody>
 </table>
 <h4 class="schema-object-example" id="LocalitiesAutocompleteResponse-example">
@@ -328,25 +141,8 @@
 {
   "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
   "description": "London, City of London, United Kingdom",
-  "name": "London",
   "type": "locality",
-  "location": {
-    "lat": 51.50732,
-    "lng": -0.12764746
-  },
   "matched_substrings": {
-    "name": [
-      {
-        "offset": 0,
-        "length": 6
-      }
-    ],
-    "admin_1": [
-      {
-        "offset": 8,
-        "length": 6
-      }
-    ],
     "description": [
       {
         "offset": 0,
@@ -357,10 +153,7 @@
         "length": 6
       }
     ]
-  },
-  "admin_1": "City of London",
-  "locality": "",
-  "admin_0": "United Kingdom"
+  }
 }</pre
 >
 <p style="text-align: right; font-size: smaller">
