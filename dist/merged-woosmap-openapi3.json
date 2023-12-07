@@ -4105,45 +4105,10 @@
         "type": "object"
       },
       "LocalitiesAutocompleteMatchedFields": {
-        "description": "Contains a set of substrings for each field (`description`, `name`, `admin_0`, `admin_1`, `admin_2`, `postal_town`) that match elements in the `input`. It can be used to highlight those substrings. Each substring is identified by an `offset` and a `length`.`",
+        "description": "Contains a set of substrings in the `description` field that match elements in the `input`. It can be used to highlight those substrings. Each substring is identified by an `offset` and a `length`.`",
         "properties": {
-          "admin_0": {
-            "description": "match substrings for `admin_0`",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            },
-            "type": "array"
-          },
-          "admin_1": {
-            "description": "match substrings for `admin_1`",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            },
-            "type": "array"
-          },
-          "admin_2": {
-            "description": "match substrings for `admin_2`",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            },
-            "type": "array"
-          },
           "description": {
             "description": "match substrings for localities `description`",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            },
-            "type": "array"
-          },
-          "name": {
-            "description": "match substrings for `name`",
-            "items": {
-              "$ref": "#/components/schemas/MatchedSubstring"
-            },
-            "type": "array"
-          },
-          "postal_town": {
-            "description": "match substrings for `postal_town`",
             "items": {
               "$ref": "#/components/schemas/MatchedSubstring"
             },
@@ -4156,21 +4121,8 @@
       "LocalitiesAutocompleteResponse": {
         "description": "Attributes describing a locality. Not all attributes will be available for all locality types.",
         "example": {
-          "admin_0": "United Kingdom",
-          "admin_1": "City of London",
           "description": "London, City of London, United Kingdom",
-          "locality": "",
-          "location": {
-            "lat": 51.50732,
-            "lng": -0.12764746
-          },
           "matched_substrings": {
-            "admin_1": [
-              {
-                "length": 6,
-                "offset": 8
-              }
-            ],
             "description": [
               {
                 "length": 6,
@@ -4180,37 +4132,12 @@
                 "length": 6,
                 "offset": 16
               }
-            ],
-            "name": [
-              {
-                "length": 6,
-                "offset": 0
-              }
             ]
           },
-          "name": "London",
           "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
           "type": "locality"
         },
         "properties": {
-          "admin_0": {
-            "deprecated": true,
-            "description": "Contains the country name.",
-            "example": "Italy",
-            "type": "string"
-          },
-          "admin_1": {
-            "deprecated": true,
-            "description": "Contains the administrative level including the suggestion.",
-            "example": "Milano",
-            "type": "string"
-          },
-          "admin_2": {
-            "deprecated": true,
-            "description": "For small locality type points of interests (suburbs, neighborhoods, villages), contains the municipality it belongs to.",
-            "example": "Borgo Santa Caterina",
-            "type": "string"
-          },
           "description": {
             "description": "Concatenation of `name`, `admin_1`, `admin_0` to be used as suggestion in drop down list if needed. The description can vary depending on the type requested.",
             "example": "20121, Milano, Italy",
@@ -4221,54 +4148,8 @@
             "example": true,
             "type": "boolean"
           },
-          "locality": {
-            "deprecated": true,
-            "description": "The parent locality when retrieving a POI. often empty.",
-            "type": "string"
-          },
-          "location": {
-            "deprecated": true,
-            "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
-            "properties": {
-              "lat": {
-                "description": "Latitude in decimal degrees",
-                "type": "number"
-              },
-              "lng": {
-                "description": "Longitude in decimal degrees",
-                "type": "number"
-              }
-            },
-            "type": "object"
-          },
           "matched_substrings": {
             "$ref": "#/components/schemas/LocalitiesAutocompleteMatchedFields"
-          },
-          "name": {
-            "deprecated": true,
-            "description": "contains the human-readable name for the returned result. For `postal_code` results, this is directly the postal code value. For `locality` results, name in the specified language is returns. If no language is specified, default name (country local language) is returned.",
-            "example": "London, UK",
-            "type": "string"
-          },
-          "postal_codes": {
-            "deprecated": true,
-            "description": "Contains an array of known postal codes for a locality (only available on *suggestions* with country:`fr` for France or `it` for Italy and type: `locality`).\n",
-            "example": [
-              "34000",
-              "34070",
-              "34080",
-              "34090"
-            ],
-            "items": {
-              "type": "string"
-            },
-            "type": "array"
-          },
-          "postal_town": {
-            "deprecated": true,
-            "description": "Contains the larger city (or the post office city) for a `postal_code` (only available on  suggestions with type: `postal_code`).\n",
-            "example": "London",
-            "type": "string"
           },
           "public_id": {
             "description": "Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.",
@@ -4277,12 +4158,6 @@
           },
           "type": {
             "$ref": "#/components/schemas/LocalitiesTypes"
-          },
-          "viewpoint": {
-            "deprecated": true,
-            "description": "Contains the bounds for the locality",
-            "title": "LocalitiesViewpoint",
-            "type": "object"
           }
         },
         "title": "LocalitiesAutocompleteResponse",

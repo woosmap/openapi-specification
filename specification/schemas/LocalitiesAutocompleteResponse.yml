@@ -23,59 +23,5 @@ properties:
       the dedicated address `public_id`.
     type: boolean
     example: true
-  name:
-    description: contains the human-readable name for the returned result. For `postal_code` results, this is directly the postal code value. For `locality` results, name in the specified language is returns. If no language is specified, default name (country local language) is returned.
-    type: string
-    example: "London, UK"
-    deprecated: true
-  location:
-    type: object
-    description: An object describing a specific location with Latitude and Longitude in decimal degrees.
-    properties:
-      lat:
-        type: number
-        description: Latitude in decimal degrees
-      lng:
-        type: number
-        description: Longitude in decimal degrees
-    deprecated: true
-  admin_0:
-    description: Contains the country name.
-    type: string
-    example: Italy
-    deprecated: true
-  admin_1:
-    description: Contains the administrative level including the suggestion.
-    type: string
-    example: Milano
-    deprecated: true
-  admin_2:
-    description: For small locality type points of interests (suburbs, neighborhoods, villages), contains the municipality it belongs to.
-    type: string
-    example: "Borgo Santa Caterina"
-    deprecated: true
-  viewpoint:
-    title: LocalitiesViewpoint
-    type: object
-    description: Contains the bounds for the locality
-    deprecated: true
-  postal_codes:
-    description: >
-      Contains an array of known postal codes for a locality (only available on *suggestions* with country:`fr` for France or `it` for Italy and type: `locality`).
-    type: array
-    items:
-      type: string
-    example: [ "34000", "34070", "34080", "34090" ]
-    deprecated: true
-  postal_town:
-    description: >
-      Contains the larger city (or the post office city) for a `postal_code` (only available on  suggestions with type: `postal_code`).
-    type: string
-    example: London
-    deprecated: true
-  locality:
-    type: string
-    description: The parent locality when retrieving a POI. often empty.
-    deprecated: true
 example:
   $ref: "../responses/woosmap_http_localities_autocomplete_response.yml"
