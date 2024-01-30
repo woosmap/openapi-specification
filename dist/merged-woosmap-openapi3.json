@@ -1113,6 +1113,27 @@
         "title": "AddressGeometry",
         "type": "object"
       },
+      "AddressQuery": {
+        "properties": {
+          "language": {
+            "default": "en",
+            "description": "A supported address language as an ISO 639-1 2 letter code.",
+            "title": "Language",
+            "type": "string"
+          },
+          "words": {
+            "description": "A 3 word address as a string. It must be three words separated with dots or a japanese middle dot character (・). Words separated by spaces will be rejected. Optionally, the 3 word address can be prefixed with /// (which would be encoded as %2F%2F%2F)",
+            "example": "couch.spotted.amended",
+            "title": "Words",
+            "type": "string"
+          }
+        },
+        "required": [
+          "words"
+        ],
+        "title": "AddressQuery",
+        "type": "object"
+      },
       "AddressStatus": {
         "description": "Returns more info on if the request was successful or not, valid responses.\n  * `OK` indicates the response contains a valid result.\n  * `INVALID_REQUEST` indicates that the provided request was invalid (e.g. wrong URL syntax).\n  * `REQUEST_DENIED` indicates that the service denied use of the Address API (e.g. wrong API Key, wrong/no referer, …).\n  * `UNKNOWN_ERROR` indicates an Address API request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
@@ -2365,6 +2386,75 @@
         "title": "AssetsCollectionRequest",
         "type": "object"
       },
+      "AutoSuggestQuery": {
+        "properties": {
+          "clip-to-bounding-box": {
+            "description": "Restrict AutoSuggest results to a bounding box, specified by coordinates.south_lat,west_lng,north_lat,east_lng, where: south_lat less than or equal to north_lat, west_lng less than or equal to east_lng.",
+            "example": "48.624314,1.804429,49.058148,2.908555",
+            "title": "Clip-To-Bounding-Box",
+            "type": "string"
+          },
+          "clip-to-circle": {
+            "description": "Restrict AutoSuggest results to a circle, specified by lat, lng, kilometres, where kilometres is the radius of the circle.",
+            "example": "48.839701,2.291878,20",
+            "title": "Clip-To-Circle",
+            "type": "string"
+          },
+          "clip-to-country": {
+            "description": "Restricts AutoSuggest to only return results inside the countries specified by comma-separated list of ISO 3166-1 alpha-2 country codes.",
+            "example": "FR",
+            "title": "Clip-To-Country",
+            "type": "string"
+          },
+          "clip-to-polygon": {
+            "description": "Restrict AutoSuggest results to a polygon, specified by a comma-separated list of lat, lng pairs. The polygon should be closed, i.e. the first element should be repeated as the last element; also the list should contain at least 4 pairs. The API is currently limited to accepting up to 25 pairs.",
+            "example": "48.823547,2.199174,48.823547,2.199174,48.922216,2.328709,48.888626,2.473673,48.819279,2.445513,48.784865,2.330668,48.823547,2.199174",
+            "title": "Clip-To-Polygon",
+            "type": "string"
+          },
+          "focus": {
+            "description": "This is a location, specified as latitude,longitude (often where the user making the query is). If specified, the results will be weighted to give preference to those near the focus.",
+            "example": "48.861026,2.335853",
+            "title": "Focus",
+            "type": "string"
+          },
+          "input": {
+            "description": "The full or partial 3 word address to obtain suggestions for. At minimum this must be the first two complete words plus at least one character from the third word.",
+            "example": "couch.spotted.a",
+            "title": "Input",
+            "type": "string"
+          },
+          "input-type": {
+            "default": "text",
+            "description": "For power users, used to specify voice input mode.",
+            "enum": [
+              "text",
+              "vocon-hybrid",
+              "nmdp-asr",
+              "generic-voice"
+            ],
+            "title": "Input-Type",
+            "type": "string"
+          },
+          "language": {
+            "description": "For normal text input, specifies a fallback language, which will help guide AutoSuggest if the input is particularly messy. A supported address language as an ISO 639-1 2 letter code.",
+            "example": "fr",
+            "title": "Language",
+            "type": "string"
+          },
+          "prefer-land": {
+            "default": true,
+            "description": "Makes AutoSuggest prefer results on land to those in the sea.",
+            "title": "Prefer-Land",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "input"
+        ],
+        "title": "AutoSuggestQuery",
+        "type": "object"
+      },
       "AutoSuggestResponse": {
         "example": {
           "suggestions": [
@@ -2425,9 +2515,16 @@
             "type": "string"
           },
           "distanceToFocusKm": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Distance to the Lat Lng focus (if provided)",
-            "title": "Distancetofocuskm",
-            "type": "integer"
+            "title": "Distancetofocuskm"
           },
           "language": {
             "description": "Language Code",
@@ -3368,8 +3465,7 @@
                 "$ref": "#/components/schemas/Properties"
               }
             ],
-            "description": "Feature Properties",
-            "title": "Properties"
+            "description": "Feature Properties"
           },
           "type": {
             "description": "GeoJSON type",
@@ -3749,8 +3845,7 @@
                 "$ref": "#/components/schemas/Coordinates"
               }
             ],
-            "description": "Lat Lng coordinate",
-            "title": "Coordinates"
+            "description": "Lat Lng coordinate"
           },
           "country": {
             "description": "Country Code",
@@ -3763,9 +3858,16 @@
             "type": "string"
           },
           "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Language Locale",
-            "title": "Locale",
-            "type": "string"
+            "title": "Locale"
           },
           "map": {
             "description": "Link to what3words address on a map",
@@ -3783,8 +3885,7 @@
                 "$ref": "#/components/schemas/Square"
               }
             ],
-            "description": "Lat Lng coordinate Square",
-            "title": "Square"
+            "description": "Lat Lng coordinate Square"
           },
           "words": {
             "description": "The what3words address",
@@ -3922,7 +4023,7 @@
         "properties": {
           "description": {
             "description": "Human readable address",
-            "title": "Formatted Address",
+            "title": "Description",
             "type": "string"
           },
           "public_id": {
@@ -3931,20 +4032,31 @@
             "type": "string"
           },
           "status": {
-            "description": "Address Status",
-            "enum": [
-              "not_yet_built"
+            "anyOf": [
+              {
+                "const": "not_yet_built"
+              },
+              {
+                "type": "null"
+              }
             ],
-            "title": "Status",
-            "type": "string"
+            "description": "Address Status",
+            "title": "Status"
           },
           "sub_buildings": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/AddressSummary"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "list of specific addresses at that location",
-            "items": {
-              "$ref": "#/components/schemas/AddressSummary"
-            },
-            "title": "Sub Buildings",
-            "type": "array"
+            "title": "Sub Buildings"
           },
           "types": {
             "description": "Address Types",
@@ -5023,9 +5135,16 @@
             "type": "string"
           },
           "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Language Locale",
-            "title": "Locale",
-            "type": "string"
+            "title": "Locale"
           },
           "map": {
             "description": "Link to what3words address on a map",
@@ -5061,8 +5180,7 @@
                 "$ref": "#/components/schemas/Coordinates"
               }
             ],
-            "description": "Lat Lng coordinate",
-            "title": "Northeast"
+            "description": "Lat Lng coordinate"
           },
           "southwest": {
             "allOf": [
@@ -5070,8 +5188,7 @@
                 "$ref": "#/components/schemas/Coordinates"
               }
             ],
-            "description": "Lat Lng coordinate",
-            "title": "Southwest"
+            "description": "Lat Lng coordinate"
           }
         },
         "required": [
@@ -5425,6 +5542,37 @@
         "title": "Units",
         "type": "string"
       },
+      "W3wQuery": {
+        "properties": {
+          "coordinates": {
+            "description": "Coordinates as a comma separated string of latitude and longitude",
+            "example": "48.858304,2.294514",
+            "title": "Coordinates",
+            "type": "string"
+          },
+          "format": {
+            "default": "json",
+            "description": "Return data format type; can be either json or geojson",
+            "enum": [
+              "json",
+              "geojson"
+            ],
+            "title": "Format",
+            "type": "string"
+          },
+          "language": {
+            "default": "en",
+            "description": "A supported address language as an ISO 639-1 2 letter code.",
+            "title": "Language",
+            "type": "string"
+          }
+        },
+        "required": [
+          "coordinates"
+        ],
+        "title": "W3wQuery",
+        "type": "object"
+      },
       "Zone": {
         "description": "Attributes describing a Zone.",
         "example": {
@@ -5579,6 +5727,12 @@
         "name": "private_key",
         "type": "apiKey"
       },
+      "PrivateApiKeyHeaderAuth": {
+        "description": "A Private key to authenticate API requests through the Header instead of Query parameter. Use either PrivateApiKeyHeaderAuth or PrivateApiKeyAuth. See how to [register a Private API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-private-api-key).",
+        "in": "header",
+        "name": "X-Api-Key",
+        "type": "apiKey"
+      },
       "PublicApiKeyAuth": {
         "description": "A Public key generated specifically to authenticate API requests on the front side. See how to [register a Public API Key](https://developers.woosmap.com/support/api-keys/#registering-a-woosmap-public-api-key).",
         "in": "query",
@@ -5597,10 +5751,10 @@
     "contact": {
       "name": "Woosmap API"
     },
-    "description": "The Woosmap API is a RESTful API built on HTTP. It has predictable resource URLs. It returns HTTP response codes to indicate errors. It also accepts and returns JSON in the HTTP body. You can use your favorite HTTP/REST library for your programming language to use Woosmap's API, or you can use one of our Javascript SDKs for supported APIs:\n  - [Localities JS](https://developers.woosmap.com/products/localities/localities-jsapi/get-started/) (for Localities API)\n  - [MultiSearch JS](https://developers.woosmap.com/products/multisearch-lib/js/get-started/) (for Localities API, Address API and Store Search API)\n  - [Store Locator JS](https://developers.woosmap.com/products/js-api/get-started/) (for Store Search API)\n\n\nYou can use Postman to test the API (if you use the `PUBLIC_API_KEY` authentication, don't forget to set the `Referer` Header corresponding to one of your restricted domain name).\n\n[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9?action=collection%2Ffork\u0026source=rip_markdown\u0026collection-url=entityId%3D18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9%26entityType%3Dcollection%26workspaceId%3Dff0698d5-c4db-403e-b7c6-b622b68032d3)\n",
+    "description": "The Woosmap API is a RESTful API built on HTTP. It has predictable resource URLs. It returns HTTP response codes to indicate errors. It also accepts and returns JSON in the HTTP body. You can use your favorite HTTP/REST library for your programming language to use Woosmap's API, or you can use one of our Javascript SDKs for supported APIs:\n  - [Map JS](https://developers.woosmap.com/products/map-api/get-started/) - support All APIs\n  - [Localities JS](https://developers.woosmap.com/products/localities/localities-jsapi/get-started/) - for Localities API\n  - [MultiSearch JS](https://developers.woosmap.com/products/multisearch-lib/js/get-started/) - for Localities API and Store Search API\n\nYou can use Postman to test the API (if you use the `PUBLIC_API_KEY` authentication, don't forget to set the `Referer` Header corresponding to one of your restricted domain name).\n\n[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9?action=collection%2Ffork\u0026source=rip_markdown\u0026collection-url=entityId%3D18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9%26entityType%3Dcollection%26workspaceId%3Dff0698d5-c4db-403e-b7c6-b622b68032d3)\n",
     "termsOfService": "https://www.woosmap.com/en/policies/terms/",
     "title": "Woosmap Platform API Reference",
-    "version": "1.19.0",
+    "version": "1.20.0",
     "x-document-meta-data": {
       "copyright": "© 2023 Woosmap"
     }
@@ -5703,6 +5857,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -5846,6 +6003,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6016,6 +6176,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6143,6 +6306,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6266,6 +6432,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6367,6 +6536,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6644,6 +6816,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6741,6 +6916,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -6986,6 +7164,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -7147,6 +7328,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -7352,6 +7536,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -7641,6 +7828,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -8610,6 +8800,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -9065,6 +9258,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -9408,6 +9604,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -9527,6 +9726,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -9650,6 +9852,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -9795,6 +10000,9 @@
           },
           {
             "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
           }
         ],
         "servers": [
@@ -10976,6 +11184,9 @@
     },
     {
       "PrivateApiKeyAuth": []
+    },
+    {
+      "PrivateApiKeyHeaderAuth": []
     }
   ],
   "servers": [
