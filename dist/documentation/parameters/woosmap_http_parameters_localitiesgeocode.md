@@ -14,7 +14,7 @@
 
 -   <h3 class="parameter-name" id="components">components</h3>
 
-    A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
+    A grouping of places to which you would like to restrict your results. Components can and should be used when applicable to filter over countries and retrieve more accurate results. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
 
 -   <h3 class="parameter-name" id="data">data</h3>
 

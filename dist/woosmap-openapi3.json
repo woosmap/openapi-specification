@@ -1731,7 +1731,7 @@
         "tags": [
           "Localities API"
         ],
-        "description": "Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.\n>⚠️ To retrieve fields marked as  **deprecated** in response schema, please read [Details endpoint](#operation/localitiesDetails)\n",
+        "description": "Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly addresses, city names, postal codes or suburb name suggestions.\n>⚠️ To retrieve fields marked as  **deprecated** in response schema, please read [Details endpoint](#operation/localitiesDetails)\n",
         "security": [
           {
             "PublicApiKeyAuth": [],
@@ -5154,7 +5154,7 @@
       },
       "localities_components": {
         "name": "components",
-        "description": "A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.\n",
+        "description": "A grouping of places to which you would like to restrict your results. Components can and should be used when applicable to filter over countries and retrieve more accurate results. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.\n",
         "schema": {
           "type": "string"
         },
@@ -5289,7 +5289,7 @@
       },
       "localities_types": {
         "name": "types",
-        "description": "The types of suggestion to return.\n\n  * `locality`: includes locality names (from city to village) and suburbs\n  * `postal_code`: publicly-used postal codes around the world\n  * `address`: addresses (only available for UK and France)\n  * `admin_level`: most commonly used administrative areas\n  * `country`: countries as whole point of interest\n  * `airport`: includes all medium sized to international sized airports\n  * `train_station`: includes all train stations\n  * `metro_station`: includes all metro stations\n  * `shopping`: includes shopping malls (or \"shopping centers\") - *may include private retail brands*\n  * `museum`: includes museums\n  * `tourist_attraction`: includes tourist attractions like the Eiffel tower\n  * `amusement_park`: includes amusement parks like Disneyland Paris\n  * `art_gallery`: includes art galleries\n  * `zoo`: includes zoos\n\nNot specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.\n",
+        "description": "The types of suggestion to return.\n\n  * `locality`: includes locality names (from city to village) and suburbs\n  * `postal_code`: publicly-used postal codes around the world\n  * `address`: addresses\n  * `admin_level`: most commonly used administrative areas\n  * `country`: countries as whole point of interest\n  * `airport`: includes all medium sized to international sized airports\n  * `train_station`: includes all train stations\n  * `metro_station`: includes all metro stations\n  * `shopping`: includes shopping malls (or \"shopping centers\") - *may include private retail brands*\n  * `museum`: includes museums\n  * `tourist_attraction`: includes tourist attractions like the Eiffel tower\n  * `amusement_park`: includes amusement parks like Disneyland Paris\n  * `art_gallery`: includes art galleries\n  * `zoo`: includes zoos\n\nNot specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.\n",
         "schema": {
           "type": "string",
           "enum": [

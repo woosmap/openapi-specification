@@ -2083,7 +2083,7 @@ paths:
       tags:
         - Localities API
       description: |
-        Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.
+        Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly addresses, city names, postal codes or suburb name suggestions.
         >⚠️ To retrieve fields marked as  **deprecated** in response schema, please read [Details endpoint](#operation/localitiesDetails)
       security:
         - PublicApiKeyAuth: []
@@ -5024,7 +5024,7 @@ components:
     localities_components:
       name: components
       description: |
-        A grouping of places to which you would like to restrict your results. Components can be used to filter over countries. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
+        A grouping of places to which you would like to restrict your results. Components can and should be used when applicable to filter over countries and retrieve more accurate results. Countries must be passed as an ISO 3166-1 Alpha-2 or Alpha-3 compatible country code. For example: `components=country:fr` or `components=country:fra` would restrict your results to places within France and `components=country:fr-fr` returns locations only in Metropolitan France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr|country:be|country:sp|country:it` would restrict your results to city names or postal codes within the United Kingdom, France, Belgium, Spain and Italy.
       schema:
         type: string
       example: 'country:fr|country:es'
@@ -5147,7 +5147,7 @@ components:
 
           * `locality`: includes locality names (from city to village) and suburbs
           * `postal_code`: publicly-used postal codes around the world
-          * `address`: addresses (only available for UK and France)
+          * `address`: addresses
           * `admin_level`: most commonly used administrative areas
           * `country`: countries as whole point of interest
           * `airport`: includes all medium sized to international sized airports
