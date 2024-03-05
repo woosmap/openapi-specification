@@ -7522,6 +7522,27 @@
           }
         }
       },
+      "LocalitiesAutocompleteRelated": {
+        "title": "LocalitiesAutocompleteRelated",
+        "type": "object",
+        "description": "Contains a set of related elements to the locality suggestion.",
+        "properties": {
+          "postal_codes": {
+            "description": "Postal codes related to the locality suggestion.",
+            "type": "object",
+            "properties": {
+              "public_id": {
+                "type": "string",
+                "description": "Public ID of a related Postal Code."
+              },
+              "description": {
+                "type": "string",
+                "description": "Formated description for the related Postal Code."
+              }
+            }
+          }
+        }
+      },
       "LocalitiesAutocompleteResponse": {
         "title": "LocalitiesAutocompleteResponse",
         "type": "object",
@@ -7542,6 +7563,9 @@
           },
           "matched_substrings": {
             "$ref": "#/components/schemas/LocalitiesAutocompleteMatchedFields"
+          },
+          "related": {
+            "$ref": "#/components/schemas/LocalitiesAutocompleteRelated"
           },
           "has_addresses": {
             "description": "On the specific territory of United Kingdom, Localities autocomplete request can return the additional attribute `has_addresses` for a postal code, which indicates if a postal code bears addresses. When `has_addresses` is `true`, it is possible to display a list of the available addresses by requesting `details` with the Localities `public_id`. To get the details of an address you will need to request again `/details` endpoint passing in the dedicated address `public_id`.\n",

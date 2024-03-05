@@ -5083,6 +5083,27 @@
         "title": "LocalitiesAutocompleteMatchedFields",
         "type": "object"
       },
+      "LocalitiesAutocompleteRelated": {
+        "description": "Contains a set of related elements to the locality suggestion.",
+        "properties": {
+          "postal_codes": {
+            "description": "Postal codes related to the locality suggestion.",
+            "properties": {
+              "description": {
+                "description": "Formated description for the related Postal Code.",
+                "type": "string"
+              },
+              "public_id": {
+                "description": "Public ID of a related Postal Code.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "title": "LocalitiesAutocompleteRelated",
+        "type": "object"
+      },
       "LocalitiesAutocompleteResponse": {
         "description": "Attributes describing a locality. Not all attributes will be available for all locality types.",
         "example": {
@@ -5120,6 +5141,9 @@
             "description": "Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.",
             "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo=",
             "type": "string"
+          },
+          "related": {
+            "$ref": "#/components/schemas/LocalitiesAutocompleteRelated"
           },
           "type": {
             "$ref": "#/components/schemas/LocalitiesTypes"
