@@ -2386,6 +2386,19 @@
         "title": "AssetsCollectionRequest",
         "type": "object"
       },
+      "AuthenticationErrorResponse": {
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "string"
+          }
+        },
+        "required": [
+          "detail"
+        ],
+        "title": "AuthenticationErrorResponse",
+        "type": "object"
+      },
       "AutoSuggestQuery": {
         "properties": {
           "clip-to-bounding-box": {
@@ -4322,6 +4335,19 @@
           "geometries"
         ],
         "title": "GeometryCollection",
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
         "type": "object"
       },
       "IndoorFeatureSchema": {
@@ -6354,6 +6380,34 @@
         "title": "PaginationSchema",
         "type": "object"
       },
+      "Place": {
+        "properties": {
+          "location": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "location"
+        ],
+        "title": "Place",
+        "type": "object"
+      },
       "Point": {
         "description": "Point Model",
         "properties": {
@@ -6561,6 +6615,28 @@
           "coordinates"
         ],
         "title": "Polygon",
+        "type": "object"
+      },
+      "Position": {
+        "properties": {
+          "lat": {
+            "maximum": 90,
+            "minimum": -90,
+            "title": "Lat",
+            "type": "number"
+          },
+          "lng": {
+            "maximum": 180,
+            "minimum": -180,
+            "title": "Lng",
+            "type": "number"
+          }
+        },
+        "required": [
+          "lat",
+          "lng"
+        ],
+        "title": "Position",
         "type": "object"
       },
       "PredictionSchema": {
@@ -7619,6 +7695,238 @@
         "title": "TrafficDistanceRouteResponse",
         "type": "object"
       },
+      "Transit": {
+        "properties": {
+          "routes": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/TransitRoute"
+            },
+            "title": "Routes",
+            "type": "array"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "title": "Transit",
+        "type": "object"
+      },
+      "TransitAttributions": {
+        "properties": {
+          "href": {
+            "title": "Href",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "href",
+          "text",
+          "type"
+        ],
+        "title": "TransitAttributions",
+        "type": "object"
+      },
+      "TransitLeg": {
+        "properties": {
+          "attributions": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TransitAttributions"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attributions"
+          },
+          "distance": {
+            "title": "Distance",
+            "type": "number"
+          },
+          "duration": {
+            "title": "Duration",
+            "type": "integer"
+          },
+          "end_location": {
+            "$ref": "#/components/schemas/Place"
+          },
+          "polyline": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Polyline"
+          },
+          "start_location": {
+            "$ref": "#/components/schemas/Place"
+          },
+          "transport": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TransitTransport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "travel_mode": {
+            "title": "Travel Mode",
+            "type": "string"
+          }
+        },
+        "required": [
+          "travel_mode",
+          "duration",
+          "distance",
+          "polyline",
+          "start_location",
+          "end_location"
+        ],
+        "title": "TransitLeg",
+        "type": "object"
+      },
+      "TransitRoute": {
+        "properties": {
+          "duration": {
+            "title": "Duration",
+            "type": "integer"
+          },
+          "legs": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/TransitLeg"
+            },
+            "title": "Legs",
+            "type": "array"
+          },
+          "notice": {
+            "default": "",
+            "title": "Notice",
+            "type": "string"
+          }
+        },
+        "required": [
+          "duration"
+        ],
+        "title": "TransitRoute",
+        "type": "object"
+      },
+      "TransitTransport": {
+        "properties": {
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category"
+          },
+          "color": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Color"
+          },
+          "headsign": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Headsign"
+          },
+          "long_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Long Name"
+          },
+          "mode": {
+            "title": "Mode",
+            "type": "string"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "short_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Short Name"
+          },
+          "text_color": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text Color"
+          }
+        },
+        "required": [
+          "mode"
+        ],
+        "title": "TransitTransport",
+        "type": "object"
+      },
       "UnitSystem": {
         "enum": [
           "metric",
@@ -7636,6 +7944,39 @@
         "example": "metric",
         "title": "Units",
         "type": "string"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
       },
       "VenueListSchema": {
         "example": [
@@ -14028,6 +14369,157 @@
         ]
       }
     },
+    "/transit/route": {
+      "get": {
+        "operationId": "transit_route_transit_route_get",
+        "parameters": [
+          {
+            "description": "DateTime with or without timezone, if not set the default datetime is the current one",
+            "in": "query",
+            "name": "departure_time",
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "DateTime with or without timezone, if not set the default datetime is the current one",
+              "examples": [
+                "2024-01-01T12:00:00%2B01:00"
+              ],
+              "title": "Departure Time"
+            }
+          },
+          {
+            "description": "DateTime with or without timezone, if departure_time is defined this parameter is ignored",
+            "in": "query",
+            "name": "arrival_time",
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "DateTime with or without timezone, if departure_time is defined this parameter is ignored",
+              "examples": [
+                "2024-01-01T14:00:00%2B01:00"
+              ],
+              "title": "Arrival Time"
+            }
+          },
+          {
+            "description": "WGS84 coordinates as format lat,lng",
+            "in": "query",
+            "name": "origin",
+            "required": true,
+            "schema": {
+              "description": "WGS84 coordinates as format lat,lng",
+              "examples": [
+                "lat,lng"
+              ],
+              "title": "Position",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WGS84 coordinates as format lat,lng",
+            "in": "query",
+            "name": "destination",
+            "required": true,
+            "schema": {
+              "description": "WGS84 coordinates as format lat,lng",
+              "examples": [
+                "lat,lng"
+              ],
+              "title": "Position",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Transit"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationErrorResponse"
+                }
+              }
+            },
+            "description": "Unable to locate credentials."
+          },
+          "402": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationErrorResponse"
+                }
+              }
+            },
+            "description": "Out of free credits."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationErrorResponse"
+                }
+              }
+            },
+            "description": "Credentials found, but not matching."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [],
+        "summary": "Transit Route",
+        "tags": [
+          "Transit API"
+        ],
+        "x-codeSamples": [
+          {
+            "label": "cURL",
+            "lang": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/transit/route?origin=48.73534,2.368308\u0026destination=48.83534,2.368308\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "label": "Python",
+            "lang": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/transit/route?origin=48.73534,2.368308\u0026destination=48.83534,2.368308\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          },
+          {
+            "label": "JavaScript",
+            "lang": "javascript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/transit/route?origin=48.73534,2.368308\u0026destination=48.83534,2.368308\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
+          }
+        ]
+      }
+    },
     "/what3words/autosuggest": {
       "get": {
         "description": "AutoSuggest can take a slightly incorrect 3 word address and suggest a list of valid 3 word addresses.\nIt has powerful features that can, for example, optionally limit results to a country or area,\nand prioritise results that are near the user.",
@@ -15259,6 +15751,13 @@
         "url": "https://developers.woosmap.com/products/w3w-api/overview/"
       },
       "name": "Woosmap for what3words API"
+    },
+    {
+      "description": "Route calculation by using public transportation",
+      "externalDocs": {
+        "url": "https://developers.woosmap.com/products/transit/overview/"
+      },
+      "name": "Transit API"
     },
     {
       "description": "The Indoor Map API enables you to display plans of your private space.\nThe Indoor Search API is a dedicated search engine for your own indoor data, allowing you to search for points of interest (POI) in your venue by their characteristics or through autocompletion.\nWith the Indoor Distance API, you can calculate the shortest route between two indoor locations, complete with a polyline and roadbook instructions for turn-by-turn navigation with POI. Additionally, you can apply routing profiles to your venue network for specific user groups such as premium customers, staff, or security, and utilize them through the Indoor Distance API.",
