@@ -14496,7 +14496,15 @@
             "description": "Validation Error"
           }
         },
-        "security": [],
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          }
+        ],
         "summary": "Transit Route",
         "tags": [
           "Transit API"
@@ -15762,7 +15770,7 @@
     {
       "description": "Route calculation by using public transportation",
       "externalDocs": {
-        "url": "https://developers.woosmap.com/products/transit/overview/"
+        "url": "https://developers.woosmap.com/products/transit-api/route-endpoint/"
       },
       "name": "Transit API"
     }
