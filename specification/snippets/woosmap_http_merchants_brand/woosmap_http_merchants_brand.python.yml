@@ -1,5 +1,0 @@
-{
-  "lang": "python",
-  "label": "Python",
-  "source": "import requests\n\nurl = \"https://api.woosmap.com/merchants/brand?dirty_name=APPLE.COM%252FBILL&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n",
-}
