@@ -435,41 +435,6 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
-        regionTag: "woosmap_http_merchants_brand",
-        request: new Request({
-            url: new Url({
-                protocol: "https",
-                host: "api.woosmap.com",
-                path: "/merchants/brand",
-                query: [
-                    {
-                        key: "dirty_name",
-                        value: "APPLE.COM%2FBILL",
-                    }
-                ],
-            }),
-            header: [{key: "Referer", value: "http://localhost"}],
-        }),
-    },
-    {
-        regionTag: "woosmap_http_merchants_brand_request",
-        request: new PostJsonRequest({
-            url: "https://api.woosmap.com/merchants/brand",
-            json: parseRequestBody(
-                "../../specification/requests/woosmap_http_merchants_brand_request.yml"
-            ),
-        }),
-    },
-    {
-        regionTag: "woosmap_http_merchants_place",
-        request: new PostJsonRequest({
-            url: "https://api.woosmap.com/merchants/place",
-            json: parseRequestBody(
-                "../../specification/requests/woosmap_http_merchants_place_request.yml"
-            ),
-        }),
-    },
-    {
         regionTag: "woosmap_http_asset_feature_collection",
         request: new Request({
             url: new Url({
