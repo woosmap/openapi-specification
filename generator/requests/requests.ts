@@ -679,7 +679,7 @@ export const REQUESTS: SnippetRequest[] = [
                 query: [
                     {
                         key: "query",
-                        value: "idstore:store_123",
+                        value: "idstore:=store_123",
                     },
                 ],
             }),

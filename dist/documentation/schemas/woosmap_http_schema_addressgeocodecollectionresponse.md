@@ -73,12 +73,12 @@ Address Geocode Collection Response. Contains one or more Addresses with coordin
         "location_type": "GEOMETRIC_CENTER",
         "location": {
           "lat": 48.86228,
-          "lng": 2.30346
+          "lng": 2.30345
         },
         "viewport": {
           "northeast": {
             "lat": 48.86231,
-            "lng": 2.30546
+            "lng": 2.30544
           },
           "southwest": {
             "lat": 48.86191,

@@ -20,8 +20,8 @@ Localities Geocode Collection Response. Contains one or more detailed Localities
       "formatted_address": "Place Jeanne D'Arc, 75013, Paris",
       "geometry": {
         "location": {
-          "lat": 48.829405,
-          "lng": 2.367944
+          "lat": 48.829941,
+          "lng": 2.369083
         },
         "location_type": "GEOMETRIC_CENTER"
       },
@@ -32,6 +32,20 @@ Localities Geocode Collection Response. Contains one or more detailed Localities
           "types": [
             "country",
             "administrative_area_level_0"
+          ]
+        },
+        {
+          "short_name": "Île-de-France",
+          "long_name": "Île-de-France",
+          "types": [
+            "state"
+          ]
+        },
+        {
+          "short_name": "Paris",
+          "long_name": "Paris",
+          "types": [
+            "county"
           ]
         },
         {
