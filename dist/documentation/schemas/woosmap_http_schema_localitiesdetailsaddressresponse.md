@@ -41,6 +41,20 @@ Attributes describing. Not all attributes will be available for all locality typ
         ]
       },
       {
+        "short_name": "City of London",
+        "long_name": "City of London",
+        "types": [
+          "county"
+        ]
+      },
+      {
+        "short_name": "London SW",
+        "long_name": "London SW",
+        "types": [
+          "district"
+        ]
+      },
+      {
         "short_name": "London",
         "long_name": "London",
         "types": [

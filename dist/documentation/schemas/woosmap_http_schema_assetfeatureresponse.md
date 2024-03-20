@@ -58,7 +58,7 @@ Asset Response as a GeoJSon Feature with Asset properties
           "start": "05:00"
         }
       ],
-      "week_day": 5,
+      "week_day": 3,
       "current_slice": {
         "end": "20:00",
         "start": "05:00"

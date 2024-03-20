@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/stores/?query=idstore:store_123&private_key=YOUR_PRIVATE_API_KEY"
+  url := "https://api.woosmap.com/stores/?query=idstore:=store_123&private_key=YOUR_PRIVATE_API_KEY"
   method := "DELETE"
 
   client := &http.Client {

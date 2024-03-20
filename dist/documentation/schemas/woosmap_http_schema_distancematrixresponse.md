@@ -19,22 +19,22 @@ Attributes describing an distance Matrix response.
         {
           "status": "OK",
           "duration": {
-            "value": 937,
+            "value": 986,
             "text": "16 mins"
           },
           "distance": {
-            "value": 10605,
-            "text": "10.6 km"
+            "value": 10797,
+            "text": "10.8 km"
           }
         },
         {
           "status": "OK",
           "duration": {
-            "value": 907,
+            "value": 928,
             "text": "15 mins"
           },
           "distance": {
-            "value": 10333,
+            "value": 10334,
             "text": "10.3 km"
           }
         }

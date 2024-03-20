@@ -53,34 +53,6 @@ Asset Autocomplete Response with highlighted results on asset name.
         }
       ],
       "highlighted": "The <b>Street</b>"
-    },
-    {
-      "store_id": "1008896",
-      "name": "12th Street",
-      "types": [
-        "Coffee shop"
-      ],
-      "matched_substrings": [
-        {
-          "offset": 5,
-          "length": 6
-        }
-      ],
-      "highlighted": "12th <b>Street</b>"
-    },
-    {
-      "store_id": "1023565",
-      "name": "Doha Street",
-      "types": [
-        "Coffee shop"
-      ],
-      "matched_substrings": [
-        {
-          "offset": 5,
-          "length": 6
-        }
-      ],
-      "highlighted": "Doha <b>Street</b>"
     }
   ]
 }</pre>

@@ -51,19 +51,19 @@ paths:
                     country_code: US
                     country_name: United States
                     continent: North America
-                    latitude: 38.7304
-                    longitude: -77.0634
+                    latitude: 38.719
+                    longitude: -77.1067
                     accuracy: 5
                     viewport:
                       northeast:
-                        lat: 38.77531576420598
-                        lng: -77.00582296106178
+                        lat: 38.763915764205976
+                        lng: -77.0491321464058
                       southwest:
-                        lat: 38.68548423579403
-                        lng: -77.12097703893822
+                        lat: 38.674084235794034
+                        lng: -77.16426785359421
                     city: Alexandria
                     region_state: Virginia
-                    postal_code: '22308'
+                    postal_code: '22309'
                     timezone: America/New_York
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
@@ -133,19 +133,19 @@ paths:
                     country_code: US
                     country_name: United States
                     continent: North America
-                    latitude: 38.7304
-                    longitude: -77.0634
+                    latitude: 38.719
+                    longitude: -77.1067
                     accuracy: 5
                     viewport:
                       northeast:
-                        lat: 38.77531576420598
-                        lng: -77.00582296106178
+                        lat: 38.763915764205976
+                        lng: -77.0491321464058
                       southwest:
-                        lat: 38.68548423579403
-                        lng: -77.12097703893822
+                        lat: 38.674084235794034
+                        lng: -77.16426785359421
                     city: Alexandria
                     region_state: Virginia
-                    postal_code: '22308'
+                    postal_code: '22309'
                     timezone: America/New_York
                     stores:
                       type: FeatureCollection
@@ -173,14 +173,14 @@ paths:
                             types:
                               - drive
                               - click_and_collect
-                            last_updated: '2023-03-03T09:06:24.421371+00:00'
-                            distance: 3972.39013285
+                            last_updated: '2024-03-20T15:14:51.067524+00:00'
+                            distance: 0
                             open:
                               open_now: true
                               open_hours:
                                 - end: '22:00'
                                   start: '08:30'
-                              week_day: 5
+                              week_day: 3
                               current_slice:
                                 end: '22:00'
                                 start: '08:30'
@@ -1151,7 +1151,7 @@ paths:
                         open_hours:
                           - end: '20:00'
                             start: '05:00'
-                        week_day: 5
+                        week_day: 3
                         current_slice:
                           end: '20:00'
                           start: '05:00'
@@ -1777,7 +1777,7 @@ paths:
                             open_hours:
                               - end: '18:00'
                                 start: '06:30'
-                            week_day: 5
+                            week_day: 3
                             current_slice:
                               end: '18:00'
                               start: '06:30'
@@ -1945,22 +1945,6 @@ paths:
                           - offset: 4
                             length: 6
                         highlighted: The <b>Street</b>
-                      - store_id: '1008896'
-                        name: 12th Street
-                        types:
-                          - Coffee shop
-                        matched_substrings:
-                          - offset: 5
-                            length: 6
-                        highlighted: 12th <b>Street</b>
-                      - store_id: '1023565'
-                        name: Doha Street
-                        types:
-                          - Coffee shop
-                        matched_substrings:
-                          - offset: 5
-                            length: 6
-                        highlighted: Doha <b>Street</b>
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
         '403':
@@ -2123,7 +2107,14 @@ paths:
                               length: 4
                       - public_id: m/T2C4YI2LgszkKXrELBC+9dfC8=
                         type: locality
-                        description: 'Londonderry/Derry, Derry City and Strabane, United Kingdom'
+                        description: 'Derry/Londonderry, Derry City and Strabane, United Kingdom'
+                        matched_substrings:
+                          description:
+                            - offset: 6
+                              length: 4
+                      - public_id: J6eISGMjjvQwPkao8rsByB3aVwM=
+                        type: locality
+                        description: 'London Colney, Hertfordshire, United Kingdom'
                         matched_substrings:
                           description:
                             - offset: 0
@@ -2131,13 +2122,6 @@ paths:
                       - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
                         type: locality
                         description: 'London Apprentice, Cornwall, United Kingdom'
-                        matched_substrings:
-                          description:
-                            - offset: 0
-                              length: 4
-                      - public_id: VOBREUi72/VtnsYgE6aI8HNYcxg=
-                        type: locality
-                        description: 'Londesborough, East Riding of Yorkshire, United Kingdom'
                         matched_substrings:
                           description:
                             - offset: 0
@@ -2239,6 +2223,14 @@ paths:
                           long_name: City of London
                           types:
                             - administrative_area_level_1
+                        - short_name: City of London
+                          long_name: City of London
+                          types:
+                            - county
+                        - short_name: London SW
+                          long_name: London SW
+                          types:
+                            - district
                         - short_name: London
                           long_name: London
                           types:
@@ -2368,8 +2360,8 @@ paths:
                         formatted_address: 'Place Jeanne D''Arc, 75013, Paris'
                         geometry:
                           location:
-                            lat: 48.829405
-                            lng: 2.367944
+                            lat: 48.829941
+                            lng: 2.369083
                           location_type: GEOMETRIC_CENTER
                         address_components:
                           - short_name: FR
@@ -2377,6 +2369,14 @@ paths:
                             types:
                               - country
                               - administrative_area_level_0
+                          - short_name: Île-de-France
+                            long_name: Île-de-France
+                            types:
+                              - state
+                          - short_name: Paris
+                            long_name: Paris
+                            types:
+                              - county
                           - short_name: Paris
                             long_name: Paris
                             types:
@@ -2412,14 +2412,14 @@ paths:
                             long_name: City of London
                             types:
                               - administrative_area_level_1
-                          - short_name: London W
-                            long_name: London W
-                            types:
-                              - district
                           - short_name: City of London
                             long_name: City of London
                             types:
                               - county
+                          - short_name: London W
+                            long_name: London W
+                            types:
+                              - district
                           - short_name: London
                             long_name: London
                             types:
@@ -2556,13 +2556,6 @@ paths:
                             - offset: 0
                               length: 4
                         type: locality
-                      - public_id: aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDExMTIz
-                        description: 'County Londonderry, Northern Ireland, United Kingdom'
-                        matched_substring:
-                          description:
-                            - offset: 7
-                              length: 4
-                        type: admin_level
                     status: OK
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
@@ -2784,11 +2777,11 @@ paths:
                           location_type: GEOMETRIC_CENTER
                           location:
                             lat: 48.86228
-                            lng: 2.30346
+                            lng: 2.30345
                           viewport:
                             northeast:
                               lat: 48.86231
-                              lng: 2.30546
+                              lng: 2.30544
                             southwest:
                               lat: 48.86191
                               lng: 2.30147
@@ -3384,17 +3377,17 @@ paths:
                       - elements:
                           - status: OK
                             duration:
-                              value: 937
+                              value: 986
                               text: 16 mins
                             distance:
-                              value: 10605
-                              text: 10.6 km
+                              value: 10797
+                              text: 10.8 km
                           - status: OK
                             duration:
-                              value: 907
+                              value: 928
                               text: 15 mins
                             distance:
-                              value: 10333
+                              value: 10334
                               text: 10.3 km
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
@@ -3482,17 +3475,17 @@ paths:
                       - elements:
                           - status: OK
                             duration:
-                              value: 937
+                              value: 986
                               text: 16 mins
                             distance:
-                              value: 10605
-                              text: 10.6 km
+                              value: 10797
+                              text: 10.8 km
                           - status: OK
                             duration:
-                              value: 907
+                              value: 928
                               text: 15 mins
                             distance:
-                              value: 10333
+                              value: 10334
                               text: 10.3 km
         '400':
           $ref: '#/paths/~1zones/put/responses/400'
@@ -3812,7 +3805,7 @@ paths:
                       distance:
                         value: 1
                         text: 1 km
-                      geometry: 's|ihHouuMZ`GdClCsA~QhCnQmBhEvQhWpD|AnHqJ`OwBx@lC|DhAgFnKlBx@v@tHfEvDlBqF{@{NvDgDhAeIbEI~AfL`EnAfHiEiAOE_EuCq@c@cD_FY}C_EqF_@gEoEoKMcCkDsI}@_C}CyG]aG{G[eFoCw@gAiIkDYg@_DwA@'
+                      geometry: 's|ihHouuMZ`GdClCsA~QhCnQmBhEpCfF|HxGpBtFfEnBnHqJpH}AF_EeCcB@sBnEiEYiGmVyFaG{G[eFoCw@gAiIkDYg@_DwA@'
         '401':
           $ref: '#/paths/~1zones/get/responses/401'
         '403':
@@ -3890,17 +3883,17 @@ paths:
                       - elements:
                           - status: OK
                             duration_with_traffic:
-                              value: 1626
-                              text: 27 mins
+                              value: 1186
+                              text: 20 mins
                             distance:
-                              value: 10731
-                              text: 10.7 km
+                              value: 10577
+                              text: 10.6 km
                           - status: OK
                             duration_with_traffic:
-                              value: 1288
-                              text: 21 mins
+                              value: 1154
+                              text: 19 mins
                             distance:
-                              value: 10185
+                              value: 10198
                               text: 10.2 km
                     status: OK
         '401':
@@ -3988,17 +3981,17 @@ paths:
                       - elements:
                           - status: OK
                             duration_with_traffic:
-                              value: 1626
-                              text: 27 mins
+                              value: 1186
+                              text: 20 mins
                             distance:
-                              value: 10731
-                              text: 10.7 km
+                              value: 10577
+                              text: 10.6 km
                           - status: OK
                             duration_with_traffic:
-                              value: 1288
-                              text: 21 mins
+                              value: 1154
+                              text: 19 mins
                             distance:
-                              value: 10185
+                              value: 10198
                               text: 10.2 km
                     status: OK
         '400':
@@ -4113,27 +4106,27 @@ paths:
                     routes:
                       - legs:
                           - distance:
-                              value: 1073.570921248021
+                              value: 1068.2679083828243
                               text: 1.1 km
                             duration_with_traffic:
-                              value: 97
+                              value: 96
                               text: 2 mins
                             duration_without_traffic:
-                              value: 88
+                              value: 86
                               text: 1 min
                             start_location:
                               lat: 49.310753
                               lng: 4.1451221
                             end_location:
-                              lat: 49.3134
-                              lng: 4.15297
+                              lat: 49.313436
+                              lng: 4.1529229
                         overview_polyline:
-                          points: 'e_~kH_rhXkBcDsAwBeAaB]c@a@g@c@g@c@a@[[a@_@YS[Ui@Y]O]K_@Gc@Gi@AcBCg@?_@ESCOMMMMUKYI]Ow@FIFMBI@G@O?IAMCMCKjCsDNShBaCDFDDDBF@F?FABADABEBCBKBM@M?KAKCKCG|@kAfA}A'
+                          points: 'e_~kH_rhXkBcDsAwBeAaB]c@a@g@c@g@c@a@[[a@_@YS[Ui@Y]O]K_@Gc@Gi@AcBCg@?_@ESCOMMMMUKYI]Ow@FIFMBI@G@O?IAMCMCKjCsDNShBaCDFDDDBF@F?FABADADIBC@GBM@M?KAKCKCG|@kA`AsA'
                         summary: route_0
                         bounds:
                           northeast:
                             lat: 49.31575
-                            lng: 4.15297
+                            lng: 4.152923
                           southwest:
                             lat: 49.310753
                             lng: 4.145122
@@ -5005,7 +4998,7 @@ components:
             open_hours:
               - end: '20:00'
                 start: '05:00'
-            week_day: 5
+            week_day: 3
             current_slice:
               end: '20:00'
               start: '05:00'
@@ -5127,7 +5120,7 @@ components:
                 open_hours:
                   - end: '18:00'
                     start: '06:30'
-                week_day: 5
+                week_day: 3
                 current_slice:
                   end: '18:00'
                   start: '06:30'
@@ -5254,22 +5247,6 @@ components:
               - offset: 4
                 length: 6
             highlighted: The <b>Street</b>
-          - store_id: '1008896'
-            name: 12th Street
-            types:
-              - Coffee shop
-            matched_substrings:
-              - offset: 5
-                length: 6
-            highlighted: 12th <b>Street</b>
-          - store_id: '1023565'
-            name: Doha Street
-            types:
-              - Coffee shop
-            matched_substrings:
-              - offset: 5
-                length: 6
-            highlighted: Doha <b>Street</b>
     Pagination:
       title: Pagination
       type: object
@@ -5521,19 +5498,19 @@ components:
         country_code: US
         country_name: United States
         continent: North America
-        latitude: 38.7304
-        longitude: -77.0634
+        latitude: 38.719
+        longitude: -77.1067
         accuracy: 5
         viewport:
           northeast:
-            lat: 38.77531576420598
-            lng: -77.00582296106178
+            lat: 38.763915764205976
+            lng: -77.0491321464058
           southwest:
-            lat: 38.68548423579403
-            lng: -77.12097703893822
+            lat: 38.674084235794034
+            lng: -77.16426785359421
         city: Alexandria
         region_state: Virginia
-        postal_code: '22308'
+        postal_code: '22309'
         timezone: America/New_York
     GeolocationStoresResponse:
       title: GeolocationStoresResponse
@@ -5587,19 +5564,19 @@ components:
         country_code: US
         country_name: United States
         continent: North America
-        latitude: 38.7304
-        longitude: -77.0634
+        latitude: 38.719
+        longitude: -77.1067
         accuracy: 5
         viewport:
           northeast:
-            lat: 38.77531576420598
-            lng: -77.00582296106178
+            lat: 38.763915764205976
+            lng: -77.0491321464058
           southwest:
-            lat: 38.68548423579403
-            lng: -77.12097703893822
+            lat: 38.674084235794034
+            lng: -77.16426785359421
         city: Alexandria
         region_state: Virginia
-        postal_code: '22308'
+        postal_code: '22309'
         timezone: America/New_York
         stores:
           type: FeatureCollection
@@ -5627,14 +5604,14 @@ components:
                 types:
                   - drive
                   - click_and_collect
-                last_updated: '2023-03-03T09:06:24.421371+00:00'
-                distance: 3972.39013285
+                last_updated: '2024-03-20T15:14:51.067524+00:00'
+                distance: 0
                 open:
                   open_now: true
                   open_hours:
                     - end: '22:00'
                       start: '08:30'
-                  week_day: 5
+                  week_day: 3
                   current_slice:
                     end: '22:00'
                     start: '08:30'
@@ -6217,7 +6194,14 @@ components:
                   length: 4
           - public_id: m/T2C4YI2LgszkKXrELBC+9dfC8=
             type: locality
-            description: 'Londonderry/Derry, Derry City and Strabane, United Kingdom'
+            description: 'Derry/Londonderry, Derry City and Strabane, United Kingdom'
+            matched_substrings:
+              description:
+                - offset: 6
+                  length: 4
+          - public_id: J6eISGMjjvQwPkao8rsByB3aVwM=
+            type: locality
+            description: 'London Colney, Hertfordshire, United Kingdom'
             matched_substrings:
               description:
                 - offset: 0
@@ -6225,13 +6209,6 @@ components:
           - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
             type: locality
             description: 'London Apprentice, Cornwall, United Kingdom'
-            matched_substrings:
-              description:
-                - offset: 0
-                  length: 4
-          - public_id: VOBREUi72/VtnsYgE6aI8HNYcxg=
-            type: locality
-            description: 'Londesborough, East Riding of Yorkshire, United Kingdom'
             matched_substrings:
               description:
                 - offset: 0
@@ -6497,6 +6474,14 @@ components:
               long_name: City of London
               types:
                 - administrative_area_level_1
+            - short_name: City of London
+              long_name: City of London
+              types:
+                - county
+            - short_name: London SW
+              long_name: London SW
+              types:
+                - district
             - short_name: London
               long_name: London
               types:
@@ -6530,8 +6515,8 @@ components:
             formatted_address: 'Place Jeanne D''Arc, 75013, Paris'
             geometry:
               location:
-                lat: 48.829405
-                lng: 2.367944
+                lat: 48.829941
+                lng: 2.369083
               location_type: GEOMETRIC_CENTER
             address_components:
               - short_name: FR
@@ -6539,6 +6524,14 @@ components:
                 types:
                   - country
                   - administrative_area_level_0
+              - short_name: Île-de-France
+                long_name: Île-de-France
+                types:
+                  - state
+              - short_name: Paris
+                long_name: Paris
+                types:
+                  - county
               - short_name: Paris
                 long_name: Paris
                 types:
@@ -6609,13 +6602,6 @@ components:
                 - offset: 0
                   length: 4
             type: locality
-          - public_id: aGVyZTpjbTpuYW1lZHBsYWNlOjIwNDExMTIz
-            description: 'County Londonderry, Northern Ireland, United Kingdom'
-            matched_substring:
-              description:
-                - offset: 7
-                  length: 4
-            type: admin_level
         status: OK
     AddressAutocompleteMatchedFields:
       title: AddressAutocompleteMatchedFields
@@ -6784,11 +6770,11 @@ components:
               location_type: GEOMETRIC_CENTER
               location:
                 lat: 48.86228
-                lng: 2.30346
+                lng: 2.30345
               viewport:
                 northeast:
                   lat: 48.86231
-                  lng: 2.30546
+                  lng: 2.30544
                 southwest:
                   lat: 48.86191
                   lng: 2.30147
@@ -7084,17 +7070,17 @@ components:
           - elements:
               - status: OK
                 duration:
-                  value: 937
+                  value: 986
                   text: 16 mins
                 distance:
-                  value: 10605
-                  text: 10.6 km
+                  value: 10797
+                  text: 10.8 km
               - status: OK
                 duration:
-                  value: 907
+                  value: 928
                   text: 15 mins
                 distance:
-                  value: 10333
+                  value: 10334
                   text: 10.3 km
     DistanceRouteElementsResponse:
       title: DistanceRouteElementsResponse
@@ -7381,7 +7367,7 @@ components:
           distance:
             value: 1
             text: 1 km
-          geometry: 's|ihHouuMZ`GdClCsA~QhCnQmBhEvQhWpD|AnHqJ`OwBx@lC|DhAgFnKlBx@v@tHfEvDlBqF{@{NvDgDhAeIbEI~AfL`EnAfHiEiAOE_EuCq@c@cD_FY}C_EqF_@gEoEoKMcCkDsI}@_C}CyG]aG{G[eFoCw@gAiIkDYg@_DwA@'
+          geometry: 's|ihHouuMZ`GdClCsA~QhCnQmBhEpCfF|HxGpBtFfEnBnHqJpH}AF_EeCcB@sBnEiEYiGmVyFaG{G[eFoCw@gAiIkDYg@_DwA@'
     DistanceStep:
       title: DistanceStep
       type: object
@@ -7517,17 +7503,17 @@ components:
           - elements:
               - status: OK
                 duration_with_traffic:
-                  value: 1626
-                  text: 27 mins
+                  value: 1186
+                  text: 20 mins
                 distance:
-                  value: 10731
-                  text: 10.7 km
+                  value: 10577
+                  text: 10.6 km
               - status: OK
                 duration_with_traffic:
-                  value: 1288
-                  text: 21 mins
+                  value: 1154
+                  text: 19 mins
                 distance:
-                  value: 10185
+                  value: 10198
                   text: 10.2 km
         status: OK
     TrafficDistanceMatrixRequest:
@@ -7604,27 +7590,27 @@ components:
         routes:
           - legs:
               - distance:
-                  value: 1073.570921248021
+                  value: 1068.2679083828243
                   text: 1.1 km
                 duration_with_traffic:
-                  value: 97
+                  value: 96
                   text: 2 mins
                 duration_without_traffic:
-                  value: 88
+                  value: 86
                   text: 1 min
                 start_location:
                   lat: 49.310753
                   lng: 4.1451221
                 end_location:
-                  lat: 49.3134
-                  lng: 4.15297
+                  lat: 49.313436
+                  lng: 4.1529229
             overview_polyline:
-              points: 'e_~kH_rhXkBcDsAwBeAaB]c@a@g@c@g@c@a@[[a@_@YS[Ui@Y]O]K_@Gc@Gi@AcBCg@?_@ESCOMMMMUKYI]Ow@FIFMBI@G@O?IAMCMCKjCsDNShBaCDFDDDBF@F?FABADABEBCBKBM@M?KAKCKCG|@kAfA}A'
+              points: 'e_~kH_rhXkBcDsAwBeAaB]c@a@g@c@g@c@a@[[a@_@YS[Ui@Y]O]K_@Gc@Gi@AcBCg@?_@ESCOMMMMUKYI]Ow@FIFMBI@G@O?IAMCMCKjCsDNShBaCDFDDDBF@F?FABADADIBC@GBM@M?KAKCKCG|@kA`AsA'
             summary: route_0
             bounds:
               northeast:
                 lat: 49.31575
-                lng: 4.15297
+                lng: 4.152923
               southwest:
                 lat: 49.310753
                 lng: 4.145122

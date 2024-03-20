@@ -4,7 +4,7 @@ OkHttpClient client = new OkHttpClient().newBuilder()
 MediaType mediaType = MediaType.parse("text/plain");
 RequestBody body = RequestBody.create(mediaType, "");
 Request request = new Request.Builder()
-  .url("https://api.woosmap.com/stores/?query=idstore%3Astore_123&private_key=YOUR_PRIVATE_API_KEY")
+  .url("https://api.woosmap.com/stores/?query=idstore%3A%3Dstore_123&private_key=YOUR_PRIVATE_API_KEY")
   .method("DELETE", body)
   .build();
 Response response = client.newCall(request).execute();

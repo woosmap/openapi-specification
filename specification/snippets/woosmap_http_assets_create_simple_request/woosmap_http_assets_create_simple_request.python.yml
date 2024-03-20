@@ -1,0 +1,5 @@
+{
+  "lang": "python",
+  "label": "Python",
+  "source": "import requests\nimport json\n\nurl = \"https://api.woosmap.com/stores?private_key=YOUR_PRIVATE_API_KEY\"\n\npayload = json.dumps({\n    \"stores\": [\n        {\n            \"storeId\": \"store_123\",\n            \"name\": \"My first cool store\",\n            \"location\": {\n                \"lat\": 43.61,\n                \"lng\": 3.88\n            }\n        }\n    ]\n})\nheaders = {\n    'content-type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n",
+}
