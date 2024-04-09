@@ -6233,6 +6233,16 @@ components:
       properties:
         postal_codes:
           description: Postal codes related to the locality suggestion.
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesAutocompleteRelatedPostalCode'
+    LocalitiesAutocompleteRelatedPostalCode:
+      title: LocalitiesAutocompleteRelatedPostalCode
+      type: object
+      description: Contains a set of related elements to the locality suggestion.
+      properties:
+        postal_codes:
+          description: Postal codes related to the locality suggestion.
           type: object
           properties:
             public_id:

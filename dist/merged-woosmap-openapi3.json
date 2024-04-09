@@ -5063,6 +5063,20 @@
         "properties": {
           "postal_codes": {
             "description": "Postal codes related to the locality suggestion.",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesAutocompleteRelatedPostalCode"
+            },
+            "type": "array"
+          }
+        },
+        "title": "LocalitiesAutocompleteRelated",
+        "type": "object"
+      },
+      "LocalitiesAutocompleteRelatedPostalCode": {
+        "description": "Contains a set of related elements to the locality suggestion.",
+        "properties": {
+          "postal_codes": {
+            "description": "Postal codes related to the locality suggestion.",
             "properties": {
               "description": {
                 "description": "Formated description for the related Postal Code.",
@@ -5076,7 +5090,7 @@
             "type": "object"
           }
         },
-        "title": "LocalitiesAutocompleteRelated",
+        "title": "LocalitiesAutocompleteRelatedPostalCode",
         "type": "object"
       },
       "LocalitiesAutocompleteResponse": {
@@ -5962,34 +5976,6 @@
         "title": "PaginationSchema",
         "type": "object"
       },
-      "Place": {
-        "properties": {
-          "location": {
-            "$ref": "#/components/schemas/Position"
-          },
-          "name": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Name"
-          },
-          "type": {
-            "title": "Type",
-            "type": "string"
-          }
-        },
-        "required": [
-          "type",
-          "location"
-        ],
-        "title": "Place",
-        "type": "object"
-      },
       "Point": {
         "description": "Point Model",
         "properties": {
@@ -6197,28 +6183,6 @@
           "coordinates"
         ],
         "title": "Polygon",
-        "type": "object"
-      },
-      "Position": {
-        "properties": {
-          "lat": {
-            "maximum": 90,
-            "minimum": -90,
-            "title": "Lat",
-            "type": "number"
-          },
-          "lng": {
-            "maximum": 180,
-            "minimum": -180,
-            "title": "Lng",
-            "type": "number"
-          }
-        },
-        "required": [
-          "lat",
-          "lng"
-        ],
-        "title": "Position",
         "type": "object"
       },
       "PredictionSchema": {
@@ -7351,7 +7315,7 @@
             "type": "integer"
           },
           "end_location": {
-            "$ref": "#/components/schemas/Place"
+            "$ref": "#/components/schemas/TransitPlace"
           },
           "polyline": {
             "anyOf": [
@@ -7365,7 +7329,7 @@
             "title": "Polyline"
           },
           "start_location": {
-            "$ref": "#/components/schemas/Place"
+            "$ref": "#/components/schemas/TransitPlace"
           },
           "transport": {
             "anyOf": [
@@ -7391,6 +7355,56 @@
           "end_location"
         ],
         "title": "TransitLeg",
+        "type": "object"
+      },
+      "TransitPlace": {
+        "properties": {
+          "location": {
+            "$ref": "#/components/schemas/TransitPosition"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "location"
+        ],
+        "title": "TransitPlace",
+        "type": "object"
+      },
+      "TransitPosition": {
+        "properties": {
+          "lat": {
+            "maximum": 90,
+            "minimum": -90,
+            "title": "Lat",
+            "type": "number"
+          },
+          "lng": {
+            "maximum": 180,
+            "minimum": -180,
+            "title": "Lng",
+            "type": "number"
+          }
+        },
+        "required": [
+          "lat",
+          "lng"
+        ],
+        "title": "TransitPosition",
         "type": "object"
       },
       "TransitRoute": {
@@ -13586,6 +13600,20 @@
                 "lat,lng"
               ],
               "title": "Position",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Transit mode filter used to determine which modes of transit to include in the response. \n        By default, all supported transit modes are permitted. Supported modes: `highSpeedTrain` `intercityTrain` `interRegionalTrain` `regionalTrain` `cityTrain` `bus` `ferry` `subway` `lightRail` `privateBus` `inclined` `aerial` `busRapid` `monorail` `flight` `spaceship` This parameter also support an exclusion list: It's sufficient to specify each mode to exclude by prefixing it with `-`.    \n        Mixing of inclusive and exclusive transit modes is not allowed.",
+            "in": "query",
+            "name": "modes",
+            "schema": {
+              "description": "Transit mode filter used to determine which modes of transit to include in the response. \n        By default, all supported transit modes are permitted. Supported modes: `highSpeedTrain` `intercityTrain` `interRegionalTrain` `regionalTrain` `cityTrain` `bus` `ferry` `subway` `lightRail` `privateBus` `inclined` `aerial` `busRapid` `monorail` `flight` `spaceship` This parameter also support an exclusion list: It's sufficient to specify each mode to exclude by prefixing it with `-`.    \n        Mixing of inclusive and exclusive transit modes is not allowed.",
+              "examples": [
+                "subway,bus",
+                "-subway,-bus"
+              ],
+              "title": "Array of Modes (string) or Excluded modes (string) (TransitModesFilter)",
               "type": "string"
             }
           }
