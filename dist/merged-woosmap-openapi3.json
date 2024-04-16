@@ -5075,20 +5075,6 @@
         "properties": {
           "postal_codes": {
             "description": "Postal codes related to the locality suggestion.",
-            "items": {
-              "$ref": "#/components/schemas/LocalitiesAutocompleteRelatedPostalCode"
-            },
-            "type": "array"
-          }
-        },
-        "title": "LocalitiesAutocompleteRelated",
-        "type": "object"
-      },
-      "LocalitiesAutocompleteRelatedPostalCode": {
-        "description": "Contains a set of related elements to the locality suggestion.",
-        "properties": {
-          "postal_codes": {
-            "description": "Postal codes related to the locality suggestion.",
             "properties": {
               "description": {
                 "description": "Formated description for the related Postal Code.",
@@ -5102,7 +5088,7 @@
             "type": "object"
           }
         },
-        "title": "LocalitiesAutocompleteRelatedPostalCode",
+        "title": "LocalitiesAutocompleteRelated",
         "type": "object"
       },
       "LocalitiesAutocompleteResponse": {
@@ -5530,6 +5516,9 @@
             "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo=",
             "type": "string"
           },
+          "scores_per_components": {
+            "$ref": "#/components/schemas/LocalitiesScoresPerComponents"
+          },
           "status": {
             "$ref": "#/components/schemas/LocalitiesStatus"
           },
@@ -5561,6 +5550,31 @@
         ],
         "title": "LocalitiesGeocodeTypes",
         "type": "string"
+      },
+      "LocalitiesScoresPerComponents": {
+        "example": {
+          "scores_per_components": {
+            "locality": 1,
+            "postal_code": 0.8,
+            "street_name": 0.6153846153846154
+          }
+        },
+        "properties": {
+          "locality": {
+            "description": "Postal code score",
+            "type": "number"
+          },
+          "postal_code": {
+            "description": "Postal code score",
+            "type": "number"
+          },
+          "street_name": {
+            "description": "Street score",
+            "type": "number"
+          }
+        },
+        "title": "LocalitiesScoresPerComponents",
+        "type": "object"
       },
       "LocalitiesStatus": {
         "description": "This optional field is only available for UK addresses referenced as not yey built by Royal Mail. Only one value yet.",
@@ -8071,7 +8085,7 @@
     "description": "The Woosmap API is a RESTful API built on HTTP. It has predictable resource URLs. It returns HTTP response codes to indicate errors. It also accepts and returns JSON in the HTTP body. You can use your favorite HTTP/REST library for your programming language to use Woosmap's API, or you can use one of our Javascript SDKs for supported APIs:\n  - [Map JS](https://developers.woosmap.com/products/map-api/get-started/) - support All APIs\n  - [Localities JS](https://developers.woosmap.com/products/localities/localities-jsapi/get-started/) - for Localities API\n  - [MultiSearch JS](https://developers.woosmap.com/products/multisearch-lib/js/get-started/) - for Localities API and Store Search API\n\nYou can use Postman to test the API (if you use the `PUBLIC_API_KEY` authentication, don't forget to set the `Referer` Header corresponding to one of your restricted domain name).\n\n[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9?action=collection%2Ffork\u0026source=rip_markdown\u0026collection-url=entityId%3D18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9%26entityType%3Dcollection%26workspaceId%3Dff0698d5-c4db-403e-b7c6-b622b68032d3)\n",
     "termsOfService": "https://www.woosmap.com/en/policies/terms/",
     "title": "Woosmap Platform API Reference",
-    "version": "1.21.2",
+    "version": "1.22.0",
     "x-document-meta-data": {
       "copyright": "© 2023 Woosmap"
     }
