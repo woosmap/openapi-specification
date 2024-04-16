@@ -4276,7 +4276,11 @@
           },
           "type": {
             "const": "GeometryCollection",
-            "title": "Type"
+            "enum": [
+              "GeometryCollection"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -4388,7 +4392,11 @@
           "type": {
             "const": "Feature",
             "default": "Feature",
-            "title": "Type"
+            "enum": [
+              "Feature"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -4762,7 +4770,11 @@
           },
           "type": {
             "const": "LineString",
-            "title": "Type"
+            "enum": [
+              "LineString"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -5504,6 +5516,9 @@
             "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo=",
             "type": "string"
           },
+          "scores_per_components": {
+            "$ref": "#/components/schemas/LocalitiesScoresPerComponents"
+          },
           "status": {
             "$ref": "#/components/schemas/LocalitiesStatus"
           },
@@ -5535,6 +5550,31 @@
         ],
         "title": "LocalitiesGeocodeTypes",
         "type": "string"
+      },
+      "LocalitiesScoresPerComponents": {
+        "example": {
+          "scores_per_components": {
+            "locality": 1,
+            "postal_code": 0.8,
+            "street_name": 0.6153846153846154
+          }
+        },
+        "properties": {
+          "locality": {
+            "description": "Postal code score",
+            "type": "number"
+          },
+          "postal_code": {
+            "description": "Postal code score",
+            "type": "number"
+          },
+          "street_name": {
+            "description": "Street score",
+            "type": "number"
+          }
+        },
+        "title": "LocalitiesScoresPerComponents",
+        "type": "object"
       },
       "LocalitiesStatus": {
         "description": "This optional field is only available for UK addresses referenced as not yey built by Royal Mail. Only one value yet.",
@@ -5682,7 +5722,11 @@
           },
           "type": {
             "const": "MultiLineString",
-            "title": "Type"
+            "enum": [
+              "MultiLineString"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -5786,7 +5830,11 @@
           },
           "type": {
             "const": "MultiPoint",
-            "title": "Type"
+            "enum": [
+              "MultiPoint"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -5897,7 +5945,11 @@
           },
           "type": {
             "const": "MultiPolygon",
-            "title": "Type"
+            "enum": [
+              "MultiPolygon"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -5960,34 +6012,6 @@
           "per_page"
         ],
         "title": "PaginationSchema",
-        "type": "object"
-      },
-      "Place": {
-        "properties": {
-          "location": {
-            "$ref": "#/components/schemas/Position"
-          },
-          "name": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Name"
-          },
-          "type": {
-            "title": "Type",
-            "type": "string"
-          }
-        },
-        "required": [
-          "type",
-          "location"
-        ],
-        "title": "Place",
         "type": "object"
       },
       "Point": {
@@ -6081,7 +6105,11 @@
           },
           "type": {
             "const": "Point",
-            "title": "Type"
+            "enum": [
+              "Point"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -6189,7 +6217,11 @@
           },
           "type": {
             "const": "Polygon",
-            "title": "Type"
+            "enum": [
+              "Polygon"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -6197,28 +6229,6 @@
           "coordinates"
         ],
         "title": "Polygon",
-        "type": "object"
-      },
-      "Position": {
-        "properties": {
-          "lat": {
-            "maximum": 90,
-            "minimum": -90,
-            "title": "Lat",
-            "type": "number"
-          },
-          "lng": {
-            "maximum": 180,
-            "minimum": -180,
-            "title": "Lng",
-            "type": "number"
-          }
-        },
-        "required": [
-          "lat",
-          "lng"
-        ],
-        "title": "Position",
         "type": "object"
       },
       "PredictionSchema": {
@@ -6537,7 +6547,11 @@
           "status": {
             "const": "ok",
             "default": "ok",
-            "title": "Status"
+            "enum": [
+              "ok"
+            ],
+            "title": "Status",
+            "type": "string"
           }
         },
         "required": [
@@ -6800,7 +6814,11 @@
           "type": {
             "const": "Feature",
             "default": "Feature",
-            "title": "Type"
+            "enum": [
+              "Feature"
+            ],
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -7351,7 +7369,7 @@
             "type": "integer"
           },
           "end_location": {
-            "$ref": "#/components/schemas/Place"
+            "$ref": "#/components/schemas/TransitPlace"
           },
           "polyline": {
             "anyOf": [
@@ -7365,7 +7383,7 @@
             "title": "Polyline"
           },
           "start_location": {
-            "$ref": "#/components/schemas/Place"
+            "$ref": "#/components/schemas/TransitPlace"
           },
           "transport": {
             "anyOf": [
@@ -7391,6 +7409,56 @@
           "end_location"
         ],
         "title": "TransitLeg",
+        "type": "object"
+      },
+      "TransitPlace": {
+        "properties": {
+          "location": {
+            "$ref": "#/components/schemas/TransitPosition"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "location"
+        ],
+        "title": "TransitPlace",
+        "type": "object"
+      },
+      "TransitPosition": {
+        "properties": {
+          "lat": {
+            "maximum": 90,
+            "minimum": -90,
+            "title": "Lat",
+            "type": "number"
+          },
+          "lng": {
+            "maximum": 180,
+            "minimum": -180,
+            "title": "Lng",
+            "type": "number"
+          }
+        },
+        "required": [
+          "lat",
+          "lng"
+        ],
+        "title": "TransitPosition",
         "type": "object"
       },
       "TransitRoute": {
@@ -13586,6 +13654,20 @@
                 "lat,lng"
               ],
               "title": "Position",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Transit mode filter used to determine which modes of transit to include in the response. \n        By default, all supported transit modes are permitted. Supported modes: `highSpeedTrain` `intercityTrain` `interRegionalTrain` `regionalTrain` `cityTrain` `bus` `ferry` `subway` `lightRail` `privateBus` `inclined` `aerial` `busRapid` `monorail` `flight` `spaceship` This parameter also support an exclusion list: It's sufficient to specify each mode to exclude by prefixing it with `-`.    \n        Mixing of inclusive and exclusive transit modes is not allowed.",
+            "in": "query",
+            "name": "modes",
+            "schema": {
+              "description": "Transit mode filter used to determine which modes of transit to include in the response. \n        By default, all supported transit modes are permitted. Supported modes: `highSpeedTrain` `intercityTrain` `interRegionalTrain` `regionalTrain` `cityTrain` `bus` `ferry` `subway` `lightRail` `privateBus` `inclined` `aerial` `busRapid` `monorail` `flight` `spaceship` This parameter also support an exclusion list: It's sufficient to specify each mode to exclude by prefixing it with `-`.    \n        Mixing of inclusive and exclusive transit modes is not allowed.",
+              "examples": [
+                "subway,bus",
+                "-subway,-bus"
+              ],
+              "title": "Array of Modes (string) or Excluded modes (string) (TransitModesFilter)",
               "type": "string"
             }
           }
