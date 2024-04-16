@@ -5075,20 +5075,28 @@
         "properties": {
           "postal_codes": {
             "description": "Postal codes related to the locality suggestion.",
-            "properties": {
-              "description": {
-                "description": "Formated description for the related Postal Code.",
-                "type": "string"
-              },
-              "public_id": {
-                "description": "Public ID of a related Postal Code.",
-                "type": "string"
-              }
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesAutocompleteRelatedItem"
             },
-            "type": "object"
+            "type": "array"
           }
         },
         "title": "LocalitiesAutocompleteRelated",
+        "type": "object"
+      },
+      "LocalitiesAutocompleteRelatedItem": {
+        "description": "Contains a set of related elements to the locality suggestion.",
+        "properties": {
+          "description": {
+            "description": "Formatted description for the related Postal Code.",
+            "type": "string"
+          },
+          "public_id": {
+            "description": "Public ID of a related Postal Code.",
+            "type": "string"
+          }
+        },
+        "title": "LocalitiesAutocompleteRelatedItem",
         "type": "object"
       },
       "LocalitiesAutocompleteResponse": {

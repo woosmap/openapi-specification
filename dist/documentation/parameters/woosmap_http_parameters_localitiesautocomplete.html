@@ -1,0 +1,182 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START woosmap_http_parameters_localitiesautocomplete] -->
+<h2 id="required-parameters">Required parameters</h2>
+<ul>
+  <li>
+    <h3 class="parameter-name" id="input">input</h3>
+    <p>
+      The text string on which to search, for example: "london" or "123 Cross
+      Road". The Woosmap Localities API will return predictions matches based on
+      this string and order the results based on their perceived relevance.
+    </p>
+  </li>
+</ul>
+<h2 id="optional-parameters">Optional parameters</h2>
+<ul>
+  <li>
+    <h3 class="parameter-name" id="components">components</h3>
+    <p>
+      A grouping of places to which you would like to restrict your results.
+      Components can and should be used when applicable to filter over countries
+      and retrieve more accurate results. Countries must be passed as an ISO
+      3166-1 Alpha-2 or Alpha-3 compatible country code. For example:
+      <code>components=country:fr</code> or
+      <code>components=country:fra</code> would restrict your results to places
+      within France and <code>components=country:fr-fr</code> returns locations
+      only in Metropolitan France. Multiple countries must be passed as multiple
+      <code>country:XX</code> filters, with the pipe character (<code>|</code>)
+      as a separator. For example:
+      <code
+        >components=country:gb|country:fr|country:be|country:sp|country:it</code
+      >
+      would restrict your results to city names or postal codes within the
+      United Kingdom, France, Belgium, Spain and Italy.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="custom_description">custom_description</h3>
+    <p>
+      This parameter allows to choose the description format for all or some of
+      the suggestion types selected. The custom formats are described as follows
+      (available fields depend on the returned type):
+      <code
+        >custom_description=type_A:"{field_1}, {field_2},
+        [...]"|type_B:"{field_1}, {field_2}, [...]"</code
+      >
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="data">data</h3>
+    <p>
+      Two values for this parameter: <code>standard</code> or
+      <code>advanced</code>. By default, if the parameter is not defined, value
+      is set as <code>standard</code>. The <code>advanced</code> value opens
+      suggestions to worldwide postal codes in addition to postal codes for
+      Western Europe.
+      <em
+        ><strong
+          >A dedicated option subject to specific billing on your license is
+          needed to use this parameter. Please contact us if you are interested
+          in using this parameter and you do not have subscribed the proper
+          option yet.</strong
+        ></em
+      >
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="extended">extended</h3>
+    <p>
+      If set, this parameter allows a refined search over locality names that
+      bears the same postal code. By triggering this parameter, integrators will
+      benefit from a search spectrum on the <code>locality</code> type that
+      <em><strong>includes postal codes</strong></em
+      >. To avoid confusion, it is recommended not to activate this parameter
+      along with the <code>postal_code</code> type which could lead to duplicate
+      locations. Also, the default description returned by the API changes to
+      <code>name (postal code), admin_1, admin_0</code>. It is only available
+      for France, Italy, Spain and Belgium.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="language">language</h3>
+    <p>
+      The language code, using ISO 639-2 Alpha-2 country codes, indicating in
+      which language the results should be returned, if possible. If language is
+      not supplied, first <code>Accept-Language</code> of the browser will be
+      used. If neither the provided <code>language</code> or the
+      <code>Accept-Language</code> are known, the Localities service uses the
+      international default language (English). No <code>language</code> is
+      necessary for a postal_code request. According to requested language, only
+      parts of the address components might be translated.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="location">location</h3>
+    <p>
+      This parameter is used to add a bias to the autocomplete feature. The
+      location defines the point around which to retrieve results in priority.
+      It must be specified in the <code>latitude,longitude</code> string format.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="radius">radius</h3>
+    <p>
+      This parameter may be used in addition to the
+      <code>location</code> parameter to define the distance in meters within
+      which the API will return results in priority. Results outside of the
+      defined area may still be displayed. Default radius if this parameter is
+      not set is 100 000.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="types">types</h3>
+    <p>The types of suggestion to return.</p>
+    <ul>
+      <li>
+        <code>locality</code>: includes locality names (from city to village)
+        and suburbs
+      </li>
+      <li>
+        <code>postal_code</code>: publicly-used postal codes around the world
+      </li>
+      <li><code>address</code>: addresses</li>
+      <li><code>admin_level</code>: most commonly used administrative areas</li>
+      <li><code>country</code>: countries as whole point of interest</li>
+      <li>
+        <code>airport</code>: includes all medium sized to international sized
+        airports
+      </li>
+      <li><code>train_station</code>: includes all train stations</li>
+      <li><code>metro_station</code>: includes all metro stations</li>
+      <li>
+        <code>shopping</code>: includes shopping malls (or "shopping centers") -
+        <em>may include private retail brands</em>
+      </li>
+      <li><code>museum</code>: includes museums</li>
+      <li>
+        <code>tourist_attraction</code>: includes tourist attractions like the
+        Eiffel tower
+      </li>
+      <li>
+        <code>amusement_park</code>: includes amusement parks like Disneyland
+        Paris
+      </li>
+      <li><code>art_gallery</code>: includes art galleries</li>
+      <li><code>zoo</code>: includes zoos</li>
+    </ul>
+    <p>
+      Not specifying any type will only query <code>locality</code> and
+      <code>postal_code</code>. Multiple types can be passed using the pipe
+      character (<code>|</code>) as a separator. For example:
+      <code>types=locality|airport|admin_level</code>.
+    </p>
+  </li>
+</ul>
+<p style="text-align: right; font-size: smaller">
+  Generated from the
+  <a
+    data-label="openapi-github"
+    href="https://github.com/woosmap/openapi-specification"
+    title="Woosmap OpenAPI Specification"
+    class="external"
+    >OpenAPI specification</a
+  >.
+  <a
+    data-label="openapi-github-woosmap-http-parameters-localitiesautocomplete"
+    data-action="edit"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/tree/main/specification/parameters"
+    title="Edit on GitHub"
+    >✎ Edit</a
+  >
+  <a
+    data-label="openapi-github-woosmap-http-parameters-localitiesautocomplete"
+    data-action="bug"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /localities/autocomplete"
+    title="File bug for parameters on GitHub"
+    ><span class="material-icons">bug_report</span> Report bug</a
+  >
+</p>
+
+<!--- [END woosmap_http_parameters_localitiesautocomplete] -->

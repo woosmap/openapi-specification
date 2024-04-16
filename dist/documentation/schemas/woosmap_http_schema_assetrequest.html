@@ -1,0 +1,218 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START woosmap_http_schema_assetrequest] -->
+<h3 class="schema-object" id="AssetRequest">AssetRequest</h3>
+<p>Attributes describing an Asset Request.</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-location"
+          class="add-link schema-object-property-key"
+        >
+          <code>location</code>
+        </h4>
+      </td>
+      <td><strong>required</strong></td>
+      <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
+      <td>
+        See <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4 id="AssetRequest-name" class="add-link schema-object-property-key">
+          <code>name</code>
+        </h4>
+      </td>
+      <td><strong>required</strong></td>
+      <td><a href="#AssetName" title="AssetName">AssetName</a></td>
+      <td>
+        See <a href="#AssetName" title="AssetName">AssetName</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-storeId"
+          class="add-link schema-object-property-key"
+        >
+          <code>storeId</code>
+        </h4>
+      </td>
+      <td><strong>required</strong></td>
+      <td><a href="#AssetId" title="AssetId">AssetId</a></td>
+      <td>
+        See <a href="#AssetId" title="AssetId">AssetId</a> for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-address"
+          class="add-link schema-object-property-key"
+        >
+          <code>address</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#AssetAddressRequest" title="AssetAddressRequest"
+          >AssetAddressRequest</a
+        >
+      </td>
+      <td>
+        See
+        <a href="#AssetAddressRequest" title="AssetAddressRequest"
+          >AssetAddressRequest</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-contact"
+          class="add-link schema-object-property-key"
+        >
+          <code>contact</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td><a href="#AssetContact" title="AssetContact">AssetContact</a></td>
+      <td>
+        See <a href="#AssetContact" title="AssetContact">AssetContact</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-localizedNames"
+          class="add-link schema-object-property-key"
+        >
+          <code>localizedNames</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>object</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Alternate names for your assets. These localized names are useful
+            for multi-language integrations. Combined with our Autocomplete API
+            endpoint you can let your users find your store in their native
+            language.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-openingHours"
+          class="add-link schema-object-property-key"
+        >
+          <code>openingHours</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#AssetOpeningHours" title="AssetOpeningHours"
+          >AssetOpeningHours</a
+        >
+      </td>
+      <td>
+        See
+        <a href="#AssetOpeningHours" title="AssetOpeningHours"
+          >AssetOpeningHours</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4 id="AssetRequest-tags" class="add-link schema-object-property-key">
+          <code>tags</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td><a href="#AssetTags" title="AssetTags">AssetTags</a></td>
+      <td>
+        See <a href="#AssetTags" title="AssetTags">AssetTags</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4 id="AssetRequest-types" class="add-link schema-object-property-key">
+          <code>types</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td><a href="#AssetTypes" title="AssetTypes">AssetTypes</a></td>
+      <td>
+        See <a href="#AssetTypes" title="AssetTypes">AssetTypes</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="AssetRequest-userProperties"
+          class="add-link schema-object-property-key"
+        >
+          <code>userProperties</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>object</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains all additional information relative to an Asset. If not set
+            it returns null value.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: right; font-size: smaller">
+  Generated from the
+  <a
+    data-label="openapi-github"
+    href="https://github.com/woosmap/openapi-specification"
+    title="Woosmap OpenAPI Specification"
+    class="external"
+    >OpenAPI specification</a
+  >.
+  <a
+    data-label="openapi-github-woosmap-http-schema-assetrequest"
+    data-action="edit"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/blob/main/specification/schemas/AssetRequest.yml"
+    title="Edit on GitHub"
+    >✎ Edit</a
+  >
+  <a
+    data-label="openapi-github-woosmap-http-schema-assetrequest"
+    data-action="bug"
+    style="margin-left: 5px"
+    href="https://github.com/woosmap/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - AssetRequest"
+    title="File bug for schemas on GitHub"
+    ><span class="material-icons">bug_report</span> Report bug</a
+  >
+</p>
+
+<!--- [END woosmap_http_schema_assetrequest] -->
