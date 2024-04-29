@@ -1,0 +1,10 @@
+title: LocalitiesNearbyCollectionResponse
+type: object
+description: Array of nearby locators
+properties:
+  localities:
+    type: array
+    items:
+      - $ref: "./LocalitiesNearbyResponse.yml"
+example:
+  $ref: "../responses/woosmap_http_localities_nearby_collection_response.yml"

@@ -61,6 +61,11 @@
     summary: Geocode a locality or Reverse Geocode a latlng
     operationId: localitiesGeocode
     $ref: "./localities/localitiesGeocode.yml"
+/localities/nearby:
+  get:
+    summary: Retrieve a paginated list of locators surrounding a location. Can be filtered by categories
+    operationId: localitiesNearby
+    $ref: "./localities/localitiesNearby.yml"
 /address/autocomplete/json:
   get:
     deprecated: true

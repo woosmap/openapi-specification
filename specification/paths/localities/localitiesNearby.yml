@@ -1,0 +1,76 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Localities API
+description: >
+  Retrieve worldwide locators surrounding a given location.
+  Only points of interest are supported in current version, and you can filter them by categories.
+
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+  - PrivateApiKeyHeaderAuth: []
+parameters:
+  - $ref: "../../parameters/localities/types.yml"
+  - name: location
+    description: >
+      Center of the search circle.
+    schema:
+      type: string
+    required: true
+    example: 40.71399,-74.00499
+    in: query
+  - name: radius
+    description: >
+      radius of the search circle, in meter.
+    schema:
+      type: integer
+      default: 1000
+      minimum: 10
+      maximum: 200000
+    in: query
+    required: false
+    example: 100000
+  - name: page
+    description: >
+      use this page_number to navigate through nearby locators.
+    schema:
+      type: integer
+      default: 1
+      minimum: 1
+    in: query
+    example: 15
+  - name: page_size
+    description: >
+      Defines how many results should be included in a page
+    schema:
+      type: integer
+      default: 10
+      minimum: 10
+      maximum: 100
+    in: query
+    example: 50
+  - $ref: "../../parameters/localities/categories.yml"
+responses:
+  "200":
+    description: Points of interests surrounding `location` and matching provided `categories`, sorted by distance to `location`.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LocalitiesNearbyCollectionResponse.yml"
+        examples:
+          default:
+            summary: Nearby points of interest with category `business.shop` around New-York center.
+            value:
+              $ref: "../../responses/woosmap_http_localities_nearby_collection_response.yml"
+  "401":
+    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+  "403":
+    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+  "429":
+    $ref: "../../responses/woosmap_http_error_429_ratelimit_response.yml"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_localities_nearby_collection/woosmap_http_localities_nearby_collection.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_localities_nearby_collection/woosmap_http_localities_nearby_collection.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_localities_nearby_collection/woosmap_http_localities_nearby_collection.python.yml"

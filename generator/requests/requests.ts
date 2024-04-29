@@ -435,6 +435,31 @@ export const REQUESTS: SnippetRequest[] = [
         }),
     },
     {
+        regionTag: "woosmap_http_localities_nearby_collection",
+        request: new Request({
+            url: new Url({
+                protocol: "https",
+                host: "api.woosmap.com",
+                path: "/localities/nearby",
+                query: [
+                    {
+                        key: "types",
+                        value: "point_of_interest"
+                    },
+                    {
+                        key: "location",
+                        value: "40.71399,-74.00499",
+                    },
+                    {
+                        key:"categories",
+                        value:"business.cinema"
+                    }
+                ],
+            }),
+            header: [{key: "Referer", value: "http://localhost"}],
+        }),
+    },
+    {
         regionTag: "woosmap_http_asset_feature_collection",
         request: new Request({
             url: new Url({
