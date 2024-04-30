@@ -2383,6 +2383,241 @@
         ]
       }
     },
+    "/localities/nearby": {
+      "get": {
+        "summary": "Retrieve a paginated list of locators surrounding a location. Can be filtered by categories",
+        "operationId": "localitiesNearby",
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "tags": [
+          "Localities API"
+        ],
+        "description": "Retrieve worldwide locators surrounding a given location. Only points of interest are supported in current version, and you can filter them by categories.\n",
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/localities_types"
+          },
+          {
+            "name": "location",
+            "description": "Center of the search circle.\n",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "40.71399,-74.00499",
+            "in": "query"
+          },
+          {
+            "name": "radius",
+            "description": "radius of the search circle, in meter.\n",
+            "schema": {
+              "type": "integer",
+              "default": 1000,
+              "minimum": 10,
+              "maximum": 200000
+            },
+            "in": "query",
+            "required": false,
+            "example": 100000
+          },
+          {
+            "name": "page",
+            "description": "use this page_number to navigate through nearby locators.\n",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            },
+            "in": "query",
+            "example": 15
+          },
+          {
+            "name": "page_size",
+            "description": "Defines how many results should be included in a page\n",
+            "schema": {
+              "type": "integer",
+              "default": 10,
+              "minimum": 10,
+              "maximum": 100
+            },
+            "in": "query",
+            "example": 50
+          },
+          {
+            "$ref": "#/components/parameters/localities_categories"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Points of interests surrounding `location` and matching provided `categories`, sorted by distance to `location`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalitiesNearbyCollectionResponse"
+                },
+                "examples": {
+                  "default": {
+                    "summary": "Nearby points of interest with category `business.shop` around New-York center.",
+                    "value": {
+                      "results": [
+                        {
+                          "public_id": "l3GuqeKZHfWmNAkjZpLrubLJiKU=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.cinema"
+                          ],
+                          "name": "Roxy Cinema New York",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.719292364867385,
+                              "lng": -74.00482286995577
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "tT4jSy9joAjuNmulGzUAyLqooUM=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.cinema"
+                          ],
+                          "name": "No Evil Eye",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.72038578413637,
+                              "lng": -74.00293853430333
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "JOEzREEFaVplTOpoWDe9fRjILOc=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.cinema"
+                          ],
+                          "name": "iPic Theaters",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.70667827114349,
+                              "lng": -74.00306652596478
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "FUp7UCBwnOkaduBaeH7sb+q49y8=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.cinema"
+                          ],
+                          "name": "Regal Battery Park",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71474199727254,
+                              "lng": -74.015169072138
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        }
+                      ],
+                      "pagination": {
+                        "has_next_page": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/paths/~1zones/get/responses/401"
+          },
+          "403": {
+            "$ref": "#/paths/~1zones/get/responses/403"
+          },
+          "429": {
+            "$ref": "#/paths/~1zones/get/responses/429"
+          }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      }
+    },
     "/address/autocomplete/json": {
       "get": {
         "deprecated": true,
@@ -4702,6 +4937,15 @@
         "in": "query",
         "deprecated": true,
         "example": 10
+      },
+      "localities_categories": {
+        "name": "categories",
+        "description": "The categories of points of interest to return. Not specifying any category will not filter returned results. Multiple categories can be passed using the pipe character (`|`) as a separator. Also, intermediate categories can be used. For example: `categories=business.shop|medical.pharmacy|bank`.\n",
+        "schema": {
+          "$ref": "#/components/schemas/LocalitiesNearbyCategory"
+        },
+        "in": "query",
+        "example": "business.food_and_drinks.restaurant"
       },
       "localities_cc_format": {
         "name": "cc_format",
@@ -7592,6 +7836,267 @@
             "locality": 1
           }
         }
+      },
+      "LocalitiesNearbyCollectionResponse": {
+        "title": "LocalitiesNearbyCollectionResponse",
+        "type": "object",
+        "description": "Collection of nearby localities",
+        "properties": {
+          "results": {
+            "description": "the array of nearby localities",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesNearbyResponse"
+            }
+          },
+          "pagination": {
+            "description": "Helps you navigate through results pagination",
+            "type": "object",
+            "required": [
+              "has_next_page"
+            ],
+            "properties": {
+              "has_next_page": {
+                "description": "will be false when last retrievable item is in current page",
+                "type": "boolean"
+              },
+              "next_page": {
+                "description": "id of next page, if exists",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "example": {
+          "results": [
+            {
+              "public_id": "l3GuqeKZHfWmNAkjZpLrubLJiKU=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.cinema"
+              ],
+              "name": "Roxy Cinema New York",
+              "geometry": {
+                "location": {
+                  "lat": 40.719292364867385,
+                  "lng": -74.00482286995577
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "tT4jSy9joAjuNmulGzUAyLqooUM=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.cinema"
+              ],
+              "name": "No Evil Eye",
+              "geometry": {
+                "location": {
+                  "lat": 40.72038578413637,
+                  "lng": -74.00293853430333
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "JOEzREEFaVplTOpoWDe9fRjILOc=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.cinema"
+              ],
+              "name": "iPic Theaters",
+              "geometry": {
+                "location": {
+                  "lat": 40.70667827114349,
+                  "lng": -74.00306652596478
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "FUp7UCBwnOkaduBaeH7sb+q49y8=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.cinema"
+              ],
+              "name": "Regal Battery Park",
+              "geometry": {
+                "location": {
+                  "lat": 40.71474199727254,
+                  "lng": -74.015169072138
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            }
+          ],
+          "pagination": {
+            "has_next_page": false
+          }
+        }
+      },
+      "LocalitiesNearbyResponse": {
+        "title": "LocalitiesNearbyResponse",
+        "type": "object",
+        "description": "Attributes describing a nearby locator.",
+        "properties": {
+          "types": {
+            "description": "An array containing the types of the result",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "Contains the type of the nearby locator.",
+              "enum": [
+                "point_of_interest"
+              ]
+            }
+          },
+          "name": {
+            "description": "The name of the result",
+            "type": "string"
+          },
+          "public_id": {
+            "description": "Contains a unique ID for each locator. Please use this ID to give feedbacks on results.",
+            "type": "string",
+            "example": "NOAeiQADqqisOuN3NM7oXlhkROI="
+          },
+          "geometry": {
+            "description": "The location of the result, in latitude and longitude, eventually associated with a Viewport.",
+            "type": "object",
+            "properties": {
+              "location": {
+                "$ref": "#/components/schemas/LatLngLiteral"
+              },
+              "viewport": {
+                "$ref": "#/components/schemas/Bounds"
+              }
+            },
+            "example": {
+              "location": {
+                "lat": 51.4998415,
+                "lng": -0.1246375
+              }
+            }
+          },
+          "address_components": {
+            "$ref": "#/components/schemas/AddressComponents"
+          },
+          "categories": {
+            "description": "An array containing the categories of the result",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesNearbyCategory"
+            }
+          }
+        }
+      },
+      "LocalitiesNearbyCategory": {
+        "title": "LocalitiesNearbyCategory",
+        "type": "string",
+        "enum": [
+          "business",
+          "business.cinema",
+          "business.theatre",
+          "business.nightclub",
+          "business.finance",
+          "business.finance.bank",
+          "business.fuel",
+          "business.parking",
+          "business.mall",
+          "business.food_and_drinks",
+          "business.food_and_drinks.bar",
+          "business.food_and_drinks.biergarten",
+          "business.food_and_drinks.cafe",
+          "business.food_and_drinks.fast_food",
+          "business.food_and_drinks.pub",
+          "business.food_and_drinks.restaurant",
+          "business.food_and_drinks.food_court",
+          "business.shop",
+          "business.shop.mall",
+          "business.shop.bakery",
+          "business.shop.butcher",
+          "business.shop.library",
+          "business.shop.grocery",
+          "business.shop.sports",
+          "business.shop.toys",
+          "business.shop.clothes",
+          "business.shop.furniture",
+          "business.shop.electronics",
+          "education",
+          "education.school",
+          "education.kindergarten",
+          "education.university",
+          "education.college",
+          "education.library",
+          "hospitality",
+          "hospitality.hotel",
+          "hospitality.hostel",
+          "hospitality.guest_house",
+          "hospitality.bed_and_breakfast",
+          "hospitality.motel",
+          "medical",
+          "medical.hospital",
+          "medical.pharmacy",
+          "medical.clinic",
+          "tourism",
+          "tourism.attraction",
+          "tourism.attraction.amusement_park",
+          "tourism.attraction.zoo",
+          "tourism.attraction.aquarium",
+          "tourism.monument",
+          "tourism.monument.castle",
+          "tourism.museum",
+          "government",
+          "park",
+          "place_of_worship",
+          "police",
+          "post_office",
+          "sports"
+        ]
       },
       "AddressAutocompleteCollectionResponse": {
         "title": "AddressAutocompleteCollectionResponse",
