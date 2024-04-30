@@ -2,10 +2,22 @@ title: LocalitiesNearbyCollectionResponse
 type: object
 description: Collection of nearby localities
 properties:
-  localities:
+  results:
     description: the array of nearby localities
     type: array
     items:
       $ref: "./LocalitiesNearbyResponse.yml"
+  pagination:
+    description: Helps you navigate through results pagination
+    type: object
+    required:
+      - has_next_page
+    properties:
+      has_next_page:
+        description: will be false when last retrievable item is in current page
+        type: boolean
+      next_page:
+        description: id of next page, if exists
+        type: number
 example:
   $ref: "../responses/woosmap_http_localities_nearby_collection_response.yml"
