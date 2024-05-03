@@ -452,8 +452,12 @@ export const REQUESTS: SnippetRequest[] = [
                     },
                     {
                         key:"categories",
-                        value:"business.cinema"
-                    }
+                        value:"business"
+                    },
+		    {
+                        key:"page",
+                        value:"3"
+                    },
                 ],
             }),
             header: [{key: "Referer", value: "http://localhost"}],
