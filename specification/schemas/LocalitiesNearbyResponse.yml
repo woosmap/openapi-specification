@@ -1,20 +1,20 @@
 title: LocalitiesNearbyResponse
 type: object
-description: Attributes describing a nearby locator.
+description: Attributes describing a point of interest.
 properties:
   types:
-    description: An array containing the types of the result
+    description: An array containing the types of the result.
     type: array
     items:
       type: string
-      description: Contains the type of the nearby locator.
+      description: type of result.
       enum:
         - point_of_interest
   name:
-    description: The name of the result
+    description: The name of the result.
     type: string
   public_id:
-    description: Contains a unique ID for each locator. Please use this ID to give feedbacks on results.
+    description: Contains a unique ID for each result. Please use this ID to give feedbacks on results.
     type: string
     example: NOAeiQADqqisOuN3NM7oXlhkROI=
   geometry:
@@ -31,7 +31,7 @@ properties:
   address_components:
     $ref: "./AddressComponents.yml"
   categories:
-    description: An array containing the categories of the result
+    description: An array containing the categories of the result.
     type: array
     items:
       $ref: "./LocalitiesNearbyCategory.yml"

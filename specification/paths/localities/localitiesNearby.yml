@@ -3,8 +3,7 @@ servers:
 tags:
   - Localities API
 description: >
-  Retrieve worldwide locators surrounding a given location.
-  Only points of interest are supported in current version, and you can filter them by categories.
+  Retrieve worldwide points of interest surrounding a given location. They can be filtered by categories.
 
 security:
   - PublicApiKeyAuth: []
@@ -12,7 +11,14 @@ security:
   - PrivateApiKeyAuth: []
   - PrivateApiKeyHeaderAuth: []
 parameters:
-  - $ref: "../../parameters/localities/types.yml"
+  - name: types
+    required: true
+    description: types of targeted items.
+    in: query
+    schema:
+      type: string
+      enum:
+        - point_of_interest
   - name: location
     description: >
       Center of the search circle.
@@ -28,29 +34,29 @@ parameters:
       type: integer
       default: 1000
       minimum: 10
-      maximum: 200000
+      maximum: 50000
     in: query
     required: false
     example: 100000
   - name: page
     description: >
-      use this page_number to navigate through nearby locators.
+      use `page` to navigate through paginated results.
     schema:
       type: integer
       default: 1
       minimum: 1
     in: query
-    example: 15
-  - name: page_size
+    example: 7
+  - name: limit
     description: >
       Defines how many results should be included in a page
     schema:
       type: integer
       default: 10
-      minimum: 10
-      maximum: 100
+      minimum: 1
+      maximum: 30
     in: query
-    example: 50
+    example: 15
   - $ref: "../../parameters/localities/categories.yml"
 responses:
   "200":
