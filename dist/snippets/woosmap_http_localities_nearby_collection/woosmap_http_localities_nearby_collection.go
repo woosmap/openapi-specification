@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399,-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY"
+  url := "https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399,-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY"
   method := "GET"
 
   client := &http.Client {
