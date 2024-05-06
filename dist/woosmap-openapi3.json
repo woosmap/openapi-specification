@@ -2769,17 +2769,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
             "label": "JavaScript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business.cinema&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
