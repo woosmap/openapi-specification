@@ -2383,6 +2383,407 @@
         ]
       }
     },
+    "/localities/nearby": {
+      "get": {
+        "summary": "Nearby points of interest",
+        "operationId": "localitiesNearby",
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "tags": [
+          "Localities API"
+        ],
+        "description": "Retrieve worldwide points of interest surrounding a given location. They can be filtered by categories.\n",
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "types",
+            "required": true,
+            "description": "types of targeted items.",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "point_of_interest"
+              ]
+            }
+          },
+          {
+            "name": "location",
+            "description": "Center of the search circle.\n",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "40.71399,-74.00499",
+            "in": "query"
+          },
+          {
+            "name": "radius",
+            "description": "radius of the search circle, in meter.\n",
+            "schema": {
+              "type": "integer",
+              "default": 1000,
+              "minimum": 10,
+              "maximum": 50000
+            },
+            "in": "query",
+            "required": false,
+            "example": 3000
+          },
+          {
+            "name": "page",
+            "description": "use `page` to navigate through paginated results.\n",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            },
+            "in": "query",
+            "example": 7
+          },
+          {
+            "name": "limit",
+            "description": "Defines how many results should be included in a page\n",
+            "schema": {
+              "type": "integer",
+              "default": 10,
+              "minimum": 1,
+              "maximum": 30
+            },
+            "in": "query",
+            "example": 15
+          },
+          {
+            "$ref": "#/components/parameters/localities_categories"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Points of interests surrounding `location` and matching provided `categories`, sorted by distance to `location`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalitiesNearbyCollectionResponse"
+                },
+                "examples": {
+                  "default": {
+                    "summary": "Nearby points of interest with category `business.shop` around New-York center.",
+                    "value": {
+                      "results": [
+                        {
+                          "public_id": "emXdi2D7RXOpIthsEyKVGBYZVSc=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.finance.bank"
+                          ],
+                          "name": "Citibank",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.7130414767567,
+                              "lng": -74.0074818610995
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "95FQZAdnETzbfFTEFVb/oofxJ4U=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.food_and_drinks.restaurant"
+                          ],
+                          "name": "Gran Morsi",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71432885326513,
+                              "lng": -74.00778746528921
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "c5rIR48wx55zG9RmeFYI7yujDwg=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.food_and_drinks.restaurant"
+                          ],
+                          "name": "Saffron",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.714654825479556,
+                              "lng": -74.0077106032371
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "eFFoZUgHxyJJNH+Hpm2MbBXPg5Y=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.food_and_drinks.fast_food"
+                          ],
+                          "name": "Burger King",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71619516782573,
+                              "lng": -74.00480635760651
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "6GSB3ngwjf3vpdOUnj2TZO2ecOc=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.food_and_drinks.fast_food"
+                          ],
+                          "name": "Dunkin'",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71471299588757,
+                              "lng": -74.00777455715831
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "GjVqQF0y4/8+puILSl4GwcvTpG8=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.shop.grocery"
+                          ],
+                          "name": "Barakth & Saiful",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71499001778744,
+                              "lng": -74.00766701734061
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "FAs4bm8/XWAzeqIfWy3c5vNNuJM=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.food_and_drinks.cafe"
+                          ],
+                          "name": "Hungry Ghost",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71527793616147,
+                              "lng": -74.00745294353355
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "eev6v7sxhhbvAagkbC5NAKqzGV8=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.shop.grocery"
+                          ],
+                          "name": "Mr. Exotix",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71523761920719,
+                              "lng": -74.00749141646912
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "VDUWUBQS+dBD6NJyMqfEondAEZE=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.shop.grocery"
+                          ],
+                          "name": "Civic Deli",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.71606784671653,
+                              "lng": -74.00377261748812
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        },
+                        {
+                          "public_id": "X8aAA+6/fLGaHeZkbc6EiqzOVR8=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "categories": [
+                            "business.shop.grocery"
+                          ],
+                          "name": "Tribeca Deli Grill",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.7149423247584,
+                              "lng": -74.00771462655064
+                            }
+                          },
+                          "address_components": [
+                            {
+                              "types": [
+                                "country",
+                                "administrative_area_level_0"
+                              ],
+                              "long_name": "United States",
+                              "short_name": "us"
+                            }
+                          ]
+                        }
+                      ],
+                      "pagination": {
+                        "previous_page": 2,
+                        "next_page": 4
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/paths/~1zones/get/responses/401"
+          },
+          "403": {
+            "$ref": "#/paths/~1zones/get/responses/403"
+          },
+          "429": {
+            "$ref": "#/paths/~1zones/get/responses/429"
+          }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      }
+    },
     "/address/autocomplete/json": {
       "get": {
         "deprecated": true,
@@ -4702,6 +5103,15 @@
         "in": "query",
         "deprecated": true,
         "example": 10
+      },
+      "localities_categories": {
+        "name": "categories",
+        "description": "The categories of points of interest to return.  Not specifying any category will not filter returned results.  Multiple categories can be passed using the pipe character (`|`) as a separator. For example: `categories=business.shop|medical.pharmacy|bank`.\n",
+        "schema": {
+          "$ref": "#/components/schemas/LocalitiesNearbyCategory"
+        },
+        "in": "query",
+        "example": "business.food_and_drinks.restaurant"
       },
       "localities_cc_format": {
         "name": "cc_format",
@@ -7592,6 +8002,423 @@
             "locality": 1
           }
         }
+      },
+      "LocalitiesNearbyCollectionResponse": {
+        "title": "LocalitiesNearbyCollectionResponse",
+        "type": "object",
+        "description": "Collection of nearby points of interest.",
+        "properties": {
+          "results": {
+            "description": "The array of nearby points of interest.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesNearbyResponse"
+            }
+          },
+          "pagination": {
+            "description": "Helps to navigate through paginated results.",
+            "type": "object",
+            "properties": {
+              "next_page": {
+                "description": "If more results are available, this will contain the value to pass to the `page` parameter to get the next page",
+                "type": "integer",
+                "nullable": true
+              },
+              "previous_page": {
+                "description": "If previous results are available, this will contain the value to pass to the `page` parameter to get the previous page",
+                "type": "integer",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "example": {
+          "results": [
+            {
+              "public_id": "emXdi2D7RXOpIthsEyKVGBYZVSc=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.finance.bank"
+              ],
+              "name": "Citibank",
+              "geometry": {
+                "location": {
+                  "lat": 40.7130414767567,
+                  "lng": -74.0074818610995
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "95FQZAdnETzbfFTEFVb/oofxJ4U=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.food_and_drinks.restaurant"
+              ],
+              "name": "Gran Morsi",
+              "geometry": {
+                "location": {
+                  "lat": 40.71432885326513,
+                  "lng": -74.00778746528921
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "c5rIR48wx55zG9RmeFYI7yujDwg=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.food_and_drinks.restaurant"
+              ],
+              "name": "Saffron",
+              "geometry": {
+                "location": {
+                  "lat": 40.714654825479556,
+                  "lng": -74.0077106032371
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "eFFoZUgHxyJJNH+Hpm2MbBXPg5Y=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.food_and_drinks.fast_food"
+              ],
+              "name": "Burger King",
+              "geometry": {
+                "location": {
+                  "lat": 40.71619516782573,
+                  "lng": -74.00480635760651
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "6GSB3ngwjf3vpdOUnj2TZO2ecOc=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.food_and_drinks.fast_food"
+              ],
+              "name": "Dunkin'",
+              "geometry": {
+                "location": {
+                  "lat": 40.71471299588757,
+                  "lng": -74.00777455715831
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "GjVqQF0y4/8+puILSl4GwcvTpG8=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.shop.grocery"
+              ],
+              "name": "Barakth & Saiful",
+              "geometry": {
+                "location": {
+                  "lat": 40.71499001778744,
+                  "lng": -74.00766701734061
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "FAs4bm8/XWAzeqIfWy3c5vNNuJM=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.food_and_drinks.cafe"
+              ],
+              "name": "Hungry Ghost",
+              "geometry": {
+                "location": {
+                  "lat": 40.71527793616147,
+                  "lng": -74.00745294353355
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "eev6v7sxhhbvAagkbC5NAKqzGV8=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.shop.grocery"
+              ],
+              "name": "Mr. Exotix",
+              "geometry": {
+                "location": {
+                  "lat": 40.71523761920719,
+                  "lng": -74.00749141646912
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "VDUWUBQS+dBD6NJyMqfEondAEZE=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.shop.grocery"
+              ],
+              "name": "Civic Deli",
+              "geometry": {
+                "location": {
+                  "lat": 40.71606784671653,
+                  "lng": -74.00377261748812
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            },
+            {
+              "public_id": "X8aAA+6/fLGaHeZkbc6EiqzOVR8=",
+              "types": [
+                "point_of_interest"
+              ],
+              "categories": [
+                "business.shop.grocery"
+              ],
+              "name": "Tribeca Deli Grill",
+              "geometry": {
+                "location": {
+                  "lat": 40.7149423247584,
+                  "lng": -74.00771462655064
+                }
+              },
+              "address_components": [
+                {
+                  "types": [
+                    "country",
+                    "administrative_area_level_0"
+                  ],
+                  "long_name": "United States",
+                  "short_name": "us"
+                }
+              ]
+            }
+          ],
+          "pagination": {
+            "previous_page": 2,
+            "next_page": 4
+          }
+        }
+      },
+      "LocalitiesNearbyResponse": {
+        "title": "LocalitiesNearbyResponse",
+        "type": "object",
+        "description": "Attributes describing a point of interest.",
+        "properties": {
+          "types": {
+            "description": "An array containing the types of the result.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "type of result.",
+              "enum": [
+                "point_of_interest"
+              ]
+            }
+          },
+          "name": {
+            "description": "The name of the result.",
+            "type": "string"
+          },
+          "public_id": {
+            "description": "Contains a unique ID for each result. Please use this ID to give feedbacks on results.",
+            "type": "string",
+            "example": "NOAeiQADqqisOuN3NM7oXlhkROI="
+          },
+          "geometry": {
+            "description": "The location of the result, in latitude and longitude, eventually associated with a Viewport.",
+            "type": "object",
+            "properties": {
+              "location": {
+                "$ref": "#/components/schemas/LatLngLiteral"
+              },
+              "viewport": {
+                "$ref": "#/components/schemas/Bounds"
+              }
+            },
+            "example": {
+              "location": {
+                "lat": 51.4998415,
+                "lng": -0.1246375
+              }
+            }
+          },
+          "address_components": {
+            "$ref": "#/components/schemas/AddressComponents"
+          },
+          "categories": {
+            "description": "An array containing the categories of the result.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesNearbyCategory"
+            }
+          }
+        }
+      },
+      "LocalitiesNearbyCategory": {
+        "title": "LocalitiesNearbyCategory",
+        "type": "string",
+        "enum": [
+          "business",
+          "business.cinema",
+          "business.theatre",
+          "business.nightclub",
+          "business.finance",
+          "business.finance.bank",
+          "business.fuel",
+          "business.parking",
+          "business.mall",
+          "business.food_and_drinks",
+          "business.food_and_drinks.bar",
+          "business.food_and_drinks.biergarten",
+          "business.food_and_drinks.cafe",
+          "business.food_and_drinks.fast_food",
+          "business.food_and_drinks.pub",
+          "business.food_and_drinks.restaurant",
+          "business.food_and_drinks.food_court",
+          "business.shop",
+          "business.shop.mall",
+          "business.shop.bakery",
+          "business.shop.butcher",
+          "business.shop.library",
+          "business.shop.grocery",
+          "business.shop.sports",
+          "business.shop.toys",
+          "business.shop.clothes",
+          "business.shop.furniture",
+          "business.shop.electronics",
+          "education",
+          "education.school",
+          "education.kindergarten",
+          "education.university",
+          "education.college",
+          "education.library",
+          "hospitality",
+          "hospitality.hotel",
+          "hospitality.hostel",
+          "hospitality.guest_house",
+          "hospitality.bed_and_breakfast",
+          "hospitality.motel",
+          "medical",
+          "medical.hospital",
+          "medical.pharmacy",
+          "medical.clinic",
+          "tourism",
+          "tourism.attraction",
+          "tourism.attraction.amusement_park",
+          "tourism.attraction.zoo",
+          "tourism.attraction.aquarium",
+          "tourism.monument",
+          "tourism.monument.castle",
+          "tourism.museum",
+          "government",
+          "park",
+          "place_of_worship",
+          "police",
+          "post_office",
+          "sports"
+        ]
       },
       "AddressAutocompleteCollectionResponse": {
         "title": "AddressAutocompleteCollectionResponse",
