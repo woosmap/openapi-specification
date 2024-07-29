@@ -46,11 +46,10 @@
   <li>
     <h3 class="parameter-name" id="fields">fields</h3>
     <p>
-      Used to limit the returning fields when type=address (by default, and for
-      other types localities, all fields are return). Only one field is
-      available: <code>geometry</code>. By using this parameter you will limit
-      content of responses to the geometry part. No address component will be
-      returned.
+      If set, it will limit the content of responses to the specified fields.
+      This parameter can be any combination of <code>geometry</code>,
+      <code>address_components</code> or <code>shape</code> (defaults to
+      <code>geometry|address_components</code>).
     </p>
   </li>
   <li>

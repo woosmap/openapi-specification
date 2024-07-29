@@ -13,6 +13,8 @@ properties:
         type: array
         items:
           $ref: "./LocalitiesTypes.yml"
+      administrative_area_label:
+        $ref: "./AdministrativeAreaLabel.yml"
       public_id:
         description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
         type: string
@@ -22,13 +24,15 @@ properties:
         type: string
         example: "SW1A 0AA"
       geometry:
-        description: The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport.
+        description: The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport and a shape.
         type: object
         properties:
           location:
             $ref: "./LatLngLiteral.yml"
           viewport:
             $ref: "./Bounds.yml"
+          shape:
+            $ref: "./GeoJsonGeometry.yml"
         example: { "location": { "lat": 51.49984, "lng": -0.124663 } }
       address_components:
         $ref: "./AddressComponents.yml"

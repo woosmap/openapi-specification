@@ -2336,6 +2336,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/localities_address'
         - $ref: '#/components/parameters/localities_latlng'
+        - $ref: '#/components/parameters/localities_geocode_types'
         - $ref: '#/components/parameters/localities_list_sub_buildings'
         - $ref: '#/components/parameters/localities_components'
         - $ref: '#/components/parameters/localities_language'
@@ -4796,7 +4797,7 @@ components:
     localities_fields:
       name: fields
       description: |
-        Used to limit the returning fields when type=address (by default, and for other types localities, all fields are return). Only one field is available: `geometry`. By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
+        If set, it will limit the content of responses to the specified fields. This parameter can be any combination of `geometry`, `address_components` or `shape` (defaults to `geometry|address_components`).
       schema:
         type: string
         enum:
@@ -4893,8 +4894,6 @@ components:
           * `amusement_park`: includes amusement parks like Disneyland Paris
           * `art_gallery`: includes art galleries
           * `zoo`: includes zoos
-
-        Not specifying any type will only query `locality` and `postal_code`. Multiple types can be passed using the pipe character (`|`) as a separator. For example: `types=locality|airport|admin_level`.
       schema:
         type: string
         enum:
@@ -4912,8 +4911,47 @@ components:
           - amusement_park
           - art_gallery
           - zoo
+        default: locality|postal_code
       in: query
-      example: postal_code
+      example: locality|airport|admin_level
+    localities_geocode_types:
+      name: types
+      description: |
+        This parameter will be ignored when used with the `latlng` parameter. When running a geocode request with the `address` parameter, it can be used to select the expected type of result.
+          * `locality`: includes locality names (from city to village) and suburbs
+          * `postal_code`: publicly-used postal codes around the world
+          * `address`: addresses
+          * `admin_level`: most commonly used administrative areas
+          * `country`: countries as whole point of interest
+          * `airport`: includes all medium sized to international sized airports
+          * `train_station`: includes all train stations
+          * `metro_station`: includes all metro stations
+          * `shopping`: includes shopping malls (or "shopping centers") - *may include private retail brands*
+          * `museum`: includes museums
+          * `tourist_attraction`: includes tourist attractions like the Eiffel tower
+          * `amusement_park`: includes amusement parks like Disneyland Paris
+          * `art_gallery`: includes art galleries
+          * `zoo`: includes zoos
+      schema:
+        type: string
+        enum:
+          - locality
+          - postal_code
+          - address
+          - admin_level
+          - country
+          - airport
+          - train_station
+          - metro_station
+          - shopping
+          - museum
+          - tourist_attraction
+          - amusement_park
+          - art_gallery
+          - zoo
+        default: locality|postal_code|address
+      in: query
+      example: locality|admin_level
     search_encoded_polyline:
       name: encoded_polyline
       description: |
@@ -5183,6 +5221,70 @@ components:
         coordinates:
           - -0.14408
           - 51.5088
+    GeoJsonGeometry:
+      title: GeoJsonGeometry
+      type: object
+      description: |
+        A GeoJSon Geometry representing the shape of the area, as specified in [RFC7946](https://datatracker.ietf.org/doc/html/rfc7946). 
+        To display on the map, simply wrap this object in a feature:
+        ```json
+        {
+          "type": "Feature",
+          "geometry": this_geojson_geometry
+        }
+        ```
+      properties:
+        type:
+          type: string
+          enum:
+            - Polygon
+            - MultiPoligon
+          description: the geometry type
+        coordinates:
+          type: array
+          items:
+            $ref: '#/components/schemas/GeoJsonCoords'
+      example:
+        type: Polygon
+        coordinates:
+          - - - 2.06984
+              - 48.77919
+            - - 2.07984
+              - 48.77919
+            - - 2.07984
+              - 48.78919
+            - - 2.06984
+              - 48.78919
+            - - 2.06984
+              - 48.77919
+    Position:
+      title: Position
+      description: 'an array containing longitude, latitude, in that order.'
+      type: array
+      items:
+        type: number
+      minItems: 2
+      maxItems: 2
+      example:
+        - 2.06984
+        - 48.77919
+    GeoJsonCoords:
+      title: GeoJsonCoords
+      description: an array containing Positions.
+      type: array
+      items:
+        $ref: '#/components/schemas/Position'
+      example:
+        - - 2.06984
+          - 48.77919
+        - - 2.07984
+          - 48.77919
+        - - 2.07984
+          - 48.78919
+        - - 2.06984
+          - 48.78919
+        - - 2.06984
+          - 48.77919
     Timezone:
       title: Timezone
       description: 'Timezone for the Opening Hours of an Asset. It is used to compute the `open_now` property of an asset. see <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>'
@@ -5193,6 +5295,11 @@ components:
       description: Contains the readable text description of the result.
       type: string
       example: 'London, England, United Kingdom'
+    AdministrativeAreaLabel:
+      title: AdministrativeAreaLabel
+      description: 'Only available for `admin_level` suggestions, this contains the local english name of the administration level ("department" for France or "federal_state" for Germany).'
+      type: string
+      example: district
     AssetResponse:
       title: AssetResponse
       type: object
@@ -6452,6 +6559,8 @@ components:
           $ref: '#/components/schemas/LatLngLiteral'
         viewport:
           $ref: '#/components/schemas/Bounds'
+        shape:
+          $ref: '#/components/schemas/GeoJsonGeometry'
       example:
         location:
           lat: 48.829405
@@ -6582,6 +6691,8 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/LocalitiesTypes'
+            administrative_area_label:
+              $ref: '#/components/schemas/AdministrativeAreaLabel'
             public_id:
               description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
               type: string
@@ -6591,13 +6702,15 @@ components:
               type: string
               example: SW1A 0AA
             geometry:
-              description: 'The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport.'
+              description: 'The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport and a shape.'
               type: object
               properties:
                 location:
                   $ref: '#/components/schemas/LatLngLiteral'
                 viewport:
                   $ref: '#/components/schemas/Bounds'
+                shape:
+                  $ref: '#/components/schemas/GeoJsonGeometry'
               example:
                 location:
                   lat: 51.49984
@@ -6716,7 +6829,7 @@ components:
               items:
                 $ref: '#/components/schemas/LocalitiesTypes'
             public_id:
-              description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
+              description: Contains a unique ID for the response. Please use this ID to give feedbacks on results.
               type: string
               example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
             geometry:
@@ -6847,6 +6960,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LocalitiesGeocodeTypes'
+        administrative_area_label:
+          $ref: '#/components/schemas/AdministrativeAreaLabel'
         public_id:
           description: Contains a unique ID for each suggestion. `public_id` will be empty for interpolated locations. Please use this ID to give feedbacks on results.
           type: string
@@ -7117,6 +7232,9 @@ components:
       title: LocalitiesNearbyCategory
       type: string
       enum:
+        - transit.station
+        - transit.station.airport
+        - transit.station.rail
         - business
         - business.cinema
         - business.theatre

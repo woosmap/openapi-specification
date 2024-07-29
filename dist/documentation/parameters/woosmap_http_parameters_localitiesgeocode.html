@@ -61,11 +61,10 @@
   <li>
     <h3 class="parameter-name" id="fields">fields</h3>
     <p>
-      Used to limit the returning fields when type=address (by default, and for
-      other types localities, all fields are return). Only one field is
-      available: <code>geometry</code>. By using this parameter you will limit
-      content of responses to the geometry part. No address component will be
-      returned.
+      If set, it will limit the content of responses to the specified fields.
+      This parameter can be any combination of <code>geometry</code>,
+      <code>address_components</code> or <code>shape</code> (defaults to
+      <code>geometry|address_components</code>).
     </p>
   </li>
   <li>
@@ -98,6 +97,48 @@
       "description" values for every addresses at the same location sharing the
       same address components.
     </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="types">types</h3>
+    <p>
+      This parameter will be ignored when used with the
+      <code>latlng</code> parameter. When running a geocode request with the
+      <code>address</code> parameter, it can be used to select the expected type
+      of result.
+    </p>
+    <ul>
+      <li>
+        <code>locality</code>: includes locality names (from city to village)
+        and suburbs
+      </li>
+      <li>
+        <code>postal_code</code>: publicly-used postal codes around the world
+      </li>
+      <li><code>address</code>: addresses</li>
+      <li><code>admin_level</code>: most commonly used administrative areas</li>
+      <li><code>country</code>: countries as whole point of interest</li>
+      <li>
+        <code>airport</code>: includes all medium sized to international sized
+        airports
+      </li>
+      <li><code>train_station</code>: includes all train stations</li>
+      <li><code>metro_station</code>: includes all metro stations</li>
+      <li>
+        <code>shopping</code>: includes shopping malls (or "shopping centers") -
+        <em>may include private retail brands</em>
+      </li>
+      <li><code>museum</code>: includes museums</li>
+      <li>
+        <code>tourist_attraction</code>: includes tourist attractions like the
+        Eiffel tower
+      </li>
+      <li>
+        <code>amusement_park</code>: includes amusement parks like Disneyland
+        Paris
+      </li>
+      <li><code>art_gallery</code>: includes art galleries</li>
+      <li><code>zoo</code>: includes zoos</li>
+    </ul>
   </li>
 </ul>
 <p style="text-align: right; font-size: smaller">

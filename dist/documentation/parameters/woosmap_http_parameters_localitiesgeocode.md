@@ -22,7 +22,7 @@
 
 -   <h3 class="parameter-name" id="fields">fields</h3>
 
-    Used to limit the returning fields when type=address (by default, and for other types localities, all fields are return). Only one field is available: `geometry`. By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
+    If set, it will limit the content of responses to the specified fields. This parameter can be any combination of `geometry`, `address_components` or `shape` (defaults to `geometry|address_components`).
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
@@ -35,6 +35,25 @@
 -   <h3 class="parameter-name" id="list_sub_buildings">list_sub_buildings</h3>
 
     When latlng parameter is used for reverse geocoding, setting `list_sub_building=true` allows to retrieve all addresses at the same location for a common street number or building. Results may contain an additional key "sub_buildings" with "public_id" and "description" values for every addresses at the same location sharing the same address components.
+
+-   <h3 class="parameter-name" id="types">types</h3>
+
+    This parameter will be ignored when used with the `latlng` parameter. When running a geocode request with the `address` parameter, it can be used to select the expected type of result.
+
+    -   `locality`: includes locality names (from city to village) and suburbs
+    -   `postal_code`: publicly-used postal codes around the world
+    -   `address`: addresses
+    -   `admin_level`: most commonly used administrative areas
+    -   `country`: countries as whole point of interest
+    -   `airport`: includes all medium sized to international sized airports
+    -   `train_station`: includes all train stations
+    -   `metro_station`: includes all metro stations
+    -   `shopping`: includes shopping malls (or "shopping centers") - *may include private retail brands*
+    -   `museum`: includes museums
+    -   `tourist_attraction`: includes tourist attractions like the Eiffel tower
+    -   `amusement_park`: includes amusement parks like Disneyland Paris
+    -   `art_gallery`: includes art galleries
+    -   `zoo`: includes zoos
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a data-label="openapi-github" href="https://github.com/woosmap/openapi-specification" title="Woosmap OpenAPI Specification" class="external">OpenAPI specification</a>.

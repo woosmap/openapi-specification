@@ -1,7 +1,7 @@
 name: fields
 description: >
-  Used to limit the returning fields when type=address (by default, and for other types localities, all fields are return).
-  Only one field is available: `geometry`. By using this parameter you will limit content of responses to the geometry part. No address component will be returned.
+  If set, it will limit the content of responses to the specified fields.
+  This parameter can be any combination of `geometry`, `address_components` or `shape` (defaults to `geometry|address_components`).
 schema:
   type: string
   enum:
