@@ -38,7 +38,7 @@
 
 -   <h3 class="parameter-name" id="types">types</h3>
 
-    The types of suggestion to return.
+    The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.
 
     -   `locality`: includes locality names (from city to village) and suburbs
     -   `postal_code`: publicly-used postal codes around the world
