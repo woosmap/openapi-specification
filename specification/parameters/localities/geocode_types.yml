@@ -1,6 +1,6 @@
 name: types
 description: >
-  The types of geocoding response to return.
+  The types of geocoding response to return. Multiple types can be passed using the pipe character (`|`) as a separator.
   This parameter will be ignored when used with the `latlng` parameter.
   When running a geocode request with the `address` parameter, it can be used to select the expected type of result.
     * `locality`: includes locality names (from city to village) and suburbs
@@ -21,21 +21,6 @@ description: >
 
 schema:
   type: string
-  enum:
-    - locality
-    - postal_code
-    - address
-    - admin_level
-    - country
-    - airport
-    - train_station
-    - metro_station
-    - shopping
-    - museum
-    - tourist_attraction
-    - amusement_park
-    - art_gallery
-    - zoo
   default:
     locality|postal_code|address
 in: query
