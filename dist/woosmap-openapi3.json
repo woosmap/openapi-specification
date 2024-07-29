@@ -7484,6 +7484,9 @@
           },
           "viewport": {
             "$ref": "#/components/schemas/Bounds"
+          },
+          "shape": {
+            "$ref": "#/components/schemas/GeoJsonGeometry"
           }
         },
         "example": {
@@ -7871,7 +7874,7 @@
                 }
               },
               "public_id": {
-                "description": "Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.",
+                "description": "Contains a unique ID for the response. Please use this ID to give feedbacks on results.",
                 "type": "string",
                 "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
               },
