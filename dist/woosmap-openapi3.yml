@@ -4917,7 +4917,7 @@ components:
     localities_geocode_types:
       name: types
       description: |
-        This parameter will be ignored when used with the `latlng` parameter. When running a geocode request with the `address` parameter, it can be used to select the expected type of result.
+        The types of geocoding response to return. This parameter will be ignored when used with the `latlng` parameter. When running a geocode request with the `address` parameter, it can be used to select the expected type of result.
           * `locality`: includes locality names (from city to village) and suburbs
           * `postal_code`: publicly-used postal codes around the world
           * `address`: addresses
@@ -6559,6 +6559,8 @@ components:
           $ref: '#/components/schemas/LatLngLiteral'
         viewport:
           $ref: '#/components/schemas/Bounds'
+        shape:
+          $ref: '#/components/schemas/GeoJsonGeometry'
       example:
         location:
           lat: 48.829405
@@ -6827,7 +6829,7 @@ components:
               items:
                 $ref: '#/components/schemas/LocalitiesTypes'
             public_id:
-              description: Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.
+              description: Contains a unique ID for the response. Please use this ID to give feedbacks on results.
               type: string
               example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
             geometry:
