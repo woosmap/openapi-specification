@@ -38,7 +38,7 @@
 
 -   <h3 class="parameter-name" id="types">types</h3>
 
-    The types of geocoding response to return. Multiple types can be passed using the pipe character (`|`) as a separator. This parameter will be ignored when used with the `latlng` parameter. When running a geocode request with the `address` parameter, it can be used to select the expected type of result.
+    Specify the types of geocoding responses to return by separating multiple types with a pipe character (|).  This parameter is ignored when used with the `latlng` parameter.  When executing a geocode request with the `address` parameter, use this to select the expected result type.
 
     -   `locality`: includes locality names (from city to village) and suburbs
     -   `postal_code`: publicly-used postal codes around the world
