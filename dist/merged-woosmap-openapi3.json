@@ -2361,34 +2361,69 @@
       "AutoSuggestQuery": {
         "properties": {
           "clip-to-bounding-box": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Restrict AutoSuggest results to a bounding box, specified by coordinates.south_lat,west_lng,north_lat,east_lng, where: south_lat less than or equal to north_lat, west_lng less than or equal to east_lng.",
             "example": "48.624314,1.804429,49.058148,2.908555",
-            "title": "Clip-To-Bounding-Box",
-            "type": "string"
+            "title": "Clip-To-Bounding-Box"
           },
           "clip-to-circle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Restrict AutoSuggest results to a circle, specified by lat, lng, kilometres, where kilometres is the radius of the circle.",
             "example": "48.839701,2.291878,20",
-            "title": "Clip-To-Circle",
-            "type": "string"
+            "title": "Clip-To-Circle"
           },
           "clip-to-country": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Restricts AutoSuggest to only return results inside the countries specified by comma-separated list of ISO 3166-1 alpha-2 country codes.",
             "example": "FR",
-            "title": "Clip-To-Country",
-            "type": "string"
+            "title": "Clip-To-Country"
           },
           "clip-to-polygon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "Restrict AutoSuggest results to a polygon, specified by a comma-separated list of lat, lng pairs. The polygon should be closed, i.e. the first element should be repeated as the last element; also the list should contain at least 4 pairs. The API is currently limited to accepting up to 25 pairs.",
             "example": "48.823547,2.199174,48.823547,2.199174,48.922216,2.328709,48.888626,2.473673,48.819279,2.445513,48.784865,2.330668,48.823547,2.199174",
-            "title": "Clip-To-Polygon",
-            "type": "string"
+            "title": "Clip-To-Polygon"
           },
           "focus": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "This is a location, specified as latitude,longitude (often where the user making the query is). If specified, the results will be weighted to give preference to those near the focus.",
             "example": "48.861026,2.335853",
-            "title": "Focus",
-            "type": "string"
+            "title": "Focus"
           },
           "input": {
             "description": "The full or partial 3 word address to obtain suggestions for. At minimum this must be the first two complete words plus at least one character from the third word.",
@@ -2409,10 +2444,17 @@
             "type": "string"
           },
           "language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "description": "For normal text input, specifies a fallback language, which will help guide AutoSuggest if the input is particularly messy. A supported address language as an ISO 639-1 2 letter code.",
             "example": "fr",
-            "title": "Language",
-            "type": "string"
+            "title": "Language"
           },
           "prefer-land": {
             "default": true,
@@ -8601,13 +8643,58 @@
             "description": "Autocompletion Address successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -8747,13 +8834,58 @@
             "description": "Details Address successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -8920,13 +9052,58 @@
             "description": "Request Address Geocode successful"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -9050,13 +9227,58 @@
             "description": "Distance Matrix successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -9173,16 +9395,77 @@
             "description": "Distance Matrix with POST successfully retrieved"
           },
           "400": {
-            "$ref": "#/paths/~1zones/put/responses/400"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid": {
+                    "summary": "Error 400",
+                    "value": {
+                      "status": "error",
+                      "value": "The request is invalid, the data is not a valid JSON."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error400"
+                }
+              }
+            },
+            "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -9280,13 +9563,58 @@
             "description": "Isochrone successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -9560,13 +9888,58 @@
             "description": "Route successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -9660,13 +10033,58 @@
             "description": "Geolocation successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -9908,13 +10326,58 @@
             "description": "Geolocation and Stores successufully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -11727,13 +12190,58 @@
             "description": "Autocompletion Localities successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -11949,13 +12457,58 @@
             "description": "Details Localities successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -12258,13 +12811,58 @@
             "description": "Request Localities Geocode successful"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -12658,13 +13256,58 @@
             "description": "Points of interests surrounding `location` and matching provided `categories`, sorted by distance to `location`."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -12743,10 +13386,40 @@
             "description": "Assets successfully deleted"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -12921,13 +13594,59 @@
             "description": "Assets successfully created"
           },
           "400": {
-            "$ref": "#/paths/~1zones/put/responses/400"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid": {
+                    "summary": "Error 400",
+                    "value": {
+                      "status": "error",
+                      "value": "The request is invalid, the data is not a valid JSON."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error400"
+                }
+              }
+            },
+            "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -13059,13 +13778,59 @@
             "description": "Assets successfully updated"
           },
           "400": {
-            "$ref": "#/paths/~1zones/put/responses/400"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid": {
+                    "summary": "Error 400",
+                    "value": {
+                      "status": "error",
+                      "value": "The request is invalid, the data is not a valid JSON."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error400"
+                }
+              }
+            },
+            "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -13179,13 +13944,58 @@
             "description": "Assets Successfully Replaced"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -13369,13 +14179,59 @@
             "description": "Assets successfully replaced"
           },
           "400": {
-            "$ref": "#/paths/~1zones/put/responses/400"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid": {
+                    "summary": "Error 400",
+                    "value": {
+                      "status": "error",
+                      "value": "The request is invalid, the data is not a valid JSON."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error400"
+                }
+              }
+            },
+            "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -13637,13 +14493,58 @@
             "description": "Assets successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -13729,13 +14630,58 @@
             "description": "Bounds successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -13983,10 +14929,40 @@
             "description": "Asset successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "404": {
             "description": "Not Found - `storeId` do not exist."
@@ -14105,13 +15081,58 @@
             "description": "Traffic Distance Matrix successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -14228,16 +15249,77 @@
             "description": "Traffic Distance Matrix with POST successfully retrieved"
           },
           "400": {
-            "$ref": "#/paths/~1zones/put/responses/400"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid": {
+                    "summary": "Error 400",
+                    "value": {
+                      "status": "error",
+                      "value": "The request is invalid, the data is not a valid JSON."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error400"
+                }
+              }
+            },
+            "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -14379,13 +15461,58 @@
             "description": "Traffic Route successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "429": {
-            "$ref": "#/paths/~1zones/get/responses/429"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
           }
         },
         "security": [
@@ -14625,10 +15752,17 @@
             "in": "query",
             "name": "focus",
             "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "description": "This is a location, specified as latitude,longitude (often where the user making the query is). If specified, the results will be weighted to give preference to those near the focus.",
               "example": "48.861026,2.335853",
-              "title": "Focus",
-              "type": "string"
+              "title": "Focus"
             }
           },
           {
@@ -14637,10 +15771,17 @@
             "in": "query",
             "name": "clip-to-country",
             "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "description": "Restricts AutoSuggest to only return results inside the countries specified by comma-separated list of ISO 3166-1 alpha-2 country codes.",
               "example": "FR",
-              "title": "Clip-To-Country",
-              "type": "string"
+              "title": "Clip-To-Country"
             }
           },
           {
@@ -14649,10 +15790,17 @@
             "in": "query",
             "name": "clip-to-bounding-box",
             "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "description": "Restrict AutoSuggest results to a bounding box, specified by coordinates.south_lat,west_lng,north_lat,east_lng, where: south_lat less than or equal to north_lat, west_lng less than or equal to east_lng.",
               "example": "48.624314,1.804429,49.058148,2.908555",
-              "title": "Clip-To-Bounding-Box",
-              "type": "string"
+              "title": "Clip-To-Bounding-Box"
             }
           },
           {
@@ -14661,10 +15809,17 @@
             "in": "query",
             "name": "clip-to-circle",
             "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "description": "Restrict AutoSuggest results to a circle, specified by lat, lng, kilometres, where kilometres is the radius of the circle.",
               "example": "48.839701,2.291878,20",
-              "title": "Clip-To-Circle",
-              "type": "string"
+              "title": "Clip-To-Circle"
             }
           },
           {
@@ -14673,10 +15828,17 @@
             "in": "query",
             "name": "clip-to-polygon",
             "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "description": "Restrict AutoSuggest results to a polygon, specified by a comma-separated list of lat, lng pairs. The polygon should be closed, i.e. the first element should be repeated as the last element; also the list should contain at least 4 pairs. The API is currently limited to accepting up to 25 pairs.",
               "example": "48.823547,2.199174,48.823547,2.199174,48.922216,2.328709,48.888626,2.473673,48.819279,2.445513,48.784865,2.330668,48.823547,2.199174",
-              "title": "Clip-To-Polygon",
-              "type": "string"
+              "title": "Clip-To-Polygon"
             }
           },
           {
@@ -14713,10 +15875,17 @@
             "in": "query",
             "name": "language",
             "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "description": "For normal text input, specifies a fallback language, which will help guide AutoSuggest if the input is particularly messy. A supported address language as an ISO 639-1 2 letter code.",
               "example": "fr",
-              "title": "Language",
-              "type": "string"
+              "title": "Language"
             }
           }
         ],
@@ -15250,10 +16419,40 @@
             "description": "Zones successfully deleted"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -15496,13 +16695,59 @@
             "description": "Zones successfully created"
           },
           "400": {
-            "$ref": "#/paths/~1zones/put/responses/400"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid": {
+                    "summary": "Error 400",
+                    "value": {
+                      "status": "error",
+                      "value": "The request is invalid, the data is not a valid JSON."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error400"
+                }
+              }
+            },
+            "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -15620,10 +16865,40 @@
             "description": "Invalid. The data is not a valid JSON."
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           }
         },
         "security": [
@@ -15702,10 +16977,40 @@
             "description": "Zone successfully retrieved"
           },
           "401": {
-            "$ref": "#/paths/~1zones/get/responses/401"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
           },
           "403": {
-            "$ref": "#/paths/~1zones/get/responses/403"
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
           },
           "404": {
             "description": "Not Found - `zone_id` do not exist."
