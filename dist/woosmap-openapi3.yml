@@ -66,11 +66,38 @@ paths:
                     postal_code: '22309'
                     timezone: America/New_York
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -239,11 +266,38 @@ paths:
                         page: 1
                         pageCount: 2
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -375,11 +429,39 @@ paths:
                     status: success
                     value: 2 stores
         '400':
-          $ref: '#/paths/~1zones/put/responses/400'
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -793,11 +875,39 @@ paths:
                     status: success
                     value: 1 stores
         '400':
-          $ref: '#/paths/~1zones/put/responses/400'
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1043,9 +1153,27 @@ paths:
                     status: success
                     value: 2
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1223,9 +1351,27 @@ paths:
                         - -122.712924
                         - 38.41244
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '404':
           description: Not Found - `storeId` do not exist.
       x-codeSamples:
@@ -1362,11 +1508,39 @@ paths:
                     status: success
                     value: '2 stores deleted, 2 stores created'
         '400':
-          $ref: '#/paths/~1zones/put/responses/400'
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1852,11 +2026,38 @@ paths:
                       page: 1
                       pageCount: 1
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -1946,11 +2147,38 @@ paths:
                             length: 6
                         highlighted: The <b>Street</b>
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2020,11 +2248,38 @@ paths:
                       east: -0.14408
                       north: 51.5088
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2130,11 +2385,38 @@ paths:
                         type: locality
                         description: 'Long Stratton, Norfolk, United Kingdom'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2280,11 +2562,38 @@ paths:
                           - public_id: TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==
                             description: 'House Of Commons, Houses Of Parliament, London, SW1A 0AA'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2472,11 +2781,38 @@ paths:
                           - public_id: Nmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PV9fNmp0K1VVUFQ4eFI3S1BuaDZEZVVJVWhYY3A4PQ==
                             description: 'Flat 16, Radway House, Alfred Road, London, W2 5ER'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2749,11 +3085,38 @@ paths:
                       previous_page: 2
                       next_page: 4
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2836,11 +3199,38 @@ paths:
                         type: locality
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -2945,11 +3335,38 @@ paths:
                             lng: -0.56316
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -3065,11 +3482,38 @@ paths:
                               lng: 2.30147
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -3260,11 +3704,39 @@ paths:
                     status: ok
                     message: Zones successfully added.
         '400':
-          $ref: '#/paths/~1zones/put/responses/400'
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - $ref: '#/paths/~1zones/put/x-codeSamples/0'
         - $ref: '#/paths/~1zones/put/x-codeSamples/1'
@@ -3334,9 +3806,27 @@ paths:
                     status: error
                     value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -3503,9 +3993,27 @@ paths:
                     status: ok
                     message: Zones deleted.
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -3580,9 +4088,27 @@ paths:
                     description: Delivery Zone for Store A
                     status: ok
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '404':
           description: Not Found - `zone_id` do not exist.
       x-codeSamples:
@@ -3668,11 +4194,38 @@ paths:
                               value: 10334
                               text: 10.3 km
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -3766,13 +4319,50 @@ paths:
                               value: 10334
                               text: 10.3 km
         '400':
-          $ref: '#/paths/~1zones/put/responses/400'
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4004,11 +4594,38 @@ paths:
                                   verbal_alert: You will arrive at your destination.
                                   verbal_before: You have arrived at your destination.
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4085,11 +4702,38 @@ paths:
                         text: 1 km
                       geometry: 's|ihHouuMZ`GdClCsA~QhCnQmBhEpCfF|HxGpBtFfEnBnHqJpH}AF_EeCcB@sBnEiEYiGmVyFaG{G[eFoCw@gAiIkDYg@_DwA@'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4175,11 +4819,38 @@ paths:
                               text: 10.2 km
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4273,13 +4944,50 @@ paths:
                               text: 10.2 km
                     status: OK
         '400':
-          $ref: '#/paths/~1zones/put/responses/400'
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL
@@ -4410,11 +5118,38 @@ paths:
                             lng: 4.145122
                     status: OK
         '401':
-          $ref: '#/paths/~1zones/get/responses/401'
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
         '403':
-          $ref: '#/paths/~1zones/get/responses/403'
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
         '429':
-          $ref: '#/paths/~1zones/get/responses/429'
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
         - lang: curl
           label: cURL

@@ -31,11 +31,39 @@ responses:
             value:
               $ref: "../../responses/woosmap_http_assets_create_request_response.yml"
   "400":
-    $ref: "../../responses/woosmap_http_error_400_invalid_response.yml"
+    description: Invalid. The data is not a valid JSON.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error400.yml"
+        examples:
+          Invalid:
+            summary: Error 400
+            value:
+              status: error
+              value: The request is invalid, the data is not a valid JSON.
   "401":
-    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+    description: Unauthorized. Incorrect authentication credentials.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error401.yml"
+        examples:
+          Unauthorized:
+            summary: Error 401
+            value:
+              detail: "Incorrect authentication credentials. Please check or use a valid API Key"
   "403":
-    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+    description: Forbidden. This Woosmap API is not enabled for this project.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error403.yml"
+        examples:
+          Forbidden:
+            summary: Error 403
+            value:
+              detail: "This Woosmap API is not enabled for this project."
 x-codeSamples:
   - $ref:  "../../snippets/woosmap_http_assets_create_request/woosmap_http_assets_create_request.curl.yml"
   - $ref:  "../../snippets/woosmap_http_assets_create_request/woosmap_http_assets_create_request.python.yml"
