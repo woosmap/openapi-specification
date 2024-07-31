@@ -28,9 +28,27 @@ responses:
             value:
               $ref: "../../responses/woosmap_http_zones_response.yml"
   "401":
-    $ref: "../../responses/woosmap_http_error_401_unauthorized_response.yml"
+    description: Unauthorized. Incorrect authentication credentials.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error401.yml"
+        examples:
+          Unauthorized:
+            summary: Error 401
+            value:
+              detail: "Incorrect authentication credentials. Please check or use a valid API Key"
   "403":
-    $ref: "../../responses/woosmap_http_error_403_forbidden_response.yml"
+    description: Forbidden. This Woosmap API is not enabled for this project.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error403.yml"
+        examples:
+          Forbidden:
+            summary: Error 403
+            value:
+              detail: "This Woosmap API is not enabled for this project."
   "404":
     description: Not Found - `zone_id` do not exist.
 x-codeSamples:
