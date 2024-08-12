@@ -5,10 +5,10 @@ tags:
 description: >
   Provides details of an autocomplete suggestion (using the suggestion’s `public_id`).
 security:
-  - PublicApiKeyAuth: []
-    RefererHeader: []
-  - PrivateApiKeyAuth: []
-  - PrivateApiKeyHeaderAuth: []
+  - PublicApiKeyAuth: [ ]
+    RefererHeader: [ ]
+  - PrivateApiKeyAuth: [ ]
+  - PrivateApiKeyHeaderAuth: [ ]
 parameters:
   - $ref: "../../parameters/localities/public_id.yml"
   - $ref: "../../parameters/localities/language.yml"
@@ -22,9 +22,7 @@ responses:
     content:
       application/json:
         schema:
-          anyOf:
-            - $ref: "../../schemas/LocalitiesDetailsAddressResponse.yml"
-            - $ref: "../../schemas/LocalitiesDetailsPostalCodeResponse.yml"
+          $ref: "../../schemas/LocalitiesDetailsResponse.yml"
         examples:
           Address:
             summary: Localities Address details from a `public_id` retrieved using Localities autocomplete
@@ -69,6 +67,6 @@ responses:
             value:
               detail: "The rate limit for this endpoint has been exceeded"
 x-codeSamples:
-  - $ref:  "../../snippets/woosmap_http_localities_details_address/woosmap_http_localities_details_address.curl.yml"
-  - $ref:  "../../snippets/woosmap_http_localities_details_address/woosmap_http_localities_details_address.javascript.yml"
-  - $ref:  "../../snippets/woosmap_http_localities_details_address/woosmap_http_localities_details_address.python.yml"
+  - $ref: "../../snippets/woosmap_http_localities_details_address/woosmap_http_localities_details_address.curl.yml"
+  - $ref: "../../snippets/woosmap_http_localities_details_address/woosmap_http_localities_details_address.javascript.yml"
+  - $ref: "../../snippets/woosmap_http_localities_details_address/woosmap_http_localities_details_address.python.yml"
