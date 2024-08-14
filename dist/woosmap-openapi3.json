@@ -2374,14 +2374,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/LocalitiesDetailsAddressResponse"
-                    },
-                    {
-                      "$ref": "#/components/schemas/LocalitiesDetailsPostalCodeResponse"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/LocalitiesDetailsResponse"
                 },
                 "examples": {
                   "Address": {
@@ -8855,15 +8848,27 @@
           }
         }
       },
-      "LocalitiesDetailsPostalCodeResponse": {
-        "title": "LocalitiesDetailsPostalCodeResponse",
+      "LocalitiesDetailsResponse": {
+        "title": "LocalitiesDetailsResponse",
         "type": "object",
-        "description": "Attributes describing a locality. Not all attributes will be available for all locality types.",
+        "description": "Attributes describing a locality. Not all attributes are available for all locality types.",
         "properties": {
           "result": {
             "description": "The Root Node for Localities Details",
             "type": "object",
+            "required": [
+              "public_id",
+              "formatted_address",
+              "types",
+              "geometry",
+              "address_components"
+            ],
             "properties": {
+              "public_id": {
+                "description": "Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.",
+                "type": "string",
+                "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
+              },
               "formatted_address": {
                 "$ref": "#/components/schemas/FormattedAddress"
               },
@@ -8874,22 +8879,12 @@
                   "$ref": "#/components/schemas/LocalitiesTypes"
                 }
               },
-              "administrative_area_label": {
-                "$ref": "#/components/schemas/AdministrativeAreaLabel"
-              },
-              "public_id": {
-                "description": "Contains a unique ID for each suggestion. Please use this ID to give feedbacks on results.",
-                "type": "string",
-                "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
-              },
-              "name": {
-                "description": "The postal code name",
-                "type": "string",
-                "example": "SW1A 0AA"
-              },
               "geometry": {
                 "description": "The location of the PostalCode, in latitude and longitude, eventually associated with a Viewport and a shape.",
                 "type": "object",
+                "required": [
+                  "location"
+                ],
                 "properties": {
                   "location": {
                     "$ref": "#/components/schemas/LatLngLiteral"
@@ -8899,6 +8894,16 @@
                   },
                   "shape": {
                     "$ref": "#/components/schemas/GeoJsonGeometry"
+                  },
+                  "accuracy": {
+                    "type": "string",
+                    "description": "This accuracy represents the type of address returned - `DISTRICT` and `POSTAL_CODE` are for UK only.",
+                    "enum": [
+                      "ROOFTOP",
+                      "ROUTE",
+                      "DISTRICT",
+                      "POSTAL_CODE"
+                    ]
                   }
                 },
                 "example": {
@@ -8911,8 +8916,19 @@
               "address_components": {
                 "$ref": "#/components/schemas/AddressComponents"
               },
+              "name": {
+                "description": "The postal code name if result is a postal code.",
+                "type": "string",
+                "example": "SW1A 0AA"
+              },
+              "administrative_area_label": {
+                "$ref": "#/components/schemas/AdministrativeAreaLabel"
+              },
+              "status": {
+                "$ref": "#/components/schemas/LocalitiesStatus"
+              },
               "addresses": {
-                "description": "UK Only. List of addresses attached to this Postal Code.",
+                "description": "For the UK only. When a postal code is returned, this field contains a list of addresses associated with this postal code.",
                 "type": "object",
                 "properties": {
                   "pagination": {
@@ -9042,144 +9058,6 @@
           "route",
           "address"
         ]
-      },
-      "LocalitiesDetailsAddressResponse": {
-        "title": "LocalitiesDetailsAddressResponse",
-        "type": "object",
-        "description": "Attributes describing. Not all attributes will be available for all locality types.",
-        "properties": {
-          "result": {
-            "description": "The Root Node for Localities Details",
-            "type": "object",
-            "properties": {
-              "formatted_address": {
-                "$ref": "#/components/schemas/FormattedAddress"
-              },
-              "types": {
-                "description": "available localities types",
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/LocalitiesTypes"
-                }
-              },
-              "public_id": {
-                "description": "Contains a unique ID for the response. Please use this ID to give feedbacks on results.",
-                "type": "string",
-                "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo="
-              },
-              "geometry": {
-                "description": "The location of the result, in latitude and longitude, eventually associated with a Viewport. Accuracy is also provided for locality of type Address.",
-                "type": "object",
-                "properties": {
-                  "location": {
-                    "$ref": "#/components/schemas/LatLngLiteral"
-                  },
-                  "viewport": {
-                    "$ref": "#/components/schemas/Bounds"
-                  },
-                  "accuracy": {
-                    "type": "string",
-                    "description": "This accuracy represents the type of address returned - `DISTRICT` and `POSTAL_CODE` are for UK only.",
-                    "enum": [
-                      "ROOFTOP",
-                      "ROUTE",
-                      "DISTRICT",
-                      "POSTAL_CODE"
-                    ]
-                  }
-                },
-                "example": {
-                  "location": {
-                    "lat": 51.4998415,
-                    "lng": -0.1246375
-                  },
-                  "accuracy": "ROOFTOP"
-                }
-              },
-              "status": {
-                "$ref": "#/components/schemas/LocalitiesStatus"
-              },
-              "address_components": {
-                "$ref": "#/components/schemas/AddressComponents"
-              }
-            }
-          }
-        },
-        "example": {
-          "result": {
-            "public_id": "TVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPV9fTVZaV0JmR1pRbkFRbjlKdEU5Q0paamdlQjRRPQ==",
-            "types": [
-              "address"
-            ],
-            "formatted_address": "House Of Commons, Houses Of Parliament, London, SW1A 0AA",
-            "geometry": {
-              "location": {
-                "lat": 51.4998415,
-                "lng": -0.1246375
-              },
-              "accuracy": "ROOFTOP"
-            },
-            "address_components": [
-              {
-                "short_name": "GB",
-                "long_name": "United Kingdom",
-                "types": [
-                  "country",
-                  "administrative_area_level_0"
-                ]
-              },
-              {
-                "short_name": "City of London",
-                "long_name": "City of London",
-                "types": [
-                  "administrative_area_level_1"
-                ]
-              },
-              {
-                "short_name": "City of London",
-                "long_name": "City of London",
-                "types": [
-                  "county"
-                ]
-              },
-              {
-                "short_name": "London SW",
-                "long_name": "London SW",
-                "types": [
-                  "district"
-                ]
-              },
-              {
-                "short_name": "London",
-                "long_name": "London",
-                "types": [
-                  "locality"
-                ]
-              },
-              {
-                "short_name": "SW1A 0AA",
-                "long_name": "SW1A 0AA",
-                "types": [
-                  "postal_codes"
-                ]
-              },
-              {
-                "short_name": "Houses Of Parliament",
-                "long_name": "Houses Of Parliament",
-                "types": [
-                  "premise"
-                ]
-              },
-              {
-                "short_name": "House Of Commons",
-                "long_name": "House Of Commons",
-                "types": [
-                  "organisation"
-                ]
-              }
-            ]
-          }
-        }
       },
       "LocalitiesGeocodeCollectionResponse": {
         "title": "LocalitiesGeocodeCollectionResponse",

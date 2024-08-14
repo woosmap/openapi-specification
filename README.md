@@ -15,7 +15,8 @@ An OpenAPI specification for Woosmap Platform.
 | [Localities](https://developers.woosmap.com/products/localities/get-started/)    | Complete |
 | [Address](https://developers.woosmap.com/products/address-api/get-started/)      | Complete |
 | [Distance](https://developers.woosmap.com/products/distance-api/get-started/)    | Complete |
-| [Merchant](https://developers.woosmap.com/products/merchant-api/get-started/)    | Complete |
+| [Transit](https://developers.woosmap.com/products/transit-api/route-endpoint/)   | Complete |
+| [Indoor](https://developers.woosmap.com/products/indoor-api/get-started/)        | Complete |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D18437534-dad12f37-6d84-42d1-9889-2f529aee0ab9%26entityType%3Dcollection%26workspaceId%3Dff0698d5-c4db-403e-b7c6-b622b68032d3)
 
@@ -26,10 +27,12 @@ requests.
 
 ### Build and test
 
-To be able to build the spec locally, you'll need a github personal access token (mandatory for merging with auto generated spec such as Woosmap x What3Words).
+To be able to build the spec locally, you'll need a github personal access token (mandatory for merging with auto
+generated spec such as Woosmap x What3Words).
 Generate one with repository access here: <https://github.com/settings/tokens>.
 To be able to generate responses, you'll need a woosmap public key and woosmap private key.
-Once generated, it's convenient to add these environment variables in the file `.bazelrc.user` at the root of the repository like this:
+Once generated, it's convenient to add these environment variables in the file `.bazelrc.user` at the root of the
+repository like this:
 
 ```bash
 build --action_env GH_TOKEN=ghp_xxxxxxxxx
@@ -64,10 +67,10 @@ Then you'll be able to execute following command.
 
    > **Note**: A single response can be updated similar to `npm run responses -- --only woosmap_http_address_details`.
 
-5. `npm run samples` (optional)
+4. `npm run samples` (optional)
 
    > **Note**: Generates snippets from requests to be integrated as xCodeSamples in path schemas.
-   
-4. `npm run test`
+
+5. `npm run test`
 
    Validate the OpenAPI Schema
