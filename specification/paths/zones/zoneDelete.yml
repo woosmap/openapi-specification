@@ -25,7 +25,7 @@ responses:
           default:
             summary: Success response for Zones deleted
             value:
-              $ref: "../../responses/woosmap_http_zone_delete_request_response.yml"
+              $ref: "../../responses/woosmap_http_zones_delete_by_id_response.yml"
   "401":
     description: Unauthorized. Incorrect authentication credentials.
     content:
@@ -49,6 +49,6 @@ responses:
             value:
               detail: "This Woosmap API is not enabled for this project."
 x-codeSamples:
-  - $ref:  "../../snippets/woosmap_http_zone_delete_request/woosmap_http_zone_delete_request.curl.yml"
-  - $ref:  "../../snippets/woosmap_http_zone_delete_request/woosmap_http_zone_delete_request.python.yml"
-  - $ref:  "../../snippets/woosmap_http_zone_delete_request/woosmap_http_zone_delete_request.nodejs.yml"
+  - $ref:  "../../snippets/woosmap_http_zones_delete_by_id_request/woosmap_http_zones_delete_by_id_request.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_zones_delete_by_id_request/woosmap_http_zones_delete_by_id_request.python.yml"
+  - $ref:  "../../snippets/woosmap_http_zones_delete_by_id_request/woosmap_http_zones_delete_by_id_request.nodejs.yml"
