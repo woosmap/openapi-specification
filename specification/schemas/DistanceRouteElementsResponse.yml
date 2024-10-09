@@ -15,3 +15,7 @@ properties:
     description: Legs part of the route response
     items:
       $ref: "./DistanceLeg.yml"
+  main_route_name:
+    type: string
+    description: The main route name based on the longest step length to differentiate routes when alternates are returned.
+    example: "Fillmore Street"

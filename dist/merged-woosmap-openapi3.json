@@ -2671,12 +2671,7 @@
         },
         "properties": {
           "pagination": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/PaginationSchema"
-              }
-            ],
-            "description": "Pagination Information"
+            "$ref": "#/components/schemas/PaginationSchema"
           },
           "predictions": {
             "default": [],
@@ -3390,6 +3385,11 @@
               "$ref": "#/components/schemas/DistanceLeg"
             },
             "type": "array"
+          },
+          "main_route_name": {
+            "description": "The main route name based on the longest step length to differentiate routes when alternates are returned.",
+            "example": "Fillmore Street",
+            "type": "string"
           },
           "notice": {
             "description": "Some noticeable information about the route",
@@ -4708,36 +4708,16 @@
       "Leg": {
         "properties": {
           "distance": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Distance"
-              }
-            ],
-            "description": "Distance of this Leg"
+            "$ref": "#/components/schemas/Distance"
           },
           "duration": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Duration"
-              }
-            ],
-            "description": "Duration of this Leg"
+            "$ref": "#/components/schemas/Duration"
           },
           "end_location": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/LatLngLevel"
-              }
-            ],
-            "description": "End Location of this Leg, as a Lat,Lng pair with a floor level number."
+            "$ref": "#/components/schemas/LatLngLevel"
           },
           "start_location": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/LatLngLevel"
-              }
-            ],
-            "description": "Starting Location of this Leg, as a Lat,Lng pair with a floor level number."
+            "$ref": "#/components/schemas/LatLngLevel"
           },
           "steps": {
             "description": "List of different steps of this Leg",
@@ -7066,12 +7046,7 @@
             "type": "array"
           },
           "pagination": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/PaginationSchema"
-              }
-            ],
-            "description": "Pagination Information"
+            "$ref": "#/components/schemas/PaginationSchema"
           }
         },
         "required": [
@@ -7237,28 +7212,13 @@
             "type": "number"
           },
           "distance": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Distance"
-              }
-            ],
-            "description": "Distance of this Step"
+            "$ref": "#/components/schemas/Distance"
           },
           "duration": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Duration"
-              }
-            ],
-            "description": "Duration of this Step"
+            "$ref": "#/components/schemas/Duration"
           },
           "end_location": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/LatLngLevel"
-              }
-            ],
-            "description": "End Location of this Step, as a Lat,Lng pair with a floor level number."
+            "$ref": "#/components/schemas/LatLngLevel"
           },
           "instruction": {
             "anyOf": [
@@ -7310,12 +7270,7 @@
             "type": "array"
           },
           "start_location": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/LatLngLevel"
-              }
-            ],
-            "description": "Starting Location of this Step, as a Lat,Lng pair with a floor level number."
+            "$ref": "#/components/schemas/LatLngLevel"
           }
         },
         "required": [
