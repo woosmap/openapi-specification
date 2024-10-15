@@ -13,7 +13,7 @@ info:
   termsOfService: 'https://www.woosmap.com/en/policies/terms/'
   x-document-meta-data:
     copyright: © 2023 Woosmap
-  version: 1.24.0
+  version: 1.26.0
   contact:
     name: Woosmap API
 servers:
@@ -8434,6 +8434,11 @@ components:
       title: DistanceRouteElementsResponse
       type: object
       description: Attributes describing routes from an origin to a destination returned in distance route response.
+      required:
+        - overview_polyline
+        - bounds
+        - notice
+        - legs
       properties:
         overview_polyline:
           $ref: '#/components/schemas/EncodedPolyline'
@@ -8452,6 +8457,10 @@ components:
           type: string
           description: The main route name based on the longest step length to differentiate routes when alternates are returned.
           example: Fillmore Street
+        recommended:
+          type: boolean
+          description: Optional field. Only present and set to true when the route is the recommended route.
+          example: true
     DistanceRouteResponse:
       title: DistanceRouteResponse
       type: object
