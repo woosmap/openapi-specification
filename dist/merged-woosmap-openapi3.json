@@ -3667,6 +3667,101 @@
         "title": "DistanceStep",
         "type": "object"
       },
+      "DistanceTollsElementsResponse": {
+        "description": "Attributes describing routes from an origin to a destination returned in distance tolls response.",
+        "properties": {
+          "bounds": {
+            "$ref": "#/components/schemas/Bounds"
+          },
+          "legs": {
+            "description": "Legs part of the route response",
+            "items": {
+              "$ref": "#/components/schemas/DistanceTollsLeg"
+            },
+            "type": "array"
+          },
+          "overview_polyline": {
+            "$ref": "#/components/schemas/EncodedPolyline"
+          }
+        },
+        "required": [
+          "overview_polyline",
+          "bounds",
+          "legs"
+        ],
+        "title": "DistanceTollsElementsResponse",
+        "type": "object"
+      },
+      "DistanceTollsLeg": {
+        "description": "Leg in a route",
+        "example": {
+          "distance": {
+            "text": "1 km",
+            "value": 1038
+          },
+          "duration": {
+            "text": "1 min",
+            "value": 75
+          },
+          "end_location": {
+            "lat": 49.31344,
+            "lng": 4.15293
+          },
+          "start_location": {
+            "lat": 49.31067,
+            "lng": 4.14525
+          }
+        },
+        "properties": {
+          "distance": {
+            "$ref": "#/components/schemas/DistanceValue"
+          },
+          "duration": {
+            "$ref": "#/components/schemas/DurationValue"
+          },
+          "end_location": {
+            "$ref": "#/components/schemas/LatLngLiteral"
+          },
+          "start_location": {
+            "$ref": "#/components/schemas/LatLngLiteral"
+          },
+          "tollSystem": {
+            "additionalProperties": true,
+            "description": "An array of toll authorities that collect payments for the use of (part of) the specified section of the route. Directly come from Here API",
+            "example": {
+              "tollSystem": "some_value"
+            },
+            "type": "object"
+          },
+          "tolls": {
+            "additionalProperties": true,
+            "description": "Detail of tolls to be paid for traversing the specified section. Directly come from Here API",
+            "example": {
+              "tolls": "some_value"
+            },
+            "type": "object"
+          }
+        },
+        "title": "DistanceTollsLeg",
+        "type": "object"
+      },
+      "DistanceTollsResponse": {
+        "description": "Attributes describing a distance tolls response.",
+        "properties": {
+          "routes": {
+            "description": "Contains an array of routes with tolls informations from origin to destination",
+            "items": {
+              "$ref": "#/components/schemas/DistanceTollsElementsResponse"
+            },
+            "type": "array"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DistanceStatus"
+          }
+        },
+        "title": "DistanceTollsResponse",
+        "type": "object"
+      },
       "DistanceValue": {
         "description": "The total distance expressed in meters (value) and as text. The textual value uses the unit system specified with the units parameter of the original request.",
         "example": {
@@ -9804,6 +9899,142 @@
             "label": "Python",
             "lang": "python",
             "source": "import requests\n\nurl = \"https://api.woosmap.com/distance/route/json?origin=49.31067%2C4.14525\u0026destination=49.31344%2C4.15293\u0026mode=driving\u0026language=en\u0026alternatives=true\u0026method=distance\u0026details=full\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      }
+    },
+    "/distance/tolls/json": {
+      "get": {
+        "description": "Get Tolls\n",
+        "operationId": "getTolls",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/distance_origin"
+          },
+          {
+            "$ref": "#/components/parameters/distance_destination"
+          },
+          {
+            "$ref": "#/components/parameters/distance_mode"
+          },
+          {
+            "$ref": "#/components/parameters/distance_language"
+          },
+          {
+            "$ref": "#/components/parameters/distance_units"
+          },
+          {
+            "$ref": "#/components/parameters/distance_alternatives"
+          },
+          {
+            "$ref": "#/components/parameters/distance_waypoints"
+          },
+          {
+            "$ref": "#/components/parameters/distance_method"
+          },
+          {
+            "$ref": "#/components/parameters/distance_departure_time"
+          },
+          {
+            "$ref": "#/components/parameters/distance_arrival_time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DistanceTollsResponse"
+                }
+              }
+            },
+            "description": "Tolls successfully retrieved"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
+          }
+        },
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "summary": "Tolls",
+        "tags": [
+          "Distance API"
+        ],
+        "x-codeSamples": [
+          {
+            "$ref": "#/paths/~1distance~1route~1json/get/x-codeSamples/0"
+          },
+          {
+            "$ref": "#/paths/~1distance~1route~1json/get/x-codeSamples/1"
+          },
+          {
+            "$ref": "#/paths/~1distance~1route~1json/get/x-codeSamples/2"
           }
         ]
       }

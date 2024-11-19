@@ -4657,6 +4657,76 @@ paths:
             response = requests.request("GET", url, headers=headers, data=payload)
 
             print(response.text)
+  /distance/tolls/json:
+    get:
+      summary: Tolls
+      operationId: getTolls
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Distance API
+      description: |
+        Get Tolls
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+        - PrivateApiKeyHeaderAuth: []
+      parameters:
+        - $ref: '#/components/parameters/distance_origin'
+        - $ref: '#/components/parameters/distance_destination'
+        - $ref: '#/components/parameters/distance_mode'
+        - $ref: '#/components/parameters/distance_language'
+        - $ref: '#/components/parameters/distance_units'
+        - $ref: '#/components/parameters/distance_alternatives'
+        - $ref: '#/components/parameters/distance_waypoints'
+        - $ref: '#/components/parameters/distance_method'
+        - $ref: '#/components/parameters/distance_departure_time'
+        - $ref: '#/components/parameters/distance_arrival_time'
+      responses:
+        '200':
+          description: Tolls successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DistanceTollsResponse'
+        '401':
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+        '403':
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
+        '429':
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
+      x-codeSamples:
+        - $ref: '#/paths/~1distance~1route~1json/get/x-codeSamples/0'
+        - $ref: '#/paths/~1distance~1route~1json/get/x-codeSamples/1'
+        - $ref: '#/paths/~1distance~1route~1json/get/x-codeSamples/2'
   /distance/isochrone/json:
     get:
       summary: Isochrone (Early Access)
@@ -8599,6 +8669,74 @@ components:
                       summary: You have arrived at your destination.
                       verbal_alert: You will arrive at your destination.
                       verbal_before: You have arrived at your destination.
+    DistanceTollsElementsResponse:
+      title: DistanceTollsElementsResponse
+      type: object
+      description: Attributes describing routes from an origin to a destination returned in distance tolls response.
+      required:
+        - overview_polyline
+        - bounds
+        - legs
+      properties:
+        overview_polyline:
+          $ref: '#/components/schemas/EncodedPolyline'
+        bounds:
+          $ref: '#/components/schemas/Bounds'
+        legs:
+          type: array
+          description: Legs part of the route response
+          items:
+            $ref: '#/components/schemas/DistanceTollsLeg'
+    DistanceTollsLeg:
+      title: DistanceTollsLeg
+      type: object
+      description: Leg in a route
+      properties:
+        distance:
+          $ref: '#/components/schemas/DistanceValue'
+        duration:
+          $ref: '#/components/schemas/DurationValue'
+        start_location:
+          $ref: '#/components/schemas/LatLngLiteral'
+        end_location:
+          $ref: '#/components/schemas/LatLngLiteral'
+        tolls:
+          type: object
+          additionalProperties: true
+          description: Detail of tolls to be paid for traversing the specified section. Directly come from Here API
+          example:
+            tolls: some_value
+        tollSystem:
+          type: object
+          additionalProperties: true
+          description: An array of toll authorities that collect payments for the use of (part of) the specified section of the route. Directly come from Here API
+          example:
+            tollSystem: some_value
+      example:
+        distance:
+          text: 1 km
+          value: 1038
+        duration:
+          text: 1 min
+          value: 75
+        start_location:
+          lat: 49.31067
+          lng: 4.14525
+        end_location:
+          lat: 49.31344
+          lng: 4.15293
+    DistanceTollsResponse:
+      title: DistanceTollsResponse
+      type: object
+      description: Attributes describing a distance tolls response.
+      properties:
+        status:
+          $ref: '#/components/schemas/DistanceStatus'
+        routes:
+          description: Contains an array of routes with tolls informations from origin to destination
+          type: array
+          items:
+            $ref: '#/components/schemas/DistanceTollsElementsResponse'
     DistanceStatus:
       title: DistanceStatus
       type: string
