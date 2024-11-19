@@ -12,9 +12,14 @@ properties:
     $ref: "./LatLngLiteral.yml"
   tolls:
     type: object
-    additionalProperties: {}
-    description: the ending address of the leg
-    example: "{tolls datas}"
+    additionalProperties: true
+    description: Detail of tolls to be paid for traversing the specified section. Directly come from Here API
+    example: { "tolls": "some_value" }
+  tollSystem:
+    type: object
+    additionalProperties: true
+    description: An array of toll authorities that collect payments for the use of (part of) the specified section of the route. Directly come from Here API
+    example: { "tollSystem": "some_value" }
 example: {
   "distance": { "text": "1 km", "value": 1038 },
   "duration": { "text": "1 min", "value": 75 },
