@@ -22,7 +22,7 @@
 
 -   <h3 class="parameter-name" id="extended">extended</h3>
 
-    If set, this parameter allows a refined search over locality names that bears the same postal code. By triggering this parameter, integrators will benefit from a search spectrum on the `locality` type that ***includes postal codes***. To avoid confusion, it is recommended not to activate this parameter along with the `postal_code` type which could lead to duplicate locations. Also, the default description returned by the API changes to `name (postal code), admin_1, admin_0`. It is only available for France, Italy, Spain and Belgium.
+    If set, this parameter allows a refined search over locality names that bears the same postal code. By triggering this parameter, integrators will benefit from a search spectrum on the `locality` type that ***includes postal codes***. To avoid confusion, it is recommended not to activate this parameter along with the `postal_code` type which could lead to duplicate locations. Also, the default description returned by the API changes to `name (postal code), admin_1, admin_0`. It is only available for France, Monaco, Italy, Spain, Belgium, Switzerland and Luxembourg.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
