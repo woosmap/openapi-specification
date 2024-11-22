@@ -28,6 +28,11 @@ responses:
       application/json:
         schema:
           $ref: "../../schemas/DistanceTollsResponse.yml"
+        examples:
+          default:
+            summary: Distance Tolls Result for driving by car from origin `Lunel, France` to `Lyon, France`
+            value:
+              $ref: "../../responses/woosmap_http_distance_tolls_response.yml"
   "401":
     description: Unauthorized. Incorrect authentication credentials.
     content:
