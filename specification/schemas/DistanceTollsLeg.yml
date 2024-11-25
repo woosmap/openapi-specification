@@ -11,15 +11,13 @@ properties:
   end_location:
     $ref: "./LatLngLiteral.yml"
   tolls:
-    type: object
-    additionalProperties: true
-    description: Detail of tolls to be paid for traversing the specified section. Directly come from Here API
-    example: { "tolls": "some_value" }
-  tollSystem:
-    type: object
-    additionalProperties: true
-    description: An array of toll authorities that collect payments for the use of (part of) the specified section of the route. Directly come from Here API
-    example: { "tollSystem": "some_value" }
+    type: array
+    items:
+      $ref: "./DistanceTollsStep.yml"
+  tollSystems:
+    type: array
+    items:
+      $ref: "./DistanceTollsSystemStep.yml"
 example: {
   "distance": { "text": "1 km", "value": 1038 },
   "duration": { "text": "1 min", "value": 75 },
