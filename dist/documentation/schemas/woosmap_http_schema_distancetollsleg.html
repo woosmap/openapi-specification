@@ -79,22 +79,26 @@
     <tr>
       <td align="left">
         <h4
-          id="DistanceTollsLeg-tollSystem"
+          id="DistanceTollsLeg-tollSystems"
           class="add-link schema-object-property-key"
         >
-          <code>tollSystem</code>
+          <code>tollSystems</code>
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An array of toll authorities that collect payments for the use of
-            (part of) the specified section of the route. Directly come from
-            Here API
-          </p>
-        </div>
+        Array&#x3C;<a
+          href="#DistanceTollsSystemStep"
+          title="DistanceTollsSystemStep"
+          >DistanceTollsSystemStep</a
+        >>
+      </td>
+      <td>
+        See
+        <a href="#DistanceTollsSystemStep" title="DistanceTollsSystemStep"
+          >DistanceTollsSystemStep</a
+        >
+        for more information.
       </td>
     </tr>
     <tr>
@@ -107,14 +111,17 @@
         </h4>
       </td>
       <td>optional</td>
-      <td>object</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Detail of tolls to be paid for traversing the specified section.
-            Directly come from Here API
-          </p>
-        </div>
+        Array&#x3C;<a href="#DistanceTollsStep" title="DistanceTollsStep"
+          >DistanceTollsStep</a
+        >>
+      </td>
+      <td>
+        See
+        <a href="#DistanceTollsStep" title="DistanceTollsStep"
+          >DistanceTollsStep</a
+        >
+        for more information.
       </td>
     </tr>
   </tbody>
