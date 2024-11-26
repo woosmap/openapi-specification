@@ -120,6 +120,11 @@
     summary: Route
     operationId: getRoute
     $ref: "./distance/distanceRoute.yml"
+/distance/tolls/json:
+  get:
+    summary: Tolls
+    operationId: getTolls
+    $ref: "./distance/distanceTolls.yml"
 /distance/isochrone/json:
   get:
     summary: Isochrone (Early Access)
