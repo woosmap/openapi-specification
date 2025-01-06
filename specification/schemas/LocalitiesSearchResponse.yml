@@ -1,0 +1,20 @@
+title: LocalitiesSearchResponse
+type: object
+description: Attributes describing a search result.
+properties:
+  public_id:
+    description: Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.
+    type: string
+    example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
+  type:
+    $ref: "./LocalitiesSearchTypes.yml"
+  title:
+    description: Main string of the suggestion
+    type: string
+    example: "London"
+  description:
+    description: Address hint associated with that suggestion. The description can vary depending on the type requested.
+    type: string
+    example: "Westminster, City of London, England, United Kingdom"
+example:
+  $ref: "../responses/woosmap_http_localities_search_response.yml"

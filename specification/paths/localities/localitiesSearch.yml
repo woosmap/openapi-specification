@@ -1,0 +1,73 @@
+servers:
+  - url: https://api.woosmap.com
+tags:
+  - Localities API
+description: >
+  Search for suggestions given a text-based geographic query.
+
+security:
+  - PublicApiKeyAuth: []
+    RefererHeader: []
+  - PrivateApiKeyAuth: []
+  - PrivateApiKeyHeaderAuth: []
+parameters:
+  - $ref: "../../parameters/localities/input.yml"
+  - $ref: "../../parameters/localities/search_types.yml"
+  - allOf:
+      - $ref: "../../parameters/localities/components.yml"
+      - required: true
+  - $ref: "../../parameters/localities/language.yml"
+  - $ref: "../../parameters/localities/location.yml"
+  - allOf:
+      - $ref: "../../parameters/localities/location.yml"
+      - required: true
+  - $ref: "../../parameters/localities/radius.yml"
+responses:
+  "200":
+    description: Search suggestions successfully retrieved
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LocalitiesSearchCollectionResponse.yml"
+        examples:
+          default:
+            summary: Search results for input `London` and components `country:gb`
+            value:
+              $ref: "../../responses/woosmap_http_localities_search_collection_response.yml"
+  "401":
+    description: Unauthorized. Incorrect authentication credentials.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error401.yml"
+        examples:
+          Unauthorized:
+            summary: Error 401
+            value:
+              detail: "Incorrect authentication credentials. Please check or use a valid API Key"
+  "403":
+    description: Forbidden. This Woosmap API is not enabled for this project.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error403.yml"
+        examples:
+          Forbidden:
+            summary: Error 403
+            value:
+              detail: "This Woosmap API is not enabled for this project."
+  "429":
+    description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Error429.yml"
+        examples:
+          Forbidden:
+            summary: Error 429
+            value:
+              detail: "The rate limit for this endpoint has been exceeded"
+x-codeSamples:
+  - $ref:  "../../snippets/woosmap_http_localities_autocomplete_collection/woosmap_http_localities_autocomplete_collection.curl.yml"
+  - $ref:  "../../snippets/woosmap_http_localities_autocomplete_collection/woosmap_http_localities_autocomplete_collection.javascript.yml"
+  - $ref:  "../../snippets/woosmap_http_localities_autocomplete_collection/woosmap_http_localities_autocomplete_collection.python.yml"
