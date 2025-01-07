@@ -1,5 +1,5 @@
 {
   "lang": "javascript",
   "label": "JavaScript",
-  "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/search/?input=London&types=point_of_interest|locality|address|postal_code|admin_level|country&components=country%3Agb&location=48.8534,2.3488&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));",
+  "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/search/?input=royal%20al&types=point_of_interest|locality|address|postal_code&components=country%3Agb&location=51.50924,-0.11915&radius=2000&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));",
 }

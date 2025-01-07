@@ -26,7 +26,6 @@ parameters:
     example: country:fr|country:gb
     required: true
     in: query
-  - $ref: "../../parameters/localities/language.yml"
   - name: location
     description: >
       This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
@@ -36,6 +35,7 @@ parameters:
     example: 5.2,-2.3
     in: query
   - $ref: "../../parameters/localities/radius.yml"
+  - $ref: "../../parameters/localities/language.yml"
 responses:
   "200":
     description: Search suggestions successfully retrieved
