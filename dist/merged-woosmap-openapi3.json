@@ -12748,13 +12748,19 @@
         ],
         "x-codeSamples": [
           {
-            "$ref": "#/paths/~1localities~1search/get/x-codeSamples/0"
+            "label": "cURL",
+            "lang": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/autocomplete/?input=Lond\u0026components=country%3Agb\u0026no_deprecated_fields=true\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
-            "$ref": "#/paths/~1localities~1search/get/x-codeSamples/1"
+            "label": "JavaScript",
+            "lang": "javascript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/autocomplete/?input=Lond\u0026components=country%3Agb\u0026no_deprecated_fields=true\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
           },
           {
-            "$ref": "#/paths/~1localities~1search/get/x-codeSamples/2"
+            "label": "Python",
+            "lang": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/autocomplete/?input=Lond\u0026components=country%3Agb\u0026no_deprecated_fields=true\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -13999,17 +14005,17 @@
           {
             "label": "cURL",
             "lang": "curl",
-            "source": "curl -L -X GET 'https://api.woosmap.com/localities/autocomplete/?input=Lond\u0026components=country%3Agb\u0026no_deprecated_fields=true\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/search/?input=London\u0026types=point_of_interest|locality|address|postal_code|admin_level|country\u0026components=country%3Agb\u0026location=48.8534,2.3488\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "label": "JavaScript",
             "lang": "javascript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/autocomplete/?input=Lond\u0026components=country%3Agb\u0026no_deprecated_fields=true\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/search/?input=London\u0026types=point_of_interest|locality|address|postal_code|admin_level|country\u0026components=country%3Agb\u0026location=48.8534,2.3488\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
           },
           {
             "label": "Python",
             "lang": "python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/autocomplete/?input=Lond\u0026components=country%3Agb\u0026no_deprecated_fields=true\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/search/?input=London\u0026types=point_of_interest|locality|address|postal_code|admin_level|country\u0026components=country%3Agb\u0026location=48.8534,2.3488\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
