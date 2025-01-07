@@ -13,14 +13,16 @@ security:
 parameters:
   - $ref: "../../parameters/localities/input.yml"
   - $ref: "../../parameters/localities/search_types.yml"
-  - allOf:
+  - name: components
+    allOf:
       - $ref: "../../parameters/localities/components.yml"
-      - required: true
+        required: true
   - $ref: "../../parameters/localities/language.yml"
   - $ref: "../../parameters/localities/location.yml"
-  - allOf:
+  - name: location
+    allOf:
       - $ref: "../../parameters/localities/location.yml"
-      - required: true
+        required: true
   - $ref: "../../parameters/localities/radius.yml"
 responses:
   "200":
