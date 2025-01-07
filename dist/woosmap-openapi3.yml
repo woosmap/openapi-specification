@@ -2418,38 +2418,9 @@ paths:
                   value:
                     detail: The rate limit for this endpoint has been exceeded
       x-codeSamples:
-        - lang: curl
-          label: cURL
-          source: |-
-            curl -L -X GET 'https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY' \
-            -H 'Referer: http://localhost'
-        - lang: javascript
-          label: JavaScript
-          source: |-
-            var requestOptions = {
-              method: 'GET',
-              redirect: 'follow'
-            };
-
-            fetch("https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY", requestOptions)
-              .then(response => response.text())
-              .then(result => console.log(result))
-              .catch(error => console.log('error', error));
-        - lang: python
-          label: Python
-          source: |
-            import requests
-
-            url = "https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY"
-
-            payload={}
-            headers = {
-                'Referer': 'http://localhost'
-            }
-
-            response = requests.request("GET", url, headers=headers, data=payload)
-
-            print(response.text)
+        - $ref: '#/paths/~1localities~1search/get/x-codeSamples/0'
+        - $ref: '#/paths/~1localities~1search/get/x-codeSamples/1'
+        - $ref: '#/paths/~1localities~1search/get/x-codeSamples/2'
   /localities/details:
     get:
       summary: Details of a Locality
@@ -3139,6 +3110,147 @@ paths:
             import requests
 
             url = "https://api.woosmap.com/localities/nearby?types=point_of_interest&location=40.71399%2C-74.00499&categories=business&page=3&key=YOUR_PUBLIC_API_KEY"
+
+            payload={}
+            headers = {
+                'Referer': 'http://localhost'
+            }
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            print(response.text)
+  /localities/search:
+    get:
+      summary: Search for Localities
+      operationId: localitiesSearch
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Localities API
+      description: |
+        Search for suggestions given a text-based geographic query.
+      security:
+        - PublicApiKeyAuth: []
+          RefererHeader: []
+        - PrivateApiKeyAuth: []
+        - PrivateApiKeyHeaderAuth: []
+      parameters:
+        - $ref: '#/components/parameters/localities_input'
+        - $ref: '#/components/parameters/localities_search_types'
+        - name: components
+          description: |
+            A grouping of places to which you would like to restrict your results. Components can and should be used when applicable to filter over countries and retrieve more accurate results. Countries must be passed as an ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr` would restrict your results to city names or postal codes within the United Kingdom, France.
+          schema:
+            type: string
+          example: 'country:fr|country:gb'
+          required: true
+          in: query
+        - $ref: '#/components/parameters/localities_language'
+        - name: location
+          description: |
+            This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
+          schema:
+            type: string
+          required: true
+          example: '5.2,-2.3'
+          in: query
+        - $ref: '#/components/parameters/localities_radius'
+      responses:
+        '200':
+          description: Search suggestions successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocalitiesSearchCollectionResponse'
+              examples:
+                default:
+                  summary: 'Search results for input `London` and components `country:gb`'
+                  value:
+                    results:
+                      - public_id: Ch6qA8cLmvyvEEoFy6nYeFcEdNU=
+                        types:
+                          - locality
+                        title: London
+                        description: 'Westminster, City of London, England, United Kingdom'
+                      - public_id: m/T2C4YI2LgszkKXrELBC+9dfC8=
+                        types:
+                          - locality
+                        title: Derry/Londonderry
+                        description: 'Derry City and Strabane, Derry City and Strabane, Northern Ireland, United Kingdom'
+                      - public_id: J6eISGMjjvQwPkao8rsByB3aVwM=
+                        types:
+                          - locality
+                        title: London Colney
+                        description: 'St Albans, Hertfordshire, England, United Kingdom'
+                      - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
+                        types:
+                          - locality
+                        title: London Apprentice
+                        description: 'Cornwall, Cornwall, England, United Kingdom'
+                      - public_id: EqH9C/Csnm1Hd6V50fDNGIF2N9A=
+                        types:
+                          - point_of_interest
+                        title: London Mithraeum
+                        description: 'Walbrook, London, United Kingdom'
+                        categories:
+                          - tourism.museum
+        '401':
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+        '403':
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
+        '429':
+          description: Too Many Requests. The rate limit for this endpoint has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error429'
+              examples:
+                Forbidden:
+                  summary: Error 429
+                  value:
+                    detail: The rate limit for this endpoint has been exceeded
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |-
+            curl -L -X GET 'https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY' \
+            -H 'Referer: http://localhost'
+        - lang: javascript
+          label: JavaScript
+          source: |-
+            var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+            };
+
+            fetch("https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY", requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+        - lang: python
+          label: Python
+          source: |
+            import requests
+
+            url = "https://api.woosmap.com/localities/autocomplete/?input=Lond&components=country%3Agb&no_deprecated_fields=true&key=YOUR_PUBLIC_API_KEY"
 
             payload={}
             headers = {
@@ -5774,7 +5886,7 @@ components:
     localities_location:
       name: location
       description: |
-        This parameter is used to add a bias to the autocomplete feature. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
+        This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
       schema:
         type: string
       required: false
@@ -5807,6 +5919,21 @@ components:
       in: query
       required: false
       example: 200000
+    localities_search_types:
+      name: types
+      description: |
+        The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.
+          * `locality`: includes locality names (from city to village) and suburbs
+          * `postal_code`: publicly-used postal codes around the world
+          * `address`: addresses
+          * `admin_level`: most commonly used administrative areas
+          * `country`: countries as whole point of interest
+          * `point_of_interest`: includes points of interest
+      schema:
+        type: string
+      required: true
+      in: query
+      example: locality|admin_level|point_of_interest
     localities_types:
       name: types
       description: |
@@ -8099,6 +8226,93 @@ components:
         - police
         - post_office
         - sports
+    LocalitiesSearchCollectionResponse:
+      title: LocalitiesSearchCollectionResponse
+      type: object
+      description: Search Collection Response containing results
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesSearchResponse'
+      example:
+        results:
+          - public_id: Ch6qA8cLmvyvEEoFy6nYeFcEdNU=
+            types:
+              - locality
+            title: London
+            description: 'Westminster, City of London, England, United Kingdom'
+          - public_id: m/T2C4YI2LgszkKXrELBC+9dfC8=
+            types:
+              - locality
+            title: Derry/Londonderry
+            description: 'Derry City and Strabane, Derry City and Strabane, Northern Ireland, United Kingdom'
+          - public_id: J6eISGMjjvQwPkao8rsByB3aVwM=
+            types:
+              - locality
+            title: London Colney
+            description: 'St Albans, Hertfordshire, England, United Kingdom'
+          - public_id: 52MnrbHVWH21CLWH8VY/YWKhqeM=
+            types:
+              - locality
+            title: London Apprentice
+            description: 'Cornwall, Cornwall, England, United Kingdom'
+          - public_id: EqH9C/Csnm1Hd6V50fDNGIF2N9A=
+            types:
+              - point_of_interest
+            title: London Mithraeum
+            description: 'Walbrook, London, United Kingdom'
+            categories:
+              - tourism.museum
+    LocalitiesSearchResponse:
+      title: LocalitiesSearchResponse
+      type: object
+      description: Attributes describing a search result.
+      required:
+        - public_id
+        - types
+        - title
+      properties:
+        public_id:
+          description: Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.
+          type: string
+          example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
+        types:
+          description: An array containing the types of the result.
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesSearchTypes'
+        title:
+          description: Main string of the suggestion
+          type: string
+          example: London
+        description:
+          description: Address hint associated with that suggestion. The description can vary depending on the type requested.
+          type: string
+          example: 'Westminster, City of London, England, United Kingdom'
+        categories:
+          description: An array containing the categories of the result if that result is a point of interest.
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesNearbyCategory'
+      example:
+        public_id: Ch6qA8cLmvyvEEoFy6nYeFcEdNU=
+        types:
+          - locality
+        title: London
+        description: 'Westminster, City of London, England, United Kingdom'
+    LocalitiesSearchTypes:
+      title: LocalitiesSearchTypes
+      type: string
+      description: Contains the type of the search suggestion.
+      enum:
+        - country
+        - admin_level
+        - locality
+        - postal_code
+        - address
+        - route
+        - point_of_interest
     AddressAutocompleteCollectionResponse:
       title: AddressAutocompleteCollectionResponse
       type: object
