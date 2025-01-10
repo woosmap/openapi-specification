@@ -3426,9 +3426,6 @@
             "in": "query"
           },
           {
-            "$ref": "#/components/parameters/localities_language"
-          },
-          {
             "name": "location",
             "description": "This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.\n",
             "schema": {
@@ -3440,6 +3437,9 @@
           },
           {
             "$ref": "#/components/parameters/localities_radius"
+          },
+          {
+            "$ref": "#/components/parameters/localities_language"
           }
         ],
         "responses": {
@@ -3456,47 +3456,53 @@
                     "value": {
                       "results": [
                         {
-                          "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
-                          "types": [
-                            "locality"
-                          ],
-                          "title": "London",
-                          "description": "Westminster, City of London, England, United Kingdom"
-                        },
-                        {
-                          "public_id": "m/T2C4YI2LgszkKXrELBC+9dfC8=",
-                          "types": [
-                            "locality"
-                          ],
-                          "title": "Derry/Londonderry",
-                          "description": "Derry City and Strabane, Derry City and Strabane, Northern Ireland, United Kingdom"
-                        },
-                        {
-                          "public_id": "J6eISGMjjvQwPkao8rsByB3aVwM=",
-                          "types": [
-                            "locality"
-                          ],
-                          "title": "London Colney",
-                          "description": "St Albans, Hertfordshire, England, United Kingdom"
-                        },
-                        {
-                          "public_id": "52MnrbHVWH21CLWH8VY/YWKhqeM=",
-                          "types": [
-                            "locality"
-                          ],
-                          "title": "London Apprentice",
-                          "description": "Cornwall, Cornwall, England, United Kingdom"
-                        },
-                        {
-                          "public_id": "EqH9C/Csnm1Hd6V50fDNGIF2N9A=",
+                          "public_id": "cB15hd5Hv/cKrh3MSyIg6eoAAN4=",
                           "types": [
                             "point_of_interest"
                           ],
-                          "title": "London Mithraeum",
-                          "description": "Walbrook, London, United Kingdom",
+                          "title": "Royal Albert",
+                          "description": "New Cross Road, London, United Kingdom",
                           "categories": [
-                            "tourism.museum"
+                            "business.food_and_drinks.pub"
                           ]
+                        },
+                        {
+                          "public_id": "UJE0TA8sr5gily/0ivcsSs/oZbw=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "title": "Royal Albert Hall",
+                          "description": "Kensington Gore, London, United Kingdom",
+                          "categories": [
+                            "tourism.attraction"
+                          ]
+                        },
+                        {
+                          "public_id": "79w9P8Be74OsyIOD7BsdfcVBSRk=",
+                          "types": [
+                            "point_of_interest"
+                          ],
+                          "title": "The Royal Alfred",
+                          "description": "Manor Road, Erith, United Kingdom",
+                          "categories": [
+                            "business.shop.grocery"
+                          ]
+                        },
+                        {
+                          "public_id": "1XSvvFod2a+VRZjEVkIul11KTJs=",
+                          "types": [
+                            "route"
+                          ],
+                          "title": "Royal Albert Quay",
+                          "description": "London (E16 2YR), United Kingdom"
+                        },
+                        {
+                          "public_id": "07iTmTX2T0u9NEoh4weNXESt/i4=",
+                          "types": [
+                            "route"
+                          ],
+                          "title": "Royal Albert Close",
+                          "description": "Worcester (WR5 1BZ), United Kingdom"
                         }
                       ]
                     }
@@ -3564,17 +3570,17 @@
           {
             "lang": "curl",
             "label": "cURL",
-            "source": "curl -L -X GET 'https://api.woosmap.com/localities/search/?input=London&types=point_of_interest|locality|address|postal_code|admin_level|country&components=country%3Agb&location=48.8534,2.3488&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/search/?input=royal%20al&types=point_of_interest|locality|address|postal_code&components=country%3Agb&location=51.50924,-0.11915&radius=2000&key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
           },
           {
             "lang": "javascript",
             "label": "JavaScript",
-            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/search/?input=London&types=point_of_interest|locality|address|postal_code|admin_level|country&components=country%3Agb&location=48.8534,2.3488&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/search/?input=royal%20al&types=point_of_interest|locality|address|postal_code&components=country%3Agb&location=51.50924,-0.11915&radius=2000&key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));"
           },
           {
             "lang": "python",
             "label": "Python",
-            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/search/?input=London&types=point_of_interest|locality|address|postal_code|admin_level|country&components=country%3Agb&location=48.8534,2.3488&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/search/?input=royal%20al&types=point_of_interest|locality|address|postal_code&components=country%3Agb&location=51.50924,-0.11915&radius=2000&key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
@@ -6980,7 +6986,7 @@
         },
         "required": true,
         "in": "query",
-        "example": "locality|admin_level|point_of_interest"
+        "example": "point_of_interest|address|locality|postal_code"
       },
       "localities_types": {
         "name": "types",
@@ -10139,47 +10145,53 @@
         "example": {
           "results": [
             {
-              "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
-              "types": [
-                "locality"
-              ],
-              "title": "London",
-              "description": "Westminster, City of London, England, United Kingdom"
-            },
-            {
-              "public_id": "m/T2C4YI2LgszkKXrELBC+9dfC8=",
-              "types": [
-                "locality"
-              ],
-              "title": "Derry/Londonderry",
-              "description": "Derry City and Strabane, Derry City and Strabane, Northern Ireland, United Kingdom"
-            },
-            {
-              "public_id": "J6eISGMjjvQwPkao8rsByB3aVwM=",
-              "types": [
-                "locality"
-              ],
-              "title": "London Colney",
-              "description": "St Albans, Hertfordshire, England, United Kingdom"
-            },
-            {
-              "public_id": "52MnrbHVWH21CLWH8VY/YWKhqeM=",
-              "types": [
-                "locality"
-              ],
-              "title": "London Apprentice",
-              "description": "Cornwall, Cornwall, England, United Kingdom"
-            },
-            {
-              "public_id": "EqH9C/Csnm1Hd6V50fDNGIF2N9A=",
+              "public_id": "cB15hd5Hv/cKrh3MSyIg6eoAAN4=",
               "types": [
                 "point_of_interest"
               ],
-              "title": "London Mithraeum",
-              "description": "Walbrook, London, United Kingdom",
+              "title": "Royal Albert",
+              "description": "New Cross Road, London, United Kingdom",
               "categories": [
-                "tourism.museum"
+                "business.food_and_drinks.pub"
               ]
+            },
+            {
+              "public_id": "UJE0TA8sr5gily/0ivcsSs/oZbw=",
+              "types": [
+                "point_of_interest"
+              ],
+              "title": "Royal Albert Hall",
+              "description": "Kensington Gore, London, United Kingdom",
+              "categories": [
+                "tourism.attraction"
+              ]
+            },
+            {
+              "public_id": "79w9P8Be74OsyIOD7BsdfcVBSRk=",
+              "types": [
+                "point_of_interest"
+              ],
+              "title": "The Royal Alfred",
+              "description": "Manor Road, Erith, United Kingdom",
+              "categories": [
+                "business.shop.grocery"
+              ]
+            },
+            {
+              "public_id": "1XSvvFod2a+VRZjEVkIul11KTJs=",
+              "types": [
+                "route"
+              ],
+              "title": "Royal Albert Quay",
+              "description": "London (E16 2YR), United Kingdom"
+            },
+            {
+              "public_id": "07iTmTX2T0u9NEoh4weNXESt/i4=",
+              "types": [
+                "route"
+              ],
+              "title": "Royal Albert Close",
+              "description": "Worcester (WR5 1BZ), United Kingdom"
             }
           ]
         }
@@ -10225,12 +10237,15 @@
           }
         },
         "example": {
-          "public_id": "Ch6qA8cLmvyvEEoFy6nYeFcEdNU=",
+          "public_id": "cB15hd5Hv/cKrh3MSyIg6eoAAN4=",
           "types": [
-            "locality"
+            "point_of_interest"
           ],
-          "title": "London",
-          "description": "Westminster, City of London, England, United Kingdom"
+          "title": "Royal Albert",
+          "description": "New Cross Road, London, United Kingdom",
+          "categories": [
+            "business.food_and_drinks.pub"
+          ]
         }
       },
       "LocalitiesSearchTypes": {
