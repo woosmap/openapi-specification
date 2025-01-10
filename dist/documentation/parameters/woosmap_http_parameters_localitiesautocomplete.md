@@ -30,7 +30,7 @@
 
 -   <h3 class="parameter-name" id="location">location</h3>
 
-    This parameter is used to add a bias to the autocomplete feature. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
+    This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.
 
 -   <h3 class="parameter-name" id="radius">radius</h3>
 
