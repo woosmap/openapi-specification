@@ -6867,7 +6867,7 @@
       },
       "localities_extended": {
         "name": "extended",
-        "description": "If set, this parameter allows a refined search over locality names that bears the same postal code. By triggering this parameter, integrators will benefit from a search spectrum on the `locality` type that ***includes postal codes***. To avoid confusion, it is recommended not to activate this parameter along with the `postal_code` type which could lead to duplicate locations. Also, the default description returned by the API changes to `name (postal code), admin_1, admin_0`. It is only available for France, Italy, Spain and Belgium.\n",
+        "description": "If set, this parameter allows a refined search over locality names that bears the same postal code. By triggering this parameter, integrators will benefit from a search spectrum on the `locality` type that ***includes postal codes***. To avoid confusion, it is recommended not to activate this parameter along with the `postal_code` type which could lead to duplicate locations. Also, the default description returned by the API changes to `name (postal code), admin_1, admin_0`. It is only available for France, Monaco, Italy, Spain, Belgium, Switzerland and Luxembourg.\n",
         "schema": {
           "type": "string",
           "enum": [
@@ -9553,6 +9553,8 @@
         "type": "string",
         "description": "Contains the type of the geocoded suggestion.",
         "enum": [
+          "country",
+          "admin_level",
           "locality",
           "postal_code",
           "route",
