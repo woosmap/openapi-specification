@@ -439,7 +439,7 @@
         }
       },
       "localities_location": {
-        "description": "This parameter is used to add a bias to the autocomplete feature. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.\n",
+        "description": "This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.\n",
         "example": "5.2,-2.3",
         "in": "query",
         "name": "location",
@@ -474,6 +474,16 @@
         "name": "radius",
         "schema": {
           "type": "integer"
+        }
+      },
+      "localities_search_types": {
+        "description": "The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.\n  * `locality`: includes locality names (from city to village) and suburbs\n  * `postal_code`: publicly-used postal codes around the world\n  * `address`: addresses\n  * `admin_level`: most commonly used administrative areas\n  * `country`: countries as whole point of interest\n  * `point_of_interest`: includes points of interest\n",
+        "example": "point_of_interest|address|locality|postal_code",
+        "in": "query",
+        "name": "types",
+        "required": true,
+        "schema": {
+          "type": "string"
         }
       },
       "localities_types": {
@@ -6242,6 +6252,138 @@
         },
         "title": "LocalitiesScoresPerComponents",
         "type": "object"
+      },
+      "LocalitiesSearchCollectionResponse": {
+        "description": "Search Collection Response containing results",
+        "example": {
+          "results": [
+            {
+              "categories": [
+                "business.food_and_drinks.pub"
+              ],
+              "description": "New Cross Road, London, United Kingdom",
+              "public_id": "cB15hd5Hv/cKrh3MSyIg6eoAAN4=",
+              "title": "Royal Albert",
+              "types": [
+                "point_of_interest"
+              ]
+            },
+            {
+              "categories": [
+                "tourism.attraction"
+              ],
+              "description": "Kensington Gore, London, United Kingdom",
+              "public_id": "UJE0TA8sr5gily/0ivcsSs/oZbw=",
+              "title": "Royal Albert Hall",
+              "types": [
+                "point_of_interest"
+              ]
+            },
+            {
+              "categories": [
+                "business.shop.grocery"
+              ],
+              "description": "Manor Road, Erith, United Kingdom",
+              "public_id": "79w9P8Be74OsyIOD7BsdfcVBSRk=",
+              "title": "The Royal Alfred",
+              "types": [
+                "point_of_interest"
+              ]
+            },
+            {
+              "description": "London (E16 2YR), United Kingdom",
+              "public_id": "1XSvvFod2a+VRZjEVkIul11KTJs=",
+              "title": "Royal Albert Quay",
+              "types": [
+                "route"
+              ]
+            },
+            {
+              "description": "Worcester (WR5 1BZ), United Kingdom",
+              "public_id": "07iTmTX2T0u9NEoh4weNXESt/i4=",
+              "title": "Royal Albert Close",
+              "types": [
+                "route"
+              ]
+            }
+          ]
+        },
+        "properties": {
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesSearchResponse"
+            },
+            "type": "array"
+          }
+        },
+        "title": "LocalitiesSearchCollectionResponse",
+        "type": "object"
+      },
+      "LocalitiesSearchResponse": {
+        "description": "Attributes describing a search result.",
+        "example": {
+          "categories": [
+            "business.food_and_drinks.pub"
+          ],
+          "description": "New Cross Road, London, United Kingdom",
+          "public_id": "cB15hd5Hv/cKrh3MSyIg6eoAAN4=",
+          "title": "Royal Albert",
+          "types": [
+            "point_of_interest"
+          ]
+        },
+        "properties": {
+          "categories": {
+            "description": "An array containing the categories of the result if that result is a point of interest.",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesNearbyCategory"
+            },
+            "type": "array"
+          },
+          "description": {
+            "description": "Address hint associated with that suggestion. The description can vary depending on the type requested.",
+            "example": "Westminster, City of London, England, United Kingdom",
+            "type": "string"
+          },
+          "public_id": {
+            "description": "Contains a unique ID for each suggestion. Please use this ID if you need to give us feedbacks on results. This ID is also required to perform Localities Details request.",
+            "example": "MkvnYy6K6oVGqeqfWJGO/6eCgqo=",
+            "type": "string"
+          },
+          "title": {
+            "description": "Main string of the suggestion",
+            "example": "London",
+            "type": "string"
+          },
+          "types": {
+            "description": "An array containing the types of the result.",
+            "items": {
+              "$ref": "#/components/schemas/LocalitiesSearchTypes"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "public_id",
+          "types",
+          "title"
+        ],
+        "title": "LocalitiesSearchResponse",
+        "type": "object"
+      },
+      "LocalitiesSearchTypes": {
+        "description": "Contains the type of the search suggestion.",
+        "enum": [
+          "country",
+          "admin_level",
+          "locality",
+          "postal_code",
+          "address",
+          "route",
+          "point_of_interest"
+        ],
+        "title": "LocalitiesSearchTypes",
+        "type": "string"
       },
       "LocalitiesStatus": {
         "description": "This optional field is only available for UK addresses referenced as not yey built by Royal Mail. Only one value yet.",
@@ -13687,6 +13829,208 @@
             "label": "Python",
             "lang": "python",
             "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/nearby?types=point_of_interest\u0026location=40.71399%2C-74.00499\u0026categories=business\u0026page=3\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
+          }
+        ]
+      }
+    },
+    "/localities/search": {
+      "get": {
+        "description": "Search for suggestions given a text-based geographic query.\n",
+        "operationId": "localitiesSearch",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/localities_input"
+          },
+          {
+            "$ref": "#/components/parameters/localities_search_types"
+          },
+          {
+            "description": "A grouping of places to which you would like to restrict your results. Countries must be passed as an ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr` would restrict your results to city names or postal codes within the United Kingdom, France.\n",
+            "example": "country:fr|country:gb",
+            "in": "query",
+            "name": "components",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "This parameter is used to add a geographical bias to the query. The location defines the point around which to retrieve results in priority. It must be specified in the `latitude,longitude` string format.\n",
+            "example": "5.2,-2.3",
+            "in": "query",
+            "name": "location",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/localities_radius"
+          },
+          {
+            "$ref": "#/components/parameters/localities_language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Search results for input `London` and components `country:gb`",
+                    "value": {
+                      "results": [
+                        {
+                          "categories": [
+                            "business.food_and_drinks.pub"
+                          ],
+                          "description": "New Cross Road, London, United Kingdom",
+                          "public_id": "cB15hd5Hv/cKrh3MSyIg6eoAAN4=",
+                          "title": "Royal Albert",
+                          "types": [
+                            "point_of_interest"
+                          ]
+                        },
+                        {
+                          "categories": [
+                            "tourism.attraction"
+                          ],
+                          "description": "Kensington Gore, London, United Kingdom",
+                          "public_id": "UJE0TA8sr5gily/0ivcsSs/oZbw=",
+                          "title": "Royal Albert Hall",
+                          "types": [
+                            "point_of_interest"
+                          ]
+                        },
+                        {
+                          "categories": [
+                            "business.shop.grocery"
+                          ],
+                          "description": "Manor Road, Erith, United Kingdom",
+                          "public_id": "79w9P8Be74OsyIOD7BsdfcVBSRk=",
+                          "title": "The Royal Alfred",
+                          "types": [
+                            "point_of_interest"
+                          ]
+                        },
+                        {
+                          "description": "London (E16 2YR), United Kingdom",
+                          "public_id": "1XSvvFod2a+VRZjEVkIul11KTJs=",
+                          "title": "Royal Albert Quay",
+                          "types": [
+                            "route"
+                          ]
+                        },
+                        {
+                          "description": "Worcester (WR5 1BZ), United Kingdom",
+                          "public_id": "07iTmTX2T0u9NEoh4weNXESt/i4=",
+                          "title": "Royal Albert Close",
+                          "types": [
+                            "route"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/LocalitiesSearchCollectionResponse"
+                }
+              }
+            },
+            "description": "Search suggestions successfully retrieved"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Unauthorized": {
+                    "summary": "Error 401",
+                    "value": {
+                      "detail": "Incorrect authentication credentials. Please check or use a valid API Key"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error401"
+                }
+              }
+            },
+            "description": "Unauthorized. Incorrect authentication credentials."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 403",
+                    "value": {
+                      "detail": "This Woosmap API is not enabled for this project."
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error403"
+                }
+              }
+            },
+            "description": "Forbidden. This Woosmap API is not enabled for this project."
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Forbidden": {
+                    "summary": "Error 429",
+                    "value": {
+                      "detail": "The rate limit for this endpoint has been exceeded"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Error429"
+                }
+              }
+            },
+            "description": "Too Many Requests. The rate limit for this endpoint has been exceeded."
+          }
+        },
+        "security": [
+          {
+            "PublicApiKeyAuth": [],
+            "RefererHeader": []
+          },
+          {
+            "PrivateApiKeyAuth": []
+          },
+          {
+            "PrivateApiKeyHeaderAuth": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.woosmap.com"
+          }
+        ],
+        "summary": "Search for Localities",
+        "tags": [
+          "Localities API"
+        ],
+        "x-codeSamples": [
+          {
+            "label": "cURL",
+            "lang": "curl",
+            "source": "curl -L -X GET 'https://api.woosmap.com/localities/search/?input=royal%20al\u0026types=point_of_interest|locality|address|postal_code\u0026components=country%3Agb\u0026location=51.50924,-0.11915\u0026radius=2000\u0026key=YOUR_PUBLIC_API_KEY' \\\n-H 'Referer: http://localhost'"
+          },
+          {
+            "label": "JavaScript",
+            "lang": "javascript",
+            "source": "var requestOptions = {\n  method: 'GET',\n  redirect: 'follow'\n};\n\nfetch(\"https://api.woosmap.com/localities/search/?input=royal%20al\u0026types=point_of_interest|locality|address|postal_code\u0026components=country%3Agb\u0026location=51.50924,-0.11915\u0026radius=2000\u0026key=YOUR_PUBLIC_API_KEY\", requestOptions)\n  .then(response =\u003e response.text())\n  .then(result =\u003e console.log(result))\n  .catch(error =\u003e console.log('error', error));"
+          },
+          {
+            "label": "Python",
+            "lang": "python",
+            "source": "import requests\n\nurl = \"https://api.woosmap.com/localities/search/?input=royal%20al\u0026types=point_of_interest|locality|address|postal_code\u0026components=country%3Agb\u0026location=51.50924,-0.11915\u0026radius=2000\u0026key=YOUR_PUBLIC_API_KEY\"\n\npayload={}\nheaders = {\n    'Referer': 'http://localhost'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload)\n\nprint(response.text)\n"
           }
         ]
       }
