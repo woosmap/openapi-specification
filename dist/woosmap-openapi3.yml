@@ -3881,96 +3881,6 @@ paths:
                   value:
                     detail: This Woosmap API is not enabled for this project.
       x-codeSamples:
-        - $ref: '#/paths/~1zones/put/x-codeSamples/0'
-        - $ref: '#/paths/~1zones/put/x-codeSamples/1'
-        - $ref: '#/paths/~1zones/put/x-codeSamples/2'
-    put:
-      summary: Update the Zones
-      operationId: updateZones
-      servers:
-        - url: 'https://api.woosmap.com'
-      tags:
-        - Zones API
-      description: 'Used to update zones in batch. `zone_id` must exists when using `PUT` method, if one zone does not exists, the batch will be refused.'
-      security:
-        - PrivateApiKeyAuth: []
-      requestBody:
-        description: The request body of Zones Update must be formatted as JSON.
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ZonesCollectionRequest'
-            examples:
-              default:
-                summary: Zones data
-                value:
-                  zones:
-                    - zone_id: ZoneA
-                      description: Delivery Zone for Store A
-                      store_id: STORE_ID_123456
-                      polygon: 'POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))'
-                      types:
-                        - delivery
-                    - zone_id: ZoneB
-                      description: Delivery Zone for Store B
-                      store_id: STORE_ID_123456
-                      polygon: 'POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))'
-                      types:
-                        - delivery
-                    - zone_id: ZoneC
-                      description: Delivery Zone for Store C
-                      store_id: STORE_ID_45678
-                      polygon: 'POLYGON ((-122.4758889 37.7524995,-122.4751594 37.7321718,-122.4688079 37.7299995,-122.4648597 37.7261979,-122.4519851 37.7228035,-122.4483802 37.7215815,-122.4458053 37.726741,-122.4365356 37.7310857,-122.4315574 37.7324433,-122.4246909 37.7312214,-122.4219444 37.731493,-122.423071 37.7511239,-122.4333707 37.7512596,-122.4354306 37.7602172,-122.4515485 37.7595934,-122.4528628 37.7582744,-122.4540375 37.7566755,-122.4565266 37.7513144,-122.4601315 37.7521288,-122.4618481 37.7514501,-122.4635648 37.7530788,-122.4758889 37.7524995))'
-                      types:
-                        - delivery
-      responses:
-        '200':
-          description: Zones successfully updated
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessZones'
-              examples:
-                default:
-                  summary: Success response for Zones updated
-                  value:
-                    status: ok
-                    message: Zones successfully added.
-        '400':
-          description: Invalid. The data is not a valid JSON.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-              examples:
-                Invalid:
-                  summary: Error 400
-                  value:
-                    status: error
-                    value: 'The request is invalid, the data is not a valid JSON.'
-        '401':
-          description: Unauthorized. Incorrect authentication credentials.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-              examples:
-                Unauthorized:
-                  summary: Error 401
-                  value:
-                    detail: Incorrect authentication credentials. Please check or use a valid API Key
-        '403':
-          description: Forbidden. This Woosmap API is not enabled for this project.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error403'
-              examples:
-                Forbidden:
-                  summary: Error 403
-                  value:
-                    detail: This Woosmap API is not enabled for this project.
-      x-codeSamples:
         - lang: curl
           label: cURL
           source: |-
@@ -4091,6 +4001,173 @@ paths:
 
             var config = {
               method: 'post',
+              url: 'https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY',
+              headers: { 
+                'content-type': 'application/json'
+              },
+              data : data
+            };
+
+            axios(config)
+            .then(function (response) {
+              console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+    put:
+      summary: Update the Zones
+      operationId: updateZones
+      servers:
+        - url: 'https://api.woosmap.com'
+      tags:
+        - Zones API
+      description: 'Used to update zones in batch. `zone_id` must exists when using `PUT` method, if one zone does not exists, the batch will be refused.'
+      security:
+        - PrivateApiKeyAuth: []
+      requestBody:
+        description: The request body of Zones Update must be formatted as JSON.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZonesCollectionRequest'
+            examples:
+              default:
+                summary: Zones data
+                value:
+                  zones:
+                    - zone_id: ZoneA
+                      description: Delivery Zone for Store A
+                      store_id: STORE_ID_123456
+                      polygon: 'POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))'
+                      types:
+                        - delivery
+                    - zone_id: ZoneB
+                      description: Delivery Zone for Store B
+                      store_id: STORE_ID_123456
+                      polygon: 'POLYGON ((-122.4546384 37.774656,-122.4515485 37.7595934,-122.4354306 37.7602172,-122.4333707 37.7512596,-122.423071 37.7511239,-122.4242726 37.7687665,-122.4259893 37.7691736,-122.4289075 37.7732444,-122.4306241 37.7850483,-122.4472753 37.7830133,-122.445902 37.7759581,-122.4546384 37.774656))'
+                      types:
+                        - delivery
+                    - zone_id: ZoneC
+                      description: Delivery Zone for Store C
+                      store_id: STORE_ID_45678
+                      polygon: 'POLYGON ((-122.4758889 37.7524995,-122.4751594 37.7321718,-122.4688079 37.7299995,-122.4648597 37.7261979,-122.4519851 37.7228035,-122.4483802 37.7215815,-122.4458053 37.726741,-122.4365356 37.7310857,-122.4315574 37.7324433,-122.4246909 37.7312214,-122.4219444 37.731493,-122.423071 37.7511239,-122.4333707 37.7512596,-122.4354306 37.7602172,-122.4515485 37.7595934,-122.4528628 37.7582744,-122.4540375 37.7566755,-122.4565266 37.7513144,-122.4601315 37.7521288,-122.4618481 37.7514501,-122.4635648 37.7530788,-122.4758889 37.7524995))'
+                      types:
+                        - delivery
+      responses:
+        '200':
+          description: Zones successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessZones'
+              examples:
+                default:
+                  summary: Success response for Zones updated
+                  value:
+                    status: ok
+                    message: Zones successfully added.
+        '400':
+          description: Invalid. The data is not a valid JSON.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+              examples:
+                Invalid:
+                  summary: Error 400
+                  value:
+                    status: error
+                    value: 'The request is invalid, the data is not a valid JSON.'
+        '401':
+          description: Unauthorized. Incorrect authentication credentials.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+              examples:
+                Unauthorized:
+                  summary: Error 401
+                  value:
+                    detail: Incorrect authentication credentials. Please check or use a valid API Key
+        '403':
+          description: Forbidden. This Woosmap API is not enabled for this project.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error403'
+              examples:
+                Forbidden:
+                  summary: Error 403
+                  value:
+                    detail: This Woosmap API is not enabled for this project.
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |-
+            curl -L -X PUT 'https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY' \
+            -H 'content-type: application/json' \
+            --data-raw '{
+              "zones": [
+                {
+                  "zone_id": "ZoneA",
+                  "description": "Delivery Zone for Store A",
+                  "store_id": "STORE_ID_45678",
+                  "polygon": "POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))",
+                  "types": [
+                    "delivery"
+                  ]
+                }
+              ]
+            }'
+        - lang: python
+          label: Python
+          source: |
+            import requests
+            import json
+
+            url = "https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY"
+
+            payload = json.dumps({
+                "zones": [
+                    {
+                        "zone_id": "ZoneA",
+                        "description": "Delivery Zone for Store A",
+                        "store_id": "STORE_ID_45678",
+                        "polygon": "POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))",
+                        "types": [
+                            "delivery"
+                        ]
+                    }
+                ]
+            })
+            headers = {
+                'content-type': 'application/json'
+            }
+
+            response = requests.request("PUT", url, headers=headers, data=payload)
+
+            print(response.text)
+        - lang: nodejs
+          label: NodeJS
+          source: |
+            var axios = require('axios');
+            var data = JSON.stringify({
+              "zones": [
+                {
+                  "zone_id": "ZoneA",
+                  "description": "Delivery Zone for Store A",
+                  "store_id": "STORE_ID_45678",
+                  "polygon": "POLYGON ((-122.496116 37.7648181,-122.4954079 37.751518,-122.4635648 37.7530788,-122.4618481 37.7514501,-122.4601315 37.7521288,-122.4565266 37.7513144,-122.4540375 37.7566755,-122.4528359 37.7583041,-122.4515485 37.7595934,-122.4546384 37.774656,-122.4718903 37.7731635,-122.472577 37.772485,-122.4755811 37.7725529,-122.4791001 37.7723493,-122.4793576 37.7713995,-122.4784993 37.769839,-122.4783276 37.7680071,-122.4774693 37.766718,-122.4772118 37.7652931,-122.496116 37.7648181))",
+                  "types": [
+                    "delivery"
+                  ]
+                }
+              ]
+            });
+
+            var config = {
+              method: 'put',
               url: 'https://api.woosmap.com/zones?private_key=YOUR_PRIVATE_API_KEY',
               headers: { 
                 'content-type': 'application/json'
@@ -9696,3 +9773,10 @@ tags:
       The general principle is that sometimes searching assets using crowfly distance is not good enough. For example to search the restaurant that will do the delivery for a specified address, each restaurant has a delivery zone and for topological or business reasons it’s not always the nearest restaurant in charge of your delivery. Woosmap Zones API allows you to associate a delivery zone to each of the restaurants.
     externalDocs:
       url: 'https://developers.woosmap.com/products/data-api/zones/'
+  - name: Datasets API
+    description: |
+      The Datasets API is a versatile and powerful tool designed to manage, query, and interact with geospatial data. 
+      A dataset serves as an editable collection of features, which can include points, lines, or polygons.  The API is particularly well-suited for applications where location or spatial analysis are crucial, providing high accuracy analysis and flexibility in managing geospatial data.
+    externalDocs:
+      description: Visit the DataSet API Reference Here
+      url: 'https://developers.woosmap.com/products/datasets-api/reference/'
