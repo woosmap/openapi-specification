@@ -27,6 +27,10 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
+-   <h3 class="parameter-name" id="excluded_types">excluded_types</h3>
+
+    The types of suggestion to exclude. Multiple types can be passed using the pipe character (`|`) as a separator.
+
 -   <h3 class="parameter-name" id="language">language</h3>
 
     The language code, using ISO 639-2 Alpha-2 country codes, indicating in which language the results should be returned, if possible. If language is not supplied, first `Accept-Language` of the browser will be used.  If neither the provided `language` or the `Accept-Language` are known, the Localities service uses the international default language (English).  No `language` is necessary for a postal_code request. According to requested language, only parts of the address components might be translated.
