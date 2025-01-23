@@ -2619,7 +2619,7 @@
             "$ref": "#/components/parameters/localities_latlng"
           },
           {
-            "$ref": "#/components/parameters/localities_geocode_types"
+            "$ref": "#/components/parameters/localities_types"
           },
           {
             "$ref": "#/components/parameters/localities_excluded_types"
@@ -6896,11 +6896,10 @@
         "name": "excluded_types",
         "description": "The types of suggestion to exclude. Multiple types can be passed using the pipe character (`|`) as a separator.\n",
         "schema": {
-          "type": "string",
-          "default": "suburb|quarter|neighbourhood"
+          "type": "string"
         },
         "in": "query",
-        "example": "locality|airport|admin_level"
+        "example": "suburb|quarter|neighbourhood"
       },
       "localities_fields": {
         "name": "fields",
@@ -7005,7 +7004,7 @@
       },
       "localities_search_types": {
         "name": "types",
-        "description": "The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.\n  * `locality`: includes locality names (from city to village) and suburbs\n  * `postal_code`: publicly-used postal codes around the world\n  * `address`: addresses\n  * `admin_level`: most commonly used administrative areas\n  * `country`: countries as whole point of interest\n  * `point_of_interest`: includes points of interest\n",
+        "description": "The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.\n  * `city`: includes city localities\n  * `town`: includes town localities\n  * `village`: includes village localities\n  * `hamlet`: includes hamlet localities\n  * `borough`: includes borough localities\n  * `suburb`: includes suburb localities\n  * `quarter`: includes quarter localities\n  * `neighbourhood`: includes neighbourhood localities\n  * `locality`: includes locality names (from city to village) and suburbs\n  * `postal_code`: publicly-used postal codes around the world\n  * `address`: addresses\n  * `admin_level`: most commonly used administrative areas\n  * `country`: countries as whole point of interest\n  * `point_of_interest`: includes points of interest\n",
         "schema": {
           "type": "string"
         },
