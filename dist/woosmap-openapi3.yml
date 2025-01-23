@@ -2332,6 +2332,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/localities_input'
         - $ref: '#/components/parameters/localities_types'
+        - $ref: '#/components/parameters/localities_excluded_types'
         - $ref: '#/components/parameters/localities_components'
         - $ref: '#/components/parameters/localities_language'
         - $ref: '#/components/parameters/localities_location'
@@ -2643,7 +2644,8 @@ paths:
       parameters:
         - $ref: '#/components/parameters/localities_address'
         - $ref: '#/components/parameters/localities_latlng'
-        - $ref: '#/components/parameters/localities_geocode_types'
+        - $ref: '#/components/parameters/localities_types'
+        - $ref: '#/components/parameters/localities_excluded_types'
         - $ref: '#/components/parameters/localities_list_sub_buildings'
         - $ref: '#/components/parameters/localities_components'
         - $ref: '#/components/parameters/localities_language'
@@ -3166,6 +3168,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/localities_input'
         - $ref: '#/components/parameters/localities_search_types'
+        - $ref: '#/components/parameters/localities_excluded_types'
         - name: components
           description: |
             A grouping of places to which you would like to restrict your results. Countries must be passed as an ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character (`|`) as a separator. For example: `components=country:gb|country:fr` would restrict your results to city names or postal codes within the United Kingdom, France.
@@ -5925,6 +5928,14 @@ components:
           - postal_code
       in: query
       example: postal_code
+    localities_excluded_types:
+      name: excluded_types
+      description: |
+        The types of suggestion to exclude. Multiple types can be passed using the pipe character (`|`) as a separator.
+      schema:
+        type: string
+      in: query
+      example: suburb|quarter|neighbourhood
     localities_fields:
       name: fields
       description: |
@@ -5939,7 +5950,15 @@ components:
       name: types
       description: |
         Specify the types of geocoding responses to return by separating multiple types with a pipe character (|).  This parameter is ignored when used with the `latlng` parameter.  When executing a geocode request with the `address` parameter, use this to select the expected result type.
-          * `locality`: includes locality names (from city to village) and suburbs
+          * `city`: includes city localities 
+          * `town`: includes town localities 
+          * `village`: includes village localities 
+          * `hamlet`: includes hamlet localities 
+          * `borough`: includes borough localities 
+          * `suburb`: includes suburb localities 
+          * `quarter`: includes quarter localities 
+          * `neighbourhood`: includes neighbourhood localities
+          * `locality`: includes all previous locality names
           * `postal_code`: publicly-used postal codes around the world
           * `address`: addresses
           * `admin_level`: most commonly used administrative areas
@@ -6033,6 +6052,14 @@ components:
       name: types
       description: |
         The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.
+          * `city`: includes city localities
+          * `town`: includes town localities
+          * `village`: includes village localities
+          * `hamlet`: includes hamlet localities
+          * `borough`: includes borough localities
+          * `suburb`: includes suburb localities
+          * `quarter`: includes quarter localities
+          * `neighbourhood`: includes neighbourhood localities
           * `locality`: includes locality names (from city to village) and suburbs
           * `postal_code`: publicly-used postal codes around the world
           * `address`: addresses
@@ -6048,7 +6075,15 @@ components:
       name: types
       description: |
         The types of suggestion to return. Multiple types can be passed using the pipe character (`|`) as a separator.
-          * `locality`: includes locality names (from city to village) and suburbs
+          * `city`: includes city localities 
+          * `town`: includes town localities 
+          * `village`: includes village localities 
+          * `hamlet`: includes hamlet localities 
+          * `borough`: includes borough localities 
+          * `suburb`: includes suburb localities 
+          * `quarter`: includes quarter localities 
+          * `neighbourhood`: includes neighbourhood localities
+          * `locality`: includes all previous locality names
           * `postal_code`: publicly-used postal codes around the world
           * `address`: addresses
           * `admin_level`: most commonly used administrative areas
@@ -7767,6 +7802,11 @@ components:
           example: MkvnYy6K6oVGqeqfWJGO/6eCgqo=
         type:
           $ref: '#/components/schemas/LocalitiesTypes'
+        types:
+          description: An array containing the types of the result
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalitiesTypes'
         description:
           description: 'Concatenation of `name`, `admin_1`, `admin_0` to be used as suggestion in drop down list if needed. The description can vary depending on the type requested.'
           type: string
@@ -7919,9 +7959,17 @@ components:
     LocalitiesTypes:
       title: LocalitiesTypes
       type: string
-      description: Contains the type of the localities suggestion.
+      description: Contains the type of the result.
       enum:
         - locality
+        - city
+        - town
+        - village
+        - hamlet
+        - borough
+        - suburb
+        - quarter
+        - neighbourhood
         - postal_code
         - admin_level
         - airport
@@ -7936,17 +7984,6 @@ components:
         - country
         - address
         - route
-    LocalitiesGeocodeTypes:
-      title: LocalitiesGeocodeTypes
-      type: string
-      description: Contains the type of the geocoded suggestion.
-      enum:
-        - country
-        - admin_level
-        - locality
-        - postal_code
-        - route
-        - address
     LocalitiesGeocodeCollectionResponse:
       title: LocalitiesGeocodeCollectionResponse
       type: object
@@ -8004,7 +8041,7 @@ components:
           description: An array containing the types of the result
           type: array
           items:
-            $ref: '#/components/schemas/LocalitiesGeocodeTypes'
+            $ref: '#/components/schemas/LocalitiesTypes'
         administrative_area_label:
           $ref: '#/components/schemas/AdministrativeAreaLabel'
         public_id:
