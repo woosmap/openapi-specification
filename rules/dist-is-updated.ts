@@ -28,6 +28,7 @@ const main = (argv) => {
   const res = compareSync("dist", dir.name, {
     compareContent: true,
     excludeFilter: "**/*-postman.json, **/merged-woosmap-openapi3.json",
+    compareDate: false,
   });
   if (!res.same) {
     throw `
