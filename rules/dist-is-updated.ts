@@ -3,7 +3,6 @@ import tar from "tar";
 import tmp from "tmp";
 import { compareSync } from "dir-compare";
 import fs from "fs";
-import { diffLines } from "diff";
 
 const argv = options({
   archive: {
@@ -31,7 +30,7 @@ const main = (argv) => {
     compareDate: false,
   });
 
-  if (!res.same) {
+  if (!res.same && res.diffSet) {
     const differences = res.diffSet
       .filter(diff => diff.state !== 'equal')
       .map(diff => {
@@ -43,31 +42,43 @@ const main = (argv) => {
           name2: diff.name2,
           state: diff.state,
           reason: diff.reason,
-          contentDiff: null
+          contentDiff: null as string | null,
         };
 
         if (diff.state === 'distinct' && diff.type1 === 'file' && diff.type2 === 'file') {
           const file1 = fs.readFileSync(`${diff.path1}/${diff.name1}`, 'utf8');
           const file2 = fs.readFileSync(`${diff.path2}/${diff.name2}`, 'utf8');
-          const contentDiff = diffLines(file1, file2);
-          diffInfo.contentDiff = contentDiff.map(part => ({
-            added: part.added,
-            removed: part.removed,
-            value: part.value,
-          }));
+          diffInfo.contentDiff = getContentDiff(file1, file2);
         }
 
         return diffInfo;
       });
 
-    throw `
+    throw new Error(`
 Differences found between the directories:
 
 ${JSON.stringify(differences, null, 2)}
 
 Please run 'npm run build' to update the dist folder.
-    `;
+    `);
   }
+};
+
+const getContentDiff = (file1: string, file2: string): string => {
+  const lines1 = file1.split('\n');
+  const lines2 = file2.split('\n');
+  const maxLength = Math.max(lines1.length, lines2.length);
+  let diff = '';
+
+  for (let i = 0; i < maxLength; i++) {
+    if (lines1[i] !== lines2[i]) {
+      diff += `Line ${i + 1}:\n`;
+      diff += `File1: ${lines1[i] || ''}\n`;
+      diff += `File2: ${lines2[i] || ''}\n\n`;
+    }
+  }
+
+  return diff;
 };
 
 main(argv);
